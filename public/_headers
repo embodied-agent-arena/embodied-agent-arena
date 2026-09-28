@@ -1,0 +1,11 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+/assets/*
+  Cache-Control: public, max-age=86400
+
+/paper.pdf
+  Cache-Control: public, max-age=3600
+  Content-Disposition: inline; filename="embodied-agent-arena.pdf"
