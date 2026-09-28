@@ -9,11 +9,12 @@ Embodied Agent Arena evaluates seven frontier vision-language agents on 1,000 ca
 
 ## Project page source
 
-The static project page is in `public/`. Edit `index.html`, `styles.css`, and `app.js` to update the layout and content. Research figures are in `public/assets/`, and the paper is `public/paper.pdf`.
+The static project page is in `public/`. Edit `index.html`, `styles.css`, and `app.js` to update the layout and content. Research figures are in `public/assets/`. The deployed site serves the paper at `paper.pdf`.
 
-Preview locally:
+Preview locally with the currently hosted paper:
 
 ```sh
+curl -L https://embodied-agent-arena.haojianhuang927.workers.dev/paper.pdf -o public/paper.pdf
 python3 -m http.server 8000 --directory public
 ```
 
