@@ -4,59 +4,61 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Embodied Agent Arena — Are Frontier VLM Agents Ready to Be Robot Generalists?</title>
   <meta name="description" content="A 1,000-case evaluation of seven frontier vision-language agents across five robotic capabilities, with GeoProbe and task-level analyses of Astra.">
-  <meta name="theme-color" content="#203542">
-  <link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <meta name="theme-color" content="#f7f8f5">
+  <meta property="og:title" content="Embodied Agent Arena">
+  <meta property="og:description" content="How close are frontier VLM agents to robot generalists? Seven agents. Five capabilities. One arena.">
+  <link rel="icon" href="assets/logo.png?v=20260929"><link rel="stylesheet" href="styles.css?v=20260929">
+  <script src="app.js?v=20260929" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="nav-wrap">
-  <a class="brand" href="#"><img src="assets/logo.png" alt="" width="42" height="42"><span>Embodied Agent Arena</span></a>
-  <nav aria-label="Main navigation"><a href="#arena">The arena</a><a href="#findings">Findings</a><a href="#cases">Cases</a><a class="nav-paper" href="paper.pdf">Paper <span aria-hidden="true">↗</span></a></nav>
+  <a class="brand" href="#"><img src="assets/logo.png?v=20260929" alt="" width="42" height="42"><span>Embodied Agent Arena</span></a>
+  <nav aria-label="Main navigation"><a href="#findings">Findings</a><a href="#arena">The arena</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a><a class="nav-paper" href="paper.pdf">Paper <span aria-hidden="true">↗</span></a></nav>
 </div></header>
 <main id="main">
 <section class="hero wrap">
-  <p class="eyebrow">Geometry · Reasoning · Grounding · Planning · Control</p>
-  <h1>Are Frontier VLM Agents Ready<br class="desktop-break"> to Be <span>Robot Generalists?</span></h1>
-  <p class="subtitle">An Empirical Study with the Embodied Agent Arena</p>
-  <div id="authors" class="authors" aria-label="Authors"></div>
-  <div class="affiliations"><span><sup>1</sup> HKUST (Guangzhou)</span><span><sup>2</sup> The Chinese University of Hong Kong</span><span><sup>3</sup> Knowin AI</span></div>
-  <div class="actions"><a class="button primary" href="paper.pdf">Read the paper <span aria-hidden="true">↗</span></a><a class="button" href="https://openreview.net/forum?id=T0b4fgyHFg">OpenReview</a><a class="text-link" href="#citation">Cite this work</a></div>
-  <div class="hero-claim"><span class="claim-label">The central finding</span><p>Strong local abilities.<br><strong>A persistent gap to complete robotic goals.</strong></p></div>
+  <div class="hero-copy"><p class="eyebrow">Embodied Agent Arena</p>
+  <h1>Are frontier VLM agents ready to be <span>robot generalists?</span></h1>
+  <p class="subtitle">An empirical study across perception, reasoning, and action.</p>
+  <div class="actions"><a class="button primary" href="paper.pdf">Read the paper <span aria-hidden="true">↗</span></a><a class="button secondary" href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub <span aria-hidden="true">↗</span></a></div></div>
+  <div class="hero-art"><img src="assets/logo.png?v=20260929" alt="Embodied Agent Arena robot, in deep blue, sage green, and muted violet" width="1672" height="1672" fetchpriority="high"></div>
 </section>
+<div class="wrap people"><div id="authors" class="authors" aria-label="Authors"></div><div class="affiliations"><span><sup>1</sup> HKUST (Guangzhou)</span><span><sup>2</sup> The Chinese University of Hong Kong</span><span><sup>3</sup> Knowin AI</span></div></div>
+<section class="wrap thesis"><h2>Broad skills.<br><span>A gap to complete goals.</span></h2><p>Frontier agents can estimate a scene, find a contact, and plan an action. Combining these abilities into reliable task completion remains the challenge.</p></section>
 
 <section id="arena" class="wrap section arena-section">
   <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>established sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div>
-  <div class="section-heading"><p class="eyebrow">One arena, distinct task requirements</p><h2>From understanding a scene<br>to changing its state.</h2><p>Embodied Agent Arena brings metric estimation, spatial judgments, usable-contact localization, goal-directed planning, and robot manipulation into one evaluation. Each task retains its native observations, operations, and success criteria.</p></div>
-  <figure class="overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1680" height="1120" loading="lazy"></button><figcaption>Five complementary views of robotic capability. Interactive episodes are evaluated by the goals they complete.</figcaption></figure>
+  <div class="section-heading"><h2>One arena.<br>Five views of robotic ability.</h2><p>From understanding a scene to changing its state: geometry, spatial reasoning, affordance, planning, and manipulation.</p></div>
+  <figure class="overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1680" height="1120" loading="lazy"></button></figure>
 </section>
 
 <section id="findings" class="section findings-section"><div class="wrap">
-  <div class="section-heading"><p class="eyebrow">A deep dive of Astra</p><h2>Where Astra leads.<br>What still breaks.</h2><p>Astra leads in geometric precision, contact localization, planning, and baseline manipulation. Task-level contrasts reveal the conditions behind those advantages.</p></div>
+  <div class="section-heading"><p class="eyebrow">A deep dive of Astra</p><h2>Strengths in context.</h2><p>Explore the advantages—and the task requirements that test their limits.</p></div>
   <div class="tabs" id="domain-tabs" role="tablist" aria-label="Capability domain"></div>
   <div id="domain-panel" class="domain-panel" role="tabpanel" tabindex="0"></div>
 </div></section>
 
 <section class="wrap section results-section" id="results">
-  <div class="section-heading"><p class="eyebrow">Across all seven agents</p><h2>Compare the actual outcomes.</h2><p>Native metrics preserve what each domain asks the agent to achieve. Arrows indicate the better direction; bold entries mark the best score.</p></div>
+  <details class="results-disclosure"><summary><span>Compare all seven agents</span><span class="disclosure-plus" aria-hidden="true">+</span></summary><div class="results-content">
   <div class="table-scroll" role="region" aria-label="Full model results, scroll horizontally on smaller screens" tabindex="0"><table id="results-table"><caption>Performance across five capability domains</caption><thead><tr><th rowspan="2" scope="col">Agent</th><th colspan="2" scope="colgroup">Geometry</th><th colspan="2" scope="colgroup">Spatial reasoning</th><th colspan="2" scope="colgroup">Affordance</th><th scope="colgroup">Planning</th><th scope="colgroup">Manipulation</th></tr><tr><th scope="col">Rotation ↓<small>degrees</small></th><th scope="col">Translation ↓<small>cm</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">AbsRel ↓<small>relative error</small></th><th scope="col">Mask IoU ↑<small>overlap</small></th><th scope="col">Contact ↑<small>%</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">Task success ↑<small>%</small></th></tr></thead><tbody></tbody></table></div>
-  <p class="table-note">Values follow Table 2 of the paper. ± denotes the standard deviation across repeated runs. Manipulation uses the baseline setting; the paper details the RGB-expanded comparison.</p>
-</section>
+  <p class="table-note">Table 2 results. Bold marks the best score; arrows show the better direction. ± is the standard deviation across runs. Manipulation uses the baseline setting.</p>
+</div></details></section>
 
 <section class="section geoprobe-section" id="geoprobe"><div class="wrap geo-layout">
-  <div><p class="eyebrow">Introducing GeoProbe</p><h2>Separate motion<br>from viewpoint.<br><span>Make scale explicit.</span></h2><p>GeoProbe adds 168 cases to examine the metric ambiguities behind geometric estimates. Controlled Blender scenes vary camera motion, object motion, and scale references; real-scene images complement these probes.</p><p>Fixed-camera, small-shift, and large-shift conditions distinguish object displacement from apparent motion caused by the camera.</p><a class="text-link" href="paper.pdf">Explore the construction in the paper <span aria-hidden="true">↗</span></a></div>
-  <figure><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena construction: task vocabulary, five-domain composition, GeoProbe geometry targets, and evaluation interfaces." loading="lazy"></button><figcaption>32 established sources and GeoProbe form one 1,000-case arena.</figcaption></figure>
+  <div><p class="eyebrow">Introducing GeoProbe</p><h2>What moved?<br><span>The object.<br>The camera.<br>Or both?</span></h2></div>
+  <div class="geo-copy"><div class="geo-number">168<span>new geometry cases</span></div><p>Controlled Blender scenes and real images probe how agents separate object motion, camera motion, depth, and scale.</p><a class="text-link" href="paper.pdf">Explore GeoProbe <span aria-hidden="true">↗</span></a><details class="figure-disclosure"><summary>See the benchmark design <span aria-hidden="true">+</span></summary><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena construction and GeoProbe targets" loading="lazy"></button></details></div>
 </div></section>
 
 <section id="cases" class="wrap section cases-section">
-  <div class="section-heading"><p class="eyebrow">Look inside the behavior</p><h2>What the scores look like<br>in an actual task.</h2><p>Recorded cases connect aggregate results to reference frames, contact choices, and the construction of feedback controllers.</p></div>
+  <div class="section-heading"><h2>See the behavior<br>behind the score.</h2></div>
   <div class="tabs case-tabs" id="case-tabs" role="tablist" aria-label="Case study"></div><div id="case-panel" class="case-panel" role="tabpanel" tabindex="0"></div>
 </section>
 
-<section class="closing"><div class="wrap"><p class="eyebrow">Towards robot generalists</p><h2>Local progress must survive<br>the next action.</h2><p>Estimating a scene, finding a contact, or moving an object can succeed while the complete task still fails. The next challenge is to coordinate these abilities, preserve achieved conditions, and reliably finish robotic goals.</p><a class="button primary" href="paper.pdf">Read the full study <span aria-hidden="true">↗</span></a></div></section>
+<section class="closing"><div class="wrap"><h2>Local progress must survive<br>the next action.</h2><p>Robot generalists must preserve what they achieve—and turn partial progress into complete goals.</p><a class="button primary" href="paper.pdf">Read the full study <span aria-hidden="true">↗</span></a></div></section>
 
-<section id="citation" class="wrap section citation-section"><div class="citation-heading"><h2>Citation</h2><button class="button" id="copy-citation">Copy BibTeX</button></div><pre id="bibtex"></pre><p id="copy-status" class="sr-only" aria-live="polite"></p></section>
+<section id="citation" class="wrap citation-section"><details id="citation-details"><summary>Cite this work <span aria-hidden="true">+</span></summary><div class="citation-heading"><button class="button secondary" id="copy-citation">Copy BibTeX</button></div><pre id="bibtex"></pre></details><p id="copy-status" class="sr-only" aria-live="polite"></p></section>
 </main>
-<footer class="wrap"><span>Embodied Agent Arena · 2026</span><span>HKUST (Guangzhou) · CUHK · Knowin AI</span></footer>
+<footer class="wrap"><span>Embodied Agent Arena · 2026</span><div><a href="https://openreview.net/forum?id=T0b4fgyHFg">OpenReview ↗</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a></div></footer>
 <dialog id="figure-dialog" aria-label="Enlarged research figure"><form method="dialog"><button class="dialog-close" aria-label="Close enlarged figure">Close ×</button></form><img id="dialog-image" alt=""></dialog>
 </body></html>
