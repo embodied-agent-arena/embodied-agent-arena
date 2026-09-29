@@ -10,8 +10,8 @@
   <link rel="preload" href="assets/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/manrope.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/allura.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="icon" href="assets/logo.png?v=20260929"><link rel="stylesheet" href="styles.css?v=20260929-5">
-  <script src="app.js?v=20260929" defer></script>
+  <link rel="icon" href="assets/logo.png?v=20260929"><link rel="stylesheet" href="styles.css?v=20260929-6">
+  <script src="app.js?v=20260929-6" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -30,13 +30,13 @@
 <figure class="wrap overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1442" height="921" fetchpriority="high"></button></figure>
 
 <section id="arena" class="wrap section arena-section">
-  <div class="arena-intro"><div class="arena-copy"><p class="eyebrow"><span>01</span> The arena</p><h2>Five capabilities.<br>One shared evaluation.</h2><p>What can a frontier agent understand, plan, and execute? We evaluate geometry, spatial reasoning, affordance, task planning, and manipulation—from estimating a scene to changing its physical state.</p><p>The key distinction is between <strong>local competence</strong> and <strong>complete goals</strong>: a precise estimate, usable contact, or successful motion must still support the task that follows.</p></div>
-  <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>established sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div></div>
-  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate object motion<br><span>from camera motion.</span></h3></div><div class="geo-copy"><p><strong>168 new geometry cases.</strong> Controlled Blender scenes and real images probe how agents distinguish object motion, camera motion, depth, and scale.</p><details class="figure-disclosure"><summary>Explore the benchmark design <span aria-hidden="true">+</span></summary><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena construction and GeoProbe targets" loading="lazy"></button></details></div></div>
+  <div class="arena-intro"><div class="arena-copy"><p class="eyebrow"><span>01</span> The arena</p><h2>From seeing a scene<br>to completing a task.</h2><p>One arena tests what agents can perceive, reason about, and physically achieve across five robotic capabilities.</p></div>
+  <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div></div>
+  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate object motion<br><span>from camera motion.</span></h3></div><div class="geo-copy"><p><strong>168 new cases</strong> isolate camera motion, object motion, depth, and scale.</p><details class="figure-disclosure"><summary>Explore the benchmark design <span aria-hidden="true">+</span></summary><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena construction and GeoProbe targets" loading="lazy"></button></details></div></div>
 </section>
 
 <section id="findings" class="section findings-section"><div class="wrap">
-  <div class="section-heading"><p class="eyebrow"><span>02</span> A deep dive of Astra</p><h2>Where Astra leads.<br>What still tests its limits.</h2><p>Task-level comparisons reveal which capabilities carry across settings, and where complete success remains difficult.</p></div>
+  <div class="section-heading"><p class="eyebrow"><span>02</span> A deep dive of Astra</p><h2>Where Astra leads.<br>Where it falls short.</h2></div>
   <div class="tabs" id="domain-tabs" role="tablist" aria-label="Capability domain"></div>
   <div id="domain-panel" class="domain-panel" role="tabpanel" tabindex="0"></div>
 </div></section>
@@ -48,11 +48,11 @@
 </div></details></section>
 
 <section id="cases" class="wrap section cases-section">
-  <div class="section-heading"><p class="eyebrow"><span>03</span> From scores to behavior</p><h2>See what the agent actually does.</h2></div>
+  <div class="section-heading"><p class="eyebrow"><span>03</span> From scores to behavior</p><h2>Watch the decisions<br>behind the scores.</h2></div>
   <div class="tabs case-tabs" id="case-tabs" role="tablist" aria-label="Case study"></div><div id="case-panel" class="case-panel" role="tabpanel" tabindex="0"></div>
 </section>
 
-<section class="closing"><div class="wrap"><h2>Local progress must survive the next action.</h2><p>Robot generalists must preserve what they achieve—and turn partial progress into complete goals.</p><a class="button primary" href="paper.pdf">Read the full study <span aria-hidden="true">↗</span></a></div></section>
+<section class="closing"><div class="wrap"><h2>Useful skills are not yet<br>reliable task completion.</h2><a class="button primary" href="paper.pdf">Read the full study <span aria-hidden="true">↗</span></a></div></section>
 
 <section id="citation" class="wrap citation-section"><details id="citation-details"><summary>Cite this work <span aria-hidden="true">+</span></summary><div class="citation-heading"><button class="button secondary" id="copy-citation">Copy BibTeX</button></div><pre id="bibtex"></pre></details><p id="copy-status" class="sr-only" aria-live="polite"></p></section>
 </main>
