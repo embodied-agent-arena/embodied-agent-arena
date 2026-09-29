@@ -10,7 +10,7 @@
   <link rel="preload" href="assets/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/manrope.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/allura.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="icon" href="assets/logo.png?v=20260929"><link rel="stylesheet" href="styles.css?v=20260929-4">
+  <link rel="icon" href="assets/logo.png?v=20260929"><link rel="stylesheet" href="styles.css?v=20260929-5">
   <script src="app.js?v=20260929" defer></script>
 </head>
 <body>
@@ -21,23 +21,22 @@
 </div></header>
 <main id="main">
 <section class="hero wrap">
-  <div class="hero-copy"><p class="hero-wordmark">Embodied Agent <span>Arena</span></p>
+  <div class="hero-identity"><img src="assets/logo.png?v=20260929" alt="" width="64" height="64"><p class="hero-wordmark">Embodied Agent <span>Arena</span></p></div>
   <h1><span class="title-line">Are frontier VLM agents</span> <span class="title-line">ready to be <em>robot generalists?</em></span></h1>
   <p class="subtitle"><span class="subtitle-full">An empirical study across perception, reasoning, and action.</span><span class="subtitle-compact" aria-hidden="true">Perception, reasoning &amp; action.</span></p>
-  <div class="actions"><a class="button primary" href="paper.pdf">Read the paper <span aria-hidden="true">↗</span></a><a class="button secondary" href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub <span aria-hidden="true">↗</span></a></div></div>
-  <div class="hero-art"><img src="assets/logo.png?v=20260929" alt="Embodied Agent Arena robot, in deep blue, sage green, and muted violet" width="1672" height="1672" fetchpriority="high"></div>
+  <div class="people"><div id="authors" class="authors" aria-label="Authors"></div><div class="affiliations"><span><sup>1</sup> HKUST (Guangzhou)</span><span><sup>2</sup> The Chinese University of Hong Kong</span><span><sup>3</sup> Knowin AI</span></div></div>
+  <div class="actions"><a class="button primary" href="paper.pdf">Read the paper <span aria-hidden="true">↗</span></a><a class="button secondary" href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub <span aria-hidden="true">↗</span></a></div>
 </section>
-<div class="wrap people"><div id="authors" class="authors" aria-label="Authors"></div><div class="affiliations"><span><sup>1</sup> HKUST (Guangzhou)</span><span><sup>2</sup> The Chinese University of Hong Kong</span><span><sup>3</sup> Knowin AI</span></div></div>
-<section class="wrap thesis"><h2>Broad skills.<br><span>A gap to complete goals.</span></h2><p>Frontier agents can estimate a scene, find a contact, and plan an action. Combining these abilities into reliable task completion remains the challenge.</p></section>
+<figure class="wrap overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1442" height="921" fetchpriority="high"></button></figure>
 
 <section id="arena" class="wrap section arena-section">
-  <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>established sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div>
-  <div class="section-heading"><h2>One arena.<br>Five views of robotic ability.</h2><p>From understanding a scene to changing its state: geometry, spatial reasoning, affordance, planning, and manipulation.</p></div>
-  <figure class="overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1680" height="1120" loading="lazy"></button></figure>
+  <div class="arena-intro"><div class="arena-copy"><p class="eyebrow"><span>01</span> The arena</p><h2>Five capabilities.<br>One shared evaluation.</h2><p>What can a frontier agent understand, plan, and execute? We evaluate geometry, spatial reasoning, affordance, task planning, and manipulation—from estimating a scene to changing its physical state.</p><p>The key distinction is between <strong>local competence</strong> and <strong>complete goals</strong>: a precise estimate, usable contact, or successful motion must still support the task that follows.</p></div>
+  <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>established sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div></div>
+  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate object motion<br><span>from camera motion.</span></h3></div><div class="geo-copy"><p><strong>168 new geometry cases.</strong> Controlled Blender scenes and real images probe how agents distinguish object motion, camera motion, depth, and scale.</p><details class="figure-disclosure"><summary>Explore the benchmark design <span aria-hidden="true">+</span></summary><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena construction and GeoProbe targets" loading="lazy"></button></details></div></div>
 </section>
 
 <section id="findings" class="section findings-section"><div class="wrap">
-  <div class="section-heading"><p class="eyebrow">A deep dive of Astra</p><h2>Strengths in context.</h2><p>Explore the advantages—and the task requirements that test their limits.</p></div>
+  <div class="section-heading"><p class="eyebrow"><span>02</span> A deep dive of Astra</p><h2>Where Astra leads.<br>What still tests its limits.</h2><p>Task-level comparisons reveal which capabilities carry across settings, and where complete success remains difficult.</p></div>
   <div class="tabs" id="domain-tabs" role="tablist" aria-label="Capability domain"></div>
   <div id="domain-panel" class="domain-panel" role="tabpanel" tabindex="0"></div>
 </div></section>
@@ -48,17 +47,12 @@
   <p class="table-note">Table 2 results. Bold marks the best score; arrows show the better direction. ± is the standard deviation across runs. Manipulation uses the baseline setting.</p>
 </div></details></section>
 
-<section class="section geoprobe-section" id="geoprobe"><div class="wrap geo-layout">
-  <div><p class="eyebrow">Introducing GeoProbe</p><h2>Separate object motion<br><span>from camera motion.</span></h2></div>
-  <div class="geo-copy"><div class="geo-number">168<span>new geometry cases</span></div><p>Controlled Blender scenes and real images probe how agents separate object motion, camera motion, depth, and scale.</p><a class="text-link" href="paper.pdf">Explore GeoProbe <span aria-hidden="true">↗</span></a><details class="figure-disclosure"><summary>See the benchmark design <span aria-hidden="true">+</span></summary><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena construction and GeoProbe targets" loading="lazy"></button></details></div>
-</div></section>
-
 <section id="cases" class="wrap section cases-section">
-  <div class="section-heading"><h2>See the behavior behind the score.</h2></div>
+  <div class="section-heading"><p class="eyebrow"><span>03</span> From scores to behavior</p><h2>See what the agent actually does.</h2></div>
   <div class="tabs case-tabs" id="case-tabs" role="tablist" aria-label="Case study"></div><div id="case-panel" class="case-panel" role="tabpanel" tabindex="0"></div>
 </section>
 
-<section class="closing"><div class="wrap"><h2>Local progress must survive<br>the next action.</h2><p>Robot generalists must preserve what they achieve—and turn partial progress into complete goals.</p><a class="button primary" href="paper.pdf">Read the full study <span aria-hidden="true">↗</span></a></div></section>
+<section class="closing"><div class="wrap"><h2>Local progress must survive the next action.</h2><p>Robot generalists must preserve what they achieve—and turn partial progress into complete goals.</p><a class="button primary" href="paper.pdf">Read the full study <span aria-hidden="true">↗</span></a></div></section>
 
 <section id="citation" class="wrap citation-section"><details id="citation-details"><summary>Cite this work <span aria-hidden="true">+</span></summary><div class="citation-heading"><button class="button secondary" id="copy-citation">Copy BibTeX</button></div><pre id="bibtex"></pre></details><p id="copy-status" class="sr-only" aria-live="polite"></p></section>
 </main>
