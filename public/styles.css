@@ -120,6 +120,8 @@ tbody tr:last-child td,tbody tr:last-child th{border:0}
 .case-panel .reading-detail{margin-top:25px}
 .citation-section{padding-block:20px}
 .citation-section details{border-bottom:1px solid var(--line)}
+.related-research p{max-width:74ch;margin:0 0 24px;font-size:18px;line-height:1.7;color:var(--muted)}
+.related-research p a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 .citation-heading{display:flex;justify-content:flex-end;margin-bottom:10px}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.8;background:#f4f5f2;padding:24px;border-radius:10px;margin:0 0 24px}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
