@@ -1,19 +1,48 @@
-# <img src="public/assets/logo-readme.png" width="32" height="32" align="absmiddle" alt=""> Embodied Agent Arena: Are Frontier VLM Agents Ready to Be Robot Generalists?
+<h1 align="center">
+  <img src="public/assets/logo.png" width="64" height="64" align="absmiddle" alt="">&nbsp; Embodied Agent Arena
+</h1>
+
+<h3 align="center">
+  Are Frontier VLM Agents Ready to Be Robot Generalists?<br>
+  <em>An Empirical Study with the Embodied Agent Arena</em>
+</h3>
+
+<p align="center">
+  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/"><img src="https://img.shields.io/badge/Project_Page-Visit-4F7C8A?style=flat-square&amp;logo=googlechrome&amp;logoColor=white" height="24" align="absmiddle" alt="Project Page"></a>
+  &nbsp;
+  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf"><img src="https://img.shields.io/badge/Paper-PDF-B45C7E?style=flat-square&amp;logo=readthedocs&amp;logoColor=white" height="24" align="absmiddle" alt="Paper PDF"></a>
+  &nbsp;
+  <a href="https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena"><img src="https://img.shields.io/badge/Dataset-Hugging_Face-8174A8?style=flat-square&amp;logo=huggingface&amp;logoColor=white" height="24" align="absmiddle" alt="Dataset on Hugging Face"></a>
+</p>
 
 <div align="center">
 
-<a href="https://embodied-agent-arena.github.io/embodied-agent-arena/"><img src="public/assets/icon-project.svg" width="19" height="19" align="absmiddle" alt=""> Project Page</a> &nbsp; | &nbsp; <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf"><img src="public/assets/icon-paper.svg" width="19" height="19" align="absmiddle" alt=""> Paper</a>
-
 <p>
-Haojian Huang<sup>1,3</sup> · Pukun Zhao<sup>3</sup> · Zexi Li<sup>2</sup> · Yehang Zhang<sup>1,3</sup> · Yangkai Wei<sup>3</sup><br>
-Wenqian Li<sup>2</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Ying-Cong Chen<sup>1</sup> · Yinchuan Li<sup>3</sup>
+Haojian Huang<sup>1,3</sup> · Pukun Zhao<sup>3</sup> · Zexi Li<sup>2,3</sup> · Yehang Zhang<sup>1,3</sup> · Yangkai Wei<sup>3</sup><br>
+Wenqian Li<sup>2</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Ying-Cong Chen<sup>1,†</sup> · Yinchuan Li<sup>3,†</sup>
 </p>
 
-<p><sup>1</sup> HKUST (Guangzhou) &nbsp; <sup>2</sup> The Chinese University of Hong Kong &nbsp; <sup>3</sup> Knowin AI</p>
+<p><sup>1</sup> HKUST (Guangzhou) &nbsp; <sup>2</sup> The Chinese University of Hong Kong &nbsp; <sup>3</sup> Knowin AI<br>
+<sup>†</sup> Corresponding authors</p>
 
 </div>
 
 ---
+
+## News
+
+- **2026.10.01** — The [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) and [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/) are available. The manuscript has been submitted to arXiv.
+- **2026.10.01** — Released the [evaluation harness](#evaluation-code), multi-model batch runner, and [1,000-case dataset](https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena).
+
+## Milestones
+
+- [x] **Paper and project page** — Study, results, and case studies.
+- [x] **Evaluation code** — Agent harness, benchmark adapters, scoring, and installation guides.
+- [x] **Benchmark data** — 1,000-case dataset with a pinned download revision.
+- [ ] **Reproduction reports** — Per-model evaluation outputs and consolidated analysis reports.
+- [ ] **Analysis tools** — Scripts for aggregating results and reproducing the paper's figures.
+
+## Overview
 
 This is the official repository for [**Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena**](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf).
 
