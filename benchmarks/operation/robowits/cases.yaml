@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "robowits",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve the official stacking task from public Genesis observations and derived robot controls.",
+        "task_id": "14_06",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "robowits_stack_cube_official",
+      "seed": 3,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "robowits",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "robowits"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

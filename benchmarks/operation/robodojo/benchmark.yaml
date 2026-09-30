@@ -1,0 +1,57 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/robodojo"
+  },
+  "assets": [],
+  "benchmark_id": "robodojo",
+  "category": "robot_manipulation",
+  "display_name": "RoboDojo",
+  "migration": {
+    "source_directory": "benchmarks/operation/robodojo",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "robodojo",
+    "modes": [
+      "apptainer_gpu"
+    ],
+    "resource_profile": "gpu_isaac_simulator"
+  },
+  "runtime_target_ids": [
+    "robodojo"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "robodojo_general_pickup_current_interface"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/RoboDojo-Benchmark/RoboDojo",
+    "revision": "e41d848837ec5bf15e7b045672794f33d78433ce"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.robodojo_agent_runtime.RoboDojoAgentRuntimeBackend.verify",
+    "digest": "faf4bbd1019f8535d3106bd169ff656bdc4940dc7791ab498b1608ae26a28f13",
+    "digest_source": "src/embodied_harness/robodojo_agent_runtime.py",
+    "official_digest": "1a9eef7fe518f9d2c6805ad1a8f97c1045fa83726f84b9c63f67ffdfabbc40a7",
+    "official_digest_source": "external/sources.lock.yaml#robodojo",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#robodojo_general_pickup_current_interface",
+    "parity_fixture_digest": "e57f33c09f315f2054be67190261e9db4fc515906323c9b6ac9deb30aae66fc6",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "RoboDojo general_pickup registers the official 0.1 m lift predicate and the protected evaluation environment resolves episode success.",
+    "upstream_file_or_symbol": "task/RoboDojo/tasks/general_pickup.py:GeneralPickupCommon.run_reward"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/alfworld"
+  },
+  "assets": [],
+  "benchmark_id": "alfworld",
+  "category": "text_interaction",
+  "display_name": "ALFWorld",
+  "migration": {
+    "source_directory": "benchmarks/non_operation/alfworld",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "OpenHands",
+    "execution_requirement": "real_agent_server_no_replay_or_direct_executor",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "alfworld",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_text_environment"
+  },
+  "runtime_target_ids": [
+    "alfworld"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "non_operation",
+  "strict_case_ids": [
+    "alfworld_pick_knife_to_sidetable"
+  ],
+  "upstream": {
+    "provenance_status": "revision_pending",
+    "repository": "https://github.com/alfworld/alfworld",
+    "revision": "provenance-pending"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.alfworld_agent_runtime.ALFWorldAgentRuntimeBackend.verify",
+    "digest": "a669c434a299398de6962a98e37f00c8b8adbc0611cfe7334c3919af9724ecf0",
+    "digest_source": "src/embodied_harness/alfworld_agent_runtime.py",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#alfworld_pick_knife_to_sidetable",
+    "provenance_status": "adapter_bound_upstream_verifier_symbol_pending_review",
+    "success_semantics": "Official TextWorld episode state reports won and done after typed actions.",
+    "upstream_file_or_symbol": "pending: exact upstream won/done symbol mapping"
+  }
+}

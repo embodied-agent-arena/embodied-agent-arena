@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "octo",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Exercise Octo context, observation, evidence, invocation, and action-chunk submission contracts.",
+        "task_id": "w5_octo_policy_skill_contract",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "octo_policy_skill_contract",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "octo",
+        "official_verifier_required": false,
+        "runtime_target_ids": [
+          "octo"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

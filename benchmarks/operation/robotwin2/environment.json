@@ -1,0 +1,20 @@
+{
+  "assets": [
+    "RoboTwin2 objects",
+    "embodiments",
+    "optional background textures"
+  ],
+  "benchmark_id": "robotwin2",
+  "directory": "benchmarks/operation/robotwin2",
+  "headless": "Live visual reset requires a supported Vulkan-capable GPU runtime.",
+  "install_hint": "Install the upstream RoboTwin2 environment and configure repo_path and assets.",
+  "live_smoke_command": "python scripts/robotwin2_preflight.py --help",
+  "notes": [],
+  "offline_adapter": "yes/partial",
+  "package_manager": "upstream conda/pip environment",
+  "python": "3.10",
+  "requires_gpu": true,
+  "simulator": "SAPIEN 3 / RoboTwin 2.0",
+  "smoke_mode": "existing_agent_runtime_dry_by_default_live_on_request",
+  "smoke_task": "place_empty_cup / demo_clean"
+}

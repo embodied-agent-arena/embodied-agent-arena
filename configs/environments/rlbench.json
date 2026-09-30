@@ -1,0 +1,57 @@
+{
+  "python": "3.10.19",
+  "packages": [
+    [
+      "Farama-Notifications",
+      "0.0.6"
+    ],
+    [
+      "PyRep",
+      "4.1.0.3"
+    ],
+    [
+      "cffi",
+      "1.17.1"
+    ],
+    [
+      "cloudpickle",
+      "3.1.2"
+    ],
+    [
+      "gymnasium",
+      "1.0.0a2"
+    ],
+    [
+      "natsort",
+      "8.4.0"
+    ],
+    [
+      "numpy",
+      "1.26.4"
+    ],
+    [
+      "pillow",
+      "10.4.0"
+    ],
+    [
+      "pycparser",
+      "3.0"
+    ],
+    [
+      "pyquaternion",
+      "0.9.9"
+    ],
+    [
+      "rlbench",
+      "1.2.0"
+    ],
+    [
+      "scipy",
+      "1.15.3"
+    ],
+    [
+      "typing_extensions",
+      "4.16.0"
+    ]
+  ]
+}

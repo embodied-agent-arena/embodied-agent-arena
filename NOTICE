@@ -1,0 +1,20 @@
+Embodied Agent Arena
+
+Project-owned harness code and adapters are distributed under the MIT License
+in LICENSE.
+
+The RoboTracer evaluation implementation in runtimes/tracespatial/upstream/
+remains under its upstream Apache License 2.0. Its license and source revisions
+are preserved in that directory.
+Source: https://github.com/zhoues/RoboTracer
+
+Third-party datasets, simulators, and model weights retain their own licenses
+and access terms. The project code license does not relicense those materials.
+
+Upstream simulator revisions and source URLs are recorded in
+external/sources.lock.yaml and external/w3-sources.lock.json. Dataset source
+revisions and file hashes are recorded in the separate dataset's manifest.json
+and asset receipts. Its README lists source-specific distribution information.
+
+This package contains no pretrained model weights, model credentials, or collected
+model evaluation results.

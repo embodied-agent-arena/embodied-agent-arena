@@ -1,0 +1,30 @@
+- name: get_task_context
+  abstraction_level: L1
+  input_schema: {prompt: str|None, query: str|None, agent_context: dict|None}
+- name: inspect_view
+  abstraction_level: L2
+  input_schema: {view_id: str, query: str|None, agent_context: dict|None}
+- name: inspect_video_frames
+  abstraction_level: L2
+  input_schema: {view_id: str, frame_indices: list[int]|None, sample_count: int, query: str|None, agent_context: dict|None}
+- name: detect_video_objects
+  abstraction_level: L2
+  input_schema: {view_id: str, query_labels: list[str]|None, frame_indices: list[int]|None, sample_count: int, score_threshold: float, max_detections_per_frame: int, query: str|None, agent_context: dict|None}
+- name: track_video_objects
+  abstraction_level: L2
+  input_schema: {view_id: str, query_labels: list[str]|None, frame_indices: list[int]|None, sample_count: int, score_threshold: float, max_detections_per_frame: int, detector_backend: str, query: str|None, agent_context: dict|None}
+- name: segment_video_objects
+  abstraction_level: L2
+  input_schema: {view_id: str, query_labels: list[str]|None, frame_indices: list[int]|None, sample_count: int, score_threshold: float, max_detections_per_frame: int, detector_backend: str, segmentation_backend: str, max_segments: int, query: str|None, agent_context: dict|None}
+- name: preflight_video_grounding_model
+  abstraction_level: L1
+  input_schema: {model_hint: str|None, agent_context: dict|None}
+- name: preflight_video_segmentation_model
+  abstraction_level: L1
+  input_schema: {model_hint: str|None, agent_context: dict|None}
+- name: write_evidence
+  abstraction_level: L2
+  input_schema: {key: str, value: object, agent_context: dict|None}
+- name: submit_answer
+  abstraction_level: L3
+  input_schema: {answer: str, agent_context: dict|None}

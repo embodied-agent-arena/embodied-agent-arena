@@ -1,0 +1,58 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/maniskill"
+  },
+  "assets": [],
+  "benchmark_id": "maniskill",
+  "category": "manipulation",
+  "display_name": "ManiSkill3",
+  "migration": {
+    "source_directory": "benchmarks/operation/maniskill",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "maniskill",
+    "modes": [
+      "apptainer_cpu",
+      "apptainer_gpu"
+    ],
+    "resource_profile": "gpu_visual_simulator"
+  },
+  "runtime_target_ids": [
+    "maniskill"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "maniskill_pickcube_pd_ee_delta_pos"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/haosulab/ManiSkill",
+    "revision": "42b68244c1497cef889b04c4f4a78aa01c927f4e"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.maniskill_agent_runtime.ManiSkillAgentRuntimeBackend.verify",
+    "digest": "2638e0751b3828f79fb905dc8e60bb205ef6435f08bba4480a13969dcc5889d6",
+    "digest_source": "src/embodied_harness/maniskill_agent_runtime.py",
+    "official_digest": "53bfed0229cd4de2c7e363e7f3c531d5c5c84803c28e1345a2aea1a4972f3168",
+    "official_digest_source": "external/sources.lock.yaml#maniskill",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#maniskill_pickcube_pd_ee_delta_pos",
+    "parity_fixture_digest": "3943a87a329b086276f24354438135f3d7f520e31aea771a9f52250857ff4199",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Official ManiSkill task evaluation after agent-authored actions.",
+    "upstream_file_or_symbol": "mani_skill/envs/tasks/tabletop/pick_cube.py:PickCubeEnv.evaluate"
+  }
+}

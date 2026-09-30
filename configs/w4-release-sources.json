@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "selection": "Control roots referenced by the final execution plans; diagnostic-only branches are excluded.",
+  "files": {
+    "src/embodied_harness/capx_planner_collision_policy.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/capx_planner_collision_policy.py",
+      "source_sha256": "e23c26ac7c1af9b4deeff13c7fac13642d4de82f38ceb1b4a5abfbb15d1ff1c7",
+      "release_sha256": "e23c26ac7c1af9b4deeff13c7fac13642d4de82f38ceb1b4a5abfbb15d1ff1c7"
+    },
+    "src/embodied_harness/capx_navigation_guard.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/capx_navigation_guard.py",
+      "source_sha256": "34cddeec602da9ec9dca8e02f2af166d526a0cfc11664dec3c6ea3508fe8adaf",
+      "release_sha256": "34cddeec602da9ec9dca8e02f2af166d526a0cfc11664dec3c6ea3508fe8adaf"
+    },
+    "src/embodied_harness/capx_carry_navigation.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/capx_carry_navigation.py",
+      "source_sha256": "2130365ec34397b65ee2a00d9f78c8bcb60faf455db01213fd6f0bb50a660f6f",
+      "release_sha256": "2130365ec34397b65ee2a00d9f78c8bcb60faf455db01213fd6f0bb50a660f6f"
+    },
+    "src/embodied_harness/capx_checked_manipulation.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/capx_checked_manipulation.py",
+      "source_sha256": "649baf39e3633581181843ed1e4a9ed5138f669fb338332f0ad11d4aa35baf0a",
+      "release_sha256": "649baf39e3633581181843ed1e4a9ed5138f669fb338332f0ad11d4aa35baf0a"
+    },
+    "src/embodied_harness/capx_libero_support.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/capx_libero_support.py",
+      "source_sha256": "8b15611df4546dbf7bf8d2ce092ad6f4c1dad7bc7efe4294c16ad67cd704e1c1",
+      "release_sha256": "8b15611df4546dbf7bf8d2ce092ad6f4c1dad7bc7efe4294c16ad67cd704e1c1"
+    },
+    "src/embodied_harness/native_resource_admission.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/native_resource_admission.py",
+      "source_sha256": "c7dbbc6dadd49a7d6b7f64b4e3eb7662fc5d5b87022f7c6d84a757d33b891e52",
+      "release_sha256": "a3b1ecd115772c82ea3e77bf2fd1feafce007625842609ad79141d5c389af36d"
+    },
+    "src/embodied_harness/native_episode_budget.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/native_episode_budget.py",
+      "source_sha256": "07e94cabacf6525418c502c447ac28ab31fc5d4e71531115a8f80c46d46c59f6",
+      "release_sha256": "07e94cabacf6525418c502c447ac28ab31fc5d4e71531115a8f80c46d46c59f6"
+    },
+    "src/embodied_harness/hq_recording.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/hq_recording.py",
+      "source_sha256": "5c505a630a1cc25d6c647c451e383e4ffb5471e35ea95878ada0419bb8dd3462",
+      "release_sha256": "5c505a630a1cc25d6c647c451e383e4ffb5471e35ea95878ada0419bb8dd3462"
+    },
+    "src/embodied_harness/w4_rgb.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/w4_rgb.py",
+      "source_sha256": "19353e2cbee1babfe7c3ed43313de6aabd13edbea44126a8f0f14820b0cd6731",
+      "release_sha256": "19353e2cbee1babfe7c3ed43313de6aabd13edbea44126a8f0f14820b0cd6731"
+    },
+    "src/embodied_harness/stream_video.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/stream_video.py",
+      "source_sha256": "2567aa2395efa5eea31df47a12d21e540c0617e675394c566ed862f6eaf84891",
+      "release_sha256": "2567aa2395efa5eea31df47a12d21e540c0617e675394c566ed862f6eaf84891"
+    },
+    "src/embodied_harness/subprocess_backend_bridge.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/subprocess_backend_bridge.py",
+      "source_sha256": "6fcdc86f0c044ab436532bbe3d46721ed1c76ea9e122b4bfda92c610445a1ea1",
+      "release_sha256": "6fcdc86f0c044ab436532bbe3d46721ed1c76ea9e122b4bfda92c610445a1ea1"
+    },
+    "src/embodied_harness/robowits_preflight.py": {
+      "source": "deployment/w4-robowits-revised-three-seven-model-20260924/control/src/embodied_harness/robowits_preflight.py",
+      "source_sha256": "f1da806cf7b66433a67c0b83d09a7f03067f5d61f724acaa49177ed3be6e7b44",
+      "release_sha256": "f1da806cf7b66433a67c0b83d09a7f03067f5d61f724acaa49177ed3be6e7b44"
+    },
+    "src/embodied_harness/robowits_segmented_control.py": {
+      "source": "deployment/w4-robowits-revised-three-seven-model-20260924/control/src/embodied_harness/robowits_segmented_control.py",
+      "source_sha256": "7bd1bfadd3967ec935a4d8cef5e3740c71e66c8d43e195dc7de1f767d6575972",
+      "release_sha256": "7bd1bfadd3967ec935a4d8cef5e3740c71e66c8d43e195dc7de1f767d6575972"
+    },
+    "src/embodied_harness/robowits_agent_runtime.py": {
+      "source": "deployment/w4-robowits-revised-three-seven-model-20260924/control/src/embodied_harness/robowits_agent_runtime.py",
+      "source_sha256": "775bfde90f32babb6c20870b986df9b05f5e7ea6422d4f5326c7571456602e79",
+      "release_sha256": "775bfde90f32babb6c20870b986df9b05f5e7ea6422d4f5326c7571456602e79"
+    },
+    "src/embodied_harness/robocasa_interface_repair.py": {
+      "source": "deployment/w4-robocasa-minfix-20260923/control/src/embodied_harness/robocasa_interface_repair.py",
+      "source_sha256": "f52d2c8c43887479e70d44f78062486e86e352a01b2b896626dbc5f273d193be",
+      "release_sha256": "f52d2c8c43887479e70d44f78062486e86e352a01b2b896626dbc5f273d193be"
+    },
+    "src/embodied_harness/robocasa365_agent_runtime.py": {
+      "source": "deployment/w4-robocasa-minfix-20260923/control/src/embodied_harness/robocasa365_agent_runtime.py",
+      "source_sha256": "8f2a4a80f8fdb53c55046205f68467d3079b5fd413077cf9b28975a756915933",
+      "release_sha256": "8f2a4a80f8fdb53c55046205f68467d3079b5fd413077cf9b28975a756915933"
+    },
+    "src/embodied_harness/robocasa_agent_runtime.py": {
+      "source": "deployment/w4-robocasa-minfix-20260923/control/src/embodied_harness/robocasa_agent_runtime.py",
+      "source_sha256": "1e8c71f79e75cea26c85eada8f8db4506428fa564c4f16b1dd7c93759cb6614f",
+      "release_sha256": "1e8c71f79e75cea26c85eada8f8db4506428fa564c4f16b1dd7c93759cb6614f"
+    },
+    "src/embodied_harness/rlbench_agent_runtime.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/rlbench_agent_runtime.py",
+      "source_sha256": "960eca96a4d70df81fd80dbb850642cc920933ff343283d7ac24008b3603dbe6",
+      "release_sha256": "960eca96a4d70df81fd80dbb850642cc920933ff343283d7ac24008b3603dbe6"
+    },
+    "src/embodied_harness/native_runtime_receipt.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/native_runtime_receipt.py",
+      "source_sha256": "add101b42716df1e54a49416bc315f4bc30bb0b05d058d973b5077bc9dadceb1",
+      "release_sha256": "0fe1179dacab59ec9049e27b4ea3abcdc7f9b98f5a7afbb3ea0a5c4bf688d390"
+    },
+    "src/embodied_harness/native_case_registry.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/native_case_registry.py",
+      "source_sha256": "d72279c856bba490d363beb4f1867c34d91b32792f47a361bf7d11f529fbbc0c",
+      "release_sha256": "d72279c856bba490d363beb4f1867c34d91b32792f47a361bf7d11f529fbbc0c"
+    },
+    "src/embodied_harness/live_api_agent_smoke.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/live_api_agent_smoke.py",
+      "source_sha256": "b378c10d65c2aed7c1d20a6bf504ff621d65f73ec0a58133642487f1b3c37b74",
+      "release_sha256": "b378c10d65c2aed7c1d20a6bf504ff621d65f73ec0a58133642487f1b3c37b74"
+    },
+    "src/embodied_harness/case_study_recording.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/case_study_recording.py",
+      "source_sha256": "82ab40d0d52bfd5247a629601437c4eaae1ebb1fe9595779bd53f9dadd197e3b",
+      "release_sha256": "82ab40d0d52bfd5247a629601437c4eaae1ebb1fe9595779bd53f9dadd197e3b"
+    },
+    "src/embodied_harness/capx_comparator_runtime.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/capx_comparator_runtime.py",
+      "source_sha256": "1ec040f089ad766a3096b520d8f81e9d19cd601e0569cb730d1bccec5093c51d",
+      "release_sha256": "1ec040f089ad766a3096b520d8f81e9d19cd601e0569cb730d1bccec5093c51d"
+    },
+    "src/embodied_harness/native_agent_loop.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/native_agent_loop.py",
+      "source_sha256": "72f31b97c54b73113ecbc5ad930be8aab1c75f2307fbadd282f028c78d33d0cb",
+      "release_sha256": "72f31b97c54b73113ecbc5ad930be8aab1c75f2307fbadd282f028c78d33d0cb"
+    },
+    "scripts/native_backend_jsonl_worker.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/scripts/native_backend_jsonl_worker.py",
+      "source_sha256": "1b5766b6c2da1094d2d6b0447dc9755ba5b5b9aa48a3adbbd06f22369c4f5bb9",
+      "release_sha256": "1b5766b6c2da1094d2d6b0447dc9755ba5b5b9aa48a3adbbd06f22369c4f5bb9"
+    },
+    "scripts/run_native_universal_case.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/scripts/run_native_universal_case.py",
+      "source_sha256": "a1d6b3b371cc5c8ed3a4fd0b76cb1e5f1ef12ff8fd4bc7e70f269b82026a37cc",
+      "release_sha256": "a1d6b3b371cc5c8ed3a4fd0b76cb1e5f1ef12ff8fd4bc7e70f269b82026a37cc"
+    },
+    "src/embodied_harness/cliport_runtime_stubs/kornia.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/cliport_runtime_stubs/kornia.py",
+      "source_sha256": "1df70511d88976966d214842f8542047998708ac943e7d25d661bd83e2f8e3ae",
+      "release_sha256": "1df70511d88976966d214842f8542047998708ac943e7d25d661bd83e2f8e3ae"
+    },
+    "src/embodied_harness/cliport_runtime_stubs/importlib_resources.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/cliport_runtime_stubs/importlib_resources.py",
+      "source_sha256": "f363d3a033ad819de5735225cc8c26ee34f9da5251cb62f52d869c6dd6853ed9",
+      "release_sha256": "f363d3a033ad819de5735225cc8c26ee34f9da5251cb62f52d869c6dd6853ed9"
+    },
+    "src/embodied_harness/cliport_runtime_stubs/torch/__init__.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/cliport_runtime_stubs/torch/__init__.py",
+      "source_sha256": "b16f038183833be2b945f8b6e1bf23908e37c210edf93d9db77539e5c3a19ef2",
+      "release_sha256": "b16f038183833be2b945f8b6e1bf23908e37c210edf93d9db77539e5c3a19ef2"
+    },
+    "src/embodied_harness/cliport_runtime_stubs/torch/nn/functional.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/cliport_runtime_stubs/torch/nn/functional.py",
+      "source_sha256": "e7e8cf62018c9320e14edf6e34b849c315b6f8ac200df051787278a3417a199a",
+      "release_sha256": "e7e8cf62018c9320e14edf6e34b849c315b6f8ac200df051787278a3417a199a"
+    },
+    "src/embodied_harness/cliport_runtime_stubs/torch/nn/__init__.py": {
+      "source": "deployment/w4-capx-native-start-20260925/control/src/embodied_harness/cliport_runtime_stubs/torch/nn/__init__.py",
+      "source_sha256": "3d559f4a1182302f86628ce462d45a236356e63a0d5231dfc08496ef80717068",
+      "release_sha256": "3d559f4a1182302f86628ce462d45a236356e63a0d5231dfc08496ef80717068"
+    }
+  },
+  "task_manifests": {
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0183--0--3fa23bb760c1": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-calvin-00.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0270--0--d1a67e878282": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-calvin-01.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0337--0--8ecbc7bcd3a2": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-calvin-02.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0526--0--8934498e94bb": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-calvin-03.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0536--0--5e110423dfeb": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-calvin-04.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0557--0--1c02eff7213e": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-calvin-05.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0596--0--37720b3904f5": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-calvin-06.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0626--0--93e9df4762f0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-calvin-07.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0717--0--7aae87e2c6d1": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-calvin-08.json",
+    "calvin--calvin_native_turn_off_led--test--calvin_sequence_0743--0--5e6065b35265": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-calvin-09.json",
+    "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_can_meat.yaml--0--4dbe460b28c8": "deployment/w4-capx-native-start-20260925/manifests/sol-capx_behavior1k-01.json",
+    "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_chop_an_onion.yaml--0--4333511c1d76": "deployment/w4-capx-native-start-20260925/manifests/sol-capx_behavior1k-04.json",
+    "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_outfit_a_basic_toolbox.yam--0--1cd2784f91bf": "deployment/w4-capx-behavior-resume-20260925/manifests/sol-capx_behavior1k-00.json",
+    "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_putting_shoes_on_rack.yaml--0--7c76679a3a9c": "deployment/w4-capx-native-start-20260925/manifests/sol-capx_behavior1k-03.json",
+    "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_tidying_bedroom.yaml--0--dbf2a257d4ab": "deployment/w4-capx-native-start-20260925/manifests/sol-capx_behavior1k-02.json",
+    "capx-libero-pro--libero_10--task-1--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-capx_libero_pro-07.json",
+    "capx-libero-pro--libero_10--task-9--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-capx_libero_pro-06.json",
+    "capx-libero-pro--libero_goal--task-1--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-capx_libero_pro-05.json",
+    "capx-libero-pro--libero_goal--task-7--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-capx_libero_pro-04.json",
+    "capx-libero-pro--libero_object--task-2--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-capx_libero_pro-03.json",
+    "capx-libero-pro--libero_object--task-5--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-capx_libero_pro-02.json",
+    "capx-libero-pro--libero_object_swap--task-4--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-capx_libero_pro-09.json",
+    "capx-libero-pro--libero_spatial--task-1--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-capx_libero_pro-00.json",
+    "capx-libero-pro--libero_spatial--task-7--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-capx_libero_pro-01.json",
+    "capx-libero-pro--libero_spatial_swap--task-0--init-0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-capx_libero_pro-08.json",
+    "capx-robosuite--cube_lifting--seed-50": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-capx_robosuite-01.json",
+    "capx-robosuite--cube_lifting--seed-99": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-capx_robosuite-00.json",
+    "capx-robosuite--cube_restack--seed-14": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-capx_robosuite-03.json",
+    "capx-robosuite--cube_stack--seed-14": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-capx_robosuite-02.json",
+    "capx-robosuite--spill_wipe--seed-48": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-capx_robosuite-04.json",
+    "cliport--cliport_place_red_in_green--test--align-rope-test_seed_10087--10087--87cc8054449f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-cliport-04.json",
+    "cliport--cliport_place_red_in_green--test--assembling-kits-seq-seen-colors-test_seed_10059--10059--338d9d8d208d": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-cliport-03.json",
+    "cliport--cliport_place_red_in_green--test--assembling-kits-seq-unseen-colors-test_seed_1012--10121--b60f4fb9bd61": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-cliport-08.json",
+    "cliport--cliport_place_red_in_green--test--packing-boxes-pairs-seen-colors-test_seed_10151--10151--53c1e3444756": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-cliport-12.json",
+    "cliport--cliport_place_red_in_green--test--packing-boxes-pairs-unseen-colors-test_seed_1012--10127--09f4daa51ae7": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-cliport-09.json",
+    "cliport--cliport_place_red_in_green--test--packing-seen-google-objects-group-test_seed_1009--10099--ad2861e2d10c": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-cliport-05.json",
+    "cliport--cliport_place_red_in_green--test--packing-seen-google-objects-seq-test_seed_10021--10021--c77fce4206cd": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-cliport-00.json",
+    "cliport--cliport_place_red_in_green--test--packing-shapes-test_seed_10197--10197--b3aea8a968b8": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-cliport-17.json",
+    "cliport--cliport_place_red_in_green--test--packing-unseen-google-objects-group-test_seed_10--10023--0a1dfd44f26b": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-cliport-01.json",
+    "cliport--cliport_place_red_in_green--test--packing-unseen-google-objects-seq-test_seed_1016--10167--ad382238430d": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-cliport-14.json",
+    "cliport--cliport_place_red_in_green--test--put-block-in-bowl-seen-colors-test_seed_10155--10155--9587530c28d9": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-cliport-13.json",
+    "cliport--cliport_place_red_in_green--test--put-block-in-bowl-unseen-colors-test_seed_10187--10187--905c6ee7edc2": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-cliport-16.json",
+    "cliport--cliport_place_red_in_green--test--separating-piles-seen-colors-test_seed_10167--10167--cbbba9f83b9d": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-cliport-15.json",
+    "cliport--cliport_place_red_in_green--test--separating-piles-unseen-colors-test_seed_10133--10133--3e04249c7971": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-cliport-11.json",
+    "cliport--cliport_place_red_in_green--test--stack-block-pyramid-seq-seen-colors-test_seed_10--10111--87c73359e1cc": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-cliport-07.json",
+    "cliport--cliport_place_red_in_green--test--stack-block-pyramid-seq-unseen-colors-test_seed_--10025--72899470c5ea": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-cliport-02.json",
+    "cliport--cliport_place_red_in_green--test--towers-of-hanoi-seq-seen-colors-test_seed_10127--10127--c0ba07aae1be": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-cliport-10.json",
+    "cliport--cliport_place_red_in_green--test--towers-of-hanoi-seq-unseen-colors-test_seed_1010--10101--d32608ef0ec9": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-cliport-06.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--AnymalC-Spin-v1--0--df5f47530d30": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-maniskill-00.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--LiftPegUpright-v1--0--2d431e6690ca": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-maniskill-01.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PegInsertionSide-v1--0--d37df3dbb8a3": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-maniskill-02.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PickCube-v1--0--2274c81aa68d": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-maniskill-03.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlaceSphere-v1--0--7547d80c0054": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-maniskill-04.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlugCharger-v1--0--fa32f5573da8": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-maniskill-05.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PullCube-v1--0--b1dc3f2fefc2": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-maniskill-06.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PushCube-v1--0--88156b136e5e": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-maniskill-07.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--RollBall-v1--0--37ce4063e5a0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-maniskill-08.json",
+    "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--StackCube-v1--0--62b4acf30ae1": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-maniskill-09.json",
+    "rlbench--rlbench_reach_target_motion--test--ChangeChannel-variation_0--0--76744f976719": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-rlbench-00.json",
+    "rlbench--rlbench_reach_target_motion--test--CloseLaptopLid-variation_0--0--f9bb8dd76402": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-rlbench-01.json",
+    "rlbench--rlbench_reach_target_motion--test--CloseMicrowave-variation_0--0--3e261b33f018": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-rlbench-02.json",
+    "rlbench--rlbench_reach_target_motion--test--Hockey-variation_0--0--33c80baf4e43": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-rlbench-03.json",
+    "rlbench--rlbench_reach_target_motion--test--OpenBox-variation_0--0--5cdbdcf418f6": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-rlbench-04.json",
+    "rlbench--rlbench_reach_target_motion--test--SetupCheckers-variation_0--0--2796fdb95927": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-rlbench-05.json",
+    "rlbench--rlbench_reach_target_motion--test--TakeCupOutFromCabinet-variation_0--0--e03c522b2ac5": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-rlbench-06.json",
+    "rlbench--rlbench_reach_target_motion--test--TakeShoesOutOfBox-variation_0--0--1dc044c2345c": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-rlbench-07.json",
+    "rlbench--rlbench_reach_target_motion--test--TakeToiletRollOffStand-variation_0--0--572638cf3a2a": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-rlbench-08.json",
+    "rlbench--rlbench_reach_target_motion--test--TvOn-variation_0--0--32572bb08ed4": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-rlbench-09.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-ArrangeBreadBasket--0--e4b88584e97c": "deployment/w4-robocasa-rerun-20260923/manifests/astra-robocasa-00.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-CloseFridge--0--f27b161a7ab9": "deployment/w4-robocasa-rerun-20260923/manifests/qwen35-397b-robocasa-01.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-LoadDishwasher--0--0b606235cfb2": "deployment/w4-robocasa-rerun-20260923/manifests/qwen35-27b-robocasa-02.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-OpenDrawer--0--201936251412": "deployment/w4-robocasa-rerun-20260923/manifests/astra-robocasa-03.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-OpenStandMixerHead--0--02b455426bda": "deployment/w4-robocasa-rerun-20260923/manifests/sol-robocasa-04.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-PickPlaceToasterToCounter--0--7a2375d4e909": "deployment/w4-robocasa-rerun-20260923/manifests/fable-robocasa-05.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-RecycleBottlesByType--0--242629617321": "deployment/w4-robocasa-rerun-20260923/manifests/qwen-robocasa-06.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-SlideDishwasherRack--0--b60af6c11fee": "deployment/w4-robocasa-rerun-20260923/manifests/gemini-robocasa-07.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-TurnOffStove--0--39d6897f2bad": "deployment/w4-robocasa-rerun-20260923/manifests/qwen35-397b-robocasa-08.json",
+    "robocasa--robocasa_start_coffee_machine_button--test--target-TurnOnSinkFaucet--0--8545661d52a6": "deployment/w4-robocasa-rerun-20260923/manifests/qwen35-27b-robocasa-09.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-BreadAndCheese--0--55cb7c23465c": "deployment/w4-robocasa-rerun-20260923/manifests/astra-robocasa365-00.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-CloseDrawer--0--67030c8fe6d0": "deployment/w4-robocasa-rerun-20260923/manifests/qwen35-27b-robocasa365-01.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-MakeBananaMilkshake--0--ce1b9a004c45": "deployment/w4-robocasa-rerun-20260923/manifests/astra-robocasa365-02.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-MicrowaveThawingFridge--0--e2f32f3f227b": "deployment/w4-robocasa-rerun-20260923/manifests/sol-robocasa365-03.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-MixCakeFrosting--0--d9992194a240": "deployment/w4-robocasa-rerun-20260923/manifests/fable-robocasa365-04.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-NavigateKitchen--0--29932c4e9e89": "deployment/w4-robocasa-rerun-20260923/manifests/qwen-robocasa365-05.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-OpenMicrowave--0--ed407a680e48": "deployment/w4-robocasa-rerun-20260923/manifests/gemini-robocasa365-06.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-PlaceMeatInMarinade--0--3ce6dd85087e": "deployment/w4-robocasa-rerun-20260923/manifests/qwen35-397b-robocasa365-07.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-PlaceVegetablesEvenly--0--6fd7b35d0686": "deployment/w4-robocasa-rerun-20260923/manifests/qwen35-27b-robocasa365-08.json",
+    "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-RemoveCuttingBoardItems--0--6bb5b9394716": "deployment/w4-robocasa-rerun-20260923/manifests/astra-robocasa365-09.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-adjust_bottle-accepted_episode_085--0--657d78540a76": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-00.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-beat_block_hammer-accepted_episode_00--0--ea93760e598f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-robotwin2-01.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-blocks_ranking_rgb-accepted_episode_0--0--f7ebcbab646f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-robotwin2-02.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-blocks_ranking_size-accepted_episode_--0--aefeeacb3260": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-robotwin2-03.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-click_alarmclock-accepted_episode_093--0--37fb38f08575": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-robotwin2-04.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-click_bell-accepted_episode_022--0--cfc6bab14c85": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-robotwin2-05.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-dump_bin_bigbin-accepted_episode_055--0--09adf118b49e": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-robotwin2-06.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-grab_roller-accepted_episode_060--0--1566f9096d93": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-07.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-handover_block-accepted_episode_070--0--3f3e653b67b4": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-robotwin2-08.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-handover_mic-accepted_episode_055--0--b612f519e388": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-robotwin2-09.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-hanging_mug-accepted_episode_055--0--153b91b3dff8": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-robotwin2-10.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-lift_pot-accepted_episode_056--0--56a9c0ef5900": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-robotwin2-11.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-move_can_pot-accepted_episode_069--0--8ab5580035ce": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-robotwin2-12.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-move_pillbottle_pad-accepted_episode_--0--7c45a50852f7": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-robotwin2-13.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-move_playingcard_away-accepted_episod--0--9f189d934ee7": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-14.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-move_stapler_pad-accepted_episode_026--0--dde7499804da": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-robotwin2-15.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-open_laptop-accepted_episode_016--0--a9c546da5f2b": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-robotwin2-16.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-open_microwave-accepted_episode_046--0--2a755421347f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-robotwin2-17.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-pick_diverse_bottles-accepted_episode--0--15fea8e58127": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-robotwin2-18.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-pick_dual_bottles-accepted_episode_09--0--a7213d466f85": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-robotwin2-19.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_a2b_left-accepted_episode_082--0--cfd4555c6106": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-robotwin2-20.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_a2b_right-accepted_episode_037--0--51f756b1c95f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-21.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_bread_basket-accepted_episode_0--0--369d69b9d236": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-robotwin2-22.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_bread_skillet-accepted_episode_--0--7e1bf7086da2": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-robotwin2-23.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_burger_fries-accepted_episode_0--0--0e8e26736468": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-robotwin2-24.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_can_basket-accepted_episode_034--0--b502a8672571": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-robotwin2-25.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_cans_plasticbox-accepted_episod--0--4fedb110cf33": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-robotwin2-26.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_container_plate-accepted_episod--0--eb7c122801b0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-robotwin2-27.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_dual_shoes-accepted_episode_057--0--8ee0ea66f807": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-28.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_empty_cup-accepted_episode_048--0--785e28eb620e": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-robotwin2-29.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_fan-accepted_episode_046--0--d2b390e02b34": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-robotwin2-30.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_mouse_pad-accepted_episode_075--0--0faa4d8172c1": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-robotwin2-31.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_object_basket-accepted_episode_--0--941681561ba7": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-robotwin2-32.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_object_scale-accepted_episode_0--0--780f8ebcd054": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-robotwin2-33.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_object_stand-accepted_episode_0--0--d1b63e067f09": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-robotwin2-34.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_phone_stand-accepted_episode_01--0--0e194b60632f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-35.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_shoe-accepted_episode_068--0--525457e6b16f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-robotwin2-36.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-press_stapler-accepted_episode_044--0--91096dd36032": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-robotwin2-37.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-put_bottles_dustbin-accepted_episode_--0--7c2a030b3c87": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-robotwin2-38.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-put_object_cabinet-accepted_episode_0--0--220ab750c584": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-robotwin2-39.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-rotate_qrcode-accepted_episode_092--0--7caec2cf1088": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-robotwin2-40.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-scan_object-accepted_episode_049--0--1bda53967a1a": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-robotwin2-41.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-shake_bottle-accepted_episode_046--0--d1ec5685fba9": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-42.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-shake_bottle_horizontally-accepted_ep--0--76479967a6dc": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-robotwin2-43.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-stack_blocks_three-accepted_episode_0--0--0b492ac73cc2": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-robotwin2-44.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-stack_blocks_two-accepted_episode_057--0--75d317f749e3": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-robotwin2-45.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-stack_bowls_three-accepted_episode_07--0--2aae28c3769f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-robotwin2-46.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-stack_bowls_two-accepted_episode_080--0--b560badd7197": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-robotwin2-47.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-stamp_seal-accepted_episode_062--0--8798db03ffb6": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-robotwin2-48.json",
+    "robotwin2--robotwin2_place_empty_cup--test--demo_clean-turn_switch-accepted_episode_088--0--26c3f2d35f49": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-robotwin2-49.json",
+    "robowits--robowits_stack_cube_official--test--06-episode_000--3--ed8f55d32a49": "deployment/w4-robowits-seven-model-20260924/manifests/qwen35-27b-robowits-00.json",
+    "robowits--robowits_stack_cube_official--test--07-episode_012--3--d150a5fd9f0f": "deployment/w4-robowits-revised-three-seven-model-20260924/manifests/astra-robowits-07-ep012-data-r1.json",
+    "robowits--robowits_stack_cube_official--test--10-episode_000--3--6d27a4c063fe": "deployment/w4-robowits-seven-model-20260924/manifests/sol-robowits-02.json",
+    "robowits--robowits_stack_cube_official--test--12-episode_007--3--2e5b55dc8a69": "deployment/w4-robowits-seven-model-20260924/manifests/fable-robowits-03.json",
+    "robowits--robowits_stack_cube_official--test--12-episode_045--3--81d92e3b9a9c": "deployment/w4-robowits-seven-model-20260924/manifests/qwen-robowits-04.json",
+    "robowits--robowits_stack_cube_official--test--14-episode_006--3--8229a6dadc9d": "deployment/w4-robowits-seven-model-20260924/manifests/gemini-robowits-05.json",
+    "robowits--robowits_stack_cube_official--test--14-episode_014--3--858671914b59": "deployment/w4-robowits-seven-model-20260924/manifests/qwen35-397b-robowits-06.json",
+    "robowits--robowits_stack_cube_official--test--19-episode_006--3--bd385b493f9b": "deployment/w4-robowits-seven-model-20260924/manifests/qwen35-27b-robowits-07.json",
+    "robowits--robowits_stack_cube_official--test--23-episode_003--3--558618f99e84": "deployment/w4-robowits-revised-three-seven-model-20260924/manifests/astra-robowits-23-ep003-data-r1.json",
+    "robowits--robowits_stack_cube_official--test--23-episode_010--3--4faf3a5ae31b": "deployment/w4-robowits-revised-three-seven-model-20260924/manifests/sol-robowits-23-ep010-data-r1.json",
+    "vimabench--vimabench_visual_manipulation--test--novel_task_generalization-follow_motion--0--7e1968cf0d08": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-vimabench-00.json",
+    "vimabench--vimabench_visual_manipulation--test--novel_task_generalization-novel_adj_and_noun--0--00ab064f1822": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-vimabench-01.json",
+    "vimabench--vimabench_visual_manipulation--test--novel_task_generalization-same_texture--0--b9d6418d40cc": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-vimabench-02.json",
+    "vimabench--vimabench_visual_manipulation--test--novel_task_generalization-sweep_without_touching--0--9d0b316daf77": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-vimabench-03.json",
+    "vimabench--vimabench_visual_manipulation--test--placement_generalization-follow_order--0--c7d2c3ad7255": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-vimabench-04.json",
+    "vimabench--vimabench_visual_manipulation--test--placement_generalization-novel_adj--0--1586d4225034": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-vimabench-05.json",
+    "vimabench--vimabench_visual_manipulation--test--placement_generalization-novel_noun--0--3b6f340b3ad5": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-vimabench-06.json",
+    "vimabench--vimabench_visual_manipulation--test--placement_generalization-rearrange--0--85ff0ce3e89d": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-vimabench-07.json",
+    "vimabench--vimabench_visual_manipulation--test--placement_generalization-rearrange_then_restore--0--e5ca28928157": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-vimabench-08.json",
+    "vimabench--vimabench_visual_manipulation--test--placement_generalization-scene_understanding--0--3ff07dbdf71b": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-vimabench-09.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-insert_flower-episode_02--0--95051f77091b": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-vlabench-00.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-insert_flower-episode_04--0--f0436c51c2d4": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-vlabench-01.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-select_chemistry_tube-ep--0--64dfa979fae9": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-vlabench-02.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-select_chemistry_tube-ep--0--b6e8c5849df3": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-vlabench-03.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-select_painting-episode_--0--ac37e20feb6d": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-vlabench-04.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-select_painting-episode_--0--d805aa0d15f7": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-vlabench-05.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-select_poker-episode_033--0--49f37f5637bb": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-vlabench-06.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-select_toy-episode_049--0--5996b497f150": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-vlabench-07.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_2_cross_category-add_condiment-episode_001--0--aa674661bb1c": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-vlabench-08.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_2_cross_category-select_mahjong-episode_00--0--9e4d4372bfa5": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-vlabench-09.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_2_cross_category-select_poker-episode_032--0--5cee2ec488fc": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-vlabench-10.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_3_common_sense-add_condiment-episode_012--0--aea41164c302": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-vlabench-11.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_3_common_sense-add_condiment-episode_035--0--5568321122e0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-vlabench-12.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_3_common_sense-select_book-episode_043--0--2fffd5e67d1c": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-vlabench-13.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_3_common_sense-select_drink-episode_023--0--5949d517f0cb": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-vlabench-14.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_4_semantic_instruction-select_book-episode--0--632965509eb9": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-vlabench-15.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_4_semantic_instruction-select_book-episode--0--7e11478b7092": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-vlabench-16.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_4_semantic_instruction-select_chemistry_tu--0--355c4dec742f": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-vlabench-17.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_4_semantic_instruction-select_chemistry_tu--0--bb809059d558": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-397b-vlabench-18.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_4_semantic_instruction-select_fruit-episod--0--6d4d628836f3": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen35-27b-vlabench-19.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_4_semantic_instruction-select_mahjong-epis--0--966cc4448edc": "deployment/w4-capx-threeway-20260922/seven-model/manifests/astra-vlabench-20.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_4_semantic_instruction-select_toy-episode_--0--e8bc688a5667": "deployment/w4-capx-threeway-20260922/seven-model/manifests/sol-vlabench-21.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_6_unseen_texture-add_condiment-episode_039--0--d3855b16a6b0": "deployment/w4-capx-threeway-20260922/seven-model/manifests/fable-vlabench-22.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_6_unseen_texture-select_book-episode_009--0--886183c2efe5": "deployment/w4-capx-threeway-20260922/seven-model/manifests/qwen-vlabench-23.json",
+    "vlabench--vlabench_select_toy_skilllib--test--track_6_unseen_texture-select_fruit-episode_034--0--83270dcbec53": "deployment/w4-capx-threeway-20260922/seven-model/manifests/gemini-vlabench-24.json"
+  },
+  "w4_cases": 183,
+  "groups": {
+    "calvin": 10,
+    "capx_behavior1k": 5,
+    "capx_libero_pro": 10,
+    "capx_robosuite": 5,
+    "cliport": 18,
+    "maniskill": 10,
+    "rlbench": 10,
+    "robocasa": 10,
+    "robocasa365": 10,
+    "robotwin2": 50,
+    "robowits": 10,
+    "vimabench": 10,
+    "vlabench": 25
+  },
+  "portability_changes": [
+    "configurable installation, receipt, and host-memory lock paths",
+    "optional recording disabled by default; model-visible RGB retained",
+    "task-aware receipt preflight and local sealing",
+    "duplicate import removed"
+  ],
+  "native_simulators_bundled": false,
+  "additional_upstreams": [
+    {
+      "id": "libero-pro",
+      "url": "https://github.com/uynitsuj/LIBERO-PRO.git",
+      "revision": "5368540790fde9a18584d64105ec5ac16d8926bd",
+      "checkout": "upstreams/libero-pro"
+    },
+    {
+      "id": "capx-libero-robosuite",
+      "url": "https://github.com/Max-Fu/robosuite.git",
+      "revision": "a498b087d4bc5a3981e3d27030d09bc537a537f3",
+      "checkout": "upstreams/capx-libero-robosuite"
+    }
+  ]
+}

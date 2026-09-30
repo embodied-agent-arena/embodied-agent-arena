@@ -1,0 +1,121 @@
+{
+  "task": {
+    "components": [
+      {
+        "name": "table",
+        "xml_path": "obj/meshes/table/table.xml",
+        "position": [
+          1.3655827250490879e-08,
+          2.3745232757936244e-09,
+          -7.617868329328433e-07
+        ],
+        "orientation": [
+          1.0,
+          7.189407487623761e-10,
+          1.6023790223142148e-09,
+          8.711835982732708e-10
+        ],
+        "class": "Table",
+        "materials": [
+          "stone0"
+        ]
+      },
+      {
+        "name": "giftbox_seen",
+        "xml_path": "obj/meshes/containers/boxes/giftbox/giftbox_1/giftbox.xml",
+        "position": [
+          -0.09926077741219759,
+          0.13285184930750546,
+          0.7709990991300227
+        ],
+        "orientation": [
+          0.9990043016454723,
+          0.0007777751324956764,
+          -0.0004332866142486529,
+          -0.04460507395346021
+        ],
+        "class": "CommonContainer"
+      },
+      {
+        "name": "flashman",
+        "xml_path": "obj/meshes/toys/DC/flashman/flashman_0/flashinjustice_2_texturedrigged.xml",
+        "position": [
+          0.21149952234082584,
+          -0.15373550902235705,
+          0.7652351296010961
+        ],
+        "orientation": [
+          0.7069481786091418,
+          0.7072586205279743,
+          0.0012625384062042245,
+          -0.002814684148842418
+        ],
+        "class": "Toy"
+      },
+      {
+        "name": "hawkeye",
+        "xml_path": "obj/meshes/toys/marvel/hawkeye/hawkeye_0/hawkeye.xml",
+        "position": [
+          -0.2517509609467001,
+          -0.13731346447799195,
+          0.7650197783249496
+        ],
+        "orientation": [
+          -0.0006853908072900824,
+          0.00030967663707308254,
+          0.7073937500489698,
+          0.7068192956700309
+        ],
+        "class": "Toy"
+      },
+      {
+        "name": "woody",
+        "xml_path": "obj/meshes/toys/disney/toystory/woody/woody_0/woody.xml",
+        "position": [
+          0.2333006026671422,
+          0.13402921105280752,
+          0.7649965892887376
+        ],
+        "orientation": [
+          0.7068075598771264,
+          0.7073966829560328,
+          0.0025523251138993286,
+          0.0025479167681342722
+        ],
+        "class": "Toy"
+      }
+    ],
+    "scene": {
+      "name": "default",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "floor_textures": [
+        "floorplane"
+      ]
+    },
+    "instructions": [
+      "Put the flashman into the giftbox_seen"
+    ],
+    "conditions": {
+      "contain": {
+        "container": "giftbox_seen",
+        "entities": [
+          "flashman"
+        ]
+      }
+    },
+    "target_entity": [
+      "flashman"
+    ],
+    "target_container": "giftbox_seen"
+  }
+}

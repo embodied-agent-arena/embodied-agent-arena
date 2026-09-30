@@ -1,0 +1,24 @@
+{
+  "assets": [
+    "mesh assets",
+    "task assets"
+  ],
+  "benchmark_id": "vlabench",
+  "directory": "benchmarks/operation/vlabench",
+  "headless": "Preferred EGL/osmesa; this worktree observed EGL display init failure and osmesa missing GL symbols, with glfw requiring DISPLAY for rendering.",
+  "install_hint": "conda env create -f benchmarks/operation/vlabench/environment.yml; clone https://github.com/OpenMOSS/VLABench; pip install -r requirements.txt; pip install -e .; python scripts/download_assets.py; export VLABENCH_ROOT=/path/to/VLABench/VLABench.",
+  "live_smoke_command": "MUJOCO_GL=glfw benchmarks/operation/vlabench/run_live_smoke.sh",
+  "notes": [
+    "MuJoCo/dm_control simulator label is confirmed by upstream requirements and LM4ManipDMEnv.",
+    "Upstream env.get_observation returns rgb/depth/segmentation/robot state/end-effector state/task observables.",
+    "Upstream evaluation attaches env.task.get_instruction() to each observation before policy prediction.",
+    "Harness primitives intentionally exclude checker/oracle/success/progress helpers; noop_step returns only simulator step evidence and action schema."
+  ],
+  "offline_adapter": "partial",
+  "package_manager": "conda + pip, optional upstream Docker/OpenPI path",
+  "python": "3.10 recommended",
+  "requires_gpu": false,
+  "simulator": "MuJoCo / dm_control",
+  "smoke_mode": "live_import_configured_asset_blocked",
+  "smoke_task": "select_toy live reset and instruction/context-conditioned observation summary"
+}

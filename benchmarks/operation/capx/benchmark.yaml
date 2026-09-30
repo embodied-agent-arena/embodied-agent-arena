@@ -1,0 +1,58 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/capx"
+  },
+  "assets": [],
+  "benchmark_id": "capx",
+  "category": "comparator",
+  "display_name": "CaP-X",
+  "migration": {
+    "source_directory": "benchmarks/operation/capx",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "capx",
+    "modes": [
+      "apptainer_cpu",
+      "apptainer_gpu"
+    ],
+    "resource_profile": "gpu_service_stack"
+  },
+  "runtime_target_ids": [
+    "capx"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "capx_current_interface_live"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/capgym/cap-x",
+    "revision": "53e9966d7a8e2fa7494676772bccc35280f5c0ed"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.w4_benchmark_backend.W4BenchmarkBackend._verify_capx",
+    "digest": "f3aeaeada1804106d8e0942a4d5e8e19a1ce8ba02ea6f100584a27d55be58a88",
+    "digest_source": "src/embodied_harness/w4_benchmark_backend.py",
+    "official_digest": "a53b8d44c2285967fd9911affda52c625e55146bc564a96a87f5f93d2fd50232",
+    "official_digest_source": "external/sources.lock.yaml#capx",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#capx_current_interface_live",
+    "parity_fixture_digest": "567ebad8d5c24c2d48882933ba6d1bfa693fcb2d8f98573903131004b7ecfdfe",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "The pinned CaP-X cube-stack environment delegates task completion to the upstream Robosuite Stack success predicate.",
+    "upstream_file_or_symbol": "capx/envs/simulators/robosuite_cubes.py:FrankaRobosuiteCubesLowLevel.task_completed"
+  }
+}

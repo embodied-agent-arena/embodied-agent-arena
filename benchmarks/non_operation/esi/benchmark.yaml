@@ -1,0 +1,70 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/esi"
+  },
+  "assets": [
+    {
+      "asset_id": "spatial_tasks_jsonl",
+      "checksum": "08664c3dabe49f1c4d4bfb4f4e94b8eb6f965d360e2aad698ed613cb02e1e245",
+      "kind": "checked_in_fixture",
+      "path": "spatial_tasks.jsonl"
+    },
+    {
+      "asset_id": "vsi_debiased_local_video_smoke_jsonl",
+      "checksum": "c45eff362c7c7338ffdb79ee73f43e39b1c20ece8a13fbfa413edc47784fb51a",
+      "kind": "checked_in_fixture",
+      "path": "vsi_debiased_local_video_smoke.jsonl"
+    },
+    {
+      "asset_id": "vsi_debiased_smoke_jsonl",
+      "checksum": "2c2be18776d0efe09aa526add46a79d2ebfd71c735b0993a0361534de573a88a",
+      "kind": "checked_in_fixture",
+      "path": "vsi_debiased_smoke.jsonl"
+    }
+  ],
+  "benchmark_id": "esi",
+  "category": "spatial_reasoning",
+  "display_name": "ESI / VSI-Bench",
+  "migration": {
+    "source_directory": "benchmarks/non_operation/esi",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "OpenHands",
+    "execution_requirement": "real_agent_server_no_replay_or_direct_executor",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "esi",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_video_diagnostic"
+  },
+  "runtime_target_ids": [
+    "esi_spatial",
+    "vsi_bench"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "non_operation",
+  "strict_case_ids": [
+    "esi_spatial_fixture_smoke",
+    "vsi_real_video_frame_boundary"
+  ],
+  "upstream": {
+    "provenance_status": "revision_pending",
+    "repository": "https://github.com/vision-x-nyu/thinking-in-space",
+    "revision": "provenance-pending"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.spatial_vsi_adapter.load_vsi_bench_samples",
+    "digest": "f345fc4560ccc3ee0eba0222400825e4de3a068140ca7103ac78c9d6b564bd9c",
+    "digest_source": "src/embodied_harness/spatial_vsi_adapter.py",
+    "mode": "post_hoc",
+    "parity_fixture": "cases.yaml#esi_spatial_fixture_smoke",
+    "provenance_status": "adapter_bound_upstream_verifier_symbol_pending_review",
+    "success_semantics": "Submitted spatial answer evaluated against the dataset answer under the official normalization rule.",
+    "upstream_file_or_symbol": "pending: official VSI answer normalization/evaluation symbol mapping"
+  }
+}

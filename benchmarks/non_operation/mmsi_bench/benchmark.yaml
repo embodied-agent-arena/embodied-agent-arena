@@ -1,0 +1,81 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/mmsi_bench"
+  },
+  "assets": [
+    {
+      "asset_id": "mmsi_smoke_jsonl",
+      "checksum": "3e9fb5f09c665506697004431f347e42d7d8a540c1099ff587f5aed556ebabf3",
+      "kind": "checked_in_fixture",
+      "path": "mmsi_smoke.jsonl"
+    },
+    {
+      "asset_id": "images_0_0_jpg",
+      "checksum": "dbc08d0dc4c87d7c1438bb54365160e5fea4844bdd353470ae570a588d1dffb0",
+      "kind": "checked_in_fixture",
+      "path": "images/0_0.jpg"
+    },
+    {
+      "asset_id": "images_0_1_jpg",
+      "checksum": "17278ba3ea2555b803ad8bb4f2083f2e27bf5582bb5395aea831f991ba81ff01",
+      "kind": "checked_in_fixture",
+      "path": "images/0_1.jpg"
+    },
+    {
+      "asset_id": "images_1_0_jpg",
+      "checksum": "f92995484708da9e3fdfd031ccb4681fed8d02fc527d2b5a66be206a93082f82",
+      "kind": "checked_in_fixture",
+      "path": "images/1_0.jpg"
+    },
+    {
+      "asset_id": "images_1_1_jpg",
+      "checksum": "6ae27d09d1d22c53b2da6af6dc73b5c8172581e8d2ca850a773807ed351c327b",
+      "kind": "checked_in_fixture",
+      "path": "images/1_1.jpg"
+    }
+  ],
+  "benchmark_id": "mmsi_bench",
+  "category": "spatial_reasoning",
+  "display_name": "MMSI-Bench",
+  "migration": {
+    "source_directory": "benchmarks/non_operation/mmsi_bench",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "OpenHands",
+    "execution_requirement": "real_agent_server_no_replay_or_direct_executor",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "mmsi_bench",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_diagnostic"
+  },
+  "runtime_target_ids": [
+    "mmsi_bench"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "non_operation",
+  "strict_case_ids": [
+    "mmsi_spatial_smoke",
+    "mmsi_camera_rotation_real_pixels"
+  ],
+  "upstream": {
+    "provenance_status": "revision_pending",
+    "repository": "https://github.com/InternRobotics/MMSI-Bench",
+    "revision": "provenance-pending"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.spatial_mmsi_adapter.MMSISpatialBackend",
+    "digest": "3b48f4be3cbf800b20d30f019264a8245452aab2ba3e92c24ca54c2098d3c48a",
+    "digest_source": "src/embodied_harness/spatial_mmsi_adapter.py",
+    "mode": "post_hoc",
+    "parity_fixture": "cases.yaml#mmsi_spatial_smoke",
+    "provenance_status": "adapter_bound_upstream_verifier_symbol_pending_review",
+    "success_semantics": "Submitted multiple-choice answer evaluated by the benchmark answer extraction and exact-match rule.",
+    "upstream_file_or_symbol": "pending: official MMSI answer extraction/evaluation symbol mapping"
+  }
+}

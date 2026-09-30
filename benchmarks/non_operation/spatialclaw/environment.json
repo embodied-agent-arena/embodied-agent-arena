@@ -1,0 +1,32 @@
+{
+  "benchmark_id": "spatialclaw",
+  "name": "SpatialClaw",
+  "upstream": {
+    "repo": "https://github.com/NVlabs/SpatialClaw.git",
+    "local_path": "external/upstreams/spatialclaw",
+    "commit": "b8ff5f775062fb1268556b2911913927eb20b328",
+    "package": "spatial_agent"
+  },
+  "runtime": {
+    "python": "3.11 recommended upstream; smoke ran under current harness Python",
+    "requires_gpu_for_full_tools": true,
+    "requires_benchmark_assets": true,
+    "requires_external_model_for_agent_loop": true
+  },
+  "agent_visible_primitives": [
+    "get_spatial_task_context",
+    "inspect_spatial_observation",
+    "inspect_spatial_pixels",
+    "run_geometry_tool",
+    "record_spatial_evidence",
+    "submit_spatial_answer"
+  ],
+  "forbidden_agent_primitive_tokens": [
+    "oracle",
+    "checker",
+    "success",
+    "demo",
+    "replay"
+  ],
+  "evaluation_boundary": "SpatialClaw benchmark evaluators remain harness-side only."
+}

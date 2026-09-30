@@ -1,0 +1,20 @@
+{
+  "assets": [
+    "RoboDojo task assets",
+    "robot assets",
+    "environment layouts"
+  ],
+  "benchmark_id": "robodojo",
+  "directory": "benchmarks/operation/robodojo",
+  "headless": "Live evaluation requires Isaac Sim, Isaac Lab, assets, and the configured policy service.",
+  "install_hint": "Install the upstream RoboDojo runtime and initialize its assets before live evaluation.",
+  "live_smoke_command": "python -m embodied_harness.robodojo_agent_runtime --help",
+  "notes": [],
+  "offline_adapter": "yes/partial",
+  "package_manager": "upstream RoboDojo environment",
+  "python": ">=3.11",
+  "requires_gpu": true,
+  "simulator": "Isaac Sim / Isaac Lab",
+  "smoke_mode": "existing_agent_runtime_dry_by_default_live_on_request",
+  "smoke_task": "caller-selected RoboDojo task"
+}

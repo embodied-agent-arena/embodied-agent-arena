@@ -1,0 +1,817 @@
+{
+  "schema_version": "agentic-embodied-arena/operation-environment-lock/v2",
+  "benchmark_set": "operation-13",
+  "source_lock": {
+    "path": "external/sources.lock.yaml",
+    "sha256": "3046c2e5e6f9ddbaf0d7ff95ecdbfe08c6ff112f3b5642a025b53aa1ee27f43a"
+  },
+  "runtime_matrix": {
+    "path": "configs/operation_runtime_matrix.json",
+    "sha256": "8c14d3a23f2de6e92d8a966363584ffb5fc4133f876ae9e8b18e39f5abdc8bfa"
+  },
+  "benchmarks": [
+    {
+      "benchmark_id": "behavior1k",
+      "environment": {
+        "prefix": "external/environments/behavior1k",
+        "python_executable": "external/environments/behavior1k/bin/python",
+        "lock_file": "external/environments/behavior1k/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/behavior1k/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/behavior1k/prefix-inventory-v3.json",
+        "pip_inspect": "artifacts/environment-materializations/behavior1k/pip-inspect-v3.json",
+        "pip_check": "artifacts/environment-materializations/behavior1k/pip-check-v3.json",
+        "materialization_manifest": "artifacts/environment-materializations/behavior1k/materialization-v4.json"
+      },
+      "assets": [
+        {
+          "asset_id": "behavior_dataset",
+          "path": "external/assets/behavior1k/datasets",
+          "kind": "directory",
+          "sha256": "fba077925b1f3454ffd341bffa549f3637a4026692259ddc4c4a9d6ecd197040"
+        },
+        {
+          "asset_id": "omnigibson_minimal_kit",
+          "path": "external/assets/behavior1k/runtime/omnigibson_4_5_0_no_flowusd_no_xr.kit",
+          "kind": "file",
+          "sha256": "62d0f45efab243d70bdcbe23afbec403731deff547e05056423b4a52f2fa0606"
+        },
+        {
+          "asset_id": "nvidia_vulkan_icd",
+          "path": "external/assets/behavior1k/runtime/nvidia_icd.json",
+          "kind": "file",
+          "sha256": "a31f1908e41393fd45ba2cef33a98d1caa90b7b4b14e485ae46fe77e03b06cde"
+        },
+        {
+          "asset_id": "ubuntu20_libgthread_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libgthread-2.0.so.0",
+          "kind": "file",
+          "sha256": "2ef9daa4612737e1c04231d46f21efc6e2af238a93a5d8df8a39d5e1cbea76d8"
+        },
+        {
+          "asset_id": "ubuntu20_libglib_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libglib-2.0.so.0",
+          "kind": "file",
+          "sha256": "3f8787c8e5dbf33ee78e865a2a78a5f9563618abd2f20bb9772d65b62d5431fa"
+        },
+        {
+          "asset_id": "ubuntu20_libpcre_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libpcre.so.3",
+          "kind": "file",
+          "sha256": "fb2fc875c7902c8c80045c93957d9aa45f5d80e096f74baa4ecf80f25e40752d"
+        },
+        {
+          "asset_id": "ubuntu20_libx11_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libX11.so.6",
+          "kind": "file",
+          "sha256": "bd77dfb2b3684f7f63e67d15a00bcf160967153c1d05eea28c6fc1c131efb7e7"
+        },
+        {
+          "asset_id": "ubuntu20_libxcb_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libxcb.so.1",
+          "kind": "file",
+          "sha256": "29965900a4ad6fdee5ca5272ef0c91f517c7e7d67829bef7b73a5546637d16a8"
+        },
+        {
+          "asset_id": "ubuntu20_libxau_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libXau.so.6",
+          "kind": "file",
+          "sha256": "2a883844bd6b9507467f372d8a46ddc55edef5ea87e1c63c75e08fb7c939beb1"
+        },
+        {
+          "asset_id": "ubuntu20_libxdmcp_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libXdmcp.so.6",
+          "kind": "file",
+          "sha256": "a65f7757d765b8eeb15fea3db8b66da969fa10e44264fcf01f7ab19a1dbd0d24"
+        },
+        {
+          "asset_id": "ubuntu20_libbsd_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libbsd.so.0",
+          "kind": "file",
+          "sha256": "f660c0d2fba4d82d7866af4d174a33bf3de8dfb3632267662db74c33013c0913"
+        },
+        {
+          "asset_id": "ubuntu20_libsm_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libSM.so.6",
+          "kind": "file",
+          "sha256": "9f5fd8e99f8e69e9105c2fcbac29e5b53ac0617c1f163a1eec0b76ad51f64e9a"
+        },
+        {
+          "asset_id": "ubuntu20_libice_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libICE.so.6",
+          "kind": "file",
+          "sha256": "169a018a624251f6be4e2ed9644f14c918c56e6de0ead1514a654ed917a94838"
+        },
+        {
+          "asset_id": "ubuntu20_libxext_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libXext.so.6",
+          "kind": "file",
+          "sha256": "44407caa11bb722887d72dae56db13807e37a13757f2d01e5552c96b798c2012"
+        },
+        {
+          "asset_id": "ubuntu20_libuuid_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libuuid.so.1",
+          "kind": "file",
+          "sha256": "8a7ee9450deb73813167378dd97d374914da74e67181103b9f04ea11d483e25a"
+        },
+        {
+          "asset_id": "ubuntu20_libgl_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libGL.so.1",
+          "kind": "file",
+          "sha256": "887514c6156db32ca306debe372c295094a6a8c7bfd082f7bfc7fb01411ee06c"
+        },
+        {
+          "asset_id": "ubuntu20_libglx_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libGLX.so.0",
+          "kind": "file",
+          "sha256": "74c0d009f5b67172ea84f308be4754b90b6f6302c56b7cc747e95eb17937b7eb"
+        },
+        {
+          "asset_id": "ubuntu20_libgldispatch_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libGLdispatch.so.0",
+          "kind": "file",
+          "sha256": "80f42924c9ee8e5c08e469ce53e50463b47e50177a828c8aa4a672b8662ed7c9"
+        },
+        {
+          "asset_id": "ubuntu20_libglu_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libGLU.so.1",
+          "kind": "file",
+          "sha256": "b2bce923911f3f7074eb8374fee41d6b6d02fd09e378d4c47049889785855995"
+        },
+        {
+          "asset_id": "ubuntu20_libxt_compat",
+          "path": "external/assets/behavior1k/runtime/compat-libs/libXt.so.6",
+          "kind": "file",
+          "sha256": "f585519fb3036c5a12886ed9cf5c34bd8ad53ee4ffa0803d43985bd257c149f2"
+        },
+        {
+          "asset_id": "ubuntu22_runtime_image",
+          "path": "external/assets/robodojo_runtime/ubuntu22.04.sif",
+          "kind": "file",
+          "sha256": "429f89f09f2c791577d5e8c27b95c539cd18a5202e4f68c40f3132e0d1b588f8"
+        },
+        {
+          "asset_id": "pinned_apptainer_cli",
+          "path": "external/runtime/apptainer/singularity",
+          "kind": "file",
+          "sha256": "dc009093c35d435cb6d84437d678eb342b34dfa781dc1a737bfd5eb7d36c6b8a"
+        },
+        {
+          "asset_id": "pinned_apptainer_config",
+          "path": "external/runtime/apptainer/config",
+          "kind": "directory",
+          "sha256": "73cd2ebaef8fa2486a55465a33b29dd272d9e1637b0612b0273ffc6f49867d97"
+        }
+      ],
+      "compute": {
+        "requirement": "gpu",
+        "render_backend": "isaac_sim_headless_gpu",
+        "probe_artifact": "artifacts/environment-preflight/behavior1k/compute-render-probe-v4.json",
+        "capture": {
+          "source": "scripts/environment_probes/behavior1k.py",
+          "source_sha256": "6df98c708ac86c9b1bbdcc4a1fd3c0f2eef4be0002f4d67cb58f3065a422ec23",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/behavior1k/official-verifier-parity-v4.json",
+        "capture": {
+          "source": "scripts/environment_probes/behavior1k_parity_v2.py",
+          "source_sha256": "81e73c033773fab5ecb37f4efc0143b1c02a1752737590684ca59a10ba966578",
+          "argv": [
+            "parity"
+          ]
+        }
+      },
+      "source_patches": [
+        {
+          "checkout": "external/upstreams/behavior1k",
+          "revision": "88454bd04f75dc57c00ab1f1a00bcde1ff505950",
+          "patch": "configs/patches/behavior1k/archived-asset-compatibility.patch",
+          "sha256": "451823be9bb018bc4184308b516c5892cbc0f61c0a5747eabf272bef3e054d51"
+        }
+      ]
+    },
+    {
+      "benchmark_id": "calvin",
+      "environment": {
+        "prefix": "external/environments/calvin",
+        "python_executable": "external/environments/calvin/bin/python",
+        "lock_file": "external/environments/calvin/requirements-v3.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/calvin/pip-overlay-v3.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/calvin/prefix-inventory-v4.json",
+        "pip_inspect": "artifacts/environment-materializations/calvin/pip-inspect-v4.json",
+        "pip_check": "artifacts/environment-materializations/calvin/pip-check-v4.json",
+        "materialization_manifest": "artifacts/environment-materializations/calvin/materialization-v4.json"
+      },
+      "assets": [
+        {
+          "asset_id": "official_validation_runtime_config",
+          "path": "external/assets/calvin/dataset",
+          "kind": "directory",
+          "sha256": "f169e447dd9572e3e77f68ec1e05eb1112cf975872769b41050107ee6bcb9d55"
+        },
+        {
+          "asset_id": "official_mcil_policy",
+          "path": "external/assets/calvin/policy/D_D_static_rgb_baseline",
+          "kind": "directory",
+          "sha256": "e702c4873d6a2a9fea0342d063b4e59b86e0265f30fbc2007c379e17a73678be"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu",
+        "render_backend": "pybullet_direct",
+        "probe_artifact": "artifacts/environment-preflight/calvin/compute-render-probe-v4.json",
+        "capture": {
+          "source": "scripts/environment_probes/calvin.py",
+          "source_sha256": "06c8752cb123bdf2335d9bcfd73d78a0bb48ef3dd4bebdce137f3f868d91933e",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/calvin/official-verifier-parity-v4.json",
+        "capture": {
+          "source": "scripts/environment_probes/calvin.py",
+          "source_sha256": "06c8752cb123bdf2335d9bcfd73d78a0bb48ef3dd4bebdce137f3f868d91933e",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "capx",
+      "environment": {
+        "prefix": "external/environments/capx",
+        "python_executable": "external/environments/capx/bin/python3.10",
+        "lock_file": "external/environments/capx/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/capx/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/capx/prefix-inventory-v2.json",
+        "pip_inspect": "artifacts/environment-materializations/capx/pip-inspect-v2.json",
+        "pip_check": "artifacts/environment-materializations/capx/pip-check-v2.json",
+        "materialization_manifest": "artifacts/environment-materializations/capx/materialization-v4.json"
+      },
+      "assets": [
+        {
+          "asset_id": "current_interface_live_reset",
+          "path": "external/assets/capx/current_interface_reset.json",
+          "kind": "file",
+          "sha256": "61be1d722bb9507f8ec283c2d04431f0d6e486bd6ec2c02761cff0cd5d551a10"
+        },
+        {
+          "asset_id": "locked_robosuite_97292732",
+          "path": "external/assets/capx/robosuite",
+          "kind": "directory",
+          "sha256": "8b1bd30d9c0f23bc8f164ddb7fe4bea85c87b384fc572148ec53027560219404"
+        },
+        {
+          "asset_id": "pyroki_panda_description",
+          "path": "external/assets/capx/pyroki_panda_description",
+          "kind": "directory",
+          "sha256": "ccfbdeb43d371c799eff9b0b41ee472744e3a8bb2086c6768bdc1155d27f354b"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu_or_gpu",
+        "render_backend": "route_specific_headless",
+        "probe_artifact": "artifacts/environment-preflight/capx/compute-render-probe-v4.json",
+        "capture": {
+          "source": "scripts/environment_probes/capx.py",
+          "source_sha256": "a0612d055326a0e93c0c02d51a27bc184ffb6dabc059f8144fa5be97f08c1a81",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/capx/official-verifier-parity-v4.json",
+        "capture": {
+          "source": "scripts/environment_probes/capx.py",
+          "source_sha256": "a0612d055326a0e93c0c02d51a27bc184ffb6dabc059f8144fa5be97f08c1a81",
+          "argv": [
+            "parity"
+          ]
+        }
+      },
+      "source_patches": [
+        {
+          "checkout": "external/upstreams/capx/capx/third_party/b1k",
+          "revision": "272ec5ca9936453c4a8fd335c4dfba61245e33ca",
+          "patch": "configs/patches/capx/object-level-joints.patch",
+          "sha256": "e9edfe752831755e9bf7119d5b9031aa0db28b29f295f7b768af852926bdf64b"
+        },
+        {
+          "checkout": "external/upstreams/capx",
+          "revision": "53e9966d7a8e2fa7494676772bccc35280f5c0ed",
+          "patch": "configs/patches/capx/base-inplace-rotation.patch",
+          "sha256": "cbb67fe758a30bb2c390e6795be620a0e42bad3c6f6458ee81bee41c42e9f9e0"
+        }
+      ]
+    },
+    {
+      "benchmark_id": "cliport",
+      "environment": {
+        "prefix": "external/environments/cliport",
+        "python_executable": "external/environments/cliport/bin/python",
+        "lock_file": "external/environments/cliport/requirements.lock",
+        "lock_format": "pip-hashes",
+        "prefix_inventory": "artifacts/environment-materializations/cliport/prefix-inventory-v2.json",
+        "pip_inspect": "artifacts/environment-materializations/cliport/pip-inspect-v2.json",
+        "pip_check": "artifacts/environment-materializations/cliport/pip-check-v2.json",
+        "materialization_manifest": "artifacts/environment-materializations/cliport/materialization-v2.json"
+      },
+      "assets": [
+        {
+          "asset_id": "ravens_assets",
+          "path": "external/assets/cliport",
+          "kind": "directory",
+          "sha256": "12756e472d265622472e6f829326e1dc579adeb6c4313cc29ade18fa47fa2920"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu",
+        "render_backend": "pybullet_direct",
+        "probe_artifact": "artifacts/environment-preflight/cliport/compute-render-probe-v2.json",
+        "capture": {
+          "source": "scripts/environment_probes/cliport.py",
+          "source_sha256": "f7682baa0b6b29ca91da8e9f8fa72c95cc9d395b5e1525e39073850bca5d33c0",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/cliport/official-verifier-parity-v2.json",
+        "capture": {
+          "source": "scripts/environment_probes/cliport.py",
+          "source_sha256": "f7682baa0b6b29ca91da8e9f8fa72c95cc9d395b5e1525e39073850bca5d33c0",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "maniskill",
+      "environment": {
+        "prefix": "external/environments/maniskill",
+        "python_executable": "external/environments/maniskill/bin/python3.11",
+        "lock_file": "external/environments/maniskill/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/maniskill/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/maniskill/prefix-inventory.json",
+        "pip_inspect": "artifacts/environment-materializations/maniskill/pip-inspect.json",
+        "pip_check": "artifacts/environment-materializations/maniskill/pip-check.json",
+        "materialization_manifest": "artifacts/environment-materializations/maniskill/materialization.json"
+      },
+      "assets": [],
+      "compute": {
+        "requirement": "cpu_or_gpu",
+        "render_backend": "sapien_vulkan",
+        "probe_artifact": "artifacts/environment-preflight/maniskill/compute-render-probe.json",
+        "capture": {
+          "source": "scripts/environment_probes/maniskill.py",
+          "source_sha256": "393f53b63d10e8d3e2b3128dba9b27d14a54e3379879b3d374da90e2a446eba3",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/maniskill/official-verifier-parity.json",
+        "capture": {
+          "source": "scripts/environment_probes/maniskill.py",
+          "source_sha256": "393f53b63d10e8d3e2b3128dba9b27d14a54e3379879b3d374da90e2a446eba3",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "rlbench",
+      "environment": {
+        "prefix": "external/environments/rlbench",
+        "python_executable": "external/environments/rlbench/bin/python3.10",
+        "lock_file": "external/environments/rlbench/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/rlbench/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/rlbench/prefix-inventory-v2.json",
+        "pip_inspect": "artifacts/environment-materializations/rlbench/pip-inspect-v2.json",
+        "pip_check": "artifacts/environment-materializations/rlbench/pip-check-v2.json",
+        "materialization_manifest": "artifacts/environment-materializations/rlbench/materialization-v4.json"
+      },
+      "assets": [
+        {
+          "asset_id": "coppeliasim",
+          "path": "external/assets/rlbench/CoppeliaSim_Edu_V4_1_0_Ubuntu20_04",
+          "kind": "directory",
+          "sha256": "8fd27902cf438195d8157b664b3e61fcc551b3002c094eafb8ca4555efb3d5e6"
+        },
+        {
+          "asset_id": "xvfb_runtime",
+          "path": "external/assets/rlbench/xvfb",
+          "kind": "directory",
+          "sha256": "a3cdc0dd3b24feac99361149a1d261698244caf388d4a3db129a4bf8b9a53c39"
+        },
+        {
+          "asset_id": "qt_xcb_compat",
+          "path": "external/assets/rlbench/qt_xcb_compat",
+          "kind": "directory",
+          "sha256": "4f7e1d1ac366fce12cd1bb6fbccdc7a409d82435f039d3f2f2ba1c21ee633a98"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu",
+        "render_backend": "coppeliasim_headless",
+        "probe_artifact": "artifacts/environment-preflight/rlbench/compute-render-probe-v3.json",
+        "capture": {
+          "source": "scripts/environment_probes/rlbench.py",
+          "source_sha256": "c7ba6b5c35f2a431474f0edbd44ec3d14b02f585213f888fd481fb91a9672d1d",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/rlbench/official-verifier-parity-v5.json",
+        "capture": {
+          "source": "scripts/environment_probes/rlbench.py",
+          "source_sha256": "c7ba6b5c35f2a431474f0edbd44ec3d14b02f585213f888fd481fb91a9672d1d",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "robocasa",
+      "environment": {
+        "prefix": "external/environments/robocasa",
+        "python_executable": "external/environments/robocasa/bin/python",
+        "lock_file": "external/environments/robocasa/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/robocasa/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/robocasa/prefix-inventory-v2.json",
+        "pip_inspect": "artifacts/environment-materializations/robocasa/pip-inspect-v2.json",
+        "pip_check": "artifacts/environment-materializations/robocasa/pip-check-v2.json",
+        "materialization_manifest": "artifacts/environment-materializations/robocasa/materialization-v4.json"
+      },
+      "assets": [
+        {
+          "asset_id": "kitchen_assets",
+          "path": "external/assets/robocasa",
+          "kind": "directory",
+          "sha256": "0edb8308d4e78a4173215bde9405bfb3b139c0dbc831ab764b3889da9df2123e"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu_or_gpu",
+        "render_backend": "mujoco_egl_or_osmesa",
+        "probe_artifact": "artifacts/environment-preflight/robocasa/compute-render-probe-v2.json",
+        "capture": {
+          "source": "scripts/environment_probes/robocasa.py",
+          "source_sha256": "a8e7a523d1e70e9b5dabf623e0b891bbeb075d6920ae514214c5672c3da4cf8a",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/robocasa/official-verifier-parity-v4.json",
+        "capture": {
+          "source": "scripts/environment_probes/robocasa.py",
+          "source_sha256": "a8e7a523d1e70e9b5dabf623e0b891bbeb075d6920ae514214c5672c3da4cf8a",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "robocasa365",
+      "environment": {
+        "prefix": "external/environments/robocasa365",
+        "python_executable": "external/environments/robocasa365/bin/python",
+        "lock_file": "external/environments/robocasa365/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/robocasa365/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/robocasa365/prefix-inventory-v2.json",
+        "pip_inspect": "artifacts/environment-materializations/robocasa365/pip-inspect-v2.json",
+        "pip_check": "artifacts/environment-materializations/robocasa365/pip-check-v2.json",
+        "materialization_manifest": "artifacts/environment-materializations/robocasa365/materialization-v2.json"
+      },
+      "assets": [
+        {
+          "asset_id": "kitchen_assets",
+          "path": "external/assets/robocasa",
+          "kind": "directory",
+          "sha256": "0edb8308d4e78a4173215bde9405bfb3b139c0dbc831ab764b3889da9df2123e"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu_or_gpu",
+        "render_backend": "mujoco_egl_or_osmesa",
+        "probe_artifact": "artifacts/environment-preflight/robocasa365/compute-render-probe-v2.json",
+        "capture": {
+          "source": "scripts/environment_probes/robocasa365.py",
+          "source_sha256": "16f49dcedc65404c2136548aa5cd14b55a7815f27abfbe956df0fc0a9a9fb48d",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/robocasa365/official-verifier-parity-v2.json",
+        "capture": {
+          "source": "scripts/environment_probes/robocasa365.py",
+          "source_sha256": "16f49dcedc65404c2136548aa5cd14b55a7815f27abfbe956df0fc0a9a9fb48d",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "robodojo",
+      "environment": {
+        "prefix": "external/environments/robodojo",
+        "python_executable": "external/environments/robodojo/bin/python3.11",
+        "lock_file": "external/environments/robodojo/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/robodojo/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/robodojo/prefix-inventory-v3.json",
+        "pip_inspect": "artifacts/environment-materializations/robodojo/pip-inspect-v3.json",
+        "pip_check": "artifacts/environment-materializations/robodojo/pip-check-v3.json",
+        "materialization_manifest": "artifacts/environment-materializations/robodojo/materialization-v7.json"
+      },
+      "source_patches": [
+        {
+          "checkout": "external/upstreams/robodojo/third_party/IsaacLab",
+          "revision": "afca7b09d60d8beb9c1cb28b43066499940b969b",
+          "patch": "configs/patches/robodojo/isaaclab-offline-urdf-importer.patch",
+          "sha256": "ee92c30e2293d0926176dbbd71ac5c9e0102631d672d38daf41c2c0f1f170fdf"
+        },
+        {
+          "checkout": "external/upstreams/robodojo/third_party/curobo",
+          "revision": "d17b54ce32cba095c0b000c4c58777075d11de0e",
+          "patch": "configs/patches/robodojo/curobo-submodule-version-fallback.patch",
+          "sha256": "eb47b1092d6e5b6c415853193a53f95563b520dad8e26de7c9e7d35a6ca416a2"
+        }
+      ],
+      "assets": [
+        {
+          "asset_id": "task_robot_and_layout_assets",
+          "path": "external/assets/robodojo",
+          "kind": "directory",
+          "sha256": "301199a9028a4ac56dcd206f4a57a5088c7312649be9601aefdbbdb47f1d55cf"
+        },
+        {
+          "asset_id": "ubuntu22_runtime_image",
+          "path": "external/assets/robodojo_runtime/ubuntu22.04.sif",
+          "kind": "file",
+          "sha256": "429f89f09f2c791577d5e8c27b95c539cd18a5202e4f68c40f3132e0d1b588f8"
+        }
+      ],
+      "compute": {
+        "requirement": "gpu",
+        "render_backend": "isaac_sim_headless_gpu",
+        "probe_artifact": "artifacts/environment-preflight/robodojo/compute-render-probe-v6.json",
+        "capture": {
+          "source": "scripts/environment_probes/robodojo.py",
+          "source_sha256": "b4f3cc8c1aca7c48a48f55c75bb27b492d000baf14e438130823e6dc7a4109bd",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/robodojo/official-verifier-parity-v7.json",
+        "capture": {
+          "source": "scripts/environment_probes/robodojo.py",
+          "source_sha256": "b4f3cc8c1aca7c48a48f55c75bb27b492d000baf14e438130823e6dc7a4109bd",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "robotwin2",
+      "environment": {
+        "prefix": "external/environments/robotwin2",
+        "python_executable": "external/environments/robotwin2/base/bin/python3.10",
+        "lock_file": "external/environments/robotwin2/requirements.lock",
+        "lock_format": "pip-hashes",
+        "prefix_inventory": "artifacts/environment-materializations/robotwin2/prefix-inventory.json",
+        "pip_inspect": "artifacts/environment-materializations/robotwin2/pip-inspect.json",
+        "pip_check": "artifacts/environment-materializations/robotwin2/pip-check.json",
+        "materialization_manifest": "artifacts/environment-materializations/robotwin2/materialization.json"
+      },
+      "assets": [
+        {
+          "asset_id": "cup_021",
+          "path": "external/assets/robotwin2/objects/021_cup",
+          "kind": "directory",
+          "sha256": "65905a1a3c419a849d9acb9579caa1e11c83a5553721355606c08b15b79b06f3"
+        },
+        {
+          "asset_id": "coaster_019",
+          "path": "external/assets/robotwin2/objects/019_coaster",
+          "kind": "directory",
+          "sha256": "8196b605ab4b6b953433ce3cf3e2952ee53a460bdeced588066da4169132257d"
+        },
+        {
+          "asset_id": "aloha_agilex",
+          "path": "external/assets/robotwin2/embodiments/aloha-agilex",
+          "kind": "directory",
+          "sha256": "c8a3eff7872290835431652a593b6ef855ad0bbae0eb5b18775bb171889a1174"
+        },
+        {
+          "asset_id": "object_equivalence_metadata",
+          "path": "external/assets/robotwin2/objects/same.json",
+          "kind": "file",
+          "sha256": "3bcaa1618ff9d0b50478dd22183f77ca3557d9d5406442b17e39337e68cb5edd"
+        },
+        {
+          "asset_id": "objaverse_catalog_metadata",
+          "path": "external/assets/robotwin2/objects/objaverse/list.json",
+          "kind": "file",
+          "sha256": "9c33b70f6e91788033d6cc3e1d58fe0ad09ced472679440083b31513f9c4bc6f"
+        }
+      ],
+      "compute": {
+        "requirement": "gpu",
+        "render_backend": "sapien_vulkan_gpu",
+        "probe_artifact": "artifacts/environment-preflight/robotwin2/compute-render-probe.json",
+        "capture": {
+          "source": "scripts/environment_probes/robotwin2.py",
+          "source_sha256": "c161273e9c6c0317ea7ce7c0bffec3ca5676d623b65ba3eac8734632e58950ea",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/robotwin2/official-verifier-parity.json",
+        "capture": {
+          "source": "scripts/environment_probes/robotwin2.py",
+          "source_sha256": "c161273e9c6c0317ea7ce7c0bffec3ca5676d623b65ba3eac8734632e58950ea",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "robowits",
+      "environment": {
+        "prefix": "external/environments/robowits",
+        "python_executable": "external/environments/robowits/bin/python3.11",
+        "lock_file": "external/environments/robowits/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/robowits/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/robowits/prefix-inventory.json",
+        "pip_inspect": "artifacts/environment-materializations/robowits/pip-inspect.json",
+        "pip_check": "artifacts/environment-materializations/robowits/pip-check.json",
+        "materialization_manifest": "artifacts/environment-materializations/robowits/materialization.json"
+      },
+      "assets": [
+        {
+          "asset_id": "marvin_bimanual",
+          "path": "external/assets/robowits/hf_assets/marvin_bimanual",
+          "kind": "directory",
+          "sha256": "c4af50a30e6aa1359e78819419509a4ce0b62a1d32f3a2d732e6d5962b7641b7"
+        },
+        {
+          "asset_id": "work_table",
+          "path": "external/assets/robowits/hf_assets/work_table.glb",
+          "kind": "file",
+          "sha256": "cb0ebd8ad6438c1160f095d902bf55415f9d643f8c6990a186a052251fe7951a"
+        },
+        {
+          "asset_id": "worktable_texture",
+          "path": "external/assets/robowits/hf_assets/worktable_texture",
+          "kind": "directory",
+          "sha256": "f8b3d86937e37a7442b64b33ca2854529786aad9715e2854313c9cc0f93a706d"
+        }
+      ],
+      "compute": {
+        "requirement": "gpu",
+        "render_backend": "genesis_gpu",
+        "probe_artifact": "artifacts/environment-preflight/robowits/compute-render-probe.json",
+        "capture": {
+          "source": "scripts/environment_probes/robowits.py",
+          "source_sha256": "8d314ffbb0e1a2eab49b9d8f47297a856cc8a03034fcf3c8a10f2c06bd85aaf6",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/robowits/official-verifier-parity.json",
+        "capture": {
+          "source": "scripts/environment_probes/robowits.py",
+          "source_sha256": "8d314ffbb0e1a2eab49b9d8f47297a856cc8a03034fcf3c8a10f2c06bd85aaf6",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "vimabench",
+      "environment": {
+        "prefix": "external/environments/vimabench",
+        "python_executable": "external/environments/vimabench/bin/python3.10",
+        "lock_file": "external/environments/vimabench/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/vimabench/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/vimabench/prefix-inventory-v2.json",
+        "pip_inspect": "artifacts/environment-materializations/vimabench/pip-inspect-v2.json",
+        "pip_check": "artifacts/environment-materializations/vimabench/pip-check-v2.json",
+        "materialization_manifest": "artifacts/environment-materializations/vimabench/materialization-v2.json"
+      },
+      "assets": [
+        {
+          "asset_id": "tabletop_assets",
+          "path": "external/upstreams/vimabench/vima_bench/tasks/assets",
+          "kind": "directory",
+          "sha256": "9f026c233b22bbdde51893188e249a1abf06f9e09761b490d9330d28b807091c"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu",
+        "render_backend": "pybullet_direct",
+        "probe_artifact": "artifacts/environment-preflight/vimabench/compute-render-probe-v2.json",
+        "capture": {
+          "source": "scripts/environment_probes/vimabench.py",
+          "source_sha256": "b991a518d8e21a2d72f6a0b213a22f5a32b3a527f889580518ee677767d7e665",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/vimabench/official-verifier-parity-v2.json",
+        "capture": {
+          "source": "scripts/environment_probes/vimabench.py",
+          "source_sha256": "b991a518d8e21a2d72f6a0b213a22f5a32b3a527f889580518ee677767d7e665",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    },
+    {
+      "benchmark_id": "vlabench",
+      "environment": {
+        "prefix": "external/environments/vlabench",
+        "python_executable": "external/environments/vlabench/bin/python",
+        "lock_file": "external/environments/vlabench/requirements.lock",
+        "lock_format": "conda-explicit+pip-overlay",
+        "pip_overlay_lock": "external/environments/vlabench/pip-overlay.lock.json",
+        "prefix_inventory": "artifacts/environment-materializations/vlabench/prefix-inventory-v2.json",
+        "pip_inspect": "artifacts/environment-materializations/vlabench/pip-inspect-v2.json",
+        "pip_check": "artifacts/environment-materializations/vlabench/pip-check-v2.json",
+        "materialization_manifest": "artifacts/environment-materializations/vlabench/materialization-v3.json"
+      },
+      "assets": [
+        {
+          "asset_id": "mesh_and_task_assets",
+          "path": "external/assets/vlabench",
+          "kind": "directory",
+          "sha256": "c4015bc70ee862c68ec533828f3c8f2df47d5f32c0aa4bff56dae10235e4750f"
+        }
+      ],
+      "compute": {
+        "requirement": "cpu",
+        "render_backend": "mujoco_egl_or_osmesa",
+        "probe_artifact": "artifacts/environment-preflight/vlabench/compute-render-probe-v3.json",
+        "capture": {
+          "source": "scripts/environment_probes/vlabench.py",
+          "source_sha256": "0a05e6a59cee60f0ba0281d6fd2de57786738f110bc40f997599ca06a3d68a91",
+          "argv": [
+            "compute"
+          ]
+        }
+      },
+      "verifier_parity": {
+        "probe_artifact": "artifacts/environment-preflight/vlabench/official-verifier-parity-v3.json",
+        "capture": {
+          "source": "scripts/environment_probes/vlabench.py",
+          "source_sha256": "0a05e6a59cee60f0ba0281d6fd2de57786738f110bc40f997599ca06a3d68a91",
+          "argv": [
+            "parity"
+          ]
+        }
+      }
+    }
+  ]
+}

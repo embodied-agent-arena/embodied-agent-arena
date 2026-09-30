@@ -1,0 +1,110 @@
+{
+  "schema_version": "w3-openhands-adapter-registry-v1",
+  "entries": [
+    {
+      "entry_id": "alfworld_visual",
+      "benchmark": "ALFWorld",
+      "track": "visual",
+      "root": "ALFWorldBenchmark",
+      "adapter_dir": "openhands_adapter",
+      "status": "runnable",
+      "default_instance_id": "alfworld_visual_debug_0",
+      "full_instance_id": "alfworld_visual_eval_0",
+      "extra_required_files": [
+        "visual_task_template.md",
+        "visual_primitive_api.py",
+        "run_visual_instance.py"
+      ],
+      "run": {
+        "cwd": "ALFWorldBenchmark",
+        "python": "../ALFREDOfficialBenchmark/.venv/bin/python",
+        "script": "openhands_adapter/run_visual_instance.py",
+        "evaluate_python": ".venv/bin/python",
+        "evaluate_script": "openhands_adapter/evaluate_instance.py"
+      }
+    },
+    {
+      "entry_id": "scienceworld_text",
+      "benchmark": "ScienceWorld",
+      "track": "text",
+      "root": "ScienceWorldBenchmark",
+      "adapter_dir": "openhands_adapter",
+      "status": "runnable",
+      "default_instance_id": "scienceworld_text_debug_0",
+      "full_instance_id": "scienceworld_text_full_0",
+      "run": {
+        "cwd": "ScienceWorldBenchmark",
+        "python": ".venv/bin/python",
+        "script": "openhands_adapter/run_instance.py",
+        "evaluate_python": ".venv/bin/python",
+        "evaluate_script": "openhands_adapter/evaluate_instance.py"
+      }
+    },
+    {
+      "entry_id": "discoveryworld",
+      "benchmark": "DiscoveryWorld",
+      "track": "text_json",
+      "root": "DiscoveryWorldBenchmark",
+      "adapter_dir": "openhands_adapter",
+      "status": "runnable",
+      "default_instance_id": "discoveryworld_debug_0",
+      "full_instance_id": "discoveryworld_full_0",
+      "run": {
+        "cwd": "DiscoveryWorldBenchmark",
+        "python": ".venv/bin/python",
+        "script": "openhands_adapter/run_instance.py",
+        "evaluate_python": ".venv/bin/python",
+        "evaluate_script": "openhands_adapter/evaluate_instance.py"
+      }
+    },
+    {
+      "entry_id": "virtualhome_symbolic",
+      "benchmark": "VirtualHome",
+      "track": "symbolic_evolving_graph",
+      "root": "VirtualHomeBenchmark",
+      "adapter_dir": "openhands_adapter",
+      "status": "runnable",
+      "default_instance_id": "virtualhome_symbolic_debug_0",
+      "full_instance_id": "virtualhome_symbolic_full_0",
+      "run": {
+        "cwd": "VirtualHomeBenchmark",
+        "python": ".venv/bin/python",
+        "script": "openhands_adapter/run_instance.py",
+        "evaluate_python": ".venv/bin/python",
+        "evaluate_script": "openhands_adapter/evaluate_instance.py"
+      }
+    },
+    {
+      "entry_id": "alfred_official_visual",
+      "benchmark": "ALFRED",
+      "track": "official_visual",
+      "root": "ALFREDOfficialBenchmark",
+      "adapter_dir": "openhands_adapter",
+      "status": "runnable",
+      "default_instance_id": "alfred_official_debug_0",
+      "full_instance_id": "alfred_official_eval_0",
+      "run": {
+        "cwd": "ALFREDOfficialBenchmark",
+        "python": ".venv/bin/python",
+        "script": "openhands_adapter/run_instance.py",
+        "evaluate_python": ".venv/bin/python",
+        "evaluate_script": "openhands_adapter/evaluate_instance.py"
+      }
+    },
+    {
+      "entry_id": "humanclaw",
+      "benchmark": "HumanCLAW",
+      "track": "egocentric",
+      "root": "HumanCLAWBenchmark",
+      "adapter_dir": "openhands_adapter",
+      "status": "runnable",
+      "default_instance_id": "humanclaw_full_0",
+      "full_instance_id": "humanclaw_full_0",
+      "run": {
+        "cwd": "HumanCLAWBenchmark",
+        "python": "python3",
+        "script": "openhands_adapter/run_instance.py"
+      }
+    }
+  ]
+}

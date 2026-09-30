@@ -1,0 +1,22 @@
+diff --git a/OmniGibson/omnigibson/prims/entity_prim.py b/OmniGibson/omnigibson/prims/entity_prim.py
+index 84fa578f..bc163ee2 100644
+--- a/OmniGibson/omnigibson/prims/entity_prim.py
++++ b/OmniGibson/omnigibson/prims/entity_prim.py
+@@ -197,6 +197,17 @@ class EntityPrim(XFormPrim):
+         # We iterate over all children of this object's prim,
+         # and grab any that are presumed to be rigid bodies (i.e.: other Xforms)
+         joint_children = set()
++        # Official assets also store joints in an object-level Scope named
++        # "joints". Include those connections when identifying the root link.
++        # Their USD locations and physics relationships remain unchanged.
++        for container in self._prim.GetChildren():
++            if container.GetPrimTypeInfo().GetTypeName() == "Scope" and container.GetName() == "joints":
++                for joint_prim in container.GetChildren():
++                    if "joint" in joint_prim.GetPrimTypeInfo().GetTypeName().lower():
++                        body0 = joint_prim.GetRelationship("physics:body0").GetTargets()
++                        body1 = joint_prim.GetRelationship("physics:body1").GetTargets()
++                        if body0 and body1:
++                            joint_children.add(body1[0].pathString.split("/")[-1])
+         # Keep track of all the links we will create. We can't create that just yet because we need to find
+         # the base link first.
+         links_to_create = {}

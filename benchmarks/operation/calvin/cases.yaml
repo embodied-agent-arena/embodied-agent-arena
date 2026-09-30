@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "calvin",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Turn off the CALVIN table LED with agent-authored 7D actions while keeping official predicate evaluation private to the verifier.",
+        "task_id": "native_calvin_turn_off_led",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "calvin_native_turn_off_led",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "calvin",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "calvin"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

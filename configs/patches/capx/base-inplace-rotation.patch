@@ -1,0 +1,94 @@
+diff --git a/capx/envs/simulators/r1pro_b1k.py b/capx/envs/simulators/r1pro_b1k.py
+index bf7b062..9ff9a74 100644
+--- a/capx/envs/simulators/r1pro_b1k.py
++++ b/capx/envs/simulators/r1pro_b1k.py
+@@ -778,6 +778,38 @@ class R1ProBehaviourLowLevel(BaseEnv):
+         else:
+             return False
+     
++    def rotate_base_in_place(self, delta_yaw, *, settle_steps=2):
++        """
++        Rotate the holonomic base about the world z axis in place.
++
++        The base is a six-DoF holonomic joint (x, y, z, rx, ry, rz) whose joint
++        values are intrinsic Euler angles, so adding to one joint index is not a
++        yaw delta. set_position_orientation is the class's own supported way of
++        moving the base while the simulator is playing: it converts the requested
++        world pose into the six base joints for us, so the requested rotation is
++        applied exactly.
++
++        Routing the sweep through the base motion planner is what originally
++        failed: planning a path to a pose at the robot's own footprint has no
++        solution and raised ActionPrimitiveError(PLANNING_ERROR), which left the
++        base stationary for the whole scan.
++
++        Args:
++            delta_yaw: Relative yaw in radians applied about the world z axis.
++            settle_steps: Settle iterations that let physics follow the new pose.
++        Returns:
++            success: Whether the base yaw actually changed.
++        """
++        robot = self.robot
++        before = quat2yaw(robot.get_position_orientation()[1])
++        position, orientation = robot.get_position_orientation()
++        delta = euler2quat(torch.tensor([0.0, 0.0, float(delta_yaw)]))
++        robot.set_position_orientation(position, quat_multiply(delta, orientation))
++        for _ in range(max(1, int(settle_steps))):
++            self._settle_robot()
++        after = quat2yaw(robot.get_position_orientation()[1])
++        return abs(after - before) > 0.1
++
+     def _lift_arm(self, arm=0):
+         """
+         Lift the arm in the environment.
+diff --git a/capx/integrations/r1pro/control.py b/capx/integrations/r1pro/control.py
+index 149d425..444ac74 100644
+--- a/capx/integrations/r1pro/control.py
++++ b/capx/integrations/r1pro/control.py
+@@ -1324,24 +1324,30 @@ class R1ProControlApi(ApiBase):
+     def find_object_base_rotate(self, object_name: str) -> None:
+         """
+         Rotate the robot base until the object is found in the current field of view.
++
++        The base is a holonomic 6-DoF joint, so the yaw sweep is commanded
++        directly instead of being routed through the base motion planner.
++        Planning a path to a pose at the robot's own footprint has no solution and
++        raised ActionPrimitiveError(PLANNING_ERROR), which left the base
++        stationary for the whole sweep and made the scan ineffective.
++
+         Args:
+             object_name: Name of the object to find.
+         Returns:
+             success: Whether the object was found.
+         """
+-        robot_pos, robot_quat = self._env.robot.get_position_orientation()
+-        cur_yaw = quat2yaw(robot_quat)
+         delta_yaw = 0.5
+-        num_idx = 2*np.pi // delta_yaw
++        num_idx = int(2*np.pi // delta_yaw)
+         obs = self._env.get_observation()
+-        for idx in range(int(num_idx)):
+-            
++        if self.detect_object_sam3(object_name):
++            print("Object found")
++            return True
++        for idx in range(num_idx):
++            if not self._env.rotate_base_in_place(delta_yaw):
++                print("Base rotation failed at idx", idx)
++                return False
+             robot_pos, robot_quat = self._env.robot.get_position_orientation()
+-            cur_yaw = quat2yaw(robot_quat)
+-            new_yaw = cur_yaw + delta_yaw if idx >0 else cur_yaw
+-            new_pose = (robot_pos[0], robot_pos[1], new_yaw)
+-            self._env._navigate_to_pose(new_pose)
+-            print("Navigating to pose", new_pose)
++            print("Rotated base to yaw", quat2yaw(robot_quat))
+             if self.detect_object_sam3(object_name):
+                 print("Object found")
+                 return True
+diff --git a/capx/third_party/b1k b/capx/third_party/b1k
+--- a/capx/third_party/b1k
++++ b/capx/third_party/b1k
+@@ -1 +1 @@
+-Subproject commit 272ec5ca9936453c4a8fd335c4dfba61245e33ca
++Subproject commit 272ec5ca9936453c4a8fd335c4dfba61245e33ca-dirty

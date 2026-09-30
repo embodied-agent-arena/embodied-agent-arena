@@ -1,0 +1,47 @@
+{
+  "env": {
+    "_target_": "capx.envs.tasks.franka.franka_libero_env.FrankaLiberoCodeEnv",
+    "cfg": {
+      "_target_": "capx.envs.tasks.base.CodeExecEnvConfig",
+      "low_level": {
+        "_target_": "capx.envs.simulators.libero.FrankaLiberoEnv",
+        "suite_name": "libero_10",
+        "task_id": 9,
+        "privileged": false,
+        "enable_render": true,
+        "seed": 1
+      },
+      "privileged": false,
+      "apis": [
+        "FrankaLiberoApi"
+      ],
+      "prompt": "You are controlling a Franka Emika robot with API described below.\nGoal: put the yellow and white mug in the microwave and close it\nYou may write python code comments for reasoning but ONLY write the executable Python code and do not write it in code fences.\nAfter this code executes, you will be able to get a new observation of the environment and write new code to complete the task if needed.\nThe functions (APIs) below are already imported to the environment. If you want to use numpy, you need to import it explicitly.\n",
+      "multi_turn_prompt": "The following code blocks were just executed:\n```python\n{executed_code}\n```\nThe current console stdout is:\n```\n{console_stdout}\n```\nThe current console stderr is:\n```\n{console_stderr}\n```\nIf there were no errors during compilation or execution, the console stderr will be empty. If there were errors, consider regenerating the code.\nPlease respond with EXACTLY ONE of the following:\n- The word 'REGENERATE' followed immediately by new Python code in a fenced code block (```python...```) if you want to modify the code.\n- The word 'FINISH' if the task appears to be complete\n"
+    }
+  },
+  "api_servers": [
+    {
+      "_target_": "capx.serving.launch_pyroki_server.main",
+      "port": 8116,
+      "host": "127.0.0.1",
+      "robot": "panda_description",
+      "target_link": "panda_hand"
+    },
+    {
+      "_target_": "capx.serving.launch_contact_graspnet_server.main",
+      "port": 8115,
+      "host": "127.0.0.1"
+    },
+    {
+      "_target_": "capx.serving.launch_sam3_server.main",
+      "device": "cuda",
+      "port": 8114,
+      "host": "127.0.0.1"
+    }
+  ],
+  "record_video": false,
+  "output_dir": "./outputs/arena_libero",
+  "trials": 50,
+  "num_workers": 10,
+  "use_visual_feedback": false
+}

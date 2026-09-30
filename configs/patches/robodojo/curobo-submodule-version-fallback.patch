@@ -1,0 +1,16 @@
+diff --git a/curobo/_src/util/version.py b/curobo/_src/util/version.py
+index 56f72c4..3e0a8e5 100644
+--- a/curobo/_src/util/version.py
++++ b/curobo/_src/util/version.py
+@@ -18,7 +18,10 @@ def get_version() -> str:
+     import pathlib
+ 
+     root = pathlib.Path(__file__).resolve().parent.parent.parent.parent
+-    if (root / ".git").exists() and not (root / ".git/shallow").exists():
++    # A submodule checkout stores ``.git`` as a pointer file.  In a sealed or
++    # shallow benchmark checkout it does not contain enough tag history for
++    # setuptools-scm, so use the installed-metadata/fallback path below.
++    if (root / ".git").is_dir() and not (root / ".git/shallow").exists():
+         # Third Party
+         import setuptools_scm
+ 

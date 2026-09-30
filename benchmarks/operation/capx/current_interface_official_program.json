@@ -1,0 +1,104 @@
+{
+  "actions": [
+    {
+      "operation": "observe"
+    },
+    {
+      "extent": [0.04, 0.04, 0.04],
+      "operation": "observation_pose",
+      "output": "source_pose",
+      "path": ["cube_poses", "primary"],
+      "quaternion_wxyz": [0.0, 0.0, 1.0, 0.0]
+    },
+    {
+      "extent": [0.04, 0.04, 0.04],
+      "operation": "observation_pose",
+      "output": "target_pose",
+      "path": ["cube_poses", "secondary"],
+      "quaternion_wxyz": [0.0, 0.0, 1.0, 0.0]
+    },
+    {
+      "anchor": "source_pose",
+      "direction": [0.0, 0.0, 1.0],
+      "direction_frame": "world",
+      "distance": 0.14,
+      "operation": "geometry",
+      "output": "grasp_approach",
+      "quaternion_from": "source_pose"
+    },
+    {
+      "action": "goto_pose",
+      "arm": "default",
+      "operation": "action",
+      "pose": "grasp_approach"
+    },
+    {
+      "action": "goto_pose",
+      "arm": "default",
+      "operation": "action",
+      "pose": "source_pose"
+    },
+    {
+      "action": "close_gripper",
+      "arm": "default",
+      "operation": "action",
+      "repeat": 2
+    },
+    {
+      "anchor": "source_pose",
+      "direction": [0.0, 0.0, 1.0],
+      "direction_frame": "world",
+      "distance": 0.28,
+      "operation": "geometry",
+      "output": "lift_pose",
+      "quaternion_from": "source_pose"
+    },
+    {
+      "action": "goto_pose",
+      "arm": "default",
+      "operation": "action",
+      "pose": "lift_pose"
+    },
+    {
+      "anchor": "target_pose",
+      "direction": [0.0, 0.0, 1.0],
+      "direction_frame": "world",
+      "distance": 0.015,
+      "extent_terms": [
+        {"scale": 0.5, "source": "source_pose"},
+        {"scale": 0.5, "source": "target_pose"}
+      ],
+      "operation": "geometry",
+      "output": "place_pose",
+      "quaternion_from": "source_pose"
+    },
+    {
+      "anchor": "place_pose",
+      "direction": [0.0, 0.0, 1.0],
+      "direction_frame": "world",
+      "distance": 0.14,
+      "operation": "geometry",
+      "output": "place_approach",
+      "quaternion_from": "source_pose"
+    },
+    {
+      "action": "goto_pose",
+      "arm": "default",
+      "operation": "action",
+      "pose": "place_approach"
+    },
+    {
+      "action": "goto_pose",
+      "arm": "default",
+      "operation": "action",
+      "pose": "place_pose"
+    },
+    {
+      "action": "open_gripper",
+      "arm": "default",
+      "operation": "action",
+      "repeat": 4
+    }
+  ],
+  "interface": "capx_generic_current_interface_v1"
+}

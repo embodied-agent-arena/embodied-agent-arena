@@ -1,0 +1,18 @@
+{
+  "assets": [
+    "tabletop assets"
+  ],
+  "benchmark_id": "vimabench",
+  "directory": "benchmarks/operation/vimabench",
+  "headless": "Official PyBullet DIRECT/headless mode for runtime smoke; GUI recorder/debug paths require a display.",
+  "install_hint": "conda env create -f benchmarks/operation/vimabench/environment.yml",
+  "live_smoke_command": "python -m embodied_harness.vimabench_runtime_smoke --task-name visual_manipulation --query \"target object described by the prompt\" --output reports/live_vimabench_smoke.json",
+  "notes": [],
+  "offline_adapter": "partial",
+  "package_manager": "conda + pip",
+  "python": "3.9",
+  "requires_gpu": false,
+  "simulator": "PyBullet / Gym-style tabletop",
+  "smoke_mode": "agent_native_prompt_rgbd_grounding_then_live_pybullet_step",
+  "smoke_task": "visual_manipulation"
+}

@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "robotwin2",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve place_empty_cup by grounding actors and deriving arm, pose, and gripper actions from public scene evidence.",
+        "task_id": "qwen_live_robotwin2_place_empty_cup",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "robotwin2_place_empty_cup",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "robotwin2",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "robotwin2"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

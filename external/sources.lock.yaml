@@ -1,0 +1,478 @@
+{
+  "schema_version": "agentic-embodied-arena/external-sources-lock/v1",
+  "benchmark_set": "operation-13",
+  "sources": [
+    {
+      "benchmark_id": "behavior1k",
+      "checkout": "upstreams/behavior1k",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/StanfordVL/BEHAVIOR-1K",
+          "revision": "88454bd04f75dc57c00ab1f1a00bcde1ff505950",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "OmniGibson/omnigibson/tasks/task_base.py:BaseTask.success",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "OmniGibson/omnigibson/tasks/task_base.py",
+          "symbol": "BaseTask.success",
+          "sha256": "6614585f68aee9c012265a91bd0dc6413bf65961bc9d641cec46dae721a61298",
+          "immutable_url": "https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/88454bd04f75dc57c00ab1f1a00bcde1ff505950/OmniGibson/omnigibson/tasks/task_base.py"
+        },
+        "supporting_sources": [],
+        "parity_fixture": {
+          "path": "benchmarks/operation/behavior1k/cases.yaml",
+          "case_id": "behavior1k_full_bddl_toggle",
+          "sha256": "e6ab926d1a771338c91fd89737ffcac15faabf60a329ddf1ce5f6ea5400ff0b1"
+        }
+      }
+    },
+    {
+      "benchmark_id": "calvin",
+      "checkout": "upstreams/calvin",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/mees/calvin",
+          "revision": "fa03f01f19c65920e18cf37398a9ce859274af76",
+          "checkout": "."
+        },
+        {
+          "repository_id": "calvin_env",
+          "url": "https://github.com/mees/calvin_env",
+          "revision": "1431a46bd36bde5903fb6345e68b5ccc30def666",
+          "checkout": "calvin_env"
+        }
+      ],
+      "official_verifier": {
+        "mode": "post_hoc",
+        "catalog_symbol": "calvin_env/calvin_env/envs/tasks.py:Tasks.get_task_info_for_set",
+        "primary_source": {
+          "repository_id": "calvin_env",
+          "path": "calvin_env/envs/tasks.py",
+          "symbol": "Tasks.get_task_info_for_set",
+          "sha256": "bca84af6249b2fd2404d1bd17318c7f3cf640acc329d3a26306b29149fc00e1a",
+          "immutable_url": "https://raw.githubusercontent.com/mees/calvin_env/1431a46bd36bde5903fb6345e68b5ccc30def666/calvin_env/envs/tasks.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "calvin_models/calvin_agent/evaluation/evaluate_policy.py",
+            "symbol": "rollout",
+            "sha256": "b85dfdbfe5dffc79c75ee744a946eeeb04142bbd8a832ba45842a9fb3ad7aacf",
+            "immutable_url": "https://raw.githubusercontent.com/mees/calvin/fa03f01f19c65920e18cf37398a9ce859274af76/calvin_models/calvin_agent/evaluation/evaluate_policy.py"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/calvin/cases.yaml",
+          "case_id": "calvin_native_turn_off_led",
+          "sha256": "4b95120acb783007e17f743c477001cff602c6762a6aca6f5d49e715f321a2f2"
+        }
+      }
+    },
+    {
+      "benchmark_id": "capx",
+      "checkout": "upstreams/capx",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/capgym/cap-x",
+          "revision": "53e9966d7a8e2fa7494676772bccc35280f5c0ed",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "capx/envs/simulators/robosuite_cubes.py:FrankaRobosuiteCubesLowLevel.task_completed",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "capx/envs/simulators/robosuite_cubes.py",
+          "symbol": "FrankaRobosuiteCubesLowLevel.task_completed",
+          "sha256": "a53b8d44c2285967fd9911affda52c625e55146bc564a96a87f5f93d2fd50232",
+          "immutable_url": "https://raw.githubusercontent.com/capgym/cap-x/53e9966d7a8e2fa7494676772bccc35280f5c0ed/capx/envs/simulators/robosuite_cubes.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "capx/envs/tasks/base.py",
+            "symbol": "CodeExecutionEnvBase.step",
+            "sha256": "f6fab5e7790e835fe8515e990e95892a5346fa3542981b3809daaf27396dea49",
+            "immutable_url": "https://raw.githubusercontent.com/capgym/cap-x/53e9966d7a8e2fa7494676772bccc35280f5c0ed/capx/envs/tasks/base.py"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/capx/cases.yaml",
+          "case_id": "capx_current_interface_live",
+          "sha256": "567ebad8d5c24c2d48882933ba6d1bfa693fcb2d8f98573903131004b7ecfdfe"
+        }
+      }
+    },
+    {
+      "benchmark_id": "cliport",
+      "checkout": "upstreams/cliport",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/cliport/cliport",
+          "revision": "2be5c47b5bb9bb7040ad90693288b87b1e18e7ad",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "cliport/tasks/task.py:Task.done",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "cliport/tasks/task.py",
+          "symbol": "Task.done",
+          "sha256": "5dd28eefa22925f949edf575d3b85084111c9ca74674c92ca8d5debf5d9d4109",
+          "immutable_url": "https://raw.githubusercontent.com/cliport/cliport/2be5c47b5bb9bb7040ad90693288b87b1e18e7ad/cliport/tasks/task.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "cliport/tasks/place_red_in_green.py",
+            "symbol": "PlaceRedInGreen.reset",
+            "sha256": "3bd808a393983edaa0b913c9b65ff22ef24d2063815d18d3919f6f3bd27d37ed",
+            "immutable_url": "https://raw.githubusercontent.com/cliport/cliport/2be5c47b5bb9bb7040ad90693288b87b1e18e7ad/cliport/tasks/place_red_in_green.py"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/cliport/cases.yaml",
+          "case_id": "cliport_place_red_in_green",
+          "sha256": "08f8a3996caf5dab52ea8717e8f8f6f600a3edeb9616a5b4bb61f02f5c6adb67"
+        }
+      }
+    },
+    {
+      "benchmark_id": "maniskill",
+      "checkout": "upstreams/maniskill",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/haosulab/ManiSkill",
+          "revision": "42b68244c1497cef889b04c4f4a78aa01c927f4e",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "mani_skill/envs/tasks/tabletop/pick_cube.py:PickCubeEnv.evaluate",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "mani_skill/envs/tasks/tabletop/pick_cube.py",
+          "symbol": "PickCubeEnv.evaluate",
+          "sha256": "53bfed0229cd4de2c7e363e7f3c531d5c5c84803c28e1345a2aea1a4972f3168",
+          "immutable_url": "https://raw.githubusercontent.com/haosulab/ManiSkill/42b68244c1497cef889b04c4f4a78aa01c927f4e/mani_skill/envs/tasks/tabletop/pick_cube.py"
+        },
+        "supporting_sources": [],
+        "parity_fixture": {
+          "path": "benchmarks/operation/maniskill/cases.yaml",
+          "case_id": "maniskill_pickcube_pd_ee_delta_pos",
+          "sha256": "3943a87a329b086276f24354438135f3d7f520e31aea771a9f52250857ff4199"
+        }
+      }
+    },
+    {
+      "benchmark_id": "rlbench",
+      "checkout": "upstreams/rlbench",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/stepjam/RLBench",
+          "revision": "02720bba4c73fe02eb75df946b8791b806028a9d",
+          "checkout": "."
+        },
+        {
+          "repository_id": "pyrep",
+          "url": "https://github.com/stepjam/PyRep",
+          "revision": "8f420be8064b1970aae18a9cfbc978dfb15747ef",
+          "checkout": "dependencies/pyrep"
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "rlbench/backend/task.py:Task.success",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "rlbench/backend/task.py",
+          "symbol": "Task.success",
+          "sha256": "02789876d0242afebbb282a9394d519d3af5d0e852e1ffd3b1f7abc9f95a5831",
+          "immutable_url": "https://raw.githubusercontent.com/stepjam/RLBench/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/backend/task.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "rlbench/tasks/reach_target.py",
+            "symbol": "ReachTarget.init_task",
+            "sha256": "87a94bd7a95401ef4f8378432c896ffb7bf3797c39a74e120a1585eb59d6cfc4",
+            "immutable_url": "https://raw.githubusercontent.com/stepjam/RLBench/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/tasks/reach_target.py"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/rlbench/cases.yaml",
+          "case_id": "rlbench_reach_target_motion",
+          "sha256": "aed106d2c448513a72881034034b981f6a76fa766c76cd401e8d2c5ae06c1773"
+        }
+      }
+    },
+    {
+      "benchmark_id": "robocasa",
+      "checkout": "upstreams/robocasa",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/robocasa/robocasa",
+          "revision": "b4684e6ee37d377cc392e98302a6b916d588b415",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "robocasa/environments/kitchen/atomic/kitchen_coffee.py:StartCoffeeMachine._check_success",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "robocasa/environments/kitchen/atomic/kitchen_coffee.py",
+          "symbol": "StartCoffeeMachine._check_success",
+          "sha256": "f6bf57df9c9b83ec74cd7d371587298037f60e76a3fcf7495dc8c2d34797746c",
+          "immutable_url": "https://raw.githubusercontent.com/robocasa/robocasa/b4684e6ee37d377cc392e98302a6b916d588b415/robocasa/environments/kitchen/atomic/kitchen_coffee.py"
+        },
+        "supporting_sources": [],
+        "parity_fixture": {
+          "path": "benchmarks/operation/robocasa/cases.yaml",
+          "case_id": "robocasa_start_coffee_machine_button",
+          "sha256": "5d2d1d2c682fd9f256d9204b38562c84d9978ebf6e7a14b1d2f0826b2bef5f19"
+        }
+      }
+    },
+    {
+      "benchmark_id": "robocasa365",
+      "checkout": "upstreams/robocasa365",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/robocasa/robocasa",
+          "revision": "b4684e6ee37d377cc392e98302a6b916d588b415",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "robocasa/environments/kitchen/atomic/kitchen_microwave.py:MicrowavePressButton._check_success",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "robocasa/environments/kitchen/atomic/kitchen_microwave.py",
+          "symbol": "MicrowavePressButton._check_success",
+          "sha256": "acd9aa8ab1b55118923d3835388defaf21b28059919a5f7806e43866db868add",
+          "immutable_url": "https://raw.githubusercontent.com/robocasa/robocasa/b4684e6ee37d377cc392e98302a6b916d588b415/robocasa/environments/kitchen/atomic/kitchen_microwave.py"
+        },
+        "supporting_sources": [],
+        "parity_fixture": {
+          "path": "benchmarks/operation/robocasa365/cases.yaml",
+          "case_id": "robocasa365_turn_on_microwave_button",
+          "sha256": "1fc482b005db8783916facf123317b075cc9dbd201c9fc4bdbc225c6e6ab8f34"
+        }
+      }
+    },
+    {
+      "benchmark_id": "robodojo",
+      "checkout": "upstreams/robodojo",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/RoboDojo-Benchmark/RoboDojo",
+          "revision": "e41d848837ec5bf15e7b045672794f33d78433ce",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "task/RoboDojo/tasks/general_pickup.py:GeneralPickupCommon.run_reward",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "task/RoboDojo/tasks/general_pickup.py",
+          "symbol": "GeneralPickupCommon.run_reward",
+          "sha256": "1a9eef7fe518f9d2c6805ad1a8f97c1045fa83726f84b9c63f67ffdfabbc40a7",
+          "immutable_url": "https://raw.githubusercontent.com/RoboDojo-Benchmark/RoboDojo/e41d848837ec5bf15e7b045672794f33d78433ce/task/RoboDojo/tasks/general_pickup.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "src/eval_client/eval_env.py",
+            "symbol": "create_eval_env.<locals>.EvalEnv.is_episode_end",
+            "sha256": "66310fc985897823e2fe408178a8aae4b006f578ad5d802ca2cdc6d846892951",
+            "immutable_url": "https://raw.githubusercontent.com/RoboDojo-Benchmark/RoboDojo/e41d848837ec5bf15e7b045672794f33d78433ce/src/eval_client/eval_env.py"
+          },
+          {
+            "repository_id": "benchmark",
+            "path": "env/reward_manager/reward_manager.py",
+            "symbol": "RewardManager.get_reward",
+            "sha256": "bc56efd3aaa861b4b38960dc4fb7778a9b4da9cf131f815ac3170300dd233a41",
+            "immutable_url": "https://raw.githubusercontent.com/RoboDojo-Benchmark/RoboDojo/e41d848837ec5bf15e7b045672794f33d78433ce/env/reward_manager/reward_manager.py"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/robodojo/cases.yaml",
+          "case_id": "robodojo_general_pickup_current_interface",
+          "sha256": "e57f33c09f315f2054be67190261e9db4fc515906323c9b6ac9deb30aae66fc6"
+        }
+      }
+    },
+    {
+      "benchmark_id": "robotwin2",
+      "checkout": "upstreams/robotwin2",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/RoboTwin-Platform/RoboTwin",
+          "revision": "c3ddfa8b97d5519efa828b075999bd0006778e5e",
+          "checkout": "."
+        },
+        {
+          "repository_id": "curobo",
+          "url": "https://github.com/NVlabs/curobo",
+          "revision": "d64c4b005459db10c5dd867d8b30a87d5bda9bdb",
+          "checkout": "envs/curobo"
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "envs/place_empty_cup.py:place_empty_cup.check_success",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "envs/place_empty_cup.py",
+          "symbol": "place_empty_cup.check_success",
+          "sha256": "424bbd61f990ebfffb283eb152d17103c2a990edd20f68229203a96a2fd4d581",
+          "immutable_url": "https://raw.githubusercontent.com/RoboTwin-Platform/RoboTwin/c3ddfa8b97d5519efa828b075999bd0006778e5e/envs/place_empty_cup.py"
+        },
+        "supporting_sources": [],
+        "parity_fixture": {
+          "path": "benchmarks/operation/robotwin2/cases.yaml",
+          "case_id": "robotwin2_place_empty_cup",
+          "sha256": "960d583b1100b5f02977e33974fd514ff94327a4c4b7e40650f62390bf523895"
+        }
+      }
+    },
+    {
+      "benchmark_id": "robowits",
+      "checkout": "upstreams/robowits",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/UMass-Embodied-AGI/RoboWits",
+          "revision": "9cc30aedbbebea86b975c0d66ea9ac227ca38535",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "gs_gym/envs/robowits/14_stack_cubes.py:StackCubesEnv._check_success",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "gs_gym/envs/robowits/14_stack_cubes.py",
+          "symbol": "StackCubesEnv._check_success",
+          "sha256": "8f2b61c160e90a54a920333304a8be37e18f4ab6b54e81c3c10c3354618a7268",
+          "immutable_url": "https://raw.githubusercontent.com/UMass-Embodied-AGI/RoboWits/9cc30aedbbebea86b975c0d66ea9ac227ca38535/gs_gym/envs/robowits/14_stack_cubes.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "scripts/robowits/eval/eval.sh",
+            "symbol": "official evaluation entrypoint",
+            "sha256": "7cbbe6cbaa41fb5b010e1e995e0b54039dd750fad6e0adc03b5ca065899a7979",
+            "immutable_url": "https://raw.githubusercontent.com/UMass-Embodied-AGI/RoboWits/9cc30aedbbebea86b975c0d66ea9ac227ca38535/scripts/robowits/eval/eval.sh"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/robowits/cases.yaml",
+          "case_id": "robowits_stack_cube_official",
+          "sha256": "97f0d92a9297231cb00adbb4c8adcaa15b5dc9702dabbaeb3c1a89ee800b5809"
+        }
+      }
+    },
+    {
+      "benchmark_id": "vimabench",
+      "checkout": "upstreams/vimabench",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/vimalabs/VIMABench",
+          "revision": "97e0af11e126fd477c9d81eeabfb6c739021c680",
+          "checkout": "."
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+        "catalog_symbol": "vima_bench/tasks/task_suite/instruction_following/simple_manipulation.py:SimpleManipulation.check_success",
+        "primary_source": {
+          "repository_id": "benchmark",
+          "path": "vima_bench/tasks/task_suite/instruction_following/simple_manipulation.py",
+          "symbol": "SimpleManipulation.check_success",
+          "sha256": "bede3935ed72a4d5a051f5a0c42df356039f07a1b860565fd2f7acf353386ece",
+          "immutable_url": "https://raw.githubusercontent.com/vimalabs/VIMABench/97e0af11e126fd477c9d81eeabfb6c739021c680/vima_bench/tasks/task_suite/instruction_following/simple_manipulation.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "vima_bench/env/base.py",
+            "symbol": "VIMAEnvBase.step",
+            "sha256": "ed1d8a00dd78811b451eff2030c069d683bd8bd1e987ac85e5fdea37aa56ef1b",
+            "immutable_url": "https://raw.githubusercontent.com/vimalabs/VIMABench/97e0af11e126fd477c9d81eeabfb6c739021c680/vima_bench/env/base.py"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/vimabench/cases.yaml",
+          "case_id": "vimabench_visual_manipulation",
+          "sha256": "04d000aef54af937d876a9e10727699eb555abc3e89753071702a6b1c98c1add"
+        }
+      }
+    },
+    {
+      "benchmark_id": "vlabench",
+      "checkout": "upstreams/vlabench",
+      "repositories": [
+        {
+          "repository_id": "benchmark",
+          "url": "https://github.com/OpenMOSS/VLABench",
+          "revision": "cf588fe60c0c7282174fe979f5913170cfe69017",
+          "checkout": "."
+        },
+        {
+          "repository_id": "rrt_algorithms",
+          "url": "https://github.com/motion-planning/rrt-algorithms",
+          "revision": "e51d95ee489a225220d6ae2a764c4111f6ba7d85",
+          "checkout": "dependencies/rrt-algorithms"
+        }
+      ],
+      "official_verifier": {
+        "mode": "live_in_episode",
+      "catalog_symbol": "VLABench/tasks/dm_task.py:LM4ManipBaseTask.should_terminate_episode",
+        "primary_source": {
+          "repository_id": "benchmark",
+        "path": "VLABench/tasks/dm_task.py",
+        "symbol": "LM4ManipBaseTask.should_terminate_episode",
+        "sha256": "5e0011bf019ac2393a51560eb46750c0319a27c6b36074a3bcf4a6bb04b9e109",
+        "immutable_url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/tasks/dm_task.py"
+        },
+        "supporting_sources": [
+          {
+            "repository_id": "benchmark",
+            "path": "VLABench/tasks/hierarchical_tasks/primitive/select_toy_series.py",
+            "symbol": "SelectToyTask",
+            "sha256": "c96c932b1c3582a81212cfda71f0943274fff7e5f2a5300182fca0d93cb28c65",
+            "immutable_url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/tasks/hierarchical_tasks/primitive/select_toy_series.py"
+          }
+        ],
+        "parity_fixture": {
+          "path": "benchmarks/operation/vlabench/cases.yaml",
+          "case_id": "vlabench_select_toy_skilllib",
+          "sha256": "cd363c318e6155b686b44668752348e2d0cd60a1811b66b36b67d4ac50752038"
+        }
+      }
+    }
+  ]
+}

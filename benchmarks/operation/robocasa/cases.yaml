@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "robocasa",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Ground and press the coffee-machine start button from public RGB-D and state evidence.",
+        "task_id": "qwen_live_robocasa_start_coffee_machine_button",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "robocasa_start_coffee_machine_button",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "robocasa",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "robocasa"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

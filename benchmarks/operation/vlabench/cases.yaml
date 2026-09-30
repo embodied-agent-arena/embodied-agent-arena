@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "vlabench",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Ground the toy and gift box from public evidence and solve select_toy using upstream SkillLib primitives.",
+        "task_id": "qwen_live_vlabench_select_toy_skilllib",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "vlabench_select_toy_skilllib",
+      "seed": 2,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "vlabench",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "vlabench"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

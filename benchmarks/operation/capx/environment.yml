@@ -1,0 +1,11 @@
+name: embodied-capx-comparator
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - git
+  - curl
+  - pip
+  - pip:
+      - uv>=0.5
+      - pyyaml>=6.0

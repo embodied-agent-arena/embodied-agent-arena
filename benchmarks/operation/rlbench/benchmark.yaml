@@ -1,0 +1,57 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/rlbench"
+  },
+  "assets": [],
+  "benchmark_id": "rlbench",
+  "category": "manipulation",
+  "display_name": "RLBench",
+  "migration": {
+    "source_directory": "benchmarks/operation/rlbench",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "rlbench",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_or_single_gpu"
+  },
+  "runtime_target_ids": [
+    "rlbench"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "rlbench_reach_target_motion"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/stepjam/RLBench",
+    "revision": "02720bba4c73fe02eb75df946b8791b806028a9d"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.rlbench_agent_runtime.RLBenchAgentRuntimeBackend.verify",
+    "digest": "ae037fdc5e396208ccc1d2bb4f24c4316494ae52ce8d985cd27e43e9820b633d",
+    "digest_source": "src/embodied_harness/rlbench_agent_runtime.py",
+    "official_digest": "02789876d0242afebbb282a9394d519d3af5d0e852e1ffd3b1f7abc9f95a5831",
+    "official_digest_source": "external/sources.lock.yaml#rlbench",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#rlbench_reach_target_motion",
+    "parity_fixture_digest": "aed106d2c448513a72881034034b981f6a76fa766c76cd401e8d2c5ae06c1773",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Native RLBench task success/reward state after the planned end-effector motion.",
+    "upstream_file_or_symbol": "rlbench/backend/task.py:Task.success"
+  }
+}

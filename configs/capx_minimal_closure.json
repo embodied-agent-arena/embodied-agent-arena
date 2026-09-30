@@ -1,0 +1,78 @@
+{
+  "schema_version": "agentic-embodied-arena/capx-minimal-closure/v1",
+  "max_total_bytes": 17179869184,
+  "selected_route": "robosuite",
+  "selected_cases": [
+    {
+      "case_id": "capx_current_interface_live",
+      "capability_family": "franka_cube_stack",
+      "config": "env_configs/cube_stack/franka_robosuite_cube_stack.yaml",
+      "seed": 0
+    }
+  ],
+  "source": {
+    "repository": "https://github.com/capgym/cap-x",
+    "revision": "53e9966d7a8e2fa7494676772bccc35280f5c0ed",
+    "path_below_external_root": "upstreams/capx"
+  },
+  "submodules": [
+    {
+      "name": "robosuite",
+      "revision": "97292732ed909ac3ae116579fb768607034a4dbd",
+      "path": "capx/third_party/robosuite"
+    },
+    {
+      "name": "sam3",
+      "revision": "6fe87d64a5beb9084923d7a9e002741178635b09",
+      "path": "capx/third_party/sam3"
+    },
+    {
+      "name": "contact_graspnet_pytorch",
+      "revision": "da3dcfb2f53e43b186083ee4a9d1e232f73efc98",
+      "path": "capx/third_party/contact_graspnet_pytorch"
+    }
+  ],
+  "assets": {
+    "sam3": {
+      "repository": "facebook/sam3",
+      "revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+      "filename": "sam3.pt",
+      "size_bytes": 3450062241,
+      "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e"
+    },
+    "contact_graspnet": {
+      "filename": "checkpoints/contact_graspnet/checkpoints/model.pt",
+      "size_bytes": 26628146,
+      "sha256": "39fc3439d5814043ba64e0715c127c2e8aca6ea376c22614e11af1bc89317762"
+    },
+    "panda_description": {
+      "source_repository": "example-robot-data/example-robot-data",
+      "source_revision": "d0d9098d752014aec3725b07766962acf06c5418",
+      "file_count": 24,
+      "size_bytes": 10665069,
+      "content_identity_sha256": "8f53da6276b25e26322bef731f12d7d90d128bb34d621c728529d8619ce4578d",
+      "urdf_sha256": "63792d2679f22c4e41cda2c4d9d903644e628970ad0656b9eec8485113941555"
+    }
+  },
+  "runtime": {
+    "python": "3.10.19",
+    "path_below_external_root": "environments/capx",
+    "config_source": "configs/capx_runtime_config.yaml",
+    "config_sha256": "ae2331f05ef89f20c7a67e9c4ffd5db16c3f0e700c32cc62c0eb81cc27f097e0",
+    "package_lock": "upstreams/capx/uv.lock",
+    "package_lock_sha256": "da933106cbc8c8f0780203011a8dc6e34ebeb37203fe5b7172e5d60f87093d91",
+    "project_sha256": "dd9efa6d3f4bd1370632c8759253bcf944e1c2739df2530e5141677f09ebcbf7",
+    "sync_extras": [
+      "robosuite",
+      "contactgraspnet"
+    ]
+  },
+  "excluded_routes_and_components": [
+    "LIBERO-PRO",
+    "BEHAVIOR-1K route",
+    "R1Pro",
+    "cuRobo",
+    "verl"
+  ],
+  "credential_policy": "Access tokens are used only by the downloader and are never stored in the closure."
+}

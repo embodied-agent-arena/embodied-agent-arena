@@ -1,0 +1,16 @@
+{
+  "assets": [],
+  "benchmark_id": "maniskill",
+  "directory": "benchmarks/operation/maniskill",
+  "headless": "Native RGB/depth/segmentation observations require a working Vulkan rendering device.",
+  "install_hint": "conda env create -f benchmarks/operation/maniskill/environment.yml; configure Vulkan/SAPIEN before visual smoke.",
+  "live_smoke_command": "python -m embodied_harness.maniskill_runtime_smoke --env-id <official-environment-id> --obs-mode rgb+depth+segmentation --control-mode pd_ee_delta_pos --sim-backend physx_cpu --render-backend gpu",
+  "notes": [],
+  "offline_adapter": "partial",
+  "package_manager": "pip/conda",
+  "python": "3.10+ recommended",
+  "requires_gpu": true,
+  "simulator": "SAPIEN / Gymnasium",
+  "smoke_mode": "prior_free_visual_observe_and_caller_authored_control",
+  "smoke_task": "Caller-selected official environment with native visual observations and generic controls"
+}

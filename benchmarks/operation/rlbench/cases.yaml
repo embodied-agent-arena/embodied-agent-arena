@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "rlbench",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Ground the ReachTarget target from public observations and move the arm through the real planning action path.",
+        "task_id": "qwen_live_rlbench_reach_target_motion",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "rlbench_reach_target_motion",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "rlbench",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "rlbench"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "cliport",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Ground the visible red block and green bowl from RGB-D evidence and solve the language goal with a real pick-place step.",
+        "task_id": "qwen_live_cliport_place_red_in_green",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "cliport_place_red_in_green",
+      "seed": 10004,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "cliport",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "cliport"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

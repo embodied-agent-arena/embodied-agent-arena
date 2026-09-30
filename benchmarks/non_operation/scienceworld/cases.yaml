@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "scienceworld",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve the official ScienceWorld task from public state, valid-action evidence, and typed text actions.",
+        "task_id": "qwen_live_scienceworld_find_non_living_thing",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "scienceworld_find_non_living_thing",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "scienceworld",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "scienceworld"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

@@ -1,0 +1,57 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/behavior1k"
+  },
+  "assets": [],
+  "benchmark_id": "behavior1k",
+  "category": "household_activity",
+  "display_name": "BEHAVIOR-1K",
+  "migration": {
+    "source_directory": "benchmarks/operation/behavior1k",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "behavior1k",
+    "modes": [
+      "apptainer_gpu"
+    ],
+    "resource_profile": "high_memory_gpu_simulator"
+  },
+  "runtime_target_ids": [
+    "behavior1k"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "behavior1k_full_bddl_toggle"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/StanfordVL/BEHAVIOR-1K",
+    "revision": "88454bd04f75dc57c00ab1f1a00bcde1ff505950"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.behavior1k_agent_runtime.Behavior1KAgentRuntimeBackend.verify",
+    "digest": "f74833b371a7b1b52c7ed5dbf0f5db71950a8a51a8399f95a94b2fa7cd7fc99e",
+    "digest_source": "src/embodied_harness/behavior1k_agent_runtime.py",
+    "official_digest": "6614585f68aee9c012265a91bd0dc6413bf65961bc9d641cec46dae721a61298",
+    "official_digest_source": "external/sources.lock.yaml#behavior1k",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#behavior1k_full_bddl_toggle",
+    "parity_fixture_digest": "e6ab926d1a771338c91fd89737ffcac15faabf60a329ddf1ce5f6ea5400ff0b1",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Official OmniGibson/BDDL task success after the full agent-authored episode.",
+    "upstream_file_or_symbol": "OmniGibson/omnigibson/tasks/task_base.py:BaseTask.success"
+  }
+}
