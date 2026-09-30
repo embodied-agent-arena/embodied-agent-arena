@@ -71,6 +71,8 @@ W2 uses `--perception none` by default.
 
 ## Dataset
 
+The [1,000-case dataset is available on Hugging Face](https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena).
+
 Place the prepared dataset next to the code checkout, or specify its location:
 
 ```bash
@@ -78,11 +80,14 @@ arena list --data-root ../data
 arena validate --data-root ../data --hashes
 ```
 
-After the Hugging Face repository is published, download an explicit dataset revision:
+Download and verify the published dataset at its fixed release revision:
 
 ```bash
 python -m pip install -e '.[hub]'
-python scripts/fetch_data.py --repo-id OWNER/DATASET --revision COMMIT_SHA --output ../data
+python scripts/fetch_data.py \
+  --repo-id uuu-Quant/Embodied-Agent-Arena \
+  --revision 5f729375eb35163a024625dd8ea72ac57a427a24 \
+  --output ../data
 ```
 
 `cases.jsonl` is the canonical task index. Each task retains its ID, seed, variation,
