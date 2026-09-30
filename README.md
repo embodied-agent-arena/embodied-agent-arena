@@ -1,8 +1,8 @@
-# 🤖 Embodied Agent Arena: Are Frontier VLM Agents Ready to Be Robot Generalists?
+# <img src="public/assets/logo-readme.png" width="32" height="32" align="absmiddle" alt=""> Embodied Agent Arena: Are Frontier VLM Agents Ready to Be Robot Generalists?
 
 <div align="center">
 
-[🌐 Project Page](https://embodied-agent-arena.github.io/embodied-agent-arena/) | [📄 Paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) | [📝 OpenReview](https://openreview.net/forum?id=T0b4fgyHFg)
+<a href="https://embodied-agent-arena.github.io/embodied-agent-arena/"><img src="public/assets/icon-project.svg" width="19" height="19" align="absmiddle" alt=""> Project Page</a> &nbsp; | &nbsp; <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf"><img src="public/assets/icon-paper.svg" width="19" height="19" align="absmiddle" alt=""> Paper</a>
 
 <p>
 Haojian Huang<sup>1,3</sup> · Pukun Zhao<sup>3</sup> · Zexi Li<sup>2</sup> · Yehang Zhang<sup>1,3</sup> · Yangkai Wei<sup>3</sup><br>
