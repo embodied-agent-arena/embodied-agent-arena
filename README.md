@@ -41,7 +41,7 @@ See the [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/pape
 - **Spatial reference frames.** Astra excels at connecting views, while inferring camera movement and object-facing directions exposes different weaknesses.
 - **Progress and task completion.** Accurate traces and longer action sequences can still miss required endpoints or final goals. Household manipulation additionally demands coordinated navigation, object handling, and environment-state changes.
 
-The [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) provides the seven-agent comparison, task-level results, and recorded case studies.
+The [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/#findings) provides the seven-agent comparison, task-level results, and recorded case studies.
 
 ## 🛠️ Project Page
 
