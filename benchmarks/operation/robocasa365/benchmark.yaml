@@ -1,0 +1,58 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/robocasa365"
+  },
+  "assets": [],
+  "benchmark_id": "robocasa365",
+  "category": "household_manipulation",
+  "display_name": "RoboCasa365",
+  "migration": {
+    "source_directory": "benchmarks/operation/robocasa365",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "robocasa365",
+    "modes": [
+      "apptainer_cpu",
+      "apptainer_gpu"
+    ],
+    "resource_profile": "cpu_or_single_gpu"
+  },
+  "runtime_target_ids": [
+    "robocasa365"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "robocasa365_turn_on_microwave_button"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/robocasa/robocasa",
+    "revision": "b4684e6ee37d377cc392e98302a6b916d588b415"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.robocasa365_agent_runtime.RoboCasa365AgentRuntimeBackend.verify",
+    "digest": "0e530a378b7c46f6a8ebaeceb76cdfa4ebfced19540a3a8bde048fbf5ac413fc",
+    "digest_source": "src/embodied_harness/robocasa365_agent_runtime.py",
+    "official_digest": "acd9aa8ab1b55118923d3835388defaf21b28059919a5f7806e43866db868add",
+    "official_digest_source": "external/sources.lock.yaml#robocasa365",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#robocasa365_turn_on_microwave_button",
+    "parity_fixture_digest": "1fc482b005db8783916facf123317b075cc9dbd201c9fc4bdbc225c6e6ab8f34",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Official suite task evaluator after public fixture-button primitives.",
+    "upstream_file_or_symbol": "robocasa/environments/kitchen/atomic/kitchen_microwave.py:MicrowavePressButton._check_success"
+  }
+}

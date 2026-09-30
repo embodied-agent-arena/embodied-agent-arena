@@ -1,0 +1,64 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/robotwin2"
+  },
+  "assets": [
+    {
+      "asset_id": "cases_place_empty_cup_visual_low_level_json",
+      "checksum": "4459948fbf974dd1fc7283308466be0b1c69a42d7fafa8fe696168bfb13f8c89",
+      "kind": "checked_in_fixture",
+      "path": "cases/place_empty_cup_visual_low_level.json"
+    }
+  ],
+  "benchmark_id": "robotwin2",
+  "category": "bimanual_manipulation",
+  "display_name": "RoboTwin 2.0",
+  "migration": {
+    "source_directory": "benchmarks/operation/robotwin2",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "robotwin2",
+    "modes": [
+      "apptainer_gpu"
+    ],
+    "resource_profile": "gpu_sapien_simulator"
+  },
+  "runtime_target_ids": [
+    "robotwin2"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "robotwin2_place_empty_cup"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/RoboTwin-Platform/RoboTwin",
+    "revision": "c3ddfa8b97d5519efa828b075999bd0006778e5e"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.robotwin2_agent_runtime.RoboTwin2AgentRuntimeBackend.verify",
+    "digest": "acdaa5bd1b22735db3f51734c20bd66ea5a15f63bfdb4eeb74d2aa86576a9276",
+    "digest_source": "src/embodied_harness/robotwin2_agent_runtime.py",
+    "official_digest": "424bbd61f990ebfffb283eb152d17103c2a990edd20f68229203a96a2fd4d581",
+    "official_digest_source": "external/sources.lock.yaml#robotwin2",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#robotwin2_place_empty_cup",
+    "parity_fixture_digest": "960d583b1100b5f02977e33974fd514ff94327a4c4b7e40650f62390bf523895",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Private official check_success predicate after agent-authored bimanual actions.",
+    "upstream_file_or_symbol": "envs/place_empty_cup.py:place_empty_cup.check_success"
+  }
+}

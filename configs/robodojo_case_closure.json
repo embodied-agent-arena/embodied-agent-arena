@@ -1,0 +1,105 @@
+{
+  "schema_version": "agentic-embodied-arena/robodojo-case-selection/v1",
+  "source_revision": "e41d848837ec5bf15e7b045672794f33d78433ce",
+  "repository": {
+    "repo_id": "RoboDojo-Benchmark/RoboDojo",
+    "repo_type": "dataset",
+    "revision": "a14409d7fae673c00499e01fd88b4457df6351b1"
+  },
+  "remote_asset_prefix": "Assets/",
+  "max_total_bytes": 1610612736,
+  "exclude_path_segments": [
+    ".thumbs",
+    "Annotation"
+  ],
+  "shared_prefixes": [
+    {
+      "path": "Assets/Robots/x5",
+      "reason": "dual x5 embodiment selected by arx_x5"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "robodojo_general_pickup_ep10",
+      "capability_family": "rigid_pick_lift",
+      "official_dimension": "Open",
+      "task_name": "general_pickup",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [10],
+      "registered_core": true
+    },
+    {
+      "case_id": "robodojo_stack_bowls_ep1",
+      "capability_family": "stack_and_place",
+      "official_dimension": "Generalization",
+      "task_name": "stack_bowls",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [1]
+    },
+    {
+      "case_id": "robodojo_push_t_ep0",
+      "capability_family": "planar_push_alignment",
+      "official_dimension": "Generalization",
+      "task_name": "push_T",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [0]
+    },
+    {
+      "case_id": "robodojo_make_toast_ep4",
+      "capability_family": "articulated_appliance",
+      "official_dimension": "Generalization",
+      "task_name": "make_toast",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [4]
+    },
+    {
+      "case_id": "robodojo_fold_clothes_ep1",
+      "capability_family": "deformable_garment",
+      "official_dimension": "Generalization",
+      "task_name": "fold_clothes",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [1]
+    },
+    {
+      "case_id": "robodojo_pour_liquid_ep6",
+      "capability_family": "fluid_transfer",
+      "official_dimension": "Generalization",
+      "task_name": "pour_liquid_into_cup",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [6]
+    },
+    {
+      "case_id": "robodojo_conveyor_match_ep42",
+      "capability_family": "dynamic_conveyor_memory",
+      "official_dimension": "Memory",
+      "task_name": "match_and_pick_from_conveyor",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [42]
+    },
+    {
+      "case_id": "robodojo_insert_key_ep0",
+      "capability_family": "precision_insertion",
+      "official_dimension": "Precision",
+      "task_name": "insert_key",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [0]
+    },
+    {
+      "case_id": "robodojo_fill_pen_holder_ep0",
+      "capability_family": "long_horizon_multi_object",
+      "official_dimension": "Long-Horizon",
+      "task_name": "fill_pen_holder",
+      "env_cfg": "arx_x5",
+      "eval_seed": 0,
+      "episodes": [0]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "embodied-agent-arena"
+version = "0.1.0"
+description = "W1-W5 task adapters, persistent agent loops, and benchmark scoring"
+readme = "README.md"
+license = "MIT AND Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "runtimes/tracespatial/upstream/LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<2", "Pillow>=9,<13", "PyYAML>=6,<7", "jsonschema>=4.23,<5"]
+
+[project.optional-dependencies]
+offline = ["pyarrow>=21,<22", "opencv-python-headless>=4.11,<4.12", "imageio-ffmpeg>=0.5,<0.7"]
+hub = ["huggingface-hub>=0.34,<2"]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+arena = "embodied_harness.release:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.yaml", "*.yml", "*.txt"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

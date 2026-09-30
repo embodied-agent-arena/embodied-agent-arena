@@ -1,0 +1,8 @@
+# Effective simulator constraints; install the pinned LIBERO-PRO and robosuite
+# checkouts separately, together with CaP-X's shared Python dependencies.
+bddl==1.0.1
+easydict==1.9
+gym==0.25.2
+mujoco==2.3.7
+numpy==1.26.4
+robomimic==0.2.0

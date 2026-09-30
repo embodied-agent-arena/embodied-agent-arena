@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "alfworld",
+      "url": "https://github.com/alfworld/alfworld.git",
+      "revision": "aaba6870f86c5be6a08a491f32a50b906227bc3e",
+      "checkout": "upstreams/alfworld"
+    },
+    {
+      "id": "scienceworld",
+      "url": "https://github.com/allenai/ScienceWorld.git",
+      "revision": "e8216d6044e8e39be9fcb185e3b2dfb602584b52",
+      "checkout": "upstreams/scienceworld"
+    },
+    {
+      "id": "discoveryworld",
+      "url": "https://github.com/allenai/discoveryworld.git",
+      "revision": "fd591323920be0d3786ef350955de1945aa571e5",
+      "checkout": "upstreams/discoveryworld"
+    },
+    {
+      "id": "virtualhome",
+      "url": "https://github.com/xavierpuigf/virtualhome.git",
+      "revision": "58970fd80951c2eaa1af713e0917d1a105353ad8",
+      "checkout": "upstreams/virtualhome"
+    },
+    {
+      "id": "humanclaw",
+      "url": "https://github.com/Human-CLAW/HumanCLAW",
+      "revision": "13a8b6d0bf9cc1e458aff0e7442b526288325acb",
+      "checkout": "upstreams/humanclaw",
+      "habitat_sim_revision": "acbe6f4922e68145e401e55c30f9dfea460a3f24",
+      "habitat_sim_build": "Use the upstream HalfPhysics patch and pinned Bullet submodule."
+    }
+  ]
+}

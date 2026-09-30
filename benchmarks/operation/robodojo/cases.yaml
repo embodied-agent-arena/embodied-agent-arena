@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "robodojo",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve general_pickup from native three-view RGB, public geometry, and caller-derived low-level actions.",
+        "task_id": "qwen_current_interface_robodojo_general_pickup",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "robodojo_general_pickup_current_interface",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "robodojo",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "robodojo"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

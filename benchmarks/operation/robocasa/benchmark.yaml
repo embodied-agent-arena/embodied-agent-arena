@@ -1,0 +1,58 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/robocasa"
+  },
+  "assets": [],
+  "benchmark_id": "robocasa",
+  "category": "manipulation",
+  "display_name": "RoboCasa",
+  "migration": {
+    "source_directory": "benchmarks/operation/robocasa",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "robocasa",
+    "modes": [
+      "apptainer_cpu",
+      "apptainer_gpu"
+    ],
+    "resource_profile": "cpu_or_single_gpu"
+  },
+  "runtime_target_ids": [
+    "robocasa"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "robocasa_start_coffee_machine_button"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/robocasa/robocasa",
+    "revision": "b4684e6ee37d377cc392e98302a6b916d588b415"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.robocasa_agent_runtime.RoboCasaAgentRuntimeBackend.verify",
+    "digest": "0a1e427926d29b810f41ca19e2d0b22866043f6a497b00c5c0b112d8f04ae21b",
+    "digest_source": "src/embodied_harness/robocasa_agent_runtime.py",
+    "official_digest": "f6bf57df9c9b83ec74cd7d371587298037f60e76a3fcf7495dc8c2d34797746c",
+    "official_digest_source": "external/sources.lock.yaml#robocasa",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#robocasa_start_coffee_machine_button",
+    "parity_fixture_digest": "5d2d1d2c682fd9f256d9204b38562c84d9978ebf6e7a14b1d2f0826b2bef5f19",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Official RoboCasa task predicate after agent-authored fixture interaction.",
+    "upstream_file_or_symbol": "robocasa/environments/kitchen/atomic/kitchen_coffee.py:StartCoffeeMachine._check_success"
+  }
+}

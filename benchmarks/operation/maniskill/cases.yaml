@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "maniskill",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve the official PickCube instruction from public visual and state evidence using low-level control.",
+        "task_id": "qwen_live_maniskill_pickcube_pd_ee_delta_pos",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "maniskill_pickcube_pd_ee_delta_pos",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "maniskill",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "maniskill"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

@@ -1,0 +1,11 @@
+name: embodied-robocasa
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - git
+  - ffmpeg
+  - pip:
+      - "git+https://github.com/ARISE-Initiative/robosuite.git@master"
+      - "git+https://github.com/robocasa/robocasa.git@main"

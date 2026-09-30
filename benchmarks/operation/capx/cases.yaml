@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "capx",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve the current CaP-X cube-stack scene from public observations using general CaP-X primitives.",
+        "task_id": "qwen_current_interface_capx_cube_stack",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "capx_current_interface_live",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "capx",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "capx"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

@@ -1,0 +1,38 @@
+name: embodied-vimabench
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip<24.1
+  - setuptools<66
+  - wheel<0.39
+  - git
+  - numpy
+  - pip:
+      # Official VIMA-Bench task-suite runtime. The upstream README documents
+      # installation from this repository and a Gym-style API via
+      # `from vima_bench import make`.
+      # Editable install keeps upstream YAML partition files available; the
+      # built wheel omits those package data files at this commit.
+      - -e git+https://github.com/vimalabs/VIMABench.git@97e0af11e126fd477c9d81eeabfb6c739021c680#egg=vima-bench
+      # Mirrors upstream requirements.txt. Keep Gym 0.21 pinned because
+      # VIMA-Bench's public docs and setup target the classic Gym API.
+      - gym==0.21.0
+      - pybullet
+      - einops
+      - dm-tree
+      - torch
+      - torchvision
+      - psutil
+      - opencv-python
+      - matplotlib
+      - imageio
+      - transforms3d
+      - kornia
+      - hydra-core
+      - tqdm
+      - black
+      - av
+      - importlib_resources

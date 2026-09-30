@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "openpi",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Exercise OpenPI context, observation, evidence, invocation, and action-chunk submission contracts.",
+        "task_id": "w5_openpi_policy_skill_contract",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "openpi_policy_skill_contract",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "openpi",
+        "official_verifier_required": false,
+        "runtime_target_ids": [
+          "openpi"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

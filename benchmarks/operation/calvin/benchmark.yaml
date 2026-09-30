@@ -1,0 +1,57 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/calvin"
+  },
+  "assets": [],
+  "benchmark_id": "calvin",
+  "category": "long_horizon_manipulation",
+  "display_name": "CALVIN",
+  "migration": {
+    "source_directory": "benchmarks/operation/calvin",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "calvin",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_or_single_gpu"
+  },
+  "runtime_target_ids": [
+    "calvin"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "calvin_native_turn_off_led"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/mees/calvin",
+    "revision": "fa03f01f19c65920e18cf37398a9ce859274af76"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.calvin_agent_runtime.CALVINAgentRuntimeBackend.verify",
+    "digest": "efa2f2c87a344bf32361d674b22b98a87a6931f5cb04c4c547e1e12953d4243e",
+    "digest_source": "src/embodied_harness/calvin_agent_runtime.py",
+    "official_digest": "bca84af6249b2fd2404d1bd17318c7f3cf640acc329d3a26306b29149fc00e1a",
+    "official_digest_source": "external/sources.lock.yaml#calvin",
+    "mode": "post_hoc",
+    "parity_fixture": "cases.yaml#calvin_native_turn_off_led",
+    "parity_fixture_digest": "4b95120acb783007e17f743c477001cff602c6762a6aca6f5d49e715f321a2f2",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Official CALVIN chained task predicate evaluation after the language-conditioned rollout.",
+    "upstream_file_or_symbol": "calvin_env/calvin_env/envs/tasks.py:Tasks.get_task_info_for_set"
+  }
+}

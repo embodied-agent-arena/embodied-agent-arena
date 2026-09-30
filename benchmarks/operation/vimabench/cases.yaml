@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "vimabench",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Ground the source and target from the official VIMA prompt and public scene evidence, then submit a pick-place action.",
+        "task_id": "qwen_live_vimabench_visual_manipulation",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "vimabench_visual_manipulation",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "vimabench",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "vimabench"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "robocasa365",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Ground the microwave and press its public button affordance from RGB-D and state evidence.",
+        "task_id": "qwen_live_robocasa365_turn_on_microwave_button",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "robocasa365_turn_on_microwave_button",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "robocasa365",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "robocasa365"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

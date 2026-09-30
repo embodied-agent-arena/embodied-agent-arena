@@ -1,0 +1,10 @@
+name: embodied-rlbench
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - numpy
+  - pyopengl
+  - pip:
+      - git+https://github.com/stepjam/RLBench.git

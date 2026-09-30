@@ -1,0 +1,85 @@
+{
+  "task": {
+    "target_entity": "hawkeye",
+    "target_container": "giftbox_seen",
+    "scene": {
+      "name": "studyroom_0",
+      "use_default_scene": false
+    },
+    "components": [
+      {
+        "name": "table",
+        "xml_path": "obj/meshes/table/table.xml",
+        "class": "Table",
+        "randomness": {
+          "texture": false
+        }
+      },
+      {
+        "name": "giftbox_seen",
+        "xml_path": "obj/meshes/containers/boxes/giftbox/giftbox_0/giftbox.xml",
+        "class": "CommonContainer",
+        "position": [
+          0.2,
+          0.0,
+          0.8
+        ],
+        "orientation": [
+          0,
+          0,
+          0
+        ],
+        "randomness": {
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "quat": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "name": "hawkeye",
+        "xml_path": "obj/meshes/toys/marvel/hawkeye/hawkeye_0/hawkeye.xml",
+        "class": "Toy",
+        "position": [
+          -0.15,
+          0.0,
+          0.8
+        ],
+        "orientation": [
+          1.5707963267948966,
+          0,
+          0
+        ],
+        "randomness": {
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "quat": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "conditions": {
+      "contain": {
+        "container": "giftbox_seen",
+        "entities": [
+          "hawkeye"
+        ]
+      }
+    },
+    "instructions": [
+      "Put the hawkeye into the giftbox_seen"
+    ]
+  }
+}

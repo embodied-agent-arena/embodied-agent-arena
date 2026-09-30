@@ -1,0 +1,49 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/scienceworld"
+  },
+  "assets": [],
+  "benchmark_id": "scienceworld",
+  "category": "text_interaction",
+  "display_name": "ScienceWorld",
+  "migration": {
+    "source_directory": "benchmarks/non_operation/scienceworld",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "OpenHands",
+    "execution_requirement": "real_agent_server_no_replay_or_direct_executor",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "scienceworld",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_text_environment"
+  },
+  "runtime_target_ids": [
+    "scienceworld"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "non_operation",
+  "strict_case_ids": [
+    "scienceworld_find_non_living_thing"
+  ],
+  "upstream": {
+    "provenance_status": "revision_pending",
+    "repository": "https://github.com/allenai/ScienceWorld",
+    "revision": "provenance-pending"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.scienceworld_agent_runtime.ScienceWorldAgentRuntimeBackend.verify",
+    "digest": "2fd934e4c914e2317494f934add450927d67fd59e4ebe08d68f5128b450e4273",
+    "digest_source": "src/embodied_harness/scienceworld_agent_runtime.py",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#scienceworld_find_non_living_thing",
+    "provenance_status": "adapter_bound_upstream_verifier_symbol_pending_review",
+    "success_semantics": "Official ScienceWorld environment reports done with score at least 100.",
+    "upstream_file_or_symbol": "pending: exact upstream score/done symbol mapping"
+  }
+}

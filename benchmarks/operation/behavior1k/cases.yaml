@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "behavior1k",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve the turning_on_radio BDDL episode from public native observations and asset-state evidence.",
+        "task_id": "behavior1k_turning_on_radio_full_bddl_toggle_qwen",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "behavior1k_full_bddl_toggle",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "behavior1k",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "behavior1k"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

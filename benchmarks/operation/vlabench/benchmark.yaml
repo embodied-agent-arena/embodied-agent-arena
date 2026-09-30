@@ -1,0 +1,70 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/vlabench"
+  },
+  "assets": [
+    {
+      "asset_id": "select_toy_flashman_episode_config_json",
+      "checksum": "140a501e23bb6aa37838994a14787fdfa6cdec8d9d826bdfdd2bd71ed6a72a18",
+      "kind": "checked_in_fixture",
+      "path": "select_toy_flashman_episode_config.json"
+    },
+    {
+      "asset_id": "select_toy_minimal_episode_config_json",
+      "checksum": "cac3b8b842b2863a7a83923239435dfc747f889af76a4bdcda9b8d395be30cc7",
+      "kind": "checked_in_fixture",
+      "path": "select_toy_minimal_episode_config.json"
+    }
+  ],
+  "benchmark_id": "vlabench",
+  "category": "manipulation",
+  "display_name": "VLABench",
+  "migration": {
+    "source_directory": "benchmarks/operation/vlabench",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "vlabench",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_or_single_gpu"
+  },
+  "runtime_target_ids": [
+    "vlabench"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "vlabench_select_toy_skilllib"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/OpenMOSS/VLABench",
+    "revision": "cf588fe60c0c7282174fe979f5913170cfe69017"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.vlabench_runtime.VLABenchRuntime.verify_vlabench_task",
+    "digest": "93e44f027420f3c60cb325100422e3232c9cb021112962428f236be30c579b7a",
+    "digest_source": "src/embodied_harness/vlabench_runtime.py",
+    "official_digest": "5e0011bf019ac2393a51560eb46750c0319a27c6b36074a3bcf4a6bb04b9e109",
+    "official_digest_source": "external/sources.lock.yaml#vlabench",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#vlabench_select_toy_skilllib",
+    "parity_fixture_digest": "cd363c318e6155b686b44668752348e2d0cd60a1811b66b36b67d4ac50752038",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "The source-locked VLABench task termination predicate is true on the exact live physics state operated by the agent.",
+    "upstream_file_or_symbol": "VLABench/tasks/dm_task.py:LM4ManipBaseTask.should_terminate_episode"
+  }
+}

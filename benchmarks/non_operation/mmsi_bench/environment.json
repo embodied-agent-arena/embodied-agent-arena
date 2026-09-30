@@ -1,0 +1,17 @@
+{
+  "benchmark_id": "mmsi_bench_spatial",
+  "dataset": "RunsenXu/MMSI-Bench",
+  "dataset_entrypoint": "Hugging Face: hf_hub_download('RunsenXu/MMSI-Bench', filename='MMSI_Bench.parquet', repo_type='dataset')",
+  "official_code": "https://github.com/InternRobotics/MMSI-Bench",
+  "official_loader": "vlmeval.dataset.mmsi_bench.MMSIBenchDataset",
+  "requires_gpu": false,
+  "minimal_dependencies": [
+    "huggingface_hub",
+    "pandas",
+    "pyarrow"
+  ],
+  "upstream_eval_command": "python run.py --model <model> --data MMSI_Bench",
+  "live_smoke_command": "PYTHONPATH=. python -m embodied_harness.spatial_mmsi_adapter --split test --rows-api --limit 2 --output benchmarks/non_operation/mmsi_bench/mmsi_smoke.jsonl",
+  "metric": "multiple_choice_accuracy_with_mmsi_answer_extraction",
+  "agent_visible_boundary": "No oracle, checker, success, answer-key, upstream thought, or demo replay primitive is exposed. Primitives accept prompt/query/context and return traceable evidence artifacts."
+}

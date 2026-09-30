@@ -1,0 +1,57 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/cliport"
+  },
+  "assets": [],
+  "benchmark_id": "cliport",
+  "category": "manipulation",
+  "display_name": "CLIPort",
+  "migration": {
+    "source_directory": "benchmarks/operation/cliport",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "cliport",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_or_single_gpu"
+  },
+  "runtime_target_ids": [
+    "cliport"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "cliport_place_red_in_green"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/cliport/cliport",
+    "revision": "2be5c47b5bb9bb7040ad90693288b87b1e18e7ad"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.cliport_agent_runtime.CLIPortAgentRuntimeBackend.verify",
+    "digest": "cc221191f48a35709e2c12284b9f37ae3f9575be9903b587bfc640c8d833f1b6",
+    "digest_source": "src/embodied_harness/cliport_agent_runtime.py",
+    "official_digest": "5dd28eefa22925f949edf575d3b85084111c9ca74674c92ca8d5debf5d9d4109",
+    "official_digest_source": "external/sources.lock.yaml#cliport",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#cliport_place_red_in_green",
+    "parity_fixture_digest": "08f8a3996caf5dab52ea8717e8f8f6f600a3edeb9616a5b4bb61f02f5c6adb67",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Native CLIPort task reward and episode termination after the agent's env.step action.",
+    "upstream_file_or_symbol": "cliport/tasks/task.py:Task.done"
+  }
+}

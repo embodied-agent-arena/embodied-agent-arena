@@ -1,0 +1,57 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/vimabench"
+  },
+  "assets": [],
+  "benchmark_id": "vimabench",
+  "category": "manipulation",
+  "display_name": "VIMA-Bench",
+  "migration": {
+    "source_directory": "benchmarks/operation/vimabench",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "vimabench",
+    "modes": [
+      "apptainer_cpu"
+    ],
+    "resource_profile": "cpu_or_single_gpu"
+  },
+  "runtime_target_ids": [
+    "vimabench"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "vimabench_visual_manipulation"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/vimalabs/VIMABench",
+    "revision": "97e0af11e126fd477c9d81eeabfb6c739021c680"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.vimabench_agent_runtime.VimaBenchAgentRuntimeBackend.verify",
+    "digest": "d9dcea17cc0a273f9ab5f395c12c9c18e2baec04e72470fcfcaccf152a52c15a",
+    "digest_source": "src/embodied_harness/vimabench_agent_runtime.py",
+    "official_digest": "bede3935ed72a4d5a051f5a0c42df356039f07a1b860565fd2f7acf353386ece",
+    "official_digest_source": "external/sources.lock.yaml#vimabench",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#vimabench_visual_manipulation",
+    "parity_fixture_digest": "04d000aef54af937d876a9e10727699eb555abc3e89753071702a6b1c98c1add",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "Native VIMA environment reward and success signal after submitted pick-place action.",
+    "upstream_file_or_symbol": "vima_bench/tasks/task_suite/instruction_following/simple_manipulation.py:SimpleManipulation.check_success"
+  }
+}

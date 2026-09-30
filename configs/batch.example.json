@@ -1,0 +1,26 @@
+{
+  "data_root": "../../data",
+  "selection": {"waves": ["W1", "W2", "W5"]},
+  "max_workers": 16,
+  "workers_per_model": 16,
+  "rounds": 1,
+  "batch_size": 1,
+  "max_attempts": 3,
+  "retry_on": ["network"],
+  "backoff_seconds": 30,
+  "max_backoff_seconds": 900,
+  "poll_seconds": 5,
+  "defaults": {
+    "provider": "openai-compatible",
+    "base_url": "https://api.example.com/v1",
+    "env_file": "../.env",
+    "temperature": 0
+  },
+  "models": [
+    {"name": "model_a", "model": "MODEL_ID_A"},
+    {"name": "model_b", "model": "MODEL_ID_B", "workers": 8}
+  ],
+  "resources": {"gpus": [], "gpu_memory_gb": 48, "gpu_reserve_gb": 2},
+  "benchmark_limits": {"vlabench": 1},
+  "port_base": 20000
+}

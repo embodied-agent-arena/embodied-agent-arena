@@ -1,0 +1,49 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/lerobot"
+  },
+  "assets": [],
+  "benchmark_id": "lerobot",
+  "category": "policy_skill",
+  "display_name": "LeRobot",
+  "migration": {
+    "source_directory": "benchmarks/policy_contract/lerobot",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "OpenHands",
+    "execution_requirement": "real_agent_server_no_replay_or_direct_executor",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "lerobot",
+    "modes": [
+      "library"
+    ],
+    "resource_profile": "policy_service"
+  },
+  "runtime_target_ids": [
+    "lerobot"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "policy_contract",
+  "strict_case_ids": [
+    "lerobot_policy_skill_contract"
+  ],
+  "upstream": {
+    "provenance_status": "revision_pending",
+    "repository": "https://github.com/huggingface/lerobot",
+    "revision": "provenance-pending"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.policy_skill_agent_runtime.PolicySkillAgentRuntimeBackend.verify",
+    "digest": "eb946dd0c8b1a19469e82abcdb0e547095eb74e03ad452a551aa242ed9656d7e",
+    "digest_source": "src/embodied_harness/policy_skill_agent_runtime.py",
+    "mode": "contract_only",
+    "parity_fixture": "cases.yaml#lerobot_policy_skill_contract",
+    "provenance_status": "adapter_bound_upstream_verifier_symbol_pending_review",
+    "success_semantics": "Contract validation only; downstream operation benchmark owns official success.",
+    "upstream_file_or_symbol": "downstream benchmark official verifier"
+  }
+}

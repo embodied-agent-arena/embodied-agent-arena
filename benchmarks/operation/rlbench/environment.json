@@ -1,0 +1,19 @@
+{
+  "assets": [
+    "CoppeliaSim scenes",
+    "task assets"
+  ],
+  "benchmark_id": "rlbench",
+  "directory": "benchmarks/operation/rlbench",
+  "headless": "Prefer headless=True with CoppeliaSim root/library path; use DISPLAY=:99 or xvfb-run -a when no display server is present. EGL is not assumed for PyRep. On the current host the successful route uses Mesa swrast plus LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7.",
+  "install_hint": "bash benchmarks/operation/rlbench/install_rlbench_runtime.sh; export CoppeliaSim paths before live smoke.",
+  "live_smoke_command": "python -m embodied_harness.rlbench_runtime_smoke --task-name ReachTarget --query 'the target I should reach' --output reports/live_rlbench_env_case.json",
+  "notes": [],
+  "offline_adapter": "partial",
+  "package_manager": "conda/pip",
+  "python": "PyRep-compatible Python; usually 3.8-3.10",
+  "requires_gpu": false,
+  "simulator": "CoppeliaSim v4.1.0 / PyRep",
+  "smoke_mode": "contract_ci_then_required_live_rlbench_pyrep_step",
+  "smoke_task": "ReachTarget import/reset/observe/ground/minimal-step plus qwen pose-action motion"
+}

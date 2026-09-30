@@ -1,0 +1,4 @@
+task_id: m1b_spatial_esi
+source: vsi_bench
+instruction: "Evaluate spatial reasoning with agent-visible evidence primitives and harness-side answer verification."
+oracle_leakage_level: none

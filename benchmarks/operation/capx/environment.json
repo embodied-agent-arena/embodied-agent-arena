@@ -1,0 +1,22 @@
+{
+  "assets": [
+    "selected CaP-X env configs",
+    "optional perception/motion service weights"
+  ],
+  "benchmark_id": "capx",
+  "directory": "benchmarks/operation/capx",
+  "headless": "Depends on selected CaP-X route; service ports and CUDA notes required.",
+  "install_hint": "conda env create -f environment.yml, then ./install_capx.sh --route robosuite|libero|behavior.",
+  "live_smoke_command": "python capx_runtime_smoke.py --capx-root /path/to/cap-x --mode preflight && python capx_runtime_smoke.py --capx-root /path/to/cap-x --mode live --total-trials 1 --num-workers 1",
+  "notes": [
+    "CaP-X is a comparator harness, not a single benchmark adapter; covered routes stay inside this comparator.",
+    "The comparator CLI emits prompt/API/context trace evidence and delegates live execution to upstream capx/envs/launch.py."
+  ],
+  "offline_adapter": "partial",
+  "package_manager": "conda bootstrap + uv upstream",
+  "python": "3.10",
+  "requires_gpu": true,
+  "simulator": "CaP-Gym over robosuite / covered routes / BEHAVIOR",
+  "smoke_mode": "comparator_trace",
+  "smoke_task": "primitive/preflight inspect of env_configs/cube_stack/franka_robosuite_cube_stack.yaml, then upstream quick regression when CaP-X is installed"
+}

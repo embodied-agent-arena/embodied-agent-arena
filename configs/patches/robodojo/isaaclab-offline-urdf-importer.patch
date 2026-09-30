@@ -1,0 +1,62 @@
+diff --git a/apps/isaaclab.python.kit b/apps/isaaclab.python.kit
+index 2435019..921d53b 100644
+--- a/apps/isaaclab.python.kit
++++ b/apps/isaaclab.python.kit
+@@ -38,7 +38,7 @@ keywords = ["experience", "app", "usd"]
+ 
+ # Isaac Sim Extra
+ "isaacsim.asset.importer.mjcf" = {}
+-"isaacsim.asset.importer.urdf" = {version = "2.4.31", exact = true}
++"isaacsim.asset.importer.urdf" = {version = "2.4.30", exact = true}
+ "omni.physx.bundle" = {}
+ "omni.physx.tensors" = {}
+ "omni.replicator.core" = {}
+diff --git a/source/isaaclab/isaaclab/sim/converters/urdf_converter.py b/source/isaaclab/isaaclab/sim/converters/urdf_converter.py
+index ba80f52..a596981 100644
+--- a/source/isaaclab/isaaclab/sim/converters/urdf_converter.py
++++ b/source/isaaclab/isaaclab/sim/converters/urdf_converter.py
+@@ -45,9 +45,9 @@ class UrdfConverter(AssetConverterBase):
+         entries specify mass and inertia, even if ``merge-joint`` is set to True. The new behavior
+         treats links with mass/inertia as full bodies rather than zero-mass reference frames.
+ 
+-        To maintain backwards compatibility, **this converter pins to an older version of the
+-        URDF importer extension** (version 2.4.31) that still merges fixed joints by default.
+-        This allows existing URDFs to work as expected without modification.
++        To maintain backwards compatibility, **this converter uses the URDF importer bundled with
++        the pinned Isaac Sim runtime**. This keeps the sealed offline environment reproducible and
++        allows existing URDFs to work as expected without a registry download.
+ 
+     .. _isaacsim.asset.importer.urdf: https://docs.isaacsim.omniverse.nvidia.com/latest/importer_exporter/ext_isaacsim_asset_importer_urdf.html
+     """
+@@ -61,11 +61,13 @@ class UrdfConverter(AssetConverterBase):
+         Args:
+             cfg: The configuration instance for URDF to USD conversion.
+         """
+-        # switch to older version of the URDF importer extension
++        # Use the importer bundled with the pinned Isaac Sim 5.1 runtime.  The
++        # compute image is intentionally offline, so requesting a registry-only
++        # patch version would make an otherwise sealed environment non-reproducible.
+         if get_isaac_sim_version() >= Version("5.1"):
+             manager = omni.kit.app.get_app().get_extension_manager()
+-            if not manager.is_extension_enabled("isaacsim.asset.importer.urdf-2.4.31"):
+-                manager.set_extension_enabled_immediate("isaacsim.asset.importer.urdf-2.4.31", True)
++            if not manager.is_extension_enabled("isaacsim.asset.importer.urdf"):
++                manager.set_extension_enabled_immediate("isaacsim.asset.importer.urdf", True)
+ 
+         # acquire the URDF interface
+         from isaacsim.asset.importer.urdf._urdf import acquire_urdf_interface
+diff --git a/source/isaaclab/setup.py b/source/isaaclab/setup.py
+index 369bf5b..9f3bdf9 100644
+--- a/source/isaaclab/setup.py
++++ b/source/isaaclab/setup.py
+@@ -37,7 +37,9 @@ INSTALL_REQUIRES = [
+     # make sure this is consistent with isaac sim version
+     "pillow==11.3.0",
+     # livestream
+-    "starlette==0.49.1",
++    # Isaac Sim 5.1 ships FastAPI 0.115.7, whose supported Starlette range is
++    # <0.46. Keep the benchmark runtime on that sealed compatible version.
++    "starlette==0.45.3",
+     # testing
+     "pytest",
+     "pytest-mock",

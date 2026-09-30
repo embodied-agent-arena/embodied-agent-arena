@@ -1,0 +1,14 @@
+{
+  "benchmark_id": "esi_spatial_vsi",
+  "dataset": "nyu-visionx/VSI-Bench",
+  "dataset_entrypoint": "Hugging Face datasets: load_dataset('nyu-visionx/VSI-Bench', 'debiased', split='test', streaming=True)",
+  "official_code": "https://github.com/vision-x-nyu/thinking-in-space",
+  "requires_gpu": false,
+  "minimal_dependencies": [
+    "datasets",
+    "huggingface_hub",
+    "pyarrow"
+  ],
+  "live_smoke_command": "PYTHONPATH=. python -m embodied_harness.spatial_vsi_adapter --config debiased --split test --limit 2 --output benchmarks/non_operation/esi/vsi_debiased_smoke.jsonl",
+  "agent_visible_boundary": "No oracle, checker, success, answer-key, or teacher-fact primitive is exposed. Primitives accept prompt, query, or agent_context and return traceable evidence artifacts."
+}

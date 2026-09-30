@@ -1,0 +1,295 @@
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass
+from typing import Any
+
+
+@dataclass(frozen=True)
+class PrimitiveCard:
+    name: str
+    signature: str
+    canonical_family: str
+    description: str
+    arguments: dict[str, str]
+    returns: str
+    limitations: list[str]
+    side_effect: str = "none"
+    leakage_level: str = "L1"
+    backend_source: str = "ALFWorld Text harness"
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+PRIMITIVE_CARDS = [
+    PrimitiveCard(
+        name="get_task_context",
+        signature="get_task_context()",
+        canonical_family="CTX",
+        description="Return benchmark metadata, task id, task type, official goal text, and step budget.",
+        arguments={},
+        returns="dict",
+        limitations=["Does not expose expert plans, PDDL facts, hidden state, or walkthroughs."],
+        side_effect="none",
+        leakage_level="L1 public task metadata",
+        backend_source="TaskRecord + official game grammar goal text",
+    ),
+    PrimitiveCard(
+        name="observe_text_state",
+        signature="observe_text_state()",
+        canonical_family="CTX",
+        description="Return the latest text observation from the ALFWorld TextWorld environment.",
+        arguments={},
+        returns="str",
+        limitations=["Only returns what the text environment currently reveals."],
+        side_effect="none",
+        leakage_level="L1 current observation",
+        backend_source="AlfredTWEnv reset/step observation cache",
+    ),
+    PrimitiveCard(
+        name="list_actions",
+        signature="list_actions()",
+        canonical_family="CTX",
+        description="Return currently admissible ALFWorld native text commands.",
+        arguments={},
+        returns="list[str]",
+        limitations=["Use it to disambiguate object indices such as shelf 1 or desk 2."],
+        side_effect="none",
+        leakage_level="L1 environment affordance",
+        backend_source="AlfredTWEnv infos['admissible_commands']",
+    ),
+    PrimitiveCard(
+        name="match_actions",
+        signature="match_actions(intent=None, object_name=None, receptacle_name=None, include=None, limit=20)",
+        canonical_family="CTX",
+        description="Return currently admissible native commands that match a high-level intent and optional object/receptacle text.",
+        arguments={
+            "intent": "Optional intent such as go_to, pickup, place, open, close, clean, heat, cool, examine.",
+            "object_name": "Optional object text that must appear in the native command.",
+            "receptacle_name": "Optional target receptacle/location text that must appear in the native command.",
+            "include": "Optional extra substring or list of substrings.",
+            "limit": "Maximum returned matches.",
+        },
+        returns="dict with query, total_matches, and scored action candidates",
+        limitations=[
+            "Read-only matcher; it does not execute, navigate, open containers, or choose a plan.",
+            "Returned actions are current-state only and must still be copied exactly into step_text_action(action).",
+        ],
+        side_effect="none",
+        leakage_level="L1 environment affordance",
+        backend_source="current admissible command list",
+    ),
+    PrimitiveCard(
+        name="examine_object",
+        signature="examine_object(name)",
+        canonical_family="PER",
+        description="Examine one currently admissible visible object, receptacle, or surface matching name.",
+        arguments={"name": "Object, receptacle, or surface name, for example 'desk 1' or 'sidetable 2'."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=[
+            "Thin wrapper only: executes at most one native examine command and does not search automatically.",
+            "Returns an error if no unique admissible examine command matches.",
+        ],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible examine command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="look",
+        signature="look()",
+        canonical_family="NAV",
+        description="Execute the native look action.",
+        arguments={},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Consumes one environment step."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="AlfredTWEnv.step('look')",
+    ),
+    PrimitiveCard(
+        name="inventory",
+        signature="inventory()",
+        canonical_family="STATE",
+        description="Execute the native inventory action.",
+        arguments={},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Consumes one environment step."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="AlfredTWEnv.step('inventory')",
+    ),
+    PrimitiveCard(
+        name="go_to",
+        signature="go_to(name)",
+        canonical_family="NAV",
+        description="Move to one currently admissible location whose text command contains name.",
+        arguments={"name": "Location name or partial name, for example 'desk 1' or 'shelf 2'."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Thin wrapper only: executes at most one native command and does not search automatically."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="open_object",
+        signature="open_object(name)",
+        canonical_family="HACT",
+        description="Open one currently admissible object or receptacle matching name.",
+        arguments={"name": "Object or receptacle name."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Returns an error if no unique admissible open command matches."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible open command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="close_object",
+        signature="close_object(name)",
+        canonical_family="HACT",
+        description="Close one currently admissible object or receptacle matching name.",
+        arguments={"name": "Object or receptacle name."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Returns an error if no unique admissible close command matches."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible close command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="pickup_object",
+        signature="pickup_object(name)",
+        canonical_family="HACT",
+        description="Pick up one currently admissible object matching name.",
+        arguments={"name": "Object name, for example 'pencil' or 'apple 1'."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Requires the object to be available in the current state."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible pickup command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="place_object",
+        signature="place_object(obj, receptacle)",
+        canonical_family="HACT",
+        description="Place or move a held object into/on one currently admissible receptacle matching receptacle.",
+        arguments={
+            "obj": "Held object name, for example 'pencil'.",
+            "receptacle": "Target receptacle/location name, for example 'shelf 1'.",
+        },
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Thin wrapper only: does not navigate before placing and executes at most one native command."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible put/place command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="toggle_object",
+        signature="toggle_object(name)",
+        canonical_family="HACT",
+        description="Use, toggle, turn on, or turn off one currently admissible object matching name.",
+        arguments={"name": "Object name."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Returns an error if no unique admissible toggle/use command matches."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible use/toggle command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="clean_object",
+        signature="clean_object(obj)",
+        canonical_family="HACT",
+        description="Clean or wash one held object when the current state permits it.",
+        arguments={"obj": "Object name."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Does not navigate to a sink and does not pick up the object automatically."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible clean/wash command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="heat_object",
+        signature="heat_object(obj)",
+        canonical_family="HACT",
+        description="Heat one held object when the current state permits it.",
+        arguments={"obj": "Object name."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Does not navigate to a microwave and does not pick up the object automatically."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible heat command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="cool_object",
+        signature="cool_object(obj)",
+        canonical_family="HACT",
+        description="Cool one held object when the current state permits it.",
+        arguments={"obj": "Object name."},
+        returns="StepResult; use result.valid_action to check action execution, while result.success means whole-task success.",
+        limitations=["Does not navigate to a fridge and does not pick up the object automatically."],
+        side_effect="one native text action",
+        leakage_level="L3 action",
+        backend_source="current admissible cool command matched to AlfredTWEnv.step",
+    ),
+    PrimitiveCard(
+        name="check_success",
+        signature="check_success()",
+        canonical_family="VERIFY",
+        description="Return the ALFWorld native verifier result.",
+        arguments={},
+        returns="dict with success, score, done, and source",
+        limitations=["Verifier reads only native ALFWorld success signals."],
+        side_effect="none",
+        leakage_level="L1 verifier summary",
+        backend_source="AlfredTWEnv infos['won'], score, done",
+    ),
+    PrimitiveCard(
+        name="write_evidence",
+        signature="write_evidence(key, value)",
+        canonical_family="EVD",
+        description="Store intermediate evidence in the trace-local memory.",
+        arguments={"key": "Evidence key.", "value": "JSON-serializable evidence value."},
+        returns="dict",
+        limitations=["Evidence helps trace reasoning but does not directly change ALFWorld state."],
+        side_effect="trace-local memory write",
+        leakage_level="L1",
+        backend_source="RoBench trace memory",
+    ),
+    PrimitiveCard(
+        name="read_evidence",
+        signature="read_evidence()",
+        canonical_family="EVD",
+        description="Read evidence previously written by this task run.",
+        arguments={},
+        returns="dict",
+        limitations=["Only includes evidence written through write_evidence in the current run."],
+        side_effect="none",
+        leakage_level="L1",
+        backend_source="RoBench trace memory",
+    ),
+]
+
+
+def get_primitive_cards() -> list[dict[str, Any]]:
+    return [card.to_dict() for card in PRIMITIVE_CARDS]
+
+
+def render_primitive_cards_for_prompt() -> str:
+    sections: list[str] = []
+    for card in PRIMITIVE_CARDS:
+        args = ", ".join(f"{name}: {desc}" for name, desc in card.arguments.items()) or "none"
+        limits = " ".join(f"- {item}" for item in card.limitations)
+        sections.append(
+            "\n".join(
+                [
+                    f"{card.signature}",
+                    f"  family: {card.canonical_family}",
+                    f"  description: {card.description}",
+                    f"  args: {args}",
+                    f"  returns: {card.returns}",
+                    f"  side_effect: {card.side_effect}",
+                    f"  leakage_level: {card.leakage_level}",
+                    f"  backend_source: {card.backend_source}",
+                    f"  limitations: {limits}",
+                ]
+            )
+        )
+    return "\n\n".join(sections)

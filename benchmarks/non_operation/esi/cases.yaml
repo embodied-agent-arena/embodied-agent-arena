@@ -1,0 +1,42 @@
+{
+  "benchmark_id": "esi",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Exercise the ESI spatial diagnostic contract using a public view descriptor.",
+        "task_id": "spatial:vsi_bench_style:fixture_vsi_style_0",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "esi_spatial_fixture_smoke",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "esi",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "esi_spatial",
+          "vsi_bench"
+        ]
+      }
+    },
+    {
+      "agent_visible": {
+        "objective": "Exercise the VSI runtime identity on real local video frames and derived visual evidence.",
+        "task_id": "spatial:vsi_bench:vsi_0",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "vsi_real_video_frame_boundary",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "esi",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "esi_spatial",
+          "vsi_bench"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

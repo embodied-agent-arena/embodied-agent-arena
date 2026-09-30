@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "alfworld",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve the official ALFWorld task using task text, observations, admissible actions, and typed actions.",
+        "task_id": "qwen_live_alfworld_pick_knife_to_sidetable",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "alfworld_pick_knife_to_sidetable",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "alfworld",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "alfworld"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

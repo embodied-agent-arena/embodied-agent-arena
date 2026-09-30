@@ -1,0 +1,22 @@
+{
+  "assets": [
+    "CALVIN debug dataset (~1.3GB)",
+    "official task_D_D dataset for MCIL baseline evaluation",
+    "official D_D_static_rgb_baseline/mcil_baseline.ckpt policy checkpoint"
+  ],
+  "benchmark_id": "calvin",
+  "directory": "benchmarks/operation/calvin",
+  "headless": "PyBullet EGL path is supported by the wrapper; validate EGL before full challenge rollout.",
+  "install_hint": "Materialize the pinned CALVIN Python 3.10 environment, then run scripts/slurm_calvin_operation_environment_seal.sbatch to seal the official MCIL model-step and verifier evidence.",
+  "live_smoke_command": "python -m embodied_harness.calvin_runtime_smoke --calvin-root \"$CALVIN_ROOT\" --dataset-root \"$CALVIN_ROOT/dataset/task_D_D/training\" --sequence-id debug_language_sequence --query \"what language skill should run next?\" --output reports/live_calvin_runtime_smoke.json",
+  "notes": [
+    "Strict readiness requires the official MCIL checkpoint to load and emit a real policy action; simulator-only reset/step evidence is insufficient."
+  ],
+  "offline_adapter": "contract-only",
+  "package_manager": "conda/pip",
+  "python": "3.10",
+  "requires_gpu": false,
+  "simulator": "PyBullet / CALVIN",
+  "smoke_mode": "live_debug_dataset_env_reset_observe_step",
+  "smoke_task": "debug language sequence state/camera/subgoal smoke"
+}

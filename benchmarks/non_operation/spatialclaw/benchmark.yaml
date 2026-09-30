@@ -1,0 +1,51 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/spatialclaw"
+  },
+  "assets": [],
+  "benchmark_id": "spatialclaw",
+  "category": "spatial_reasoning",
+  "display_name": "SpatialClaw",
+  "migration": {
+    "source_directory": "benchmarks/non_operation/spatialclaw",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "OpenHands",
+    "execution_requirement": "real_agent_server_no_replay_or_direct_executor",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "spatialclaw",
+    "modes": [
+      "apptainer_cpu",
+      "apptainer_gpu"
+    ],
+    "resource_profile": "cpu_or_gpu_visual_diagnostic"
+  },
+  "runtime_target_ids": [
+    "spatialclaw"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "non_operation",
+  "strict_case_ids": [
+    "spatialclaw_erqa_real_visual",
+    "spatialclaw_geometry_fixture"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_local_checkout",
+    "repository": "https://github.com/NVlabs/SpatialClaw",
+    "revision": "b8ff5f775062fb1268556b2911913927eb20b328"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.spatialclaw_adapter.SpatialClawAgentNativeBackend",
+    "digest": "ba02b7e20e171f8aa1670ac4515b8d9f97a8698f2dbd4ecfe04692fce8295c16",
+    "digest_source": "src/embodied_harness/spatialclaw_adapter.py",
+    "mode": "post_hoc",
+    "parity_fixture": "cases.yaml#spatialclaw_erqa_real_visual",
+    "provenance_status": "adapter_bound_upstream_verifier_symbol_pending_review",
+    "success_semantics": "Submitted spatial answer evaluated by the selected SpatialClaw benchmark evaluator.",
+    "upstream_file_or_symbol": "pending: exact upstream ERQA evaluator symbol mapping"
+  }
+}

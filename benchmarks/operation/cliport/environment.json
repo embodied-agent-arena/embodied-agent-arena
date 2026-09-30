@@ -1,0 +1,18 @@
+{
+  "assets": [
+    "Ravens/CLIPort assets"
+  ],
+  "benchmark_id": "cliport",
+  "directory": "benchmarks/operation/cliport",
+  "headless": "Use PyBullet headless/disp=False; learned models expect a single NVIDIA GPU.",
+  "install_hint": "Use external/environments/cliport; install the checkout from external/upstreams/cliport in editable mode.",
+  "live_smoke_command": "CLIPORT_ROOT=external/upstreams/cliport PYTHONPATH=src/embodied_harness/cliport_runtime_stubs:src python -m embodied_harness.cliport_runtime_smoke --task-name stack-block-pyramid-seq-seen-colors --mode test --seed 10001 --query 'the object mentioned by the language goal' --context '{\"plan_step\":\"ground pick target\"}' --minimal-step --output reports/cliport_runtime_smoke.json",
+  "notes": [],
+  "offline_adapter": "partial",
+  "package_manager": "conda prefix env plus upstream pip editable install",
+  "python": "3.8",
+  "requires_gpu": false,
+  "simulator": "PyBullet / Ravens tabletop",
+  "smoke_mode": "live_headless_pybullet_minimal_step",
+  "smoke_task": "stack-block-pyramid-seq-seen-colors"
+}

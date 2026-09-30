@@ -1,0 +1,81 @@
+{
+  "measurements": [
+    {
+      "name": "cup",
+      "actor_label": "cup",
+      "camera_name": "head_camera",
+      "prompt": "Measure the exact cup mask and recover its world geometry from native depth and calibration."
+    },
+    {
+      "name": "coaster",
+      "actor_label": "coaster",
+      "camera_name": "head_camera",
+      "prompt": "Measure the exact coaster mask and recover its world geometry from native depth and calibration."
+    }
+  ],
+  "actions": [
+    {
+      "right": {
+        "operation": "open_gripper",
+        "pos": 1.0
+      }
+    },
+    {
+      "right": {
+        "operation": "move_to_pose",
+        "measurement": "cup",
+        "offset": [0.04, 0.0, 0.30],
+        "quaternion_wxyz": [0.5, -0.5, 0.5, 0.5]
+      }
+    },
+    {
+      "right": {
+        "operation": "move_to_pose",
+        "measurement": "cup",
+        "offset": [0.04, 0.0, 0.20],
+        "quaternion_wxyz": [0.5, -0.5, 0.5, 0.5]
+      }
+    },
+    {
+      "right": {
+        "operation": "close_gripper",
+        "pos": 0.0
+      }
+    },
+    {
+      "right": {
+        "operation": "move_by_displacement",
+        "delta": [0.0, 0.0, 0.10],
+        "move_axis": "world"
+      }
+    },
+    {
+      "right": {
+        "operation": "move_to_pose",
+        "measurement": "coaster",
+        "offset": [0.055, 0.007, 0.32],
+        "quaternion_wxyz": [0.5, -0.5, 0.5, 0.5],
+        "route": {
+          "strategy": "vertical_clearance",
+          "clearance": 0.12,
+          "max_upward_margin": 0.04,
+          "recovery_xy_step": 0.03
+        }
+      }
+    },
+    {
+      "right": {
+        "operation": "move_to_pose",
+        "measurement": "coaster",
+        "offset": [0.055, 0.007, 0.22],
+        "quaternion_wxyz": [0.5, -0.5, 0.5, 0.5]
+      }
+    },
+    {
+      "right": {
+        "operation": "open_gripper",
+        "pos": 1.0
+      }
+    }
+  ]
+}

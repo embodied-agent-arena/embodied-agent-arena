@@ -1,0 +1,57 @@
+{
+  "artifact_retention": {
+    "policy": "immutable_campaign_scoped_evidence",
+    "root": "artifacts/campaigns/<campaign_id>/robowits"
+  },
+  "assets": [],
+  "benchmark_id": "robowits",
+  "category": "long_horizon_manipulation",
+  "display_name": "RoboWits",
+  "migration": {
+    "source_directory": "benchmarks/operation/robowits",
+    "status": "canonical_cutover_complete"
+  },
+  "openhands": {
+    "agent_runtime": "disabled",
+    "execution_requirement": "legacy_metadata_only_not_used_by_native_harness",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "native_harness": {
+    "agent_runtime": "embodied_harness.native_agent_loop",
+    "execution_requirement": "native_runtime_bridge",
+    "tool_profile": "universal_embodied_v1"
+  },
+  "runtime": {
+    "environment_id": "robowits",
+    "modes": [
+      "apptainer_gpu"
+    ],
+    "resource_profile": "gpu_genesis_simulator"
+  },
+  "runtime_target_ids": [
+    "robowits"
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1",
+  "scope": "operation",
+  "strict_case_ids": [
+    "robowits_stack_cube_official"
+  ],
+  "upstream": {
+    "provenance_status": "pinned_official_source_lock",
+    "repository": "https://github.com/UMass-Embodied-AGI/RoboWits",
+    "revision": "9cc30aedbbebea86b975c0d66ea9ac227ca38535"
+  },
+  "verifier": {
+    "adapter_entrypoint": "embodied_harness.robowits_agent_runtime.RoboWitsAgentRuntimeBackend.verify",
+    "digest": "8c897ebc49582c734ab9eb1345fe4243ad5716501366fe02069d85eabebc80fa",
+    "digest_source": "src/embodied_harness/robowits_agent_runtime.py",
+    "official_digest": "8f2b61c160e90a54a920333304a8be37e18f4ab6b54e81c3c10c3354618a7268",
+    "official_digest_source": "external/sources.lock.yaml#robowits",
+    "mode": "live_in_episode",
+    "parity_fixture": "cases.yaml#robowits_stack_cube_official",
+    "parity_fixture_digest": "97f0d92a9297231cb00adbb4c8adcaa15b5dc9702dabbaeb3c1a89ee800b5809",
+    "provenance_status": "official_source_pinned_adapter_parity_pending",
+    "success_semantics": "RoboWits StackCubesEnv._check_success computes task completion and get_reward exposes the protected success result.",
+    "upstream_file_or_symbol": "gs_gym/envs/robowits/14_stack_cubes.py:StackCubesEnv._check_success"
+  }
+}

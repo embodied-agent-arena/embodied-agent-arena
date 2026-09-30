@@ -1,0 +1,40 @@
+{
+  "benchmark_id": "mmsi_bench",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve a public MMSI multi-image spatial question from pixel and camera-motion evidence.",
+        "task_id": "spatial:mmsi_bench:mmsi_0",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "mmsi_spatial_smoke",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "mmsi_bench",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "mmsi_bench"
+        ]
+      }
+    },
+    {
+      "agent_visible": {
+        "objective": "Exercise a second MMSI sample through the real pixel and camera-motion evidence path.",
+        "task_id": "spatial:mmsi_bench:mmsi_1",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "mmsi_camera_rotation_real_pixels",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "mmsi_bench",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "mmsi_bench"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}

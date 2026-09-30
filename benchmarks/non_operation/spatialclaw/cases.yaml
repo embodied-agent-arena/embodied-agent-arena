@@ -1,0 +1,40 @@
+{
+  "benchmark_id": "spatialclaw",
+  "cases": [
+    {
+      "agent_visible": {
+        "objective": "Solve a real SpatialClaw ERQA sample from public pixels and visual-query analysis.",
+        "task_id": "spatial:spatialclaw_erqa:ERQA_1",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "spatialclaw_erqa_real_visual",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "spatialclaw",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "spatialclaw"
+        ]
+      }
+    },
+    {
+      "agent_visible": {
+        "objective": "Exercise geometry-tool and answer-submission contracts without claiming dataset completion.",
+        "task_id": "spatial:spatialclaw_geometry_fixture:qwen_geometry_fixture_0",
+        "tool_profile": "universal_embodied_v1"
+      },
+      "case_id": "spatialclaw_geometry_fixture",
+      "seed": 0,
+      "split": "strict_representative",
+      "verifier_inputs": {
+        "benchmark_id": "spatialclaw",
+        "official_verifier_required": true,
+        "runtime_target_ids": [
+          "spatialclaw"
+        ]
+      }
+    }
+  ],
+  "schema_version": "agentic-embodied-arena/catalog/v1"
+}
