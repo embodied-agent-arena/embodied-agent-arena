@@ -12,8 +12,8 @@
   <link rel="preload" href="assets/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/manrope.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/allura.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="icon" href="assets/logo.png?v=20260929"><link rel="stylesheet" href="styles.css?v=20261001-2">
-  <script src="app.js?v=20260929-6" defer></script>
+  <link rel="icon" href="assets/logo.png?v=20260929"><link rel="stylesheet" href="styles.css?v=20261001-3">
+  <script src="app.js?v=20261001-3" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +34,7 @@
 <section id="arena" class="wrap section arena-section">
   <div class="arena-intro"><div class="arena-copy"><p class="eyebrow"><span>01</span> The arena</p><h2>From seeing a scene<br>to completing a task.</h2><p>One arena tests what agents can perceive, reason about, and physically achieve across five robotic capabilities.</p></div>
   <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div></div>
-  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate object motion<br><span>from camera motion.</span></h3></div><div class="geo-copy"><p><strong>168 new cases</strong> isolate camera motion, object motion, depth, and scale.</p><details class="figure-disclosure"><summary>Explore the benchmark design <span aria-hidden="true">+</span></summary><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena construction and GeoProbe targets" loading="lazy"></button></details></div></div>
+  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate object motion<br><span>from camera motion.</span></h3></div><div class="geo-copy"><p><strong>168 new cases</strong> isolate camera motion, object motion, depth, and scale.</p></div><figure class="construction-figure"><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena composition, GeoProbe estimation targets, and the agent evaluation workflow" loading="lazy"></button><figcaption class="figure-caption"><strong>How the arena is built.</strong> Task examples and the five-domain composition sit alongside GeoProbe's estimation targets and the workflow connecting model actions to evaluation.</figcaption></figure></div>
 </section>
 
 <section id="findings" class="section findings-section"><div class="wrap">
@@ -43,11 +43,11 @@
   <div id="domain-panel" class="domain-panel" role="tabpanel" tabindex="0"></div>
 </div></section>
 
-<section class="wrap section results-section" id="results">
-  <details class="results-disclosure"><summary><span>Compare all seven agents</span><span class="disclosure-plus" aria-hidden="true">+</span></summary><div class="results-content">
+<section class="wrap section results-section" id="results" aria-labelledby="results-title">
+  <h2 id="results-title" class="results-heading">Compare all seven agents</h2><div class="results-content">
   <div class="table-scroll" role="region" aria-label="Full model results, scroll horizontally on smaller screens" tabindex="0"><table id="results-table"><caption>Performance across five capability domains</caption><thead><tr><th rowspan="2" scope="col">Agent</th><th colspan="2" scope="colgroup">Geometry</th><th colspan="2" scope="colgroup">Spatial reasoning</th><th colspan="2" scope="colgroup">Affordance</th><th scope="colgroup">Planning</th><th scope="colgroup">Manipulation</th></tr><tr><th scope="col">Rotation ↓<small>degrees</small></th><th scope="col">Translation ↓<small>cm</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">AbsRel ↓<small>relative error</small></th><th scope="col">Mask IoU ↑<small>overlap</small></th><th scope="col">Contact ↑<small>%</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">Task success ↑<small>%</small></th></tr></thead><tbody></tbody></table></div>
-  <p class="table-note">Table 2 results. Bold marks the best score; arrows show the better direction. ± is the standard deviation across runs. Manipulation uses the baseline setting.</p>
-</div></details></section>
+  <p class="table-note">Bold marks the best score; arrows show the better direction. ± is the standard deviation across runs. Manipulation uses the baseline setting.</p>
+</div></section>
 
 <section id="cases" class="wrap section cases-section">
   <div class="section-heading"><p class="eyebrow"><span>03</span> From scores to behavior</p><h2>Watch the decisions<br>behind the scores.</h2></div>
