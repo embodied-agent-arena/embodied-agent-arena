@@ -12,7 +12,7 @@
   &nbsp;
   <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf"><img src="https://img.shields.io/badge/Paper-PDF-B45C7E?style=flat-square&amp;logo=readthedocs&amp;logoColor=white" height="24" align="absmiddle" alt="Paper PDF"></a>
   &nbsp;
-  <a href="https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena"><img src="https://img.shields.io/badge/Dataset-Hugging_Face-8174A8?style=flat-square&amp;logo=huggingface&amp;logoColor=white" height="24" align="absmiddle" alt="Dataset on Hugging Face"></a>
+  <a href="https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena"><img src="https://img.shields.io/badge/Dataset-Hugging_Face-8174A8?style=flat-square&amp;logo=huggingface&amp;logoColor=FFD21E" height="24" align="absmiddle" alt="Dataset on Hugging Face"></a>
 </p>
 
 <div align="center">
