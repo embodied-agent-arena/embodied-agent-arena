@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="public/assets/logo.png" width="64" height="64" align="absmiddle" alt="">&nbsp; Embodied Agent Arena
+  <img src="public/assets/logo-transparent.png" width="64" height="64" align="absmiddle" alt="">&nbsp; Embodied Agent Arena
 </h1>
 
 <h3 align="center">
