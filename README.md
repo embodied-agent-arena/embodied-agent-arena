@@ -29,19 +29,17 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 ---
 
-![Recorded planning and manipulation tasks](public/assets/reference-arena.gif)
+## Overview
 
-**Benchmarks, columns 1–10 (left → right):** ALFRED · ALFWorld · DiscoveryWorld · HumanCLAW · CALVIN · RLBench · ManiSkill · CLIPort · RoboCasa · RoboCasa365.
+Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 cases** across five robotic capabilities. It combines 32 established sources with **GeoProbe**, a new 168-case geometric-estimation benchmark. A unified agent harness connects model-generated programs to source environments, and task-level analyses examine how perception, reasoning, and intermediate actions translate into complete robotic tasks.
 
-![Task Planning and Manipulation demonstrations](public/assets/reference-interaction-clips.gif)
+![Embodied Agent Arena overview](public/assets/reference-arena.gif)
 
-**Benchmarks, left → right:** ALFRED · DiscoveryWorld · CALVIN · CLIPort · RLBench · ManiSkill · CAPX · BEHAVIOR-1K · RoboCasa · RoboCasa365 · VLABench.
-
-**What are the agents trying to do?** In the first montage, the top-left ALFRED scene asks the agent to “Place the salt shaker in the cabinet”; the first-row CLIPort scene asks it to “push the pile of orange blocks into the purple square.” The [scene-by-scene task index](docs/RECORDED_TASKS.md) lists task instructions by scene.
+![Task Planning and Manipulation overview](public/assets/reference-interaction-clips.gif)
 
 ## News
 
-- **2026.10.03** — Explore [Task Planning and Manipulation demonstrations](docs/RECORDED_TASKS.md), with instructions for the illustrated tasks.
+- **2026.10.03** — Added a visual [overview](#overview) of task planning and manipulation.
 - **2026.10.01** — The [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) and [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/) are available. The manuscript has been submitted to arXiv.
 - **2026.10.01** — Released the [evaluation harness](#quick-start), multi-model batch runner, and [1,000-case dataset](https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena).
 
@@ -52,10 +50,6 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 - [x] **Benchmark data** — 1,000-case dataset with a pinned download revision.
 - [ ] **Reproduction reports** — Per-model evaluation outputs and consolidated analysis reports.
 - [ ] **Analysis tools** — Scripts for aggregating results and reproducing the paper's figures.
-
-## Overview
-
-Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 cases** across five robotic capabilities. It combines 32 established sources with **GeoProbe**, a new 168-case geometric-estimation benchmark. A unified agent harness connects model-generated programs to source environments, and task-level analyses examine how perception, reasoning, and intermediate actions translate into complete robotic tasks.
 
 ## 📦 Benchmark
 
