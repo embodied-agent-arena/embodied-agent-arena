@@ -35,7 +35,7 @@ Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 
 
 ![Embodied Agent Arena overview](public/assets/reference-arena.gif)
 
-![Task Planning and Manipulation overview](public/assets/reference-interaction-clips.gif)
+![Benchmark construction: 1,000 cases, five capability domains, GeoProbe, and the unified evaluation harness](public/assets/construction.webp)
 
 ## News
 
