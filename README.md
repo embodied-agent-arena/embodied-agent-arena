@@ -33,15 +33,15 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 **Benchmarks, columns 1–10 (left → right):** ALFRED · ALFWorld · DiscoveryWorld · HumanCLAW · CALVIN · RLBench · ManiSkill · CLIPort · RoboCasa · RoboCasa365.
 
-![Recorded W3 and W4 interaction clips](public/assets/reference-interaction-clips.gif)
+![Task Planning and Manipulation demonstrations](public/assets/reference-interaction-clips.gif)
 
 **Benchmarks, left → right:** ALFRED · DiscoveryWorld · CALVIN · CLIPort · RLBench · ManiSkill · CAPX · BEHAVIOR-1K · RoboCasa · RoboCasa365 · VLABench.
 
-**What are the agents trying to do?** In the first montage, the top-left ALFRED scene asks the agent to “Place the salt shaker in the cabinet”; the first-row CLIPort scene asks it to “push the pile of orange blocks into the purple square.” The [scene-by-scene task index](docs/RECORDED_TASKS.md) gives the recovered instructions and their row/column positions.
+**What are the agents trying to do?** In the first montage, the top-left ALFRED scene asks the agent to “Place the salt shaker in the cabinet”; the first-row CLIPort scene asks it to “push the pile of orange blocks into the purple square.” The [scene-by-scene task index](docs/RECORDED_TASKS.md) lists task instructions by scene.
 
 ## News
 
-- **2026.10.03** — Added [recorded W3/W4 interactions](public/assets/reference-interaction-clips.gif) across planning and manipulation environments.
+- **2026.10.03** — Explore [Task Planning and Manipulation demonstrations](docs/RECORDED_TASKS.md), with instructions for the illustrated tasks.
 - **2026.10.01** — The [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) and [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/) are available. The manuscript has been submitted to arXiv.
 - **2026.10.01** — Released the [evaluation harness](#quick-start), multi-model batch runner, and [1,000-case dataset](https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena).
 
@@ -61,13 +61,13 @@ Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 
 
 **GeoProbe** evaluates camera motion, object displacement, depth, and scale. Controlled Blender scenes isolate these geometric factors; real images extend the evaluation to natural scenes.
 
-| Track | Cases | What the agent must do |
+| Capability | Cases | What the agent must do |
 | :--- | ---: | :--- |
-| **W1 Geometry** | 370 | Estimate camera parameters, depth, motion, and scale; trace spatial paths. |
-| **W2 Spatial Reasoning** | 220 | Relate objects and viewpoints, compare distances, and reason about scene layout. |
-| **W3 Task Planning** | 157 | Coordinate actions and feedback to satisfy household and scientific goals. |
-| **W4 Manipulation** | 183 | Execute placement, insertion, articulation, and sequential control tasks. |
-| **W5 Affordance** | 70 | Locate usable contacts and functional regions for an intended action. |
+| **Geometry** | 370 | Estimate camera parameters, depth, motion, and scale; trace spatial paths. |
+| **Spatial Reasoning** | 220 | Relate objects and viewpoints, compare distances, and reason about scene layout. |
+| **Task Planning** | 157 | Coordinate actions and feedback to satisfy household and scientific goals. |
+| **Manipulation** | 183 | Execute placement, insertion, articulation, and sequential control tasks. |
+| **Affordance** | 70 | Locate usable contacts and functional regions for an intended action. |
 
 ## 📊 Results
 

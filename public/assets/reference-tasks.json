@@ -7,7 +7,8 @@
     "instruction": "Place the salt shaker in the cabinet.",
     "instruction_type": "original",
     "task_id": "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190906_191501_563086--0--fd43a2d0cf22",
-    "evidence": "sources/materials-20260920/W3/strips/02-alfred_official_visual-pick_and_place_simple.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/02-alfred_official_visual-pick_and_place_simple.sources.json",
+    "display_instruction": "Place the salt shaker in the cabinet."
   },
   {
     "animation": "arena",
@@ -17,7 +18,8 @@
     "instruction": "Fill up a mug with water and take to the coffee machine.",
     "instruction_type": "original",
     "task_id": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190907_221208_560499--0--03f48e863917",
-    "evidence": "sources/materials-20260920/W3/strips/11-alfworld_visual-pick_clean_then_place_in_recep.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/11-alfworld_visual-pick_clean_then_place_in_recep.sources.json",
+    "display_instruction": "Fill up a mug with water and take to the coffee machine."
   },
   {
     "animation": "arena",
@@ -27,7 +29,8 @@
     "instruction": "You are on an archaeological dig on Planet X.  3 ancient sites have been found. Your task is to excavate the sites, and date any artifacts with the radiocarbon meter.  Then, once completed, place the red flag beside the sign of the dig site with the oldest artifact.",
     "instruction_type": "original",
     "task_id": "discoveryworld--discoveryworld--full_v1--Archaeology_Dating-Normal-s4--4--987dc450e2c9",
-    "evidence": "sources/materials-20260920/W3/strips/15-discoveryworld-archaeology_dating.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/15-discoveryworld-archaeology_dating.sources.json",
+    "display_instruction": "Excavate three sites, date the artifacts, and mark the site with the oldest artifact."
   },
   {
     "animation": "arena",
@@ -37,7 +40,8 @@
     "instruction": "Find the chair and move until your body is touching the target, with zero distance to the target object.",
     "instruction_type": "original",
     "task_id": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
-    "evidence": "sources/materials-20260920/W3/strips/25-humanclaw-navigate_to_contact.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/25-humanclaw-navigate_to_contact.sources.json",
+    "display_instruction": "Find the chair and move until your body is touching the target, with zero distance to the target object."
   },
   {
     "animation": "arena",
@@ -47,7 +51,8 @@
     "instruction": "Hockey",
     "instruction_type": "task_name",
     "task_id": "rlbench--rlbench_reach_target_motion--test--Hockey-variation_0--0--33c80baf4e43",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/rlbench.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/rlbench.sources.json",
+    "display_instruction": "Hockey"
   },
   {
     "animation": "arena",
@@ -57,7 +62,8 @@
     "instruction": "Anymal C-Spin",
     "instruction_type": "task_name",
     "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--AnymalC-Spin-v1--0--df5f47530d30",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json",
+    "display_instruction": "Anymal C-Spin"
   },
   {
     "animation": "arena",
@@ -67,7 +73,8 @@
     "instruction": "push the pile of orange blocks into the purple square",
     "instruction_type": "original",
     "task_id": "cliport--cliport_place_red_in_green--test--separating-piles-unseen-colors-test_seed_10133--10133--3e04249c7971",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json",
+    "display_instruction": "Push the pile of orange blocks into the purple square"
   },
   {
     "animation": "arena",
@@ -77,7 +84,8 @@
     "instruction": "Complete the native household task: bringing water.",
     "instruction_type": "original",
     "task_id": "behavior1k--behavior1k_full_bddl_toggle--test--bringing_water-instance_230--0--ec43876a0d55",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json",
+    "display_instruction": "Bring water."
   },
   {
     "animation": "arena",
@@ -87,7 +95,8 @@
     "instruction": "Hold the clock and turn on the lamp.",
     "instruction_type": "original",
     "task_id": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190908_222917_366542--0--832ccde75dfc",
-    "evidence": "sources/materials-20260920/W3/strips/08-alfworld_visual-look_at_obj_in_light.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/08-alfworld_visual-look_at_obj_in_light.sources.json",
+    "display_instruction": "Hold the clock and turn on the lamp."
   },
   {
     "animation": "arena",
@@ -97,7 +106,8 @@
     "instruction": "You were venturing into the wilderness of Planet X to a storage shed to fetch some supplies. The shed door locked behind you, and your key appears too rusted to work in the lock. You remember one of the other colonists mentioning that one of the chemicals in the shed is a rust remover, but unfortunately the chemicals you see are all unlabelled.You need to figure out which is a rust remover, and use it to remove the rust from the key.  Then, use the key to open the shed door, and make your way back to the colony. You have no means of communication with the other colonists, and must figure this out on your own. ",
     "instruction_type": "original",
     "task_id": "discoveryworld--discoveryworld--full_v1--Combinatorial_Chemistry-Easy-s0--0--f31a567f8260",
-    "evidence": "sources/materials-20260920/W3/strips/16-discoveryworld-combinatorial_chemistry.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/16-discoveryworld-combinatorial_chemistry.sources.json",
+    "display_instruction": "Identify the rust-removing chemical, clean the key, and escape from the shed."
   },
   {
     "animation": "arena",
@@ -107,7 +117,8 @@
     "instruction": "Close Laptop Lid",
     "instruction_type": "task_name",
     "task_id": "rlbench--rlbench_reach_target_motion--test--CloseLaptopLid-variation_0--0--f9bb8dd76402",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/rlbench.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/rlbench.sources.json",
+    "display_instruction": "Close Laptop Lid"
   },
   {
     "animation": "arena",
@@ -117,7 +128,8 @@
     "instruction": "Peg Insertion Side",
     "instruction_type": "task_name",
     "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PegInsertionSide-v1--0--d37df3dbb8a3",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json",
+    "display_instruction": "Peg Insertion Side"
   },
   {
     "animation": "arena",
@@ -127,7 +139,8 @@
     "instruction": "push the pile of blue blocks into the brown square",
     "instruction_type": "original",
     "task_id": "cliport--cliport_place_red_in_green--test--separating-piles-seen-colors-test_seed_10167--10167--cbbba9f83b9d",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json",
+    "display_instruction": "Push the pile of blue blocks into the brown square"
   },
   {
     "animation": "arena",
@@ -137,7 +150,8 @@
     "instruction": "Complete the native household task: boxing books up for storage.",
     "instruction_type": "original",
     "task_id": "behavior1k--behavior1k_full_bddl_toggle--test--boxing_books_up_for_storage-instance_200--0--346efc581b38",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json",
+    "display_instruction": "Pack books into boxes for storage."
   },
   {
     "animation": "arena",
@@ -147,7 +161,8 @@
     "instruction": "Put two sets of keys in the safe. ",
     "instruction_type": "original",
     "task_id": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190909_011850_153676--0--8b8c610bed00",
-    "evidence": "sources/materials-20260920/W3/strips/14-alfworld_visual-pick_two_obj_and_place.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/14-alfworld_visual-pick_two_obj_and_place.sources.json",
+    "display_instruction": "Put two sets of keys in the safe."
   },
   {
     "animation": "arena",
@@ -157,7 +172,8 @@
     "instruction": "Your task is to drop the flag inside the following location: `science lab`.",
     "instruction_type": "original",
     "task_id": "discoveryworld--discoveryworld--full_v1--Small_Skills_Navigation_in_a_House_Test-Normal-s--3--e77c51dacb9d",
-    "evidence": "sources/materials-20260920/W3/strips/22-discoveryworld-smallskills_navigation_in_a_house_test.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/22-discoveryworld-smallskills_navigation_in_a_house_test.sources.json",
+    "display_instruction": "Your task is to drop the flag inside the following location: science lab."
   },
   {
     "animation": "arena",
@@ -167,7 +183,8 @@
     "instruction": "Plug Charger",
     "instruction_type": "task_name",
     "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlugCharger-v1--0--fa32f5573da8",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json",
+    "display_instruction": "Plug Charger"
   },
   {
     "animation": "arena",
@@ -177,7 +194,8 @@
     "instruction": "put the orange blocks in a red bowl",
     "instruction_type": "original",
     "task_id": "cliport--cliport_place_red_in_green--test--put-block-in-bowl-unseen-colors-test_seed_10187--10187--905c6ee7edc2",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json",
+    "display_instruction": "Put the orange blocks in a red bowl"
   },
   {
     "animation": "arena",
@@ -187,7 +205,8 @@
     "instruction": "Complete the native household task: wash a baseball cap.",
     "instruction_type": "original",
     "task_id": "behavior1k--behavior1k_full_bddl_toggle--test--wash_a_baseball_cap-instance_271--0--8128d48f1088",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json",
+    "display_instruction": "Wash a baseball cap."
   },
   {
     "animation": "arena",
@@ -197,7 +216,8 @@
     "instruction": "Put the green spray bottles on the toilet",
     "instruction_type": "original",
     "task_id": "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190910_222914_814642--0--f95e75752510",
-    "evidence": "sources/materials-20260920/W3/strips/07-alfred_official_visual-pick_two_obj_and_place.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/07-alfred_official_visual-pick_two_obj_and_place.sources.json",
+    "display_instruction": "Put the green spray bottles on the toilet"
   },
   {
     "animation": "arena",
@@ -207,7 +227,8 @@
     "instruction": "Put a cardboard box with keys in it on the seat of a blue chair.",
     "instruction_type": "original",
     "task_id": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190918_185132_685516--0--80e9ccba522c",
-    "evidence": "sources/materials-20260920/W3/strips/10-alfworld_visual-pick_and_place_with_movable_recep.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/10-alfworld_visual-pick_and_place_with_movable_recep.sources.json",
+    "display_instruction": "Put a cardboard box with keys in it on the seat of a blue chair."
   },
   {
     "animation": "arena",
@@ -217,7 +238,8 @@
     "instruction": "Your task is to enter the building, and go through all the doors until you reach a flag.  When you see the flag, pick it up to complete the task.  Note that for the task to be considered complete, all the doors must be opened, too.",
     "instruction_type": "original",
     "task_id": "discoveryworld--discoveryworld--full_v1--Small_Skills_Doors_Test-Normal-s0--0--0f47e2c61dba",
-    "evidence": "sources/materials-20260920/W3/strips/21-discoveryworld-smallskills_doors_test.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/21-discoveryworld-smallskills_doors_test.sources.json",
+    "display_instruction": "Enter the building, open all the doors, and pick up the flag."
   },
   {
     "animation": "arena",
@@ -227,7 +249,8 @@
     "instruction": "push the pile of blue blocks into the brown square",
     "instruction_type": "original",
     "task_id": "cliport--cliport_place_red_in_green--test--separating-piles-seen-colors-test_seed_10167--10167--cbbba9f83b9d",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/cliport.sources.json",
+    "display_instruction": "Push the pile of blue blocks into the brown square"
   },
   {
     "animation": "arena",
@@ -237,7 +260,8 @@
     "instruction": "You find yourself venturing into a small village of Planet X where everyone speaks a dialect unknown to you. An elder (at the center of the village) is trying to tell you something that seems very important. You need to figure out what the older is saying. ",
     "instruction_type": "original",
     "task_id": "discoveryworld--discoveryworld--full_v1--Lost_in_Translation-Normal-s3--3--763903c954f0",
-    "evidence": "sources/materials-20260920/W3/strips/18-discoveryworld-lost_in_translation.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/18-discoveryworld-lost_in_translation.sources.json",
+    "display_instruction": "Decode the village elder’s request."
   },
   {
     "animation": "arena",
@@ -247,7 +271,8 @@
     "instruction": "Pull Cube",
     "instruction_type": "task_name",
     "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PullCube-v1--0--b1dc3f2fefc2",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json",
+    "display_instruction": "Pull Cube"
   },
   {
     "animation": "arena",
@@ -257,7 +282,8 @@
     "instruction": "Your task is to give Yugo the `spectrometer`.",
     "instruction_type": "original",
     "task_id": "discoveryworld--discoveryworld--full_v1--Small_Skills_Pick_and_Give_Test-Normal-s1--1--8874ccb948f1",
-    "evidence": "sources/materials-20260920/W3/strips/23-discoveryworld-smallskills_pick_and_give_test.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/23-discoveryworld-smallskills_pick_and_give_test.sources.json",
+    "display_instruction": "Your task is to give Yugo the spectrometer."
   },
   {
     "animation": "arena",
@@ -267,7 +293,8 @@
     "instruction": "Take Toilet Roll Off Stand",
     "instruction_type": "task_name",
     "task_id": "rlbench--rlbench_reach_target_motion--test--TakeToiletRollOffStand-variation_0--0--572638cf3a2a",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/rlbench.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/rlbench.sources.json",
+    "display_instruction": "Take Toilet Roll Off Stand"
   },
   {
     "animation": "arena",
@@ -277,7 +304,8 @@
     "instruction": "You are at a botanical research station on Planet X.  A species of plant has been identified that appears to grow very quickly in the presence of an unusual nutrient uncommon on Earth. Other scientists have narrowed down the nutrient to be one of the following: Potassium, Titanium, Lithium, Thorium, or Barium. Your task is to figure out which nutrient it is, and what specific amount of the nutrient (low, medium, or high) is required in the soil for the plant to grow. ",
     "instruction_type": "original",
     "task_id": "discoveryworld--discoveryworld--full_v1--Plant_Nutrients-Normal-s3--3--7171ef52946d",
-    "evidence": "sources/materials-20260920/W3/strips/19-discoveryworld-plant_nutrients.sources.json"
+    "evidence": "sources/materials-20260920/W3/strips/19-discoveryworld-plant_nutrients.sources.json",
+    "display_instruction": "Identify the nutrient and concentration that make the plant grow."
   },
   {
     "animation": "arena",
@@ -287,7 +315,8 @@
     "instruction": "press the button to turn off the led light",
     "instruction_type": "original",
     "task_id": "calvin--calvin_native_turn_off_led--test--calvin_sequence_0557--0--1c02eff7213e",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/calvin.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/calvin.sources.json",
+    "display_instruction": "Press the button to turn off the led light"
   },
   {
     "animation": "arena",
@@ -297,7 +326,8 @@
     "instruction": "Plug Charger",
     "instruction_type": "task_name",
     "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlugCharger-v1--0--fa32f5573da8",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json",
+    "display_instruction": "Plug Charger"
   },
   {
     "animation": "clips",
@@ -307,7 +337,8 @@
     "instruction": "Anymal C-Spin",
     "instruction_type": "task_name",
     "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--AnymalC-Spin-v1--0--df5f47530d30",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/maniskill.sources.json",
+    "display_instruction": "Anymal C-Spin"
   },
   {
     "animation": "clips",
@@ -317,7 +348,8 @@
     "instruction": "Insert the rose into the vase_seen.",
     "instruction_type": "original",
     "task_id": "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-insert_flower-episode_02--0--95051f77091b",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/vlabench.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/vlabench.sources.json",
+    "display_instruction": "Insert the rose into the vase."
   },
   {
     "animation": "clips",
@@ -327,6 +359,7 @@
     "instruction": "Complete the native household task: clean boxing gloves.",
     "instruction_type": "original",
     "task_id": "behavior1k--behavior1k_full_bddl_toggle--test--clean_boxing_gloves-instance_134--0--bc174e2a310a",
-    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json"
+    "evidence": "sources/materials-20260920/W4/figures/benchmarks/behavior1k.sources.json",
+    "display_instruction": "Clean the boxing gloves."
   }
 ]

@@ -50,14 +50,14 @@
 <section class="wrap section results-section" id="results" aria-labelledby="results-title">
   <h2 id="results-title" class="results-heading">Compare all seven agents</h2><div class="results-content">
   <div class="table-scroll" role="region" aria-label="Full model results, scroll horizontally on smaller screens" tabindex="0"><table id="results-table"><caption>Performance across five capability domains</caption><thead><tr><th rowspan="2" scope="col">Agent</th><th colspan="2" scope="colgroup">Geometry</th><th colspan="2" scope="colgroup">Spatial reasoning</th><th colspan="2" scope="colgroup">Affordance</th><th scope="colgroup">Planning</th><th scope="colgroup">Manipulation</th></tr><tr><th scope="col">Rotation ↓<small>degrees</small></th><th scope="col">Translation ↓<small>cm</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">AbsRel ↓<small>relative error</small></th><th scope="col">Mask IoU ↑<small>overlap</small></th><th scope="col">Contact ↑<small>%</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">Task success ↑<small>%</small></th></tr></thead><tbody></tbody></table></div>
-  <p class="table-note">Bold marks the best score; arrows show the better direction. ± is the standard deviation across runs. Manipulation uses the baseline setting.</p>
+  <p class="table-note">Bold marks the best score; arrows show the better direction. ± is the standard deviation across runs. Manipulation scores use the standard evaluation setting.</p>
 </div></section>
 
 <section id="cases" class="wrap section cases-section">
   <div class="section-heading"><p class="eyebrow"><span>03</span> From scores to behavior</p><h2>Watch the decisions behind the scores.</h2></div>
   <figure class="execution-showcase" aria-labelledby="execution-caption">
     <video id="execution-video" muted loop playsinline preload="none" poster="assets/w3-w4-mosaic.webp" data-src="assets/w3-w4-mosaic.mp4" aria-label="Eighteen recorded task-planning and manipulation episodes across eleven benchmarks"></video>
-    <figcaption id="execution-caption"><span><strong>W3 / W4 in action.</strong> Selected recorded frames, replayed in sequence.</span><div class="motion-actions"><a href="assets/w3-w4-mosaic.mp4">Full video ↗</a><button class="motion-toggle" data-motion="execution-video" aria-label="Pause recorded interactions" title="Pause recorded interactions"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button></div></figcaption>
+    <figcaption id="execution-caption"><span><strong>Task Planning and Manipulation in action.</strong> Agents plan actions and interact with objects across diverse environments.</span><div class="motion-actions"><a href="assets/w3-w4-mosaic.mp4">Full video ↗</a><button class="motion-toggle" data-motion="execution-video" aria-label="Pause task demonstrations" title="Pause task demonstrations"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button></div></figcaption>
   </figure>
   <div class="tabs case-tabs" id="case-tabs" role="tablist" aria-label="Case study"></div><div id="case-panel" class="case-panel" role="tabpanel" tabindex="0"></div>
 </section>
