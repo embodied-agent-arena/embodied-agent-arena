@@ -171,3 +171,21 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 }
 @media(max-width:370px){.site-header nav{display:none}.hero-identity{gap:4px}.hero-identity img{width:28px}.hero-wordmark{font-size:21px}.hero h1{font-size:28px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+/* Recorded interactions: quiet hero texture and a clear, full-size montage. */
+.hero-stage{position:relative;isolation:isolate;overflow:hidden;background:#f7f8f5}
+.hero-scene{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.hero-scene video{width:100%;height:100%;object-fit:cover;filter:blur(8px);transform:scale(1.07);opacity:.44}
+.hero-scene::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 48%,rgba(255,255,255,.52) 100%)}
+.hero-stage .hero{position:relative;padding-bottom:38px}
+.motion-toggle{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border:1px solid #d9dfdd;border-radius:50%;background:rgba(255,255,255,.9);flex-shrink:0}
+.motion-toggle:hover{background:#e9eeeb}
+.ambient-toggle{position:absolute;bottom:12px;right:20px}
+.execution-showcase{margin-bottom:38px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#f6f8f5}
+.execution-showcase video{display:block;width:100%;height:auto;aspect-ratio:1460/848;background:#101c24}
+.execution-showcase figcaption{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 20px;font-size:15px;color:var(--muted);line-height:1.5}
+.execution-showcase figcaption strong{color:var(--ink);font-weight:650}
+.motion-actions{display:flex;align-items:center;gap:16px;white-space:nowrap}
+.motion-actions a{font-weight:600;color:var(--ink)}
+@media(max-width:760px){.hero-stage .hero{padding-bottom:45px}.hero-scene video{opacity:.3}.execution-showcase figcaption{font-size:13px;padding:12px;align-items:flex-start}.execution-showcase figcaption>span{max-width:28ch}.motion-actions{gap:10px}.motion-actions a{font-size:12px}.ambient-toggle{right:12px;bottom:8px}.execution-showcase{margin-bottom:28px}}
+@media(prefers-reduced-motion:reduce){.hero-scene video{filter:blur(10px)}}

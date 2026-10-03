@@ -33,3 +33,31 @@ document.querySelector('#copy-citation').addEventListener('click',async()=>{try{
 const dialog=document.querySelector('#figure-dialog'),dialogImage=document.querySelector('#dialog-image');
 document.addEventListener('click',e=>{const button=e.target.closest('[data-zoom]');if(!button)return;dialogImage.src=button.dataset.zoom;dialogImage.alt=button.querySelector('img').alt;dialog.showModal();});
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
+
+// Load motion only when visible. Respect reduced motion and explicit pause.
+const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
+const motionClips=[...document.querySelectorAll('video[data-src]')].map(video=>({video,button:document.querySelector(`[data-motion="${video.id}"]`),visible:false,userPaused:motionPreference.matches}));
+function setMotionIcon(clip){
+ const paused=clip.video.paused;
+ const purpose=clip.video.id==='ambient-video'?'background motion':'recorded interactions';
+ clip.button.setAttribute('aria-label',`${paused?'Play':'Pause'} ${purpose}`);
+ clip.button.title=`${paused?'Play':'Pause'} ${purpose}`;
+ clip.button.innerHTML=`<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="${paused?'M8 5v14l11-7z':'M7 5h3v14H7zM14 5h3v14h-3z'}"/></svg>`;
+}
+function syncMotion(clip){
+ if(clip.visible&&!clip.userPaused&&!document.hidden){
+  if(!clip.video.getAttribute('src'))clip.video.src=clip.video.dataset.src;
+  clip.video.play().catch(()=>setMotionIcon(clip));
+ }else clip.video.pause();
+ setMotionIcon(clip);
+}
+const motionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{const clip=motionClips.find(c=>c.video===entry.target);clip.visible=entry.isIntersecting;syncMotion(clip);});},{threshold:.08});
+motionClips.forEach(clip=>{
+ clip.video.muted=true;
+ clip.button.addEventListener('click',()=>{clip.userPaused=!clip.video.paused;syncMotion(clip);});
+ clip.video.addEventListener('play',()=>setMotionIcon(clip));
+ clip.video.addEventListener('pause',()=>setMotionIcon(clip));
+ motionObserver.observe(clip.video);
+});
+document.addEventListener('visibilitychange',()=>motionClips.forEach(syncMotion));
+motionPreference.addEventListener('change',e=>{motionClips.forEach(clip=>{clip.userPaused=e.matches;syncMotion(clip);});});
