@@ -1,0 +1,195 @@
+{
+  "title": "Recorded W3/W4 interactions",
+  "source_bundle": "embodied-paper-share, captured 2026-09-20",
+  "presentation": "Selected recorded frames replayed in chronological order at a display cadence; timing is condensed. Each tile is one recorded episode.",
+  "duration_seconds": 12,
+  "fps": 8,
+  "layout": {
+    "columns": 6,
+    "rows": 3,
+    "width": 1460,
+    "height": 848
+  },
+  "clips": [
+    {
+      "id": "c01",
+      "label": "ALFRED",
+      "benchmark": "alfred_official_visual",
+      "wave": "W3",
+      "model": "qwen3.5-397b-a17b",
+      "task_id": "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190909_001852_804129--0--002ce0cbe1aa",
+      "index_path": "project/runs/api-qwen35-397b-w3-share12/batches/000005/tasks/alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190909_001852_804129--0--002ce0cbe1aa/case_study/frames-9a4fbc5d44de.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c08",
+      "label": "DiscoveryWorld",
+      "benchmark": "discoveryworld",
+      "wave": "W3",
+      "model": "gemini-3.8-flash",
+      "task_id": "discoveryworld--discoveryworld--full_v1--Small_Skills_Doors_Test-Normal-s0--0--0f47e2c61dba",
+      "index_path": "project/runs/api-gemini-w3-cpu/batches/000001/tasks/discoveryworld--discoveryworld--full_v1--Small_Skills_Doors_Test-Normal-s0--0--0f47e2c61dba/case_study/frames-7b74fa2ef29b.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c17",
+      "label": "CALVIN",
+      "benchmark": "calvin",
+      "wave": "W4",
+      "model": "gemini-3.8-flash",
+      "task_id": "calvin--calvin_native_turn_off_led--test--calvin_sequence_0536--0--5e110423dfeb",
+      "index_path": "project/runs/api-gemini-w4-cpu/batches/000001/tasks/calvin--calvin_native_turn_off_led--test--calvin_sequence_0536--0--5e110423dfeb/case_study/frames-09a971a5d04e.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c22",
+      "label": "CLIPort",
+      "benchmark": "cliport",
+      "wave": "W4",
+      "model": "qwen3.8-max",
+      "task_id": "cliport--cliport_place_red_in_green--test--separating-piles-unseen-colors-test_seed_10133--10133--3e04249c7971",
+      "index_path": "project/runs/api-qwen-w4-cpu/batches/000001/tasks/cliport--cliport_place_red_in_green--test--separating-piles-unseen-colors-test_seed_10133--10133--3e04249c7971/case_study/frames-8885d41a9bed.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c28",
+      "label": "ManiSkill",
+      "benchmark": "maniskill",
+      "wave": "W4",
+      "model": "qwen3.5-397b-a17b",
+      "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlugCharger-v1--0--fa32f5573da8",
+      "index_path": "project/runs/api-qwen35-397b-w4-share12/batches/000014/tasks/maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlugCharger-v1--0--fa32f5573da8/case_study/frames-010592e63e75.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c36",
+      "label": "RoboCasa",
+      "benchmark": "robocasa",
+      "wave": "W4",
+      "model": "gpt-6-astra",
+      "task_id": "robocasa--robocasa_start_coffee_machine_button--test--target-RecycleBottlesByType--0--242629617321",
+      "index_path": "project/runs/api-astra-w4-share8/batches/000006/tasks/robocasa--robocasa_start_coffee_machine_button--test--target-RecycleBottlesByType--0--242629617321/case_study/frames-14bb4a58d678.jsonl",
+      "flip_vertical": true
+    },
+    {
+      "id": "c03",
+      "label": "ALFRED",
+      "benchmark": "alfred_official_visual",
+      "wave": "W3",
+      "model": "qwen3.5-397b-a17b",
+      "task_id": "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190910_222914_814642--0--f95e75752510",
+      "index_path": "project/runs/api-qwen35-397b-w3-share12/batches/000004/tasks/alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190910_222914_814642--0--f95e75752510/case_study/frames-beac7bdb5571.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c11",
+      "label": "DiscoveryWorld",
+      "benchmark": "discoveryworld",
+      "wave": "W3",
+      "model": "gemini-3.8-flash",
+      "task_id": "discoveryworld--discoveryworld--full_v1--Archaeology_Dating-Normal-s4--4--987dc450e2c9",
+      "index_path": "project/runs/api-gemini-w3-cpu/batches/000001/tasks/discoveryworld--discoveryworld--full_v1--Archaeology_Dating-Normal-s4--4--987dc450e2c9/case_study/frames-9048fc3e0fd1.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c19",
+      "label": "CALVIN",
+      "benchmark": "calvin",
+      "wave": "W4",
+      "model": "qwen3.5-27b",
+      "task_id": "calvin--calvin_native_turn_off_led--test--calvin_sequence_0626--0--93e9df4762f0",
+      "index_path": "project/runs/api-qwen35-27b-w4-cpu/batches/000016/tasks/calvin--calvin_native_turn_off_led--test--calvin_sequence_0626--0--93e9df4762f0/case_study/frames-26494ff909ba.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c26",
+      "label": "RLBench",
+      "benchmark": "rlbench",
+      "wave": "W4",
+      "model": "qwen3.8-max",
+      "task_id": "rlbench--rlbench_reach_target_motion--test--CloseLaptopLid-variation_0--0--f9bb8dd76402",
+      "index_path": "project/runs/api-qwen-w4-cpu/batches/000001/tasks/rlbench--rlbench_reach_target_motion--test--CloseLaptopLid-variation_0--0--f9bb8dd76402/case_study/frames-fab5326ec5ff.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c44",
+      "label": "ManiSkill",
+      "benchmark": "maniskill",
+      "wave": "W4",
+      "model": "gemini-3.8-flash",
+      "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PickCube-v1--0--2274c81aa68d",
+      "index_path": "project/runs/api-gemini-w4-share12/batches/000001/tasks/maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PickCube-v1--0--2274c81aa68d/case_study/frames-9971ea770950.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c42",
+      "label": "RoboCasa365",
+      "benchmark": "robocasa365",
+      "wave": "W4",
+      "model": "gemini-3.8-flash",
+      "task_id": "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-RemoveCuttingBoardItems--0--6bb5b9394716",
+      "index_path": "project/runs/api-gemini-w4-share8-kitchen/batches/000001/tasks/robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-RemoveCuttingBoardItems--0--6bb5b9394716/case_study/frames-7eb7a9fbff05.jsonl",
+      "flip_vertical": true
+    },
+    {
+      "id": "c04",
+      "label": "ALFWorld",
+      "benchmark": "alfworld_visual",
+      "wave": "W3",
+      "model": "qwen3.8-max",
+      "task_id": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190907_201917_045715--0--7d00ed72d9e3",
+      "index_path": "project/runs/api-qwen-w3-share12/batches/000001/tasks/alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190907_201917_045715--0--7d00ed72d9e3/case_study/frames-961bfe715e1b.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c13",
+      "label": "HumanCLAW",
+      "benchmark": "humanclaw",
+      "wave": "W3",
+      "model": "gemini-3.8-flash",
+      "task_id": "humanclaw--humanclaw--fullval--104862501_172226556-17-potted_plant--42--0bbe551ad27b",
+      "index_path": "project/runs/api-gemini-w3-exclusive/batches/000006/tasks/humanclaw--humanclaw--fullval--104862501_172226556-17-potted_plant--42--0bbe551ad27b/case_study/frames-b1e0ca5476de.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c32",
+      "label": "RoboTwin 2.0",
+      "benchmark": "robotwin2",
+      "wave": "W4",
+      "model": "qwen3.8-max",
+      "task_id": "robotwin2--robotwin2_place_empty_cup--test--demo_clean-stamp_seal-accepted_episode_062--0--8798db03ffb6",
+      "index_path": "project/runs/api-qwen-w4-exclusive/batches/000069/tasks/robotwin2--robotwin2_place_empty_cup--test--demo_clean-stamp_seal-accepted_episode_062--0--8798db03ffb6/case_study/frames-82dc8fb29758.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c27",
+      "label": "RLBench",
+      "benchmark": "rlbench",
+      "wave": "W4",
+      "model": "gpt-5.6-sol",
+      "task_id": "rlbench--rlbench_reach_target_motion--test--TakeShoesOutOfBox-variation_0--0--1dc044c2345c",
+      "index_path": "project/runs/api-sol-w4-cpu/batches/000002/tasks/rlbench--rlbench_reach_target_motion--test--TakeShoesOutOfBox-variation_0--0--1dc044c2345c/case_study/frames-ab3941caaa0f.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c48",
+      "label": "ManiSkill",
+      "benchmark": "maniskill",
+      "wave": "W4",
+      "model": "qwen3.8-max",
+      "task_id": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--StackCube-v1--0--62b4acf30ae1",
+      "index_path": "project/runs/api-qwen-w4-share12-retry/batches/000001/tasks/maniskill--maniskill_pickcube_pd_ee_delta_pos--test--StackCube-v1--0--62b4acf30ae1/case_study/frames-484568c9a813.jsonl",
+      "flip_vertical": false
+    },
+    {
+      "id": "c37",
+      "label": "RoboCasa",
+      "benchmark": "robocasa",
+      "wave": "W4",
+      "model": "gpt-6-astra",
+      "task_id": "robocasa--robocasa_start_coffee_machine_button--test--target-OpenDrawer--0--201936251412",
+      "index_path": "project/runs/api-astra-w4-share8/batches/000004/tasks/robocasa--robocasa_start_coffee_machine_button--test--target-OpenDrawer--0--201936251412/case_study/frames-d5810314b38e.jsonl",
+      "flip_vertical": true
+    }
+  ]
+}
