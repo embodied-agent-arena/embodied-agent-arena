@@ -29,11 +29,15 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 ---
 
-![Task-planning and manipulation interactions, arranged by benchmark and model.](public/assets/reference-arena.gif)
+![Recorded planning and manipulation tasks](public/assets/reference-arena.gif)
 
 **Benchmarks, columns 1–10 (left → right):** ALFRED · ALFWorld · DiscoveryWorld · HumanCLAW · CALVIN · RLBench · ManiSkill · CLIPort · RoboCasa · RoboCasa365.
 
-**Models, top → bottom:** Astra · Sol (GPT-6) · Fable (5.1) · Gemini · Qwen Max · Qwen 397B · Qwen 27B.
+![Recorded W3 and W4 interaction clips](public/assets/reference-interaction-clips.gif)
+
+**Benchmarks, left → right:** ALFRED · DiscoveryWorld · CALVIN · CLIPort · RLBench · ManiSkill · CAPX · BEHAVIOR-1K · RoboCasa · RoboCasa365 · VLABench.
+
+**What are the agents trying to do?** In the first montage, the top-left ALFRED scene asks the agent to “Place the salt shaker in the cabinet”; the first-row CLIPort scene asks it to “push the pile of orange blocks into the purple square.” The [scene-by-scene task index](docs/RECORDED_TASKS.md) gives the recovered instructions and their row/column positions.
 
 ## News
 
