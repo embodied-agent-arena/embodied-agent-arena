@@ -29,9 +29,15 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 ---
 
+![Task-planning and manipulation interactions, arranged by benchmark and model.](public/assets/reference-arena.gif)
+
+**Benchmarks, columns 1–10 (left → right):** ALFRED · ALFWorld · DiscoveryWorld · HumanCLAW · CALVIN · RLBench · ManiSkill · CLIPort · RoboCasa · RoboCasa365.
+
+**Models, top → bottom:** Astra · Sol (GPT-6) · Fable (5.1) · Gemini · Qwen Max · Qwen 397B · Qwen 27B.
+
 ## News
 
-- **2026.10.03** — Added [recorded W3/W4 interactions](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) across planning and manipulation environments.
+- **2026.10.03** — Added [recorded W3/W4 interactions](public/assets/reference-interaction-clips.gif) across planning and manipulation environments.
 - **2026.10.01** — The [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) and [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/) are available. The manuscript has been submitted to arXiv.
 - **2026.10.01** — Released the [evaluation harness](#quick-start), multi-model batch runner, and [1,000-case dataset](https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena).
 
@@ -46,10 +52,6 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 ## Overview
 
 Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 cases** across five robotic capabilities. It combines 32 established sources with **GeoProbe**, a new 168-case geometric-estimation benchmark. A unified agent harness connects model-generated programs to source environments, and task-level analyses examine how perception, reasoning, and intermediate actions translate into complete robotic tasks.
-
-[![Recorded W3 task-planning and W4 manipulation interactions across eleven benchmarks.](public/assets/w3-w4-mosaic.gif)](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/w3-w4-mosaic.mp4)
-
-Selected recorded frames replayed in sequence. [Full video](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/w3-w4-mosaic.mp4) · [Task overview](public/assets/overview.webp)
 
 ## 📦 Benchmark
 
