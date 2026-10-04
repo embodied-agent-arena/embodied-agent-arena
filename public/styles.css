@@ -236,3 +236,13 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 .hero-stage .ambient-toggle{bottom:14px}
 .hero-stage + .overview{margin-top:14px;padding:4px;border-radius:10px}
 }
+
+/* Give the cover title a broader, more deliberate two-line silhouette. */
+.hero-stage .hero{padding-top:46px}
+.hero-stage .hero h1{font-size:clamp(44px,4.5vw,66px);line-height:1.16;max-width:1180px;letter-spacing:-.035em;margin-top:22px}
+.hero-stage .subtitle{margin-top:26px}
+@media(max-width:760px){
+.hero-stage .hero{padding-top:34px}
+.hero-stage .hero h1{font-size:clamp(32px,8.5vw,46px);line-height:1.2;margin-top:20px;letter-spacing:-.03em}
+.hero-stage .subtitle{margin-top:20px}
+}
