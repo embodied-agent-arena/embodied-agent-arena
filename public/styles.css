@@ -223,3 +223,16 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 @media(hover:none){.scene-playback{opacity:1}}
 @media(max-width:760px){.execution-showcase{border-radius:12px;margin-bottom:20px}.scene-tooltip{padding:16px 18px;width:300px}.scene-tooltip-goal{font-size:17px}.scene-tooltip-benchmark{font-size:14px}.scene-tooltip-model{font-size:12px}.scene-playback{width:32px;height:32px;right:8px;bottom:8px}.hero-stage .hero{padding-bottom:45px}.hero-scene video{opacity:.48}.ambient-toggle{right:12px;bottom:8px}}
 @media(prefers-reduced-motion:reduce){.scene-tooltip{animation:none}.scene-hotspot{transition:none}.hero-scene video{filter:blur(10px)}}
+
+/* Gentle handoff from ambient hero to the crisp research overview. */
+.hero-stage{background:#fff}
+.hero-stage::after{content:"";position:absolute;inset:auto 0 0;height:104px;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.72) 55%,#fff)}
+.hero-stage .hero{z-index:1;padding-bottom:62px}
+.hero-stage .ambient-toggle{z-index:2;bottom:22px}
+.hero-stage + .overview{margin-top:24px;padding:14px 18px;border-color:transparent;background:transparent;border-radius:18px}
+@media(max-width:760px){
+.hero-stage::after{height:82px}
+.hero-stage .hero{padding-bottom:57px}
+.hero-stage .ambient-toggle{bottom:14px}
+.hero-stage + .overview{margin-top:14px;padding:4px;border-radius:10px}
+}
