@@ -33,7 +33,7 @@ for model in study['models']:
         winner = float(parts[0]) == best[i]
         primary = f'<strong>{parts[0]}</strong>' if winner else parts[0]
         cells.append('<td>' + primary + (' ± ' + parts[1] if len(parts) > 1 else '') + '</td>')
-        md_cells.append(('**' + parts[0] + '**' if winner else parts[0]) + (' ± ' + parts[1] if len(parts) > 1 else ''))
+        md_cells.append('**' + parts[0] + '**' if winner else parts[0])
     html_rows.append(f'<tr><th scope="row">{esc(model["name"])}</th>{"".join(cells)}</tr>')
     model_label = model['name'].replace('-', '&#8209;').replace(' ', '&nbsp;')
     md_rows.append('| ' + model_label + ' | ' + ' | '.join(cell.replace(' ', '&nbsp;') for cell in md_cells) + ' |')
