@@ -202,6 +202,17 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 .case-setting p{max-width:none;font-size:18px;line-height:1.65;color:var(--ink)}
 .case-setting p+p{margin-top:10px;color:var(--muted)}
 .case-setting strong{font-weight:600}
+.case-panel>.case-explanation{max-width:900px;font-size:20px;line-height:1.65;color:var(--ink);margin:0 auto 24px}
+.sitting-diagnostic{max-width:900px;margin:auto;padding:28px 30px 30px;border:1px solid var(--line);border-radius:15px;text-align:left}
+.sitting-diagnostic h4{font-size:22px;font-weight:550;line-height:1.35;margin:0 0 28px}
+.sitting-diagnostic dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;gap:24px}
+.sitting-diagnostic dl>div{display:flex;flex-direction:column;gap:14px}
+.sitting-diagnostic dl>div+div{border-left:1px solid var(--line);padding-left:24px}
+.sitting-diagnostic dt{font-size:18px;line-height:1.4;max-width:205px}
+.sitting-diagnostic dd{order:-1;font-size:58px;line-height:1;letter-spacing:-.04em;font-weight:600;color:var(--accent);margin:0}
+.sitting-diagnostic dd span{font-size:24px;letter-spacing:0;font-weight:450;color:var(--muted)}
+.sitting-diagnostic dl>div:last-child dd{color:#a84c53}
+@media(max-width:600px){.case-panel>.case-explanation{font-size:18px}.sitting-diagnostic{padding:22px}.sitting-diagnostic h4{font-size:20px;margin-bottom:22px}.sitting-diagnostic dl{grid-template-columns:1fr;gap:18px}.sitting-diagnostic dl>div{display:grid;grid-template-columns:110px 1fr;align-items:center;gap:18px}.sitting-diagnostic dl>div+div{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.sitting-diagnostic dd{font-size:46px;grid-column:1;grid-row:1}.sitting-diagnostic dt{font-size:17px;grid-column:2;grid-row:1}}
 @media(max-width:600px){.case-setting{padding:16px 18px}.case-setting p{font-size:16px}}
 @media(max-width:600px){.case-tabs{margin-top:40px}.completion-highlight{gap:18px}.completion-highlight>div{font-size:18px}.completion-scope{font-size:15px}}
 .execution-showcase{margin:0 0 28px;border-radius:18px;overflow:hidden;background:#14222a;box-shadow:0 0 0 1px rgba(32,53,66,.08),0 12px 34px -25px rgba(32,53,66,.24)}
