@@ -29,7 +29,11 @@ document.querySelector('#results-table tbody').innerHTML=rows.map((row,i)=>`<tr>
 const citation=`@misc{huang2026embodiedagentarena,
   title = {Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
   author = {Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
-  year = {2026}
+  year = {2026},
+  eprint = {2610.00854},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2610.00854}
 }`;
 document.querySelector('#bibtex').textContent=citation;
 document.querySelector('#copy-citation').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(citation);document.querySelector('#copy-status').textContent='Citation copied.';document.querySelector('#copy-citation').textContent='Copied';setTimeout(()=>document.querySelector('#copy-citation').textContent='Copy BibTeX',2000);}catch{const range=document.createRange();range.selectNodeContents(document.querySelector('#bibtex'));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);document.querySelector('#copy-status').textContent='Citation selected. Use your browser’s copy command.';}});
