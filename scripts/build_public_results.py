@@ -60,7 +60,6 @@ bibtex += '  year = {2026},\n  eprint = {2610.00854},\n  archivePrefix = {arXiv}
 (PUBLIC / 'data/citation.bib').write_text(bibtex+'\n')
 replace_block(PUBLIC / 'index.html', 'CITATION', '<pre id="bibtex">'+esc(bibtex)+'</pre>')
 replace_block(ROOT / 'README.md', 'CITATION', '```bibtex\n'+bibtex+'\n```')
-replace_block(PUBLIC / 'index.html', 'ABSTRACT', '<p>'+esc(study['abstract'])+'</p>')
 
 metadata = [f'<meta name="citation_title" content="{esc(study["title"], quote=True)}">']
 metadata += [f'<meta name="citation_author" content="{a["name"]}">' for a in study['authors']]
@@ -88,4 +87,4 @@ for a in study['authors']:
 cff += ['  doi: 10.48550/arXiv.2610.00854', '  url: "https://arxiv.org/abs/2610.00854"',
         '  year: 2026', '  status: preprint', '  date-released: "2026-10-01"']
 (ROOT / 'CITATION.cff').write_text('\n'.join(cff)+'\n')
-print('Rendered 7 models × 8 metrics, authors, abstract, citation, metadata, and CSV.')
+print('Rendered 7 models × 8 metrics, authors, citation, metadata, and CSV.')

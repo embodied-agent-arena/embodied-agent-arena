@@ -275,7 +275,7 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 #results-table tbody th{font-size:15px;font-weight:600}
 .table-note{font-size:16px;max-width:none;line-height:1.7;margin-top:16px}
 .result-links{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:22px;font-size:17px;font-weight:600}
-.result-links a,.comparison-version a,.model-guide a,.abstract-source a,noscript a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#b0afb8}
+.result-links a,.comparison-version a,.model-guide a,noscript a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#b0afb8}
 .result-links a:hover,.model-guide a:hover{color:var(--accent)}
 .results-footer{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px 24px;margin-top:20px}
 .result-key{font-size:16px;line-height:1.6;color:var(--muted);max-width:none}
@@ -286,10 +286,6 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 .evaluation-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .evaluation-grid h3{font-size:21px;line-height:1.4;margin-bottom:14px}
 .evaluation-grid p{font-size:18px;line-height:1.75;max-width:none;color:var(--muted)}
-.abstract-section{border-top:1px solid var(--line);padding-block:52px}
-.abstract-section h2{font-size:32px;margin-bottom:22px}
-.abstract-section p{max-width:88ch;font-size:19px;line-height:1.85}
-.abstract-section .abstract-source{font-size:16px;margin-top:22px}
 .model-guide{max-width:980px;padding-block:60px 32px}
 .guide-header{padding-bottom:36px;border-bottom:1px solid var(--line)}
 .guide-header h1{font-size:clamp(36px,4.2vw,54px);line-height:1.18;max-width:20ch;margin-bottom:26px}
@@ -316,8 +312,6 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
  .results-footer .result-links{flex-direction:row;gap:20px}
  .result-links{gap:12px;font-size:16px;flex-direction:column;align-items:flex-start}
  .table-note,.comparison-version{font-size:15px}
- .abstract-section{padding-block:36px}
- .abstract-section p{font-size:18px}
  .model-guide{padding-top:36px}
  .guide-lead{font-size:20px}
  .model-guide h2{font-size:26px}
