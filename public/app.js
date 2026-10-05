@@ -1,6 +1,3 @@
-const authors=[['Haojian Huang','1,3'],['Pukun Zhao','3'],['Zexi Li','2,3'],['Yehang Zhang','1,3'],['Yangkai Wei','3'],['Wenqian Li','3'],['Han Yang','3'],['Kaiwen Zhou','3'],['Ying-Cong Chen','1,3,†'],['Yinchuan Li','3,†']];
-document.querySelector('#authors').innerHTML=authors.map(([name,aff])=>`<span>${name}<sup>${aff}</sup></span>`).join('');
-document.querySelector('.affiliations').insertAdjacentHTML('beforeend', '<span><sup>†</sup> Corresponding authors</span>');
 const domains=[
  {id:'geometry',label:'Geometry',title:'Astra Estimates Precisely. Endpoints Still Matter.',text:'Astra has the lowest error on all five controlled Blender estimation targets and the closest 3D traces. But a close path can still start or end in the wrong place.',evidence:[['0.31%','Height estimation error','Sol · 0.90%'],['0.382 m','3D path error','Gemini · 0.426 m']],caption:'(a) Astra’s estimation-error reduction relative to the strongest other model on each target. (b) Object-displacement error with fixed or moving cameras in Blender, and with real photographs. (c) 3D path error versus success at meeting all tracing constraints: a closer path need not satisfy its start, end, and collision requirements.'},
  {id:'spatial',label:'Spatial Reasoning',title:'Astra Connects Views Better Than It Infers New Frames.',text:'Astra’s clearest spatial advantage is relating information across views. Inferring camera motion, an object’s facing direction, or the nearest object exposes different limits.',evidence:[['77.0%','Multi-view reasoning','Fable · 66.7%'],['78.5%','Camera-shift reasoning','Qwen-Max · 89.2%']],caption:'(a) Accuracy on left/right relations, camera shifts, and actor- or object-relative directions. (b) Nearest/farthest judgments and distances relative to cameras or other objects. (c) Astra’s gap from the strongest other model on one task per source; positive values favor Astra. C–R means camera–region relations, and pp means percentage points.'},
@@ -24,18 +21,7 @@ function renderCompletionCase(c){
  return `<h3>${c.title}</h3><div class="completion-highlight"><strong>${c.value}</strong><div><span>${c.metric}</span><span class="completion-scope">${c.scope}</span></div></div><p class="case-explanation">${c.explanation}</p><div class="case-setting"><p><strong>Per-episode limits.</strong> ${c.budget}</p><p>${c.protocol}</p></div><figure class="case-figure">${evidence}<figcaption class="figure-takeaway">${c.text}</figcaption></figure>`;
 }
 buildTabs(cases,'case',renderCompletionCase);
-const rows=[['Astra','17.1','106.6','69.4 ± 1.0','0.213','0.286','60.3 ± 2.6','80.3','41.8'],['Sol','27.0','151.9','60.7 ± 2.5','0.273','0.264','52.0 ± 3.6','44.6','19.8'],['Fable','25.2','121.7','62.0 ± 4.6','0.186','0.284','57.1 ± 2.5','63.7','24.7'],['Qwen-Max','20.5','138.1','68.9 ± 1.1','0.205','0.272','52.9 ± 4.2','35.7','9.3'],['Gemini','24.2','140.9','65.4 ± 1.3','0.161','0.250','44.6 ± 13.0','48.4','18.7'],['Qwen-397B','38.4','249.8','50.6 ± 1.8','0.251','0.116','32.6 ± 4.7','17.8','9.9'],['Qwen-27B','38.4','213.7','48.0 ± 0.9','0.288','0.013','6.3 ± 1.6','19.1','11.0']];
-document.querySelector('#results-table tbody').innerHTML=rows.map((row,i)=>`<tr>${row.map((v,j)=>j===0?`<th scope="row">${v}</th>`:`<td>${(i===0&&j!==4)||(i===4&&j===4)?`<strong>${v}</strong>`:v}</td>`).join('')}</tr>`).join('');
-const citation=`@misc{huang2026embodiedagentarena,
-  title = {Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
-  author = {Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
-  year = {2026},
-  eprint = {2610.00854},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.RO},
-  url = {https://arxiv.org/abs/2610.00854}
-}`;
-document.querySelector('#bibtex').textContent=citation;
+const citation=document.querySelector('#bibtex').textContent.trim();
 document.querySelector('#copy-citation').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(citation);document.querySelector('#copy-status').textContent='Citation copied.';document.querySelector('#copy-citation').textContent='Copied';setTimeout(()=>document.querySelector('#copy-citation').textContent='Copy BibTeX',2000);}catch{const range=document.createRange();range.selectNodeContents(document.querySelector('#bibtex'));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);document.querySelector('#copy-status').textContent='Citation selected. Use your browser’s copy command.';}});
 const dialog=document.querySelector('#figure-dialog'),dialogImage=document.querySelector('#dialog-image');
 document.addEventListener('click',e=>{const button=e.target.closest('[data-zoom]');if(!button)return;dialogImage.src=button.dataset.zoom;dialogImage.alt=button.querySelector('img').alt;dialog.showModal();});

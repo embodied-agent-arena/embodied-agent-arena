@@ -260,3 +260,57 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 .hero-stage .hero h1{font-size:clamp(32px,8.5vw,46px);line-height:1.2;margin-top:20px;letter-spacing:-.03em}
 .hero-stage .subtitle{margin-top:20px}
 }
+
+/* The comparison is readable before JavaScript loads. */
+.research-subtitle{font-size:20px;font-weight:600;line-height:1.5;margin:18px auto 0;max-width:52ch;color:var(--ink)}
+.results-section{padding-block:52px 58px;border-top:0}
+.results-section .eyebrow{margin-bottom:12px}
+.results-heading{font-size:clamp(28px,3.2vw,42px);line-height:1.25;margin-bottom:22px}
+.comparison-intro{font-size:20px;max-width:87ch;line-height:1.75}
+.comparison-version{font-size:16px;color:var(--muted);margin:20px 0 24px;max-width:none}
+.results-content{padding:0}
+#results-table{font-size:15px;font-variant-numeric:tabular-nums}
+#results-table th,#results-table td{padding:16px 11px}
+#results-table thead tr:first-child th{font-size:15px;background:#f5f6f3;border-top:1px solid var(--line)}
+#results-table tbody th{font-size:15px;font-weight:600}
+.table-note{font-size:16px;max-width:none;line-height:1.7;margin-top:16px}
+.result-links{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:22px;font-size:17px;font-weight:600}
+.result-links a,.comparison-version a,.model-guide a,.abstract-source a,noscript a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#b0afb8}
+.result-links a:hover,.model-guide a:hover{color:var(--accent)}
+.comparison-takeaways{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-top:1px solid var(--line);margin-top:30px;padding-top:25px}
+.comparison-takeaways p{font-size:18px;line-height:1.7}
+.comparison-takeaways strong{font-weight:650}
+.abstract-section{border-top:1px solid var(--line);padding-block:52px}
+.abstract-section h2{font-size:32px;margin-bottom:22px}
+.abstract-section p{max-width:88ch;font-size:19px;line-height:1.85}
+.abstract-section .abstract-source{font-size:16px;margin-top:22px}
+.model-guide{max-width:980px;padding-block:60px 32px}
+.guide-header{padding-bottom:36px;border-bottom:1px solid var(--line)}
+.guide-header h1{font-size:clamp(36px,4.2vw,54px);line-height:1.18;max-width:20ch;margin-bottom:26px}
+.guide-lead{font-size:23px;line-height:1.7;max-width:65ch}
+.guide-version{font-size:16px;line-height:1.7;color:var(--muted);margin-top:24px;max-width:none}
+.model-guide section{padding-top:44px}
+.model-guide h2{font-size:30px;line-height:1.35;margin-bottom:20px}
+.model-guide section p{max-width:none;margin-bottom:18px}
+.model-guide .table-scroll{margin-block:26px}
+.model-id-table{font-size:17px;text-align:left}
+.model-id-table thead{font-size:16px}
+.model-id-table tbody tr:first-child{background:transparent}
+.model-id-table th,.model-id-table td{padding:14px 18px}
+.model-id-table td code{font-size:15px}
+.guide-citation{border-top:1px solid var(--line);margin-top:40px;padding-top:25px;font-size:16px;max-width:none}
+@media(max-width:1100px){.site-header nav{gap:16px}}
+@media(max-width:760px){
+ .research-subtitle{font-size:18px;max-width:32ch;margin-top:14px}
+ .results-section{padding-block:32px 38px}
+ .comparison-intro{font-size:18px}
+ .comparison-takeaways{grid-template-columns:1fr;gap:20px}
+ .result-links{gap:12px;font-size:16px;flex-direction:column;align-items:flex-start}
+ .table-note,.comparison-version{font-size:15px}
+ .abstract-section{padding-block:36px}
+ .abstract-section p{font-size:18px}
+ .model-guide{padding-top:36px}
+ .guide-lead{font-size:20px}
+ .model-guide h2{font-size:26px}
+ .model-guide section p{font-size:18px}
+}

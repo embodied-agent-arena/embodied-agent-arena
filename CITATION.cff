@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Please cite the paper in preferred-citation when using Embodied Agent Arena."
+type: software
+title: "Embodied Agent Arena"
+authors:
+  - name: "Embodied Agent Arena"
+repository-code: "https://github.com/embodied-agent-arena/embodied-agent-arena"
+url: "https://embodied-agent-arena.github.io/embodied-agent-arena/"
+preferred-citation:
+  type: article
+  title: "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena"
+  authors:
+    - family-names: "Huang"
+      given-names: "Haojian"
+    - family-names: "Zhao"
+      given-names: "Pukun"
+    - family-names: "Li"
+      given-names: "Zexi"
+    - family-names: "Zhang"
+      given-names: "Yehang"
+    - family-names: "Wei"
+      given-names: "Yangkai"
+    - family-names: "Li"
+      given-names: "Wenqian"
+    - family-names: "Yang"
+      given-names: "Han"
+    - family-names: "Zhou"
+      given-names: "Kaiwen"
+    - family-names: "Chen"
+      given-names: "Ying-Cong"
+    - family-names: "Li"
+      given-names: "Yinchuan"
+  doi: 10.48550/arXiv.2610.00854
+  url: "https://arxiv.org/abs/2610.00854"
+  year: 2026
+  status: preprint
+  date-released: "2026-10-01"

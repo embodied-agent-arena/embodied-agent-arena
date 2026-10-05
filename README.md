@@ -31,13 +31,35 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 ## Overview
 
-Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 cases** across five robotic capabilities. It combines 32 established sources with **GeoProbe**, a new 168-case geometric-estimation benchmark. A minimal agent harness retains source-native observations and helpers while leaving perception, reasoning, and action selection to the model. Task-level analyses examine whether local competence leads to complete goal satisfaction within source-specific budgets.
+Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Gemini 3.8 Flash, Qwen 3.8 Max, Qwen 3.5 397B-A17B, and Qwen 3.5 27B** on **1,000 cases across five robotic capabilities**: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. It combines 32 established sources with **GeoProbe**, our 168-case geometric-estimation benchmark. A minimal harness retains source-native observations and helpers while leaving perception, reasoning, and action selection to the model.
+
+### Cross-Model Results
+
+<!-- BEGIN RESULT_TABLE -->
+| Model | Rotation ↓ (°) | Translation ↓ (cm) | Spatial Pass@1 ↑ (%) | Spatial AbsRel ↓ | Mask IoU ↑ | Contact ↑ (%) | Planning ↑ (%) | Manipulation ↑ (%) |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| GPT-6 Astra | **17.1** | **106.6** | **69.4** ± 1.0 | 0.213 | **0.286** | **60.3** ± 2.6 | **80.3** | **41.8** |
+| GPT-6 Sol | 27.0 | 151.9 | 60.7 ± 2.5 | 0.273 | 0.264 | 52.0 ± 3.6 | 44.6 | 19.8 |
+| Claude Fable 5.1 | 25.2 | 121.7 | 62.0 ± 4.6 | 0.186 | 0.284 | 57.1 ± 2.5 | 63.7 | 24.7 |
+| Qwen 3.8 Max | 20.5 | 138.1 | 68.9 ± 1.1 | 0.205 | 0.272 | 52.9 ± 4.2 | 35.7 | 9.3 |
+| Gemini 3.8 Flash | 24.2 | 140.9 | 65.4 ± 1.3 | **0.161** | 0.250 | 44.6 ± 13.0 | 48.4 | 18.7 |
+| Qwen 3.5 397B-A17B | 38.4 | 249.8 | 50.6 ± 1.8 | 0.251 | 0.116 | 32.6 ± 4.7 | 17.8 | 9.9 |
+| Qwen 3.5 27B | 38.4 | 213.7 | 48.0 ± 0.9 | 0.288 | 0.013 | 6.3 ± 1.6 | 19.1 | 11.0 |
+<!-- END RESULT_TABLE -->
+
+**Source:** [Table 2 of the 5 October 2026 manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7), submitted for arXiv v2; experimental results are unchanged from v1. Bold marks the best mean; arrows show the better direction. ± is run-to-run SD. Continuous errors use valid estimates. Manipulation uses 182 binary assignments, counting missing records as unsuccessful; one additional continuous-reward case brings the inventory to 183.
+
+Astra leads planning and baseline manipulation success, while Gemini has the lowest numerical spatial error. Qwen-Max is close to Astra on Spatial Pass@1; Fable is close on mask overlap. **Local precision does not guarantee complete task execution within the allowed budgets.** These comparisons depend on the task mixture, observations, interfaces, and source-specific limits.
+
+[Interactive Project Page](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv) · [Model IDs, Settings & Findings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html) · [Full Evaluation Protocol](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=21)
 
 ![Embodied Agent Arena overview](public/assets/reference-arena.gif)
 
 ![Benchmark construction: 1,000 cases, five capability domains, GeoProbe, and the unified evaluation harness](public/assets/construction.webp)
 
 ## News
+
+- **2026.10.05** — Published the [seven-model comparison](#cross-model-results), downloadable results, and a [model selection and evaluation guide](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html).
 
 - **2026.10.05** — The [updated manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) is available; the arXiv v2 replacement has been submitted and is awaiting announcement.
 
@@ -64,14 +86,6 @@ Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 
 | **Task Planning** | 157 | Coordinate actions and feedback to satisfy household and scientific goals. |
 | **Manipulation** | 183 | Execute placement, insertion, articulation, and sequential control tasks. |
 | **Affordance** | 70 | Locate usable contacts and functional regions for an intended action. |
-
-## 📊 Results
-
-- **Estimation, contact grounding, and planning.** Astra has the lowest error on all five controlled Blender estimation targets, leads valid-contact prediction on UMD and ReasonAff, and leads or ties the best model across all six planning sources.
-- **Spatial reference frames.** Astra excels at connecting views, while inferring camera movement and object-facing directions exposes different weaknesses.
-- **Progress and task completion.** Accurate traces and longer action sequences can still miss required endpoints or final goals. Household manipulation additionally demands coordinated navigation, object handling, and environment-state changes.
-
-See the [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/#findings) for comparisons and case studies, and the [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) for evaluation protocols and full results.
 
 ## Quick Start
 
@@ -129,17 +143,16 @@ arena score --data-root ../data --benchmark w5_umd \
 
 If this work is useful for your research, please cite:
 
+<!-- BEGIN CITATION -->
 ```bibtex
 @misc{huang2026embodiedagentarena,
-  title  = {Are Frontier VLM Agents Ready to Be Robot Generalists?
-            An Empirical Study with the Embodied Agent Arena},
-  author = {Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang
-            and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen
-            and Chen, Ying-Cong and Li, Yinchuan},
-  year   = {2026},
+  title = {Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
+  author = {Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
+  year = {2026},
   eprint = {2610.00854},
   archivePrefix = {arXiv},
   primaryClass = {cs.RO},
-  url    = {https://arxiv.org/abs/2610.00854}
+  url = {https://arxiv.org/abs/2610.00854}
 }
 ```
+<!-- END CITATION -->

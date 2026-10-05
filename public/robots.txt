@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://embodied-agent-arena.github.io/embodied-agent-arena/sitemap.xml

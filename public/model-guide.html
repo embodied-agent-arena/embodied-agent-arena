@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Choosing a VLM for Robot Tasks — Embodied Agent Arena</title>
+  <meta name="description" content="Compare Astra, Sol, Fable, Gemini, and Qwen for robot tasks using Embodied Agent Arena's seven-model results, model identifiers, success criteria, and source-specific budgets.">
+  <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html">
+  <meta property="og:type" content="article"><meta property="og:title" content="Choosing a VLM for Robot Tasks — Embodied Agent Arena">
+  <meta property="og:description" content="What seven-model comparisons reveal about spatial precision, planning, and complete manipulation outcomes.">
+  <meta property="og:url" content="https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html">
+  <meta property="og:image" content="https://embodied-agent-arena.github.io/embodied-agent-arena/assets/overview.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo-transparent.png"><link rel="stylesheet" href="styles.css?v=discovery-20261005">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="./"><img src="assets/logo-transparent.png" alt="" width="42" height="42"><span class="brand-name">Embodied Agent <span>Arena</span></span></a><nav aria-label="Main navigation"><a href="./#results">Results</a><a href="#models">Model IDs</a><a href="#protocol">Protocol</a><a class="nav-paper" href="paper.pdf">Paper ↗</a></nav></div></header>
+<main id="main" class="wrap model-guide">
+  <article>
+  <header class="guide-header"><p class="eyebrow">Model Selection &amp; Evaluation</p><h1>Choosing a VLM for Robot Tasks</h1><p class="guide-lead">Start with the capability your task needs, then check whether the agent can satisfy the complete goal within your observation, tool, and time constraints.</p><p class="guide-version">Based on the 5 October 2026 author manuscript, submitted for arXiv v2. Experimental results are unchanged from v1. <a href="paper.pdf#page=7">Read Table 2</a> or <a href="data/model-comparison.csv" download>download all 56 comparison scores</a>.</p></header>
+
+  <section id="selection"><h2>Which Frontier VLM Performs Best on Robot Tasks?</h2>
+  <p>In this evaluation, <strong>GPT-6 Astra has the highest aggregate Task Planning and baseline Manipulation success</strong>: 80.3% and 41.8%, compared with Claude Fable 5.1's 63.7% and 24.7%. Astra also has the lowest pose errors and highest contact validity. These results favor Astra on this task mixture; they do not establish a universal ranking across robot platforms, tools, or deployment conditions. <a href="paper.pdf#page=6">Main results, Section 4.2</a>.</p>
+  <p>The best choice changes with the metric. Gemini 3.8 Flash has the lowest numerical Spatial Reasoning AbsRel (0.161, versus Astra's 0.213). Qwen 3.8 Max is close to Astra on Spatial Pass@1 (68.9% versus 69.4%), and Fable is close on functional-region mask overlap (0.284 versus 0.286 IoU). Small mean differences should be read alongside run variation and task-level results. <a href="./#results">Full seven-model comparison</a>.</p>
+  <p>GPT-6 Sol reaches 44.6% Planning and 19.8% Manipulation success. The two open-source Qwen models also differ by capability: Qwen 3.5 397B-A17B has higher Spatial Pass@1 than Qwen 3.5 27B (50.6% versus 48.0%), while the smaller model has higher Manipulation success (11.0% versus 9.9%). Model size alone does not order these observed scores. <a href="paper.pdf#page=7">Table 2</a>.</p></section>
+
+  <section id="completion"><h2>Does Spatial Competence Guarantee Manipulation Success?</h2>
+  <p>No guarantee follows from these results. The study compares capability profiles and diagnoses task outcomes; it does not establish a statistical predictor from spatial scores to manipulation success. Accurate geometric estimates, valid contacts, or a near-correct trajectory can coexist with an incorrect endpoint or an unsatisfied final goal. <a href="paper.pdf#page=8">Geometric and spatial diagnostics</a>.</p>
+  <p><strong>All seven agents completed 0 of 5 evaluated BEHAVIOR-1K tasks</strong> under limits of 180 minutes per trial, 24 model rounds, 256 tool calls, 640k tokens, and 1,000 environment control steps. Success requires all native task conditions. All seven also completed 0 of the eight HumanCLAW sitting tasks, whose limits include 180 minutes per episode, 101 code rounds, 100 environment steps, 400 primitive calls, and 2M tokens (11,000-second outer task timeout). These are specific evaluated subsets. Zero success does not imply that every episode timed out. <a href="paper.pdf#page=34">Sitting diagnostics and manipulation results</a>; <a href="paper.pdf#page=38">execution limits</a>.</p>
+  <p>The practical question is whether local skills produce the required final state within the available resources. The paper therefore reports complete-task success separately from intermediate progress. Source-native helpers remain available; the baseline adds no specialist perception or verification pipeline. Richer visual feedback and multi-round review are separate supplementary comparisons. <a href="paper.pdf#page=11">Further investigations</a>.</p></section>
+
+  <section id="models"><h2>Which Model Versions Were Evaluated?</h2>
+  <p>The labels below are the configured identifiers reported in <a href="paper.pdf#page=21">Table A5</a>. They identify the evaluated models; they are not an assertion that all providers expose these names on every endpoint.</p>
+  <div class="table-scroll" role="region" aria-label="Evaluated model identifiers" tabindex="0"><table class="model-id-table"><caption>Seven evaluated models and their configured identifiers</caption><thead><tr><th scope="col">Model</th><th scope="col">Paper Alias</th><th scope="col">Configured Identifier</th></tr></thead><tbody>
+  <tr><th scope="row">GPT-6 Astra</th><td>Astra</td><td><code>gpt-6-astra</code></td></tr>
+  <tr><th scope="row">GPT-6 Sol</th><td>Sol</td><td><code>gpt-6-sol</code></td></tr>
+  <tr><th scope="row">Claude Fable 5.1</th><td>Fable</td><td><code>claude-fable-5-1</code></td></tr>
+  <tr><th scope="row">Gemini 3.8 Flash</th><td>Gemini</td><td><code>gemini-3.8-flash</code></td></tr>
+  <tr><th scope="row">Qwen 3.8 Max</th><td>Qwen-Max</td><td><code>qwen3.8-max</code></td></tr>
+  <tr><th scope="row">Qwen 3.5 397B-A17B</th><td>Qwen-397B</td><td><code>qwen3.5-397b-a17b</code></td></tr>
+  <tr><th scope="row">Qwen 3.5 27B</th><td>Qwen-27B</td><td><code>qwen3.5-27b</code></td></tr>
+  </tbody></table></div></section>
+
+  <section id="protocol"><h2>How Should These Results Be Compared or Reproduced?</h2>
+  <p><strong>Keep observations, tools, and budgets explicit.</strong> The main experiment uses a minimal harness with source-native observations and helpers. Limits vary by source and execution configuration; there is no single universal budget. For Manipulation, Baseline and RGB-expanded share per-source limits, while RGB-expanded supplies current RGB views at each decision. See <a href="paper.pdf#page=20">Appendix B</a> and <a href="paper.pdf#page=37">Appendix E.1</a>.</p>
+  <p><strong>Match repetitions and denominators.</strong> Non-tracing Geometry, Spatial Reasoning, and Affordance use five runs per case for six models and three for Fable. Tracing, Task Planning, and Manipulation have one reported episode per assignment. Continuous errors pool valid estimates; binary success retains assigned cases. The Manipulation success denominator is 182 binary tasks, while the 183-case inventory includes one continuous-reward task. <a href="paper.pdf#page=22">Scoring and repetition accounting</a>.</p>
+  <p><strong>Retain the actual inference configuration.</strong> Fixed-input and Planning configurations use temperature zero. On the CLI interface, reasoning effort is maximum for Sol and high for Astra and Fable; API requests omit this parameter. Fixed-input profiles include different response ceilings and extended case budgets. Manipulation uses separate request and execution limits, including a 3,600-token response ceiling and 12-minute request timeout. Use the full configuration tables rather than assigning one setting to every task. <a href="paper.pdf#page=21">Model settings</a>; <a href="paper.pdf#page=23">additional configurations</a>; <a href="paper.pdf#page=37">Manipulation settings</a>.</p>
+  <p>Start with the <a href="https://github.com/embodied-agent-arena/embodied-agent-arena#quick-start">evaluation harness and quick start</a>, the <a href="https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena">1,000-case dataset</a>, and its pinned release revision. The <a href="data/model-comparison.csv" download>summary CSV</a> contains the paper's comparison scores, not per-case predictions; per-model reproduction reports remain on the repository roadmap.</p></section>
+
+  <p class="guide-citation">Huang et al., <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena</cite>, 2026. <a href="https://arxiv.org/abs/2610.00854">arXiv:2610.00854</a> · <a href="./#citation">BibTeX</a></p>
+  </article>
+</main>
+<footer class="wrap"><span>Embodied Agent Arena · 2026</span><div><a href="./#results">Compare Models</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a></div></footer>
+</body></html>

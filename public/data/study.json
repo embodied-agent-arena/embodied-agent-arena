@@ -1,0 +1,218 @@
+{
+  "title": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
+  "description": "Seven frontier VLM agents compared across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation on 1,000 cases.",
+  "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
+  "arxiv": "2610.00854",
+  "date_published": "2026-10-01",
+  "manuscript_date": "2026-10-05",
+  "manuscript_version": "Author manuscript submitted for arXiv v2",
+  "paper_pages": 44,
+  "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess seven VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. A minimal harness preserves source observations and operations while leaving perception, reasoning, and action selection to the model. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra's strengths in precise estimation and usable-contact localization coexist with endpoint errors in tracing and low household-task completion. Supplementary comparisons of richer observations and multi-round review show model- and task-dependent effects. Current VLM agents thus fall short of embodied generalism: they often make partial progress without satisfying all task goals within allotted time and interaction budgets.",
+  "authors": [
+    {
+      "name": "Haojian Huang",
+      "affiliations": "1,3"
+    },
+    {
+      "name": "Pukun Zhao",
+      "affiliations": "3"
+    },
+    {
+      "name": "Zexi Li",
+      "affiliations": "2,3"
+    },
+    {
+      "name": "Yehang Zhang",
+      "affiliations": "1,3"
+    },
+    {
+      "name": "Yangkai Wei",
+      "affiliations": "3"
+    },
+    {
+      "name": "Wenqian Li",
+      "affiliations": "3"
+    },
+    {
+      "name": "Han Yang",
+      "affiliations": "3"
+    },
+    {
+      "name": "Kaiwen Zhou",
+      "affiliations": "3"
+    },
+    {
+      "name": "Ying-Cong Chen",
+      "affiliations": "1,3,†"
+    },
+    {
+      "name": "Yinchuan Li",
+      "affiliations": "3,†"
+    }
+  ],
+  "metrics": [
+    {
+      "domain": "Geometry",
+      "name": "Rotation error",
+      "unit": "degrees",
+      "better": "lower"
+    },
+    {
+      "domain": "Geometry",
+      "name": "Translation error",
+      "unit": "cm",
+      "better": "lower"
+    },
+    {
+      "domain": "Spatial Reasoning",
+      "name": "Pass@1",
+      "unit": "%",
+      "better": "higher"
+    },
+    {
+      "domain": "Spatial Reasoning",
+      "name": "AbsRel",
+      "unit": "relative error",
+      "better": "lower"
+    },
+    {
+      "domain": "Affordance",
+      "name": "Mask IoU",
+      "unit": "overlap",
+      "better": "higher"
+    },
+    {
+      "domain": "Affordance",
+      "name": "Contact validity",
+      "unit": "%",
+      "better": "higher"
+    },
+    {
+      "domain": "Task Planning",
+      "name": "Pass@1",
+      "unit": "%",
+      "better": "higher"
+    },
+    {
+      "domain": "Manipulation",
+      "name": "Task success",
+      "unit": "%",
+      "better": "higher"
+    }
+  ],
+  "models": [
+    {
+      "alias": "Astra",
+      "name": "GPT-6 Astra",
+      "identifier": "gpt-6-astra",
+      "scores": [
+        "17.1",
+        "106.6",
+        "69.4 ± 1.0",
+        "0.213",
+        "0.286",
+        "60.3 ± 2.6",
+        "80.3",
+        "41.8"
+      ]
+    },
+    {
+      "alias": "Sol",
+      "name": "GPT-6 Sol",
+      "identifier": "gpt-6-sol",
+      "scores": [
+        "27.0",
+        "151.9",
+        "60.7 ± 2.5",
+        "0.273",
+        "0.264",
+        "52.0 ± 3.6",
+        "44.6",
+        "19.8"
+      ]
+    },
+    {
+      "alias": "Fable",
+      "name": "Claude Fable 5.1",
+      "identifier": "claude-fable-5-1",
+      "scores": [
+        "25.2",
+        "121.7",
+        "62.0 ± 4.6",
+        "0.186",
+        "0.284",
+        "57.1 ± 2.5",
+        "63.7",
+        "24.7"
+      ]
+    },
+    {
+      "alias": "Qwen-Max",
+      "name": "Qwen 3.8 Max",
+      "identifier": "qwen3.8-max",
+      "scores": [
+        "20.5",
+        "138.1",
+        "68.9 ± 1.1",
+        "0.205",
+        "0.272",
+        "52.9 ± 4.2",
+        "35.7",
+        "9.3"
+      ]
+    },
+    {
+      "alias": "Gemini",
+      "name": "Gemini 3.8 Flash",
+      "identifier": "gemini-3.8-flash",
+      "scores": [
+        "24.2",
+        "140.9",
+        "65.4 ± 1.3",
+        "0.161",
+        "0.250",
+        "44.6 ± 13.0",
+        "48.4",
+        "18.7"
+      ]
+    },
+    {
+      "alias": "Qwen-397B",
+      "name": "Qwen 3.5 397B-A17B",
+      "identifier": "qwen3.5-397b-a17b",
+      "scores": [
+        "38.4",
+        "249.8",
+        "50.6 ± 1.8",
+        "0.251",
+        "0.116",
+        "32.6 ± 4.7",
+        "17.8",
+        "9.9"
+      ]
+    },
+    {
+      "alias": "Qwen-27B",
+      "name": "Qwen 3.5 27B",
+      "identifier": "qwen3.5-27b",
+      "scores": [
+        "38.4",
+        "213.7",
+        "48.0 ± 0.9",
+        "0.288",
+        "0.013",
+        "6.3 ± 1.6",
+        "19.1",
+        "11.0"
+      ]
+    }
+  ],
+  "source": {
+    "table": "Table 2",
+    "page": 7,
+    "model_table": "Table A5",
+    "model_page": 21,
+    "protocol": "Baseline; source-native observations and helpers; source-specific budgets; no added specialist perception or verification pipeline",
+    "repetitions": "Non-tracing Geometry, Spatial Reasoning, and Affordance: five repetitions per case for six models and three for Fable. Tracing, Task Planning, and Manipulation: one reported episode per assignment."
+  }
+}

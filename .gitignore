@@ -17,6 +17,11 @@ __pycache__/
 build/
 dist/
 data/
+!public/data/
+public/data/*
+!public/data/study.json
+!public/data/model-comparison.csv
+!public/data/citation.bib
 outputs/
 artifacts/
 reports/
