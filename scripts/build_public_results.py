@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render checked-in, crawlable research metadata and results from study.json."""
+"""Render checked-in, crawlable research metadata and results from study.json and citation.bib."""
 import csv
 import html
 import json
@@ -53,11 +53,8 @@ with (PUBLIC / 'data/model-comparison.csv').open('w', newline='') as f:
 
 author_html = ''.join(f'<span>{esc(a["name"])}<sup>{a["affiliations"]}</sup></span>' for a in study['authors'])
 replace_block(PUBLIC / 'index.html', 'AUTHORS', author_html)
-bibtex = '@misc{huang2026embodiedagentarena,\n'
-bibtex += '  title = {' + study['title'] + '},\n'
-bibtex += '  author = {' + ' and '.join(a['name'].rsplit(' ', 1)[1] + ', ' + a['name'].rsplit(' ', 1)[0] for a in study['authors']) + '},\n'
-bibtex += '  year = {2026},\n  eprint = {2610.00854},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.RO},\n  url = {https://arxiv.org/abs/2610.00854}\n}'
-(PUBLIC / 'data/citation.bib').write_text(bibtex+'\n')
+# Preserve the original Google Scholar export as the citation source.
+bibtex = (PUBLIC / 'data/citation.bib').read_text().strip()
 replace_block(PUBLIC / 'index.html', 'CITATION', '<pre id="bibtex">'+esc(bibtex)+'</pre>')
 replace_block(ROOT / 'README.md', 'CITATION', '```bibtex\n'+bibtex+'\n```')
 
