@@ -35,10 +35,11 @@ for model in study['models']:
         cells.append('<td>' + primary + (' ± ' + parts[1] if len(parts) > 1 else '') + '</td>')
         md_cells.append(('**' + parts[0] + '**' if winner else parts[0]) + (' ± ' + parts[1] if len(parts) > 1 else ''))
     html_rows.append(f'<tr><th scope="row">{esc(model["name"])}</th>{"".join(cells)}</tr>')
-    md_rows.append('| ' + model['name'] + ' | ' + ' | '.join(md_cells) + ' |')
+    model_label = model['name'].replace('-', '&#8209;').replace(' ', '&nbsp;')
+    md_rows.append('| ' + model_label + ' | ' + ' | '.join(cell.replace(' ', '&nbsp;') for cell in md_cells) + ' |')
 replace_block(PUBLIC / 'index.html', 'RESULT_ROWS', '\n'.join(html_rows))
 replace_block(ROOT / 'README.md', 'RESULT_TABLE', '\n'.join([
-    '| Model | Rotation ↓ (°) | Translation ↓ (cm) | Spatial Pass@1 ↑ (%) | Spatial AbsRel ↓ | Mask IoU ↑ | Contact ↑ (%) | Planning ↑ (%) | Manipulation ↑ (%) |',
+    '| Model | Rot.&nbsp;↓ | Trans.&nbsp;↓ | Spatial&nbsp;↑ | AbsRel&nbsp;↓ | Mask&nbsp;↑ | Contact&nbsp;↑ | Plan&nbsp;↑ | Manip.&nbsp;↑ |',
     '| :--- | ' + ' | '.join(['---:'] * len(study['metrics'])) + ' |',
     *md_rows]))
 

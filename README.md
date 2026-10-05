@@ -36,18 +36,20 @@ Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Gemini
 ### Cross-Model Results
 
 <!-- BEGIN RESULT_TABLE -->
-| Model | Rotation ↓ (°) | Translation ↓ (cm) | Spatial Pass@1 ↑ (%) | Spatial AbsRel ↓ | Mask IoU ↑ | Contact ↑ (%) | Planning ↑ (%) | Manipulation ↑ (%) |
+| Model | Rot.&nbsp;↓ | Trans.&nbsp;↓ | Spatial&nbsp;↑ | AbsRel&nbsp;↓ | Mask&nbsp;↑ | Contact&nbsp;↑ | Plan&nbsp;↑ | Manip.&nbsp;↑ |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GPT-6 Astra | **17.1** | **106.6** | **69.4** ± 1.0 | 0.213 | **0.286** | **60.3** ± 2.6 | **80.3** | **41.8** |
-| GPT-6 Sol | 27.0 | 151.9 | 60.7 ± 2.5 | 0.273 | 0.264 | 52.0 ± 3.6 | 44.6 | 19.8 |
-| Claude Fable 5.1 | 25.2 | 121.7 | 62.0 ± 4.6 | 0.186 | 0.284 | 57.1 ± 2.5 | 63.7 | 24.7 |
-| Qwen 3.8 Max | 20.5 | 138.1 | 68.9 ± 1.1 | 0.205 | 0.272 | 52.9 ± 4.2 | 35.7 | 9.3 |
-| Gemini 3.8 Flash | 24.2 | 140.9 | 65.4 ± 1.3 | **0.161** | 0.250 | 44.6 ± 13.0 | 48.4 | 18.7 |
-| Qwen 3.5 397B-A17B | 38.4 | 249.8 | 50.6 ± 1.8 | 0.251 | 0.116 | 32.6 ± 4.7 | 17.8 | 9.9 |
-| Qwen 3.5 27B | 38.4 | 213.7 | 48.0 ± 0.9 | 0.288 | 0.013 | 6.3 ± 1.6 | 19.1 | 11.0 |
+| GPT&#8209;6&nbsp;Astra | **17.1** | **106.6** | **69.4**&nbsp;±&nbsp;1.0 | 0.213 | **0.286** | **60.3**&nbsp;±&nbsp;2.6 | **80.3** | **41.8** |
+| GPT&#8209;6&nbsp;Sol | 27.0 | 151.9 | 60.7&nbsp;±&nbsp;2.5 | 0.273 | 0.264 | 52.0&nbsp;±&nbsp;3.6 | 44.6 | 19.8 |
+| Claude&nbsp;Fable&nbsp;5.1 | 25.2 | 121.7 | 62.0&nbsp;±&nbsp;4.6 | 0.186 | 0.284 | 57.1&nbsp;±&nbsp;2.5 | 63.7 | 24.7 |
+| Qwen&nbsp;3.8&nbsp;Max | 20.5 | 138.1 | 68.9&nbsp;±&nbsp;1.1 | 0.205 | 0.272 | 52.9&nbsp;±&nbsp;4.2 | 35.7 | 9.3 |
+| Gemini&nbsp;3.8&nbsp;Flash | 24.2 | 140.9 | 65.4&nbsp;±&nbsp;1.3 | **0.161** | 0.250 | 44.6&nbsp;±&nbsp;13.0 | 48.4 | 18.7 |
+| Qwen&nbsp;3.5&nbsp;397B&#8209;A17B | 38.4 | 249.8 | 50.6&nbsp;±&nbsp;1.8 | 0.251 | 0.116 | 32.6&nbsp;±&nbsp;4.7 | 17.8 | 9.9 |
+| Qwen&nbsp;3.5&nbsp;27B | 38.4 | 213.7 | 48.0&nbsp;±&nbsp;0.9 | 0.288 | 0.013 | 6.3&nbsp;±&nbsp;1.6 | 19.1 | 11.0 |
 <!-- END RESULT_TABLE -->
 
-**Source:** [Table 2 of the 5 October 2026 manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7), submitted for arXiv v2; experimental results are unchanged from v1. Bold marks the best mean; arrows show the better direction. ± is run-to-run SD. Continuous errors use valid estimates. Manipulation uses 182 binary assignments, counting missing records as unsuccessful; one additional continuous-reward case brings the inventory to 183.
+Rotation and translation errors are in degrees and cm. Spatial and Plan are Pass@1 (%); AbsRel is spatial numerical error; Mask is affordance IoU; Contact and Manip. are success rates (%). Bold marks the best mean; ± is run-to-run SD.
+
+**Source:** [Table 2 of the 5 October 2026 manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7), submitted for arXiv v2; experimental results are unchanged from v1. Continuous errors use valid estimates. Manipulation uses 182 binary assignments, counting missing records as unsuccessful; one additional continuous-reward case brings the inventory to 183.
 
 Astra leads planning and baseline manipulation success, while Gemini has the lowest numerical spatial error. Qwen-Max is close to Astra on Spatial Pass@1; Fable is close on mask overlap. **Local precision does not guarantee complete task execution within the allowed budgets.** These comparisons depend on the task mixture, observations, interfaces, and source-specific limits.
 
