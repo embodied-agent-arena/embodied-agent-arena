@@ -31,13 +31,15 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 ## Overview
 
-Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 cases** across five robotic capabilities. It combines 32 established sources with **GeoProbe**, a new 168-case geometric-estimation benchmark. A unified agent harness connects model-generated programs to source environments, and task-level analyses examine how perception, reasoning, and intermediate actions translate into complete robotic tasks.
+Embodied Agent Arena evaluates seven frontier vision-language agents on **1,000 cases** across five robotic capabilities. It combines 32 established sources with **GeoProbe**, a new 168-case geometric-estimation benchmark. A minimal agent harness retains source-native observations and helpers while leaving perception, reasoning, and action selection to the model. Task-level analyses examine whether local competence leads to complete goal satisfaction within source-specific budgets.
 
 ![Embodied Agent Arena overview](public/assets/reference-arena.gif)
 
 ![Benchmark construction: 1,000 cases, five capability domains, GeoProbe, and the unified evaluation harness](public/assets/construction.webp)
 
 ## News
+
+- **2026.10.05** — The [updated manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) is available; the arXiv v2 replacement has been submitted and is awaiting announcement.
 
 - **2026.10.03** — Added a visual [overview](#overview) of task planning and manipulation.
 - **2026.10.01** — The [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) and [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/) are available. The manuscript has been submitted to arXiv.
@@ -135,6 +137,9 @@ If this work is useful for your research, please cite:
             and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen
             and Chen, Ying-Cong and Li, Yinchuan},
   year   = {2026},
-  url    = {https://github.com/embodied-agent-arena/embodied-agent-arena}
+  eprint = {2610.00854},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url    = {https://arxiv.org/abs/2610.00854}
 }
 ```
