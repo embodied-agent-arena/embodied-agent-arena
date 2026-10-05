@@ -47,13 +47,9 @@ Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Gemini
 | Qwen&nbsp;3.5&nbsp;27B | 38.4 | 213.7 | 48.0 | 0.288 | 0.013 | 6.3 | 19.1 | 11.0 |
 <!-- END RESULT_TABLE -->
 
-Rotation and translation errors are in degrees and cm. Spatial and Plan are Pass@1 (%); AbsRel is spatial numerical error; Mask is affordance IoU; Contact and Manip. are success rates (%). Mean scores are shown, with the best in bold; [run-to-run SDs](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) are included in the full comparison and CSV.
+Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7); **bold** marks the best result.
 
-**Source:** [Table 2 of the 5 October 2026 manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7), submitted for arXiv v2; experimental results are unchanged from v1. Continuous errors use valid estimates. Manipulation uses 182 binary assignments, counting missing records as unsuccessful; one additional continuous-reward case brings the inventory to 183.
-
-Astra leads planning and baseline manipulation success, while Gemini has the lowest numerical spatial error. Qwen-Max is close to Astra on Spatial Pass@1; Fable is close on mask overlap. **Local precision does not guarantee complete task execution within the allowed budgets.** These comparisons depend on the task mixture, observations, interfaces, and source-specific limits.
-
-[Interactive Project Page](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv) · [Model IDs, Settings & Findings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html) · [Full Evaluation Protocol](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=21)
+[Full Results & Evaluation Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv)
 
 ![Embodied Agent Arena overview](public/assets/reference-arena.gif)
 
