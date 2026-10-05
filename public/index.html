@@ -36,8 +36,8 @@
   <link rel="preload" href="assets/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/manrope.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/allura.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="icon" href="assets/logo-transparent.png?v=20261002"><link rel="stylesheet" href="styles.css?v=discovery-20261005">
-  <script src="app.js?v=discovery-20261005" defer></script>
+  <link rel="icon" href="assets/logo-transparent.png?v=20261002"><link rel="stylesheet" href="styles.css?v=compact-results-20261005">
+  <script src="app.js?v=compact-results-20261005" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -60,12 +60,14 @@
 </section>
 <button class="motion-toggle ambient-toggle" data-motion="ambient-video" aria-label="Pause background motion" title="Pause background motion"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z"/></svg></button>
 </div>
+<figure class="wrap overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1442" height="921" fetchpriority="high"></button></figure>
+
 <section class="wrap section results-section" id="results" aria-labelledby="results-title">
   <p class="eyebrow">Cross-Model Results</p>
   <h2 id="results-title" class="results-heading">Seven Agents. Five Robotic Capabilities.</h2>
-  <p class="comparison-intro">Embodied Agent Arena compares seven frontier VLM agents on <strong>1,000 cases</strong>, connecting geometric and spatial competence with affordance grounding, task planning, and complete manipulation outcomes. The models use source-native observations and helpers; perception, reasoning, and action selection remain with the model.</p>
-  <p class="comparison-version">Results: <a href="paper.pdf#page=7">Table 2, 5 October 2026 manuscript</a> · Submitted for arXiv v2; experimental results unchanged from v1.</p><div class="results-content">
-  <div class="table-scroll" role="region" aria-label="Full model results, scroll horizontally on smaller screens" tabindex="0"><table id="results-table" aria-describedby="result-metrics result-protocol"><caption>Performance across five capability domains</caption><thead><tr><th rowspan="2" scope="col">Agent</th><th colspan="2" scope="colgroup">Geometry</th><th colspan="2" scope="colgroup">Spatial Reasoning</th><th colspan="2" scope="colgroup">Affordance</th><th scope="colgroup">Planning</th><th scope="colgroup">Manipulation</th></tr><tr><th scope="col">Rotation ↓<small>degrees</small></th><th scope="col">Translation ↓<small>cm</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">AbsRel ↓<small>relative error</small></th><th scope="col">Mask IoU ↑<small>overlap</small></th><th scope="col">Contact ↑<small>%</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">Task success ↑<small>%</small></th></tr></thead><tbody><!-- BEGIN RESULT_ROWS -->
+  <p class="comparison-intro">1,000 cases, evaluated with source-native observations and task-specific budgets.</p>
+  <div class="results-content">
+  <div class="table-scroll" role="region" aria-label="Full model results, scroll horizontally on smaller screens" tabindex="0"><table id="results-table" aria-describedby="result-key"><caption>Performance across five capability domains</caption><thead><tr><th rowspan="2" scope="col">Agent</th><th colspan="2" scope="colgroup">Geometry</th><th colspan="2" scope="colgroup">Spatial Reasoning</th><th colspan="2" scope="colgroup">Affordance</th><th scope="colgroup">Planning</th><th scope="colgroup">Manipulation</th></tr><tr><th scope="col">Rotation ↓<small>degrees</small></th><th scope="col">Translation ↓<small>cm</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">AbsRel ↓<small>relative error</small></th><th scope="col">Mask IoU ↑<small>overlap</small></th><th scope="col">Contact ↑<small>%</small></th><th scope="col">Pass@1 ↑<small>%</small></th><th scope="col">Task success ↑<small>%</small></th></tr></thead><tbody><!-- BEGIN RESULT_ROWS -->
 <tr><th scope="row">GPT-6 Astra</th><td><strong>17.1</strong></td><td><strong>106.6</strong></td><td><strong>69.4</strong> ± 1.0</td><td>0.213</td><td><strong>0.286</strong></td><td><strong>60.3</strong> ± 2.6</td><td><strong>80.3</strong></td><td><strong>41.8</strong></td></tr>
 <tr><th scope="row">GPT-6 Sol</th><td>27.0</td><td>151.9</td><td>60.7 ± 2.5</td><td>0.273</td><td>0.264</td><td>52.0 ± 3.6</td><td>44.6</td><td>19.8</td></tr>
 <tr><th scope="row">Claude Fable 5.1</th><td>25.2</td><td>121.7</td><td>62.0 ± 4.6</td><td>0.186</td><td>0.284</td><td>57.1 ± 2.5</td><td>63.7</td><td>24.7</td></tr>
@@ -74,21 +76,17 @@
 <tr><th scope="row">Qwen 3.5 397B-A17B</th><td>38.4</td><td>249.8</td><td>50.6 ± 1.8</td><td>0.251</td><td>0.116</td><td>32.6 ± 4.7</td><td>17.8</td><td>9.9</td></tr>
 <tr><th scope="row">Qwen 3.5 27B</th><td>38.4</td><td>213.7</td><td>48.0 ± 0.9</td><td>0.288</td><td>0.013</td><td>6.3 ± 1.6</td><td>19.1</td><td>11.0</td></tr>
 <!-- END RESULT_ROWS --></tbody></table></div>
-  <p class="table-note" id="result-metrics">Bold marks the best score; arrows show the better direction. ± is the standard deviation across runs. Rotation and translation measure pose error; Spatial AbsRel measures numerical estimation error. Mask IoU measures functional-region overlap, and Contact measures whether a predicted point lies in the usable region. Pass@1 is success in one complete episode. Manipulation reports baseline success over 182 binary tasks; the arena’s 183 manipulation cases also include one continuous-reward task. Missing records count as unsuccessful assignments.</p>
-<p class="table-note" id="result-protocol">Non-tracing Geometry, Spatial Reasoning, and Affordance use five repetitions per case (three for Fable). Tracing, Task Planning, and Manipulation use one reported episode per assignment. Continuous errors use valid estimates; success rates retain failed and missing predictions. Budgets vary by source: for example, RoboCasa allows 60 minutes and 24 model rounds; BEHAVIOR-1K allows 180 minutes and 24 rounds. These are ceilings, not observed completion times.</p>
-  <div class="result-links"><a href="data/model-comparison.csv" download>Download Results (CSV) ↓</a><a href="model-guide.html">Model Selection &amp; Evaluation Guide ↗</a><a href="paper.pdf#page=21">Model IDs &amp; Full Protocol ↗</a></div>
-  <div class="comparison-takeaways">
-    <p><strong>Match the model to the metric.</strong> Astra leads planning and baseline manipulation success; Gemini has the lowest numerical spatial error. Qwen-Max is close to Astra on Spatial Pass@1, and Fable is close on mask overlap.</p>
-    <p><strong>Local competence does not guarantee completion.</strong> Even the strongest aggregate performer reaches 41.8% baseline manipulation success. The evaluation measures native goal satisfaction within finite time and interaction budgets.</p>
+  <div class="results-footer">
+    <p class="result-key" id="result-key"><strong>Bold</strong>: best · ±: run-to-run SD · <a href="paper.pdf#page=7">Table 2</a></p>
+    <div class="result-links"><a href="#evaluation-details">Evaluation Details ↓</a><a href="data/model-comparison.csv" download>Results CSV ↓</a></div>
   </div>
 </div></section>
 
-<figure class="wrap overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1442" height="921" fetchpriority="high"></button></figure>
 
 <section id="arena" class="wrap section arena-section">
   <div class="arena-intro"><div class="arena-copy"><p class="eyebrow"><span>01</span> The Arena</p><h2>From Seeing a Scene<br>to Completing a Task.</h2><p>The main evaluation tests native VLM perception, reasoning, and action selection through source-provided observations and helpers. Complete goals must be satisfied within each source’s time and interaction budgets.</p></div>
   <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div></div>
-  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate Object Motion<br><span>from Camera Motion.</span></h3></div><div class="geo-copy"><p><strong>168 new cases</strong> isolate camera motion, object motion, depth, and scale.</p></div><figure class="construction-figure"><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img src="assets/construction.webp" alt="Arena composition, GeoProbe estimation targets, and the agent evaluation workflow" loading="lazy"></button><figcaption class="figure-caption"><strong>How the Arena Is Built.</strong> Task examples and the five-domain composition sit alongside GeoProbe's estimation targets and the workflow connecting model actions to evaluation.</figcaption></figure></div>
+  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate Object Motion<br><span>from Camera Motion.</span></h3></div><div class="geo-copy"><p><strong>168 new cases</strong> isolate camera motion, object motion, depth, and scale.</p></div><figure class="construction-figure"><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img width="1730" height="1353" src="assets/construction.webp" alt="Arena composition, GeoProbe estimation targets, and the agent evaluation workflow" loading="lazy"></button><figcaption class="figure-caption"><strong>How the Arena Is Built.</strong> Task examples and the five-domain composition sit alongside GeoProbe's estimation targets and the workflow connecting model actions to evaluation.</figcaption></figure></div>
 </section>
 
 <section id="findings" class="section findings-section"><div class="wrap">
@@ -106,6 +104,16 @@
     <figcaption class="figure-caption">Illustrative interaction clips; the comparison table uses the paper’s fixed evaluation cases.</figcaption>
   </figure>
   <div class="tabs case-tabs" id="case-tabs" role="tablist" aria-label="Task completion limits"></div><div id="case-panel" class="case-panel" role="tabpanel" tabindex="0"></div><noscript><p>All seven agents completed 0/5 BEHAVIOR-1K tasks under a 180-minute, 24-round trial ceiling, and 0/8 HumanCLAW sitting tasks under a 180-minute, 101-round episode ceiling. <a href="model-guide.html#completion">Read the success criteria and budget context.</a></p></noscript>
+</section>
+
+<section class="wrap section evaluation-section" id="evaluation-details" aria-labelledby="evaluation-title">
+  <h2 id="evaluation-title">Evaluation Details</h2>
+  <div class="evaluation-grid">
+    <div><h3>Metrics &amp; Scoring</h3><p id="result-metrics">Rotation and translation measure pose error; Spatial AbsRel measures numerical estimation error. Mask IoU measures functional-region overlap, and Contact measures whether a predicted point lies in the usable region. Pass@1 is success in one complete episode. Manipulation reports baseline success over 182 binary tasks; the arena’s 183 manipulation cases also include one continuous-reward task. Missing records count as unsuccessful assignments.</p></div>
+    <div><h3>Protocol &amp; Budgets</h3><p id="result-protocol">Non-tracing Geometry, Spatial Reasoning, and Affordance use five repetitions per case (three for Fable). Tracing, Task Planning, and Manipulation use one reported episode per assignment. Continuous errors use valid estimates; success rates retain failed and missing predictions. Budgets vary by source: for example, RoboCasa allows 60 minutes and 24 model rounds; BEHAVIOR-1K allows 180 minutes and 24 rounds. These are ceilings, not observed completion times.</p></div>
+  </div>
+  <p class="comparison-version">Results: <a href="paper.pdf#page=7">Table 2, 5 October 2026 manuscript</a> · Submitted for arXiv v2; experimental results unchanged from v1.</p>
+  <div class="result-links"><a href="model-guide.html">Model Guide ↗</a><a href="paper.pdf#page=21">Model IDs &amp; Full Protocol ↗</a><a href="#results">Back to Results ↑</a></div>
 </section>
 
 <section class="wrap section abstract-section" id="abstract" aria-labelledby="abstract-title"><h2 id="abstract-title">Abstract</h2><!-- BEGIN ABSTRACT -->
