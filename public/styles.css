@@ -63,13 +63,14 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:36px 35px;align-content:center;padding:28px 0}
 .stats strong{display:block;font-size:52px;font-weight:450;letter-spacing:-.045em;line-height:1.2}
 .stats span{display:block;font-size:19px;color:var(--muted);margin-top:8px;max-width:19ch;line-height:1.6}
-.geo-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:26px 64px;align-items:start;margin-top:54px;border-top:1px solid var(--line);padding-top:40px}
-.geo-layout .eyebrow{font-size:18px;margin-bottom:12px;color:#5e7a5d}
-.geo-layout h3{font-size:28px;line-height:1.35}
-.geo-layout h3 span{color:#6b8269}
-.geo-copy>p{font-size:21px;color:var(--muted);line-height:1.75}
-.geo-copy strong{font-weight:650;color:var(--ink)}
-.construction-figure{grid-column:1/-1;padding:24px;border:1px solid var(--line);border-radius:15px}
+.geo-layout{margin-top:44px;border:1px solid #dce4d8;border-radius:18px;overflow:hidden;background:#f5f8f2}
+.geo-heading{padding:28px 32px 26px}
+.geo-layout .eyebrow{font-size:16px;margin-bottom:10px;color:#5e7a5d}
+.geo-layout h3{font-size:clamp(28px,3vw,38px);line-height:1.25;letter-spacing:-.035em}
+.geo-layout h3 span{color:#668060}
+.geo-description{font-size:19px;color:var(--muted);line-height:1.6;margin-top:14px;max-width:none}
+.geo-description strong{font-weight:650;color:var(--ink)}
+.construction-figure{padding:24px;border-top:1px solid #dce4d8;background:#fff}
 .construction-figure figcaption{margin-top:20px}
 .findings-section{padding-top:60px;border-top:1px solid var(--line);padding-bottom:38px}
 .section-heading{max-width:790px;margin:0 auto 40px}
@@ -129,7 +130,7 @@ dialog img{width:100%;height:auto}
 .wrap,.nav-wrap{width:calc(100% - 64px)}
 .brand{font-size:20px}.site-header nav{gap:20px}
 .hero h1{font-size:44px}.hero-wordmark{font-size:34px}
-.arena-intro{gap:58px}.geo-layout{gap:24px 50px}
+.arena-intro{gap:58px}
 .domain-text{gap:35px;padding-inline:0}.domain-text h3{font-size:30px}
 .tabs button{font-size:17px;padding-inline:13px}
 .evidence strong{font-size:34px}.evidence li{padding-left:18px}.section-heading{max-width:760px}
@@ -154,15 +155,18 @@ body{font-size:17px}.site-header{height:72px}
 .arena-copy h2{font-size:32px;margin-bottom:19px}.arena-copy>p:not(.eyebrow){font-size:19px}
 .eyebrow{font-size:16px;margin-bottom:16px}.eyebrow>span{font-size:13px}
 .stats{padding:0;gap:25px 27px}.stats strong{font-size:43px}.stats span{font-size:17px;margin-top:6px}
-.geo-layout{grid-template-columns:1fr;gap:21px;margin-top:36px;padding-top:30px}
-.geo-layout h3{font-size:26px}.geo-copy>p{font-size:19px}
+.geo-layout{margin-top:32px;border-radius:14px}
+.geo-heading{padding:22px 20px}
+.geo-layout .eyebrow{font-size:15px;margin-bottom:10px}
+.geo-layout h3{font-size:clamp(25px,5vw,32px);line-height:1.3}
+.geo-description{font-size:17px;margin-top:12px;line-height:1.65}
 .section-heading{margin-bottom:28px}.section-heading h2{font-size:32px;line-height:1.3}.section-heading p:not(.eyebrow){font-size:17px;margin-top:17px}
 .findings-section .section-heading h2{font-size:32px;white-space:normal}
 .tabs{gap:8px;margin-bottom:24px}.tabs button{font-size:17px;padding:10px 14px;flex:none;border-radius:8px}
 .domain-text{display:block}.domain-text h3{font-size:29px;line-height:1.35;margin-bottom:24px}.domain-text>p{font-size:17px}
 .evidence{margin-top:24px;gap:18px}.evidence strong{font-size:clamp(25px,7.4vw,31px)}.evidence span{font-size:17px}.evidence li{padding-left:13px}.evidence .peer{font-size:16px}.figure-takeaway{font-size:18px}.figure-caption{font-size:17px}
 .domain-panel{gap:24px}.domain-panel figure{padding:12px 7px;border-radius:10px}
-.construction-figure{padding:12px 7px;border-radius:10px}.domain-panel figcaption{margin-top:16px;padding:16px 5px 0}.construction-figure figcaption{margin-top:16px;padding-inline:5px}
+.construction-figure{padding:14px 10px}.domain-panel figcaption{margin-top:16px;padding:16px 5px 0}.construction-figure figcaption{margin-top:16px;padding-inline:5px}
 .results-section{padding-top:24px;padding-bottom:22px}.results-heading{font-size:25px}
 .case-panel h3{font-size:29px}.case-panel>p{font-size:17px;margin-bottom:24px}.case-panel .figure-button{padding:6px;border-radius:10px}
 .citation-section{padding-block:24px}.citation-heading{gap:12px;flex-wrap:wrap}.citation-heading h2{font-size:28px}pre{font-size:13px;padding:16px}

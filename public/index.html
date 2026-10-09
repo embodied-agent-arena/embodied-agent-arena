@@ -36,7 +36,7 @@
   <link rel="preload" href="assets/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/manrope.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/allura.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="icon" href="assets/logo-transparent.png?v=20261002"><link rel="stylesheet" href="styles.css?v=compact-results-20261005">
+  <link rel="icon" href="assets/logo-transparent.png?v=20261002"><link rel="stylesheet" href="styles.css?v=geoprobe-20261009">
   <script src="app.js?v=compact-results-20261005" defer></script>
 </head>
 <body>
@@ -86,7 +86,14 @@
 <section id="arena" class="wrap section arena-section">
   <div class="arena-intro"><div class="arena-copy"><p class="eyebrow"><span>01</span> The Arena</p><h2>From Seeing a Scene<br>to Completing a Task.</h2><p>The main evaluation tests native VLM perception, reasoning, and action selection through source-provided observations and helpers. Complete goals must be satisfied within each source’s time and interaction budgets.</p></div>
   <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>7</strong><span>frontier VLM agents</span></div></div></div>
-  <div class="geo-layout" id="geoprobe"><div><p class="eyebrow">Introducing GeoProbe</p><h3>Separate Object Motion<br><span>from Camera Motion.</span></h3></div><div class="geo-copy"><p><strong>168 new cases</strong> isolate camera motion, object motion, depth, and scale.</p></div><figure class="construction-figure"><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img width="1730" height="1353" src="assets/construction.webp" alt="Arena composition, GeoProbe estimation targets, and the agent evaluation workflow" loading="lazy"></button><figcaption class="figure-caption"><strong>How the Arena Is Built.</strong> Task examples and the five-domain composition sit alongside GeoProbe's estimation targets and the workflow connecting model actions to evaluation.</figcaption></figure></div>
+  <div class="geo-layout" id="geoprobe">
+    <header class="geo-heading">
+      <p class="eyebrow">Introducing GeoProbe</p>
+      <h3>Separate Object Motion <span>from Camera Motion.</span></h3>
+      <p class="geo-description"><strong>168 new cases</strong> isolate camera motion, object motion, depth, and scale.</p>
+    </header>
+    <figure class="construction-figure"><button class="figure-button" data-zoom="assets/construction.webp" aria-label="Enlarge arena construction and GeoProbe targets"><img width="1730" height="1353" src="assets/construction.webp" alt="Arena composition, GeoProbe estimation targets, and the agent evaluation workflow" loading="lazy"></button><figcaption class="figure-caption"><strong>How the Arena Is Built.</strong> Task examples and the five-domain composition sit alongside GeoProbe's estimation targets and the workflow connecting model actions to evaluation.</figcaption></figure>
+  </div>
 </section>
 
 <section id="findings" class="section findings-section"><div class="wrap">
