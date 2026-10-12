@@ -57,9 +57,10 @@ Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent
 
 ## News
 
+- **2026.10.12** — Explore the [129-case atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html) and five new qualitative case figures in the [updated manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=45).
 - **2026.10.05** — Published the [seven-model comparison](#cross-model-results), downloadable results, and a [model selection and evaluation guide](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html).
 
-- **2026.10.05** — The [updated manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) is available; the arXiv v2 replacement has been submitted and is awaiting announcement.
+- **2026.10.05** — The [updated manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) is available; [arXiv v2](https://arxiv.org/abs/2610.00854v2) includes the revised discussion and model settings.
 
 - **2026.10.03** — Added a visual [overview](#overview) of task planning and manipulation.
 - **2026.10.01** — The [paper](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) and [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/) are available. The manuscript has been submitted to arXiv.
