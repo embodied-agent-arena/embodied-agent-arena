@@ -1,13 +1,13 @@
 {
   "title": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
-  "description": "Seven frontier VLM agents compared across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation on 1,000 cases.",
+  "description": "Eight frontier VLM agents evaluated across five robotic capabilities on a 1,000-case arena, with model-specific coverage and repetitions.",
   "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
-  "manuscript_date": "2026-10-05",
-  "manuscript_version": "Author manuscript submitted for arXiv v2",
-  "paper_pages": 44,
-  "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess seven VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. A minimal harness preserves source observations and operations while leaving perception, reasoning, and action selection to the model. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra's strengths in precise estimation and usable-contact localization coexist with endpoint errors in tracing and low household-task completion. Supplementary comparisons of richer observations and multi-round review show model- and task-dependent effects. Current VLM agents thus fall short of embodied generalism: they often make partial progress without satisfying all task goals within allotted time and interaction budgets.",
+  "manuscript_date": "2026-10-12",
+  "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
+  "paper_pages": 53,
+  "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess eight VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. A minimal harness preserves source observations and operations while leaving perception, reasoning, and action selection to the model. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra leads geometric estimation and planning, while Opus achieves the highest measured affordance overlap, contact validity, and Baseline manipulation success. These local strengths coexist with endpoint errors in tracing and low household-task completion. Supplementary comparisons of richer observations and multi-round review show model- and task-dependent effects. Current VLM agents thus fall short of embodied generalism: they often make partial progress without satisfying all task goals within allotted time and interaction budgets.",
   "authors": [
     {
       "name": "Haojian Huang",
@@ -205,6 +205,31 @@
         "19.1",
         "11.0"
       ]
+    },
+    {
+      "alias": "Opus",
+      "name": "Claude Opus 5.5",
+      "identifier": "claude-opus-5-5",
+      "scores": [
+        "23.3",
+        "135.3",
+        "58.6",
+        "0.222",
+        "0.329",
+        "62.9",
+        "50.7",
+        "47.8"
+      ],
+      "annotations": {
+        "6": "†"
+      },
+      "exclude_from_best": [
+        6
+      ],
+      "metric_notes": {
+        "6": "73/144; HumanCLAW excluded until completed and verified; other agents use 157 cases.",
+        "7": "87/182 under the same Baseline protocol as the original seven; 2 RLBench errors and 1 RoboTwin error count as unsuccessful."
+      }
     }
   ],
   "source": {
@@ -212,7 +237,7 @@
     "page": 7,
     "model_table": "Table A5",
     "model_page": 21,
-    "protocol": "Baseline; source-native observations and helpers; source-specific budgets; no added specialist perception or verification pipeline",
-    "repetitions": "Non-tracing Geometry, Spatial Reasoning, and Affordance: five repetitions per case for six models and three for Fable. Tracing, Task Planning, and Manipulation: one reported episode per assignment."
+    "protocol": "Source-native evaluation; Baseline Manipulation for all eight agents. Opus Planning excludes HumanCLAW; repetition counts vary by model and domain.",
+    "repetitions": "Non-tracing Geometry, Spatial Reasoning, and Affordance: five repetitions per case for six models and three for Fable. Tracing, Task Planning, and Manipulation: one reported episode per assignment. Opus: five non-tracing Geometry runs; one run elsewhere."
   }
 }
