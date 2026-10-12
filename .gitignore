@@ -20,6 +20,7 @@ data/
 !public/data/
 public/data/*
 !public/data/study.json
+!public/data/case-gallery.json
 !public/data/model-comparison.csv
 !public/data/citation.bib
 outputs/

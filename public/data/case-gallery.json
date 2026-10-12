@@ -1,0 +1,4047 @@
+{
+  "W1-w1_influx-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      3424,
+      2202
+    ]
+  },
+  "W1-w1_influx-02": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      3424,
+      2202
+    ]
+  },
+  "W1-w1_influx-03": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      3424,
+      2202
+    ]
+  },
+  "W1-w1_mapfree-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      540,
+      720
+    ]
+  },
+  "W1-w1_mapfree-02": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      540,
+      720
+    ]
+  },
+  "W1-w1_mapfree-03": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      540,
+      720
+    ]
+  },
+  "W1-w1_multispa-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      540,
+      720
+    ]
+  },
+  "W1-w1_multispa-02": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      540,
+      720
+    ]
+  },
+  "W1-w1_multispa-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      540,
+      720
+    ]
+  },
+  "W1-w1_tracespatial_2d-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W1-w1_tracespatial_2d-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W1-w1_tracespatial_2d-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W1-w1_tracespatial_3d-01": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W1-w1_tracespatial_3d-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W1-w1_tracespatial_3d-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W1-w1_vlm_depth-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_depth-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_depth-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_focal-01": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      768,
+      1024
+    ]
+  },
+  "W1-w1_vlm_focal-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      768,
+      1024
+    ]
+  },
+  "W1-w1_vlm_focal-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      768,
+      1024
+    ]
+  },
+  "W1-w1_vlm_intrinsics-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      768,
+      1024
+    ]
+  },
+  "W1-w1_vlm_intrinsics-02": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      768,
+      1024
+    ]
+  },
+  "W1-w1_vlm_intrinsics-03": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      768,
+      1024
+    ]
+  },
+  "W1-w1_vlm_motion_camera-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_camera-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_camera-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_camera_large-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_camera_large-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_camera_large-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_fixed-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_fixed-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_fixed-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_motion_real-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1280,
+      720
+    ]
+  },
+  "W1-w1_vlm_motion_real-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1280,
+      720
+    ]
+  },
+  "W1-w1_vlm_motion_real-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1280,
+      720
+    ]
+  },
+  "W1-w1_vlm_pose-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_pose-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_pose-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_reference-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W1-w1_vlm_reference-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W1-w1_vlm_reference-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W1-w1_vlm_size-01": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_size-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W1-w1_vlm_size-03": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": null,
+      "Claude Fable 5.1": null,
+      "Qwen 3.8 Max": null,
+      "Gemini 3.8 Flash": null,
+      "Qwen 3.5 397B-A17B": null,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": null
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      1024,
+      768
+    ]
+  },
+  "W2-w2_3dsrbench-01": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_3dsrbench-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_3dsrbench-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_bop_ask-01": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_bop_ask-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_bop_ask-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_mindcube-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_mindcube-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_mindcube-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_mmsi_bench-01": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_mmsi_bench-02": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_mmsi_bench-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_robospatial-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_robospatial-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_robospatial-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_vsi_bench-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": null,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_vsi_bench-02": {
+    "judgements": {
+      "GPT-6 Astra": null,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W2-w2_vsi_bench-03": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": []
+  },
+  "W3-alfred_official_visual-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "0e09a75cc2c9f0235662b7b4af337580044eda5226c82ce9e69abf3c1a5fb85b"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "f0b910281f2b76d0c25aa8e1768ca3f74e1ac0115e170e969f180b164518ed3b"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "2d6c8139354b49d966701012a2f5df67fe0ace94686ef68c4ef746d748d39c77"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "480e2a9ef6385c3c6cf41b84f812f1294447afb30451636eb05b59b595b63997"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "993d77c2071407abfc3a13d8d924279377e8c2dfb49821d9b24e2f644d260e12"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "147317a3734b806cc99a723c6f701edfdd96d083003e5a4f9b7f5bb05b591c30"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "87663ccac683ea54d03f24e8a084f84ce20dd6925140dadd46592e8bdd94749b"
+      }
+    ]
+  },
+  "W3-alfred_official_visual-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "35aacbdd8363e6eb4bb447cf7ed8d9c113da64df89869f80eb7bcad07d2867a3"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "03907e34456f79e80502cdd321ce3b2fe33727544e751f4f6a69402cee51bfae"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "8805e1f64e9233ea5145fb6663f5048ca2faabfbf74334f0f832f9e243b952a4"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "f24149cd4f216dc269b2c0df0c36802e588e98e9713c460cd47cd44b0ae2ecd3"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "e6da407cd2dedbea6796e924e3b4220e33238646cc92a47e95621cdc019b31fa"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "e5aaec2748fe190b5d7aa01ee0f00605c79bc2b28a7c531578933d6fbb41bdc1"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "a9300c62a0535b51c464072d4f1a8a6bb7d70680b67f9daf27f8980f8a7caf5b"
+      }
+    ]
+  },
+  "W3-alfred_official_visual-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "ac14a57b9e36f47abb3b96e3e450127b84d0b33b1bd202b40c0d153a3a7df9e4"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "509b55202144c0ca348f1be7a3227d38ba34da2bd5690c7764e4beb5dfcd8526"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "bb5dd417a942407c1f9139aa8128b9d06d17451355507179c876653ce5ea09eb"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "61a43fd50c4d98609157162e0c5b5481c3874db88757fcc2384cdb703e3bd723"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "384b4935c7099f14595b55fea8b1f212de28eb6475fa0043cd56bfa6a81088f3"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "b871cd15b4948544924522148b6a7b4bdc4e8b18510ddb0954c621480fe5eda5"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "151788fc50ddf16e4212cd0c6c5868a1008c1f17c8f0dee76bbf99c5145e322a"
+      }
+    ]
+  },
+  "W3-alfworld_visual-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "3179fffc3ae0a3552ee4c481d0303ebc4188bab71f850a4371880cef0ce82a0a"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "9b0f205f744aff10fff79563f790587bfad6c17e2528b13408de6fc08d0b4aad"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "0d5b757ad8db9c5c4f9780e864ea3977a6fe0373770a30ad2dec3a451e7367d3"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "07aaa69c1f615f216a8d111fb67a94db099e5a30ceb11bb965bdd068342a8424"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "timeout",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "55a74256a8f017b689ed962b2fb92262c7bf109f5e517010a0bbac05399fffa0"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "daf6117ab75be2be342e41b3b5fe0a6aa3da7dc2efef7929ad7f98ecb8fa3e25"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "374cda961dcbc2bb21445cfc83b3bb1d203a8afac3b1fb6bef6e840668ebaf81"
+      }
+    ]
+  },
+  "W3-alfworld_visual-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "88953d11b36b3a76ce612b29aa49cec77e8bad8be6dff10c9ec76554e72134cd"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "c9faf05650c0b2c083947cf3fa89ea6bcfdb8bdd47e665239db2fdb462ab9267"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "a793e66994f63a6783984597dcbac7e83b6c8209b62ff7e5af39e3dc77c03940"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "da005f963dac5504c235ff7f0a4c15e7aaad90752182331a2877149418a7abde"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "8397f45480f391f4dc9a88f29594636abcebdc1ef45a0bdfaa34e1b0d4000d3f"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "51eae4f6298edb3ea926a96ad869ea7661a2789311bfa077b6d856b86649f5d9"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "c957a7ee4f4162cd02995cbdc29a772649c9d646ffaa3cde51142099bc9f8bdf"
+      }
+    ]
+  },
+  "W3-alfworld_visual-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "bfef86fb2068b6af46437904fe718f5fdad8fbdf98236904cc39f98dd97e64bf"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "82901ec27004e9fc02f10cf0187b3acdfafa080786cc2fd66b8f21b4475799dd"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "4a03afcd33633074ef421430725546b3717590c1c2213486888bc6a1fb88d0c6"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "fc611ae0e38d59a524f098753635ca190e6b5c649fcc5c7ab4b63591bf39f322"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "timeout",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "86570d5b28302b2686006cf066567134f328e5f8d144561711c5e9176f7e3ba6"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "79c87a8f32faa54497c9aa44c9a6a8de75b66169077e93b0d0e5735cac842313"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "82f55ffc6f5f4ebccf327db59aad1204d25aefde6c1207617857e5d004817d41"
+      }
+    ]
+  },
+  "W3-discoveryworld-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "1c3d675f161a39b056ef8f7952aa8b2858dc373e02217d5fc36940255c3844e3"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "a39bd11fe9a3841c844e3d36794a8201473c0b5383a84558caf37a4dc3cf9f69"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "0149fde9cf6eb9e37d5431ee506ef2508ec8732eb5fffa651b3e78569ea08321"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "b2710ff0339c477f09c3c863da02d7e53e1e4163396b98d41e5d01a6de84fdf0"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "dd58c08214172b3def0b7c7fc2c26d33c905ae1ee1a43b71e7afd69433e77c80"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "63640277a2e0f6c64d98e9e2234d05e3ddfcedc68eb9cf52bb53d7b8564ed102"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "0093ddac6eb13de52db23364bde86ca91711792cda7265ede4c9f3734b6dd1c5"
+      }
+    ]
+  },
+  "W3-discoveryworld-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "2632dad676c6fd006f1a54599d07e439e335df803e64f3a68d4ff004dfd815a7"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "ed133505124212b696422874b73f54e63bbc0b7de65ea81053c3600ecf31312c"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "b175b2477395495664fd751ec3a71cd7ae826007757026cdd0dbb77207e362a0"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "563c62e6a9c8a89868969a021c837a5f60b0bb7ab16a32ee240b3d042ef7fd64"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "6bce706f7f23e8f6f31f3c2513580f26b03ce09c14674868d57219364c0b80f6"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "f605ab01a580f9bc4f15d8b542a5c862bf52c76ba0718640a6e8dda5483a43a8"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "262fcf41858f38fddf080898175982d1a2b09db46aff7b46ecc6d42a35a50930"
+      }
+    ]
+  },
+  "W3-discoveryworld-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "d080693fc3a3d1b092d2d251fafef5fcd1cbae7aba32c9e769e13aa3e394b658"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "3788729cfdef7e37a03912c51b66bfb3543a2abda4782b2752bc31b0141bef29"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "673c7a00ae4dfde71672cd658928938864229c079daea0dbea0d1b663756b430"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "f7dd9aec54445baa2831527cf8c8f0775b4d7bd8fa1bd50c2143807368bf1489"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "1b2db2bd547ae385807c7d02507b165082fec5f119ca43fd68229a7945391b73"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "afe25eb3ece7125e1772e79ebfc3a831b2aa09c724691e4e8325de532ec232d0"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "f0c33ecd7e8ae27f87e9e9e2591df0cf938007b6e59fe11ff831677761f9482f"
+      }
+    ]
+  },
+  "W3-humanclaw-01": {
+    "judgements": {},
+    "recordedOutcomes": []
+  },
+  "W3-humanclaw-02": {
+    "judgements": {},
+    "recordedOutcomes": []
+  },
+  "W3-humanclaw-03": {
+    "judgements": {},
+    "recordedOutcomes": []
+  },
+  "W3-scienceworld_text-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "c539dc6b6f8cec519fe84e857e36fad874729d18600a08b6f7e4281933e8642b"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "39ceb6edf09793fec9b433e9f6903a4d89eb1ffbc5ba2a7255f19b5ca3935420"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "bf0c138703276f3422d670e26e56709e2804ddb603b1206e6b657324ca61ecfe"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "7fcfca011d3c0ef0670dc8f798057caf251f0480b3a9a9907386909a179b9542"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "c4d54b7616bd3a710d47927e6f4f1489d9faf0a0ceefed114ece5cce53ef8424"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "efd57b4d857b1739a476f2f23464bc18af5474771c98915dd455084d9702e318"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "6d312af2050e74f7cef3665dd7753edd9f45ca0266f38793dae1a69085c24299"
+      }
+    ]
+  },
+  "W3-scienceworld_text-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "ed49e5c3a7d2bbe510cfda8bcde6962ac2efd7813517fdcdba04a82b64f5ac4e"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "479b59263b2cc2e04f68a142242764337acaa297bb36148be2fbe59b73a21163"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "c725ccff2d8ff90e4f60d2a8776501301fdf2afa433e3bc28b8ac232616b40ee"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "de6d371e71d55b0c739d003230fb69231dc9a6f241be1bd0f727fac7133db8c6"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "d34bface8738125c2cd88f69a4107747c1614bdb5593d03748ee91bf7c24972d"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "74c3b288fa32929b557db52754d6e7a6e62b8cc36cb70a50d084755fed5463b7"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "23099c4dc6873eba18fd51348ad0fbaff076b885095a716fd492298b4832f01c"
+      }
+    ]
+  },
+  "W3-scienceworld_text-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "1a1cd8eb9bb14c424e718dfe09f03f9e941082a128621f9a29c35b16abb606a9"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "91eb2ad7c96ac3c612c04035408dc73104fa3a00cf52069282c30f0d1e58d808"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "57fb0e78f77aaacea64df318112888bf04f6ba94d558af533e69ad255b50ae3b"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "7cd62741e0a7693bb6f0760075f3c4fd86c899c5e0d0d1d7fbd1b49b7bbdb4e3"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "503052e824a5f667b8ebacba8d440dd95739504fb2e2d0368f4ab4311b54b531"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "28166c8a8895e3c09c9bfedf9849400c55e9c44caeadb86464154e0f3162e7e0"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "ffa21d252e2a01ed47d6ac36507dcae3c52bfb11ad60c9bbe19a06da96b54aea"
+      }
+    ]
+  },
+  "W3-virtualhome_symbolic-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "b28eb08f4cc1c3e8329a5bda6d97de44472a0fd765628b71407731753dc78092"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "364504e57cb29aa68b3fa64f4da884a849735301bff5eb0ca4593e9575a571c4"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "9c0a2279545288e82ec4a933d971c9e78ac7d395fd01b41de91aa7ad5fd36dc2"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "3a8eca449c99f11956446d8cde36b3901b39f390e7bc1d471c409a93c6e599c5"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "0480d0af9f5d60c42f8435f46d80e26d383a55ead44eba1ee276116fd80589d6"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "2a34bc8f7a7fc81ae3f1f1d6ee3b29a7ee30600cb7a718f53ab1d439e93fe6c8"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "789c3526f769b65e4088de30958ff36990c7c79f23cd389525681afdd39b3cd8"
+      }
+    ]
+  },
+  "W3-virtualhome_symbolic-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "37c9b9a41af6eaa8d0353020e1347a87a3bd6b6fc6c2f901899a43935c43eda1"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "8cce8096c42e028ace3d8bef98729575b896222797ab91a213ae7c7f735f9d2c"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "7a3d266ee83e2eb893ef92a5dc7d12164c4cc97af31ebd36e51a775267820964"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "e3bec63c96f5b4d088865f6de58cef83915ce7dfdee6f056f2bc5f9ee8144ecf"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "2d61feaf38f04c7474a4f2db8c01e7a3c9935af79c54ba8ba7d02541deec301e"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "95a79d3210102c9eb046f8ef6ccfc02d1605b68b96492d490c7c188782838e00"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "d6c09c0e19772a6518c02a92048cf730ed1626615edeb7cbebf6828e63b37367"
+      }
+    ]
+  },
+  "W3-virtualhome_symbolic-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "5cbb72caa34647e1da9e92119ebcdc7322847195f745ead96a496b9bdc3b483d"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "e4b19411f95088c7a81b17f9c90d17c98e04e72ac6291ba166569c9531c57001"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "3b525389c86f8124cc64366fae4475372556f706c8369603746b2278bc7a85f3"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "933653c49b335681204ee66cc6ad433e31501aa0f6b0802446af0fe291afb21d"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "dd6abf1e25992edcf1d7918173b87b786f557fac7f4e24e90131dad8c0f7d669"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "270ed89193fa81bc0bb353d5df491ec25a1fc550478e0317148b740b421bed82"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "4445b92032277c3e94b7c1cccd0917714aacd8def75ad6b363f5ef0cf7881c70"
+      }
+    ]
+  },
+  "W4-calvin-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "109d738b82eac71d40f69ea938d2d5fec9d2a08d8b18a98ac40a5940e08d3b1e"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "903a7d52f4f6f1c7d2c30e5208402f60556ab40c2ee5f90a83117261910004ac"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "5fe956956f5a1d647f57b048f79a09559784545acfe13a3adbc2c1aa066a24e2"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "9ac0306120cfdd97e422f53e8dbd6d15c3e296d64a1c9d6a2c8b6df53b910bd6"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "e0a82652f015f35d42118a8d6ae41b48ca2ca05ac9a8dd1c2c0289feb0966bb7"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "a62fb8e8cf61aaf3545062366bbe11d0976682bae17672406a78197a56dedca4"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "217005d81c3138b92685cad6a84c8723930f09ad792cce96a8a92c0f8ab68289"
+      }
+    ]
+  },
+  "W4-calvin-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "97bdff60c86e0a9d9091d6292dc8e2b766dade9b0c43d81bfa5ffe2491907714"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "9075badd4ddd491bd2ece38490fe46cb2481208fff0e96b3e61f25bb09365342"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "7f103c3af8ec9d855ede70a4a4790aea02179b3d374b95247fbd553a4b5be052"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "1e3d843c6a9b94a7c74b12c956858882ac9af9d65d9b7224245f638712a928f1"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "58e3a65c8e7a1ae700f1458cd0890f4e53622f4de4c993536d0675e825c58b1c"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "b31163aa794b74b11804f37ac1920f185a1c6d43521b37781b8d08d060bd6114"
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "97cd1d66f8c53f0110dd717ac356646910e9f33790982488e2c4d447ef5416c7"
+      }
+    ]
+  },
+  "W4-calvin-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "ec9352c655139c5d376cf7b25692c4544f8fb464ac5f63a2dc86f7c8e00b227e"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "00257dbc939a2b384e6626399c2ee188984e1337eacd30ab499bd118b5466228"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "6666bb993fa6ebd6b7660802fbb0364e8a8bd594eb02a4face740dbc7ffb48bc"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "timeout",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "939deab82a26c1dab125a4362df54b73e2f104c11201e85b945d177381c3dca8"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "18ed0103c533166986632f869e81bc65396f3182dafa4f8fde362caf7e200d41"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "eee34f56210d40047f73e4614d16e4106c2fdf96b185640dbc6b87fe9884efdd"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "4dd16cf1786ad1524a65fe9a7643793eea688130cc9f76efb5e41b9efa220ced"
+      }
+    ]
+  },
+  "W4-capx_behavior1k-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0fea3e6e807fdf36ed2789a9fc37d332f07bddd8518ee3a56119174e2005e2b7"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "42322087bc8329fa6298f6abca005463141bdef3e8495d56f678ca6df7732935"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a43bc0dd45c5c8f13e8b8e5c052fb0c2bfdfa79b1f82ace2512e704532bc10dd"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "d37650a91341f1805023e8b06f7a0eabfa916ffa8d969264a3be63dfa8909a88"
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "41270e70fc277718928b0a33f421ab6ff54c29c3ba05a268287a9403d7f95cba"
+      }
+    ]
+  },
+  "W4-capx_behavior1k-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "66abac85ea1c7f33a9428f0cee9d88e0789d5cd029552da4c2c3c6f6b0cd1b2a"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "99908e530513c4d209b4be6c8c5dca445bbb7a7b0b2e8629308ed912d2e9af61"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "5270706464b7db31c3bc83f5fb435fc373c7ddd05c0d7a97ddd9e648e907e50e"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "661540afbb8f68e210ce2f094e9ab08c460d65a367a942613513dde0310534aa"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "f202ea5c346deac29e6d635b77dea44847ec64e0be15711ca9a42ac23736fc0c"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "7e08cd6e74730c4f0ae68eb0899ed85e090bb6780e73416e82ee9f3e48d4d9af"
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "dc1082e3797be9493dfdf93254510fe7e58df88a7062c9d369d3c2f4b21379eb"
+      }
+    ]
+  },
+  "W4-capx_behavior1k-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a8b8d7efd646dcf351383ba63c90b0e2a88b644ad7cc8791a168576a94345468"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "6a25c55f9de4893d493539367c9814ab9e8b454b2b90e20ce461831ba81d9f4b"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "d4e8e2283b6fe7d45447f0815c67c54d3911bfdcde38c85319e79641103de5ac"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "79cad921cdf194884f293cef1f1adb2eeaec6a0beb593b652946ab1dce5d0276"
+      }
+    ]
+  },
+  "W4-capx_libero_pro-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "runtime_failure",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "6ff3392293fc56b60374408f1616c2909a06b5a17f4b58b1bef8b5b5067cbf91"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "4f719e916b8167b5403e8a062ee3833605f537082ead917d46fe8d9eabed084a"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "36d7c3c5260af1080a1d278aa07c40af3b3a84a3648d4942070ed25075978ddc"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "6dcc521b56a37a17a42b46554904844c7704d93ca765f90b02daed6f22b8b26e"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "da5d929ae4b9acc4e255075b3396c0276fd28719f1e9d66e659ff46738aaeab2"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "e61e20047e7d8b4f435c254b77dd0b3061f4c60feb83143c9ff192e6950b13dd"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0147f829b702f63db2ecef18549cc97e530ac5cdeb81e4671e01e95c33a694c3"
+      }
+    ]
+  },
+  "W4-capx_libero_pro-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "3f4f389bf774a85e0f995247e0ce0961e90cac9ef7a858010a0bb89b6f77089e"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "13cf5e8ebfa2b082d843452f9f4f09c25e5f2595cc205b45d2883e0636f77711"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "1e9a1ef372a21037898b6bbb1f54000494f0292d36ef2bad0f7487372d7beb21"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "b214e3caf3f4ac77fc888ba021cbea985db9156cad08208829f709896b6afe0b"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "04e009c0b9578e0744c511a0559dfab85ebd03c38a75c202d4646211a4c9d0a8"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "fb64631f00fc53ee328c0ee783bd6eee3ef99c30d2a41dcaf766e5560cf71690"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "f7f58bf56e21a686c0230067475bb42d1c085a287f9bf6f9460a9d3f05cb23a5"
+      }
+    ]
+  },
+  "W4-capx_libero_pro-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "2426228ace10e201839d75398e466ed20c4324f56b2413babc0d9ad1be928c5f"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "d4f6da8b15eddef8a3a236fe8f5bac93cf244118afa4baca900a42478bf6e900"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "48954f639dee9733476cd1e1890a17b01d857d9e06d0c8766cf00446f3bf6705"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "c9b0db6db1cc31639a6731ad62023c254b540b1e1cfdd18e84637c81cda02fe4"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0d1e0e88fb28fd51a5dc9d57845c66209874984f335e994a93abd2b9cc565559"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "256d0cbe097be5474746b1667778146c14ac0d86d0bb0b1b0e172e2d62f5f089"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "runtime_failure",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "24f7c044eb5cebf0efd98eba44ad9772fe58fce907f228e3d321cc377c0547aa"
+      }
+    ]
+  },
+  "W4-capx_robosuite-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "135cf51fbceeb6820c6bae33ac16a41128a307b6790e1245725e1f6cbcf3d2c9"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "2dc5ffd69e1b4e4fc356f556c954794b4853c27bb6b6844133474bd601dc9d01"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a2ecba79ab542ca7398f5eebeba643169cc6e95b01447c8366e7d8046bafee10"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "e20930aeb7240883c50fb14173abbeb164633f7a29d4d13fed35c850e94c81b7"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a89e953bfe8e3d2c6810d767f96a72aafd29b38f9afd329b0c01ad05182fe90e"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "131ef7543e00dd2d839ea6629d2fbd556eacca668fc17cd312ed870d6e3de531"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "04a05dfb4baa5bb13625dcc012b52beda5ae75e8ee20831165fbd56efbf5428f"
+      }
+    ]
+  },
+  "W4-capx_robosuite-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "6283ab02e3334cd10c4c16fb84302479ad28e079918d84d013fe3be09ae578f4"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "88894d29c86edb333b7074c67f0ebaa2d15cb424e48698fbd45f852c14c1c326"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "949631301a87ad14c6e3e6b4d50be961b921827a83b0bb990bc8ee58e5c12c51"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "4d467d7299807a4fbcd958c54883d9a055193f6a6e3e6c7c83625e9ecc1bb610"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "73749828a2b28212da39bc10125f117d55bfb6179fc499433d1d927d4ca52039"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "003feb4ad864310ee6da528401b08b66722bee7229e58333e1868d1463294176"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "9df66f532753fedc00e628be2f42ef74ba67f4cd02e829c2f83191e98ec8ad19"
+      }
+    ]
+  },
+  "W4-capx_robosuite-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "80a7b4a891b21c3cfdfb7456671ef30c18a619953deac90d0d13295c36885898"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "4acc1a4ad1f764e2d0ca5e48fac4fc43f5a9b89c58d39c4f4574d7158164ed56"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0149dde5f6ae3fe3849e5b7b74b4b9f013d717887eba1198e03222f8a16da4ab"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "e2c4aeb9bc9e0e6816f0db9def6611fe1734e777e332ab82459d0489599f4b3f"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "3cd17717a26649e041bbff0524f07ffd5de6f4ec4390546407d93c2280410c4f"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "f0f0ee4300bbeed9c28f9b36078d714b109728d33458907508261e4b44f3a1a8"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "bf1af0135b26885b570a9f55a65db9080260bd9341db5c15502b089d0c4d16ad"
+      }
+    ]
+  },
+  "W4-cliport-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "5531613a224a11b5cca109d45e755a55c5d9fc5d9fbf03b28aad4672adc62456"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "cc3e99d36ba6ab6f6da7b5feebc2b14e7ae29aee683490377f6ce9e208fad32a"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "6795150cbfb7a91212df68180f1d9106acb9b4da2bb9b81d48c336a495b7d7f4"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "f064cbac201cf453a1f99b39204c4a44c00c2c39af7f2f6a39bcfabd70c0c141"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "4dc4c3594f71ec9efe3fc2a8ee8d32b19408f4fe924d80bc67fc6a8d31e760e4"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "30d373b1dd7100a221fe1ae630419eab48b3e564148b646838e06b04a23b28be"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "36693b4dfdaf69063c50980e41dc9e486336a9bcf168ffde5559864027d4ac0f"
+      }
+    ]
+  },
+  "W4-cliport-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "99fb8566affad741b602ac2e9d60c5da5e1eab47cd72dd1519f6930acc6ef36b"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "d1c5c42c1ea1fd3b600f631720f58d745cc2c2be1ce0bfa69a29fa9766465212"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "c768113cbfea79975e5eca6054e64ee6bf0a7e504310483457c8d037ef6efcd0"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "20a7ae0142d9dc1cb696736b9317e98fb007700efc8d525ba11fe659f07a4b54"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "ecc0c093f9dcec1a8f3568647b9d89e127f6d8bec1d1273c63e7c58329306fbc"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "60ef0cdc86cfb31b27403d05a3df56a81521a896404de1c321e786f705fccf80"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "2714dc6ce6c4291582cd4f27bc01cd15af505feb94d65995e1e8d58e030f19a8"
+      }
+    ]
+  },
+  "W4-cliport-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3072e415290c4c984acb83db3887dc9996351bf46d7638d2a6cc40076e49cbdd"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3aaa6088c2b10fb3d1dec875b82f9fa34cc136e0b433f306f72143328ff81578"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3fffb731c1b830bd27b4ec577044e2324d6c4614f47c34ef59ba0c161ac1c26b"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "d3b17f57962a0d0ab288d3e7ac13feb998e572edd8e49fd3bf7509d6b8db5fb8"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "bad579c100f24b35575ca4ee2e420420b66eca2f2b2caa153ee031df646e8ffa"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "33a9405ec796c657e0f8ebd1c5c7e775ce9bcd02851bbd05b57345bbeeeb697e"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "165f0966d37cfac9d62aea32aa29038952819e0e49224b03a7f615d47b7545db"
+      }
+    ]
+  },
+  "W4-maniskill-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "542a8400c4546347470a84fda05bf4a40183d107fe3f56250f75da70b3423fc0"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3daf55e0a7ccd023c04413c1426f47ec51accf6745dd0aa64218c74f09f74b1a"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "dfbff8f8721453b6a6df0a270cae266e8c2513beddfbf3b8ef3d73f73560832b"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "344d8949873616b735bc499a23d18da8175689103a0a627bf46ce06a0607e098"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "6d97db8f8f9b8d656d420926148d29401bf69ee173d4f479f454313bf90fc078"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "ca1f85471e472e116676c91f35ef94525c612ba75e71abb1dc4c2be13c36b1f9"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "f158c2858c28512e132666ced52b12bc246fe63e9cfd0038c0d4b673f4aa6451"
+      }
+    ]
+  },
+  "W4-maniskill-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "71032ce7c3f2c403efd2c4540ca79c30dc4066b33f846b432c44a446c7f3c699"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "7f05141f0c4310781e505999450a97d20835cf686ec4f5b796d287440f74dda3"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "a0b50ba68e0cda8fcc88e9a445236f2f7791400c19b935d901ca85a493f4059a"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "82630adf8024182bc1250915441933e78bdcfb6e9abe0c2f5599db3ad4cccb6e"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "5eb0e419a2981a66f8792ac051f1923f7c8954ca5dc4e7818cdbde5e9c23464a"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "cd0339b394ba06acf9e8344ee44b2e510adb3062e07b1a20da8699820ba97f6d"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "f5e4767727c030d22d472a4a4b0dada680a1385958ddfb439a876270c6c79594"
+      }
+    ]
+  },
+  "W4-maniskill-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "009c0a86b4f186dc2300c725558851fc5b51fd006ee82cb10019e273c4612e2d"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "e4800c0f251946aa146b503e6cca2c4e437a4bfe6f3f46d2f797d586763dc804"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "edf565dd7ee1033404a15ab71dc1d907223f31d106c0ad869d308d2541f31f52"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "75c8ecb706dd8bf95fa5add1cf3015bae5d8a283f5574fdcc6c5d61979c8e4ac"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "13ec25f0d4eb2194c03ae7b317a035589e442228a1c41d114fd3d322efa3ddbb"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "4b1fb9c9443386e02f97bacfda7f567da2fc5818fcaeaa92aba2c3e4d111d40d"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "d7afd8fd2144ed59b0d2be0587f60dff6bc4517c9f43f882368cf9c522be4cfc"
+      }
+    ]
+  },
+  "W4-rlbench-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "timeout",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "fc456dbac83e899078e9165bbb573d3695f597c7ca949538efdf120f9aea63f7"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "timeout",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "b9df466037418809a26ea3505070b20edce026a694b105a0152737f58f5d4310"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "46c8491db8fd0581ec663d1afdb83592ed21296432c9fa1a0333b5e37a7cd40e"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "timeout",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "e26ec7703e2bee5b3fef63dd7dce10ff7b0ca91ad14c1f0314a2d9540982e757"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "cd1156155188015330baf7d109a854a38889e70d71d3319fa402c800a632d377"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "af4a57057761ad83c916615f0963d4e8e323fc3755b966580ff6e502772aba53"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "91363ef7efa4098f29f0000818b1ff0823b2c18ab50fe74d396b325f943d4c4d"
+      }
+    ]
+  },
+  "W4-rlbench-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "9c67e69e729b8b6c2bb177d6d1a60f2b47fcb5e3a6cc193fa64487ea8d2e7b5f"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "2ef7293fc81cff43ff2b3666bf427d9361a3e6d71703cf1ee7154f9ad375d6d8"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "bed16f4a3f3ae18ba5e5f36b30172874c341ac51ccd8ad7f9f763db985aa7aaa"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "be7b4a46734764cc58422226ae718909b850f1ee02a32473f5325305a2e7eff1"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "c4a5551d2269aff19912c6789b61004f2f6e3b35d19eee8eda4f22cace7f9bcf"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "ad8504d697e8f3736ebb61d5a0b42f963e107820bd6ae160eb67bf8d7ed056aa"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "973dbfa424efa1d4d6ca0243d90907d2f0324e14478abdac0f70eb673655feca"
+      }
+    ]
+  },
+  "W4-rlbench-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "91ddbbc5bd1bd7e7d5c16d6f79c6d43ce1298399f250938f4bc6778a57871317"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "e36546d0cf8478df795e25fda63239fc7bb5c7eb649a7f117979ad26ee59ac25"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "timeout",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "c776b34ab5a937e74c473619dc0c3ddfa26a036a7c6738d87438703b1150a8e7"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "16043d82e6d374d67426d96745518cdf3b431237951e1b5912e72e07b1d2829b"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "fe7d2016dd58a64f7dec7ba2f4d74af4caef658484191b30c0a50d4234081118"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "d5d94b9257fb6c465b841fa832880aac38ecfabc1b519a253bb0c96279a04089"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "b5f482ae728664deccabada560004c7db134f994d5fad215a47d0039d96c4b18"
+      }
+    ]
+  },
+  "W4-robocasa-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "aa5d00777641131433d8b7c42dd7659e0cfc91d37c37237e133d8b61400f5fd9"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "6170d6ee4d9646f5b7e66e6ff1d8dfe5216f4adf7be526a03641b24a000145f3"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a30ee8b2d336bcd03f678250cc61f56659d5f3f22067df127c07fdec38502ba4"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "15f186ed190a4740f73f30940febbcd9488e4d6ebde9efd97bf1cc57c612d518"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "cab606c788a9a52c9d5bc3d62c4fd636436acce5d0bd4b0360e930b3592de714"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "8a519d6a6477750bc0d91a730d4f159ac28011b8efbe006d33a24f28d52a460f"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a377893b198635cd3af92269c3c50dbf5a8976d7dcbb13528ae0ddf2aeb27d27"
+      }
+    ]
+  },
+  "W4-robocasa-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "7efbc23043667d9064635fc7cfa28249f1398a5cea6064de6c2157dcf6287cc4"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "b6003b925f870f5d6e8dab41b93d2c180772f121437e672aa1c709f61608c02a"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "5a9ed0ca7fb7a59b4716e5acadf5b986fd0a7a4ee5a1a2d491777aaa7ca28e2b"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "29e7e48f3c10f3f3467c599a773cd9aa3d942d773f3c718c9b5b3d978ca7a0ee"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "516e6dacd7d59c0697c6f1a076c2dee3326ffbe9d390365618715c8eed02edcd"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "c906c5cd522e33c755b330bbc0ecec0fa2093ace833a1e6574707478909d6add"
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "ff20170ea550eae189a2e5e241cc92ea95c2bf6c982334d6f6e4b3da6c771502"
+      }
+    ]
+  },
+  "W4-robocasa-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "86e4724e6b82abd6648f50c6788aabd029e2d6b9671500a51a1a44b5a00d7637"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "13e5164f95ad502fb25affd0e4c42135855628ad8ffa78714880ee90c9152acb"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "833189147feadb084633018e26f2948328e318d263e1a8bfd35440403acda1a2"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "345ba6074d59bbd77dc74e1ed74974a4ec5b5624acc20ab4b9848ebad9452e70"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "runtime_failure",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "351606b8f68506574c9e7aa26fa1aa8d238d73fe05371bb11cbb13df5a8f1af4"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "ad6ce6f72eb5841bbb23191b5d9d71f9f27f48e27ad70956f9df379602d7580a"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "9f4f2df9652dcfad660b6cda3162c887f24e5a150adc110b35307c62af53fdbc"
+      }
+    ]
+  },
+  "W4-robocasa365-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "421e58e3ed282d01781f11051a40dbe02952a9441a583328d904c26775d9b7bd"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "adb315a95463339390c9d2ca0fc434c8cebdaf186ee58b199f277c4a4cd04919"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a47d883930aa250f5fb20923305bdaafcf69f3469496294e8536e32037957418"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "82f469327568ad206c935beb7fdea91561ac138623f656579861f7e22549b05c"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "5cf305640c6eab6a87a46fa84b19b3cb19967c6ee05707b66f43d73b0ec8b8f7"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "2344535b59f31617a15bae9c07683cfff38567f07ed204aab215d29e57e95f07"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "987a6dffc5121423b7d46264c3a2cbabe8fef11ca8927b5550abc3d9053810f0"
+      }
+    ]
+  },
+  "W4-robocasa365-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "1852ce5891f192d8903102bfe04b29180f062639108897eb22cf44c40cb9651f"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0ac5a2811da309bf1871f7522ec968a09d0846060fabec6522ea2c6577b38ab9"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "107f4b63318d420c85f90efd079b482b719e6d871aa47734ec0f5c91537d9d81"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "runtime_failure",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0c251c63b5fe5008e465504a9bee977b9a043117cc30d67384c58891ca179837"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "20853a42a41935268e7c8c125ac715512c1ffaedadbf3e8528109be35f9137a9"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "5d851e118e46dc60f79098366e30a8a78d26cde58104ab99fd4f4c8bf6456049"
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "20fcf1a89580fe984c9c85cf5ff53ad0c64187efae418549f93feff46f65ae2a"
+      }
+    ]
+  },
+  "W4-robocasa365-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "b30735d203429f860cc4b08d9be5c56a1985f2f78a758836c2a44decd1f3737e"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "f8e7a1b34805d15d96fe4aa659d22a6c0fe94776ddf9439ae1feab20b1ad46de"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0984be648dec57622b738acc0a3954aa51d3cef865a46d0f06eaaeff22a82af9"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "e16bc2a6e6d95af1e8919353e5a5b58c40c33fc7fb87ba76f120ab00a5471387"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "cd7c675e36ad5a41cd8786a2f47e48505986b83b5a8da9af443dc2a37071ab9a"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "c7fa951b73f7c163af2e851e641b529aaee331ce835e6a94047f98be35d59308"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "c53742dc5a582c24301502e7d85280e1a88fdb6343ea738a752d70ecbc8c802b"
+      }
+    ]
+  },
+  "W4-robotwin2-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "2dbe941f1781105503cc95f34fc98424e79499e88ffbb8bb43c7e33d15dcf4f0"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "29deaa7d5e2e11dc997c1ec308fa563f0f5079d5f2c9dfe4e1882f11577ce1d7"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "219041310565e345773ea89f2950134618e5391c71827d0ed5ffd2c549bc8f9e"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "a3a85fa4767b1ead756e28a2befd207995d10d63359a808f26906f25f2dd3fce"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "73dd362ab459d4d60958ca291bd9974610ce96cd40d3bcfcaaeaaedf6c4d9793"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "51d8a2f4637b54ae7eaed6c527a468cd73f20817cdf613c65e50b464a82e85e8"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "1b475f75db4b135aa1a54efd9a35d2a240206debff64a3fa7f12fb6392e0b4da"
+      }
+    ]
+  },
+  "W4-robotwin2-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "81ce632e9f8adf0aa4a865867b8d0fa545e2c00df25cc03f601be72b97b63d27"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "fad7a671455759e368a54cb29a560c9cdfbdfb93dc9d6972231e5aa3f43bb7ac"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "0c9df152ec29ac452ded1680f0ef95a61cbd6cecf36d609d88ecb5bec445cc73"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "c6f720950588a02ed2be00c8108eb0962c1d4832c576683c335bfd7503138420"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "1e8bf11fbd9440fdd7b19b2305dabb6f9f40c7a371ae5aa0625c3d0ae5fb21ff"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "201c4bfe9db184faff6862d90489061bcd6e4bf384be27138c2bf5c950f81918"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "76256bb3fb5310946387c64177f5e8e37dc9c46851ef48d7140420d8fa1687d8"
+      }
+    ]
+  },
+  "W4-robotwin2-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "66d07197db420744d58c824aeab39dc69ea88df680bc8c17b7e9a19e08a881cf"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "6875cf075dadeda3d1cfb0a1c13049809551dd0b1faaa92c864fdb9f32c674cd"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "4584a4c041e55b3c40291af4fc8a7dd912f24df0148342a25d516faddaac34cf"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "34ecd73941d462859795ee89521cfcd5017f5afa49657d7c40899f22891016ba"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "03955b405781b4df11dd9984fa466b674cda9f7dc3002054da8c6f2349b41f37"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "b40dfc4b9ef368f4280bb997ff8694bf586c6c3040613deb01d54b57bcb3761b"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "32721f3cc7710b57870d0ce0daf2ec519b540e1115cab06405ef65bae1b01927"
+      }
+    ]
+  },
+  "W4-robowits-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "db396a14c34aa89f26f4d73a94c08783165759acc948a9bba09a7f4e29ff3032"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "302c36f32c9a9b4accb7efa129dc16d7d89e387e803ab4fd582c75871ed85fa6"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "601e1aab33a4b1fef6f2f02e2b89b3a578af73844444997ae0f33f83202465bb"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "5feb1846f3959d66148cebcef69f7d497a8be5806b3032ab234487550a8b7409"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "31ae81057bab80d4d77df3db1979f820c4e99a6aaede4667cebc48b1e8b38a4c"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "fbed33eba872ff0f0fbef2f0a5dc6a8702af97c2f1d006abfc9348b9588d79b6"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "7d7bf6f65954814c5ed8a7e957b9a5699b99fee42b1a6c5a75e0291970a03990"
+      }
+    ]
+  },
+  "W4-robowits-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "ee578e59a805f43d57f272fe8e9b7137d486c1688719523afc5c802ab859bd28"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "f77a23fdd5e1018cc8500d78db8541cd65038045d05d7339838bba5d8e8fe34c"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "a993cb6a05abbac82efa4788090836d5cd2592d5c3166662dc422849951ee769"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "9ce452e7b95f6470b880ea6fecf1e75d318592b0d1219e751c0a712cc44909f7"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "71003fa2248d3a79632bfa995bdc019c60cd2fec427b7dec3b0a80b1aabc2a41"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "0589051f2f2f04a75c838c1c70de911436ede8623d1fe9d98fb26378c2be0c54"
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "19881f0b7f9b64927d3f1091664b4d057141384bb34a84ffb3faf11814f7cc0d"
+      }
+    ]
+  },
+  "W4-robowits-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "25398297c5cbb07d6fb80fefd9f7298841c38505aa06d573b4f59c4ce38d8727"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "9d2cf340966197c9a08325fcb981484414bbe034bc34faf51bd5a9a64e8b3f02"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "485c2ed4fac17aef45547670777b5f41639f59ff1cbf62f8d325c2549c37e3c9"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "4b39c872ce92ef4b4292c4a0a025462e6135839fd1869b807a29ba4888ef71b3"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "3f34a5f9bdc9112c6bc90f37c5777ef9a9f555c8abd5a6442377f7f455058a79"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "de0c51e4c4c0013de8c963187ec77a923179a0d0957b2256b77a3ad6fa9fcae8"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "4558605d2e89085d059565d59d6abc7115ea1c4e0caba56a1f5f34dc358447f7"
+      }
+    ]
+  },
+  "W4-vimabench-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "2e340934a410a5325df836399f72e2e450d4ed408f3b12ad4a11a1e86a8d8a09"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "7cad0715dd46fb31d3ea66ba55b54e4ef45bd01e7c2a43b17d7f213666d2baa5"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "f808d09f328422681f599e09629071cc5af63aca6d9f50781cee217007a12aab"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "c6b61f4df06d5575069fd956e147e304a7a3129d78b42d05904c1aef6376c80c"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "db5cc7256561453529400490a577984b67f0704683faaaf1dac10a2ed605e3fa"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "8dcc005f852dd3a327ed644144d27aff32737502ec6974f5fab90907e3ff9707"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "5b00003aa8aa0d1f4bf44b39fddc49f20f62aeff85c54a3c334205f347e3ae2d"
+      }
+    ]
+  },
+  "W4-vimabench-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "122248c0583a44a10bf84605fdeb7c5fc1175b74fe732e4d3894a022339204a1"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "6f4317069d4a1cdfe0bdfc68c4b8bea4850ff49457d7d663297347bd15cd2ad2"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "88bb1cbd986430c9627f7b6e71e91151de59e09937a11ad2312b83e6640caace"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3f8c9550a77f81cc9ff01582baa738addb3837625eadb19827aa08abb392f662"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "5fea14e301a16a09e2f929647df465815e8f116b302bc1b8487c2190ce0e4d0b"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "d78a28e870c695c87d8bc2abba6cecdcc85e8b52257cc33cef112a49f4fba7f2"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "7c1960dce6f905437d5ad91293c045d107ba31fa86bdbe9454cb02cee8fc0a4e"
+      }
+    ]
+  },
+  "W4-vimabench-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "1512cb39c649ecf55e54b1b1c32ab7cf6c0cd88bfee468711c90d0c260e0a23c"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3d4c4bc40239fb666d9168ac1e70732cb7e6c5401fd6aa4483be666fa8f39b44"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "0bf92f278bceb3f097ed96bf0f96e71260dd7a29102b1a28ce4eb8384496bbe4"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "ea920e0ce273397b24570979523480e025290bb07e011b85861fb05c0d88f01d"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "44dbd81d16b1af98a620d8c9c23b05e6051198ab93811363b945dcb6d7d10785"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "43a5f3f43c4045afb6fba1cce92e89ecd9521b8b452cc09852c6d555b1c08bfb"
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Observation setting unverified",
+        "sourceReportSha256": "6a744888cc3d13310ae537b99f321de4b2b066e83ecb5b3108d410b0e699bd9e"
+      }
+    ]
+  },
+  "W4-vlabench-01": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "8875cb2d299bb6ebf21fce34039df7f6fa76d3d8a4f033b5af83c8511247fa46"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "96d93626386d044bf85ca95cef92ceceb6d72e008418ac1d418b07e307d81a18"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "fd7d22ef0d23e42f9f4a13c0d87c2ce92377a0d23ba184176ba77b0d215e9335"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "91ff70d9b4e10dd015d511ed84d44adc7e864a05c242c1b0ae8ae2b12ecd2ff9"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "6b9902d40f42f320b3ff529267d846557fbb547d2403356a5a1871f83223977f"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "37cc1a982fa687da40139693c6f7cea5bfd550664dbe44486dc54283d15b5d5a"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "309a22fa3bbe6b05ca9c634b1d810eb44a52a6123ca4ed3ad50f86bd7221b7ac"
+      }
+    ]
+  },
+  "W4-vlabench-02": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "9700e68d74568e21befd77e23458387861a08de4c89edf28504df7bc14019b28"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "00ec0b1c63bad5c453be8b4853a7a0f767b11292666545cb6f33e164ccd94d62"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "ae1747722306e985b5195bff9aee67ca95c7f919c19dd083fd01b8387bfa71db"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "4f5afb6e0e926aa880d91d83e7be7e187312f08d58b2b2bf0c561a2b768d46aa"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "eae58ad4a8d6682e86bc85ff72a0dad8fe7f24efea8433fb1a89efedff91009f"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "9410f82a5c5ea252f4fa184d77c0c88a7c4b45505860368caf7cc763b2840bd3"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "59598db09fe8672b515f67c0e962e9521eda94562a5146d7e69466c3aa5b272d"
+      }
+    ]
+  },
+  "W4-vlabench-03": {
+    "judgements": {},
+    "recordedOutcomes": [
+      {
+        "model": "GPT-6 Astra",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "2c97644161f34db15b085ebf53d1a373230cfbefe15becdda5dc6ed6166c55db"
+      },
+      {
+        "model": "GPT-6 Sol",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "edfd3a15bf48dab2092842f3003918601dd9afe9d9de0f915b9fd60cfd42448e"
+      },
+      {
+        "model": "Claude Fable 5.1",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3f4bc5fba425380dd7faef7dc4f8b73e01f0ce85c96bad4701dabb9567b4002a"
+      },
+      {
+        "model": "Gemini 3.8 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "3f7e0aa0b9b8a9573aa844c4631d59c146d4355a47be93446565edca80ea6723"
+      },
+      {
+        "model": "Qwen 3.8 Max",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "40ba749abc25e3358de4a7cc84dc36cb373c941afdb58b90558531560a0f841a"
+      },
+      {
+        "model": "Qwen 3.5 397B-A17B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "cbc6c2642513c69e542eadab06261be06f260cf1b20d8130a2fc465e3996ca7d"
+      },
+      {
+        "model": "Qwen 3.5 27B",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "RGB-expanded",
+        "sourceReportSha256": "e24fbba5cd131b93e43bc32aad8df6d9278958ccdb43216962a8ad1217f2e658"
+      }
+    ]
+  },
+  "W5-w5_ragnet-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W5-w5_ragnet-02": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W5-w5_ragnet-03": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W5-w5_reasonaff-01": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W5-w5_reasonaff-02": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W5-w5_reasonaff-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      512,
+      512
+    ]
+  },
+  "W5-w5_umd-01": {
+    "judgements": {
+      "GPT-6 Astra": false,
+      "GPT-6 Sol": false,
+      "Claude Fable 5.1": false,
+      "Qwen 3.8 Max": false,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": false,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": false
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W5-w5_umd-02": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": true,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": true,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  },
+  "W5-w5_umd-03": {
+    "judgements": {
+      "GPT-6 Astra": true,
+      "GPT-6 Sol": true,
+      "Claude Fable 5.1": true,
+      "Qwen 3.8 Max": true,
+      "Gemini 3.8 Flash": false,
+      "Qwen 3.5 397B-A17B": true,
+      "Qwen 3.5 27B": false,
+      "Claude Opus 5.5": true
+    },
+    "recordedOutcomes": [],
+    "imageSize": [
+      640,
+      480
+    ]
+  }
+}
