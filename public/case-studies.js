@@ -160,8 +160,10 @@
   let allCases=[], shown=[], slides=[], current=0, isVisible=false, ticking=false;
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   let observer;
-  const preferred=['W1-w1_vlm_motion_real-01','W2-w2_mindcube-01','W5-w5_umd-03','W3-alfworld_visual-01','W4-calvin-01','W1-w1_tracespatial_3d-01','W2-w2_3dsrbench-01','W5-w5_ragnet-02','W3-discoveryworld-01','W4-capx_libero_pro-03'];
-  const priority=c=>preferred.includes(c.id)?preferred.indexOf(c.id):c.paperSelected?100:200;
+  // Cover every supplied benchmark/subset; retain paper cases and contrasting tasks.
+  const showcaseIds = ["W1-w1_vlm_motion_real-01", "W2-w2_mindcube-01", "W5-w5_umd-03", "W3-alfworld_visual-01", "W4-calvin-01", "W1-w1_tracespatial_3d-01", "W2-w2_3dsrbench-01", "W5-w5_ragnet-02", "W3-discoveryworld-01", "W4-capx_libero_pro-03", "W1-w1_influx-01", "W2-w2_bop_ask-01", "W5-w5_reasonaff-03", "W3-alfred_official_visual-01", "W4-calvin-03", "W1-w1_mapfree-01", "W2-w2_mmsi_bench-01", "W5-w5_umd-01", "W3-alfworld_visual-03", "W4-capx_behavior1k-01", "W1-w1_multispa-01", "W2-w2_robospatial-01", "W3-humanclaw-02", "W4-capx_robosuite-01", "W1-w1_multispa-02", "W2-w2_vsi_bench-01", "W3-scienceworld_text-01", "W4-cliport-01", "W1-w1_tracespatial_2d-01", "W2-w2_vsi_bench-02", "W3-virtualhome_symbolic-01", "W4-maniskill-01", "W1-w1_vlm_depth-01", "W4-rlbench-01", "W1-w1_vlm_focal-01", "W4-robocasa-01", "W1-w1_vlm_intrinsics-01", "W4-robocasa-02", "W1-w1_vlm_motion_camera-01", "W4-robocasa365-01", "W1-w1_vlm_motion_camera_large-01", "W4-robotwin2-01", "W1-w1_vlm_motion_fixed-01", "W4-robowits-01", "W1-w1_vlm_pose-01", "W4-vimabench-01", "W1-w1_vlm_reference-01", "W4-vlabench-01", "W1-w1_vlm_reference-03", "W1-w1_vlm_size-01"];
+  const showcase = new Set(showcaseIds);
+  const priority=c=>showcase.has(c.id)?showcaseIds.indexOf(c.id):200;
   function hydrate(index) {
     for(let i=Math.max(0,index-1);i<=Math.min(slides.length-1,index+1);i++) {
       const slide=slides[i]; if(!slide || slide.dataset.ready) continue;
@@ -199,7 +201,7 @@
   }
   function applyFilter() {
     const query=(search?.value||'').trim().toLowerCase();
-    shown=allCases.filter(c=>(active==='all'||active==='highlights'&&c.paperSelected||c.domainKey===active)&&(!query||[c.benchmark,c.title,c.shortTask,c.question,...c.predictions.map(p=>p.model)].join(' ').toLowerCase().includes(query))).sort((a,b)=>priority(a)-priority(b));
+    shown=allCases.filter(c=>(active==='all'||active==='highlights'&&showcase.has(c.id)||c.domainKey===active)&&(!query||[c.benchmark,c.title,c.shortTask,c.question,...c.predictions.map(p=>p.model)].join(' ').toLowerCase().includes(query))).sort((a,b)=>priority(a)-priority(b));
     track.querySelectorAll('video').forEach(v=>v.pause());
     track.innerHTML=shown.map((c,i)=>`<div class="gallery-slot" aria-label="${esc(c.benchmark)}: ${esc(c.title)}"><p class="gallery-loading">${i+1} · ${esc(c.benchmark)}</p></div>`).join('');
     slides=[...track.children];current=0;hydrate(0);track.scrollLeft=0;
