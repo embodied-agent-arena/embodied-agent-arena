@@ -58,6 +58,8 @@ Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent
 
 ## News
 
+- **2026.10.15** — Expanded the [interactive gallery](https://embodied-agent-arena.github.io/embodied-agent-arena/#latest-cases) with 152 model recordings across task planning and manipulation. Browse eight-model showcases or inspect matching tasks, with instructions and run details.
+
 - **2026.10.12** — Added Claude Opus 5.5 to the quantitative comparison, with repetition statistics and explicit evaluation coverage.
 
 - **2026.10.12** — Explore the [129-case atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html) and five new qualitative case figures in the [updated manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=48).

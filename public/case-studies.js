@@ -11,13 +11,16 @@
   const domains = {geometry:'Geometry',spatial:'Spatial Reasoning',affordance:'Affordance',planning:'Task Planning',manipulation:'Manipulation'};
   const arrows = {right:'→',down_right:'↘',down:'↓',down_left:'↙',left:'←',up_left:'↖',up:'↑',up_right:'↗',none:'Stationary'};
   const budgetNames = {max_code_turns:'Code rounds',max_agent_iterations:'Model rounds',max_total_tokens:'Tokens',trial_timeout_seconds:'Time ceiling (s)',timeout_seconds:'Time ceiling (s)',max_env_steps:'Environment steps',max_primitive_calls:'Primitive calls',max_verifier_calls:'Verifier calls',code_timeout_seconds:'Per-cell time (s)',max_agent_attempts:'Agent attempts',llm_num_retries:'Request retries'};
-  let records, metadata = {}, currentUrl, trigger, openId;
+  let records, metadata = {}, mediaData = {}, currentUrl, trigger, openId;
+  const pausedCases = new Set();
+  const manualPlay = new Set();
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
     fetch('data/case-studies.json').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();})
-  ]).then(([cases, meta]) => {records = new Map(cases.map(c => [c.id,c])); metadata = meta; return cases;});
+    fetch('data/case-gallery.json').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-media.json').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
+  ]).then(([cases, meta, media]) => {mediaData=media; const all=[...cases,...media.groups]; records = new Map(all.map(c => [c.id,c])); metadata = meta; return all;});
   const metricSpecs = [
     ['absolute_error_cm','Distance error','cm',1],['trace_3d_frechet','3D Fréchet distance','m',1],
     ['trace_2d_frechet','2D Fréchet (normalized)','',1],['rotation_error_deg','Rotation error','°',1],
@@ -76,11 +79,31 @@
     return `<div class="gallery-inputs ${images.length > 1 ? 'gallery-inputs-pair' : ''}">${images.map((src,i) => `<figure><img src="${esc(src)}" alt="${esc(c.benchmark)} task input ${i+1}" loading="lazy">${images.length > 1 ? `<figcaption>Input ${i+1}</figcaption>` : ''}</figure>`).join('')}</div>`;
   }
   function executionRecords(c) {
-    const own = {model:c.model,outcome:c.stopReason,success:c.result === 'Reported success',protocol:c.domainKey === 'planning' ? 'Baseline' : 'Source-native primitives; per-round image delivery unverified',own:true};
+    if (c.runIds) return c.runIds.map(id=>mediaData.runs[id]);
+    const own = {model:c.model,outcome:c.result==='Budget exhausted' ? 'budget_exhausted' : c.stopReason,success:c.result === 'Reported success',protocol:c.domainKey === 'planning' ? 'Baseline' : 'Source-native primitives; per-round image delivery unverified',own:true,
+      taskId:c.sample,taskLabel:c.title,instruction:c.question,instructionKind:c.instructionKind,video:c.video,animation:c.animation,poster:c.poster,mediaKind:c.mediaKind,elapsedSeconds:c.elapsedSeconds,modelRounds:c.modelRounds,budgets:c.budgets,sourceReportSha256:c.sourceReportSha256,frames:c.images.map(image=>({image,label:''})),note:c.protocolNote};
     if (c.result.includes('Conflicting')) own.outcome='conflicting_records';
-    return [...(metadata[c.id]?.recordedOutcomes || []),own];
+    const rows = [...(metadata[c.id]?.recordedOutcomes || []),own];
+    for (const id of mediaData.matched?.[c.id] || []) {
+      const run=mediaData.runs[id]; const i=rows.findIndex(r=>r.model===run.model);
+      if(i<0)rows.push(run); else rows[i]=run;
+    }
+    const order=['GPT-6 Astra','GPT-6 Sol','Claude Fable 5.1','Gemini 3.8 Flash','Qwen 3.8 Max','Qwen 3.5 397B-A17B','Qwen 3.5 27B','Claude Opus 5.5'];
+    return rows.sort((a,b)=>order.indexOf(a.model)-order.indexOf(b.model));
   }
-  const outcomeText = r => r.outcome === 'conflicting_records' ? 'Unresolved' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
+  const outcomeText = r => r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',agent_failure:'Agent failure',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
+  function runMedia(r, detail=false) {
+    if (r.video) return `<video ${detail ? 'controls' : 'muted loop'} playsinline preload="none" poster="${esc(r.poster)}" ${detail ? `src="${esc(r.video)}"` : `data-video="${esc(r.video)}"`} aria-label="${esc(r.model)}: ${esc(r.mediaKind)}"></video>`;
+    if (r.animation) return `<img src="${esc(detail ? r.animation : r.poster)}" ${detail ? '' : `data-animation="${esc(r.animation)}" data-poster="${esc(r.poster)}"`} alt="${esc(r.model)}: ${esc(r.mediaKind)}" loading="lazy">`;
+    return '<span class="gallery-no-recording">No matching recording</span>';
+  }
+  function runTile(c,r,i) {
+    return `<button class="gallery-run ${r.demoOnly ? 'demo' : r.outcome==='conflicting_records' ? 'uncertain' : ''}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)}: ${esc(r.taskLabel || c.title)}, ${esc(outcomeText(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${runMedia(r)}${r.video || r.animation ? `<span class="gallery-run-kind">${esc(r.demoOnly ? 'Demo only' : r.mediaKind || 'Recording')}</span>` : ''}<span class="gallery-run-hover"><strong>${esc(r.taskLabel || c.title)}</strong>${esc(r.instruction || c.shortTask)}</span></span><span class="gallery-run-footer"><span class="gallery-run-task">${esc(r.taskLabel || c.title)}</span><span class="gallery-run-outcome ${r.success && !r.demoOnly && r.outcome!=='scored' ? 'success' : ''}">${esc(outcomeText(r))}</span></span></button>`;
+  }
+  function runBudget(r) {
+    const values=Object.entries(r.budgets||{}).filter(([k,v])=>budgetNames[k]&&v!=null);
+    return values.length ? `<h3>Recorded Budget Ceilings</h3><ul class="study-budget-list">${values.map(([k,v])=>`<li><span>${esc(budgetNames[k])}</span><strong>${num(v)}</strong></li>`).join('')}</ul>` : '';
+  }
   function resultTile(c,p,i, visual=false) {
     const s = summary(c,p);
     return `<button class="gallery-model ${visual ? 'gallery-model-visual' : ''} ${s.state}" data-case="${esc(c.id)}" data-model="${i}" style="--model-colour:${colours[i]}" aria-label="Inspect ${esc(p.model)} on ${esc(c.title)}" title="${esc(p.model)}"><span class="gallery-model-name">${esc(short(p.model))}<span aria-hidden="true">↗</span></span>${visual ? overlay(c,p,i) : ''}<span class="gallery-model-value">${esc(s.value)}</span><span class="gallery-model-caption">${esc(s.label)}</span></button>`;
@@ -93,7 +116,9 @@
       body = `<div class="gallery-comparison"><button class="gallery-scene" data-case="${esc(c.id)}" aria-label="Open ${esc(c.title)} task details">${inputMedia(c)}${referenceLabel(c) ? `<span class="gallery-reference">${esc(referenceLabel(c))}</span>` : ''}<span class="gallery-enlarge">Explore Task ↗</span></button><div class="gallery-score-panel"><p class="gallery-panel-label">First-Run Answers${c.domainKey === 'spatial' ? '' : ' · Individual Case'}</p><div class="gallery-model-grid">${c.predictions.map((p,i) => resultTile(c,p,i)).join('')}</div></div></div>`;
     } else {
       const rows = executionRecords(c);
-      body = `<div class="gallery-comparison gallery-execution"><button class="gallery-scene" data-case="${esc(c.id)}" aria-label="Watch Opus 5.5 on ${esc(c.title)}">${inputMedia(c)}</button><div class="gallery-score-panel"><p class="gallery-panel-label">Recorded Outcomes${c.domainKey === 'manipulation' && rows.length>1 ? ' · Settings Differ' : ''}</p><div class="gallery-model-grid">${rows.map((r,i) => `<button class="gallery-model gallery-terminal ${r.outcome==='conflicting_records' ? 'uncertain' : r.success ? 'correct' : ''}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} execution record"><span class="gallery-model-name">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-model-value">${esc(outcomeText(r))}</span></button>`).join('')}</div>${c.domainKey === 'manipulation' && rows.length>1 ? '<p class="gallery-evidence-note">Observation settings vary across these recordings.</p>' : ''}${rows.length === 1 ? `<p class="gallery-run-facts">${c.modelRounds != null ? `${num(c.modelRounds)} model responses` : ''}<br>${c.elapsedSeconds != null ? `${num(c.elapsedSeconds,1)} s elapsed` : ''}</p>` : ''}</div></div>`;
+      const filmed=rows.map((r,i)=>({r,i})).filter(({r})=>r.video||r.animation);
+      const resultOnly=rows.map((r,i)=>({r,i})).filter(({r})=>!r.video&&!r.animation);
+      body = `<div class="gallery-run-grid" data-recordings="${filmed.length}">${filmed.map(({r,i})=>runTile(c,r,i)).join('')}</div>${resultOnly.length ? `<div class="gallery-record-strip" aria-label="Models with outcome records only">${resultOnly.map(({r,i})=>`<button data-case="${esc(c.id)}" data-model="${i}"><strong>${esc(short(r.model))}</strong><span>${esc(outcomeText(r))}</span><small>No matching recording</small></button>`).join('')}</div>` : ''}<div class="gallery-run-controls"><p>${c.galleryMode==='benchmark' ? 'Selected tasks, not a success-rate comparison.' : 'Same task ID; recorded settings and budgets may differ.'}</p><button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button></div>`;
     }
     return `<article class="gallery-slide" data-gallery-id="${esc(c.id)}" data-domain="${esc(c.domainKey)}" role="group" aria-roledescription="slide" aria-label="Case ${index+1} of ${total}: ${esc(c.benchmark)} — ${esc(c.title)}"><div class="gallery-slide-top"><div><p class="gallery-kicker">${esc(c.domain)} <span>/</span> ${esc(c.benchmark)}</p><h3>${esc(c.title)}</h3></div><button class="gallery-detail-button" data-case="${esc(c.id)}">Case Details <span aria-hidden="true">↗</span></button></div><p class="gallery-task">${esc(c.shortTask)}</p>${body}</article>`;
   }
@@ -109,7 +134,8 @@
       const s = summary(c,p);
       selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p><h4>Recorded Answer</h4><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</div></div>${Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     } else {
-      selection.innerHTML = `<h3>${esc(p.model)}</h3><p class="study-outcome">${esc(outcomeText(p))}</p><p class="study-meta">${esc(p.protocol)}</p>${p.own ? inputMedia(c,true) + `<p>${c.modelRounds != null ? `${num(c.modelRounds)} model responses · ` : ''}${c.elapsedSeconds != null ? `${num(c.elapsedSeconds,1)} s wall-clock time` : ''}</p>` : '<div class="gallery-record-only"><span aria-hidden="true">▤</span><p>This model has a terminal outcome record for this case. A matching video and per-run budget details are not included in the supplied materials.</p></div>'}`;
+      selection.querySelectorAll('video').forEach(v=>v.pause());
+      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(outcomeText(p))}</span></div><p class="study-question">${esc(p.instruction || c.question)}</p><div class="gallery-detail-film">${runMedia(p,true)}</div><p class="study-meta">${esc(p.mediaKind || 'Terminal outcome record')} · ${esc(p.protocol)}</p>${p.note ? `<p class="study-protocol">${esc(p.note)}</p>` : ''}${p.video || p.animation ? `<p class="study-meta">${p.modelRounds != null ? `${num(p.modelRounds)} model responses · ` : ''}${p.elapsedSeconds != null ? `${num(p.elapsedSeconds,1)} s wall-clock time` : ''}</p>` : '<p class="study-protocol">A matching recording and per-run budget are not included for this model.</p>'}${runBudget(p)}${p.frames?.length ? `<h3>Recorded Process</h3><div class="gallery-process">${p.frames.map(f=>f.image ? `<figure><img src="${esc(f.image)}" loading="lazy" alt="${esc(f.label || 'Recorded observation')}"><figcaption>${esc(f.label)}</figcaption></figure>` : `<figure class="gallery-process-log"><strong>${esc(f.label)}</strong><p>${esc(f.detail || f.source_excerpt)}</p></figure>`).join('')}</div>` : ''}${p.timingNote ? `<p class="study-protocol">${esc(p.timingNote)}</p>` : ''}<p class="study-meta">${esc(p.instructionKind || 'Task description')} · Task ID: <code>${esc(p.taskId || c.sample)}</code></p>${p.camera ? `<p class="study-meta">Recording camera: ${esc(p.camera)}</p>` : ''}${p.video ? `<a class="study-download" href="${esc(p.video)}" target="_blank" rel="noopener">Open Recording ↗</a>` : ''}`;
     }
   }
   async function open(id,button,modelIndex=null) {
@@ -123,17 +149,19 @@
       const c = records.get(id); if (!c) throw new Error('Case not found.');
       if (!dialog.open || openId !== id) return;
       const list = c.predictions.length ? c.predictions : executionRecords(c);
-      selectedModel=modelIndex ?? (c.predictions.length ? 0 : list.length-1);
-      const budget = Object.entries(c.budgets||{}).filter(([k,v]) => budgetNames[k] && v!=null).map(([k,v])=>`<li><span>${budgetNames[k]}</span><strong>${num(v)}</strong></li>`).join('');
-      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2><p class="study-question">${esc(c.shortTask)}</p><div class="gallery-model-switcher" role="group" aria-label="Select model">${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-model-detail"></div>${isOverlay(c) ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}<h3>${esc(c.instructionKind || 'Original Instruction')}</h3><p class="study-original-instruction">${esc(c.question)}</p>${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<h3>Reading This Case</h3><p class="study-protocol">${esc(c.protocolNote)}</p>${!c.predictions.length && list.length>1 ? '<p class="study-protocol">Terminal outcomes come from the supplied case records. They are not a matched-budget leaderboard; select each model to inspect its recorded protocol. The budget ceilings above apply to the Opus recording only.</p>' : ''}<a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
+      selectedModel=modelIndex ?? (c.predictions.length ? 0 : Math.max(0,list.findIndex(r=>r.video||r.animation)));
+      const budget = Object.entries(c.predictions.length ? c.budgets||{} : {}).filter(([k,v]) => budgetNames[k] && v!=null).map(([k,v])=>`<li><span>${budgetNames[k]}</span><strong>${num(v)}</strong></li>`).join('');
+      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2><p class="study-question">${esc(c.shortTask)}</p><div class="gallery-model-switcher" role="group" aria-label="Select model">${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-model-detail"></div>${isOverlay(c) ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}${c.predictions.length ? `<h3>${esc(c.instructionKind || 'Original Instruction')}</h3><p class="study-original-instruction">${esc(c.question)}</p>` : ''}${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<h3>Reading This Case</h3><p class="study-protocol">${esc(c.protocolNote)}</p>${!c.predictions.length && list.length>1 ? '<p class="study-protocol">Each model detail shows that recording’s task, protocol and budget. These selected runs do not estimate benchmark success rates.</p>' : ''}<a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
       renderModelDetail(c,selectedModel);
       dialog.scrollTop=0;
       if (currentUrl) URL.revokeObjectURL(currentUrl);
-      currentUrl=URL.createObjectURL(new Blob([JSON.stringify({...c,galleryMetadata:metadata[c.id]},null,2)],{type:'application/json'}));
+      currentUrl=URL.createObjectURL(new Blob([JSON.stringify({...c,galleryMetadata:metadata[c.id],recordings:c.predictions.length ? undefined : executionRecords(c)},null,2)],{type:'application/json'}));
       const download=document.getElementById('study-json-download'); download.href=currentUrl; download.download=`${c.id}.json`;
     } catch(error) {content.innerHTML=`<h2 id="study-dialog-title">Case Details Unavailable</h2><p>${esc(error.message)} Please reload and try again.</p>`;}
   }
   document.addEventListener('click',event=>{
+    const playback=event.target.closest('[data-playback]');
+    if(playback){const id=playback.dataset.playback;const playing=!pausedCases.has(id)&&(manualPlay.has(id)||!reduced.matches);if(playing){pausedCases.add(id);manualPlay.delete(id);}else{pausedCases.delete(id);manualPlay.add(id);}updateActiveMedia();}
     const button=event.target.closest('[data-case]');
     if (button) open(button.dataset.case,button,button.dataset.model === undefined ? null : Number(button.dataset.model));
     const model=event.target.closest('[data-detail-model]');
@@ -161,7 +189,7 @@
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   let observer;
   // Cover every supplied benchmark/subset; retain paper cases and contrasting tasks.
-  const showcaseIds = ["W1-w1_vlm_motion_real-01", "W2-w2_mindcube-01", "W5-w5_umd-03", "W3-alfworld_visual-01", "W4-calvin-01", "W1-w1_tracespatial_3d-01", "W2-w2_3dsrbench-01", "W5-w5_ragnet-02", "W3-discoveryworld-01", "W4-capx_libero_pro-03", "W1-w1_influx-01", "W2-w2_bop_ask-01", "W5-w5_reasonaff-03", "W3-alfred_official_visual-01", "W4-calvin-03", "W1-w1_mapfree-01", "W2-w2_mmsi_bench-01", "W5-w5_umd-01", "W3-alfworld_visual-03", "W4-capx_behavior1k-01", "W1-w1_multispa-01", "W2-w2_robospatial-01", "W3-humanclaw-02", "W4-capx_robosuite-01", "W1-w1_multispa-02", "W2-w2_vsi_bench-01", "W3-scienceworld_text-01", "W4-cliport-01", "W1-w1_tracespatial_2d-01", "W2-w2_vsi_bench-02", "W3-virtualhome_symbolic-01", "W4-maniskill-01", "W1-w1_vlm_depth-01", "W4-rlbench-01", "W1-w1_vlm_focal-01", "W4-robocasa-01", "W1-w1_vlm_intrinsics-01", "W4-robocasa-02", "W1-w1_vlm_motion_camera-01", "W4-robocasa365-01", "W1-w1_vlm_motion_camera_large-01", "W4-robotwin2-01", "W1-w1_vlm_motion_fixed-01", "W4-robowits-01", "W1-w1_vlm_pose-01", "W4-vimabench-01", "W1-w1_vlm_reference-01", "W4-vlabench-01", "W1-w1_vlm_reference-03", "W1-w1_vlm_size-01"];
+  const showcaseIds = ["showcase-calvin", "W1-w1_vlm_motion_real-01", "W2-w2_mindcube-01", "W5-w5_umd-03", "showcase-alfworld_visual", "W4-calvin-03", "showcase-robocasa", "W1-w1_tracespatial_3d-01", "W2-w2_3dsrbench-01", "W5-w5_ragnet-02", "showcase-discoveryworld", "showcase-capx_libero_pro", "W1-w1_influx-01", "W2-w2_bop_ask-01", "W5-w5_reasonaff-03", "showcase-alfred_official_visual", "W1-w1_mapfree-01", "W2-w2_mmsi_bench-01", "W5-w5_umd-01", "showcase-capx_behavior1k", "W1-w1_multispa-01", "W2-w2_robospatial-01", "showcase-humanclaw", "showcase-capx_robosuite", "W1-w1_multispa-02", "W2-w2_vsi_bench-01", "showcase-scienceworld_text", "showcase-cliport", "W1-w1_tracespatial_2d-01", "W2-w2_vsi_bench-02", "showcase-virtualhome_symbolic", "showcase-maniskill", "W1-w1_vlm_depth-01", "showcase-rlbench", "W1-w1_vlm_focal-01", "W1-w1_vlm_intrinsics-01", "W1-w1_vlm_motion_camera-01", "showcase-robocasa365", "W1-w1_vlm_motion_camera_large-01", "showcase-robotwin2", "W1-w1_vlm_motion_fixed-01", "showcase-robowits", "W1-w1_vlm_pose-01", "showcase-vimabench", "W1-w1_vlm_reference-01", "showcase-vlabench", "W1-w1_vlm_reference-03", "W1-w1_vlm_size-01", "W4-calvin-01", "W4-capx_behavior1k-02"];
   const showcase = new Set(showcaseIds);
   const priority=c=>showcase.has(c.id)?showcaseIds.indexOf(c.id):200;
   function hydrate(index) {
@@ -172,13 +200,19 @@
   }
   function updateActiveMedia() {
     slides.forEach((slide,i)=>{
+      const id=shown[i].id;
+      const playing=!pausedCases.has(id)&&(manualPlay.has(id)||!reduced.matches);
+      const visible=i===current && isVisible && !document.hidden && !dialog.open;
       slide.querySelectorAll('video').forEach(v=>{
-        if(i===current && isVisible && !document.hidden && !dialog.open && !reduced.matches){if(!v.src)v.src=v.dataset.video;v.play().catch(()=>{});}else v.pause();
+        if(visible && playing){if(!v.getAttribute('src'))v.src=v.dataset.video;v.play().catch(()=>{});}
+        else {v.pause();if(Math.abs(i-current)>1&&v.getAttribute('src')){v.removeAttribute('src');v.load();}}
       });
       slide.querySelectorAll('[data-animation]').forEach(img=>{
-        const src=i===current&&isVisible&&!document.hidden&&!dialog.open&&!reduced.matches?img.dataset.animation:shown[i].poster;
+        const src=visible&&playing?img.dataset.animation:img.dataset.poster||shown[i].poster;
         if(img.getAttribute('src')!==src)img.src=src;
       });
+      const toggle=slide.querySelector('[data-playback]');
+      if(toggle){toggle.textContent=playing?'Pause previews':'Play previews';toggle.setAttribute('aria-pressed',String(!playing));}
     });
   }
   function updatePosition() {
@@ -201,14 +235,14 @@
   }
   function applyFilter() {
     const query=(search?.value||'').trim().toLowerCase();
-    shown=allCases.filter(c=>(active==='all'||active==='highlights'&&showcase.has(c.id)||c.domainKey===active)&&(!query||[c.benchmark,c.title,c.shortTask,c.question,...c.predictions.map(p=>p.model)].join(' ').toLowerCase().includes(query))).sort((a,b)=>priority(a)-priority(b));
+    shown=allCases.filter(c=>(active==='all'||active==='highlights'&&showcase.has(c.id)||c.domainKey===active)&&(!query||[c.benchmark,c.title,c.shortTask,c.question,...c.predictions.map(p=>p.model),...(c.runIds||[]).map(id=>{const r=mediaData.runs[id];return `${r.model} ${r.taskLabel} ${r.instruction}`;})].join(' ').toLowerCase().includes(query))).sort((a,b)=>priority(a)-priority(b));
     track.querySelectorAll('video').forEach(v=>v.pause());
     track.innerHTML=shown.map((c,i)=>`<div class="gallery-slot" aria-label="${esc(c.benchmark)}: ${esc(c.title)}"><p class="gallery-loading">${i+1} · ${esc(c.benchmark)}</p></div>`).join('');
     slides=[...track.children];current=0;hydrate(0);track.scrollLeft=0;
     scrubber.max=Math.max(1,shown.length);scrubber.value=1;
     gallery.querySelector('.gallery-empty').hidden=!!shown.length;
     track.hidden=!shown.length;gallery.querySelector('.gallery-navigation').hidden=!shown.length;scrubber.hidden=shown.length<2;
-    const count=document.getElementById('study-count');if(count)count.textContent=`${shown.length} cases`;
+    const count=document.getElementById('study-count');if(count)count.textContent=`${shown.length} case views`;
     updatePosition();
   }
   filters.forEach(button=>button.addEventListener('click',()=>{active=button.dataset.studyFilter;filters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));applyFilter();}));
@@ -238,7 +272,7 @@
   reduced.addEventListener('change',updateActiveMedia);
   document.addEventListener('visibilitychange',()=>{if(document.hidden){document.querySelectorAll('.gallery-track video').forEach(v=>v.pause());}else updateActiveMedia();});
   window.addEventListener('resize',()=>go(current,false));
-  load().then(cases=>{allCases=cases;grid.hidden=true;gallery.classList.add('is-ready');applyFilter();}).catch(error=>{
+  load().then(cases=>{allCases=cases;grid.hidden=true;gallery.classList.add('is-ready');applyFilter();const target=new URLSearchParams(location.search).get('case');const index=shown.findIndex(c=>c.id===target);if(index>=0)go(index,false);}).catch(error=>{
     gallery.innerHTML=`<p class="study-protocol">${esc(error.message)} <a href="case-atlas.html">Browse the Case Atlas ↗</a></p>`;
   });
 })();

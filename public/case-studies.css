@@ -107,4 +107,48 @@
 .latest-case-section .study-filters{margin:18px 0}
 .gallery-task{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .latest-case-section .study-heading h2{line-height:1.15}
+/* Eight independently recorded models. Instructions appear on hover/focus. */
+.gallery-run-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.gallery-run-grid[data-recordings="1"]{grid-template-columns:minmax(0,560px);justify-content:center}
+.gallery-run-grid[data-recordings="2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gallery-run-grid[data-recordings="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gallery-record-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
+.gallery-record-strip button{display:flex;flex-direction:column;gap:4px;text-align:left;border:1px solid #e0e6df;border-radius:9px;padding:11px 13px;background:#f8faf6;color:var(--ink);font:inherit;cursor:pointer;font-size:13px}
+.gallery-record-strip small{font-size:11px;color:#7e8c82}.gallery-record-strip button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.gallery-run{display:flex;flex-direction:column;min-width:0;padding:0;overflow:hidden;border:1px solid #dce4df;border-radius:12px;background:#fff;text-align:left;color:var(--ink);cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.gallery-run:hover{border-color:#859b8d;box-shadow:0 4px 20px #23403616}
+.gallery-run:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.gallery-run-header{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:10px 12px;font-size:14px;font-weight:600;line-height:1.4}
+.gallery-run-header>span{color:#809287;font-size:18px}
+.gallery-run-media{display:block;position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:#e9ede8}
+.gallery-run-media video,.gallery-run-media img{display:block;width:100%;height:100%;object-fit:contain}
+.gallery-run-kind{position:absolute;left:7px;bottom:7px;max-width:calc(100% - 14px);font-size:10px;line-height:1.3;padding:4px 6px;border-radius:5px;background:#132b31c9;color:white;box-sizing:border-box;pointer-events:none}
+.gallery-run-hover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:7px;background:#152f36ee;color:white;padding:15px;box-sizing:border-box;font-size:13px;line-height:1.45;opacity:0;transition:opacity .16s;overflow:hidden;pointer-events:none}
+.gallery-run-hover strong{font-size:15px;font-weight:600}
+.gallery-run:hover .gallery-run-hover,.gallery-run:focus-visible .gallery-run-hover{opacity:1}
+.gallery-run-footer{display:flex;flex-direction:column;gap:5px;padding:10px 12px 12px;min-height:58px;box-sizing:border-box}
+.gallery-run-task{font-size:12px;line-height:1.35;color:#677970;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gallery-run-outcome{font-size:13px;line-height:1.35;font-weight:600}
+.gallery-run-outcome.success{color:#567650}
+.gallery-run.demo{border-color:#d9c99f}.gallery-run.demo .gallery-run-outcome{color:#8a6a32}
+.gallery-run.uncertain .gallery-run-outcome{color:#896633}
+.gallery-no-recording{display:flex;align-items:center;justify-content:center;height:100%;font-size:13px;color:#7b8a81;padding:20px;text-align:center;box-sizing:border-box}
+.gallery-run-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px}
+.gallery-run-controls p{font-size:13px;line-height:1.4;margin:0;color:#687d73;max-width:none}
+.gallery-run-controls button{flex-shrink:0;border:1px solid #d6e0d8;border-radius:20px;background:#fff;color:#355949;padding:8px 13px;font:inherit;font-size:12px;cursor:pointer}
+.gallery-run-controls button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.gallery-detail-run-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:20px 0 12px}
+#study-dialog .gallery-detail-run-heading h3{margin:0}.gallery-detail-run-heading .study-outcome{font-size:16px}
+.gallery-detail-film{border-radius:12px;overflow:hidden;background:#edf1ec;display:grid;place-items:center;min-height:200px}
+.gallery-detail-film img{display:block;max-width:100%;max-height:500px;object-fit:contain}
+#study-dialog .gallery-detail-film video{max-height:480px;object-fit:contain;display:block;border-radius:0;background:#edf1ec}
+.gallery-process{display:flex;gap:10px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity}
+.gallery-process figure{flex:0 0 180px;margin:0;scroll-snap-align:start;background:#f1f4ef;border:1px solid #e1e7df;border-radius:8px;overflow:hidden}
+.gallery-process img{width:100%;height:135px;object-fit:contain;display:block}
+.gallery-process figcaption{padding:6px 10px;font-size:12px;color:#66766c}
+.gallery-process-log{padding:14px;box-sizing:border-box;font-size:14px}.gallery-process-log p{font-size:13px;line-height:1.5}
+#study-dialog .study-meta{overflow-wrap:anywhere}#study-dialog .study-meta code{font-size:12px}
+@media(max-width:1000px){.gallery-run-grid{gap:9px}.gallery-run-header{font-size:12px;padding:8px}.gallery-run-footer{padding:8px}.gallery-run-hover{font-size:12px;padding:10px}.gallery-run-hover strong{font-size:13px}.gallery-run-outcome{font-size:12px}}
+@media(max-width:760px){.gallery-run-grid,.gallery-run-grid[data-recordings="3"]{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery-record-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-run-header{font-size:13px}.gallery-run-kind{font-size:9px}.gallery-run-controls{align-items:flex-start}.gallery-run-controls p{font-size:12px}.gallery-run-hover{display:none}.gallery-run-task{font-size:11px}.gallery-detail-run-heading{align-items:flex-start}.gallery-detail-run-heading .study-outcome{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.gallery-run,.gallery-run-hover{transition:none}}
 @media(max-width:480px){.gallery-model-name{font-size:12px;white-space:normal;min-height:32px;align-items:start}.gallery-model-name>span{font-size:13px;flex-shrink:0}.gallery-model-visual svg{height:118px}.gallery-model-value{font-size:19px}.gallery-model-visual{padding:9px}.gallery-kicker{font-size:11px}.gallery-navigation .gallery-position{gap:5px}.latest-case-section .study-heading h2{font-size:30px}}
