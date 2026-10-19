@@ -11387,7 +11387,7 @@
     },
     "W3-alfred_official_visual-deepseek-01": {
       "id": "W3-alfred_official_visual-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "ALFRED",
       "benchmarkKey": "alfred_official_visual",
@@ -11455,7 +11455,7 @@
     },
     "W3-alfred_official_visual-deepseek-04": {
       "id": "W3-alfred_official_visual-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "ALFRED",
       "benchmarkKey": "alfred_official_visual",
@@ -11499,7 +11499,7 @@
     },
     "W3-alfworld_visual-deepseek-01": {
       "id": "W3-alfworld_visual-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "ALFWorld",
       "benchmarkKey": "alfworld_visual",
@@ -11559,7 +11559,7 @@
     },
     "W3-alfworld_visual-deepseek-04": {
       "id": "W3-alfworld_visual-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "ALFWorld",
       "benchmarkKey": "alfworld_visual",
@@ -11611,7 +11611,7 @@
     },
     "W3-discoveryworld-deepseek-01": {
       "id": "W3-discoveryworld-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "DiscoveryWorld",
       "benchmarkKey": "discoveryworld",
@@ -11679,7 +11679,7 @@
     },
     "W3-discoveryworld-deepseek-06": {
       "id": "W3-discoveryworld-deepseek-06",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "DiscoveryWorld",
       "benchmarkKey": "discoveryworld",
@@ -11747,7 +11747,7 @@
     },
     "W3-humanclaw-deepseek-01": {
       "id": "W3-humanclaw-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "HumanCLAW",
       "benchmarkKey": "humanclaw",
@@ -11814,7 +11814,7 @@
     },
     "W3-humanclaw-deepseek-02": {
       "id": "W3-humanclaw-deepseek-02",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "HumanCLAW",
       "benchmarkKey": "humanclaw",
@@ -11881,7 +11881,7 @@
     },
     "W3-scienceworld_text-deepseek-01": {
       "id": "W3-scienceworld_text-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "ScienceWorld",
       "benchmarkKey": "scienceworld_text",
@@ -11946,7 +11946,7 @@
     },
     "W3-virtualhome_symbolic-deepseek-01": {
       "id": "W3-virtualhome_symbolic-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "VirtualHome",
       "benchmarkKey": "virtualhome_symbolic",
@@ -12078,7 +12078,7 @@
     },
     "W3-virtualhome_symbolic-deepseek-04": {
       "id": "W3-virtualhome_symbolic-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "VirtualHome",
       "benchmarkKey": "virtualhome_symbolic",
@@ -12175,7 +12175,7 @@
     },
     "W3-virtualhome_symbolic-deepseek-05": {
       "id": "W3-virtualhome_symbolic-deepseek-05",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "VirtualHome",
       "benchmarkKey": "virtualhome_symbolic",
@@ -12294,7 +12294,7 @@
     },
     "W4-calvin-deepseek-01": {
       "id": "W4-calvin-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CALVIN",
       "benchmarkKey": "calvin",
@@ -12366,7 +12366,7 @@
     },
     "W4-calvin-deepseek-02": {
       "id": "W4-calvin-deepseek-02",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CALVIN",
       "benchmarkKey": "calvin",
@@ -12438,7 +12438,7 @@
     },
     "W4-calvin-deepseek-05": {
       "id": "W4-calvin-deepseek-05",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CALVIN",
       "benchmarkKey": "calvin",
@@ -12527,7 +12527,7 @@
     },
     "W4-capx_behavior1k-deepseek-01": {
       "id": "W4-capx_behavior1k-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CaPX–BEHAVIOR-1K",
       "benchmarkKey": "capx_behavior1k",
@@ -12599,7 +12599,7 @@
     },
     "W4-capx_behavior1k-deepseek-02": {
       "id": "W4-capx_behavior1k-deepseek-02",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CaPX–BEHAVIOR-1K",
       "benchmarkKey": "capx_behavior1k",
@@ -12671,7 +12671,7 @@
     },
     "W4-capx_libero_pro-deepseek-02": {
       "id": "W4-capx_libero_pro-deepseek-02",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CaPX–LIBERO-PRO",
       "benchmarkKey": "capx_libero_pro",
@@ -12743,7 +12743,7 @@
     },
     "W4-capx_libero_pro-deepseek-03": {
       "id": "W4-capx_libero_pro-deepseek-03",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CaPX–LIBERO-PRO",
       "benchmarkKey": "capx_libero_pro",
@@ -12815,7 +12815,7 @@
     },
     "W4-capx_robosuite-deepseek-02": {
       "id": "W4-capx_robosuite-deepseek-02",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CaPX–Robosuite",
       "benchmarkKey": "capx_robosuite",
@@ -12887,7 +12887,7 @@
     },
     "W4-cliport-deepseek-01": {
       "id": "W4-cliport-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "CLIPort",
       "benchmarkKey": "cliport",
@@ -12959,7 +12959,7 @@
     },
     "W4-maniskill-deepseek-03": {
       "id": "W4-maniskill-deepseek-03",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "ManiSkill",
       "benchmarkKey": "maniskill",
@@ -13031,7 +13031,7 @@
     },
     "W4-maniskill-deepseek-04": {
       "id": "W4-maniskill-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "ManiSkill",
       "benchmarkKey": "maniskill",
@@ -13103,7 +13103,7 @@
     },
     "W4-rlbench-deepseek-02": {
       "id": "W4-rlbench-deepseek-02",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RLBench",
       "benchmarkKey": "rlbench",
@@ -13175,7 +13175,7 @@
     },
     "W4-rlbench-deepseek-04": {
       "id": "W4-rlbench-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RLBench",
       "benchmarkKey": "rlbench",
@@ -13247,7 +13247,7 @@
     },
     "W4-rlbench-deepseek-07": {
       "id": "W4-rlbench-deepseek-07",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RLBench",
       "benchmarkKey": "rlbench",
@@ -13342,7 +13342,7 @@
     },
     "W4-robocasa-deepseek-01": {
       "id": "W4-robocasa-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboCasa",
       "benchmarkKey": "robocasa",
@@ -13414,7 +13414,7 @@
     },
     "W4-robocasa-deepseek-04": {
       "id": "W4-robocasa-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboCasa",
       "benchmarkKey": "robocasa",
@@ -13503,7 +13503,7 @@
     },
     "W4-robocasa365-deepseek-01": {
       "id": "W4-robocasa365-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboCasa365",
       "benchmarkKey": "robocasa365",
@@ -13575,7 +13575,7 @@
     },
     "W4-robocasa365-deepseek-03": {
       "id": "W4-robocasa365-deepseek-03",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboCasa365",
       "benchmarkKey": "robocasa365",
@@ -13647,7 +13647,7 @@
     },
     "W4-robocasa365-deepseek-04": {
       "id": "W4-robocasa365-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboCasa365",
       "benchmarkKey": "robocasa365",
@@ -13742,7 +13742,7 @@
     },
     "W4-robotwin2-deepseek-01": {
       "id": "W4-robotwin2-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboTwin2",
       "benchmarkKey": "robotwin2",
@@ -13814,7 +13814,7 @@
     },
     "W4-robotwin2-deepseek-06": {
       "id": "W4-robotwin2-deepseek-06",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboTwin2",
       "benchmarkKey": "robotwin2",
@@ -13886,7 +13886,7 @@
     },
     "W4-robotwin2-deepseek-07": {
       "id": "W4-robotwin2-deepseek-07",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboTwin2",
       "benchmarkKey": "robotwin2",
@@ -13958,7 +13958,7 @@
     },
     "W4-robowits-deepseek-01": {
       "id": "W4-robowits-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboWits",
       "benchmarkKey": "robowits",
@@ -14030,7 +14030,7 @@
     },
     "W4-robowits-deepseek-02": {
       "id": "W4-robowits-deepseek-02",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "RoboWits",
       "benchmarkKey": "robowits",
@@ -14102,7 +14102,7 @@
     },
     "W4-vimabench-deepseek-03": {
       "id": "W4-vimabench-deepseek-03",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "VIMA-Bench",
       "benchmarkKey": "vimabench",
@@ -14174,7 +14174,7 @@
     },
     "W4-vimabench-deepseek-05": {
       "id": "W4-vimabench-deepseek-05",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "VIMA-Bench",
       "benchmarkKey": "vimabench",
@@ -14246,7 +14246,7 @@
     },
     "W4-vlabench-deepseek-01": {
       "id": "W4-vlabench-deepseek-01",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "VLABench",
       "benchmarkKey": "vlabench",
@@ -14318,7 +14318,7 @@
     },
     "W4-vlabench-deepseek-04": {
       "id": "W4-vlabench-deepseek-04",
-      "model": "DeepSeek 4.1 Flash",
+      "model": "DeepSeek 4.1 Flash-1017",
       "modelKey": "deepseek",
       "benchmark": "VLABench",
       "benchmarkKey": "vlabench",

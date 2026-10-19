@@ -9,7 +9,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -27,7 +27,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -45,7 +45,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -63,7 +63,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -81,7 +81,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -99,7 +99,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -117,7 +117,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -135,7 +135,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -153,7 +153,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -171,7 +171,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -189,7 +189,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -207,7 +207,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -225,7 +225,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -243,7 +243,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -261,7 +261,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -279,7 +279,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -297,7 +297,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -315,7 +315,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -333,7 +333,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -351,7 +351,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -369,7 +369,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -387,7 +387,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -405,7 +405,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -423,7 +423,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -441,7 +441,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -459,7 +459,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -477,7 +477,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -495,7 +495,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -513,7 +513,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -531,7 +531,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -549,7 +549,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -567,7 +567,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -585,7 +585,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -603,7 +603,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -621,7 +621,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -639,7 +639,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -657,7 +657,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -675,7 +675,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -693,7 +693,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -711,7 +711,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -729,7 +729,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -747,7 +747,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -765,7 +765,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -783,7 +783,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -801,7 +801,7 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -819,7 +819,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -833,7 +833,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": []
   },
@@ -847,7 +847,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -861,7 +861,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": []
   },
@@ -875,7 +875,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -889,7 +889,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -903,7 +903,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": []
   },
@@ -917,7 +917,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -931,7 +931,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": []
   },
@@ -945,7 +945,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -959,7 +959,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": []
   },
@@ -973,7 +973,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -987,7 +987,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -1001,7 +1001,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": []
   },
@@ -1015,7 +1015,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": []
   },
@@ -1029,7 +1029,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -1043,7 +1043,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -1057,7 +1057,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": []
   },
@@ -1114,7 +1114,7 @@
         "sourceReportSha256": "87663ccac683ea54d03f24e8a084f84ce20dd6925140dadd46592e8bdd94749b"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1180,7 +1180,7 @@
         "sourceReportSha256": "a9300c62a0535b51c464072d4f1a8a6bb7d70680b67f9daf27f8980f8a7caf5b"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1246,7 +1246,7 @@
         "sourceReportSha256": "151788fc50ddf16e4212cd0c6c5868a1008c1f17c8f0dee76bbf99c5145e322a"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1312,7 +1312,7 @@
         "sourceReportSha256": "374cda961dcbc2bb21445cfc83b3bb1d203a8afac3b1fb6bef6e840668ebaf81"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1378,7 +1378,7 @@
         "sourceReportSha256": "c957a7ee4f4162cd02995cbdc29a772649c9d646ffaa3cde51142099bc9f8bdf"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1444,7 +1444,7 @@
         "sourceReportSha256": "82f55ffc6f5f4ebccf327db59aad1204d25aefde6c1207617857e5d004817d41"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1510,7 +1510,7 @@
         "sourceReportSha256": "0093ddac6eb13de52db23364bde86ca91711792cda7265ede4c9f3734b6dd1c5"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1576,7 +1576,7 @@
         "sourceReportSha256": "262fcf41858f38fddf080898175982d1a2b09db46aff7b46ecc6d42a35a50930"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Baseline",
@@ -1642,7 +1642,7 @@
         "sourceReportSha256": "f0c33ecd7e8ae27f87e9e9e2591df0cf938007b6e59fe11ff831677761f9482f"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1659,7 +1659,7 @@
     "judgements": {},
     "recordedOutcomes": [
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Baseline",
@@ -1676,7 +1676,7 @@
     "judgements": {},
     "recordedOutcomes": [
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1693,7 +1693,7 @@
     "judgements": {},
     "recordedOutcomes": [
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "task_failure",
         "success": false,
         "protocol": "Baseline",
@@ -1759,7 +1759,7 @@
         "sourceReportSha256": "6d312af2050e74f7cef3665dd7753edd9f45ca0266f38793dae1a69085c24299"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1825,7 +1825,7 @@
         "sourceReportSha256": "23099c4dc6873eba18fd51348ad0fbaff076b885095a716fd492298b4832f01c"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "task_failure",
         "success": false,
         "protocol": "Baseline",
@@ -1891,7 +1891,7 @@
         "sourceReportSha256": "ffa21d252e2a01ed47d6ac36507dcae3c52bfb11ad60c9bbe19a06da96b54aea"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -1957,7 +1957,7 @@
         "sourceReportSha256": "789c3526f769b65e4088de30958ff36990c7c79f23cd389525681afdd39b3cd8"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Baseline",
@@ -2023,7 +2023,7 @@
         "sourceReportSha256": "d6c09c0e19772a6518c02a92048cf730ed1626615edeb7cbebf6828e63b37367"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Baseline",
@@ -2089,7 +2089,7 @@
         "sourceReportSha256": "4445b92032277c3e94b7c1cccd0917714aacd8def75ad6b363f5ef0cf7881c70"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Baseline",
@@ -2155,7 +2155,7 @@
         "sourceReportSha256": "217005d81c3138b92685cad6a84c8723930f09ad792cce96a8a92c0f8ab68289"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Per-round RGB",
@@ -2221,7 +2221,7 @@
         "sourceReportSha256": "97cd1d66f8c53f0110dd717ac356646910e9f33790982488e2c4d447ef5416c7"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2287,7 +2287,7 @@
         "sourceReportSha256": "4dd16cf1786ad1524a65fe9a7643793eea688130cc9f76efb5e41b9efa220ced"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2339,7 +2339,7 @@
         "sourceReportSha256": "41270e70fc277718928b0a33f421ab6ff54c29c3ba05a268287a9403d7f95cba"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2405,7 +2405,7 @@
         "sourceReportSha256": "dc1082e3797be9493dfdf93254510fe7e58df88a7062c9d369d3c2f4b21379eb"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2450,7 +2450,7 @@
         "sourceReportSha256": "79cad921cdf194884f293cef1f1adb2eeaec6a0beb593b652946ab1dce5d0276"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2516,7 +2516,7 @@
         "sourceReportSha256": "0147f829b702f63db2ecef18549cc97e530ac5cdeb81e4671e01e95c33a694c3"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Per-round RGB",
@@ -2582,7 +2582,7 @@
         "sourceReportSha256": "f7f58bf56e21a686c0230067475bb42d1c085a287f9bf6f9460a9d3f05cb23a5"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2648,7 +2648,7 @@
         "sourceReportSha256": "24f7c044eb5cebf0efd98eba44ad9772fe58fce907f228e3d321cc377c0547aa"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2714,7 +2714,7 @@
         "sourceReportSha256": "04a05dfb4baa5bb13625dcc012b52beda5ae75e8ee20831165fbd56efbf5428f"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Per-round RGB",
@@ -2780,7 +2780,7 @@
         "sourceReportSha256": "9df66f532753fedc00e628be2f42ef74ba67f4cd02e829c2f83191e98ec8ad19"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Per-round RGB",
@@ -2846,7 +2846,7 @@
         "sourceReportSha256": "bf1af0135b26885b570a9f55a65db9080260bd9341db5c15502b089d0c4d16ad"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2912,7 +2912,7 @@
         "sourceReportSha256": "36693b4dfdaf69063c50980e41dc9e486336a9bcf168ffde5559864027d4ac0f"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -2978,7 +2978,7 @@
         "sourceReportSha256": "2714dc6ce6c4291582cd4f27bc01cd15af505feb94d65995e1e8d58e030f19a8"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3044,7 +3044,7 @@
         "sourceReportSha256": "165f0966d37cfac9d62aea32aa29038952819e0e49224b03a7f615d47b7545db"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3110,7 +3110,7 @@
         "sourceReportSha256": "f158c2858c28512e132666ced52b12bc246fe63e9cfd0038c0d4b673f4aa6451"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "task_failure",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3176,7 +3176,7 @@
         "sourceReportSha256": "f5e4767727c030d22d472a4a4b0dada680a1385958ddfb439a876270c6c79594"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "task_failure",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3242,7 +3242,7 @@
         "sourceReportSha256": "d7afd8fd2144ed59b0d2be0587f60dff6bc4517c9f43f882368cf9c522be4cfc"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3308,7 +3308,7 @@
         "sourceReportSha256": "91363ef7efa4098f29f0000818b1ff0823b2c18ab50fe74d396b325f943d4c4d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3374,7 +3374,7 @@
         "sourceReportSha256": "973dbfa424efa1d4d6ca0243d90907d2f0324e14478abdac0f70eb673655feca"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3440,7 +3440,7 @@
         "sourceReportSha256": "b5f482ae728664deccabada560004c7db134f994d5fad215a47d0039d96c4b18"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3506,7 +3506,7 @@
         "sourceReportSha256": "a377893b198635cd3af92269c3c50dbf5a8976d7dcbb13528ae0ddf2aeb27d27"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3572,7 +3572,7 @@
         "sourceReportSha256": "ff20170ea550eae189a2e5e241cc92ea95c2bf6c982334d6f6e4b3da6c771502"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3638,7 +3638,7 @@
         "sourceReportSha256": "9f4f2df9652dcfad660b6cda3162c887f24e5a150adc110b35307c62af53fdbc"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3704,7 +3704,7 @@
         "sourceReportSha256": "987a6dffc5121423b7d46264c3a2cbabe8fef11ca8927b5550abc3d9053810f0"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3770,7 +3770,7 @@
         "sourceReportSha256": "20fcf1a89580fe984c9c85cf5ff53ad0c64187efae418549f93feff46f65ae2a"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3836,7 +3836,7 @@
         "sourceReportSha256": "c53742dc5a582c24301502e7d85280e1a88fdb6343ea738a752d70ecbc8c802b"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3902,7 +3902,7 @@
         "sourceReportSha256": "1b475f75db4b135aa1a54efd9a35d2a240206debff64a3fa7f12fb6392e0b4da"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -3968,7 +3968,7 @@
         "sourceReportSha256": "76256bb3fb5310946387c64177f5e8e37dc9c46851ef48d7140420d8fa1687d8"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4034,7 +4034,7 @@
         "sourceReportSha256": "32721f3cc7710b57870d0ce0daf2ec519b540e1115cab06405ef65bae1b01927"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4100,7 +4100,7 @@
         "sourceReportSha256": "7d7bf6f65954814c5ed8a7e957b9a5699b99fee42b1a6c5a75e0291970a03990"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Per-round RGB",
@@ -4166,7 +4166,7 @@
         "sourceReportSha256": "19881f0b7f9b64927d3f1091664b4d057141384bb34a84ffb3faf11814f7cc0d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Per-round RGB",
@@ -4232,7 +4232,7 @@
         "sourceReportSha256": "4558605d2e89085d059565d59d6abc7115ea1c4e0caba56a1f5f34dc358447f7"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "task_failure",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4298,7 +4298,7 @@
         "sourceReportSha256": "5b00003aa8aa0d1f4bf44b39fddc49f20f62aeff85c54a3c334205f347e3ae2d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "success",
         "success": true,
         "protocol": "Per-round RGB",
@@ -4364,7 +4364,7 @@
         "sourceReportSha256": "7c1960dce6f905437d5ad91293c045d107ba31fa86bdbe9454cb02cee8fc0a4e"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4430,7 +4430,7 @@
         "sourceReportSha256": "6a744888cc3d13310ae537b99f321de4b2b066e83ecb5b3108d410b0e699bd9e"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4496,7 +4496,7 @@
         "sourceReportSha256": "309a22fa3bbe6b05ca9c634b1d810eb44a52a6123ca4ed3ad50f86bd7221b7ac"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4562,7 +4562,7 @@
         "sourceReportSha256": "59598db09fe8672b515f67c0e962e9521eda94562a5146d7e69466c3aa5b272d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4628,7 +4628,7 @@
         "sourceReportSha256": "e24fbba5cd131b93e43bc32aad8df6d9278958ccdb43216962a8ad1217f2e658"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "outcome": "budget_exhausted",
         "success": false,
         "protocol": "Per-round RGB",
@@ -4651,7 +4651,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4669,7 +4669,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4687,7 +4687,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4705,7 +4705,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4723,7 +4723,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4741,7 +4741,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4759,7 +4759,7 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4777,7 +4777,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": true
+      "DeepSeek 4.1 Flash-1017": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4795,7 +4795,7 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash": false
+      "DeepSeek 4.1 Flash-1017": false
     },
     "recordedOutcomes": [],
     "imageSize": [

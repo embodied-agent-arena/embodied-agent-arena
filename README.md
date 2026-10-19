@@ -31,7 +31,7 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 ## Overview
 
-Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Claude Opus 5.5, DeepSeek 4.1 Flash, Gemini 3.8 Flash, Qwen 3.8 Max, Qwen 3.5 397B-A17B, and Qwen 3.5 27B** on **1,000 cases across five robotic capabilities**: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. It combines 32 established sources with **GeoProbe**, our 168-case geometric-estimation benchmark. A minimal harness retains source-native observations and helpers while leaving task interpretation, reasoning, and action selection to the model.
+Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Claude Opus 5.5, DeepSeek 4.1 Flash-1017, Gemini 3.8 Flash, Qwen 3.8 Max, Qwen 3.5 397B-A17B, and Qwen 3.5 27B** on **1,000 cases across five robotic capabilities**: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. It combines 32 established sources with **GeoProbe**, our 168-case geometric-estimation benchmark. A minimal harness retains source-native observations and helpers while leaving task interpretation, reasoning, and action selection to the model.
 
 ### Cross-Model Results
 
@@ -46,7 +46,7 @@ Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Claude
 | Qwen&nbsp;3.5&nbsp;397B&#8209;A17B | 38.4 | 249.8 | 50.6 | 0.251 | 0.116 | 0.092 | 17.8 | 9.9 |
 | Qwen&nbsp;3.5&nbsp;27B | 38.4 | 213.7 | 48.0 | 0.288 | 0.013 | 0.051 | 19.1 | 11.0 |
 | Claude&nbsp;Opus&nbsp;5.5 | 23.3 | 135.3 | 58.6 | 0.222 | **0.329** | **0.397** | 48.4 | **47.8** |
-| DeepSeek&nbsp;4.1&nbsp;Flash | 30.3 | 182.7 | 51.6 | 0.310 | 0.217 | 0.249 | 31.2 | 20.9 |
+| DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017 | 30.3 | 182.7 | 51.6 | 0.310 | 0.217 | 0.249 | 31.2 | 20.9 |
 <!-- END RESULT_TABLE -->
 
 Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7); **bold** marks the best mean. Affordance reports box–mask and direct-polygon IoU. [Model IDs and evaluation settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol).
@@ -59,7 +59,7 @@ Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent
 
 ## News
 
-- **2026.10.19** — Added DeepSeek 4.1 Flash, direct-polygon Affordance results, and completed Opus 5.5 Planning results. The [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/#results), [CSV](https://embodied-agent-arena.github.io/embodied-agent-arena/data/model-comparison.csv), and [author manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) now cover nine models.
+- **2026.10.19** — Added DeepSeek 4.1 Flash-1017, direct-polygon Affordance results, and completed Opus 5.5 Planning results. The [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/#results), [CSV](https://embodied-agent-arena.github.io/embodied-agent-arena/data/model-comparison.csv), and [author manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) now cover nine models.
 
 - **2026.10.15** — Expanded the [interactive gallery](https://embodied-agent-arena.github.io/embodied-agent-arena/#latest-cases) with 152 model recordings across task planning and manipulation. Browse eight-model showcases or inspect matching tasks, with instructions and run details.
 

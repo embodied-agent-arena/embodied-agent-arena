@@ -7,7 +7,7 @@
   "manuscript_date": "2026-10-19",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
   "paper_pages": 61,
-  "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess nine VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. Models make task decisions through a minimal harness that preserves source observations and operations. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra has the lowest pose errors and highest full-set planning success, while Opus 5.5 achieves the highest affordance overlap, contact validity, and manipulation success. DeepSeek completes 20.9% of Manipulation tasks, with spatial and planning performance varying sharply across sources. Supplementary experiments show that per-round visual feedback and multi-round review can change model rankings. Current VLM agents still fall short of embodied generalism, leaving task goals unsatisfied within finite time and interaction budgets.",
+  "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess nine VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. Models make task decisions through a minimal harness that preserves source observations and operations. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra has the lowest pose errors and highest full-set planning success, while Opus 5.5 achieves the highest affordance overlap, contact validity, and manipulation success. DeepSeek-1017 completes 20.9% of Manipulation tasks, with spatial and planning performance varying sharply across sources. Supplementary experiments show that per-round visual feedback and multi-round review can change model rankings. Current VLM agents still fall short of embodied generalism, leaving task goals unsatisfied within finite time and interaction budgets.",
   "authors": [
     {
       "name": "Haojian Huang",
@@ -222,8 +222,8 @@
       ]
     },
     {
-      "alias": "DeepSeek",
-      "name": "DeepSeek 4.1 Flash",
+      "alias": "DeepSeek-1017",
+      "name": "DeepSeek 4.1 Flash-1017",
       "official_name": "DeepSeek-V4.1-Flash-1017",
       "identifier": "deepseek-flash",
       "evaluated_update": "2026-10-17",
@@ -244,7 +244,7 @@
     "page": 7,
     "model_table": "Table A5",
     "model_page": 22,
-    "protocol": "Source-native observations and tools. All agents use RGB. In Manipulation, the original eight use the native Baseline image schedule; DeepSeek receives current RGB at each decision, with the same listed per-source round, token, and in-episode time ceilings.",
+    "protocol": "Source-native observations and tools. All agents use RGB. In Manipulation, the original eight use the native Baseline image schedule; DeepSeek-1017 receives current RGB at each decision, with the same listed per-source round, token, and in-episode time ceilings.",
     "repetitions": "Non-tracing Geometry: five runs, except Fable (three). Spatial Reasoning and box/point Affordance: five runs, except Fable (three) and Opus 5.5 (one). Polygon Affordance, tracing, Planning, and Manipulation: one run per assignment for all nine models."
   }
 }

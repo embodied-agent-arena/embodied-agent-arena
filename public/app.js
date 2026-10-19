@@ -8,15 +8,15 @@ const domains=[
       [
         "17.1°",
         "Astra rotation error",
-        "DeepSeek · 30.3°"
+        "DeepSeek-1017 · 30.3°"
       ],
       [
         "106.6 cm",
         "Astra translation error",
-        "DeepSeek · 182.7 cm"
+        "DeepSeek-1017 · 182.7 cm"
       ]
     ],
-    "caption": "(a) Astra’s error reduction against its original six peers. (b) Object displacement under fixed or moving cameras, including DeepSeek. (c) Nine-model 3D path error and joint tracing success."
+    "caption": "(a) Astra’s error reduction against its original six peers. (b) Object displacement under fixed or moving cameras, including DeepSeek-1017. (c) Nine-model 3D path error and joint tracing success."
   },
   {
     "id": "spatial",
@@ -27,7 +27,7 @@ const domains=[
       [
         "69.4%",
         "Astra Spatial Pass@1",
-        "DeepSeek · 51.6%"
+        "DeepSeek-1017 · 51.6%"
       ],
       [
         "0.161",
@@ -46,21 +46,21 @@ const domains=[
       [
         "0.397",
         "Opus 5.5 polygon IoU",
-        "DeepSeek · 0.249"
+        "DeepSeek-1017 · 0.249"
       ],
       [
         "0.329",
         "Opus 5.5 box–mask IoU",
-        "DeepSeek · 0.217"
+        "DeepSeek-1017 · 0.217"
       ]
     ],
-    "caption": "(a) UMD contact validity, including DeepSeek. (b) Direct-polygon IoU for all nine models on 70 cases, one run per case. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
+    "caption": "(a) UMD contact validity, including DeepSeek-1017. (b) Direct-polygon IoU for all nine models on 70 cases, one run per case. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
   },
   {
     "id": "planning",
     "label": "Task Planning",
     "title": "High Planning Scores Still Leave Physical Goals Unfinished.",
-    "text": "Astra leads overall Planning at 80.3%. Opus 5.5 completes 3/13 HumanCLAW tasks and DeepSeek 2/13; those successes involve navigation, while all eight sitting tasks remain incomplete.",
+    "text": "Astra leads overall Planning at 80.3%. Opus 5.5 completes 3/13 HumanCLAW tasks and DeepSeek-1017 2/13; those successes involve navigation, while all eight sitting tasks remain incomplete.",
     "evidence": [
       [
         "80.3%",
@@ -69,17 +69,17 @@ const domains=[
       ],
       [
         "31.2%",
-        "DeepSeek Planning success",
+        "DeepSeek-1017 Planning success",
         "157 tasks per agent"
       ]
     ],
-    "caption": "(a) Source-level success for Astra, Fable, Opus 5.5, and DeepSeek. (b–c) Astra and Fable’s household-goal and ScienceWorld diagnostics. Each assignment uses one episode."
+    "caption": "(a) Source-level success for Astra, Fable, Opus 5.5, and DeepSeek-1017. (b–c) Astra and Fable’s household-goal and ScienceWorld diagnostics. Each assignment uses one episode."
   },
   {
     "id": "manipulation",
     "label": "Manipulation",
     "title": "Local Control Does Not Ensure Complete Household Tasks.",
-    "text": "Opus 5.5 completes 47.8% of assigned Manipulation tasks; DeepSeek completes 20.9%. No model completes any of the five BEHAVIOR-1K tasks within the source limits.",
+    "text": "Opus 5.5 completes 47.8% of assigned Manipulation tasks; DeepSeek-1017 completes 20.9%. No model completes any of the five BEHAVIOR-1K tasks within the source limits.",
     "evidence": [
       [
         "47.8%",
@@ -88,11 +88,11 @@ const domains=[
       ],
       [
         "20.9%",
-        "DeepSeek task success",
+        "DeepSeek-1017 task success",
         "38 / 182 tasks"
       ]
     ],
-    "caption": "(a) Nine-model success across thirteen suites. (b) Consecutive CALVIN goals, out of five. (c) ManiSkill condition satisfaction. Filled/open markers show Baseline/additional visual feedback; teal triangles show DeepSeek’s per-round RGB setting."
+    "caption": "(a) Nine-model success across thirteen suites. (b) Consecutive CALVIN goals, out of five. (c) ManiSkill condition satisfaction. Filled/open markers show Baseline/additional visual feedback; teal triangles show DeepSeek-1017’s per-round RGB setting."
   }
 ];
 const cases=[
@@ -108,9 +108,9 @@ function buildTabs(items,prefix,render){
 // Reserve figure space before lazy loading so in-page links keep their position.
 const figureSizes={"geometry": [1875, 512], "spatial": [2063, 499], "affordance": [1875, 512], "planning": [1875, 512], "manipulation": [2100, 697]};
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
-buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=20261019" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=20261019" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
+buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=names-1017-20261019" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=names-1017-20261019" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
 function renderCompletionCase(c){
- const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=20261019" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=20261019" alt="${c.alt}" loading="lazy"></button>`;
+ const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=names-1017-20261019" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=names-1017-20261019" alt="${c.alt}" loading="lazy"></button>`;
  return `<h3>${c.title}</h3><div class="completion-highlight"><strong>${c.value}</strong><div><span>${c.metric}</span><span class="completion-scope">${c.scope}</span></div></div><p class="case-explanation">${c.explanation}</p><div class="case-setting"><p><strong>Per-episode limits.</strong> ${c.budget}</p><p>${c.protocol}</p></div><figure class="case-figure">${evidence}<figcaption class="figure-takeaway">${c.text}</figcaption></figure>`;
 }
 buildTabs(cases,'case',renderCompletionCase);

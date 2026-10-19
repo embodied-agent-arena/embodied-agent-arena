@@ -17,9 +17,9 @@
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
-    fetch('data/case-studies.json?v=20261019-r2').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json?v=20261019-r2').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-media.json?v=20261019-r2').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
+    fetch('data/case-studies.json?v=names-1017-20261019').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
+    fetch('data/case-gallery.json?v=names-1017-20261019').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-media.json?v=names-1017-20261019').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media]) => {mediaData=media; const all=[...cases,...media.groups]; records = new Map(all.map(c => [c.id,c])); metadata = meta; return all;});
   const metricSpecs = [
     ['absolute_error_cm','Distance error','cm',1],['trace_3d_frechet','3D Fréchet distance','m',1],
@@ -88,7 +88,7 @@
       const run=mediaData.runs[id]; const i=rows.findIndex(r=>r.model===run.model);
       if(i<0)rows.push(run); else rows[i]=run;
     }
-    const order=['GPT-6 Astra','GPT-6 Sol','Claude Fable 5.1','Gemini 3.8 Flash','Qwen 3.8 Max','Qwen 3.5 397B-A17B','Qwen 3.5 27B','Claude Opus 5.5','DeepSeek 4.1 Flash'];
+    const order=['GPT-6 Astra','GPT-6 Sol','Claude Fable 5.1','Gemini 3.8 Flash','Qwen 3.8 Max','Qwen 3.5 397B-A17B','Qwen 3.5 27B','Claude Opus 5.5','DeepSeek 4.1 Flash-1017'];
     return rows.sort((a,b)=>order.indexOf(a.model)-order.indexOf(b.model));
   }
   const outcomeText = r => r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',agent_failure:'Agent failure',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');

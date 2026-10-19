@@ -190,7 +190,7 @@
         "sourceReportSha256": "5d437e20fbe80985b7e32ab2fca81c81f579841b243716c839950d7c5f54346b"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "fx": 3200.0,
           "fy": 3200.0,
@@ -411,7 +411,7 @@
         "sourceReportSha256": "c2b3ea866abe4f24203c36b99bea04a541a5818fc81f476b3e5fed972ba0cf20"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "fx": 3000.0,
           "fy": 3000.0,
@@ -632,7 +632,7 @@
         "sourceReportSha256": "6fa76086c0f04587efa210df9751800d6e9878579444de88dab9c618ca9ca1dc"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "fx": 2472.9,
           "fy": 2472.9,
@@ -871,7 +871,7 @@
         "sourceReportSha256": "6273254ac37bbacfcf4529bab1eab830b618b33b746dfead55c531d94ce32581"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "qw": 0.99814,
           "qx": 0.0,
@@ -1112,7 +1112,7 @@
         "sourceReportSha256": "98a2f491e1adcc91bf8a157d3d242688534a69148ef0ae652903e44f7b9e7472"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "qw": 0.9942,
           "qx": -0.048,
@@ -1339,7 +1339,7 @@
         "sourceReportSha256": "7db1e668caa5a2e2cd78293b15c3890f465e87c396da30b67f3fe380b0bb8b37"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "qw": 0.0,
           "qx": 0.0,
@@ -1510,7 +1510,7 @@
         "sourceReportSha256": "68079f1e5d0d7d5989b20aedbb5796bdfc3efd04ab730cf250567debaa1f6cea"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "value": 10.0
         },
@@ -1673,7 +1673,7 @@
         "sourceReportSha256": "4d03b947a9252ab2857d6a7af2675d48ecabb15abe7916d6d0a2a993c048fb01"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": null,
         "valid": false,
         "metrics": {},
@@ -1860,7 +1860,7 @@
         "sourceReportSha256": "ca8216e6a0f909b8c6a809bb2fc433569d6f5c1acf0c8d94be481cb74c40118a"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "vector": [
             1500.0,
@@ -2451,7 +2451,7 @@
         "sourceReportSha256": "12feace4a5cd393f5758d8eab49458e145c89889d951d9743a71a64cfa55e34b"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": [
           [
             516,
@@ -3044,7 +3044,7 @@
         "sourceReportSha256": "e91d1527dc8b4d5dde09886ca0fd82ed7740853a25b878af4dce330bcd0ca786"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": [
           [
             580,
@@ -3647,7 +3647,7 @@
         "sourceReportSha256": "3204c450faa7a4c189425836727c3c95d1c61e8ce3601ed6650e24cdbf13a297"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": [
           [
             362,
@@ -4440,7 +4440,7 @@
         "sourceReportSha256": "7bf33f85f0384b7e22f7e96d9543bc1bbee717080ed8eb01861df9f7dde79a23"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": [
           [
             470,
@@ -4529,7 +4529,7 @@
     "title": "3D Trajectory",
     "shortTask": "Predict a trajectory from the toothpaste to the blue waste bin.",
     "takeaway": "Image projection of 3D paths",
-    "comparisonFigure": "assets/latest-cases/cases-geometry.webp",
+    "comparisonFigure": "assets/latest-cases/cases-geometry.webp?v=names-1017-20261019",
     "taskId": "w1_tracespatial_3d--w1_tracespatial_3d-tracespatial_3d__098--tracespatial_bench_eval--tracespatial_3d__098--42--01ab0cff4090"
   },
   {
@@ -5195,7 +5195,7 @@
         "sourceReportSha256": "893bb79e94ce39b9f311c4486afb1ccb5ad50d4885b7b00eaacabd63f5065dc3"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": [
           [
             585,
@@ -5993,7 +5993,7 @@
         "sourceReportSha256": "ac32ca098a224b2d037f07af447f0a008c0bdce7cef56e11789b0ca3e3daa184"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": [
           [
             350,
@@ -6536,7 +6536,7 @@
         "sourceReportSha256": "82b50c26694c4c679005c7118c3de359126f84d88adce01940d735feae1e3c6c"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "depth_m": [
             3.1,
@@ -7063,7 +7063,7 @@
         "sourceReportSha256": "19cf7679c5fa0906d1f4369759e349f8b5c79eea2f8d5b5c0190e99df20a56db"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "depth_m": [
             3.25,
@@ -7590,7 +7590,7 @@
         "sourceReportSha256": "2197f7ad327745b23f84daf11c3763a443a65c4ab8b2e0193425962d7f0e4ef8"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "depth_m": [
             1.32,
@@ -7796,7 +7796,7 @@
         "sourceReportSha256": "4c54052e10c8430aec25442adfd8a7e68a861f0d18758ad2cbd5f67fbb4f75b8"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "f": 886.8
         },
@@ -7966,7 +7966,7 @@
         "sourceReportSha256": "a212ab6e4babc53ba9fce1520766d0edbf21ce3b4cd7d2039d1e9f2ec309b378"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "f": 1000.0
         },
@@ -8136,7 +8136,7 @@
         "sourceReportSha256": "c18c4db8d6fc44634faed2574781181fdf69f251fbd66efa7c353b6d2bcff041"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "f": 850.0
         },
@@ -8352,7 +8352,7 @@
         "sourceReportSha256": "613316a03606e92d4614b10ecc199e38341242b1fc29171612685ed7a61f3cb1"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "fx": 320.0,
           "fy": 320.0,
@@ -8576,7 +8576,7 @@
         "sourceReportSha256": "68efbee9920a9a7d75c6d406f29131c96c0fca3e7f2367e1ccd4b92882494854"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "fx": 800.0,
           "fy": 800.0,
@@ -8800,7 +8800,7 @@
         "sourceReportSha256": "943a0beec3eb929e7d5e7200e455b4d644333332f4c35acc49121958efed2a52"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "fx": 800.0,
           "fy": 800.0,
@@ -9022,7 +9022,7 @@
         "sourceReportSha256": "5f167b2ae506f7c530a3dd5d9a4da060042e978486328748daf3889c87f16430"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "left",
@@ -9241,7 +9241,7 @@
         "sourceReportSha256": "cf9b08d5f98ac0c45ab6167ed7bb88e4f7d9749a0b178065c375bdedee931e41"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": false,
           "direction": "none",
@@ -9460,7 +9460,7 @@
         "sourceReportSha256": "e8cc925ed06283eb87e52f5f4c340408386e3db93ed5975c1e38b1f712a2d3ce"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "right",
@@ -9679,7 +9679,7 @@
         "sourceReportSha256": "a8e8d810c09c458f31fadf494ac4d38ca390ca6b79192106a36fc8464cff07c5"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": false,
           "direction": "none",
@@ -9898,7 +9898,7 @@
         "sourceReportSha256": "2d88a2ae3e39efe55dbbf558fad4410ad0153af131526f1ef69a1656f6bbee2e"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "down_right",
@@ -10117,7 +10117,7 @@
         "sourceReportSha256": "142327078deabd1656c216fc799f8bbd49859e833e142b421b8ead78ec54ad63"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "up_left",
@@ -10336,7 +10336,7 @@
         "sourceReportSha256": "c5c4024ad90aa59d0aa3c2bf9f6ff43f387d579675a1418d46cb49fa04e0a956"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": false,
           "direction": "none",
@@ -10555,7 +10555,7 @@
         "sourceReportSha256": "edc41077f4ff9d57e491daf6f59e7184c6fc20ad295cf2562d413c4626d902a5"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "down_left",
@@ -10774,7 +10774,7 @@
         "sourceReportSha256": "a6d938e9db17d6c80bdaf598cebe33895af75ff65c6fbc4c824f3b8620ad9b6d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "down",
@@ -10993,7 +10993,7 @@
         "sourceReportSha256": "7f52c22b553ab54e0af1c5b62024837438d05eb50d721913a5796e039efe0dcd"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "up_right",
@@ -11025,7 +11025,7 @@
     "title": "Real Object Motion",
     "shortTask": "Track the green-handled glass jug relative to the table.",
     "takeaway": "Reference: right, 2 cm",
-    "comparisonFigure": "assets/latest-cases/cases-geometry.webp",
+    "comparisonFigure": "assets/latest-cases/cases-geometry.webp?v=names-1017-20261019",
     "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0003--vlm_test_v1--vlm_motion_real__real0003--42--73ff63cd73d2"
   },
   {
@@ -11214,7 +11214,7 @@
         "sourceReportSha256": "42e0e524219d0816890c31ca845fb585b2152f7055bc855b1fde88049e09e47e"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": true,
           "direction": "left",
@@ -11433,7 +11433,7 @@
         "sourceReportSha256": "35f1e5a7e9f25e1079f3f8139bfd3a97852b02447aba752361561163d4674d16"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "moved": false,
           "direction": "none",
@@ -11756,7 +11756,7 @@
         "sourceReportSha256": "95164c8749ffc50f79983bceb2777f41634eb102d53bc76d2eb5051182c2adc3"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "translation_cm": [
             6.0,
@@ -11809,7 +11809,7 @@
     "title": "Camera Translation",
     "shortTask": "Estimate camera B’s position in the coordinate frame of camera A.",
     "takeaway": "Reference translation: [12, 9, 0] cm",
-    "comparisonFigure": "assets/latest-cases/cases-geometry.webp",
+    "comparisonFigure": "assets/latest-cases/cases-geometry.webp?v=names-1017-20261019",
     "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0022--vlm_test_v1--vlm_pose__rt0022--42--9a1a2bc4a1dd"
   },
   {
@@ -12081,7 +12081,7 @@
         "sourceReportSha256": "d423f2a6fa20a23e380ec88c4027e4df5690c2d52c860993e99f9b88d9fd6665"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "translation_cm": [
             2.8,
@@ -12422,7 +12422,7 @@
         "sourceReportSha256": "ce4801541577f32c7756456dec883351f2b5113d47658157e3eb0045cb874d63"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "translation_cm": [
             0.0,
@@ -12632,7 +12632,7 @@
         "sourceReportSha256": "e2f00d4b916727f1df9315c71c40cc11f244409a162c54fd12190b9e1c12515d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "height_ratio": 2.59
         },
@@ -12822,7 +12822,7 @@
         "sourceReportSha256": "37975b4f903d77d27db499982fc1f484176edf6533f785347e134951f867eebf"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "height_cm": 26.7
         },
@@ -13013,7 +13013,7 @@
         "sourceReportSha256": "bea02a259c6f333a7cf1dcfc95cb67dc45e0c6998d7cd83b5862f432f69d0dc2"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "height_ratio_2_over_1": 0.991
         },
@@ -13236,7 +13236,7 @@
         "sourceReportSha256": "35dc0d72af3d1d69aa9d7e75099815df3e8e93011b0a8846985af890a55055d4"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "mug_height_cm": 8.5,
           "bottle_height_cm": 22.0,
@@ -13468,7 +13468,7 @@
         "sourceReportSha256": "6bc860568fb3534bb5b4da7bd51f7616ce42d49193d81fccbc9ec79aa8ecbb4c"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "mug_height_cm": 9.5,
           "bottle_height_cm": 21.0,
@@ -13700,7 +13700,7 @@
         "sourceReportSha256": "5f38192a659486d3d92f90c8ed8ff5dafcf56f6fd3f9157c518bd74b41947285"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "mug_height_cm": 9.2,
           "bottle_height_cm": 22.5,
@@ -13831,7 +13831,7 @@
         "sourceReportSha256": "047d48f6c5df76d255bdd908b8603bd2582b6bbae1a6e0551dd0cb0ec73603b3"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "C",
         "valid": true,
         "metrics": {
@@ -13844,7 +13844,7 @@
     "title": "Object Orientation",
     "shortTask": "Which side of the person is facing the camera?",
     "takeaway": "Reference B: left",
-    "comparisonFigure": "assets/latest-cases/cases-spatial.webp",
+    "comparisonFigure": "assets/latest-cases/cases-spatial.webp?v=names-1017-20261019",
     "taskId": "w2_3dsrbench--w2_3dsrbench-X727WAYB--native_release--X727WAYB--42--2cec6197cabf"
   },
   {
@@ -13935,7 +13935,7 @@
         "sourceReportSha256": "3a8a4faffa4a5b1e062e80a7fd18b58ff0a9b07ab0e3d252c49aaefaa0f10e85"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "C",
         "valid": true,
         "metrics": {
@@ -14035,7 +14035,7 @@
         "sourceReportSha256": "67d585b12341d3a9342e344f5d06f46aa764c2d2f915b05355206ae94948fab9"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": null,
         "valid": false,
         "metrics": {},
@@ -14130,7 +14130,7 @@
         "sourceReportSha256": "ea1295af5e45ed66e9db89cb32ba19851b6f620cbef04e73e6540f112eb601cd"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "B",
         "valid": true,
         "metrics": {
@@ -14228,7 +14228,7 @@
         "sourceReportSha256": "bb32857914f754ef3810bac99b9777fb20c5f5f5cbfecec506d80d8e167a00a7"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "A",
         "valid": true,
         "metrics": {
@@ -14326,7 +14326,7 @@
         "sourceReportSha256": "e78375ce48f567533eed115d0236599fd0ecd1ef15b841553d99347f6cede56f"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "A",
         "valid": true,
         "metrics": {
@@ -14424,7 +14424,7 @@
         "sourceReportSha256": "944029f5116fb278f002ac2405470fe7005a1c44afad804212496cc8b4da9915"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "A",
         "valid": true,
         "metrics": {
@@ -14437,7 +14437,7 @@
     "title": "Viewpoint Change",
     "shortTask": "In which direction did the camera move between these views?",
     "takeaway": "Reference A: diagonally forward and right",
-    "comparisonFigure": "assets/latest-cases/cases-spatial.webp",
+    "comparisonFigure": "assets/latest-cases/cases-spatial.webp?v=names-1017-20261019",
     "taskId": "w2_mindcube--w2_mindcube-among_group707_q3_1_2--native_release--among_group707_q3_1_2--42--b795dfe438a3"
   },
   {
@@ -14526,7 +14526,7 @@
         "sourceReportSha256": "a6bf6315dfdc0efff0010796403283f1b91e9d835c81e5b92a309b19a6a3b137"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "A",
         "valid": true,
         "metrics": {
@@ -14625,7 +14625,7 @@
         "sourceReportSha256": "02e1a33f10788addb7fe0c6ad9a05f2f21daded12186ac2657dfbc88dc7f12f9"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "B",
         "valid": true,
         "metrics": {
@@ -14723,7 +14723,7 @@
         "sourceReportSha256": "513f284615ad1b0df04739b3d74a3bf477109b3484eef3b123a81803146a3f4d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "D",
         "valid": true,
         "metrics": {
@@ -14736,7 +14736,7 @@
     "title": "Relative Direction",
     "shortTask": "If the open cupboard faces north, where is the cooking area?",
     "takeaway": "Reference A: northwest",
-    "comparisonFigure": "assets/latest-cases/cases-spatial.webp",
+    "comparisonFigure": "assets/latest-cases/cases-spatial.webp?v=names-1017-20261019",
     "taskId": "w2_mmsi_bench--w2_mmsi_bench-987--native_release--987--42--24687cdd81d6"
   },
   {
@@ -14825,7 +14825,7 @@
         "sourceReportSha256": "b7e872fa1ec42e32e544223f0dda8b515a1bc4e1a56232e12b5fef3a4e30a4f0"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "B",
         "valid": true,
         "metrics": {
@@ -14923,7 +14923,7 @@
         "sourceReportSha256": "3ffb73b27595f1ac408e422eaeda72e64999ae533bc5b670538342cb0300386a"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": null,
         "valid": false,
         "metrics": {},
@@ -15019,7 +15019,7 @@
         "sourceReportSha256": "d8a6cb761bfffd6657672fe08ae946ac2da6300a313cfc3dab4cd81498bbbde1"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "A",
         "valid": true,
         "metrics": {
@@ -15117,7 +15117,7 @@
         "sourceReportSha256": "30e287dbf38e99c587ff5dac90a8e74305ad3e425a451136a8e5943c0dd701de"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "A",
         "valid": true,
         "metrics": {
@@ -15215,7 +15215,7 @@
         "sourceReportSha256": "cf99584ace457be78f6d383af978a76df990a2bc105f461468ccfb5ac26f7a05"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "A",
         "valid": true,
         "metrics": {
@@ -15324,7 +15324,7 @@
         "sourceReportSha256": "c9cdd0204a414d73c7ac334fd022daf758cc2bb42faae8dae1da98a4862c9dea"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": null,
         "valid": false,
         "metrics": {},
@@ -15444,7 +15444,7 @@
         "sourceReportSha256": "7e0d6984dd6e248d15425c556dbdf7cadc0feeee73bc557b070191222a6fa653"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "2",
         "valid": true,
         "metrics": {
@@ -15571,7 +15571,7 @@
         "sourceReportSha256": "64c2608d3f8ab0ff09b996124a431804eb6b762540eb36d2cbd67cf4bdf42147"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": "25",
         "valid": true,
         "metrics": {
@@ -18301,7 +18301,7 @@
         "sourceReportSha256": "434641b7ea172bbe74cd5309f12c9b8c4984fc737938961a1bf096dc10aa0455"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             260.0,
@@ -18574,7 +18574,7 @@
         "sourceReportSha256": "73f3c77d46d49dd55d2299c81e4d1227b6d7e6de302331388150b2d028f9d92b"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             330.0,
@@ -18611,7 +18611,7 @@
     "title": "Two-Hand Interaction",
     "shortTask": "Locate the region for the task “free using two hands”.",
     "takeaway": "Reference box and first-run predictions",
-    "comparisonFigure": "assets/latest-cases/cases-affordance.webp",
+    "comparisonFigure": "assets/latest-cases/cases-affordance.webp?v=names-1017-20261019",
     "taskId": "w5_ragnet--w5_ragnet-taskonomy_poipu_point_1187_view_1_doma--native_release--taskonomy_poipu_point_1187_view_1_domain_rgb--42--a155bc233c70"
   },
   {
@@ -18849,7 +18849,7 @@
         "sourceReportSha256": "1ec67a3461f1f2c773f5fcd7399b59adb957c52d9756d23705c893e88f93b57d"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             200.0,
@@ -19122,7 +19122,7 @@
         "sourceReportSha256": "6a1da656a22ea8802d4e59d997d1fbdfc054c3facb1d9f6a3ff1cca0f1d7a848"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             316.0,
@@ -19395,7 +19395,7 @@
         "sourceReportSha256": "a36f7ef30470f439d88c998c3670487cfa50f1ef52f794c7cdb122b485f10703"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             408.0,
@@ -19668,7 +19668,7 @@
         "sourceReportSha256": "2c356670461b2e830249a2104cf22f8e5db7c06d92aca8957e22abdfb4d8d02e"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             198.0,
@@ -19705,7 +19705,7 @@
     "title": "Pulling",
     "shortTask": "Locate the functional region to pull.",
     "takeaway": "Reference box and first-run predictions",
-    "comparisonFigure": "assets/latest-cases/cases-affordance.webp",
+    "comparisonFigure": "assets/latest-cases/cases-affordance.webp?v=names-1017-20261019",
     "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_hercules_point_295_view_8--native_release--taskonomy_hercules_point_295_view_8_domain_rgb--42--408370c86670"
   },
   {
@@ -19943,7 +19943,7 @@
         "sourceReportSha256": "9bb101ab47d5cd8d621b5d7f4e5216d818a669efa7f9fb7b17b2647c9cf967f7"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             250.0,
@@ -20216,7 +20216,7 @@
         "sourceReportSha256": "554aceda256ba985f39afb6da70b247fa9457701064c609a8158f978cd1913c8"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             305.0,
@@ -20489,7 +20489,7 @@
         "sourceReportSha256": "9b165e858eb31fd2a002eda5484c585c4e8a3ca2f5f2f6022d42678065e21727"
       },
       {
-        "model": "DeepSeek 4.1 Flash",
+        "model": "DeepSeek 4.1 Flash-1017",
         "answer": {
           "point_2d": [
             335.0,
@@ -20526,7 +20526,7 @@
     "title": "Cutting",
     "shortTask": "Locate the cutting region of the scissors.",
     "takeaway": "Reference box and first-run predictions",
-    "comparisonFigure": "assets/latest-cases/cases-affordance.webp",
+    "comparisonFigure": "assets/latest-cases/cases-affordance.webp?v=names-1017-20261019",
     "taskId": "w5_umd--w5_umd-scissors_02_00000232_cut--native_release--scissors_02_00000232_cut--42--91c19d2164c4"
   }
 ]
