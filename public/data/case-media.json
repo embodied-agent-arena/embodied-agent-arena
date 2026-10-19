@@ -11442,7 +11442,7 @@
       "camera": "thor.egocentric_rgb",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 76.68373084068298,
+      "elapsedSeconds": 52.147415,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -11451,7 +11451,9 @@
       },
       "sourceReportSha256": "83165814a0683ca5fff84b2b6acba6343d952be2cd7956f26bb643eb6265c1b7",
       "sourceMediaSha256": "91e0a8c7264696cbc1a0db4aff346ee0ed950ad6918d98133f1c3eda4bd365d4",
-      "publishedVideoSha256": "ed461339b5dc19b0e73d95ef7a5c6adaef42d1a9dfce6566a96425fd05f27c80"
+      "publishedVideoSha256": "ed461339b5dc19b0e73d95ef7a5c6adaef42d1a9dfce6566a96425fd05f27c80",
+      "importedStatusDurationSeconds": 76.68373084068298,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-alfred_official_visual-deepseek-04": {
       "id": "W3-alfred_official_visual-deepseek-04",
@@ -11486,7 +11488,7 @@
       "camera": "egocentric_observation",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 71.10528659820557,
+      "elapsedSeconds": 57.397989,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -11495,7 +11497,9 @@
       },
       "sourceReportSha256": "c00c3aa1a6269971abd1330cd7e68ad5388d59441b50fe26016457738422cc0a",
       "sourceMediaSha256": "7610e56f534db28d83e1eb1b51f475144c43265183dc1d34eb6a69ee21b7901a",
-      "publishedVideoSha256": "67504efabaeb47fab7f3b43f6974bf289a30b2410d916e4c81ea6c3d3a6f7644"
+      "publishedVideoSha256": "67504efabaeb47fab7f3b43f6974bf289a30b2410d916e4c81ea6c3d3a6f7644",
+      "importedStatusDurationSeconds": 71.10528659820557,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-alfworld_visual-deepseek-01": {
       "id": "W3-alfworld_visual-deepseek-01",
@@ -11546,7 +11550,7 @@
       "camera": "thor.egocentric_rgb",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 73.84183025360107,
+      "elapsedSeconds": 59.131365,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -11555,7 +11559,9 @@
       },
       "sourceReportSha256": "2359f472c528f1da3057d410d1c73dde533afa84847b8db36aa6177441d83297",
       "sourceMediaSha256": "59eb3cfe3c2dbd61c938a670b1751c45f1484a2ee84e95430f9eed1a80a9086e",
-      "publishedVideoSha256": "ba2f6a607b5c012ae84214b90e2a97a323ed70a2d31ccc8c016e08b0e8e12310"
+      "publishedVideoSha256": "ba2f6a607b5c012ae84214b90e2a97a323ed70a2d31ccc8c016e08b0e8e12310",
+      "importedStatusDurationSeconds": 73.84183025360107,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-alfworld_visual-deepseek-04": {
       "id": "W3-alfworld_visual-deepseek-04",
@@ -11598,7 +11604,7 @@
       "camera": "thor.egocentric_rgb",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 87.87043929100037,
+      "elapsedSeconds": 62.135091,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -11607,7 +11613,9 @@
       },
       "sourceReportSha256": "350bf9d80d0c74279fe1040d5d6405fcee6cf40e1955873e7e2565f77d34680c",
       "sourceMediaSha256": "2b464c5fe70b4b9f60f4f867625008556465cae1a45241efd149cb79ea4e64a9",
-      "publishedVideoSha256": "58425e08d81560f56ebab85b1f05635731bf50125c9e35aa85e5eb02dc9102fa"
+      "publishedVideoSha256": "58425e08d81560f56ebab85b1f05635731bf50125c9e35aa85e5eb02dc9102fa",
+      "importedStatusDurationSeconds": 87.87043929100037,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-discoveryworld-deepseek-01": {
       "id": "W3-discoveryworld-deepseek-01",
@@ -11666,7 +11674,7 @@
       "camera": "discoveryworld.vision.base64_no_grid",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 57.280498027801514,
+      "elapsedSeconds": 51.299935,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -11675,7 +11683,9 @@
       },
       "sourceReportSha256": "b87667680e2752fb60f59610c51ef599a25e58b68350459b31d36186eefe3985",
       "sourceMediaSha256": "ef2a058ba16b2e2a562a84ff3db9772f97c762c16a15cc0d84d383c67f5a2e95",
-      "publishedVideoSha256": "624659d26d56d7a11a5c7d3da43241249985f4427a1ed7c1fedbde8ababebf48"
+      "publishedVideoSha256": "624659d26d56d7a11a5c7d3da43241249985f4427a1ed7c1fedbde8ababebf48",
+      "importedStatusDurationSeconds": 57.280498027801514,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-discoveryworld-deepseek-06": {
       "id": "W3-discoveryworld-deepseek-06",
@@ -11734,7 +11744,7 @@
       "camera": "discoveryworld.vision.base64_no_grid",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 36.51801872253418,
+      "elapsedSeconds": 33.654045,
       "modelRounds": 7,
       "budgets": {
         "max_code_turns": 8,
@@ -11743,7 +11753,9 @@
       },
       "sourceReportSha256": "15c47d1169fb51793157e01b2ab68cacd1eef79eb173e9e206eb3d02c7e09d0b",
       "sourceMediaSha256": "7823ecca7296a4205a8b92e893574953b45a934efe1c6caca5a326c8c9ca7cba",
-      "publishedVideoSha256": "044d2967fb03af078420510151142ff4ea089f640ee4098da9ccff30c6bcaeb8"
+      "publishedVideoSha256": "044d2967fb03af078420510151142ff4ea089f640ee4098da9ccff30c6bcaeb8",
+      "importedStatusDurationSeconds": 36.51801872253418,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-humanclaw-deepseek-01": {
       "id": "W3-humanclaw-deepseek-01",
@@ -11802,7 +11814,7 @@
       "camera": "humanclaw.head_rgb",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 508.9244794845581,
+      "elapsedSeconds": 496.470737,
       "modelRounds": 70,
       "budgets": {
         "max_code_turns": 101,
@@ -11810,7 +11822,9 @@
       },
       "sourceReportSha256": "54e1ea7f440550b14f22a2348b4d2dd5b629406de6dc5e89ad573ea27cbfd628",
       "sourceMediaSha256": "4fa2b8e05d3e8dfc0fab0107686f187bdc786ad4ddb0c6fcddd0eceb450e97d7",
-      "publishedVideoSha256": "3011b711920309fb1d8f8d209c068a2eed0b2fec05bd26c5b38f2d8f5ab0e46d"
+      "publishedVideoSha256": "3011b711920309fb1d8f8d209c068a2eed0b2fec05bd26c5b38f2d8f5ab0e46d",
+      "importedStatusDurationSeconds": 508.9244794845581,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-humanclaw-deepseek-02": {
       "id": "W3-humanclaw-deepseek-02",
@@ -11869,7 +11883,7 @@
       "camera": "humanclaw.head_rgb",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 414.71562600135803,
+      "elapsedSeconds": 405.681573,
       "modelRounds": 65,
       "budgets": {
         "max_code_turns": 101,
@@ -11877,7 +11891,9 @@
       },
       "sourceReportSha256": "d708ea6bdf0418dd7683f6f02d82bfbc721b8345252a6f2d5a8405b161360493",
       "sourceMediaSha256": "7233f541aad83fe19b826cf0c824027aaa32bd16daeb4fb36d41bab3c426cce1",
-      "publishedVideoSha256": "d24ce442cac16d4fe7a03aab8459e906f3cb2c25b2bc1490046661bb45317563"
+      "publishedVideoSha256": "d24ce442cac16d4fe7a03aab8459e906f3cb2c25b2bc1490046661bb45317563",
+      "importedStatusDurationSeconds": 414.71562600135803,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-scienceworld_text-deepseek-01": {
       "id": "W3-scienceworld_text-deepseek-01",
@@ -11934,7 +11950,7 @@
       "camera": "text_or_symbolic",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 32.4924590587616,
+      "elapsedSeconds": 25.139776,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -11942,7 +11958,9 @@
       },
       "sourceReportSha256": "c6023b012f87b626bbd58f3309d18f4de7a2aa66f5158d98431cb08636ac88df",
       "sourceMediaSha256": "21faea303f6d5c2b01750ea2b33325000bc54f241b2ec3a91c6b51c442979b9c",
-      "publishedVideoSha256": "63867ccf9a4d1354ae8746ae704cee759865d743d5827eba370685f1ffad2eee"
+      "publishedVideoSha256": "63867ccf9a4d1354ae8746ae704cee759865d743d5827eba370685f1ffad2eee",
+      "importedStatusDurationSeconds": 32.4924590587616,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-virtualhome_symbolic-deepseek-01": {
       "id": "W3-virtualhome_symbolic-deepseek-01",
@@ -12066,7 +12084,7 @@
       "camera": "text_or_symbolic",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 332.7182149887085,
+      "elapsedSeconds": 318.181787,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -12074,7 +12092,9 @@
       },
       "sourceReportSha256": "dd133c948fbd361d72dfde1c706fda80b215f59f637ca7b859e8a7f2bccb378f",
       "sourceMediaSha256": "94ebf87e981eec5fa92717e7ccfcda5636eecbb53a81ead5381806daf0efefe2",
-      "publishedVideoSha256": "3305d6d494a1e3cbdfffe0cab01c24ca9f6bf3016468bfc57c888f83f5e5e365"
+      "publishedVideoSha256": "3305d6d494a1e3cbdfffe0cab01c24ca9f6bf3016468bfc57c888f83f5e5e365",
+      "importedStatusDurationSeconds": 332.7182149887085,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-virtualhome_symbolic-deepseek-04": {
       "id": "W3-virtualhome_symbolic-deepseek-04",
@@ -12163,7 +12183,7 @@
       "camera": "text_or_symbolic",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 301.294228553772,
+      "elapsedSeconds": 282.408112,
       "modelRounds": 8,
       "budgets": {
         "max_code_turns": 8,
@@ -12171,7 +12191,9 @@
       },
       "sourceReportSha256": "0c0b3ee955c89ca28f0f001e62df1fb1257af8135a651ce8dff367f870876a30",
       "sourceMediaSha256": "c6f96b24a6d301c6f0673fbfabe218c7ab788ddb14aba4ebc79e25ac99cc3b5d",
-      "publishedVideoSha256": "c4e4b78864960482d2945f05dd6c9cb0747e57090d233441fa8e74c09e1b0999"
+      "publishedVideoSha256": "c4e4b78864960482d2945f05dd6c9cb0747e57090d233441fa8e74c09e1b0999",
+      "importedStatusDurationSeconds": 301.294228553772,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W3-virtualhome_symbolic-deepseek-05": {
       "id": "W3-virtualhome_symbolic-deepseek-05",
@@ -12282,7 +12304,7 @@
       "camera": "text_or_symbolic",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 306.34382915496826,
+      "elapsedSeconds": 288.481078,
       "modelRounds": 7,
       "budgets": {
         "max_code_turns": 8,
@@ -12290,7 +12312,9 @@
       },
       "sourceReportSha256": "ba9ce7d1675947a7fb6026f44f4594eda067cd774cd62d0c7a4feeadc6ec59c5",
       "sourceMediaSha256": "1d68f3cc201e25ea735d13d886806293ce47e0292471a0b19d3e4143c235b4f9",
-      "publishedVideoSha256": "aefffbd12c6cac8caba90cd46cb7a3cf1f3b442aab1febaef9fa10b5ef2a2a3e"
+      "publishedVideoSha256": "aefffbd12c6cac8caba90cd46cb7a3cf1f3b442aab1febaef9fa10b5ef2a2a3e",
+      "importedStatusDurationSeconds": 306.34382915496826,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-calvin-deepseek-01": {
       "id": "W4-calvin-deepseek-01",
@@ -12349,7 +12373,7 @@
       "camera": "_env.step.0.rgb_obs.rgb_static",
       "clipStartSeconds": 16.0,
       "clipEndSeconds": 28.0,
-      "elapsedSeconds": 596.2235267162323,
+      "elapsedSeconds": 595.370179,
       "modelRounds": 40,
       "budgets": {
         "llm_num_retries": 3,
@@ -12362,7 +12386,9 @@
       },
       "sourceReportSha256": "9d2d10afc41f6ccf58ef8ddd794ba4b9f0a9ef498a6eb4615dfd1b157f2b06f3",
       "sourceMediaSha256": "cb0c41c7dd48f1499998e02f7f4d389b9a0b1d041f6f5c09f9a239093e4c08a6",
-      "publishedVideoSha256": "cb0c41c7dd48f1499998e02f7f4d389b9a0b1d041f6f5c09f9a239093e4c08a6"
+      "publishedVideoSha256": "cb0c41c7dd48f1499998e02f7f4d389b9a0b1d041f6f5c09f9a239093e4c08a6",
+      "importedStatusDurationSeconds": 596.2235267162323,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-calvin-deepseek-02": {
       "id": "W4-calvin-deepseek-02",
@@ -12421,7 +12447,7 @@
       "camera": "_env.step.0.rgb_obs.rgb_static",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 12.0,
-      "elapsedSeconds": 465.89950609207153,
+      "elapsedSeconds": 462.545548,
       "modelRounds": 37,
       "budgets": {
         "llm_num_retries": 3,
@@ -12434,7 +12460,9 @@
       },
       "sourceReportSha256": "5defe359986dc3000abe5d5818156093e27332b1d2122656450a5d66a20686cb",
       "sourceMediaSha256": "ad8764d5df75393668060de7a74c2bf85fb4fa86969362cf3c9213b36114f013",
-      "publishedVideoSha256": "ad8764d5df75393668060de7a74c2bf85fb4fa86969362cf3c9213b36114f013"
+      "publishedVideoSha256": "ad8764d5df75393668060de7a74c2bf85fb4fa86969362cf3c9213b36114f013",
+      "importedStatusDurationSeconds": 465.89950609207153,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-calvin-deepseek-05": {
       "id": "W4-calvin-deepseek-05",
@@ -12510,7 +12538,7 @@
       "camera": "recorded_decision_timeline",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 208.9028742313385,
+      "elapsedSeconds": 205.478351,
       "modelRounds": 40,
       "budgets": {
         "llm_num_retries": 3,
@@ -12523,7 +12551,9 @@
       },
       "sourceReportSha256": "1b6b51c8165eb4522972faac71bf3d138de1c56a468401283bcb4faaa8b3328f",
       "sourceMediaSha256": "4d71b37cc77b8a868c04b6a4a369231114e5c99900c14ef5b8587c235b8e71dc",
-      "publishedVideoSha256": "1f6313045a03a85b61166a903e9792f67511df0f63c7e95a2ef81ecf57a6bd1e"
+      "publishedVideoSha256": "1f6313045a03a85b61166a903e9792f67511df0f63c7e95a2ef81ecf57a6bd1e",
+      "importedStatusDurationSeconds": 208.9028742313385,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-capx_behavior1k-deepseek-01": {
       "id": "W4-capx_behavior1k-deepseek-01",
@@ -12582,7 +12612,7 @@
       "camera": "hq.capx.external",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 10.933333,
-      "elapsedSeconds": 721.2186548709869,
+      "elapsedSeconds": 720.434914,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -12595,7 +12625,9 @@
       },
       "sourceReportSha256": "6bee5fd19473b2ccfb416a561699e79b2318a4d36bdb083b7e3e9979d386c051",
       "sourceMediaSha256": "94cdbb04a159061b2515997a1b0f3119ed55ae794f63c4480524ed7d72b55077",
-      "publishedVideoSha256": "94cdbb04a159061b2515997a1b0f3119ed55ae794f63c4480524ed7d72b55077"
+      "publishedVideoSha256": "94cdbb04a159061b2515997a1b0f3119ed55ae794f63c4480524ed7d72b55077",
+      "importedStatusDurationSeconds": 721.2186548709869,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-capx_behavior1k-deepseek-02": {
       "id": "W4-capx_behavior1k-deepseek-02",
@@ -12654,7 +12686,7 @@
       "camera": "hq.capx.external",
       "clipStartSeconds": 53.0,
       "clipEndSeconds": 65.0,
-      "elapsedSeconds": 2147.345832824707,
+      "elapsedSeconds": 2146.223612,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -12667,7 +12699,9 @@
       },
       "sourceReportSha256": "45110d4603ec961fdad3a834fc6433f0e75048da81862d13250e992d7bb65947",
       "sourceMediaSha256": "3f3a38965623d46fe2d15f3d159c51644e6ceb0268e4491dce36c2dca0c15ebe",
-      "publishedVideoSha256": "3f3a38965623d46fe2d15f3d159c51644e6ceb0268e4491dce36c2dca0c15ebe"
+      "publishedVideoSha256": "3f3a38965623d46fe2d15f3d159c51644e6ceb0268e4491dce36c2dca0c15ebe",
+      "importedStatusDurationSeconds": 2147.345832824707,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-capx_libero_pro-deepseek-02": {
       "id": "W4-capx_libero_pro-deepseek-02",
@@ -12726,7 +12760,7 @@
       "camera": "hq.capx.agentview",
       "clipStartSeconds": 9.0,
       "clipEndSeconds": 21.0,
-      "elapsedSeconds": 798.9757022857666,
+      "elapsedSeconds": 796.111135,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -12739,7 +12773,9 @@
       },
       "sourceReportSha256": "9042742a41edacf5b361b6cfd7673f20376e19ada80acd6e4ddfdfda412641d7",
       "sourceMediaSha256": "4d21c7726e99fd1df9cbc971eb3cce657b6386b4e6852f077969541815a7cabd",
-      "publishedVideoSha256": "4d21c7726e99fd1df9cbc971eb3cce657b6386b4e6852f077969541815a7cabd"
+      "publishedVideoSha256": "4d21c7726e99fd1df9cbc971eb3cce657b6386b4e6852f077969541815a7cabd",
+      "importedStatusDurationSeconds": 798.9757022857666,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-capx_libero_pro-deepseek-03": {
       "id": "W4-capx_libero_pro-deepseek-03",
@@ -12798,7 +12834,7 @@
       "camera": "hq.capx.agentview",
       "clipStartSeconds": 76.5,
       "clipEndSeconds": 88.5,
-      "elapsedSeconds": 397.38742446899414,
+      "elapsedSeconds": 395.978667,
       "modelRounds": 11,
       "budgets": {
         "llm_num_retries": 3,
@@ -12811,7 +12847,9 @@
       },
       "sourceReportSha256": "a3194f28e4014514d771c2a52fd6f0666ed12285654a108ae76a27f73b605f86",
       "sourceMediaSha256": "060e9f5f2ab8c07f9c80163515c7cd28d7e045ded34fac30838a113d1454bb44",
-      "publishedVideoSha256": "060e9f5f2ab8c07f9c80163515c7cd28d7e045ded34fac30838a113d1454bb44"
+      "publishedVideoSha256": "060e9f5f2ab8c07f9c80163515c7cd28d7e045ded34fac30838a113d1454bb44",
+      "importedStatusDurationSeconds": 397.38742446899414,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-capx_robosuite-deepseek-02": {
       "id": "W4-capx_robosuite-deepseek-02",
@@ -12870,7 +12908,7 @@
       "camera": "hq.capx.agentview",
       "clipStartSeconds": 9.0,
       "clipEndSeconds": 21.0,
-      "elapsedSeconds": 973.7681400775909,
+      "elapsedSeconds": 966.381554,
       "modelRounds": 13,
       "budgets": {
         "llm_num_retries": 3,
@@ -12883,7 +12921,9 @@
       },
       "sourceReportSha256": "925c1d3130301de765c498473a52ed4cac543b9c69bd5078b6846b1332bd3db2",
       "sourceMediaSha256": "7b44edb76941ddd350314753a058ab4dfd51bbd48f94f6fe5181dbe8a954e5db",
-      "publishedVideoSha256": "7b44edb76941ddd350314753a058ab4dfd51bbd48f94f6fe5181dbe8a954e5db"
+      "publishedVideoSha256": "7b44edb76941ddd350314753a058ab4dfd51bbd48f94f6fe5181dbe8a954e5db",
+      "importedStatusDurationSeconds": 973.7681400775909,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-cliport-deepseek-01": {
       "id": "W4-cliport-deepseek-01",
@@ -12942,7 +12982,7 @@
       "camera": "hq.cliport.front",
       "clipStartSeconds": 7.0,
       "clipEndSeconds": 19.0,
-      "elapsedSeconds": 560.8663463592529,
+      "elapsedSeconds": 556.880656,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -12955,7 +12995,9 @@
       },
       "sourceReportSha256": "4cbda27e5df56382b8d76251c194fb89f8182d1d0087ecc80311f81f7c1b1ab1",
       "sourceMediaSha256": "1d50e4fbff3765c2d4ba9e4e29f1fb764430db1408b0df4505dc90f9a3a80110",
-      "publishedVideoSha256": "1d50e4fbff3765c2d4ba9e4e29f1fb764430db1408b0df4505dc90f9a3a80110"
+      "publishedVideoSha256": "1d50e4fbff3765c2d4ba9e4e29f1fb764430db1408b0df4505dc90f9a3a80110",
+      "importedStatusDurationSeconds": 560.8663463592529,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-maniskill-deepseek-03": {
       "id": "W4-maniskill-deepseek-03",
@@ -13014,7 +13056,7 @@
       "camera": "_env.step.0.sensor_data.base_camera.rgb",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 5.0,
-      "elapsedSeconds": 131.37678027153015,
+      "elapsedSeconds": 127.01556,
       "modelRounds": 13,
       "budgets": {
         "llm_num_retries": 3,
@@ -13027,7 +13069,9 @@
       },
       "sourceReportSha256": "5e273ef41a148ca854a9e9b53ca32a330b75ec75aca88fec287ae644830b7a1e",
       "sourceMediaSha256": "85b176f7cb32eda05245d67ca8891e0e88e14976e1ec35513c400fb4a9cf01e3",
-      "publishedVideoSha256": "85b176f7cb32eda05245d67ca8891e0e88e14976e1ec35513c400fb4a9cf01e3"
+      "publishedVideoSha256": "85b176f7cb32eda05245d67ca8891e0e88e14976e1ec35513c400fb4a9cf01e3",
+      "importedStatusDurationSeconds": 131.37678027153015,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-maniskill-deepseek-04": {
       "id": "W4-maniskill-deepseek-04",
@@ -13086,7 +13130,7 @@
       "camera": "_env.step.0.sensor_data.base_camera.rgb",
       "clipStartSeconds": 4.0,
       "clipEndSeconds": 16.0,
-      "elapsedSeconds": 482.12411427497864,
+      "elapsedSeconds": 479.77869,
       "modelRounds": 32,
       "budgets": {
         "llm_num_retries": 3,
@@ -13099,7 +13143,9 @@
       },
       "sourceReportSha256": "d18264307c75be15a81ed170e0a36267e8f6098f4375b5a8d25c6fb70ec17d86",
       "sourceMediaSha256": "8523b4fc4263ab156ed1472f2689a6ff9096c6bac29e2c1a24c88ed06d061ce6",
-      "publishedVideoSha256": "8523b4fc4263ab156ed1472f2689a6ff9096c6bac29e2c1a24c88ed06d061ce6"
+      "publishedVideoSha256": "8523b4fc4263ab156ed1472f2689a6ff9096c6bac29e2c1a24c88ed06d061ce6",
+      "importedStatusDurationSeconds": 482.12411427497864,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-rlbench-deepseek-02": {
       "id": "W4-rlbench-deepseek-02",
@@ -13158,7 +13204,7 @@
       "camera": "hq.rlbench.overhead",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 8.3,
-      "elapsedSeconds": 246.09216618537903,
+      "elapsedSeconds": 244.358617,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -13171,7 +13217,9 @@
       },
       "sourceReportSha256": "086a73ba07f1b8664706a75e6fd6d37bdbe5c62b803c540f1a27585a43b06faa",
       "sourceMediaSha256": "fc30bae5bf1e1abc69802fec764c1337e191537b73fa33ad7fd1f76c4ece9a15",
-      "publishedVideoSha256": "fc30bae5bf1e1abc69802fec764c1337e191537b73fa33ad7fd1f76c4ece9a15"
+      "publishedVideoSha256": "fc30bae5bf1e1abc69802fec764c1337e191537b73fa33ad7fd1f76c4ece9a15",
+      "importedStatusDurationSeconds": 246.09216618537903,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-rlbench-deepseek-04": {
       "id": "W4-rlbench-deepseek-04",
@@ -13230,7 +13278,7 @@
       "camera": "hq.rlbench.overhead",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 4.25,
-      "elapsedSeconds": 362.7472448348999,
+      "elapsedSeconds": 361.69916,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -13243,7 +13291,9 @@
       },
       "sourceReportSha256": "2b2cb443b2c87eacaf3bc169919f791a0fb0f1c26b0fe7663e5a35dcefbba331",
       "sourceMediaSha256": "eda3cc680f6dd5c531b1238835bc71ef1482585fe0cf942ee295758be940bead",
-      "publishedVideoSha256": "eda3cc680f6dd5c531b1238835bc71ef1482585fe0cf942ee295758be940bead"
+      "publishedVideoSha256": "eda3cc680f6dd5c531b1238835bc71ef1482585fe0cf942ee295758be940bead",
+      "importedStatusDurationSeconds": 362.7472448348999,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-rlbench-deepseek-07": {
       "id": "W4-rlbench-deepseek-07",
@@ -13325,7 +13375,7 @@
       "camera": "recorded_decision_timeline",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 116.9776201248169,
+      "elapsedSeconds": 116.302279,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -13338,7 +13388,9 @@
       },
       "sourceReportSha256": "3ba65de8cf0441443172d81d6fc6161195c4af0eab9fe2cdc933ed1589f6958c",
       "sourceMediaSha256": "fbba189f27692ae3d7609a981ab648718838d89e937a57dee9bb26454cbea814",
-      "publishedVideoSha256": "fa8f0e45d4208a0ac86704fa09e3cfd3dc4ba6fb96236ae4e73312c2ca71eafb"
+      "publishedVideoSha256": "fa8f0e45d4208a0ac86704fa09e3cfd3dc4ba6fb96236ae4e73312c2ca71eafb",
+      "importedStatusDurationSeconds": 116.9776201248169,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robocasa-deepseek-01": {
       "id": "W4-robocasa-deepseek-01",
@@ -13397,7 +13449,7 @@
       "camera": "hq.robocasa.robot0_agentview_left",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 12.0,
-      "elapsedSeconds": 195.51591396331787,
+      "elapsedSeconds": 194.952942,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -13410,7 +13462,9 @@
       },
       "sourceReportSha256": "0fffc6da9fd567dc324bd4ed09f621cd37f1d5684a304b6c12cb31445dc8e8d1",
       "sourceMediaSha256": "f7c8e72edb47c976b18b524c5a8fb5ef295c95847edc88023231d6d5eafd8628",
-      "publishedVideoSha256": "f7c8e72edb47c976b18b524c5a8fb5ef295c95847edc88023231d6d5eafd8628"
+      "publishedVideoSha256": "f7c8e72edb47c976b18b524c5a8fb5ef295c95847edc88023231d6d5eafd8628",
+      "importedStatusDurationSeconds": 195.51591396331787,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robocasa-deepseek-04": {
       "id": "W4-robocasa-deepseek-04",
@@ -13486,7 +13540,7 @@
       "camera": "recorded_decision_timeline",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 313.3693914413452,
+      "elapsedSeconds": 309.053299,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -13499,7 +13553,9 @@
       },
       "sourceReportSha256": "23e1852a8052f4deb9fd951a9b5ae7e12967cef20e458c6055481a49ef492813",
       "sourceMediaSha256": "f9efbf2ff36e6cf852c1deff7c3ad9355ab01b06b241c128c70728e6a4ee2941",
-      "publishedVideoSha256": "f87f0282bfcecf29696411475211a69bc5c67ed55041c96275f587ffebc12718"
+      "publishedVideoSha256": "f87f0282bfcecf29696411475211a69bc5c67ed55041c96275f587ffebc12718",
+      "importedStatusDurationSeconds": 313.3693914413452,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robocasa365-deepseek-01": {
       "id": "W4-robocasa365-deepseek-01",
@@ -13558,7 +13614,7 @@
       "camera": "hq.robocasa365.robot0_agentview_left",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 9.8,
-      "elapsedSeconds": 168.95053577423096,
+      "elapsedSeconds": 167.059709,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -13571,7 +13627,9 @@
       },
       "sourceReportSha256": "0a7a7ef0878ec862aabb119481373fbda4260e9710b5eb7abb863598911a5385",
       "sourceMediaSha256": "ce90469a7e633f75b815978dad4e6b5d4d088623b5f2c1434e44b0d590a04ef1",
-      "publishedVideoSha256": "ce90469a7e633f75b815978dad4e6b5d4d088623b5f2c1434e44b0d590a04ef1"
+      "publishedVideoSha256": "ce90469a7e633f75b815978dad4e6b5d4d088623b5f2c1434e44b0d590a04ef1",
+      "importedStatusDurationSeconds": 168.95053577423096,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robocasa365-deepseek-03": {
       "id": "W4-robocasa365-deepseek-03",
@@ -13630,7 +13688,7 @@
       "camera": "hq.robocasa365.robot0_agentview_left",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 12.0,
-      "elapsedSeconds": 153.50050473213196,
+      "elapsedSeconds": 151.929053,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -13643,7 +13701,9 @@
       },
       "sourceReportSha256": "bcba10e022bb4bb6a356a883a28ccab58cdbbc6bc6b3291480a7dcb8cb9bac11",
       "sourceMediaSha256": "8d86fc6d5431ef2e1b1e0623d7af2d8313602e74615897942066104e3ce378b1",
-      "publishedVideoSha256": "8d86fc6d5431ef2e1b1e0623d7af2d8313602e74615897942066104e3ce378b1"
+      "publishedVideoSha256": "8d86fc6d5431ef2e1b1e0623d7af2d8313602e74615897942066104e3ce378b1",
+      "importedStatusDurationSeconds": 153.50050473213196,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robocasa365-deepseek-04": {
       "id": "W4-robocasa365-deepseek-04",
@@ -13725,7 +13785,7 @@
       "camera": "recorded_decision_timeline",
       "clipStartSeconds": null,
       "clipEndSeconds": null,
-      "elapsedSeconds": 148.31726908683777,
+      "elapsedSeconds": 147.022185,
       "modelRounds": 24,
       "budgets": {
         "llm_num_retries": 3,
@@ -13738,7 +13798,9 @@
       },
       "sourceReportSha256": "be9e9d9ba749dbe9ed20062356a9759dd2d58fc8261781533ed08c5b027afdc2",
       "sourceMediaSha256": "d155551657bc99b9237753b64b9ddadec73c923dd3a6b7bbb6a21421942efc3e",
-      "publishedVideoSha256": "51459b0b720609075a34430f3647a169b63e759ed1c9a4545ec0801d82ddc421"
+      "publishedVideoSha256": "51459b0b720609075a34430f3647a169b63e759ed1c9a4545ec0801d82ddc421",
+      "importedStatusDurationSeconds": 148.31726908683777,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robotwin2-deepseek-01": {
       "id": "W4-robotwin2-deepseek-01",
@@ -13797,7 +13859,7 @@
       "camera": "hq.robotwin2.head_camera",
       "clipStartSeconds": 6.5,
       "clipEndSeconds": 18.5,
-      "elapsedSeconds": 589.8636920452118,
+      "elapsedSeconds": 588.793403,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -13810,7 +13872,9 @@
       },
       "sourceReportSha256": "c9d9fc68d081055ab6ff0369b3e8b439db0b5dd16cf183dadc78f687f408369b",
       "sourceMediaSha256": "852698ab20998577e3176f2764939bc48368050ed60b406662445e977bbf0d4a",
-      "publishedVideoSha256": "852698ab20998577e3176f2764939bc48368050ed60b406662445e977bbf0d4a"
+      "publishedVideoSha256": "852698ab20998577e3176f2764939bc48368050ed60b406662445e977bbf0d4a",
+      "importedStatusDurationSeconds": 589.8636920452118,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robotwin2-deepseek-06": {
       "id": "W4-robotwin2-deepseek-06",
@@ -13869,7 +13933,7 @@
       "camera": "hq.robotwin2.head_camera",
       "clipStartSeconds": 1.0,
       "clipEndSeconds": 13.0,
-      "elapsedSeconds": 352.22952365875244,
+      "elapsedSeconds": 350.775552,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -13882,7 +13946,9 @@
       },
       "sourceReportSha256": "6c396bf96ce858249c24ffc484b1906c7cec6d731b0cf1bce9da43b9e77f6c0b",
       "sourceMediaSha256": "943be72a99457c6b2b0609e079992cc16f303c755e06bdbc7e91b8a83af0ef36",
-      "publishedVideoSha256": "943be72a99457c6b2b0609e079992cc16f303c755e06bdbc7e91b8a83af0ef36"
+      "publishedVideoSha256": "943be72a99457c6b2b0609e079992cc16f303c755e06bdbc7e91b8a83af0ef36",
+      "importedStatusDurationSeconds": 352.22952365875244,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robotwin2-deepseek-07": {
       "id": "W4-robotwin2-deepseek-07",
@@ -13941,7 +14007,7 @@
       "camera": "hq.robotwin2.head_camera",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 11.75,
-      "elapsedSeconds": 667.4306497573853,
+      "elapsedSeconds": 665.548208,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -13954,7 +14020,9 @@
       },
       "sourceReportSha256": "c08bf7ee8fa992e28f8c28d02032ab057e891f2576cf948689c5097e5827dd8a",
       "sourceMediaSha256": "06ea02b6e233073d3ff3b243fbc1eb0766e11d821a58e778afbec20619b3e24c",
-      "publishedVideoSha256": "06ea02b6e233073d3ff3b243fbc1eb0766e11d821a58e778afbec20619b3e24c"
+      "publishedVideoSha256": "06ea02b6e233073d3ff3b243fbc1eb0766e11d821a58e778afbec20619b3e24c",
+      "importedStatusDurationSeconds": 667.4306497573853,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robowits-deepseek-01": {
       "id": "W4-robowits-deepseek-01",
@@ -14013,7 +14081,7 @@
       "camera": "_env.step.0.pixels.ego",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 2.7,
-      "elapsedSeconds": 37.50758934020996,
+      "elapsedSeconds": 35.62141,
       "modelRounds": 3,
       "budgets": {
         "llm_num_retries": 3,
@@ -14026,7 +14094,9 @@
       },
       "sourceReportSha256": "34b6cfaa7188b0db094944068b0f1266d583ef0295576955592ec6aaee6ad45d",
       "sourceMediaSha256": "cfeed414bd78b9be6b7fbe48250bbda224b09dffedb1c913e3b4fd76ae6c40b9",
-      "publishedVideoSha256": "cfeed414bd78b9be6b7fbe48250bbda224b09dffedb1c913e3b4fd76ae6c40b9"
+      "publishedVideoSha256": "cfeed414bd78b9be6b7fbe48250bbda224b09dffedb1c913e3b4fd76ae6c40b9",
+      "importedStatusDurationSeconds": 37.50758934020996,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-robowits-deepseek-02": {
       "id": "W4-robowits-deepseek-02",
@@ -14085,7 +14155,7 @@
       "camera": "_env.step.0.pixels.ego",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 8.2,
-      "elapsedSeconds": 71.27811479568481,
+      "elapsedSeconds": 66.043309,
       "modelRounds": 7,
       "budgets": {
         "llm_num_retries": 3,
@@ -14098,7 +14168,9 @@
       },
       "sourceReportSha256": "7ee3226f9d31bee7f9657019c08c09addc4f37fe715bc892384a450df4ba5a56",
       "sourceMediaSha256": "372ba698dec81e82325c856e328e4989de78f3b9ea86d8190a00439bf56c3361",
-      "publishedVideoSha256": "372ba698dec81e82325c856e328e4989de78f3b9ea86d8190a00439bf56c3361"
+      "publishedVideoSha256": "372ba698dec81e82325c856e328e4989de78f3b9ea86d8190a00439bf56c3361",
+      "importedStatusDurationSeconds": 71.27811479568481,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-vimabench-deepseek-03": {
       "id": "W4-vimabench-deepseek-03",
@@ -14157,7 +14229,7 @@
       "camera": "hq.vimabench.front",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 10.3,
-      "elapsedSeconds": 249.40613055229187,
+      "elapsedSeconds": 246.439829,
       "modelRounds": 13,
       "budgets": {
         "llm_num_retries": 3,
@@ -14170,7 +14242,9 @@
       },
       "sourceReportSha256": "d2639fa907831167453d1533be1ab7253a59cb0cbf573118b176a43cdc2e0dbb",
       "sourceMediaSha256": "ffbb48dc53f41135ed195378e8576fa6a373cd12e8a0dd78296c8f85198bf874",
-      "publishedVideoSha256": "ffbb48dc53f41135ed195378e8576fa6a373cd12e8a0dd78296c8f85198bf874"
+      "publishedVideoSha256": "ffbb48dc53f41135ed195378e8576fa6a373cd12e8a0dd78296c8f85198bf874",
+      "importedStatusDurationSeconds": 249.40613055229187,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-vimabench-deepseek-05": {
       "id": "W4-vimabench-deepseek-05",
@@ -14229,7 +14303,7 @@
       "camera": "hq.vimabench.front",
       "clipStartSeconds": 0.0,
       "clipEndSeconds": 12.0,
-      "elapsedSeconds": 200.3426320552826,
+      "elapsedSeconds": 196.936131,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -14242,7 +14316,9 @@
       },
       "sourceReportSha256": "9121c95ba6d71a17bbcb14e5b3997987ee19043ff15c411f5407b98f5476131f",
       "sourceMediaSha256": "6d993787ac6c13dacfc01016151d4bcb2c2df66b0545cc0544e49494177e1cc9",
-      "publishedVideoSha256": "6d993787ac6c13dacfc01016151d4bcb2c2df66b0545cc0544e49494177e1cc9"
+      "publishedVideoSha256": "6d993787ac6c13dacfc01016151d4bcb2c2df66b0545cc0544e49494177e1cc9",
+      "importedStatusDurationSeconds": 200.3426320552826,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-vlabench-deepseek-01": {
       "id": "W4-vlabench-deepseek-01",
@@ -14301,7 +14377,7 @@
       "camera": "hq.vlabench.camera0",
       "clipStartSeconds": 1.5,
       "clipEndSeconds": 13.5,
-      "elapsedSeconds": 175.38810968399048,
+      "elapsedSeconds": 171.368895,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -14314,7 +14390,9 @@
       },
       "sourceReportSha256": "de0a6e230a72e3b4689f16d4c58528fe6f33917abb6d3c091cc4fda1babf1bc8",
       "sourceMediaSha256": "3a18f0330e96fa0715733c1a064a85ce611a9057b42908346d9b0343a1b89630",
-      "publishedVideoSha256": "3a18f0330e96fa0715733c1a064a85ce611a9057b42908346d9b0343a1b89630"
+      "publishedVideoSha256": "3a18f0330e96fa0715733c1a064a85ce611a9057b42908346d9b0343a1b89630",
+      "importedStatusDurationSeconds": 175.38810968399048,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     },
     "W4-vlabench-deepseek-04": {
       "id": "W4-vlabench-deepseek-04",
@@ -14373,7 +14451,7 @@
       "camera": "hq.vlabench.camera0",
       "clipStartSeconds": 30.0,
       "clipEndSeconds": 42.0,
-      "elapsedSeconds": 187.85064721107483,
+      "elapsedSeconds": 186.792478,
       "modelRounds": 16,
       "budgets": {
         "llm_num_retries": 3,
@@ -14386,7 +14464,9 @@
       },
       "sourceReportSha256": "b71e584bec599de07b6f98d63e75e7c44bbf538aaa00e2528b868b22424e5421",
       "sourceMediaSha256": "bfb580b3ca667b0c95c726f92c2d78700b9dddf4a47eedc6822f0a71fa694537",
-      "publishedVideoSha256": "bfb580b3ca667b0c95c726f92c2d78700b9dddf4a47eedc6822f0a71fa694537"
+      "publishedVideoSha256": "bfb580b3ca667b0c95c726f92c2d78700b9dddf4a47eedc6822f0a71fa694537",
+      "importedStatusDurationSeconds": 187.85064721107483,
+      "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately."
     }
   },
   "groups": [

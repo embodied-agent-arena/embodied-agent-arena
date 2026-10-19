@@ -4,7 +4,7 @@
   "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
-  "manuscript_date": "2026-10-19",
+  "manuscript_date": "2026-10-20",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
   "paper_pages": 61,
   "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess nine VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. Models make task decisions through a minimal harness that preserves source observations and operations. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra has the lowest pose errors and highest full-set planning success, while Opus 5.5 achieves the highest affordance overlap, contact validity, and manipulation success. DeepSeek-1017 completes 20.9% of Manipulation tasks, with spatial and planning performance varying sharply across sources. Supplementary experiments show that per-round visual feedback and multi-round review can change model rankings. Current VLM agents still fall short of embodied generalism, leaving task goals unsatisfied within finite time and interaction budgets.",

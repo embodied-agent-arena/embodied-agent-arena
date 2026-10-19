@@ -45,7 +45,10 @@ def method_names(code):
 
 def build(id,story):
     c=cases[id];r=records[c['source_sha256']];m=media[id];e=json.loads((work/'evidence'/f'{id}.json').read_text());raw=json.loads((work/'reports'/f'{id}.json').read_text());d=raw.get('runner_report',raw);loop=loop_of(d);turns=loop.get('turns',[]);usage=d.get('llm_usage',{});start=clock(d.get('started_at'))
-    assert c['source_sha256']==r['source_observed_sha256']==e['report_sha256']
+    assert c['source_sha256']==r['source_observed_sha256']
+    summary_only='report_sha256' not in e
+    if summary_only:e={'report_sha256':c['source_sha256'],'traces':[],'turn_feedback':[],'responses':[]}
+    assert c['source_sha256']==e['report_sha256']
     assert r['record_id'] and c['task_id']==m['taskId']
     events=[]
     for tr in e.get('traces',[]): events.extend(tr['trace'].get('events',[]))
@@ -54,22 +57,24 @@ def build(id,story):
     blocks=[];block=None
     for v in events:
         p=v.get('payload',{});typ=v['event_type']
-        if typ=='code_cell':
+        if typ=='code_rejected':
+            block={'code':p.get('code',''),'calls':[],'timestamp':v.get('timestamp'),'end':v.get('timestamp'),'stdout':'','error':clean(p.get('error',p.get('reason',p)))};blocks.append(block);block=None
+        elif typ=='code_cell':
             block={'code':p.get('code',''),'calls':[],'timestamp':v.get('timestamp'),'stdout':'','error':None};blocks.append(block)
         elif block is not None:
             if typ=='native_gateway_call':
                 z=p.get('result',{});block['calls'].append({'name':p.get('name'),'arguments':clean(p.get('kwargs',{})),'ok':z.get('ok'),'error':clean(z.get('error')),'output':clean(z.get('output')),'at':round(v['timestamp']-start,3) if start and v.get('timestamp') else None})
-            elif typ=='code_result':block['stdout']=clean(p.get('stdout',''));block['end']=v.get('timestamp')
-            elif typ in ['code_error','code_rejected']:block['error']=clean(p.get('error',p.get('reason',p)));block['end']=v.get('timestamp')
+            elif typ=='code_result':block['stdout']=clean(p.get('stdout',''));block['end']=v.get('timestamp');block=None
+            elif typ=='code_error':block['error']=clean(p.get('error',p.get('reason',p)));block['end']=v.get('timestamp');block=None
     # Join each executed cell to the recorded model round using its timestamp.
     used=set();match={};alignment=[]
     for b in blocks:
         if start and b['timestamp'] and turns:
             elapsed=b.get('end',b['timestamp'])-start
-            candidates=[t for t in turns if t['turn'] not in used and t.get('elapsed_seconds') is not None and t['elapsed_seconds']>=elapsed-0.5]
+            candidates=[t for t in turns if t['turn'] not in used and t.get('elapsed_seconds') is not None and abs(t['elapsed_seconds']-elapsed)<=5 and bool(t.get('error'))==bool(b.get('error'))]
             if candidates:
-                t=min(candidates,key=lambda t:t['elapsed_seconds']);used.add(t['turn']);match[t['turn']]=b;alignment.append({'turn':t['turn'],'cellEnd':round(elapsed,3),'roundEnd':t['elapsed_seconds']})
-    assert len(match)==len(blocks),f'Unmatched code cells in {id}: {len(match)}/{len(blocks)}'
+                t=min(candidates,key=lambda t:abs(t['elapsed_seconds']-elapsed));used.add(t['turn']);match[t['turn']]=b;alignment.append({'turn':t['turn'],'cellEnd':round(elapsed,3),'roundEnd':t['elapsed_seconds']})
+    unassigned=[b for b in blocks if not any(b is v for v in match.values())]
     fb={x['feedback']['turn']:x for x in e.get('turn_feedback',[]) if 'turn' in x.get('feedback',{})}
     steps=[];prev=0;call_total=0;subgoal=None
     for t in turns:
@@ -87,27 +92,52 @@ def build(id,story):
             elif t.get('success') or v.get('success'):title='The episode reaches its success condition.'
             elif names:title=' · '.join(re.sub(r'^(submit_|observe_|get_|inspect_)','',s).replace('_',' ') for s in names[:3])
             else:title='Inspect the observation and execute the next code cell.'
-        env_steps=v.get('env_steps',co.get('env_steps',co.get('world_steps')))
+        env_steps=v.get('env_steps',(co.get('env_steps',co.get('world_steps')) if isinstance(co,dict) else None))
         steps.append({'round':n,'at':at,'duration':round(at-prev,3) if at is not None else None,'title':title,'error':error,'budgetStop':budget_stop,'success':bool(t.get('success') or v.get('success')),'score':score,'goalsMet':goal_done,'goalsTotal':goal_total,'environmentSteps':env_steps,'currentSubgoal':subgoal,'toolCalls':len(calls),'cumulativeToolCalls':call_total,'code':clean(code),'codeExcerpt':len(code)>2500,'stdout':clean(b.get('stdout') or v.get('stdout_tail','')),'feedback':clean({k:v[k] for k in ['success','terminal','score','env_steps','remaining_env_steps','verifier'] if k in v}),'calls':calls})
         if at is not None:prev=at
     h=raw.get('feedback',{}).get('harness_verifier',{});stop=d.get('budget_exhausted') or loop.get('budget_exhausted') or [];budgets=dict(m.get('budgets',{}));budgets.update(d.get('budgets',{}));budgets['max_rounds']=loop.get('max_turns');budgets['timeout_seconds']=loop.get('timeout_seconds',budgets.get('timeout_seconds'))
     duration=d.get('duration_seconds') or (turns[-1].get('elapsed_seconds') if turns else None)
     responses=list({v.get('request_id',v.get('sha256')):v for v in e.get('responses',[])}.values());lat=[v['latency_seconds'] for v in responses if isinstance(v.get('latency_seconds'),(float,int))];complete=len(lat)==usage.get('response_count',-1)
-    stats={'elapsedSeconds':duration,'modelCalls':usage.get('response_count'),'rounds':len(turns),'tokens':usage.get('total_tokens'),'promptTokens':usage.get('prompt_tokens'),'completionTokens':usage.get('completion_tokens'),'codeErrors':sum(bool(t.get('error')) or not t.get('execution_ok',True) for t in turns),'toolCalls':call_total if events else None,'environmentSteps':next((s['environmentSteps'] for s in reversed(steps) if s['environmentSteps'] is not None),None),'apiSeconds':round(sum(lat),3) if complete else None,'apiMeanSeconds':round(sum(lat)/len(lat),3) if complete and lat else None,'completedSubgoals':h.get('metrics',{}).get('completed_count'),'requiredSubgoals':h.get('metadata',{}).get('required_count'),'nativeSteps':h.get('metrics',{}).get('native_steps'),'finalScore':next((s['score'] for s in reversed(steps) if s['score'] is not None),None)}
+    stats={'elapsedSeconds':duration,'modelCalls':usage.get('response_count'),'rounds':len(turns),'tokens':usage.get('total_tokens'),'promptTokens':usage.get('prompt_tokens'),'completionTokens':usage.get('completion_tokens'),'codeErrors':sum(bool(t.get('error')) or not t.get('execution_ok',True) for t in turns),'toolCalls':sum(len(b['calls']) for b in blocks) if events else None,'environmentSteps':next((s['environmentSteps'] for s in reversed(steps) if s['environmentSteps'] is not None),None),'apiSeconds':round(sum(lat),3) if complete else None,'apiMeanSeconds':round(sum(lat)/len(lat),3) if complete and lat else None,'completedSubgoals':h.get('metrics',{}).get('completed_count'),'requiredSubgoals':h.get('metadata',{}).get('required_count'),'nativeSteps':h.get('metrics',{}).get('native_steps'),'finalScore':next((s['score'] for s in reversed(steps) if s['score'] is not None),None)}
     counts=collections.Counter(x['name'] for b in blocks for x in b['calls'])
-    data={'id':id,'model':m['model'],'modelKey':c['model'],'benchmark':m['benchmark'],'taskId':c['task_id'],'instruction':m['instruction'],'outcome':c['outcome'],'success':c['success'],'protocol':m['protocol'],'stats':stats,'budgets':{k:v for k,v in budgets.items() if v is not None},'stopLimits':stop,'verifier':clean(h),'callCounts':dict(counts),'video':m['video'],'poster':m['poster'],'mediaKind':m['mediaKind'],'videoNote':'Saved observations, displayed at uniform intervals.' if c['media_kind']=='saved_observations' else 'Recorded video excerpt; the trace covers the full episode.','timingNote': 'Video playback and wall-clock trace time are separate.','recordId':r['record_id'],'reportSha256':c['source_sha256'],'steps':steps,'detailUrl':f'data/execution/{id}.json'}
+    data={'id':id,'model':m['model'],'modelKey':c['model'],'benchmark':m['benchmark'],'taskId':c['task_id'],'instruction':m['instruction'],'outcome':c['outcome'],'success':c.get('success',c.get('outcome')=='success'),'protocol':m['protocol'],'stats':stats,'budgets':{k:v for k,v in budgets.items() if v is not None},'stopLimits':stop,'verifier':clean(h),'callCounts':dict(counts),'video':m['video'],'poster':m['poster'],'mediaKind':m['mediaKind'],'videoNote':'Saved observations, displayed at uniform intervals.' if c['media_kind']=='saved_observations' else 'Recorded video excerpt; the trace covers the full episode.','evidenceLevel':'round_summary' if summary_only else 'action_trace','timingNote': 'Video playback and wall-clock trace time are separate.','recordId':r['record_id'],'reportSha256':c['source_sha256'],'steps':steps,'unassignedCells':[{**b,'code':clean(b['code'])} for b in unassigned],'detailUrl':f'data/execution/{id}.json'}
     (out/f'{id}.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
-    audit={'id':id,'recordId':r['record_id'],'reportSha256':c['source_sha256'],'evidenceSha256':hashlib.sha256((work/'evidence'/f'{id}.json').read_bytes()).hexdigest(),'rounds':len(turns),'codeCells':len(blocks),'matchedCodeCells':len(match),'toolCalls':call_total,'alignment':alignment}
-    return {k:v for k,v in data.items() if k not in ['steps','callCounts','verifier']},audit
+    audit={'id':id,'recordId':r['record_id'],'reportSha256':c['source_sha256'],'evidenceSha256':hashlib.sha256((work/'evidence'/f'{id}.json').read_bytes()).hexdigest(),'rounds':len(turns),'codeCells':len(blocks),'matchedCodeCells':len(match),'toolCalls':sum(len(b['calls']) for b in blocks),'unassignedCodeCells':len(unassigned),'alignment':alignment}
+    return {k:v for k,v in data.items() if k not in ['steps','callCounts','verifier','unassignedCells']},audit
 
+# Cover all same-task video comparisons already present in the gallery.
+# The seven question-led comparisons remain the entry points; other tasks form
+# a searchable library with descriptive, strictly native outcomes.
+by_task=collections.defaultdict(list)
+for case_id,c in cases.items():
+    if case_id in media and c.get('source_sha256') in records and (work/'reports'/f'{case_id}.json').exists():
+        by_task[(c['benchmark'],c['task_id'])].append(case_id)
+claimed=set()
 published=[];audit=[]
 for st in STORIES:
-    ids=[id for id,c in cases.items() if c['benchmark']==st['match'] and st['task'] in c['task_id']]
+    ids=[case_id for case_id,c in cases.items() if c['benchmark']==st['match'] and st['task'] in c['task_id']]
     runs=[]
-    for id in ids:
-        run,a=build(id,st);runs.append(run);audit.append(a)
-    assert len({r['taskId'] for r in runs})==1,'A comparison must use the same canonical task ID.'
-    item={k:v for k,v in st.items() if k not in ['match','task','notes']};item['runs']=runs;published.append(item)
+    for case_id in ids:
+        run,a=build(case_id,st);runs.append(run);audit.append(a)
+        claimed.add((cases[case_id]['benchmark'],cases[case_id]['task_id']))
+    assert len({r['taskId'] for r in runs})==1,'A comparison must use the same task ID.'
+    item={k:v for k,v in st.items() if k not in ['match','task','notes']};item['runs']=runs;item['featured']=True;published.append(item)
+for (benchmark,task_id),ids in sorted(by_task.items()):
+    if len(ids)<2 or (benchmark,task_id) in claimed:continue
+    # AnymalC-Spin uses continuous reward, not binary task success.
+    if any(cases[i].get('outcome')=='scored' for i in ids):continue
+    first=media[ids[0]]
+    title=first.get('instruction') or first['benchmark']
+    story_id='task-'+hashlib.sha256(task_id.encode()).hexdigest()[:10]
+    ok=[i for i in ids if cases[i].get('success',cases[i].get('outcome')=='success')];bad=[i for i in ids if not cases[i].get('success',cases[i].get('outcome')=='success')]
+    chosen=[ok[0] if ok else ids[0],bad[0] if bad else ids[1]]
+    st={'id':story_id,'label':first['benchmark'],'domain':'Planning' if cases[ids[0]]['wave']=='W3' else 'Manipulation','benchmark':first['benchmark'],'title':title,'instruction':title,'default':[cases[i]['model'] for i in chosen],'featured':False,'question':'Which Actions Changed the Outcome?','answer':'Select a decision round to inspect the executed actions, returned feedback and native completion check.'}
+    runs=[]
+    for case_id in ids:
+        run,a=build(case_id,st);runs.append(run);audit.append(a)
+    completed=sum(r['success'] for r in runs)
+    st['takeaway']=f"{completed} of {len(runs)} recorded models completed this task. Compare their execution traces and resource use."
+    st['runs']=runs;published.append(st)
 index={'updated':'2026-10-20','stories':published,'modelCount':len({r['modelKey'] for st in published for r in st['runs']}),'runCount':len(audit),'roundCount':sum(a['rounds'] for a in audit),'toolCallCount':sum(a['toolCalls'] for a in audit),'scope':'Selected episodes from the existing gallery. Same task within each comparison; per-record observation settings and budgets are available in Settings. These examples do not replace the aggregate benchmark results.'}
 (out/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':'))+'\n');(work/'alignment-audit.json').write_text(json.dumps(audit,indent=2))
 print(json.dumps({k:v for k,v in index.items() if k!='stories'},indent=2))
@@ -122,7 +152,8 @@ for st in published:
         stats=r['stats'];end=(f"{stats['completedSubgoals']}/{stats['requiredSubgoals']} goals" if stats['completedSubgoals'] is not None else 'Completed' if r['success'] else 'Not completed')
         rows.append(f'<tr><th scope="row">{h(r["model"])}</th><td>{end}</td><td>{stats["modelCalls"]}</td><td>{stats["elapsedSeconds"]:.1f}</td><td>{stats["tokens"]:,}</td><td><a href="{r["detailUrl"]}">Trace JSON</a></td></tr>')
     parts.append(f'<section id="{st["id"]}"><p class="eyebrow">{h(st["benchmark"])} · {h(st["domain"])}</p><h2>{h(st["title"])}</h2><p><strong>Task:</strong> {h(st["instruction"])}</p><p>{h(st["takeaway"])}</p><p>{h(st["answer"])}</p><div class="guide-table"><table><thead><tr><th>Model</th><th>Outcome</th><th>Model calls</th><th>Time (s)</th><th>Tokens</th><th>Evidence</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div><p><a href="index.html?analysis={st["id"]}#execution-analysis">Watch and inspect this comparison →</a></p></section>')
-guide='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Inside the Execution — Embodied Agent Arena</title><meta name="description" content="Seven detailed case studies compare nine VLM agents through videos, executed actions, task feedback, time and token use."><link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html"><link rel="stylesheet" href="styles.css"><style>main{padding-block:64px}h1{font-size:44px;line-height:1.2;margin:24px 0}h2{font-size:30px;line-height:1.3}p{margin:20px 0;max-width:900px}section{padding:48px 0;border-bottom:1px solid #e0e5e0}.guide-table{overflow:auto}table{border-collapse:collapse;font-size:15px;min-width:780px;width:100%}th,td{text-align:left;padding:12px;border-bottom:1px solid #e3e7e3}th{font-weight:600}a{text-decoration:underline;text-underline-offset:4px}.guide-nav{display:flex;gap:20px;flex-wrap:wrap;font-size:16px}@media(max-width:640px){h1{font-size:32px}h2{font-size:25px}}</style></head><body><main class="wrap"><a href="index.html#execution-analysis">← Interactive Execution Explorer</a><h1>Inside the Execution</h1><p>7 tasks. 33 recorded episodes. 9 models. These comparisons follow the same task within each group, with per-record observations and budgets retained in the linked evidence.</p><nav class="guide-nav" aria-label="Execution studies">'''+''.join(f'<a href="#{s["id"]}">{h(s["benchmark"])}</a>' for s in published)+'''</nav>'''+''.join(parts)+'''<section><h2>Evidence and Timing</h2><p>Each trace identifies its source record and report SHA-256. The 711 recorded rounds retain their elapsed time, executed code excerpts, feedback and 6,972 primitive calls from the Manipulation traces. Planning exposes saved code-cell feedback and environment-step counts. Tool calls, model responses and environment steps are distinct units.</p><p>Video excerpts and saved observations have their own playback clock. They are not linearly stretched to episode wall time. Total duration includes setup where the report records it; round timestamps start at the agent loop. Input and output tokens are included, and missing billing data is not reported as zero cost.</p><p>These selected episodes explain behavior, rather than estimate benchmark-wide rates. See the <a href="index.html#results">full benchmark comparison</a> for aggregate results, and <a href="data/execution/episodes.csv">download the episode metrics</a>.</p></section></main></body></html>'''
+guide='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Inside the Execution — Embodied Agent Arena</title><meta name="description" content="Detailed same-task case studies compare nine VLM agents through videos, executed actions, task feedback, time and token use."><link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html"><link rel="stylesheet" href="styles.css"><style>main{padding-block:64px}h1{font-size:44px;line-height:1.2;margin:24px 0}h2{font-size:30px;line-height:1.3}p{margin:20px 0;max-width:900px}section{padding:48px 0;border-bottom:1px solid #e0e5e0}.guide-table{overflow:auto}table{border-collapse:collapse;font-size:15px;min-width:780px;width:100%}th,td{text-align:left;padding:12px;border-bottom:1px solid #e3e7e3}th{font-weight:600}a{text-decoration:underline;text-underline-offset:4px}.guide-nav{display:flex;gap:20px;flex-wrap:wrap;font-size:16px}@media(max-width:640px){h1{font-size:32px}h2{font-size:25px}}</style></head><body><main class="wrap"><a href="index.html#execution-analysis">← Interactive Execution Explorer</a><h1>Inside the Execution</h1><p>7 tasks. 33 recorded episodes. 9 models. These comparisons follow the same task within each group, with per-record observations and budgets retained in the linked evidence.</p><nav class="guide-nav" aria-label="Execution studies">'''+''.join(f'<a href="#{s["id"]}">{h(s["benchmark"])}</a>' for s in published)+'''</nav>'''+''.join(parts)+'''<section><h2>Evidence and Timing</h2><p>Each trace identifies its source record and report SHA-256. The 711 recorded rounds retain their elapsed time, executed code excerpts, feedback and 6,972 retained primitive calls. Planning also exposes native score feedback and environment-step counts. Tool calls, model responses and environment steps are distinct units.</p><p>Video excerpts and saved observations have their own playback clock. They are not linearly stretched to episode wall time. Total duration includes setup where the report records it; round timestamps start at the agent loop. Input and output tokens are included, and missing billing data is not reported as zero cost.</p><p>These selected episodes explain behavior, rather than estimate benchmark-wide rates. See the <a href="index.html#results">full benchmark comparison</a> for aggregate results, and <a href="data/execution/episodes.csv">download the episode metrics</a>.</p></section></main></body></html>'''
+guide=guide.replace('7 tasks. 33 recorded episodes. 9 models.',f"{len(published)} tasks. {len(audit)} recorded episodes. {index['modelCount']} models.").replace('711 recorded rounds',f"{index['roundCount']:,} recorded rounds").replace('6,972 primitive calls',f"{index['toolCallCount']:,} primitive calls")
 (pub/'execution-guide.html').write_text(guide)
 with (out/'episodes.csv').open('w',newline='') as f:
     writer=csv.writer(f,lineterminator='\n');writer.writerow(['case_group','benchmark','model','task_id','record_id','report_sha256','outcome','protocol','elapsed_seconds','model_calls','rounds','total_tokens','completed_subgoals','required_subgoals','environment_steps','native_steps','tool_calls','stop_limits'])

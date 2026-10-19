@@ -55,13 +55,17 @@ Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent
 
 [Full Results & Evaluation Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv)
 
-![Embodied Agent Arena overview](public/assets/reference-arena.gif)
+![Task Planning and Manipulation recordings from nine models](public/assets/reference-arena.gif)
 
 ![Benchmark construction: 1,000 cases, five capability domains, GeoProbe, and the unified evaluation harness](public/assets/construction.webp)
 
+## Execution Analysis
+
+Across the same 157 Planning tasks, **19 defeat all nine models**. Combining their successes covers 138 tasks, only 12 more than Astra alone. Unsuccessful episodes consume **55.5–86.9% of recorded tokens** per model. Explore the [interactive comparisons](https://embodied-agent-arena.github.io/embodied-agent-arena/#technical-report) and [videos with action traces](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis), or read the [complete analysis and measurement definitions](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html).
+
 ## News
 
-- **2026.10.20** — Explore [Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis): seven tasks, 33 episodes and nine models, with side-by-side recordings, per-round actions, feedback and resource use.
+- **2026.10.20** — Explore [Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis): 46 same-task comparisons and 143 episodes across nine models, with videos, per-round actions, feedback and resource use. The [technical analysis](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html) examines shared failures, token allocation and recovery.
 - **2026.10.19** — Added DeepSeek 4.1 Flash-1017, direct-polygon Affordance results, and completed Opus 5.5 Planning results. The [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/#results), [CSV](https://embodied-agent-arena.github.io/embodied-agent-arena/data/model-comparison.csv), and [author manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) now cover nine models.
 
 - **2026.10.15** — Expanded the [interactive gallery](https://embodied-agent-arena.github.io/embodied-agent-arena/#latest-cases) with 152 model recordings across task planning and manipulation. Browse eight-model showcases or inspect matching tasks, with instructions and run details.

@@ -324,3 +324,5 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 
 /* Keep complete mean ± SD values readable in capability summaries. */
 @media(max-width:600px){.evidence{grid-template-columns:1fr;gap:22px}}
+
+@media(max-width:640px){.hero .subtitle{white-space:normal;max-width:100%;font-size:28px}.findings-section .section-heading h2{white-space:normal}}
