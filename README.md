@@ -61,6 +61,7 @@ Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent
 
 ## News
 
+- **2026.10.20** — Explore [Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis): seven tasks, 33 episodes and nine models, with side-by-side recordings, per-round actions, feedback and resource use.
 - **2026.10.19** — Added DeepSeek 4.1 Flash-1017, direct-polygon Affordance results, and completed Opus 5.5 Planning results. The [project page](https://embodied-agent-arena.github.io/embodied-agent-arena/#results), [CSV](https://embodied-agent-arena.github.io/embodied-agent-arena/data/model-comparison.csv), and [author manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) now cover nine models.
 
 - **2026.10.15** — Expanded the [interactive gallery](https://embodied-agent-arena.github.io/embodied-agent-arena/#latest-cases) with 152 model recordings across task planning and manipulation. Browse eight-model showcases or inspect matching tasks, with instructions and run details.

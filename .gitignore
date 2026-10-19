@@ -24,6 +24,7 @@ public/data/*
 !public/data/case-media.json
 !public/data/model-comparison.csv
 !public/data/citation.bib
+!public/data/execution/
 outputs/
 artifacts/
 reports/
