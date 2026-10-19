@@ -152,3 +152,6 @@
 @media(max-width:760px){.gallery-run-grid,.gallery-run-grid[data-recordings="3"]{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery-record-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-run-header{font-size:13px}.gallery-run-kind{font-size:9px}.gallery-run-controls{align-items:flex-start}.gallery-run-controls p{font-size:12px}.gallery-run-hover{display:none}.gallery-run-task{font-size:11px}.gallery-detail-run-heading{align-items:flex-start}.gallery-detail-run-heading .study-outcome{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.gallery-run,.gallery-run-hover{transition:none}}
 @media(max-width:480px){.gallery-model-name{font-size:12px;white-space:normal;min-height:32px;align-items:start}.gallery-model-name>span{font-size:13px;flex-shrink:0}.gallery-model-visual svg{height:118px}.gallery-model-value{font-size:19px}.gallery-model-visual{padding:9px}.gallery-kicker{font-size:11px}.gallery-navigation .gallery-position{gap:5px}.latest-case-section .study-heading h2{font-size:30px}}
+
+/* Keep nine model panels aligned in a compact 3 × 3 comparison. */
+@media(min-width:761px){.gallery-run-grid[data-recordings="9"],.gallery-visual-grid:has(>:nth-child(9)){grid-template-columns:repeat(3,minmax(0,1fr))}}

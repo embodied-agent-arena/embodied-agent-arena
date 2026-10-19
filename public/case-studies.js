@@ -7,7 +7,7 @@
   const compact = value => typeof value === 'object' ? JSON.stringify(value) : String(value ?? 'Not recorded');
   const shortNames = {'Claude Fable 5.1':'Fable 5.1','Claude Opus 5.5':'Opus 5.5','Qwen 3.5 397B-A17B':'Qwen 397B','Qwen 3.5 27B':'Qwen 27B'};
   const short = name => shortNames[name] || name;
-  const colours = ['#ad5a60','#456f8c','#9a7042','#71669e','#527e71','#75974f','#727d87','#a84f81'];
+  const colours = ['#ad5a60','#456f8c','#9a7042','#71669e','#527e71','#75974f','#727d87','#a84f81','#237e83'];
   const domains = {geometry:'Geometry',spatial:'Spatial Reasoning',affordance:'Affordance',planning:'Task Planning',manipulation:'Manipulation'};
   const arrows = {right:'→',down_right:'↘',down:'↓',down_left:'↙',left:'←',up_left:'↖',up:'↑',up_right:'↗',none:'Stationary'};
   const budgetNames = {max_code_turns:'Code rounds',max_agent_iterations:'Model rounds',max_total_tokens:'Tokens',trial_timeout_seconds:'Time ceiling (s)',timeout_seconds:'Time ceiling (s)',max_env_steps:'Environment steps',max_primitive_calls:'Primitive calls',max_verifier_calls:'Verifier calls',code_timeout_seconds:'Per-cell time (s)',max_agent_attempts:'Agent attempts',llm_num_retries:'Request retries'};
@@ -17,14 +17,14 @@
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
-    fetch('data/case-studies.json').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-media.json').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
+    fetch('data/case-studies.json?v=20261019-r2').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
+    fetch('data/case-gallery.json?v=20261019-r2').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-media.json?v=20261019-r2').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media]) => {mediaData=media; const all=[...cases,...media.groups]; records = new Map(all.map(c => [c.id,c])); metadata = meta; return all;});
   const metricSpecs = [
     ['absolute_error_cm','Distance error','cm',1],['trace_3d_frechet','3D Fréchet distance','m',1],
     ['trace_2d_frechet','2D Fréchet (normalized)','',1],['rotation_error_deg','Rotation error','°',1],
-    ['bbox_iou','Box IoU','',1],['focal_mape','Focal MAPE','%',100],['focal_mape_pct','Focal MAPE','%',1],
+    ['bbox_iou','Box–box IoU','',1],['focal_mape','Focal MAPE','%',100],['focal_mape_pct','Focal MAPE','%',1],
     ['focal_ape_pct','Focal error','%',1],['relative_l2','Relative L2 error','',1],
     ['abs_rel','Absolute relative error','',1],['mape_pct','MAPE','%',1]
   ];
@@ -88,7 +88,7 @@
       const run=mediaData.runs[id]; const i=rows.findIndex(r=>r.model===run.model);
       if(i<0)rows.push(run); else rows[i]=run;
     }
-    const order=['GPT-6 Astra','GPT-6 Sol','Claude Fable 5.1','Gemini 3.8 Flash','Qwen 3.8 Max','Qwen 3.5 397B-A17B','Qwen 3.5 27B','Claude Opus 5.5'];
+    const order=['GPT-6 Astra','GPT-6 Sol','Claude Fable 5.1','Gemini 3.8 Flash','Qwen 3.8 Max','Qwen 3.5 397B-A17B','Qwen 3.5 27B','Claude Opus 5.5','DeepSeek 4.1 Flash'];
     return rows.sort((a,b)=>order.indexOf(a.model)-order.indexOf(b.model));
   }
   const outcomeText = r => r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',agent_failure:'Agent failure',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');

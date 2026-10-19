@@ -8,7 +8,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -25,7 +26,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -42,7 +44,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -59,7 +62,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -76,7 +80,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -93,7 +98,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -110,7 +116,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -127,7 +134,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -144,7 +152,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -161,7 +170,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -178,7 +188,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -195,7 +206,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -212,7 +224,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -229,7 +242,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -246,7 +260,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -263,7 +278,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -280,7 +296,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -297,7 +314,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -314,7 +332,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -331,7 +350,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -348,7 +368,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -365,7 +386,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -382,7 +404,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -399,7 +422,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -416,7 +440,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -433,7 +458,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -450,7 +476,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -467,7 +494,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -484,7 +512,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -501,7 +530,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -518,7 +548,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -535,7 +566,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -552,7 +584,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -569,7 +602,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -586,7 +620,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -603,7 +638,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -620,7 +656,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -637,7 +674,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -654,7 +692,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -671,7 +710,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -688,7 +728,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -705,7 +746,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -722,7 +764,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -739,7 +782,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -756,7 +800,8 @@
       "Gemini 3.8 Flash": null,
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": null
+      "Claude Opus 5.5": null,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -773,7 +818,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -786,7 +832,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": []
   },
@@ -799,7 +846,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -812,7 +860,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": []
   },
@@ -825,7 +874,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -838,7 +888,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -851,7 +902,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": []
   },
@@ -864,7 +916,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -877,7 +930,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": []
   },
@@ -890,7 +944,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -903,7 +958,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": []
   },
@@ -916,7 +972,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -929,7 +986,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -942,7 +1000,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": []
   },
@@ -955,7 +1014,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": []
   },
@@ -968,7 +1028,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": null,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -981,7 +1042,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -994,7 +1056,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": []
   },
@@ -1049,6 +1112,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "87663ccac683ea54d03f24e8a084f84ce20dd6925140dadd46592e8bdd94749b"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "83165814a0683ca5fff84b2b6acba6343d952be2cd7956f26bb643eb6265c1b7",
+        "taskId": "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190908_064808_086925--0--36b8ba3ce8cf",
+        "taskLabel": "pick clean then place in recep",
+        "instruction": "wash the pink bar by the sink, put the pink bar in the tub",
+        "elapsedSeconds": 76.68373084068298,
+        "modelRounds": 8
       }
     ]
   },
@@ -1103,6 +1178,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "a9300c62a0535b51c464072d4f1a8a6bb7d70680b67f9daf27f8980f8a7caf5b"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "fa5effdd813ec5103dd3bf12208f08678c81884dfdd99b2420a5a81dd294c01c",
+        "taskId": "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190908_234112_645480--0--cdf5dee375ee",
+        "taskLabel": "pick cool then place in recep",
+        "instruction": "Put a cold egg in the microwave.",
+        "elapsedSeconds": 59.990999698638916,
+        "modelRounds": 8
       }
     ]
   },
@@ -1157,6 +1244,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "151788fc50ddf16e4212cd0c6c5868a1008c1f17c8f0dee76bbf99c5145e322a"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "c00c3aa1a6269971abd1330cd7e68ad5388d59441b50fe26016457738422cc0a",
+        "taskId": "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190910_222914_814642--0--f95e75752510",
+        "taskLabel": "pick two obj and place",
+        "instruction": "Put the green spray bottles on the toilet",
+        "elapsedSeconds": 71.10528659820557,
+        "modelRounds": 8
       }
     ]
   },
@@ -1211,6 +1310,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "374cda961dcbc2bb21445cfc83b3bb1d203a8afac3b1fb6bef6e840668ebaf81"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "350bf9d80d0c74279fe1040d5d6405fcee6cf40e1955873e7e2565f77d34680c",
+        "taskId": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190908_222951_616606--0--67ab2def7ff7",
+        "taskLabel": "Object and Light",
+        "instruction": "Turn on a lamp with a metal box. ",
+        "elapsedSeconds": 87.87043929100037,
+        "modelRounds": 8
       }
     ]
   },
@@ -1265,6 +1376,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "c957a7ee4f4162cd02995cbdc29a772649c9d646ffaa3cde51142099bc9f8bdf"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "2359f472c528f1da3057d410d1c73dde533afa84847b8db36aa6177441d83297",
+        "taskId": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190907_074124_966890--0--937f07d75987",
+        "taskLabel": "pick clean then place in recep",
+        "instruction": "Put a cleaned bar of soap on a counter.",
+        "elapsedSeconds": 73.84183025360107,
+        "modelRounds": 8
       }
     ]
   },
@@ -1319,6 +1442,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "82f55ffc6f5f4ebccf327db59aad1204d25aefde6c1207617857e5d004817d41"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "7c09373002e846e1ebd982dacc10210892fd9e7fcd8b91e5459cd17474a62bd5",
+        "taskId": "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190907_073447_193556--0--ffee3aba94be",
+        "taskLabel": "pick cool then place in recep",
+        "instruction": "Place a cold potato slice in the sink.",
+        "elapsedSeconds": 56.359029054641724,
+        "modelRounds": 8
       }
     ]
   },
@@ -1373,6 +1508,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "0093ddac6eb13de52db23364bde86ca91711792cda7265ede4c9f3734b6dd1c5"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "b87667680e2752fb60f59610c51ef599a25e58b68350459b31d36186eefe3985",
+        "taskId": "discoveryworld--discoveryworld--full_v1--Archaeology_Dating-Normal-s4--4--987dc450e2c9",
+        "taskLabel": "Archaeology",
+        "instruction": "You are on an archaeological dig on Planet X.  3 ancient sites have been found. Your task is to excavate the sites, and date any artifacts with the radiocarbon meter.  Then, once completed, place the red flag beside the sign of the dig site with the oldest artifact.",
+        "elapsedSeconds": 57.280498027801514,
+        "modelRounds": 8
       }
     ]
   },
@@ -1427,6 +1574,18 @@
         "success": true,
         "protocol": "Baseline",
         "sourceReportSha256": "262fcf41858f38fddf080898175982d1a2b09db46aff7b46ecc6d42a35a50930"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "15c47d1169fb51793157e01b2ab68cacd1eef79eb173e9e206eb3d02c7e09d0b",
+        "taskId": "discoveryworld--discoveryworld--full_v1--Small_Skills_Pick_and_Give_Test-Normal-s1--1--8874ccb948f1",
+        "taskLabel": "smallskills pick and give test",
+        "instruction": "Your task is to give Yugo the `spectrometer`.",
+        "elapsedSeconds": 36.51801872253418,
+        "modelRounds": 7
       }
     ]
   },
@@ -1481,20 +1640,71 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "f0c33ecd7e8ae27f87e9e9e2591df0cf938007b6e59fe11ff831677761f9482f"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "2909e05f9e0f3c8843db5b05a0e98d706f11c5dfcbcb0be1a442dc74d14cbde6",
+        "taskId": "discoveryworld--discoveryworld--full_v1--Small_Skills_Doors_Test-Normal-s0--0--0f47e2c61dba",
+        "taskLabel": "smallskills doors test",
+        "instruction": "Your task is to enter the building, and go through all the doors until you reach a flag.  When you see the flag, pick it up to complete the task.  Note that for the task to be considered complete, all the doors must be opened, too.",
+        "elapsedSeconds": 46.84835362434387,
+        "modelRounds": 8
       }
     ]
   },
   "W3-humanclaw-01": {
     "judgements": {},
-    "recordedOutcomes": []
+    "recordedOutcomes": [
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "d708ea6bdf0418dd7683f6f02d82bfbc721b8345252a6f2d5a8405b161360493",
+        "taskId": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
+        "taskLabel": "navigate to contact",
+        "instruction": "Find the chair and move until your body is touching the target, with zero distance to the target object.",
+        "elapsedSeconds": 414.71562600135803,
+        "modelRounds": 65
+      }
+    ]
   },
   "W3-humanclaw-02": {
     "judgements": {},
-    "recordedOutcomes": []
+    "recordedOutcomes": [
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "9e1b750d46eddf34e2f106bbd9068d65478e661a508495e29a74f8b77911a329",
+        "taskId": "humanclaw--humanclaw--fullval--103997586_171030669-20-couch--42--4d79f1e67c3f",
+        "taskLabel": "Sitting",
+        "instruction": "Find the couch and move until your body is touching the target, with zero distance to the target object. Finally, sit on the couch.",
+        "elapsedSeconds": 586.8880045413971,
+        "modelRounds": 93
+      }
+    ]
   },
   "W3-humanclaw-03": {
     "judgements": {},
-    "recordedOutcomes": []
+    "recordedOutcomes": [
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "54e1ea7f440550b14f22a2348b4d2dd5b629406de6dc5e89ad573ea27cbfd628",
+        "taskId": "humanclaw--humanclaw--fullval--102816036-2-couch--42--657a2443a8bd",
+        "taskLabel": "sit on target",
+        "instruction": "Find the couch and move until your body is touching the target, with zero distance to the target object. Finally, sit on the couch.",
+        "elapsedSeconds": 508.9244794845581,
+        "modelRounds": 70
+      }
+    ]
   },
   "W3-scienceworld_text-01": {
     "judgements": {},
@@ -1547,6 +1757,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "6d312af2050e74f7cef3665dd7753edd9f45ca0266f38793dae1a69085c24299"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "c6023b012f87b626bbd58f3309d18f4de7a2aa66f5158d98431cb08636ac88df",
+        "taskId": "scienceworld_text--scienceworld_text--full_v1--find-animal-v115-easy--42--0a418f5cf5bf",
+        "taskLabel": "find animal",
+        "instruction": "Your task is to find a(n) animal. First, focus on the thing. Then, move it to the green box in the workshop.",
+        "elapsedSeconds": 32.4924590587616,
+        "modelRounds": 8
       }
     ]
   },
@@ -1601,6 +1823,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "23099c4dc6873eba18fd51348ad0fbaff076b885095a716fd492298b4832f01c"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "20b7f5923944980569d94877a63d22d5234777379ee4576d618b3bc1f0abcf07",
+        "taskId": "scienceworld_text--scienceworld_text--full_v1--use-thermometer-v200-easy--42--d83b8ab8c428",
+        "taskLabel": "use thermometer",
+        "instruction": "Your task is to measure the temperature of unknown substance B, which is located around the living room. First, focus on the thermometer. Next, focus on the unknown substance B. If the unknown substance B temperature is above 100.0 degrees celsius, place it in the orange box. If the unknown substance B temperature is below 100.0 degrees celsius, place it in the yellow box. The boxes are located around the bedroom.",
+        "elapsedSeconds": 20.629108905792236,
+        "modelRounds": 3
       }
     ]
   },
@@ -1655,6 +1889,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "ffa21d252e2a01ed47d6ac36507dcae3c52bfb11ad60c9bbe19a06da96b54aea"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "7b648fbccd099dcc89624bbd42a550bb4df3ef5f710bda3fded27b5effe7822f",
+        "taskId": "scienceworld_text--scienceworld_text--full_v1--test-conductivity-of-unknown-substances-v126-eas--42--39fd42eee602",
+        "taskLabel": "test conductivity of unknown substances",
+        "instruction": "Your task is to determine if unknown substance G is electrically conductive. The unknown substance G is located around the workshop. First, focus on the unknown substance G. If it is electrically conductive, place it in the green box. If it is electrically nonconductive, place it in the blue box.",
+        "elapsedSeconds": 57.12354135513306,
+        "modelRounds": 8
       }
     ]
   },
@@ -1709,6 +1955,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "789c3526f769b65e4088de30958ff36990c7c79f23cd389525681afdd39b3cd8"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "ba9ce7d1675947a7fb6026f44f4594eda067cd774cd62d0c7a4feeadc6ec59c5",
+        "taskId": "virtualhome_symbolic--virtualhome_symbolic--official_compatible_full_v1--official_TrimmedTestScene5_graph_results_intenti--13--1f28e40e9fdb",
+        "taskLabel": "switchon",
+        "instruction": "Turn on light: I walk towards to the bedroom, and I open the door of the bedroom, and I switch on the lights inside the bedroom, the switch is beside the door.",
+        "elapsedSeconds": 306.34382915496826,
+        "modelRounds": 7
       }
     ]
   },
@@ -1763,6 +2021,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "d6c09c0e19772a6518c02a92048cf730ed1626615edeb7cbebf6828e63b37367"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Baseline",
+        "sourceReportSha256": "0c0b3ee955c89ca28f0f001e62df1fb1257af8135a651ce8dff367f870876a30",
+        "taskId": "virtualhome_symbolic--virtualhome_symbolic--official_compatible_full_v1--official_TrimmedTestScene4_graph_results_text_re--13--b56675aa6f98",
+        "taskLabel": "grab",
+        "instruction": "Watch TV: I like to set on my sofa.Turn on the tv. And watch Perry Mason. Monday's through Friday's.",
+        "elapsedSeconds": 301.294228553772,
+        "modelRounds": 8
       }
     ]
   },
@@ -1817,6 +2087,18 @@
         "success": false,
         "protocol": "Baseline",
         "sourceReportSha256": "4445b92032277c3e94b7c1cccd0917714aacd8def75ad6b363f5ef0cf7881c70"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Baseline",
+        "sourceReportSha256": "dd133c948fbd361d72dfde1c706fda80b215f59f637ca7b859e8a7f2bccb378f",
+        "taskId": "virtualhome_symbolic--virtualhome_symbolic--official_compatible_full_v1--official_TrimmedTestScene2_graph_results_intenti--13--ac8ffb5e85da",
+        "taskLabel": "navigation or observation",
+        "instruction": "Pick up phone: walk to living room , find phone ,pick up phone 3",
+        "elapsedSeconds": 332.7182149887085,
+        "modelRounds": 8
       }
     ]
   },
@@ -1871,6 +2153,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "217005d81c3138b92685cad6a84c8723930f09ad792cce96a8a92c0f8ab68289"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "5defe359986dc3000abe5d5818156093e27332b1d2122656450a5d66a20686cb",
+        "taskId": "calvin--calvin_native_turn_off_led--test--calvin_sequence_0526--0--8934498e94bb",
+        "taskLabel": "Sequence 0526",
+        "instruction": "Complete the five instructed subgoals in sequence. Recorded subgoal instructions include: lift the blue block from the sliding cabinet; store the grasped block in the drawer; use the switch to turn off the light bulb.",
+        "elapsedSeconds": 465.89950609207153,
+        "modelRounds": 37
       }
     ]
   },
@@ -1925,6 +2219,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "97cd1d66f8c53f0110dd717ac356646910e9f33790982488e2c4d447ef5416c7"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "9d2d10afc41f6ccf58ef8ddd794ba4b9f0a9ef498a6eb4615dfd1b157f2b06f3",
+        "taskId": "calvin--calvin_native_turn_off_led--test--calvin_sequence_0270--0--d1a67e878282",
+        "taskLabel": "calvin sequence 0270",
+        "instruction": "Complete the five instructed subgoals in sequence. Recorded subgoal instructions include: take the red block and rotate it to the right; push the handle to close the drawer; lift the blue block from the sliding cabinet.",
+        "elapsedSeconds": 596.2235267162323,
+        "modelRounds": 40
       }
     ]
   },
@@ -1979,6 +2285,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "4dd16cf1786ad1524a65fe9a7643793eea688130cc9f76efb5e41b9efa220ced"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "1b6b51c8165eb4522972faac71bf3d138de1c56a468401283bcb4faaa8b3328f",
+        "taskId": "calvin--calvin_native_turn_off_led--test--calvin_sequence_0557--0--1c02eff7213e",
+        "taskLabel": "Sequence 0557",
+        "instruction": "Complete the five instructed subgoals in sequence. Recorded subgoal instructions include: press the button to turn off the led light; lift the blue block from the sliding cabinet.",
+        "elapsedSeconds": 208.9028742313385,
+        "modelRounds": 40
       }
     ]
   },
@@ -2019,6 +2337,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "41270e70fc277718928b0a33f421ab6ff54c29c3ba05a268287a9403d7f95cba"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "ec6228287c9cbf0a7b60fc04cdcab854573e4f216c8aa6788b6f37c560d5cd50",
+        "taskId": "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_can_meat.yaml--0--4dbe460b28c8",
+        "taskLabel": "can meat",
+        "instruction": "can meat",
+        "elapsedSeconds": 1072.332534313202,
+        "modelRounds": 24
       }
     ]
   },
@@ -2073,6 +2403,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "dc1082e3797be9493dfdf93254510fe7e58df88a7062c9d369d3c2f4b21379eb"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "6bee5fd19473b2ccfb416a561699e79b2318a4d36bdb083b7e3e9979d386c051",
+        "taskId": "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_outfit_a_basic_toolbox.yam--0--1cd2784f91bf",
+        "taskLabel": "outfit a basic toolbox",
+        "instruction": "outfit a basic toolbox",
+        "elapsedSeconds": 721.2186548709869,
+        "modelRounds": 24
       }
     ]
   },
@@ -2106,6 +2448,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "79cad921cdf194884f293cef1f1adb2eeaec6a0beb593b652946ab1dce5d0276"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "45110d4603ec961fdad3a834fc6433f0e75048da81862d13250e992d7bb65947",
+        "taskId": "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_putting_shoes_on_rack.yaml--0--7c76679a3a9c",
+        "taskLabel": "env configs r1pro b1k putting shoes on rack.yaml",
+        "instruction": "putting shoes on rack",
+        "elapsedSeconds": 2147.345832824707,
+        "modelRounds": 24
       }
     ]
   },
@@ -2160,6 +2514,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "0147f829b702f63db2ecef18549cc97e530ac5cdeb81e4671e01e95c33a694c3"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "a3194f28e4014514d771c2a52fd6f0666ed12285654a108ae76a27f73b605f86",
+        "taskId": "capx-libero-pro--libero_object--task-5--init-0",
+        "taskLabel": "libero object",
+        "instruction": "pick up the tomato sauce and place it in the basket",
+        "elapsedSeconds": 397.38742446899414,
+        "modelRounds": 11
       }
     ]
   },
@@ -2214,6 +2580,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "f7f58bf56e21a686c0230067475bb42d1c085a287f9bf6f9460a9d3f05cb23a5"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "9042742a41edacf5b361b6cfd7673f20376e19ada80acd6e4ddfdfda412641d7",
+        "taskId": "capx-libero-pro--libero_goal--task-7--init-0",
+        "taskLabel": "libero goal",
+        "instruction": "turn on the stove",
+        "elapsedSeconds": 798.9757022857666,
+        "modelRounds": 24
       }
     ]
   },
@@ -2268,6 +2646,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "24f7c044eb5cebf0efd98eba44ad9772fe58fce907f228e3d321cc377c0547aa"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "6a0300808e36ce6925b85f49d7b78e94344ee571ff3f42f130c5db6bff07663a",
+        "taskId": "capx-libero-pro--libero_10--task-9--init-0",
+        "taskLabel": "Mug and Microwave",
+        "instruction": "KITCHEN SCENE6 put the yellow and white mug in the microwave and close it",
+        "elapsedSeconds": 462.3961250782013,
+        "modelRounds": 24
       }
     ]
   },
@@ -2322,6 +2712,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "04a05dfb4baa5bb13625dcc012b52beda5ae75e8ee20831165fbd56efbf5428f"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "925c1d3130301de765c498473a52ed4cac543b9c69bd5078b6846b1332bd3db2",
+        "taskId": "capx-robosuite--spill_wipe--seed-48",
+        "taskLabel": "spill wipe",
+        "instruction": "spill wipe",
+        "elapsedSeconds": 973.7681400775909,
+        "modelRounds": 13
       }
     ]
   },
@@ -2376,6 +2778,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "9df66f532753fedc00e628be2f42ef74ba67f4cd02e829c2f83191e98ec8ad19"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "ae7f5b74203b83f869e6733887ebf8576930e06b73d85eb2891c091de3ab5004",
+        "taskId": "capx-robosuite--cube_restack--seed-14",
+        "taskLabel": "cube restack",
+        "instruction": "cube restack",
+        "elapsedSeconds": 560.9608495235443,
+        "modelRounds": 14
       }
     ]
   },
@@ -2430,6 +2844,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "bf1af0135b26885b570a9f55a65db9080260bd9341db5c15502b089d0c4d16ad"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "1d982bbd6ec16fc57eb371d719641943e8ba52596ea2fd3abf0c1c9b98cf0c20",
+        "taskId": "capx-robosuite--cube_stack--seed-14",
+        "taskLabel": "cube stack",
+        "instruction": "cube stack",
+        "elapsedSeconds": 1113.9847192764282,
+        "modelRounds": 24
       }
     ]
   },
@@ -2484,6 +2910,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "36693b4dfdaf69063c50980e41dc9e486336a9bcf168ffde5559864027d4ac0f"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "4cbda27e5df56382b8d76251c194fb89f8182d1d0087ecc80311f81f7c1b1ab1",
+        "taskId": "cliport--cliport_place_red_in_green--test--packing-boxes-pairs-unseen-colors-test_seed_1012--10127--09f4daa51ae7",
+        "taskLabel": "packing boxes pairs unseen colors",
+        "instruction": "packing boxes pairs unseen colors",
+        "elapsedSeconds": 560.8663463592529,
+        "modelRounds": 24
       }
     ]
   },
@@ -2538,6 +2976,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "2714dc6ce6c4291582cd4f27bc01cd15af505feb94d65995e1e8d58e030f19a8"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "6702092b2c5799f575843c966f3479e0fec256795d41eb996c0204137ae26480",
+        "taskId": "cliport--cliport_place_red_in_green--test--packing-boxes-pairs-seen-colors-test_seed_10151--10151--53c1e3444756",
+        "taskLabel": "packing boxes pairs seen colors",
+        "instruction": "packing boxes pairs seen colors",
+        "elapsedSeconds": 348.94437074661255,
+        "modelRounds": 24
       }
     ]
   },
@@ -2592,6 +3042,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "165f0966d37cfac9d62aea32aa29038952819e0e49224b03a7f615d47b7545db"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "10a41660c51be8219fb59ab20402e473bdfe425c1e58b0e4fe40df59f71d2013",
+        "taskId": "cliport--cliport_place_red_in_green--test--stack-block-pyramid-seq-seen-colors-test_seed_10--10111--87c73359e1cc",
+        "taskLabel": "stack block pyramid seq seen colors",
+        "instruction": "stack block pyramid seq seen colors",
+        "elapsedSeconds": 307.3327729701996,
+        "modelRounds": 24
       }
     ]
   },
@@ -2646,6 +3108,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "f158c2858c28512e132666ced52b12bc246fe63e9cfd0038c0d4b673f4aa6451"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "5e273ef41a148ca854a9e9b53ca32a330b75ec75aca88fec287ae644830b7a1e",
+        "taskId": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlaceSphere-v1--0--7547d80c0054",
+        "taskLabel": "Place Sphere v1",
+        "instruction": "PlaceSphere-v1",
+        "elapsedSeconds": 131.37678027153015,
+        "modelRounds": 13
       }
     ]
   },
@@ -2700,6 +3174,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "f5e4767727c030d22d472a4a4b0dada680a1385958ddfb439a876270c6c79594"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "5612498db71e38474d120124f8e704789067d5f708ed2653ee6924825b36d438",
+        "taskId": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PickCube-v1--0--2274c81aa68d",
+        "taskLabel": "Pick Cube v1",
+        "instruction": "PickCube-v1",
+        "elapsedSeconds": 177.24473333358765,
+        "modelRounds": 10
       }
     ]
   },
@@ -2754,6 +3240,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "d7afd8fd2144ed59b0d2be0587f60dff6bc4517c9f43f882368cf9c522be4cfc"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "d18264307c75be15a81ed170e0a36267e8f6098f4375b5a8d25c6fb70ec17d86",
+        "taskId": "maniskill--maniskill_pickcube_pd_ee_delta_pos--test--PlugCharger-v1--0--fa32f5573da8",
+        "taskLabel": "Plug Charger v1",
+        "instruction": "PlugCharger-v1",
+        "elapsedSeconds": 482.12411427497864,
+        "modelRounds": 32
       }
     ]
   },
@@ -2808,6 +3306,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "91363ef7efa4098f29f0000818b1ff0823b2c18ab50fe74d396b325f943d4c4d"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "3ba65de8cf0441443172d81d6fc6161195c4af0eab9fe2cdc933ed1589f6958c",
+        "taskId": "rlbench--rlbench_reach_target_motion--test--TakeCupOutFromCabinet-variation_0--0--e03c522b2ac5",
+        "taskLabel": "Take Cup Out From Cabinet",
+        "instruction": "Take Cup Out From Cabinet",
+        "elapsedSeconds": 116.9776201248169,
+        "modelRounds": 16
       }
     ]
   },
@@ -2862,6 +3372,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "973dbfa424efa1d4d6ca0243d90907d2f0324e14478abdac0f70eb673655feca"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "086a73ba07f1b8664706a75e6fd6d37bdbe5c62b803c540f1a27585a43b06faa",
+        "taskId": "rlbench--rlbench_reach_target_motion--test--CloseLaptopLid-variation_0--0--f9bb8dd76402",
+        "taskLabel": "Close Laptop Lid",
+        "instruction": "Close Laptop Lid",
+        "elapsedSeconds": 246.09216618537903,
+        "modelRounds": 16
       }
     ]
   },
@@ -2916,6 +3438,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "b5f482ae728664deccabada560004c7db134f994d5fad215a47d0039d96c4b18"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "2b2cb443b2c87eacaf3bc169919f791a0fb0f1c26b0fe7663e5a35dcefbba331",
+        "taskId": "rlbench--rlbench_reach_target_motion--test--OpenBox-variation_0--0--5cdbdcf418f6",
+        "taskLabel": "Open Box",
+        "instruction": "Open Box",
+        "elapsedSeconds": 362.7472448348999,
+        "modelRounds": 16
       }
     ]
   },
@@ -2970,6 +3504,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "a377893b198635cd3af92269c3c50dbf5a8976d7dcbb13528ae0ddf2aeb27d27"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "8205e34d3284aff65e1e4e849b598391dba7c9da37f9b1e4024e2015360eea69",
+        "taskId": "robocasa--robocasa_start_coffee_machine_button--test--target-LoadDishwasher--0--0b606235cfb2",
+        "taskLabel": "Load Dishwasher",
+        "instruction": "Pick up the cup and bowl from the counter, place them in the dishwasher, and close the dishwasher door.",
+        "elapsedSeconds": 160.92496919631958,
+        "modelRounds": 24
       }
     ]
   },
@@ -3024,6 +3570,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "ff20170ea550eae189a2e5e241cc92ea95c2bf6c982334d6f6e4b3da6c771502"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "0fffc6da9fd567dc324bd4ed09f621cd37f1d5684a304b6c12cb31445dc8e8d1",
+        "taskId": "robocasa--robocasa_start_coffee_machine_button--test--target-OpenDrawer--0--201936251412",
+        "taskLabel": "Open Drawer",
+        "instruction": "Open the left drawer.",
+        "elapsedSeconds": 195.51591396331787,
+        "modelRounds": 24
       }
     ]
   },
@@ -3078,6 +3636,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "9f4f2df9652dcfad660b6cda3162c887f24e5a150adc110b35307c62af53fdbc"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "23e1852a8052f4deb9fd951a9b5ae7e12967cef20e458c6055481a49ef492813",
+        "taskId": "robocasa--robocasa_start_coffee_machine_button--test--target-TurnOnSinkFaucet--0--8545661d52a6",
+        "taskLabel": "Turn On Sink Faucet",
+        "instruction": "Turn on the sink faucet.",
+        "elapsedSeconds": 313.3693914413452,
+        "modelRounds": 24
       }
     ]
   },
@@ -3132,6 +3702,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "987a6dffc5121423b7d46264c3a2cbabe8fef11ca8927b5550abc3d9053810f0"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "be9e9d9ba749dbe9ed20062356a9759dd2d58fc8261781533ed08c5b027afdc2",
+        "taskId": "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-CloseDrawer--0--67030c8fe6d0",
+        "taskLabel": "Close Drawer",
+        "instruction": "Close the left drawer.",
+        "elapsedSeconds": 148.31726908683777,
+        "modelRounds": 24
       }
     ]
   },
@@ -3186,6 +3768,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "20fcf1a89580fe984c9c85cf5ff53ad0c64187efae418549f93feff46f65ae2a"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "bcba10e022bb4bb6a356a883a28ccab58cdbbc6bc6b3291480a7dcb8cb9bac11",
+        "taskId": "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-RemoveCuttingBoardItems--0--6bb5b9394716",
+        "taskLabel": "Remove Cutting Board Items",
+        "instruction": "Remove the broccoli and steak from the cutting board to prepare it for cleaning.",
+        "elapsedSeconds": 153.50050473213196,
+        "modelRounds": 24
       }
     ]
   },
@@ -3240,6 +3834,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "c53742dc5a582c24301502e7d85280e1a88fdb6343ea738a752d70ecbc8c802b"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "0a7a7ef0878ec862aabb119481373fbda4260e9710b5eb7abb863598911a5385",
+        "taskId": "robocasa365--robocasa365_turn_on_microwave_button--test--pretrain-BreadAndCheese--0--55cb7c23465c",
+        "taskLabel": "Bread And Cheese",
+        "instruction": "Place the bread and cheese on the cutting board.",
+        "elapsedSeconds": 168.95053577423096,
+        "modelRounds": 24
       }
     ]
   },
@@ -3294,6 +3900,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "1b475f75db4b135aa1a54efd9a35d2a240206debff64a3fa7f12fb6392e0b4da"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "c9d9fc68d081055ab6ff0369b3e8b439db0b5dd16cf183dadc78f687f408369b",
+        "taskId": "robotwin2--robotwin2_place_empty_cup--test--demo_clean-blocks_ranking_size-accepted_episode_--0--aefeeacb3260",
+        "taskLabel": "blocks ranking size",
+        "instruction": "blocks ranking size",
+        "elapsedSeconds": 589.8636920452118,
+        "modelRounds": 16
       }
     ]
   },
@@ -3348,6 +3966,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "76256bb3fb5310946387c64177f5e8e37dc9c46851ef48d7140420d8fa1687d8"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "6c396bf96ce858249c24ffc484b1906c7cec6d731b0cf1bce9da43b9e77f6c0b",
+        "taskId": "robotwin2--robotwin2_place_empty_cup--test--demo_clean-place_shoe-accepted_episode_068--0--525457e6b16f",
+        "taskLabel": "place shoe",
+        "instruction": "place shoe",
+        "elapsedSeconds": 352.22952365875244,
+        "modelRounds": 16
       }
     ]
   },
@@ -3402,6 +4032,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "32721f3cc7710b57870d0ce0daf2ec519b540e1115cab06405ef65bae1b01927"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "c08bf7ee8fa992e28f8c28d02032ab057e891f2576cf948689c5097e5827dd8a",
+        "taskId": "robotwin2--robotwin2_place_empty_cup--test--demo_clean-stack_blocks_three-accepted_episode_0--0--0b492ac73cc2",
+        "taskLabel": "stack blocks three",
+        "instruction": "stack blocks three",
+        "elapsedSeconds": 667.4306497573853,
+        "modelRounds": 16
       }
     ]
   },
@@ -3456,6 +4098,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "7d7bf6f65954814c5ed8a7e957b9a5699b99fee42b1a6c5a75e0291970a03990"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "34b6cfaa7188b0db094944068b0f1266d583ef0295576955592ec6aaee6ad45d",
+        "taskId": "robowits--robowits_stack_cube_official--test--06-episode_000--3--ed8f55d32a49",
+        "taskLabel": "robowits/06 dominos v0",
+        "instruction": "robowits/06 dominos v0",
+        "elapsedSeconds": 37.50758934020996,
+        "modelRounds": 3
       }
     ]
   },
@@ -3510,6 +4164,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "19881f0b7f9b64927d3f1091664b4d057141384bb34a84ffb3faf11814f7cc0d"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "7ee3226f9d31bee7f9657019c08c09addc4f37fe715bc892384a450df4ba5a56",
+        "taskId": "robowits--robowits_stack_cube_official--test--10-episode_000--3--6d27a4c063fe",
+        "taskLabel": "Task 10",
+        "instruction": "The saved record identifies RoboWits task 10, episode 000; the full task instruction is not available in the supplied material.",
+        "elapsedSeconds": 71.27811479568481,
+        "modelRounds": 7
       }
     ]
   },
@@ -3564,6 +4230,18 @@
         "success": false,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "4558605d2e89085d059565d59d6abc7115ea1c4e0caba56a1f5f34dc358447f7"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "task_failure",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "83192d9a44519675cca9a8ac981ebde0f077eb988a0e895939c95b5f02f40b2d",
+        "taskId": "robowits--robowits_stack_cube_official--test--07-episode_012--3--d150a5fd9f0f",
+        "taskLabel": "robowits/07 stand pages v0",
+        "instruction": "robowits/07 stand pages v0",
+        "elapsedSeconds": 538.0035979747772,
+        "modelRounds": 20
       }
     ]
   },
@@ -3618,6 +4296,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "5b00003aa8aa0d1f4bf44b39fddc49f20f62aeff85c54a3c334205f347e3ae2d"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "success",
+        "success": true,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "d2639fa907831167453d1533be1ab7253a59cb0cbf573118b176a43cdc2e0dbb",
+        "taskId": "vimabench--vimabench_visual_manipulation--test--novel_task_generalization-sweep_without_touching--0--9d0b316daf77",
+        "taskLabel": "sweep without touching",
+        "instruction": "sweep without touching",
+        "elapsedSeconds": 249.40613055229187,
+        "modelRounds": 13
       }
     ]
   },
@@ -3672,6 +4362,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "7c1960dce6f905437d5ad91293c045d107ba31fa86bdbe9454cb02cee8fc0a4e"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "9121c95ba6d71a17bbcb14e5b3997987ee19043ff15c411f5407b98f5476131f",
+        "taskId": "vimabench--vimabench_visual_manipulation--test--placement_generalization-rearrange_then_restore--0--e5ca28928157",
+        "taskLabel": "rearrange then restore",
+        "instruction": "rearrange then restore",
+        "elapsedSeconds": 200.3426320552826,
+        "modelRounds": 16
       }
     ]
   },
@@ -3726,6 +4428,18 @@
         "success": true,
         "protocol": "Observation setting unverified",
         "sourceReportSha256": "6a744888cc3d13310ae537b99f321de4b2b066e83ecb5b3108d410b0e699bd9e"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "91c7b612dfe8b1d021c22006324d6668092f133e867a81a8969992fa3c78abef",
+        "taskId": "vimabench--vimabench_visual_manipulation--test--novel_task_generalization-follow_motion--0--7e1968cf0d08",
+        "taskLabel": "follow motion",
+        "instruction": "follow motion",
+        "elapsedSeconds": 294.74637269973755,
+        "modelRounds": 16
       }
     ]
   },
@@ -3780,6 +4494,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "309a22fa3bbe6b05ca9c634b1d810eb44a52a6123ca4ed3ad50f86bd7221b7ac"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "b71e584bec599de07b6f98d63e75e7c44bbf538aaa00e2528b868b22424e5421",
+        "taskId": "vlabench--vlabench_select_toy_skilllib--test--track_2_cross_category-add_condiment-episode_001--0--aa674661bb1c",
+        "taskLabel": "track 2 cross category add condiment episode 001",
+        "instruction": "Add salad_dressing to the dish",
+        "elapsedSeconds": 187.85064721107483,
+        "modelRounds": 16
       }
     ]
   },
@@ -3834,6 +4560,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "59598db09fe8672b515f67c0e962e9521eda94562a5146d7e69466c3aa5b272d"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "de0a6e230a72e3b4689f16d4c58528fe6f33917abb6d3c091cc4fda1babf1bc8",
+        "taskId": "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-insert_flower-episode_02--0--95051f77091b",
+        "taskLabel": "track 1 in distribution insert flower episode 02",
+        "instruction": "Insert the rose into the vase_seen.",
+        "elapsedSeconds": 175.38810968399048,
+        "modelRounds": 16
       }
     ]
   },
@@ -3888,6 +4626,18 @@
         "success": false,
         "protocol": "RGB-expanded",
         "sourceReportSha256": "e24fbba5cd131b93e43bc32aad8df6d9278958ccdb43216962a8ad1217f2e658"
+      },
+      {
+        "model": "DeepSeek 4.1 Flash",
+        "outcome": "budget_exhausted",
+        "success": false,
+        "protocol": "Per-round RGB",
+        "sourceReportSha256": "ae954aaffc12296d9f85b90e3ac2af4d0be685b95c2b04d4b4423a8701401612",
+        "taskId": "vlabench--vlabench_select_toy_skilllib--test--track_1_in_distribution-select_toy-episode_049--0--5996b497f150",
+        "taskLabel": "track 1 in distribution select toy episode 049",
+        "instruction": "Put the jessie into the giftbox_seen",
+        "elapsedSeconds": 314.5264928340912,
+        "modelRounds": 16
       }
     ]
   },
@@ -3900,7 +4650,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -3917,7 +4668,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -3934,7 +4686,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -3951,7 +4704,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -3968,7 +4722,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -3985,7 +4740,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4002,7 +4758,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": false
+      "Claude Opus 5.5": false,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4019,7 +4776,8 @@
       "Gemini 3.8 Flash": true,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4036,7 +4794,8 @@
       "Gemini 3.8 Flash": false,
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
-      "Claude Opus 5.5": true
+      "Claude Opus 5.5": true,
+      "DeepSeek 4.1 Flash": false
     },
     "recordedOutcomes": [],
     "imageSize": [

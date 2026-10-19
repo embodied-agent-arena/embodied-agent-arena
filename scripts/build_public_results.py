@@ -40,7 +40,7 @@ for model in study['models']:
     md_rows.append('| ' + model_label + ' | ' + ' | '.join(cell.replace(' ', '&nbsp;') for cell in md_cells) + ' |')
 replace_block(PUBLIC / 'index.html', 'RESULT_ROWS', '\n'.join(html_rows))
 replace_block(ROOT / 'README.md', 'RESULT_TABLE', '\n'.join([
-    '| Model | Rot.&nbsp;↓ | Trans.&nbsp;↓ | Spatial&nbsp;↑ | AbsRel&nbsp;↓ | Mask&nbsp;↑ | Contact&nbsp;↑ | Plan&nbsp;↑ | Manip.&nbsp;↑ |',
+    '| Model | Rot.&nbsp;↓ | Trans.&nbsp;↓ | Spatial&nbsp;↑ | AbsRel&nbsp;↓ | Box&nbsp;↑ | Polygon&nbsp;↑ | Plan&nbsp;↑ | Manip.&nbsp;↑ |',
     '| :--- | ' + ' | '.join(['---:'] * len(study['metrics'])) + ' |',
     *md_rows]))
 

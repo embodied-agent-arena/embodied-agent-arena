@@ -1,13 +1,13 @@
 {
   "title": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
-  "description": "Eight frontier VLM agents evaluated across five robotic capabilities on a 1,000-case arena, with model-specific coverage and repetitions.",
+  "description": "Nine frontier VLM agents evaluated across five robotic capabilities on 1,000 cases, connecting local precision to complete task execution.",
   "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
-  "manuscript_date": "2026-10-12",
+  "manuscript_date": "2026-10-19",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
-  "paper_pages": 53,
-  "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess eight VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. A minimal harness preserves source observations and operations while leaving perception, reasoning, and action selection to the model. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra leads geometric estimation and planning, while Opus achieves the highest measured affordance overlap, contact validity, and Baseline manipulation success. These local strengths coexist with endpoint errors in tracing and low household-task completion. Supplementary comparisons of richer observations and multi-round review show model- and task-dependent effects. Current VLM agents thus fall short of embodied generalism: they often make partial progress without satisfying all task goals within allotted time and interaction budgets.",
+  "paper_pages": 61,
+  "abstract": "Frontier vision-language models (VLMs) increasingly estimate scenes, ground interactions, and generate executable actions. How far these native capabilities support embodied generalism across diverse tasks remains unclear. We introduce Embodied Agent Arena to assess nine VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. The arena contains 1,000 cases drawn from 32 established sources and GeoProbe, our new benchmark for geometric estimation on Blender renders and real-scene images. Models make task decisions through a minimal harness that preserves source observations and operations. Separate measures of metric precision, functional grounding, and native goal completion connect local competence to complete task outcomes. Astra has the lowest pose errors and highest full-set planning success, while Opus 5.5 achieves the highest affordance overlap, contact validity, and manipulation success. DeepSeek completes 20.9% of Manipulation tasks, with spatial and planning performance varying sharply across sources. Supplementary experiments show that per-round visual feedback and multi-round review can change model rankings. Current VLM agents still fall short of embodied generalism, leaving task goals unsatisfied within finite time and interaction budgets.",
   "authors": [
     {
       "name": "Haojian Huang",
@@ -77,14 +77,14 @@
     },
     {
       "domain": "Affordance",
-      "name": "Mask IoU",
+      "name": "Box–mask IoU",
       "unit": "overlap",
       "better": "higher"
     },
     {
       "domain": "Affordance",
-      "name": "Contact validity",
-      "unit": "%",
+      "name": "Polygon IoU",
+      "unit": "overlap",
       "better": "higher"
     },
     {
@@ -111,7 +111,7 @@
         "69.4 ± 1.0",
         "0.213",
         "0.286",
-        "60.3 ± 2.6",
+        "0.379",
         "80.3",
         "41.8"
       ]
@@ -126,7 +126,7 @@
         "60.7 ± 2.5",
         "0.273",
         "0.264",
-        "52.0 ± 3.6",
+        "0.325",
         "44.6",
         "19.8"
       ]
@@ -141,7 +141,7 @@
         "62.0 ± 4.6",
         "0.186",
         "0.284",
-        "57.1 ± 2.5",
+        "0.328",
         "63.7",
         "24.7"
       ]
@@ -156,7 +156,7 @@
         "68.9 ± 1.1",
         "0.205",
         "0.272",
-        "52.9 ± 4.2",
+        "0.365",
         "35.7",
         "9.3"
       ]
@@ -171,7 +171,7 @@
         "65.4 ± 1.3",
         "0.161",
         "0.250",
-        "44.6 ± 13.0",
+        "0.291",
         "48.4",
         "18.7"
       ]
@@ -186,7 +186,7 @@
         "50.6 ± 1.8",
         "0.251",
         "0.116",
-        "32.6 ± 4.7",
+        "0.092",
         "17.8",
         "9.9"
       ]
@@ -201,13 +201,13 @@
         "48.0 ± 0.9",
         "0.288",
         "0.013",
-        "6.3 ± 1.6",
+        "0.051",
         "19.1",
         "11.0"
       ]
     },
     {
-      "alias": "Opus",
+      "alias": "Opus 5.5",
       "name": "Claude Opus 5.5",
       "identifier": "claude-opus-5-5",
       "scores": [
@@ -216,28 +216,35 @@
         "58.6",
         "0.222",
         "0.329",
-        "62.9",
-        "50.7",
+        "0.397",
+        "48.4",
         "47.8"
-      ],
-      "annotations": {
-        "6": "†"
-      },
-      "exclude_from_best": [
-        6
-      ],
-      "metric_notes": {
-        "6": "73/144; HumanCLAW excluded until completed and verified; other agents use 157 cases.",
-        "7": "87/182 under the same Baseline protocol as the original seven; 2 RLBench errors and 1 RoboTwin error count as unsuccessful."
-      }
+      ]
+    },
+    {
+      "alias": "DeepSeek",
+      "name": "DeepSeek 4.1 Flash",
+      "official_name": "DeepSeek-V4.1-Flash-1017",
+      "identifier": "deepseek-flash",
+      "evaluated_update": "2026-10-17",
+      "scores": [
+        "30.3",
+        "182.7",
+        "51.6 ± 1.5",
+        "0.310",
+        "0.217",
+        "0.249",
+        "31.2",
+        "20.9"
+      ]
     }
   ],
   "source": {
     "table": "Table 2",
     "page": 7,
     "model_table": "Table A5",
-    "model_page": 21,
-    "protocol": "Source-native evaluation; Baseline Manipulation for all eight agents. Opus Planning excludes HumanCLAW; repetition counts vary by model and domain.",
-    "repetitions": "Non-tracing Geometry, Spatial Reasoning, and Affordance: five repetitions per case for six models and three for Fable. Tracing, Task Planning, and Manipulation: one reported episode per assignment. Opus: five non-tracing Geometry runs; one run elsewhere."
+    "model_page": 22,
+    "protocol": "Source-native observations and tools. All agents use RGB. In Manipulation, the original eight use the native Baseline image schedule; DeepSeek receives current RGB at each decision, with the same listed per-source round, token, and in-episode time ceilings.",
+    "repetitions": "Non-tracing Geometry: five runs, except Fable (three). Spatial Reasoning and box/point Affordance: five runs, except Fable (three) and Opus 5.5 (one). Polygon Affordance, tracing, Planning, and Manipulation: one run per assignment for all nine models."
   }
 }

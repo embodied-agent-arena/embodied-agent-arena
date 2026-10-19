@@ -1,13 +1,103 @@
 const domains=[
- {id:'geometry',label:'Geometry',title:'Astra Estimates Precisely. Endpoints Still Matter.',text:'Within the original seven-agent subtask cohort, Astra has the lowest error on all five controlled Blender estimation targets and the closest 3D traces. But a close path can still start or end in the wrong place.',evidence:[['0.31%','Height estimation error','Sol · 0.90%'],['0.382 m','3D path error','Gemini · 0.426 m']],caption:'Original seven-agent subtask analysis. (a) Astra’s estimation-error reduction relative to the strongest other model on each target. (b) Object-displacement error with fixed or moving cameras in Blender, and with real photographs. (c) 3D path error versus success at meeting all tracing constraints: a closer path need not satisfy its start, end, and collision requirements.'},
- {id:'spatial',label:'Spatial Reasoning',title:'Astra Connects Views Better Than It Infers New Frames.',text:'Astra’s clearest spatial advantage is relating information across views. Inferring camera motion, an object’s facing direction, or the nearest object exposes different limits.',evidence:[['77.0%','Multi-view reasoning','Fable · 66.7%'],['78.5%','Camera-shift reasoning','Qwen-Max · 89.2%']],caption:'Original seven-agent subtask analysis. (a) Accuracy on left/right relations, camera shifts, and actor- or object-relative directions. (b) Nearest/farthest judgments and distances relative to cameras or other objects. (c) Astra’s gap from the strongest other model on one task per source; positive values favor Astra. C–R means camera–region relations, and pp means percentage points.'},
- {id:'affordance',label:'Affordance',title:'Usable Contacts and Region Coverage Are Different.',text:'Opus records 62.9% contact validity and 0.329 mask IoU in one run. The original seven-agent subtask analysis below shows why locating a contact and covering its functional region remain distinct.',evidence:[['96.7%','UMD valid contacts','Fable · 94.4%'],['31.0%','ReasonAff valid contacts','Fable · 23.3%']],caption:'Original seven-agent subtask analysis. (a) Valid tool contacts across all six UMD actions. (b) Astra’s predicted boxes scored against reference boxes and functional-region masks; IoU measures overlap. (c) Valid contacts for four interactions in ReasonAff and RAGNet. The labels 1H and 2H mean one and two hands.'},
- {id:'planning',label:'Task Planning',title:'Astra Leads or Ties Across All Six Planning Sources.',text:'In the original complete seven-agent Planning cohort, Astra leads four sources and ties the best model on two, from compound household goals to linked scientific operations.',evidence:[['75% / 70%','ALFRED / ALFWorld','Fable · 35% / 30%'],['100%','DiscoveryWorld success','Fable · 70%']],caption:'Original seven-agent subtask analysis. (a) Astra and Fable’s task success across six planning benchmarks. (b) Success on seven household goal families in ALFRED and ALFWorld. (c) Their five nonzero ScienceWorld gaps; thirteen other families tie. Positive gaps favor Astra. K/U means known/unknown conditions, and pp means percentage points.'},
- {id:'manipulation',label:'Manipulation',title:'Astra’s Local Control Lead Weakens in Household Tasks.',text:'Within the original Baseline cohort, Astra leads several manipulation task families and completes longer CALVIN goal sequences. Mobile-base positioning, articulated fixtures, and coordinated household-state changes remain difficult.',evidence:[['3.10 / 5','Consecutive CALVIN goals','Fable · 0.90 / 5'],['10% / 0%','RoboCasa / RoboCasa365','Complete-task success']],caption:'Original seven-agent subtask analysis. (a) Task success across thirteen manipulation suites. (b) CALVIN goals completed consecutively before the first failure, out of five. (c) Goal conditions satisfied on five ManiSkill tasks. Filled circles show the standard evaluation; open diamonds show evaluation with additional visual feedback (RGB-expanded).'}
+  {
+    "id": "geometry",
+    "label": "Geometry",
+    "title": "Metric Precision Is Only Part of Geometric Competence.",
+    "text": "Astra has the lowest pose errors. The tracing comparison shows why a close path can still miss the endpoint or violate a task constraint.",
+    "evidence": [
+      [
+        "17.1°",
+        "Astra rotation error",
+        "DeepSeek · 30.3°"
+      ],
+      [
+        "106.6 cm",
+        "Astra translation error",
+        "DeepSeek · 182.7 cm"
+      ]
+    ],
+    "caption": "(a) Astra’s error reduction against its original six peers. (b) Object displacement under fixed or moving cameras, including DeepSeek. (c) Nine-model 3D path error and joint tracing success."
+  },
+  {
+    "id": "spatial",
+    "label": "Spatial Reasoning",
+    "title": "Spatial Strengths Depend on the Question.",
+    "text": "Astra leads Spatial Pass@1, while Gemini has the lowest numerical error. Source-level comparisons expose gaps hidden by an overall score.",
+    "evidence": [
+      [
+        "69.4%",
+        "Astra Spatial Pass@1",
+        "DeepSeek · 51.6%"
+      ],
+      [
+        "0.161",
+        "Gemini numerical AbsRel",
+        "Astra · 0.213"
+      ]
+    ],
+    "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Native Pass@1 for all nine agents across six sources."
+  },
+  {
+    "id": "affordance",
+    "label": "Affordance",
+    "title": "Finding a Contact Is Not the Same as Tracing a Region.",
+    "text": "Opus 5.5 achieves the highest box–mask and polygon IoU. Direct polygons test region shape beyond the rectangular coverage of a predicted box.",
+    "evidence": [
+      [
+        "0.397",
+        "Opus 5.5 polygon IoU",
+        "DeepSeek · 0.249"
+      ],
+      [
+        "0.329",
+        "Opus 5.5 box–mask IoU",
+        "DeepSeek · 0.217"
+      ]
+    ],
+    "caption": "(a) UMD contact validity, including DeepSeek. (b) Direct-polygon IoU for all nine models on 70 cases, one run per case. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
+  },
+  {
+    "id": "planning",
+    "label": "Task Planning",
+    "title": "High Planning Scores Still Leave Physical Goals Unfinished.",
+    "text": "Astra leads overall Planning at 80.3%. Opus 5.5 completes 3/13 HumanCLAW tasks and DeepSeek 2/13; those successes involve navigation, while all eight sitting tasks remain incomplete.",
+    "evidence": [
+      [
+        "80.3%",
+        "Astra Planning success",
+        "Opus 5.5 · 48.4%"
+      ],
+      [
+        "31.2%",
+        "DeepSeek Planning success",
+        "157 tasks per agent"
+      ]
+    ],
+    "caption": "(a) Source-level success for Astra, Fable, Opus 5.5, and DeepSeek. (b–c) Astra and Fable’s household-goal and ScienceWorld diagnostics. Each assignment uses one episode."
+  },
+  {
+    "id": "manipulation",
+    "label": "Manipulation",
+    "title": "Local Control Does Not Ensure Complete Household Tasks.",
+    "text": "Opus 5.5 completes 47.8% of assigned Manipulation tasks; DeepSeek completes 20.9%. No model completes any of the five BEHAVIOR-1K tasks within the source limits.",
+    "evidence": [
+      [
+        "47.8%",
+        "Opus 5.5 task success",
+        "Astra · 41.8%"
+      ],
+      [
+        "20.9%",
+        "DeepSeek task success",
+        "38 / 182 tasks"
+      ]
+    ],
+    "caption": "(a) Nine-model success across thirteen suites. (b) Consecutive CALVIN goals, out of five. (c) ManiSkill condition satisfaction. Filled/open markers show Baseline/additional visual feedback; teal triangles show DeepSeek’s per-round RGB setting."
+  }
 ];
 const cases=[
- {id:'household',label:'Household Manipulation',title:'Local Skills Do Not Yet Add Up to Complete Tasks.',value:'0%',metric:'BEHAVIOR-1K complete-task success',scope:'0 / 5 tasks for each of the original seven agents',explanation:'No agent satisfied all required final household conditions in any of the five evaluated tasks. This score counts complete tasks; intermediate actions can succeed while the task remains unfinished.',budget:'180 min trial time; 24 model rounds; 256 tool calls; 640k tokens; 1,000 environment control steps.',protocol:'One episode per task and agent, with source-native observations and tools. Trial time includes model calls, execution, and feedback. A run may terminate or hit another limit before 180 minutes; 0% does not mean every run timed out.',text:'The BEHAVIOR-1K row shows 0/5 complete tasks per agent under the limits above. The other rows evaluate different task suites with their own budgets. The result establishes incomplete task execution in this setting; it does not by itself identify why each episode failed.',image:'manipulation',alt:'Task success across thirteen manipulation suites. The BEHAVIOR-1K row shows 0 of 5 completed tasks per agent under the specified evaluation budgets.'},
- {id:'body',label:'Body–Object Interaction',title:'Finding the Seat Does Not Complete the Sitting Task.',value:'0 / 8',metric:'HumanCLAW sitting tasks completed',scope:'0 / 8 tasks for each of the original seven agents',explanation:'Success requires the environment to confirm the required sitting state. These eight sitting tasks form a subset of HumanCLAW’s 13 evaluated tasks; the 0/8 result applies only to that subset.',budget:'180 min episode time (11,000 s outer task timeout); 101 code rounds; 100 environment steps; 400 primitive calls; 2M tokens.',protocol:'One episode per task and agent, with source-native observations and tools. A run may terminate or hit another limit before 180 minutes; the zero completion rate does not establish that every run timed out.',text:'Astra found the seat in six cases and approached within 20 cm while issuing a sit action in five. None achieved the required sitting state. These records distinguish target finding and attempted execution from the final condition that determines success.',diagnostic:[['6','Target Found'],['5','Within 20 cm + Sit Action Issued'],['0','Sitting State Confirmed']]}
+ {id:'household',label:'Household Manipulation',title:'Local Skills Do Not Yet Add Up to Complete Tasks.',value:'0%',metric:'BEHAVIOR-1K complete-task success',scope:'0 / 5 tasks for each of the nine agents',explanation:'No agent satisfied all required final household conditions in any of the five evaluated tasks. This score counts complete tasks; intermediate actions can succeed while the task remains unfinished.',budget:'180 min trial time; 24 model rounds; 256 tool calls; 640k tokens; 1,000 environment control steps.',protocol:'One episode per task and agent, with source-native observations and tools. Trial time includes model calls, execution, and feedback. Runs can terminate unsuccessfully before the time limit.',text:'The BEHAVIOR-1K row shows 0/5 complete tasks for all nine agents. Intermediate progress does not satisfy the full set of required final conditions. Other rows show suites with their own source budgets.',image:'manipulation',alt:'Task success across thirteen manipulation suites. The BEHAVIOR-1K row shows 0 of 5 completed tasks per agent under the specified evaluation budgets.'},
+ {id:'body',label:'Body–Object Interaction',title:'Finding the Seat Does Not Complete the Sitting Task.',value:'0 / 8',metric:'HumanCLAW sitting tasks completed',scope:'0 / 8 tasks for each of the nine agents',explanation:'Success requires the environment to confirm the required sitting state. These eight sitting tasks form a subset of HumanCLAW’s 13 evaluated tasks; the 0/8 result applies only to that subset.',budget:'180 min episode time (11,000 s outer task timeout); 101 code rounds; 100 environment steps; 400 primitive calls; 2M tokens.',protocol:'One episode per task and agent, with source-native observations and tools. Runs can terminate unsuccessfully before the time limit.',text:'Astra found the seat in six cases and approached within 20 cm while issuing a sit action in five. None achieved the required sitting state. These records distinguish target finding and attempted execution from the final condition that determines success.',diagnostic:[['6','Target Found'],['5','Within 20 cm + Sit Action Issued'],['0','Sitting State Confirmed']]}
 ];
 function buildTabs(items,prefix,render){
  const list=document.querySelector(`#${prefix}-tabs`),panel=document.querySelector(`#${prefix}-panel`);
@@ -16,11 +106,11 @@ function buildTabs(items,prefix,render){
  list.addEventListener('keydown',e=>{const i=[...list.children].indexOf(document.activeElement);let n=i;if(e.key==='ArrowRight')n=(i+1)%items.length;else if(e.key==='ArrowLeft')n=(i-1+items.length)%items.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=items.length-1;else return;e.preventDefault();select(n,true);});select(0);
 }
 // Reserve figure space before lazy loading so in-page links keep their position.
-const figureSizes={geometry:[3000,818],spatial:[3000,754],affordance:[3000,818],planning:[3000,818],manipulation:[3400,1180]};
+const figureSizes={"geometry": [1875, 512], "spatial": [2063, 499], "affordance": [1875, 512], "planning": [1875, 512], "manipulation": [2100, 697]};
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
-buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
+buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=20261019" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=20261019" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
 function renderCompletionCase(c){
- const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp" alt="${c.alt}" loading="lazy"></button>`;
+ const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=20261019" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=20261019" alt="${c.alt}" loading="lazy"></button>`;
  return `<h3>${c.title}</h3><div class="completion-highlight"><strong>${c.value}</strong><div><span>${c.metric}</span><span class="completion-scope">${c.scope}</span></div></div><p class="case-explanation">${c.explanation}</p><div class="case-setting"><p><strong>Per-episode limits.</strong> ${c.budget}</p><p>${c.protocol}</p></div><figure class="case-figure">${evidence}<figcaption class="figure-takeaway">${c.text}</figcaption></figure>`;
 }
 buildTabs(cases,'case',renderCompletionCase);

@@ -145,3 +145,6 @@ table,section,metric,case_count,model,mean,population_variance,valid,eligible,ru
 14,W5：可供性,RAGNet-3DOI · Mask IoU ↑,20,Opus 5.5,0.172,0.0784,20,20,,False,0.172 / 0.0784 (20/20)
 14,W5：可供性,UMD · BBox IoU ↑,30,Opus 5.5,0.74,0.0271,30,30,,False,0.740 / 0.0271 (30/30)
 14,W5：可供性,UMD · Mask IoU ↑,30,Opus 5.5,0.517,0.0252,30,30,,False,0.517 / 0.0252 (30/30)
+5,W3：任务规划,HumanCLAW,13,Opus 5.5,23.1,,,,,False,3/13; navigation 3/5; sitting 0/8
+5,W3：任务规划,Overall Planning,157,Opus 5.5,48.4,,,,,False,76/157
+15,Affordance: direct polygons,Polygon–GT mask IoU↑,70,Opus 5.5,0.397,,,70,,False,0.397; one run per case
