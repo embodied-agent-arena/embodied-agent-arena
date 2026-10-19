@@ -6,14 +6,14 @@ const domains=[
     "text": "Astra has the lowest pose errors. The tracing comparison shows why a close path can still miss the endpoint or violate a task constraint.",
     "evidence": [
       [
-        "17.1°",
+        "17.2 ± 6.7°",
         "Astra rotation error",
-        "DeepSeek-1017 · 30.3°"
+        "DeepSeek-1017 · 30.2 ± 3.9°"
       ],
       [
-        "106.6 cm",
+        "106.9 ± 36.0 cm",
         "Astra translation error",
-        "DeepSeek-1017 · 182.7 cm"
+        "DeepSeek-1017 · 182.0 ± 29.0 cm"
       ]
     ],
     "caption": "(a) Astra’s error reduction against its original six peers. (b) Object displacement under fixed or moving cameras, including DeepSeek-1017. (c) Nine-model 3D path error and joint tracing success."
@@ -25,14 +25,14 @@ const domains=[
     "text": "Astra leads Spatial Pass@1, while Gemini has the lowest numerical error. Source-level comparisons expose gaps hidden by an overall score.",
     "evidence": [
       [
-        "69.4%",
+        "69.4 ± 1.0%",
         "Astra Spatial Pass@1",
-        "DeepSeek-1017 · 51.6%"
+        "DeepSeek-1017 · 51.6 ± 1.5%"
       ],
       [
-        "0.161",
+        "0.161 ± 0.028",
         "Gemini numerical AbsRel",
-        "Astra · 0.213"
+        "Astra · 0.214 ± 0.016"
       ]
     ],
     "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Native Pass@1 for all nine agents across six sources."
@@ -49,12 +49,12 @@ const domains=[
         "DeepSeek-1017 · 0.249"
       ],
       [
-        "0.329",
+        "0.311 ± 0.020",
         "Opus 5.5 box–mask IoU",
-        "DeepSeek-1017 · 0.217"
+        "DeepSeek-1017 · 0.217 ± 0.011"
       ]
     ],
-    "caption": "(a) UMD contact validity, including DeepSeek-1017. (b) Direct-polygon IoU for all nine models on 70 cases, one run per case. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
+    "caption": "(a) UMD contact validity for all nine agents. (b) Direct-polygon IoU for all nine models on 70 cases, one run per case. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
   },
   {
     "id": "planning",
@@ -108,9 +108,9 @@ function buildTabs(items,prefix,render){
 // Reserve figure space before lazy loading so in-page links keep their position.
 const figureSizes={"geometry": [1875, 512], "spatial": [2063, 499], "affordance": [1875, 512], "planning": [1875, 512], "manipulation": [2100, 697]};
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
-buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=names-1017-20261019" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=names-1017-20261019" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
+buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=run-sd-20261019" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=run-sd-20261019" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
 function renderCompletionCase(c){
- const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=names-1017-20261019" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=names-1017-20261019" alt="${c.alt}" loading="lazy"></button>`;
+ const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=run-sd-20261019" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=run-sd-20261019" alt="${c.alt}" loading="lazy"></button>`;
  return `<h3>${c.title}</h3><div class="completion-highlight"><strong>${c.value}</strong><div><span>${c.metric}</span><span class="completion-scope">${c.scope}</span></div></div><p class="case-explanation">${c.explanation}</p><div class="case-setting"><p><strong>Per-episode limits.</strong> ${c.budget}</p><p>${c.protocol}</p></div><figure class="case-figure">${evidence}<figcaption class="figure-takeaway">${c.text}</figcaption></figure>`;
 }
 buildTabs(cases,'case',renderCompletionCase);

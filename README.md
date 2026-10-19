@@ -38,16 +38,18 @@ Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Claude
 <!-- BEGIN RESULT_TABLE -->
 | Model | Rot.&nbsp;↓ | Trans.&nbsp;↓ | Spatial&nbsp;↑ | AbsRel&nbsp;↓ | Box&nbsp;↑ | Polygon&nbsp;↑ | Plan&nbsp;↑ | Manip.&nbsp;↑ |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GPT&#8209;6&nbsp;Astra | **17.1** | **106.6** | **69.4** | 0.213 | 0.286 | 0.379 | **80.3** | 41.8 |
-| GPT&#8209;6&nbsp;Sol | 27.0 | 151.9 | 60.7 | 0.273 | 0.264 | 0.325 | 44.6 | 19.8 |
-| Claude&nbsp;Fable&nbsp;5.1 | 25.2 | 121.7 | 62.0 | 0.186 | 0.284 | 0.328 | 63.7 | 24.7 |
-| Qwen&nbsp;3.8&nbsp;Max | 20.5 | 138.1 | 68.9 | 0.205 | 0.272 | 0.365 | 35.7 | 9.3 |
-| Gemini&nbsp;3.8&nbsp;Flash | 24.2 | 140.9 | 65.4 | **0.161** | 0.250 | 0.291 | 48.4 | 18.7 |
-| Qwen&nbsp;3.5&nbsp;397B&#8209;A17B | 38.4 | 249.8 | 50.6 | 0.251 | 0.116 | 0.092 | 17.8 | 9.9 |
-| Qwen&nbsp;3.5&nbsp;27B | 38.4 | 213.7 | 48.0 | 0.288 | 0.013 | 0.051 | 19.1 | 11.0 |
-| Claude&nbsp;Opus&nbsp;5.5 | 23.3 | 135.3 | 58.6 | 0.222 | **0.329** | **0.397** | 48.4 | **47.8** |
-| DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017 | 30.3 | 182.7 | 51.6 | 0.310 | 0.217 | 0.249 | 31.2 | 20.9 |
+| GPT&#8209;6&nbsp;Astra | **17.2**&nbsp;±&nbsp;6.7 | **106.9**&nbsp;±&nbsp;36.0 | **69.4**&nbsp;±&nbsp;1.0 | 0.214&nbsp;±&nbsp;0.016 | 0.286&nbsp;±&nbsp;0.010 | 0.379 | **80.3** | 41.8 |
+| GPT&#8209;6&nbsp;Sol | 27.0&nbsp;±&nbsp;1.5 | 151.9&nbsp;±&nbsp;6.2 | 60.7&nbsp;±&nbsp;2.5 | 0.273&nbsp;±&nbsp;0.016 | 0.264&nbsp;±&nbsp;0.010 | 0.325 | 44.6 | 19.8 |
+| Claude&nbsp;Fable&nbsp;5.1 | 24.2&nbsp;±&nbsp;8.3 | 116.6&nbsp;±&nbsp;42.6 | 62.0&nbsp;±&nbsp;4.6 | 0.185&nbsp;±&nbsp;0.011 | 0.284&nbsp;±&nbsp;0.013 | 0.328 | 63.7 | 24.7 |
+| Qwen&nbsp;3.8&nbsp;Max | 20.5&nbsp;±&nbsp;3.5 | 138.1&nbsp;±&nbsp;10.2 | 68.9&nbsp;±&nbsp;1.1 | 0.206&nbsp;±&nbsp;0.033 | 0.272&nbsp;±&nbsp;0.017 | 0.365 | 35.7 | 9.3 |
+| Gemini&nbsp;3.8&nbsp;Flash | 23.7&nbsp;±&nbsp;5.6 | 138.0&nbsp;±&nbsp;41.7 | 65.4&nbsp;±&nbsp;1.3 | **0.161**&nbsp;±&nbsp;0.028 | 0.251&nbsp;±&nbsp;0.081 | 0.291 | 48.4 | 18.7 |
+| Qwen&nbsp;3.5&nbsp;397B&#8209;A17B | 38.4&nbsp;±&nbsp;1.1 | 249.8&nbsp;±&nbsp;10.2 | 50.6&nbsp;±&nbsp;1.8 | 0.251&nbsp;±&nbsp;0.027 | 0.116&nbsp;±&nbsp;0.014 | 0.092 | 17.8 | 9.9 |
+| Qwen&nbsp;3.5&nbsp;27B | 38.4&nbsp;±&nbsp;3.6 | 213.7&nbsp;±&nbsp;12.6 | 48.0&nbsp;±&nbsp;0.9 | 0.288&nbsp;±&nbsp;0.023 | 0.013&nbsp;±&nbsp;0.006 | 0.051 | 19.1 | 11.0 |
+| Claude&nbsp;Opus&nbsp;5.5 | 23.4&nbsp;±&nbsp;3.7 | 135.8&nbsp;±&nbsp;12.7 | 67.5&nbsp;±&nbsp;5.1 | 0.184&nbsp;±&nbsp;0.040 | **0.311**&nbsp;±&nbsp;0.020 | **0.397** | 48.4 | **47.8** |
+| DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017 | 30.2&nbsp;±&nbsp;3.9 | 182.0&nbsp;±&nbsp;29.0 | 51.6&nbsp;±&nbsp;1.5 | 0.309&nbsp;±&nbsp;0.035 | 0.217&nbsp;±&nbsp;0.011 | 0.249 | 31.2 | 20.9 |
 <!-- END RESULT_TABLE -->
+
+Mean ± run SD: five runs (Fable: three). Polygon, Planning, and Manipulation use one run.
 
 Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7); **bold** marks the best mean. Affordance reports box–mask and direct-polygon IoU. [Model IDs and evaluation settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol).
 

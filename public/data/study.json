@@ -106,14 +106,24 @@
       "name": "GPT-6 Astra",
       "identifier": "gpt-6-astra",
       "scores": [
-        "17.1",
-        "106.6",
+        "17.2 ± 6.7",
+        "106.9 ± 36.0",
         "69.4 ± 1.0",
-        "0.213",
-        "0.286",
+        "0.214 ± 0.016",
+        "0.286 ± 0.010",
         "0.379",
         "80.3",
         "41.8"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -121,14 +131,24 @@
       "name": "GPT-6 Sol",
       "identifier": "gpt-6-sol",
       "scores": [
-        "27.0",
-        "151.9",
+        "27.0 ± 1.5",
+        "151.9 ± 6.2",
         "60.7 ± 2.5",
-        "0.273",
-        "0.264",
+        "0.273 ± 0.016",
+        "0.264 ± 0.010",
         "0.325",
         "44.6",
         "19.8"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -136,14 +156,24 @@
       "name": "Claude Fable 5.1",
       "identifier": "claude-fable-5-1",
       "scores": [
-        "25.2",
-        "121.7",
+        "24.2 ± 8.3",
+        "116.6 ± 42.6",
         "62.0 ± 4.6",
-        "0.186",
-        "0.284",
+        "0.185 ± 0.011",
+        "0.284 ± 0.013",
         "0.328",
         "63.7",
         "24.7"
+      ],
+      "metric_runs": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -151,14 +181,24 @@
       "name": "Qwen 3.8 Max",
       "identifier": "qwen3.8-max",
       "scores": [
-        "20.5",
-        "138.1",
+        "20.5 ± 3.5",
+        "138.1 ± 10.2",
         "68.9 ± 1.1",
-        "0.205",
-        "0.272",
+        "0.206 ± 0.033",
+        "0.272 ± 0.017",
         "0.365",
         "35.7",
         "9.3"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -166,14 +206,24 @@
       "name": "Gemini 3.8 Flash",
       "identifier": "gemini-3.8-flash",
       "scores": [
-        "24.2",
-        "140.9",
+        "23.7 ± 5.6",
+        "138.0 ± 41.7",
         "65.4 ± 1.3",
-        "0.161",
-        "0.250",
+        "0.161 ± 0.028",
+        "0.251 ± 0.081",
         "0.291",
         "48.4",
         "18.7"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -181,14 +231,24 @@
       "name": "Qwen 3.5 397B-A17B",
       "identifier": "qwen3.5-397b-a17b",
       "scores": [
-        "38.4",
-        "249.8",
+        "38.4 ± 1.1",
+        "249.8 ± 10.2",
         "50.6 ± 1.8",
-        "0.251",
-        "0.116",
+        "0.251 ± 0.027",
+        "0.116 ± 0.014",
         "0.092",
         "17.8",
         "9.9"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -196,14 +256,24 @@
       "name": "Qwen 3.5 27B",
       "identifier": "qwen3.5-27b",
       "scores": [
-        "38.4",
-        "213.7",
+        "38.4 ± 3.6",
+        "213.7 ± 12.6",
         "48.0 ± 0.9",
-        "0.288",
-        "0.013",
+        "0.288 ± 0.023",
+        "0.013 ± 0.006",
         "0.051",
         "19.1",
         "11.0"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -211,14 +281,24 @@
       "name": "Claude Opus 5.5",
       "identifier": "claude-opus-5-5",
       "scores": [
-        "23.3",
-        "135.3",
-        "58.6",
-        "0.222",
-        "0.329",
+        "23.4 ± 3.7",
+        "135.8 ± 12.7",
+        "67.5 ± 5.1",
+        "0.184 ± 0.040",
+        "0.311 ± 0.020",
         "0.397",
         "48.4",
         "47.8"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     },
     {
@@ -228,14 +308,24 @@
       "identifier": "deepseek-flash",
       "evaluated_update": "2026-10-17",
       "scores": [
-        "30.3",
-        "182.7",
+        "30.2 ± 3.9",
+        "182.0 ± 29.0",
         "51.6 ± 1.5",
-        "0.310",
-        "0.217",
+        "0.309 ± 0.035",
+        "0.217 ± 0.011",
         "0.249",
         "31.2",
         "20.9"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
       ]
     }
   ],
@@ -245,6 +335,7 @@
     "model_table": "Table A5",
     "model_page": 22,
     "protocol": "Source-native observations and tools. All agents use RGB. In Manipulation, the original eight use the native Baseline image schedule; DeepSeek-1017 receives current RGB at each decision, with the same listed per-source round, token, and in-episode time ceilings.",
-    "repetitions": "Non-tracing Geometry: five runs, except Fable (three). Spatial Reasoning and box/point Affordance: five runs, except Fable (three) and Opus 5.5 (one). Polygon Affordance, tracing, Planning, and Manipulation: one run per assignment for all nine models."
+    "repetitions": "Non-tracing Geometry, Spatial Reasoning, and box/point Affordance: five runs, except Fable (three). Polygon grounding, tracing, Planning, and Manipulation: one run per assignment.",
+    "aggregation": "Mean of per-run metrics ± sample SD (ddof=1). Continuous metrics use valid predictions within each run; binary rates retain all assigned cases."
   }
 }

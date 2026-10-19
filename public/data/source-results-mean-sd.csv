@@ -1,0 +1,163 @@
+source,metric,model,mean,run_sd,runs
+w2_3dsrbench,native,GPT-6 Astra,73.6,2.6076809620810595,5
+w2_3dsrbench,native,GPT-6 Sol,71.2,1.7888543819998317,5
+w2_3dsrbench,native,Claude Fable 5.1,72.66666666666667,3.055050463303893,3
+w2_3dsrbench,native,Qwen 3.8 Max,74.0,3.7416573867739413,5
+w2_3dsrbench,native,Gemini 3.8 Flash,70.0,2.449489742783178,5
+w2_3dsrbench,native,Qwen 3.5 397B-A17B,69.2,3.6331804249169903,5
+w2_3dsrbench,native,Qwen 3.5 27B,57.6,2.6076809620810595,5
+w2_3dsrbench,native,Claude Opus 5.5,76.8,9.85900603509299,5
+w2_3dsrbench,native,DeepSeek 4.1 Flash-1017,61.6,7.127411872482185,5
+w2_bop_ask,native,GPT-6 Astra,96.0,4.183300132670378,5
+w2_bop_ask,native,GPT-6 Sol,87.0,4.47213595499958,5
+w2_bop_ask,native,Claude Fable 5.1,88.33333333333333,2.8867513459481287,3
+w2_bop_ask,native,Qwen 3.8 Max,92.0,2.7386127875258306,5
+w2_bop_ask,native,Gemini 3.8 Flash,97.0,2.7386127875258306,5
+w2_bop_ask,native,Qwen 3.5 397B-A17B,85.0,3.5355339059327378,5
+w2_bop_ask,native,Qwen 3.5 27B,84.0,4.183300132670378,5
+w2_bop_ask,native,Claude Opus 5.5,95.0,0.0,5
+w2_bop_ask,native,DeepSeek 4.1 Flash-1017,88.0,7.582875444051551,5
+w2_mindcube,native,GPT-6 Astra,90.8,1.0954451150103321,5
+w2_mindcube,native,GPT-6 Sol,68.0,7.3484692283495345,5
+w2_mindcube,native,Claude Fable 5.1,79.33333333333333,8.082903768654761,3
+w2_mindcube,native,Qwen 3.8 Max,90.8,2.6832815729997477,5
+w2_mindcube,native,Gemini 3.8 Flash,89.2,3.0331501776206204,5
+w2_mindcube,native,Qwen 3.5 397B-A17B,46.0,2.8284271247461903,5
+w2_mindcube,native,Qwen 3.5 27B,50.4,4.09878030638384,5
+w2_mindcube,native,Claude Opus 5.5,85.2,6.723094525588644,5
+w2_mindcube,native,DeepSeek 4.1 Flash-1017,54.4,4.33589667773576,5
+w2_mmsi_bench,native,GPT-6 Astra,77.0,5.70087712549569,5
+w2_mmsi_bench,native,GPT-6 Sol,55.0,11.726039399558575,5
+w2_mmsi_bench,native,Claude Fable 5.1,66.66666666666667,7.637626158259733,3
+w2_mmsi_bench,native,Qwen 3.8 Max,55.0,8.660254037844387,5
+w2_mmsi_bench,native,Gemini 3.8 Flash,56.0,9.617692030835672,5
+w2_mmsi_bench,native,Qwen 3.5 397B-A17B,35.0,9.354143466934854,5
+w2_mmsi_bench,native,Qwen 3.5 27B,29.0,7.416198487095663,5
+w2_mmsi_bench,native,Claude Opus 5.5,59.0,8.215838362577491,5
+w2_mmsi_bench,native,DeepSeek 4.1 Flash-1017,53.0,5.70087712549569,5
+w2_robospatial,native,GPT-6 Astra,56.666666666666664,2.3570226039551576,5
+w2_robospatial,native,GPT-6 Sol,54.0,5.96284793999944,5
+w2_robospatial,native,Claude Fable 5.1,58.888888888888886,1.9245008972987538,3
+w2_robospatial,native,Qwen 3.8 Max,58.666666666666664,3.80058475033046,5
+w2_robospatial,native,Gemini 3.8 Flash,50.666666666666664,2.7888667551135873,5
+w2_robospatial,native,Qwen 3.5 397B-A17B,60.0,2.3570226039551603,5
+w2_robospatial,native,Qwen 3.5 27B,61.333333333333336,3.800584750330463,5
+w2_robospatial,native,Claude Opus 5.5,61.333333333333336,4.47213595499958,5
+w2_robospatial,native,DeepSeek 4.1 Flash-1017,58.0,3.8005847503304606,5
+w2_vsi_bench,native,GPT-6 Astra,37.6,3.8470768123342687,5
+w2_vsi_bench,native,GPT-6 Sol,38.8,2.280350850198276,5
+w2_vsi_bench,native,Claude Fable 5.1,23.333333333333332,14.46835627614047,3
+w2_vsi_bench,native,Qwen 3.8 Max,44.4,4.979959839195493,5
+w2_vsi_bench,native,Gemini 3.8 Flash,36.8,3.6331804249169903,5
+w2_vsi_bench,native,Qwen 3.5 397B-A17B,23.6,3.847076812334269,5
+w2_vsi_bench,native,Qwen 3.5 27B,21.2,2.6832815729997477,5
+w2_vsi_bench,native,Claude Opus 5.5,36.4,1.6733200530681511,5
+w2_vsi_bench,native,DeepSeek 4.1 Flash-1017,20.0,2.0,5
+w5_ragnet,bbox_iou,GPT-6 Astra,0.12720586540487433,0.0340367634244032,5
+w5_ragnet,bbox_iou,GPT-6 Sol,0.13263878399399157,0.046134028512036636,5
+w5_ragnet,bbox_iou,Claude Fable 5.1,0.12277256158421676,0.01704535000832124,3
+w5_ragnet,bbox_iou,Qwen 3.8 Max,0.089550602763358,0.0304862764879413,5
+w5_ragnet,bbox_iou,Gemini 3.8 Flash,0.07372328727865042,0.021351585401945615,5
+w5_ragnet,bbox_iou,Qwen 3.5 397B-A17B,0.07740814162679756,0.020982193786450068,5
+w5_ragnet,bbox_iou,Qwen 3.5 27B,0.036253929380858106,0.011228439477496889,5
+w5_ragnet,bbox_iou,Claude Opus 5.5,0.17082189361793107,0.03888142974104727,5
+w5_ragnet,bbox_iou,DeepSeek 4.1 Flash-1017,0.0924107854906476,0.02041629588266003,5
+w5_ragnet,mask_iou,GPT-6 Astra,0.09074037477502254,0.02594261737983431,5
+w5_ragnet,mask_iou,GPT-6 Sol,0.08013962859031701,0.02931727144696292,5
+w5_ragnet,mask_iou,Claude Fable 5.1,0.11226264106036159,0.017457520953990665,3
+w5_ragnet,mask_iou,Qwen 3.8 Max,0.06304524281496682,0.02321778207932035,5
+w5_ragnet,mask_iou,Gemini 3.8 Flash,0.06220606048246103,0.018977575958919832,5
+w5_ragnet,mask_iou,Qwen 3.5 397B-A17B,0.07219911332516606,0.020853861373205825,5
+w5_ragnet,mask_iou,Qwen 3.5 27B,0.01702430987462287,0.008024528937055719,5
+w5_ragnet,mask_iou,Claude Opus 5.5,0.13610723614176795,0.024565193100761756,5
+w5_ragnet,mask_iou,DeepSeek 4.1 Flash-1017,0.08065769999746318,0.019759696768772064,5
+w5_ragnet,point_hit,GPT-6 Astra,35.0,6.123724356957945,5
+w5_ragnet,point_hit,GPT-6 Sol,29.0,8.215838362577491,5
+w5_ragnet,point_hit,Claude Fable 5.1,35.0,5.0,3
+w5_ragnet,point_hit,Qwen 3.8 Max,30.0,7.905694150420948,5
+w5_ragnet,point_hit,Gemini 3.8 Flash,26.0,8.94427190999916,5
+w5_ragnet,point_hit,Qwen 3.5 397B-A17B,30.0,7.0710678118654755,5
+w5_ragnet,point_hit,Qwen 3.5 27B,14.0,2.23606797749979,5
+w5_ragnet,point_hit,Claude Opus 5.5,39.0,6.519202405202649,5
+w5_ragnet,point_hit,DeepSeek 4.1 Flash-1017,39.0,7.416198487095663,5
+w5_ragnet,bbox_success_iou50,GPT-6 Astra,14.0,4.183300132670378,5
+w5_ragnet,bbox_success_iou50,GPT-6 Sol,15.0,5.0,5
+w5_ragnet,bbox_success_iou50,Claude Fable 5.1,13.333333333333334,2.8867513459481287,3
+w5_ragnet,bbox_success_iou50,Qwen 3.8 Max,7.0,2.7386127875258306,5
+w5_ragnet,bbox_success_iou50,Gemini 3.8 Flash,6.0,2.23606797749979,5
+w5_ragnet,bbox_success_iou50,Qwen 3.5 397B-A17B,4.0,2.23606797749979,5
+w5_ragnet,bbox_success_iou50,Qwen 3.5 27B,1.0,2.23606797749979,5
+w5_ragnet,bbox_success_iou50,Claude Opus 5.5,18.0,4.47213595499958,5
+w5_ragnet,bbox_success_iou50,DeepSeek 4.1 Flash-1017,5.0,6.123724356957945,5
+w5_reasonaff,bbox_iou,GPT-6 Astra,0.16356286009065968,0.04676939192425197,5
+w5_reasonaff,bbox_iou,GPT-6 Sol,0.07283532370823163,0.031244103965025746,5
+w5_reasonaff,bbox_iou,Claude Fable 5.1,0.18169733744833308,0.05192684683703879,3
+w5_reasonaff,bbox_iou,Qwen 3.8 Max,0.1508586363841822,0.0399898391112143,5
+w5_reasonaff,bbox_iou,Gemini 3.8 Flash,0.09958672902484739,0.028320279417314985,5
+w5_reasonaff,bbox_iou,Qwen 3.5 397B-A17B,0.025746233396225893,0.012274067472769185,5
+w5_reasonaff,bbox_iou,Qwen 3.5 27B,0.004322492226471878,0.0033150845819410802,5
+w5_reasonaff,bbox_iou,Claude Opus 5.5,0.21384841136359692,0.04566758582524961,5
+w5_reasonaff,bbox_iou,DeepSeek 4.1 Flash-1017,0.06076997023148207,0.03843887108262512,5
+w5_reasonaff,mask_iou,GPT-6 Astra,0.13493006703597624,0.042448370466349465,5
+w5_reasonaff,mask_iou,GPT-6 Sol,0.06085655007068479,0.021089643277334817,5
+w5_reasonaff,mask_iou,Claude Fable 5.1,0.1320276725382835,0.05148361045868415,3
+w5_reasonaff,mask_iou,Qwen 3.8 Max,0.10499196939877846,0.03257334812412246,5
+w5_reasonaff,mask_iou,Gemini 3.8 Flash,0.09327850074192093,0.03439239140841041,5
+w5_reasonaff,mask_iou,Qwen 3.5 397B-A17B,0.029159123374222103,0.01509785341079578,5
+w5_reasonaff,mask_iou,Qwen 3.5 27B,0.0034917199861550893,0.002911760979407072,5
+w5_reasonaff,mask_iou,Claude Opus 5.5,0.1635124515411929,0.048249438602037474,5
+w5_reasonaff,mask_iou,DeepSeek 4.1 Flash-1017,0.05326208781737136,0.03208141496214195,5
+w5_reasonaff,point_hit,GPT-6 Astra,31.0,7.416198487095663,5
+w5_reasonaff,point_hit,GPT-6 Sol,16.0,6.519202405202649,5
+w5_reasonaff,point_hit,Claude Fable 5.1,23.333333333333332,7.637626158259733,3
+w5_reasonaff,point_hit,Qwen 3.8 Max,16.0,9.617692030835672,5
+w5_reasonaff,point_hit,Gemini 3.8 Flash,13.0,5.70087712549569,5
+w5_reasonaff,point_hit,Qwen 3.5 397B-A17B,11.0,6.519202405202649,5
+w5_reasonaff,point_hit,Qwen 3.5 27B,0.0,0.0,5
+w5_reasonaff,point_hit,Claude Opus 5.5,31.0,4.183300132670378,5
+w5_reasonaff,point_hit,DeepSeek 4.1 Flash-1017,15.0,3.5355339059327378,5
+w5_reasonaff,bbox_success_iou50,GPT-6 Astra,19.0,5.477225575051661,5
+w5_reasonaff,bbox_success_iou50,GPT-6 Sol,6.0,4.183300132670378,5
+w5_reasonaff,bbox_success_iou50,Claude Fable 5.1,16.666666666666668,7.637626158259733,3
+w5_reasonaff,bbox_success_iou50,Qwen 3.8 Max,13.0,5.70087712549569,5
+w5_reasonaff,bbox_success_iou50,Gemini 3.8 Flash,5.0,0.0,5
+w5_reasonaff,bbox_success_iou50,Qwen 3.5 397B-A17B,0.0,0.0,5
+w5_reasonaff,bbox_success_iou50,Qwen 3.5 27B,0.0,0.0,5
+w5_reasonaff,bbox_success_iou50,Claude Opus 5.5,20.0,6.123724356957945,5
+w5_reasonaff,bbox_success_iou50,DeepSeek 4.1 Flash-1017,3.0,4.47213595499958,5
+w5_umd,bbox_iou,GPT-6 Astra,0.7165413126345256,0.016841807573014653,5
+w5_umd,bbox_iou,GPT-6 Sol,0.7164755682704967,0.02914530458093312,5
+w5_umd,bbox_iou,Claude Fable 5.1,0.6940340020225483,0.020891776362583558,3
+w5_umd,bbox_iou,Qwen 3.8 Max,0.7306214291761878,0.023104270727919367,5
+w5_umd,bbox_iou,Gemini 3.8 Flash,0.6130222017459172,0.18915270310000998,5
+w5_umd,bbox_iou,Qwen 3.5 397B-A17B,0.2729497794834108,0.027147712030270235,5
+w5_umd,bbox_iou,Qwen 3.5 27B,0.020948836491515205,0.014971691566306233,5
+w5_umd,bbox_iou,Claude Opus 5.5,0.7507089175700521,0.011416046264841087,5
+w5_umd,bbox_iou,DeepSeek 4.1 Flash-1017,0.5442119981344955,0.032115387017241925,5
+w5_umd,mask_iou,GPT-6 Astra,0.5168880388307916,0.018460913219022188,5
+w5_umd,mask_iou,GPT-6 Sol,0.5209762201243805,0.01910833879810154,5
+w5_umd,mask_iou,Claude Fable 5.1,0.4964266780258494,0.019790700563354646,3
+w5_umd,mask_iou,Qwen 3.8 Max,0.5221198458366216,0.017362972588850226,5
+w5_umd,mask_iou,Gemini 3.8 Flash,0.46310909394498495,0.14883800758074953,5
+w5_umd,mask_iou,Qwen 3.5 397B-A17B,0.20461201402897056,0.023366195405597825,5
+w5_umd,mask_iou,Qwen 3.5 27B,0.015911931259637208,0.01138948094424276,5
+w5_umd,mask_iou,Claude Opus 5.5,0.5254126394022625,0.007308720197883541,5
+w5_umd,mask_iou,DeepSeek 4.1 Flash-1017,0.4144283611639918,0.024201772193756126,5
+w5_umd,point_hit,GPT-6 Astra,96.66666666666667,0.0,5
+w5_umd,point_hit,GPT-6 Sol,91.33333333333333,3.8005847503304593,5
+w5_umd,point_hit,Claude Fable 5.1,94.44444444444444,3.8490017945975077,3
+w5_umd,point_hit,Qwen 3.8 Max,92.66666666666667,3.651483716701106,5
+w5_umd,point_hit,Gemini 3.8 Flash,78.0,25.232254490367414,5
+w5_umd,point_hit,Qwen 3.5 397B-A17B,48.666666666666664,7.6739096221475585,5
+w5_umd,point_hit,Qwen 3.5 27B,5.333333333333333,4.47213595499958,5
+w5_umd,point_hit,Claude Opus 5.5,96.0,1.490711984999864,5
+w5_umd,point_hit,DeepSeek 4.1 Flash-1017,82.66666666666667,5.962847939999437,5
+w5_umd,bbox_success_iou50,GPT-6 Astra,86.66666666666667,3.3333333333333357,5
+w5_umd,bbox_success_iou50,GPT-6 Sol,88.0,4.4721359549995805,5
+w5_umd,bbox_success_iou50,Claude Fable 5.1,87.77777777777777,5.091750772173154,3
+w5_umd,bbox_success_iou50,Qwen 3.8 Max,93.33333333333333,2.3570226039551603,5
+w5_umd,bbox_success_iou50,Gemini 3.8 Flash,70.0,26.977356760397747,5
+w5_umd,bbox_success_iou50,Qwen 3.5 397B-A17B,10.0,7.817359599705716,5
+w5_umd,bbox_success_iou50,Qwen 3.5 27B,0.0,0.0,5
+w5_umd,bbox_success_iou50,Claude Opus 5.5,94.66666666666667,1.825741858350559,5
+w5_umd,bbox_success_iou50,DeepSeek 4.1 Flash-1017,62.0,6.912147117775906,5

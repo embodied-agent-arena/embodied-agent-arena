@@ -83,7 +83,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid 
 .tabs button[aria-selected=true]{color:var(--tab-color,var(--accent));border-color:currentColor;background:#f8f9f7}
 .tabs button:hover{color:var(--accent)}
 .domain-panel{display:grid;grid-template-columns:1fr;gap:30px}
-.domain-text{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:center;padding:6px 10px 16px}
+.domain-text{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;padding:6px 10px 16px}
 .domain-text h3{font-size:34px;line-height:1.32;font-weight:550;max-width:530px}
 .evidence{padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px;list-style:none;align-content:center}
 .evidence li{border-left:2px solid #e0deea;padding-left:23px}
@@ -321,3 +321,6 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
  .model-guide h2{font-size:26px}
  .model-guide section p{font-size:18px}
 }
+
+/* Keep complete mean ± SD values readable in capability summaries. */
+@media(max-width:600px){.evidence{grid-template-columns:1fr;gap:22px}}

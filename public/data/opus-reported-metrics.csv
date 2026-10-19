@@ -1,150 +1,26 @@
-table,section,metric,case_count,model,mean,population_variance,valid,eligible,run_sd,provisional,source_cell
-0,总表,W1 旋转误差 ↓（°）,,Opus 5.5,23.3,1180.0,262,270,,False,23.3 / 1.18e+03 (262/270)
-0,总表,W1 平移误差 ↓（cm）,,Opus 5.5,135.3,29400.0,262,270,,False,135.3 / 2.94e+04 (262/270)
-0,总表,W2 Pass@1 ↑,,Opus 5.5,58.6,,,,,False,58.6
-0,总表,W2 数值 AbsRel ↓,,Opus 5.5,0.222,0.052,27,27,,False,0.222 / 0.052 (27/27)
-0,总表,W5 Mask IoU ↑,,Opus 5.5,0.329,0.0897,70,70,,False,0.329 / 0.0897 (70/70)
-0,总表,W5 点有效率 ↑,,Opus 5.5,62.9,,,,,False,62.9
-0,总表,W4 成功率 ↑,,Opus 5.5,47.8,,,,,False,47.8
-1,W1：几何与轨迹,InFlux focal MAPE (%)↓,26,Opus 5.5,60.27,641.0,130,130,,False,60.27 / 641 (130/130)
-1,W1：几何与轨迹,InFlux principal error (px)↓,26,Opus 5.5,3.82,27.7,130,130,,False,3.82 / 27.7 (130/130)
-1,W1：几何与轨迹,Angle relative L2↓,12,Opus 5.5,1.166,3.59,60,60,,False,1.166 / 3.59 (60/60)
-1,W1：几何与轨迹,Distance relative L2↓,10,Opus 5.5,0.455,0.787,50,50,,False,0.455 / 0.787 (50/50)
-1,W1：几何与轨迹,Vector relative L2↓,8,Opus 5.5,0.516,0.267,40,40,,False,0.516 / 0.267 (40/40)
-1,W1：几何与轨迹,Map-free rotation (°)↓,30,Opus 5.5,40.35,1520.0,142,150,,False,40.35 / 1.52e+03 (142/150)
-1,W1：几何与轨迹,Map-free translation (cm)↓,30,Opus 5.5,240.27,29900.0,142,150,,False,240.27 / 2.99e+04 (142/150)
-1,W1：几何与轨迹,Map-free direction (°)↓,30,Opus 5.5,43.56,1670.0,142,150,,False,43.56 / 1.67e+03 (142/150)
-1,W1：几何与轨迹,GP focal MAPE (%)↓,36,Opus 5.5,16.48,341.0,180,180,,False,16.48 / 341 (180/180)
-1,W1：几何与轨迹,GP principal error (px)↓,24,Opus 5.5,60.46,2350.0,120,120,,False,60.46 / 2.35e+03 (120/120)
-1,W1：几何与轨迹,Depth MAE (m)↓,12,Opus 5.5,0.51,0.167,60,60,,False,0.510 / 0.167 (60/60)
-1,W1：几何与轨迹,Depth RMSE (m)↓,12,Opus 5.5,0.599,0.179,60,60,,False,0.599 / 0.179 (60/60)
-1,W1：几何与轨迹,Depth AbsRel↓,12,Opus 5.5,0.169,0.0167,60,60,,False,0.169 / 0.0167 (60/60)
-1,W1：几何与轨迹,Displacement MAE (cm)↓,40,Opus 5.5,1.164,2.2,200,200,,False,1.164 / 2.2 (200/200)
-1,W1：几何与轨迹,GP rotation (°)↓,24,Opus 5.5,3.05,26.4,120,120,,False,3.05 / 26.4 (120/120)
-1,W1：几何与轨迹,GP translation (cm)↓,24,Opus 5.5,11.13,378.0,120,120,,False,11.13 / 378 (120/120)
-1,W1：几何与轨迹,Scale MAPE (%)↓,44,Opus 5.5,3.91,48.9,220,220,,False,3.91 / 48.9 (220/220)
-1,W1：几何与轨迹,Scale judgment Pass@1 (%)↑,12,Opus 5.5,100.0,,,,0.0,False,100.0 ± 0.0
-1,W1：几何与轨迹,2D trace RMSE↓,56,Opus 5.5,0.18,0.0207,56,56,,False,0.180 / 0.0207 (56/56)
-1,W1：几何与轨迹,3D trace RMSE (m)↓,56,Opus 5.5,0.683,0.147,56,56,,False,0.683 / 0.147 (56/56)
-1,W1：几何与轨迹,3D constraint success (%)↑,56,Opus 5.5,8.9,,,,,False,8.9
-2,W2：空间推理,Native Pass@1 (%)↑,220,Opus 5.5,58.6,,,,,False,58.6
-2,W2：空间推理,Categorical Pass@1 (%)↑,183,Opus 5.5,69.4,,,,,False,69.4
-2,W2：空间推理,Numerical AbsRel↓,27,Opus 5.5,0.222,0.052,27,27,,False,0.222 / 0.052 (27/27)
-3,W2：空间推理,3DSRBench,50,Opus 5.5,60.0,,,,,False,60.0
-3,W2：空间推理,BOP-ASK,20,Opus 5.5,95.0,,,,,False,95.0
-3,W2：空间推理,MindCube,50,Opus 5.5,74.0,,,,,False,74.0
-3,W2：空间推理,MMSI-Bench,20,Opus 5.5,45.0,,,,,False,45.0
-3,W2：空间推理,RoboSpatial-Home,30,Opus 5.5,53.3,,,,,False,53.3
-3,W2：空间推理,VSI-Bench,50,Opus 5.5,36.0,,,,,False,36.0
-5,W3：任务规划,ALFRED,20,Opus 5.5,15.0,,,,,False,15.0
-5,W3：任务规划,ALFWorld,20,Opus 5.5,45.0,,,,,False,45.0
-5,W3：任务规划,DiscoveryWorld,10,Opus 5.5,30.0,,,,,False,30.0
-5,W3：任务规划,ScienceWorld,73,Opus 5.5,58.9,,,,,False,58.9
-5,W3：任务规划,VirtualHome,21,Opus 5.5,71.4,,,,,False,71.4
-6,W4：操作,CALVIN,10,Opus 5.5,10.0,,,,,False,10.0
-6,W4：操作,CLIPort,18,Opus 5.5,61.1,,,,,False,61.1
-6,W4：操作,RLBench,10,Opus 5.5,30.0,,,,,False,30.0
-6,W4：操作,RoboCasa,10,Opus 5.5,0.0,,,,,False,0.0
-6,W4：操作,RoboCasa365,10,Opus 5.5,10.0,,,,,False,10.0
-6,W4：操作,RoboWits,10,Opus 5.5,10.0,,,,,False,10.0
-6,W4：操作,RoboTwin2,50,Opus 5.5,46.0,,,,,False,46.0
-6,W4：操作,VIMA-Bench,10,Opus 5.5,100.0,,,,,False,100.0
-6,W4：操作,VLABench,25,Opus 5.5,76.0,,,,,False,76.0
-6,W4：操作,ManiSkill,9,Opus 5.5,55.6,,,,,False,55.6
-6,W4：操作,CaPX–LIBERO-PRO,10,Opus 5.5,80.0,,,,,False,80.0
-6,W4：操作,CaPX–Robosuite,5,Opus 5.5,100.0,,,,,False,100.0
-6,W4：操作,CaPX–BEHAVIOR-1K,5,Opus 5.5,0.0,,,,,False,0.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,CALVIN · 连续完成 ≥ 1 个子目标,10,Opus 5.5,80.0,,,,,False,80.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,CALVIN · 连续完成 ≥ 2 个子目标,10,Opus 5.5,70.0,,,,,False,70.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,CALVIN · 连续完成 ≥ 3 个子目标,10,Opus 5.5,40.0,,,,,False,40.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,CALVIN · 连续完成 ≥ 4 个子目标,10,Opus 5.5,40.0,,,,,False,40.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,CALVIN · 连续完成 ≥ 5 个子目标,10,Opus 5.5,10.0,,,,,False,10.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa 搬运子集 · S1 到达对象／操作位置,4,Opus 5.5,100.0,,,,,False,100.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa 搬运子集 · S2 抓住并抬升,4,Opus 5.5,100.0,,,,,False,100.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa 搬运子集 · S3 同对象稳定释放,4,Opus 5.5,50.0,,,,,False,50.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa 搬运子集 · 子集原生成功率,4,Opus 5.5,0.0,,,,,False,0.0
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa365 搬运子集 · S1 到达对象／操作位置,7,Opus 5.5,85.7,,,,,False,85.7
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa365 搬运子集 · S2 抓住并抬升,7,Opus 5.5,71.4,,,,,False,71.4
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa365 搬运子集 · S3 同对象稳定释放,7,Opus 5.5,28.6,,,,,False,28.6
-7,CALVIN 与 RoboCasa/365 分层指标（%）,RoboCasa365 搬运子集 · 子集原生成功率,7,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,LiftPegUpright-v1 · 官方完整成功,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,PegInsertionSide-v1 · 官方完整成功,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,PegInsertionSide-v1 · S1 沿孔轴进入深度窗口,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,PegInsertionSide-v1 · S2 轴向和侧向均满足原生判据,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,PickCube-v1 · 官方完整成功,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PickCube-v1 · 过程：曾抓住（独立辅助项）,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PickCube-v1 · S1 末态物体到目标区域,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PickCube-v1 · S2 到目标且机器人静止,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PlaceSphere-v1 · 官方完整成功,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PlaceSphere-v1 · 过程：曾抓住（独立辅助项）,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PlaceSphere-v1 · S1 末态球到托位,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PlaceSphere-v1 · S2 到托位且已松开,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PlaceSphere-v1 · S3 到托位、松开且稳定,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PlugCharger-v1 · 官方完整成功,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,PlugCharger-v1 · S1 插头位置进入原生容差,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,PlugCharger-v1 · S2 位置与角度同时达标,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,PullCube-v1 · 官方完整成功,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,PushCube-v1 · 官方完整成功,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,RollBall-v1 · 官方完整成功,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,StackCube-v1 · 官方完整成功,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,StackCube-v1 · 过程：曾抓住（独立辅助项）,1,Opus 5.5,0.0,,,,,False,0.0
-8,ManiSkill 分任务／分阶段（%）,StackCube-v1 · S1 末态 A 在 B 上,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,StackCube-v1 · S2 A 在 B 上且已松开,1,Opus 5.5,100.0,,,,,False,100.0
-8,ManiSkill 分任务／分阶段（%）,StackCube-v1 · S3 堆叠、松开且稳定,1,Opus 5.5,100.0,,,,,False,100.0
-9,ManiSkill 分任务／分阶段（%）,AnymalC-Spin 回报,1,Opus 5.5,,,,,,False,-108.73
-9,ManiSkill 分任务／分阶段（%）,AnymalC-Spin 物理步数,1,Opus 5.5,318.0,,,,,False,318
-10,CaPX–Robosuite 分层指标（%）,cube_lifting--seed-99 · S1 方块抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-10,CaPX–Robosuite 分层指标（%）,cube_lifting--seed-99 · S2 官方抬升成功,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,cube_lifting--seed-50 · S1 方块抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-10,CaPX–Robosuite 分层指标（%）,cube_lifting--seed-50 · S2 官方抬升成功,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,cube_stack--seed-14 · S1 末态已抓持／抬升／成堆,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,cube_stack--seed-14 · S2 末态顶块已抬离桌面,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,cube_stack--seed-14 · S3 官方完整堆叠成功,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,cube_restack--seed-14 · S1 末态已抓持／抬升／成堆,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,cube_restack--seed-14 · S2 末态顶块已抬离桌面,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,cube_restack--seed-14 · S3 官方完整堆叠成功,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,spill_wipe--seed-48 · S1 擦除 ≥ 25% 区域,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,spill_wipe--seed-48 · S2 擦除 ≥ 50% 区域,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,spill_wipe--seed-48 · S3 擦除 ≥ 75% 区域,1,Opus 5.5,100.0,,,,,False,100.0
-10,CaPX–Robosuite 分层指标（%）,spill_wipe--seed-48 · S4 官方全部擦除成功,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_spatial--task-1--init-0 · S1 指定物体抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_spatial--task-1--init-0 · S2 官方目标放置关系成立,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_spatial--task-7--init-0 · S1 指定物体抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_spatial--task-7--init-0 · S2 官方目标放置关系成立,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_object--task-5--init-0 · S1 指定物体抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_object--task-5--init-0 · S2 官方目标放置关系成立,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_object--task-2--init-0 · S1 指定物体抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_object--task-2--init-0 · S2 官方目标放置关系成立,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_goal--task-7--init-0 · S1 操作正确炉头控件,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_goal--task-7--init-0 · S2 官方炉头开启,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_goal--task-1--init-0 · S1 指定物体抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_goal--task-1--init-0 · S2 官方目标放置关系成立,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_10--task-9--init-0 · S1 杯子已放入微波炉,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_10--task-9--init-0 · S2 杯在炉内且门关闭,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_10--task-1--init-0 · S1 至少一件目标食品入篮,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_10--task-1--init-0 · S2 两件目标食品均入篮,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_spatial_swap--task-0--init-0 · S1 指定物体抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_spatial_swap--task-0--init-0 · S2 官方目标放置关系成立,1,Opus 5.5,100.0,,,,,False,100.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_object_swap--task-4--init-0 · S1 指定物体抓持确认,1,Opus 5.5,0.0,,,,,False,0.0
-11,CaPX–LIBERO-PRO 分层指标（%）,libero_object_swap--task-4--init-0 · S2 官方目标放置关系成立,1,Opus 5.5,0.0,,,,,False,0.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,诊断：至少一次导航实测到位,5,Opus 5.5,60.0,,,,,False,60.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,诊断：至少一次在手确认,5,Opus 5.5,0.0,,,,,False,0.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,诊断：至少一次释放确认,5,Opus 5.5,0.0,,,,,False,0.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,Q ≥ 25%,5,Opus 5.5,0.0,,,,,False,0.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,Q ≥ 50%,5,Opus 5.5,0.0,,,,,False,0.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,Q ≥ 75%,5,Opus 5.5,0.0,,,,,False,0.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,Q ≥ 100%,5,Opus 5.5,0.0,,,,,False,0.0
-12,CaPX–BEHAVIOR-1K 分层指标（%）,官方完整成功,5,Opus 5.5,0.0,,,,,False,0.0
-13,W5：可供性,BBox--GT box IoU↑,70,Opus 5.5,0.449,0.151,70,70,,False,0.449 / 0.151 (70/70)
-13,W5：可供性,BBox--GT mask IoU↑,70,Opus 5.5,0.329,0.0897,70,70,,False,0.329 / 0.0897 (70/70)
-13,W5：可供性,BBox success@0.5 (%)↑,70,Opus 5.5,54.3,,,,,False,54.3
-13,W5：可供性,Contact-point validity (%)↑,70,Opus 5.5,62.9,,,,,False,62.9
-14,W5：可供性,ReasonAff · BBox IoU ↑,20,Opus 5.5,0.24,0.131,20,20,,False,0.240 / 0.131 (20/20)
-14,W5：可供性,ReasonAff · Mask IoU ↑,20,Opus 5.5,0.203,0.104,20,20,,False,0.203 / 0.104 (20/20)
-14,W5：可供性,RAGNet-3DOI · BBox IoU ↑,20,Opus 5.5,0.222,0.133,20,20,,False,0.222 / 0.133 (20/20)
-14,W5：可供性,RAGNet-3DOI · Mask IoU ↑,20,Opus 5.5,0.172,0.0784,20,20,,False,0.172 / 0.0784 (20/20)
-14,W5：可供性,UMD · BBox IoU ↑,30,Opus 5.5,0.74,0.0271,30,30,,False,0.740 / 0.0271 (30/30)
-14,W5：可供性,UMD · Mask IoU ↑,30,Opus 5.5,0.517,0.0252,30,30,,False,0.517 / 0.0252 (30/30)
-5,W3：任务规划,HumanCLAW,13,Opus 5.5,23.1,,,,,False,3/13; navigation 3/5; sitting 0/8
-5,W3：任务规划,Overall Planning,157,Opus 5.5,48.4,,,,,False,76/157
-15,Affordance: direct polygons,Polygon–GT mask IoU↑,70,Opus 5.5,0.397,,,70,,False,0.397; one run per case
+metric,mean,run_sd,runs,scored,eligible
+InFlux focal MAPE,60.26548891769262,1.4940230242565113,5,130,130
+InFlux principal error,3.819509091894007,0.0,5,130,130
+Angle relative L2,1.1658730475065848,0.11331532967606184,5,60,60
+Distance relative L2,0.454975103383096,0.06918876391739164,5,50,50
+Vector relative L2,0.5159696761583031,0.041982658996700485,5,40,40
+Map-free rotation,40.94694743225392,8.098042540208619,5,142,150
+Map-free translation,243.13258469121445,35.81848310179384,5,142,150
+Map-free direction,44.28595967714797,9.06098695155051,5,142,150
+GP focal MAPE,16.484322578463203,6.13458673619538,5,180,180
+GP principal error,60.45712187668818,4.1264815727726445,5,120,120
+Depth MAE,0.5100239615473482,0.29470911688527035,5,60,60
+Depth RMSE,0.5987730847869529,0.3015521817451889,5,60,60
+Depth AbsRel,0.16948902494470408,0.10751296850353935,5,60,60
+Displacement MAE,1.1635002934665957,0.47472560727753826,5,200,200
+GP rotation,3.047570556059258,0.9609152822747524,5,120,120
+GP translation,11.126488673205428,1.4759679266698464,5,120,120
+Scale MAPE,3.908737845537127,2.736849777244093,5,220,220
+Scale judgment Pass@1,100.0,0.0,5,60,60
+Numerical AbsRel,0.18445383360044015,0.03966178394242129,5,130,135
+BBox--GT box IoU,0.4316381946676017,0.02134523302514173,5,350,350
+BBox--GT mask IoU,0.31078247051038704,0.02016278243064904,5,350,350
+BBox success@0.5,51.42857142857143,3.0304576336566305,5,350,350
+Contact-point validity,61.14285714285714,1.8626292586293276,5,350,350
+Spatial Native Pass@1,67.45454545454545,5.108330580758655,5,1100,1100
+Categorical Pass@1,79.23497267759562,5.612742782561239,5,915,915
