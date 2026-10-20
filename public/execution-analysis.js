@@ -11,7 +11,7 @@
   const stopNames = {max_total_tokens:'Token limit',max_agent_iterations:'Round limit',primitive_calls:'Action-call limit',max_env_steps:'Step limit'};
   const cache = new Map(), panes = {};
   let data,story,generation=0,pendingStory;
-  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=identity-20261020').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
+  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=complete-20261020').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
   const pause=()=>root.querySelectorAll('video').forEach(v=>v.pause());
   function playbackLabel(){const b=root.querySelector('.exec-play');if(!b)return;const vs=[...root.querySelectorAll('.exec-video')];b.hidden=!vs.length;b.textContent=vs.some(v=>!v.paused)?'Ⅱ Pause':vs.length===2?'▶ Play Both':'▶ Play Clip';}
   const outcome=r=>r.success?'Completed':'Not completed';
@@ -91,7 +91,7 @@
   }
   async function init(){
     try{
-      data=await get('data/execution/index.json');
+      data=await get('data/execution/complete-index.json');
       document.getElementById('exec-counts').textContent=`${data.stories.length} Tasks · ${data.modelCount} Models`;
       document.getElementById('exec-questions').innerHTML=data.stories.filter(s=>s.featured).map(s=>`<button type="button" data-exec-story="${s.id}" aria-pressed="false">${esc(s.label)}</button>`).join('');
       root.querySelectorAll('[data-exec-story]').forEach(b=>b.onclick=()=>selectStory(b.dataset.execStory));

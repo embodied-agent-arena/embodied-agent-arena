@@ -21,8 +21,14 @@
   const load = () => loadPromise ||= Promise.all([
     fetch('data/case-studies.json?v=polygons-20261020').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
     fetch('data/case-gallery.json?v=polygons-20261020').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-media.json?v=identity-20261020').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
-  ]).then(([cases, meta, media]) => {mediaData=media; const groupedTasks=new Set(media.groups.map(c=>c.taskId)); const all=[...cases.filter(c=>c.predictions.length||!groupedTasks.has(c.sample)),...media.groups]; records = new Map(all.map(c => [c.id,c])); cases.forEach(c=>{if(!records.has(c.id))records.set(c.id,media.groups.find(g=>g.taskId===c.sample)||c);}); metadata = meta; return all;});
+    fetch('data/case-comparisons.json?v=complete-20261020').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
+  ]).then(([cases, meta, media]) => {
+    mediaData=media;
+    const all=[...cases.filter(c=>c.predictions.length),...media.groups];
+    records=new Map(all.map(c=>[c.id,c]));
+    for(const [alias,id] of Object.entries(media.aliases))if(records.has(id))records.set(alias,records.get(id));
+    metadata=meta;return all;
+  });
   const metricSpecs = [
     ['absolute_error_cm','Distance error','cm',1],['trace_3d_frechet','3D Fréchet distance','m',1],
     ['trace_2d_frechet','2D Fréchet (normalized)','',1],['rotation_error_deg','Rotation error','°',1],
@@ -93,26 +99,23 @@
     return `<div class="gallery-inputs ${images.length > 1 ? 'gallery-inputs-pair' : ''}">${images.map((src,i) => `<figure><img src="${esc(src)}" alt="${esc(c.benchmark)} task input ${i+1}" loading="lazy">${images.length > 1 ? `<figcaption>Input ${i+1}</figcaption>` : ''}</figure>`).join('')}</div>`;
   }
   function executionRecords(c) {
-    if (c.runIds) return c.runIds.map(id=>mediaData.runs[id]).filter(r=>r && r.taskId===c.taskId);
-    const own = {model:c.model,outcome:c.result==='Budget exhausted' ? 'budget_exhausted' : c.stopReason,success:c.result === 'Reported success',protocol:c.domainKey === 'planning' ? 'Baseline' : 'Source-native primitives; per-round image delivery unverified',own:true,
-      taskId:c.sample,taskLabel:c.title,instruction:c.question,instructionKind:c.instructionKind,video:c.video,animation:c.animation,poster:c.poster,mediaKind:c.mediaKind,elapsedSeconds:c.elapsedSeconds,modelRounds:c.modelRounds,budgets:c.budgets,sourceReportSha256:c.sourceReportSha256,frames:c.images.map(image=>({image,label:''})),note:c.protocolNote};
-    if (c.result.includes('Conflicting')) own.outcome='conflicting_records';
-    const rows = [...(metadata[c.id]?.recordedOutcomes || []),own];
-    for (const id of mediaData.matched?.[c.id] || []) {
-      const run=mediaData.runs[id]; const i=rows.findIndex(r=>r.model===run.model);
-      if(i<0)rows.push(run); else rows[i]=run;
-    }
-    const order=['GPT-6 Astra','GPT-6 Sol','Claude Fable 5.1','Gemini 3.8 Flash','Qwen 3.8 Max','Qwen 3.5 397B-A17B','Qwen 3.5 27B','Claude Opus 5.5','DeepSeek 4.1 Flash-1017'];
-    return rows.sort((a,b)=>order.indexOf(a.model)-order.indexOf(b.model));
+    // Every row comes from one audited task. Never fall back to a benchmark's
+    // showcase, an ordinal case number, or legacy outcome-only metadata.
+    const rows=(c.runIds||[]).map(id=>mediaData.runs[id]);
+    if(rows.length!==9 || rows.some(r=>!r || r.taskId!==c.taskId) || new Set(rows.map(r=>r.model)).size!==9)throw new Error('Task comparison failed validation.');
+    return rows;
   }
-  const outcomeText = r => r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',agent_failure:'Agent failure',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
+  const outcomeText = r => r.executionStarted===false ? 'Failed before execution' : r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',agent_failure:'Agent failure',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
   function runMedia(r, detail=false) {
     if (r.video) return `<video ${detail ? 'controls' : 'muted loop'} playsinline preload="none" poster="${esc(r.poster)}" ${detail ? `src="${esc(r.video)}"` : `data-video="${esc(r.video)}"`} aria-label="${esc(r.model)}: ${esc(r.mediaKind)}"></video>`;
     if (r.animation) return `<img src="${esc(detail ? r.animation : r.poster)}" ${detail ? '' : `data-animation="${esc(r.animation)}" data-poster="${esc(r.poster)}"`} alt="${esc(r.model)}: ${esc(r.mediaKind)}" loading="lazy">`;
     return '<span class="gallery-no-recording">No matching recording</span>';
   }
   function runTile(c,r,i) {
-    return `<button class="gallery-run ${r.demoOnly ? 'demo' : r.outcome==='conflicting_records' ? 'uncertain' : ''}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)}: ${esc(r.comparisonTaskLabel || r.taskLabel || c.title)}, ${esc(outcomeText(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${runMedia(r)}${r.video || r.animation ? `<span class="gallery-run-kind">${esc(r.demoOnly ? 'Demo only' : r.mediaKind || 'Recording')}</span>` : ''}<span class="gallery-run-hover"><strong>${esc(r.comparisonTaskLabel || r.taskLabel || c.title)}</strong>${esc(r.comparisonInstruction || r.instruction || c.shortTask)}</span></span><span class="gallery-run-footer"><span class="gallery-run-task">${esc(r.comparisonTaskLabel || r.taskLabel || c.title)}</span><span class="gallery-run-outcome ${r.success && !r.demoOnly && r.outcome!=='scored' ? 'success' : ''}">${esc(outcomeText(r))}</span></span></button>`;
+    const hasMedia=!!(r.video||r.animation);
+    const elapsed=r.elapsedSeconds==null?'—':r.elapsedSeconds<60?`${num(r.elapsedSeconds,0)} s`:`${num(r.elapsedSeconds/60,1)} min`;
+    const logPreview=`<span class="gallery-log-preview"><span class="gallery-log-label">Execution Log</span><span class="gallery-log-metrics"><span><strong>${num(r.modelRounds,0)}</strong>Rounds</span><span><strong>${esc(elapsed)}</strong>Elapsed</span></span><span class="gallery-log-link">Inspect recorded result ↗</span></span>`;
+    return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(outcomeText(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${hasMedia?`<span class="gallery-run-kind">${esc(r.mediaKind||'Recording')}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${r.success?'success':''}">${esc(outcomeText(r))}</span></span></button>`;
   }
   function runBudget(r) {
     const values=Object.entries(r.budgets||{}).filter(([k,v])=>budgetNames[k]&&v!=null);
@@ -134,14 +137,13 @@
       body = `<div class="gallery-comparison"><button class="gallery-scene" data-case="${esc(c.id)}" aria-label="Open ${esc(c.title)} task details">${inputMedia(c)}${referenceLabel(c) ? `<span class="gallery-reference">${esc(referenceLabel(c))}</span>` : ''}<span class="gallery-enlarge">Explore Task ↗</span></button><div class="gallery-score-panel"><p class="gallery-panel-label">First-Run Answers${c.domainKey === 'spatial' ? '' : ' · Individual Case'}</p><div class="gallery-model-grid">${c.predictions.map((p,i) => resultTile(c,p,i)).join('')}</div></div></div>`;
     } else {
       const rows = executionRecords(c);
-      const filmed=rows.map((r,i)=>({r,i})).filter(({r})=>r.video||r.animation);
-      const resultOnly=rows.map((r,i)=>({r,i})).filter(({r})=>!r.video&&!r.animation);
-      body = `<div class="gallery-run-grid" data-recordings="${filmed.length}">${filmed.map(({r,i})=>runTile(c,r,i)).join('')}</div>${resultOnly.length ? `<div class="gallery-record-strip" aria-label="Models with outcome records only">${resultOnly.map(({r,i})=>`<button data-case="${esc(c.id)}" data-model="${i}"><strong>${esc(short(r.model))}</strong><span>${esc(outcomeText(r))}</span><small>No matching recording</small></button>`).join('')}</div>` : ''}<div class="gallery-run-controls"><p>${rows.length} models · One task</p><button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button></div>`;
+      const filmed=rows.filter(r=>r.video||r.animation);
+      body = `<div class="gallery-run-grid gallery-nine-models">${rows.map((r,i)=>runTile(c,r,i)).join('')}</div><div class="gallery-run-controls"><p>Nine models · Same task · ${filmed.length} recordings${filmed.length<9?` · ${9-filmed.length} logs without video`:''}</p>${filmed.length?`<button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button>`:''}</div>`;
     }
-    return `<article class="gallery-slide" data-gallery-id="${esc(c.id)}" data-domain="${esc(c.domainKey)}" role="group" aria-roledescription="slide" aria-label="Case ${index+1} of ${total}: ${esc(c.benchmark)} — ${esc(c.title)}"><div class="gallery-slide-top"><div><p class="gallery-kicker">${esc(c.domain)} <span>/</span> ${esc(c.benchmark)}</p><h3>${esc(c.title)}</h3></div><button class="gallery-detail-button" data-case="${esc(c.id)}">Case Details <span aria-hidden="true">↗</span></button></div><p class="gallery-task">${esc(c.shortTask)}</p>${body}</article>`;
+    return `<article class="gallery-slide" data-gallery-id="${esc(c.id)}" data-domain="${esc(c.domainKey)}" role="group" aria-roledescription="slide" aria-label="Case ${index+1} of ${total}: ${esc(c.benchmark)} — ${esc(c.title)}"><div class="gallery-slide-top"><div><p class="gallery-kicker">${esc(c.domain)} <span>/</span> ${esc(c.benchmark)}</p><h3>${esc(c.title)}</h3></div><button class="gallery-detail-button" data-case="${esc(c.id)}">Case Details <span aria-hidden="true">↗</span></button></div><p class="gallery-task">${esc(c.shortTask)}</p>${c.taskLabel?`<p class="gallery-task-identity">Case: ${esc(c.taskLabel)}</p>`:""}${body}</article>`;
   }
   const content = document.getElementById('study-dialog-content');
-  function renderModelDetail(c,index) {
+  async function renderModelDetail(c,index) {
     c=representation(c);
     const staticCase = c.predictions.length > 0;
     const list = staticCase ? c.predictions : executionRecords(c);
@@ -155,7 +157,16 @@
       selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index,true) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p>${polygon ? '<p>Green: reference region. Colored contour: predicted polygon.</p>' : ''}<details ${polygon?'':'open'}><summary>${polygon?'Polygon coordinates':'Recorded Answer'}</summary><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</details></div></div>${!polygon && Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     } else {
       selection.querySelectorAll('video').forEach(v=>v.pause());
-      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(outcomeText(p))}</span></div><p class="study-question">${esc(p.instruction || c.question)}</p><div class="gallery-detail-film">${runMedia(p,true)}</div><p class="study-meta">${esc(p.mediaKind || 'Terminal outcome record')} · ${esc(p.protocol)}</p>${p.note ? `<p class="study-protocol">${esc(p.note)}</p>` : ''}${p.video || p.animation ? `<p class="study-meta">${p.modelRounds != null ? `${num(p.modelRounds)} model responses · ` : ''}${p.elapsedSeconds != null ? `${num(p.elapsedSeconds,1)} s wall-clock time` : ''}</p>` : '<p class="study-protocol">A matching recording and per-run budget are not included for this model.</p>'}${runBudget(p)}${p.frames?.length ? `<h3>Recorded Process</h3><div class="gallery-process">${p.frames.map(f=>f.image ? `<figure><img src="${esc(f.image)}" loading="lazy" alt="${esc(f.label || 'Recorded observation')}"><figcaption>${esc(f.label)}</figcaption></figure>` : `<figure class="gallery-process-log"><strong>${esc(f.label)}</strong><p>${esc(f.detail || f.source_excerpt)}</p></figure>`).join('')}</div>` : ''}${p.timingNote ? `<p class="study-protocol">${esc(p.timingNote.startsWith('Encoded recording timeline')?'Recording time; episode wall time is shown above.':p.timingNote)}</p>` : ''}<p class="study-meta">${esc(p.instructionKind || 'Task description')} · Task ID: <code>${esc(p.taskId || c.sample)}</code></p>${p.camera ? `<p class="study-meta">Recording camera: ${esc(p.camera)}</p>` : ''}${p.video ? `<a class="study-download" href="${esc(p.video)}" target="_blank" rel="noopener">Open Recording ↗</a>` : ''}`;
+      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(outcomeText(p))}</span></div><p class="study-question">${esc(c.question)}</p>${p.video||p.animation?`<div class="gallery-detail-film">${runMedia(p,true)}</div>`:'<p class="study-meta">Execution log · No matching video in the supplied archive.</p>'}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
+      const rounds=selection.querySelector('.gallery-rounds');
+      try {
+        const response=await fetch(p.detailUrl);if(!response.ok)throw Error();const d=await response.json();
+        if(!rounds.isConnected)return;
+        const useful=d.steps.filter((s,i)=>s.error||s.success||i===0||i===d.steps.length-1);
+        rounds.removeAttribute('role');
+        rounds.innerHTML=`<h4>Recorded Decisions</h4>${d.steps.length?`<p>${d.steps.length} rounds · ${d.steps.filter(s=>s.error).length} rounds with errors</p><div class="gallery-round-list">${useful.map(s=>`<details><summary>Round ${s.round}${s.at==null?'':` · ${num(s.at,1)} s`} — ${esc(s.title)}</summary>${s.code?`<pre>${esc(s.code)}</pre>`:''}<pre>${esc(JSON.stringify(s.feedback||{},null,2))}</pre>${s.error?`<pre>${esc(typeof s.error==='string'?s.error:JSON.stringify(s.error,null,2))}</pre>`:''}</details>`).join('')}</div>`:'<p>No per-round trace was recorded.</p>'}`;
+      } catch(e){if(rounds.isConnected)rounds.innerHTML=`<a href="${esc(p.detailUrl)}">Open execution record ↗</a>`;}
+
     }
   }
   async function open(id,button,modelIndex=null) {

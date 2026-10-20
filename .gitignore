@@ -22,6 +22,9 @@ public/data/*
 !public/data/study.json
 !public/data/case-gallery.json
 !public/data/case-media.json
+!public/data/case-comparisons.json
+!public/data/case-comparison-audit.json
+!public/data/case-records/
 !public/data/model-comparison.csv
 !public/data/citation.bib
 !public/data/execution/

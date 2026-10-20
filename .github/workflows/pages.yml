@@ -27,7 +27,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Validate task and execution matching
-        run: python3 -m unittest discover -s tests -p test_public_execution.py
+        run: |
+          python3 -m unittest discover -s tests -p 'test_public*.py'
+          node tests/check_case_rendering.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site

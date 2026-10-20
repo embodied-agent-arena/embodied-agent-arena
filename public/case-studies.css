@@ -163,3 +163,20 @@
 
 /* Keep nine model panels aligned in a compact 3 × 3 comparison. */
 @media(min-width:761px){.gallery-run-grid[data-recordings="9"],.gallery-visual-grid:has(>:nth-child(9)){grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* A fixed position for every model; missing films never hide their results. */
+.gallery-run-grid.gallery-nine-models{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gallery-nine-models .gallery-run-media{aspect-ratio:16/9}
+.gallery-nine-models .gallery-run-footer{min-height:0;padding:9px 12px}
+.gallery-log-preview{height:100%;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:16px 22px;box-sizing:border-box;background:linear-gradient(145deg,#f0f4f0,#e4ebe5)}
+.gallery-log-label{font-size:13px;color:#63796b}
+.gallery-log-metrics{display:flex;gap:24px}
+.gallery-log-metrics>span{display:flex;flex-direction:column;gap:5px;font-size:12px;color:#65776e}
+.gallery-log-metrics strong{font-size:clamp(19px,2vw,28px);font-weight:600;color:var(--ink);line-height:1.1}
+.gallery-log-link{font-size:12px;color:#416751}
+.gallery-task-identity{font-size:13px;line-height:1.4;color:#64766c;margin:-12px 0 18px;overflow-wrap:anywhere}
+.gallery-round-list details{border-bottom:1px solid #e1e7e2;padding:12px 0}
+.gallery-round-list summary{cursor:pointer;font-size:15px}
+#study-dialog code{overflow-wrap:anywhere}
+@media(max-width:760px){.gallery-run-grid.gallery-nine-models{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-log-preview{padding:12px;gap:8px}.gallery-log-metrics{gap:12px}.gallery-log-metrics strong{font-size:19px}.gallery-log-label,.gallery-log-link{font-size:11px}.gallery-nine-models .gallery-run-media{aspect-ratio:4/3}}
+@media(max-width:420px){.gallery-log-metrics{flex-wrap:wrap;gap:6px 12px}.gallery-log-metrics strong{font-size:16px}.gallery-log-link{font-size:10px}}
