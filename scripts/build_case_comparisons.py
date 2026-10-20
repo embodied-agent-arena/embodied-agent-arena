@@ -5,7 +5,7 @@ The local evidence cache contains verified main reports and records extracted
 by task ID from all-model-logs-20261019.zip. Media is joined by BOTH task ID and
 report digest, never by benchmark, list position, or a display title.
 """
-import argparse, collections, csv, gzip, hashlib, io, json, re, zipfile
+import argparse, collections, csv, gzip, hashlib, html, io, json, re, zipfile
 from pathlib import Path
 
 MODELS=['astra','sol','fable','gemini','qwen','qwen35-397b','qwen35-27b','opus55','deepseek']
@@ -114,6 +114,24 @@ def build(source,pub):
         if st['id']=='horizon':st['takeaway']='All nine agents stop without completing the toolbox. Inspect which budget ends each attempt.'
     complete['runCount']=sum(len(st['runs']) for st in complete['stories']);complete['scope']='Nine models per exact task; full action traces or recorded round summaries.'
     (pub/'data/execution/complete-index.json').write_text(json.dumps(complete,ensure_ascii=False,separators=(',',':'))+'\n')
+    # The static evidence page exposes the same nine selectable records.
+    guide=pub/'execution-guide.html'
+    old=guide.read_text();head=old[:old.index('<body>')]
+    h=html.escape
+    def fmt(v):return '—' if v is None else f'{v:,.1f}'.removesuffix('.0')
+    sections=[];csv_rows=[]
+    for st in complete['stories']:
+        cells=[]
+        for r in st['runs']:
+            stats=r['stats'];progress=r['progress']
+            outcome=('Completed' if r['success'] else 'Not completed') if progress['label']=='Task completion' else f"{fmt(progress['value'])}/{fmt(progress['total'])} {progress['label'].lower()}"
+            cells.append('<tr><th scope="row">'+h(r['model'])+'</th><td>'+h(outcome)+'</td><td>'+fmt(stats['modelCalls'])+'</td><td>'+fmt(stats['elapsedSeconds'])+'</td><td>'+fmt(stats['tokens'])+'</td><td><a href="'+h(r['detailUrl'])+'">Execution record ↗</a></td></tr>')
+            csv_rows.append([st['id'],r['taskId'],r['model'],r['recordId'],r['reportSha256'],r['outcome'],stats['modelCalls'],stats['elapsedSeconds'],stats['tokens'],r['detailUrl']])
+        sections.append('<section id="'+h(st['id'])+'"><p>'+h(st['benchmark'])+'</p><h2>'+h(st['title'])+'</h2><p><strong>Task:</strong> '+h(st['instruction'])+'</p><p>'+h(st['takeaway'])+'</p><div class="guide-table"><table><thead><tr><th>Model</th><th>Outcome</th><th>Model calls</th><th>Time (s)</th><th>Tokens</th><th>Evidence</th></tr></thead><tbody>'+''.join(cells)+'</tbody></table></div><p><a href="index.html?analysis='+h(st['id'])+'#execution-analysis">Compare models interactively ↗</a></p></section>')
+    guide.write_text(head+'<body><main class="wrap"><a href="index.html#execution-analysis">← Interactive Execution Explorer</a><h1>Inside the Execution</h1><p>'+str(len(complete['stories']))+' tasks. Nine models per task. '+str(complete['runCount'])+' execution records.</p><p><a href="data/execution/complete-episodes.csv" download>Download episode metrics ↓</a></p>'+''.join(sections)+'<section><h2>Evidence and Timing</h2><p>Each result links to its original report digest and native task identity. Videos are linked to the same execution report; records without matching video expose the available execution log. Decision timestamps use episode time, separately from video playback. Full action traces and per-round summaries retain their recorded level of detail.</p></section></main></body></html>')
+    with (pub/'data/execution/complete-episodes.csv').open('w',newline='') as f:
+        writer=csv.writer(f,lineterminator='\n');writer.writerow(['case_group','task_id','model','record_id','report_sha256','outcome','model_calls','elapsed_seconds','tokens','evidence_url']);writer.writerows(csv_rows)
+    index=pub/'index.html';text=index.read_text();text=re.sub(r'46 Tasks · \d+ Episodes · 9 Models',f"46 Tasks · {complete['runCount']} Episodes · 9 Models",text);index.write_text(text)
     print(json.dumps({k:v for k,v in audit.items() if k!='comparisons'},indent=2))
 
 def prepare_cache(archive,source,pub):
