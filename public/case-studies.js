@@ -14,11 +14,13 @@
   let records, metadata = {}, mediaData = {}, currentUrl, trigger, openId;
   const pausedCases = new Set();
   const manualPlay = new Set();
+  const boxCases = new Set();
+  const representation = c => boxCases.has(c.id) && c.boxComparison ? c.boxComparison : c;
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
-    fetch('data/case-studies.json?v=identity-20261020').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json?v=identity-20261020').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-studies.json?v=polygons-20261020').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
+    fetch('data/case-gallery.json?v=polygons-20261020').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
     fetch('data/case-media.json?v=identity-20261020').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media]) => {mediaData=media; const groupedTasks=new Set(media.groups.map(c=>c.taskId)); const all=[...cases.filter(c=>c.predictions.length||!groupedTasks.has(c.sample)),...media.groups]; records = new Map(all.map(c => [c.id,c])); cases.forEach(c=>{if(!records.has(c.id))records.set(c.id,media.groups.find(g=>g.taskId===c.sample)||c);}); metadata = meta; return all;});
   const metricSpecs = [
@@ -30,6 +32,10 @@
   ];
   const specFor = c => metricSpecs.find(([key]) => c.predictions.some(p => typeof p.metrics?.[key] === 'number'));
   function summary(c, p) {
+    if (c.representation === 'polygon') {
+      if (p.available === false) return {value:'Not recorded',label:'Polygon absent from archive',state:'uncertain'};
+      return {value:num(p.metrics?.polygon_mask_iou,3),label:p.valid ? 'Polygon IoU' : 'Polygon IoU · Invalid or absent output',state:p.valid ? '' : 'uncertain'};
+    }
     if (p.valid === false) return {value:'Invalid', label:'No valid prediction', state:'uncertain'};
     const passed = metadata[c.id]?.judgements[p.model];
     if (c.domainKey === 'spatial') return {value:compact(p.answer),label:passed === true ? 'Correct' : passed === false ? 'Incorrect' : 'Recorded answer',state:passed === true ? 'correct' : passed === false ? 'incorrect' : ''};
@@ -56,13 +62,20 @@
   function isOverlay(c) {return c.domainKey === 'affordance' || c.benchmark.startsWith('TraceSpatial');}
   // Reproject the recorded 3D reference into the source image; predictions
   // use the task's declared 0–1000 image-coordinate convention.
-  function overlay(c, prediction, index) {
+  function overlay(c, prediction, index, detail=false) {
     const [w,h] = metadata[c.id]?.imageSize || [640,480];
     const box = (v, colour, dash='') => Array.isArray(v) && v.length === 4 && v.every(Number.isFinite) ? `<rect x="${v[0]}" y="${v[1]}" width="${Math.max(0,v[2]-v[0])}" height="${Math.max(0,v[3]-v[1])}" fill="none" stroke="${colour}" stroke-width="3" vector-effect="non-scaling-stroke" ${dash}/>` : '';
     const dot = (v, colour) => Array.isArray(v) && v.length >= 2 && v.slice(0,2).every(Number.isFinite) ? `<circle cx="${v[0]}" cy="${v[1]}" r="6" fill="${colour}" stroke="white" stroke-width="1.5" vector-effect="non-scaling-stroke"/>` : '';
     const path = (points, colour, dash='') => points.length > 1 ? `<polyline points="${points.map(p => p.join(',')).join(' ')}" fill="none" stroke="${colour}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" ${dash}/>${dot(points[points.length-1],colour)}` : '';
     let shapes = '';
-    if (c.domainKey === 'affordance') {
+    if (c.representation === 'polygon') {
+      shapes = `<image href="${esc(c.reference.mask)}" width="${w}" height="${h}"/>`;
+      if (prediction.valid) for (const polygon of prediction.answer.polygons || []) {
+        const rings = [polygon.outer, ...(polygon.holes || [])];
+        const d = rings.filter(r=>Array.isArray(r)&&r.length>=3&&r.every(p=>p.length===2&&p.every(Number.isFinite))).map(r=>`M ${r.map(p=>p.join(' ')).join(' L ')} Z`).join(' ');
+        shapes += `<path d="${d}" fill="${colours[index]}" fill-opacity=".12" fill-rule="evenodd" stroke="${colours[index]}" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>`;
+      }
+    } else if (c.domainKey === 'affordance') {
       shapes = box(c.reference?.bbox_2d,'#6be7b0','stroke-dasharray="6 4"') + box(prediction.answer?.bbox_2d,colours[index]) + dot(prediction.answer?.point_2d,colours[index]);
     } else {
       const k = c.reference?.gt_depth_intrinsics || c.reference?.intrinsics;
@@ -70,7 +83,8 @@
       const pred = Array.isArray(prediction.answer) ? prediction.answer.filter(p => Array.isArray(p) && p.slice(0,2).every(Number.isFinite)).map(p => [p[0]*w/1000,p[1]*h/1000]) : [];
       shapes = path(ref,'#6be7b0','stroke-dasharray="6 4"') + path(pred,colours[index]);
     }
-    return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(prediction.model)} prediction and reference over the original input"><image href="${esc(c.images[0])}" width="${w}" height="${h}"/>${shapes}</svg>`;
+    const viewBox=c.representation==='polygon'&&!detail&&c.polygonViewBox ? c.polygonViewBox.join(' ') : `0 0 ${w} ${h}`;
+    return `<svg viewBox="${viewBox}" role="img" aria-label="${esc(prediction.model)} ${c.representation==='polygon'?'polygon and reference mask':'prediction and reference'} over the original input"><image href="${esc(c.images[0])}" width="${w}" height="${h}"/>${shapes}</svg>`;
   }
   function inputMedia(c, detail=false) {
     if (c.video) return `<div class="gallery-film"><video ${detail ? 'controls' : 'muted loop'} playsinline preload="none" poster="${esc(c.poster)}" ${detail ? `src="${esc(c.video)}"` : `data-video="${esc(c.video)}"`}></video>${detail ? '' : '<span class="gallery-film-label">Opus 5.5 · Click to Watch ↗</span>'}</div>`;
@@ -109,9 +123,13 @@
     return `<button class="gallery-model ${visual ? 'gallery-model-visual' : ''} ${s.state}" data-case="${esc(c.id)}" data-model="${i}" style="--model-colour:${colours[i]}" aria-label="Inspect ${esc(p.model)} on ${esc(c.title)}" title="${esc(p.model)}"><span class="gallery-model-name">${esc(short(p.model))}<span aria-hidden="true">↗</span></span>${visual ? overlay(c,p,i) : ''}<span class="gallery-model-value">${esc(s.value)}</span><span class="gallery-model-caption">${esc(s.label)}</span></button>`;
   }
   function caseSlide(c,index,total) {
+    const hasModes=!!c.boxComparison;
+    c=representation(c);
     let body;
     if (isOverlay(c)) {
-      body = `<div class="gallery-visual-grid">${c.predictions.map((p,i) => resultTile(c,p,i,true)).join('')}</div><p class="gallery-evidence-note"><span class="gallery-ref-line"></span> Reference <span class="gallery-pred-line"></span> Model prediction${c.benchmark.includes('3D') ? ' · Image-plane projection; depth is scored in 3D.' : ''}</p>`;
+      const polygon=c.representation==='polygon';
+      const modes=hasModes ? `<div class="gallery-representations" role="group" aria-label="Affordance output"><button data-representation="polygon" data-representation-case="${esc(c.id)}" aria-pressed="${polygon}">Polygon</button><button data-representation="box" data-representation-case="${esc(c.id)}" aria-pressed="${!polygon}">Box + Point</button><span>${polygon?'Trace the functional region':'Locate a region and a contact point'}</span></div>` : '';
+      body = `${modes}<div class="gallery-visual-grid">${c.predictions.map((p,i) => resultTile(c,p,i,true)).join('')}</div><p class="gallery-evidence-note"><span class="${polygon?'gallery-mask-swatch':'gallery-ref-line'}"></span> ${polygon?'Reference mask':'Reference'} <span class="gallery-pred-line"></span> ${polygon?'Predicted polygon · Shared crop; click for full image.':'Model prediction'}${c.benchmark.includes('3D') ? ' · Image-plane projection; depth is scored in 3D.' : ''}</p>`;
     } else if (c.predictions.length) {
       body = `<div class="gallery-comparison"><button class="gallery-scene" data-case="${esc(c.id)}" aria-label="Open ${esc(c.title)} task details">${inputMedia(c)}${referenceLabel(c) ? `<span class="gallery-reference">${esc(referenceLabel(c))}</span>` : ''}<span class="gallery-enlarge">Explore Task ↗</span></button><div class="gallery-score-panel"><p class="gallery-panel-label">First-Run Answers${c.domainKey === 'spatial' ? '' : ' · Individual Case'}</p><div class="gallery-model-grid">${c.predictions.map((p,i) => resultTile(c,p,i)).join('')}</div></div></div>`;
     } else {
@@ -124,6 +142,7 @@
   }
   const content = document.getElementById('study-dialog-content');
   function renderModelDetail(c,index) {
+    c=representation(c);
     const staticCase = c.predictions.length > 0;
     const list = staticCase ? c.predictions : executionRecords(c);
     const p = list[index] || list[0];
@@ -132,7 +151,8 @@
     dialog.querySelectorAll('[data-detail-model]').forEach(b => b.setAttribute('aria-pressed',String(Number(b.dataset.detailModel) === index)));
     if (staticCase) {
       const s = summary(c,p);
-      selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p><h4>Recorded Answer</h4><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</div></div>${Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
+      const polygon=c.representation==='polygon';
+      selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index,true) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p>${polygon ? '<p>Green: reference region. Colored contour: predicted polygon.</p>' : ''}<details ${polygon?'':'open'}><summary>${polygon?'Polygon coordinates':'Recorded Answer'}</summary><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</details></div></div>${!polygon && Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     } else {
       selection.querySelectorAll('video').forEach(v=>v.pause());
       selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(outcomeText(p))}</span></div><p class="study-question">${esc(p.instruction || c.question)}</p><div class="gallery-detail-film">${runMedia(p,true)}</div><p class="study-meta">${esc(p.mediaKind || 'Terminal outcome record')} · ${esc(p.protocol)}</p>${p.note ? `<p class="study-protocol">${esc(p.note)}</p>` : ''}${p.video || p.animation ? `<p class="study-meta">${p.modelRounds != null ? `${num(p.modelRounds)} model responses · ` : ''}${p.elapsedSeconds != null ? `${num(p.elapsedSeconds,1)} s wall-clock time` : ''}</p>` : '<p class="study-protocol">A matching recording and per-run budget are not included for this model.</p>'}${runBudget(p)}${p.frames?.length ? `<h3>Recorded Process</h3><div class="gallery-process">${p.frames.map(f=>f.image ? `<figure><img src="${esc(f.image)}" loading="lazy" alt="${esc(f.label || 'Recorded observation')}"><figcaption>${esc(f.label)}</figcaption></figure>` : `<figure class="gallery-process-log"><strong>${esc(f.label)}</strong><p>${esc(f.detail || f.source_excerpt)}</p></figure>`).join('')}</div>` : ''}${p.timingNote ? `<p class="study-protocol">${esc(p.timingNote.startsWith('Encoded recording timeline')?'Recording time; episode wall time is shown above.':p.timingNote)}</p>` : ''}<p class="study-meta">${esc(p.instructionKind || 'Task description')} · Task ID: <code>${esc(p.taskId || c.sample)}</code></p>${p.camera ? `<p class="study-meta">Recording camera: ${esc(p.camera)}</p>` : ''}${p.video ? `<a class="study-download" href="${esc(p.video)}" target="_blank" rel="noopener">Open Recording ↗</a>` : ''}`;
@@ -146,12 +166,13 @@
     document.querySelectorAll('.gallery-track video').forEach(v=>v.pause());
     try {
       await load();
-      const c = records.get(id); if (!c) throw new Error('Case not found.');
+      const found = records.get(id); if (!found) throw new Error('Case not found.');
+      const c=representation(found);
       if (!dialog.open || openId !== id) return;
       const list = c.predictions.length ? c.predictions : executionRecords(c);
       selectedModel=modelIndex ?? (c.predictions.length ? 0 : Math.max(0,list.findIndex(r=>r.video||r.animation)));
       const budget = Object.entries(c.predictions.length ? c.budgets||{} : {}).filter(([k,v]) => budgetNames[k] && v!=null).map(([k,v])=>`<li><span>${budgetNames[k]}</span><strong>${num(v)}</strong></li>`).join('');
-      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2><p class="study-question">${esc(c.shortTask)}</p><div class="gallery-model-switcher" role="group" aria-label="Select model">${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-model-detail"></div>${isOverlay(c) ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}${c.predictions.length ? `<h3>${esc(c.instructionKind || 'Original Instruction')}</h3><p class="study-original-instruction">${esc(c.question)}</p>` : ''}${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<h3>Reading This Case</h3><p class="study-protocol">${esc(c.protocolNote)}</p><a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
+      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2><p class="study-question">${esc(c.shortTask)}</p><div class="gallery-model-switcher" role="group" aria-label="Select model">${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-model-detail"></div>${isOverlay(c) && c.representation !== 'polygon' ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}${c.predictions.length ? `<h3>${esc(c.instructionKind || 'Original Instruction')}</h3><p class="study-original-instruction">${esc(c.question)}</p>` : ''}${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<h3>Reading This Case</h3><p class="study-protocol">${esc(c.protocolNote)}</p><a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
       renderModelDetail(c,selectedModel);
       dialog.scrollTop=0;
       if (currentUrl) URL.revokeObjectURL(currentUrl);
@@ -160,6 +181,15 @@
     } catch(error) {content.innerHTML=`<h2 id="study-dialog-title">Case Details Unavailable</h2><p>${esc(error.message)} Please reload and try again.</p>`;}
   }
   document.addEventListener('click',event=>{
+    const mode=event.target.closest('[data-representation]');
+    if(mode){
+      const id=mode.dataset.representationCase;
+      if(mode.dataset.representation==='box')boxCases.add(id);else boxCases.delete(id);
+      const slot=mode.closest('.gallery-slot');
+      const index=shown.findIndex(c=>c.id===id);
+      if(slot&&index>=0){slot.innerHTML=caseSlide(shown[index],index,shown.length);slot.querySelector(`[data-representation="${mode.dataset.representation}"]`)?.focus({preventScroll:true});}
+      return;
+    }
     const playback=event.target.closest('[data-playback]');
     if(playback){const id=playback.dataset.playback;const playing=!pausedCases.has(id)&&(manualPlay.has(id)||!reduced.matches);if(playing){pausedCases.add(id);manualPlay.delete(id);}else{pausedCases.delete(id);manualPlay.add(id);}updateActiveMedia();}
     const button=event.target.closest('[data-case]');
