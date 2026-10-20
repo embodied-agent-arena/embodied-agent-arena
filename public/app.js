@@ -35,7 +35,7 @@ const domains=[
         "Astra · 0.214 ± 0.016"
       ]
     ],
-    "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Native Pass@1 for all nine agents across six sources."
+    "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Nine-model native Pass@1 across six sources: mean ± run SD (five runs; Fable: three). Opus 5.5 has zero SD on BOP-ASK."
   },
   {
     "id": "affordance",
@@ -54,7 +54,7 @@ const domains=[
         "DeepSeek-1017 · 0.217 ± 0.011"
       ]
     ],
-    "caption": "(a) UMD contact validity for all nine agents. (b) Direct-polygon IoU for all nine models on 70 cases, one run per case. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
+    "caption": "(a) Box–mask and polygon IoU for all nine agents on 70 cases; whiskers show box run SD. (b) Polygon overlap on tools and interaction scenes for Astra, Opus 5.5, and DeepSeek-1017. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
   },
   {
     "id": "planning",
@@ -92,7 +92,7 @@ const domains=[
         "38 / 182 tasks"
       ]
     ],
-    "caption": "(a) Nine-model success across thirteen suites. (b) Consecutive CALVIN goals, out of five. (c) ManiSkill condition satisfaction. Filled/open markers show Baseline/additional visual feedback; teal triangles show DeepSeek-1017’s per-round RGB setting."
+    "caption": "(a) Nine-model success across thirteen suites. (b–c) CALVIN goals and ManiSkill condition satisfaction under Baseline and per-round RGB. NR means unavailable records: Opus 5.5’s paired RGB, DeepSeek-1017’s Baseline, and Fable’s Baseline ManiSkill."
   }
 ];
 const cases=[
@@ -106,11 +106,11 @@ function buildTabs(items,prefix,render){
  list.addEventListener('keydown',e=>{const i=[...list.children].indexOf(document.activeElement);let n=i;if(e.key==='ArrowRight')n=(i+1)%items.length;else if(e.key==='ArrowLeft')n=(i-1+items.length)%items.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=items.length-1;else return;e.preventDefault();select(n,true);});select(0);
 }
 // Reserve figure space before lazy loading so in-page links keep their position.
-const figureSizes={"geometry": [2250, 614], "spatial": [2400, 566], "affordance": [2355, 645], "planning": [2250, 614], "manipulation": [2400, 796]};
+const figureSizes={"geometry": [2250, 614], "spatial": [1980, 1260], "affordance": [2355, 645], "planning": [2250, 614], "manipulation": [2400, 796]};
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
-buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=model-logos-20261020" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=model-logos-20261020" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
+buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=comic-sd-20261020" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=comic-sd-20261020" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
 function renderCompletionCase(c){
- const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=model-logos-20261020" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=model-logos-20261020" alt="${c.alt}" loading="lazy"></button>`;
+ const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=comic-sd-20261020" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=comic-sd-20261020" alt="${c.alt}" loading="lazy"></button>`;
  return `<h3>${c.title}</h3><div class="completion-highlight"><strong>${c.value}</strong><div><span>${c.metric}</span><span class="completion-scope">${c.scope}</span></div></div><p class="case-explanation">${c.explanation}</p><div class="case-setting"><p><strong>Per-episode limits.</strong> ${c.budget}</p><p>${c.protocol}</p></div><figure class="case-figure">${evidence}<figcaption class="figure-takeaway">${c.text}</figcaption></figure>`;
 }
 buildTabs(cases,'case',renderCompletionCase);
