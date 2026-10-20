@@ -160,7 +160,7 @@
       selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(outcomeText(p))}</span></div><p class="study-question">${esc(c.question)}</p>${p.video||p.animation?`<div class="gallery-detail-film">${runMedia(p,true)}</div>`:'<p class="study-meta">Execution log · No matching video in the supplied archive.</p>'}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
       const rounds=selection.querySelector('.gallery-rounds');
       try {
-        const response=await fetch(p.detailUrl);if(!response.ok)throw Error();const d=await response.json();
+        const response=await fetch(p.detailUrl+'?v=research-story-20261021');if(!response.ok)throw Error();const d=await response.json();
         if(!rounds.isConnected)return;
         const useful=d.steps.filter((s,i)=>s.error||s.success||i===0||i===d.steps.length-1);
         rounds.removeAttribute('role');

@@ -30,6 +30,7 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_public*.py'
           node tests/check_case_rendering.cjs
+          node tests/check_execution_rendering.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site

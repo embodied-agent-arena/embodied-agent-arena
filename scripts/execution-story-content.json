@@ -3,7 +3,7 @@
     "label": "Error Recovery",
     "taskLabel": "Date the Oldest Artifact",
     "title": "Recovery Means Making Progress.",
-    "takeaway": "Two early errors, then a complete task. Compare recovery with repeated errors that leave the score unchanged.",
+    "takeaway": "Opus 5.5 recovers from two early errors and completes the task. DeepSeek-1017 stalls at a partial score of 0.5.",
     "question": "Correction \u2192 Progress \u2192 Completion",
     "answer": "Opus 5.5 finishes at 1.0; DeepSeek-1017 stops at 0.5 after three final code errors.",
     "goalLabels": [
@@ -17,7 +17,7 @@
     "label": "Goal Progress",
     "taskLabel": "Sequence 0526 \u00b7 Five Goals",
     "title": "More Motion. Less Progress.",
-    "takeaway": "338 action submissions complete five goals; 501 submissions complete none.",
+    "takeaway": "Opus 5.5 completes all five goals with 338 action submissions; Gemini completes none with 501.",
     "question": "Actions \u2260 Completed Goals",
     "answer": "Opus 5.5 completes 5/5 goals with 338 action submissions; Gemini completes 0/5 with 501.",
     "goalLabels": [
@@ -64,7 +64,7 @@
     "label": "Contact Precision",
     "taskLabel": "Insert the Charger",
     "title": "Hundreds of Steps. No Insertion.",
-    "takeaway": "Hundreds of control steps still leave the charger outside the required final pose.",
+    "takeaway": "Qwen-Max takes 400 native steps and DeepSeek-1017 takes 385; neither reaches the required charger pose.",
     "question": "Motion \u2260 Successful Contact",
     "answer": "Qwen Max and Qwen 397B reach 400 native steps; DeepSeek-1017 reaches 385. None completes the insertion."
   },

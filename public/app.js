@@ -2,102 +2,113 @@ const domains=[
   {
     "id": "geometry",
     "label": "Geometry",
-    "title": "Metric Precision Is Only Part of Geometric Competence.",
-    "text": "Astra has the lowest pose errors. The tracing comparison shows why a close path can still miss the endpoint or violate a task constraint.",
+    "title": "A Close Path Can Still Miss the Goal.",
+    "text": "Astra has the lowest 3D path RMSE, yet only one third of its paths satisfy all constraints. Initiation or arrival fails in 36 of its 37 unsuccessful traces.",
     "evidence": [
       [
-        "17.2 ± 6.7°",
-        "Astra rotation error",
-        "DeepSeek-1017 · 30.2 ± 3.9°"
+        "0.382 m",
+        "Astra · 3D path RMSE",
+        "Lowest among nine models"
       ],
       [
-        "106.9 ± 36.0 cm",
-        "Astra translation error",
-        "DeepSeek-1017 · 182.0 ± 29.0 cm"
+        "33.9%",
+        "Astra · joint tracing success",
+        "All spatial constraints must hold"
       ]
     ],
-    "caption": "(a) Astra’s error reduction against its original six peers. (b) Object displacement under fixed or moving cameras, including DeepSeek-1017. (c) Nine-model 3D path error and joint tracing success."
+    "caption": "(a) Astra’s error reduction against its original six peers. (b) Object displacement under fixed or moving cameras, including DeepSeek-1017. (c) Nine-model 3D path error and joint tracing success.",
+    "paper": 8,
+    "case": "W1-w1_tracespatial_3d-01",
+    "caseLabel": "Compare Paths on the Same Scene"
   },
   {
     "id": "spatial",
     "label": "Spatial Reasoning",
-    "title": "Spatial Strengths Depend on the Question.",
-    "text": "Astra leads Spatial Pass@1, while Gemini has the lowest numerical error. Source-level comparisons expose gaps hidden by an overall score.",
+    "title": "The Reference Frame Changes the Challenge.",
+    "text": "Camera-relative depth ordering does not transfer directly to relations between objects. Source-level diagnostics reveal the transformations hidden by an overall Spatial score.",
     "evidence": [
       [
-        "69.4 ± 1.0%",
-        "Astra Spatial Pass@1",
-        "DeepSeek-1017 · 51.6 ± 1.5%"
+        "96–100%",
+        "Astra · camera-relative depth",
+        "BOP-ASK near/far questions"
       ],
       [
-        "0.161 ± 0.028",
-        "Gemini numerical AbsRel",
-        "Astra · 0.214 ± 0.016"
+        "50%",
+        "Astra · nearest-object relation",
+        "VSI-Bench; Qwen-Max: 76.7%"
       ]
     ],
-    "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Nine-model native Pass@1 across six sources: mean ± run SD (five runs; Fable: three). Opus 5.5 has zero SD on BOP-ASK."
+    "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Nine-model native Pass@1 across six sources: mean ± run SD (five runs; Fable: three). Opus 5.5 has zero SD on BOP-ASK.",
+    "paper": 9,
+    "case": "W2-w2_mindcube-01",
+    "caseLabel": "Compare a Viewpoint-Change Case"
   },
   {
     "id": "affordance",
     "label": "Affordance",
-    "title": "Finding a Contact Is Not the Same as Tracing a Region.",
-    "text": "Opus 5.5 achieves the highest box–mask and polygon IoU. Direct polygons test region shape beyond the rectangular coverage of a predicted box.",
+    "title": "The Right Shape Starts with the Right Target.",
+    "text": "Polygons improve overlap for eight of nine models. But a more flexible outline cannot repair a wrong object choice: Opus 5.5’s tool grounding is much stronger than its interaction-scene grounding.",
     "evidence": [
       [
-        "0.397",
-        "Opus 5.5 polygon IoU",
-        "DeepSeek-1017 · 0.249"
+        "71.5%",
+        "Opus 5.5 · UMD polygon IoU",
+        "Functional tool regions"
       ],
       [
-        "0.311 ± 0.020",
-        "Opus 5.5 box–mask IoU",
-        "DeepSeek-1017 · 0.217 ± 0.011"
+        "18.6% / 13.3%",
+        "Opus 5.5 · polygon IoU",
+        "RAGNet / ReasonAff interaction scenes"
       ]
     ],
-    "caption": "(a) Box–mask and polygon IoU for all nine agents on 70 cases; whiskers show box run SD. (b) Polygon overlap on tools and interaction scenes for Astra, Opus 5.5, and DeepSeek-1017. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands."
+    "caption": "(a) Box–mask and polygon IoU for all nine agents on 70 cases; whiskers show box run SD. (b) Polygon overlap on tools and interaction scenes for Astra, Opus 5.5, and DeepSeek-1017. (c) Astra’s contact validity by interaction; 1H/2H denotes one/two hands.",
+    "paper": 11,
+    "case": "W5-w5_ragnet-02",
+    "caseLabel": "Compare Nine Polygon Predictions"
   },
   {
     "id": "planning",
     "label": "Task Planning",
-    "title": "High Planning Scores Still Leave Physical Goals Unfinished.",
-    "text": "Astra leads overall Planning at 80.3%. Opus 5.5 completes 3/13 HumanCLAW tasks and DeepSeek-1017 2/13; those successes involve navigation, while all eight sitting tasks remain incomplete.",
+    "title": "Different Models Still Share Hard Failures.",
+    "text": "Across the same 157 Planning assignments, at least one model completes 138. The remaining 19 defeat every model; only eight are completed by all nine.",
     "evidence": [
       [
-        "80.3%",
-        "Astra Planning success",
-        "Opus 5.5 · 48.4%"
+        "138 / 157",
+        "Completed by at least one model",
+        "12 more than Astra alone"
       ],
       [
-        "31.2%",
-        "DeepSeek-1017 Planning success",
-        "157 tasks per agent"
+        "19 / 157",
+        "Completed by none of the models",
+        "Shared failures across nine agents"
       ]
     ],
-    "caption": "(a) Source-level success for Astra, Fable, Opus 5.5, and DeepSeek-1017. (b–c) Astra and Fable’s household-goal and ScienceWorld diagnostics. Each assignment uses one episode."
+    "caption": "(a) Source-level success for Astra, Fable, Opus 5.5, and DeepSeek-1017. (b–c) Astra and Fable’s household-goal and ScienceWorld diagnostics. Each assignment uses one episode.",
+    "paper": 61,
+    "report": "coverage",
+    "caseLabel": "Explore Task-by-Task Overlap"
   },
   {
     "id": "manipulation",
     "label": "Manipulation",
-    "title": "Local Control Does Not Ensure Complete Household Tasks.",
-    "text": "Opus 5.5 completes 47.8% of assigned Manipulation tasks; DeepSeek-1017 completes 20.9%. No model completes any of the five BEHAVIOR-1K tasks within the source limits.",
+    "title": "Several Goals Reached. The Sequence Still Unfinished.",
+    "text": "On CALVIN, average consecutive goals and complete-sequence success reveal different limits. Reaching an intermediate state is useful only if the agent can preserve it and finish the remaining sequence.",
     "evidence": [
       [
-        "47.8%",
-        "Opus 5.5 task success",
-        "Astra · 41.8%"
+        "3.1 / 5",
+        "Astra · mean consecutive goals",
+        "Baseline, ten sequences"
       ],
       [
-        "20.9%",
-        "DeepSeek-1017 task success",
-        "38 / 182 tasks"
+        "3 / 10",
+        "Astra · complete sequences",
+        "Opus 5.5: 2.4 goals; 1/10 complete"
       ]
     ],
-    "caption": "(a) Nine-model success across thirteen suites. (b–c) CALVIN goals and ManiSkill condition satisfaction under Baseline and per-round RGB. NR means unavailable records: Opus 5.5’s paired RGB, DeepSeek-1017’s Baseline, and Fable’s Baseline ManiSkill."
+    "caption": "(a) Nine-model success across thirteen suites. (b–c) CALVIN goals and ManiSkill condition satisfaction under Baseline and per-round RGB. NR means unavailable records: Opus 5.5’s paired RGB, DeepSeek-1017’s Baseline, and Fable’s Baseline ManiSkill.",
+    "paper": 12,
+    "execution": "sequence",
+    "caseLabel": "Inspect One Recorded Sequence"
   }
-];
-const cases=[
- {id:'household',label:'Household Manipulation',title:'Local Skills Do Not Yet Add Up to Complete Tasks.',value:'0%',metric:'BEHAVIOR-1K complete-task success',scope:'0 / 5 tasks for each of the nine agents',explanation:'No agent satisfied all required final household conditions in any of the five evaluated tasks. This score counts complete tasks; intermediate actions can succeed while the task remains unfinished.',budget:'180 min trial time; 24 model rounds; 256 tool calls; 640k tokens; 1,000 environment control steps.',protocol:'One episode per task and agent, with source-native observations and tools. Trial time includes model calls, execution, and feedback. Runs can terminate unsuccessfully before the time limit.',text:'The BEHAVIOR-1K row shows 0/5 complete tasks for all nine agents. Intermediate progress does not satisfy the full set of required final conditions. Other rows show suites with their own source budgets.',image:'manipulation',alt:'Task success across thirteen manipulation suites. The BEHAVIOR-1K row shows 0 of 5 completed tasks per agent under the specified evaluation budgets.'},
- {id:'body',label:'Body–Object Interaction',title:'Finding the Seat Does Not Complete the Sitting Task.',value:'0 / 8',metric:'HumanCLAW sitting tasks completed',scope:'0 / 8 tasks for each of the nine agents',explanation:'Success requires the environment to confirm the required sitting state. These eight sitting tasks form a subset of HumanCLAW’s 13 evaluated tasks; the 0/8 result applies only to that subset.',budget:'180 min episode time (11,000 s outer task timeout); 101 code rounds; 100 environment steps; 400 primitive calls; 2M tokens.',protocol:'One episode per task and agent, with source-native observations and tools. Runs can terminate unsuccessfully before the time limit.',text:'Astra found the seat in six cases and approached within 20 cm while issuing a sit action in five. None achieved the required sitting state. These records distinguish target finding and attempted execution from the final condition that determines success.',diagnostic:[['6','Target Found'],['5','Within 20 cm + Sit Action Issued'],['0','Sitting State Confirmed']]}
 ];
 function buildTabs(items,prefix,render){
  const list=document.querySelector(`#${prefix}-tabs`),panel=document.querySelector(`#${prefix}-panel`);
@@ -108,12 +119,10 @@ function buildTabs(items,prefix,render){
 // Reserve figure space before lazy loading so in-page links keep their position.
 const figureSizes={"geometry": [2250, 614], "spatial": [1980, 1260], "affordance": [2355, 645], "planning": [2250, 614], "manipulation": [2400, 796]};
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
-buildTabs(domains,'domain',d=>`<div class="domain-text"><h3>${d.title}</h3><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=comic-sd-20261020" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=comic-sd-20261020" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><p class="figure-takeaway">${d.text}</p><p class="figure-caption"><strong>${d.label}.</strong> ${d.caption}</p></figcaption></figure>`);
-function renderCompletionCase(c){
- const evidence=c.diagnostic?`<div class="sitting-diagnostic"><h4>Astra on the Same Eight Sitting Tasks</h4><dl>${c.diagnostic.map(([count,label])=>`<div><dt>${label}</dt><dd>${count}<span> / 8</span></dd></div>`).join('')}</dl></div>`:`<button class="figure-button" data-zoom="assets/${c.image}.webp?v=comic-sd-20261020" aria-label="Enlarge ${c.label} results"><img ${figureSizeAttrs(c.image)} src="assets/${c.image}.webp?v=comic-sd-20261020" alt="${c.alt}" loading="lazy"></button>`;
- return `<h3>${c.title}</h3><div class="completion-highlight"><strong>${c.value}</strong><div><span>${c.metric}</span><span class="completion-scope">${c.scope}</span></div></div><p class="case-explanation">${c.explanation}</p><div class="case-setting"><p><strong>Per-episode limits.</strong> ${c.budget}</p><p>${c.protocol}</p></div><figure class="case-figure">${evidence}<figcaption class="figure-takeaway">${c.text}</figcaption></figure>`;
-}
-buildTabs(cases,'case',renderCompletionCase);
+buildTabs(domains,'domain',d=>{
+ const action=d.case?`<button type="button" data-case="${d.case}">${d.caseLabel} →</button>`:d.execution?`<a href="?analysis=${d.execution}#execution-analysis" data-execution-link="${d.execution}">${d.caseLabel} →</a>`:`<a href="#technical-report" data-report-link="${d.report}">${d.caseLabel} →</a>`;
+ return `<div class="domain-text"><div><h3>${d.title}</h3><p class="domain-argument">${d.text}</p></div><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=comic-sd-20261020" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=comic-sd-20261020" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><div class="domain-links">${action}<a href="paper.pdf#page=${d.paper}">Paper Evidence ↗</a></div><details class="figure-reading"><summary>Figure Key &amp; Measurement Details</summary><p>${d.caption}</p></details></figcaption></figure>`;
+});
 const citation=document.querySelector('#bibtex').textContent.trim();
 document.querySelector('#copy-citation').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(citation);document.querySelector('#copy-status').textContent='Citation copied.';document.querySelector('#copy-citation').textContent='Copied';setTimeout(()=>document.querySelector('#copy-citation').textContent='Copy BibTeX',2000);}catch{const range=document.createRange();range.selectNodeContents(document.querySelector('#bibtex'));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);document.querySelector('#copy-status').textContent='Citation selected. Use your browser’s copy command.';}});
 const dialog=document.querySelector('#figure-dialog'),dialogImage=document.querySelector('#dialog-image');

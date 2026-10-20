@@ -7,6 +7,7 @@ No raw prompts, credentials, absolute paths, or invented video-time alignment ar
 """
 import argparse, ast, collections, datetime, hashlib, json, re
 from pathlib import Path
+from public_json import dumps as trace_json
 
 ap=argparse.ArgumentParser();ap.add_argument('--source',type=Path,required=True);args=ap.parse_args()
 root=Path(__file__).resolve().parents[1];pub=root/'public';work=args.source
@@ -161,7 +162,7 @@ def build(id,story):
             'max_rounds':loop.get('max_turns'),
             'timeout_seconds':loop.get('timeout_seconds')}.items() if v is not None}
     data=enrich(data)
-    (out/f'{id}.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
+    (out/f'{id}.json').write_text(trace_json(data)+'\n')
     audit={'id':id,'recordId':r['record_id'],'reportSha256':c['source_sha256'],'evidenceSha256':hashlib.sha256((work/'evidence'/f'{id}.json').read_bytes()).hexdigest(),'rounds':len(turns),'codeCells':len(blocks),'matchedCodeCells':len(match),'toolCalls':sum(len(b['calls']) for b in blocks),'unassignedCodeCells':len(unassigned),'alignment':alignment}
     return {k:v for k,v in data.items() if k not in ['steps','callCounts','verifier','unassignedCells','milestones']},audit
 

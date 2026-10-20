@@ -8,11 +8,36 @@
   const tokens = n => n == null ? '—' : n>=1e6 ? `${(n/1e6).toFixed(2)}M` : `${(n/1000).toFixed(1)}k`;
   const names = {'Claude Fable 5.1':'Fable 5.1','Claude Opus 5.5':'Opus 5.5','Qwen 3.8 Max':'Qwen Max','Qwen 3.5 397B-A17B':'Qwen 397B','Qwen 3.5 27B':'Qwen 27B','DeepSeek 4.1 Flash-1017':'DeepSeek-1017'};
   const short = r => names[r.model] || r.model;
-  const stopNames = {max_total_tokens:'Token limit',max_agent_iterations:'Round limit',primitive_calls:'Action-call limit',max_env_steps:'Step limit'};
+  const stopNames = {max_total_tokens:'Token limit',max_agent_iterations:'Round limit',primitive_calls:'Action-call limit',max_env_steps:'Step limit',max_code_turns:'Code-round limit',max_primitive_calls:'Tool-call limit',max_rounds:'Round limit'};
   const cache = new Map(), panes = {};
   let data,story,generation=0,pendingStory;
-  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=complete-20261020').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
+  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=research-story-20261021').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
   const pause=()=>root.querySelectorAll('video').forEach(v=>v.pause());
+  // Some exact-task records retain round feedback without primitive-call traces.
+  // Normalize that representation; never infer unseen actions or intermediate goals.
+  function normalizeTrace(detail, run) {
+    const d = {...run, ...detail};
+    d.steps = (detail.steps || []).map(s => ({
+      ...s,
+      calls: s.calls || [],
+      event: s.event || {
+        kind: s.error ? 'error' : s.success ? 'success' : s.budgetStop ? 'budget' : 'decision',
+        label: s.title || 'Decision round',
+        detail: s.error ? 'Execution error returned; inspect the feedback below.' :
+          s.success ? 'The native evaluator reports task success.' :
+          s.budgetStop ? 'An episode limit was reached.' : 'Recorded round feedback is available below.'
+      }
+    }));
+    if (!d.milestones?.length && d.steps.length) {
+      const indices = new Set([0, d.steps.length - 1]);
+      d.steps.forEach((s, i) => {if (s.error || s.success || s.budgetStop) indices.add(i);});
+      d.milestones = [...indices].sort((a,b)=>a-b).map(index => ({
+        index, at: d.steps[index].at, label: d.steps[index].event.label,
+        detail: d.steps[index].event.detail
+      }));
+    }
+    return d;
+  }
   function playbackLabel(){const b=root.querySelector('.exec-play');if(!b)return;const vs=[...root.querySelectorAll('.exec-video')];b.hidden=!vs.length;b.textContent=vs.some(v=>!v.paused)?'Ⅱ Pause':vs.length===2?'▶ Play Both':'▶ Play Clip';}
   const outcome=r=>r.success?'Completed':'Not completed';
   const metric=(value,label,cls='')=>`<div class="${cls}"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`;
@@ -24,7 +49,7 @@
     document.getElementById('exec-library').value=story.id;
     const common=key=>{const v=story.runs.map(r=>r.budgets[key]);return v[0]!=null&&v.every(x=>x===v[0])?v[0]:null;};
     const limits=[common('max_rounds')?`${common('max_rounds')} rounds`:null,common('max_total_tokens')?`${tokens(common('max_total_tokens'))} tokens`:null,common('timeout_seconds')?`${num(common('timeout_seconds')/60)} min`:null].filter(Boolean).join(' · ');
-    document.getElementById('exec-stage').innerHTML=`<div class="exec-story-heading"><p class="exec-kicker">${esc(story.benchmark)} <span>/</span> ${esc(story.taskLabel || story.label)}</p><h3>${esc(story.title)}</h3><p class="exec-takeaway">${esc(story.takeaway)}</p></div><div class="exec-task"><span>Task</span><p>${esc(story.instruction)}</p></div><div class="exec-compare-toolbar"><span>${story.runs.length} models on this task</span><button class="exec-play" type="button">▶ Play Both</button></div><div class="exec-compare"><article class="exec-pane" data-pane="0"></article><article class="exec-pane" data-pane="1"></article></div><details class="exec-methods"><summary>Task Identity, Settings &amp; Source Records</summary><p><strong>Task:</strong> <code>${esc(story.runs[0].taskId)}</code></p><p>${limits?`Shared ceilings: ${esc(limits)}.`:''} Each model’s settings are listed below. Videos are excerpts or saved observations; decision timestamps show episode time.</p><div class="exec-settings-grid"></div><p><a href="data/execution/identity-audit.json">Task-matching audit ↗</a> <a href="execution-guide.html#${esc(story.id)}">Episode metrics ↗</a></p></details>`;
+    document.getElementById('exec-stage').innerHTML=`<div class="exec-story-heading"><p class="exec-kicker">${esc(story.benchmark)} <span>/</span> ${esc(story.taskLabel || story.label)}</p><h3>${esc(story.title)}</h3><p class="exec-takeaway">${esc(story.featured ? story.takeaway : `${story.runs.filter(r=>r.success).length} of ${story.runs.length} models complete this task. Compare the decisions and final checks below.`)}</p></div><div class="exec-task"><span>Task</span><p>${esc(story.instruction)}</p></div><div class="exec-compare-toolbar"><span>${story.runs.length} models · ${limits?`Ceilings: ${esc(limits)}`:"See each model’s episode limits below"}</span><button class="exec-play" type="button">▶ Play Both</button></div><p class="exec-clock-note">Video playback shows excerpts; decision timestamps use elapsed episode time.</p><div class="exec-compare"><article class="exec-pane" data-pane="0"></article><article class="exec-pane" data-pane="1"></article></div><details class="exec-methods"><summary>Task Identity, Settings &amp; Source Records</summary><p><strong>Task:</strong> <code>${esc(story.runs[0].taskId)}</code></p><p>${limits?`Shared ceilings: ${esc(limits)}.`:''} Each model’s settings are listed below. Videos are excerpts or saved observations; decision timestamps show episode time.</p><div class="exec-settings-grid"></div><p><a href="data/execution/identity-audit.json">Task-matching audit ↗</a> <a href="execution-guide.html#${esc(story.id)}">Episode metrics ↗</a></p></details>`;
     [0,1].forEach(i=>renderPane(i,(story.runs.find(r=>r.modelKey===story.default[i])||story.runs[i]).id));
     root.querySelector('.exec-play').onclick=async()=>{const vs=[...root.querySelectorAll('.exec-video')];if(vs.some(v=>!v.paused))vs.forEach(v=>v.pause());else await Promise.allSettled(vs.map(v=>v.play()));};
     document.getElementById('exec-announcement').textContent=`${story.benchmark}. ${story.taskLabel}. ${story.runs.length} matching models.`;
@@ -41,6 +66,12 @@
     if(['time','horizon'].includes(story.id)){result=num(s.rounds);resultLabel='Decision rounds';second=[tokens(s.tokens),'Tokens used'];}
     return metric(result,resultLabel,r.success?'is-success':'is-incomplete')+metric(...second)+metric(time(s.elapsedSeconds),'Episode time');
   }
+  function episodeLimits(r){
+    const b=r.budgets;
+    const limits=[b.max_rounds?`${num(b.max_rounds)} rounds`:null,b.max_total_tokens?`${tokens(b.max_total_tokens)} tokens`:null,b.timeout_seconds?`${num(b.timeout_seconds/60)} min`:null].filter(Boolean);
+    const ending=r.success?'Goal satisfied':r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x.replaceAll('_',' ')).join(', '):'Task incomplete';
+    return `<div class="exec-limit-strip"><span>Ceilings: ${esc(limits.join(' · '))}</span><strong>Ended: ${esc(ending)}</strong></div>`;
+  }
   function actionSummary(step){
     const calls=step.calls||[];
     const action=calls.find(c=>/^(submit_|apply_|move_|grasp_|place_|execute_)/.test(c.name))||calls[0];
@@ -52,14 +83,14 @@
   }
   async function renderPane(i,id){
     const r=story.runs.find(r=>r.id===id),pane=root.querySelector(`[data-pane="${i}"]`);if(!r)return;
-    pane.querySelector('video')?.pause();pane.dataset.run=id;const current=generation;
+    pane.querySelector('video')?.pause();pane.dataset.run=id;const current=generation;delete panes[i];
     const isLog=!r.video||/log/i.test(r.mediaKind);
-    pane.innerHTML=`<header class="exec-model"><label for="exec-model-${i}" class="sr-only">Model ${i+1}</label><select id="exec-model-${i}">${story.runs.map(x=>`<option value="${esc(x.id)}" ${x.id===id?'selected':''}>${esc(short(x))}</option>`).join('')}</select><span class="exec-outcome ${r.success?'is-success':''}">${outcome(r)}</span></header>${isLog?`<div class="exec-log-preview"><span>⌘</span><h4>Action Log</h4><p>${r.video?'This episode has a saved action log.':'No matching video for this execution.'}</p>${r.video?`<a href="${esc(r.video)}" target="_blank" rel="noopener">Open log recording ↗</a>`:''}</div>`:`<div class="exec-video-frame"><video class="exec-video" controls muted playsinline preload="metadata" poster="${esc(r.poster)}" src="${esc(r.video)}" aria-label="${esc(r.model+' — '+story.taskLabel)}"></video><span class="exec-video-kind">${/observation/i.test(r.mediaKind)?'Saved observations':'Video excerpt'}</span></div>`}<div class="exec-metrics">${finalMetrics(r)}</div>${story.goalLabels&&story.id==='sequence'?`<div class="exec-goal-sequence" aria-label="Final subgoal check">${story.goalLabels.map((label,j)=>`<span class="${j<r.progress.value?'done':''}"><b>${j<r.progress.value?'✓':j+1}</b>${esc(label)}</span>`).join('')}</div>`:''}<div class="exec-trace-loading" role="status">Loading decisions…</div>`;
+    pane.innerHTML=`<header class="exec-model"><label for="exec-model-${i}" class="sr-only">Model ${i+1}</label><select id="exec-model-${i}">${story.runs.map(x=>`<option value="${esc(x.id)}" ${x.id===id?'selected':''}>${esc(short(x))}</option>`).join('')}</select><span class="exec-outcome ${r.success?'is-success':''}">${outcome(r)}</span></header>${isLog?`<div class="exec-log-preview"><span>⌘</span><h4>Action Log</h4><p>${r.video?'This episode has a saved action log.':'No matching video for this execution.'}</p>${r.video?`<a href="${esc(r.video)}" target="_blank" rel="noopener">Open log recording ↗</a>`:''}</div>`:`<div class="exec-video-frame"><video class="exec-video" controls muted playsinline preload="metadata" poster="${esc(r.poster)}" src="${esc(r.video)}" aria-label="${esc(r.model+' — '+story.taskLabel)}"></video><span class="exec-video-kind">${/observation/i.test(r.mediaKind)?'Saved observations':'Video excerpt'}</span></div>`}<div class="exec-metrics">${finalMetrics(r)}</div>${episodeLimits(r)}${story.goalLabels&&story.id==='sequence'?`<div class="exec-goal-sequence" aria-label="Final subgoal check">${story.goalLabels.map((label,j)=>`<span class="${j<r.progress.value?'done':''}"><b>${j<r.progress.value?'✓':j+1}</b>${esc(label)}</span>`).join('')}</div>`:''}<div class="exec-trace-loading" role="status">Loading decisions…</div>`;
     pane.querySelector('select').onchange=e=>{const newId=e.target.value;renderPane(i,newId);const other=root.querySelector(`[data-pane="${1-i}"]`);if(other.dataset.run===newId)renderPane(1-i,story.runs.find(x=>x.id!==newId).id);};
     const v=pane.querySelector('video');
     if(v){['play','pause','ended'].forEach(type=>v.addEventListener(type,playbackLabel));}
     try{
-      playbackLabel();const d=await get(r.detailUrl);if(current!==generation||pane.dataset.run!==id)return;panes[i]=d;renderSettings();
+      playbackLabel();const d=normalizeTrace(await get(r.detailUrl),r);if(current!==generation||pane.dataset.run!==id)return;panes[i]=d;renderSettings();
       const slot=pane.querySelector('.exec-trace-loading');slot.className='exec-decisions';slot.removeAttribute('role');
       if(!d.steps.length){slot.innerHTML='<p>Final outcome available. No per-round trace.</p>';return;}
       const milestones=d.milestones||[];

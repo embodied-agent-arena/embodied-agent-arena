@@ -7,6 +7,7 @@ report digest, never by benchmark, list position, or a display title.
 """
 import argparse, collections, csv, gzip, hashlib, html, io, json, re, zipfile
 from pathlib import Path
+from public_json import dumps as trace_json
 
 MODELS=['astra','sol','fable','gemini','qwen','qwen35-397b','qwen35-27b','opus55','deepseek']
 NAMES=['GPT-6 Astra','GPT-6 Sol','Claude Fable 5.1','Gemini 3.8 Flash','Qwen 3.8 Max','Qwen 3.5 397B-A17B','Qwen 3.5 27B','Claude Opus 5.5','DeepSeek 4.1 Flash-1017']
@@ -89,7 +90,7 @@ def build(source,pub):
                 detail=dict(id=rid,model=name,modelKey=model,benchmark=g['benchmark'],taskId=task,instruction=g['question'],outcome=r['outcome'],success=r['success'],protocol=protocol,stats=stats,budgets=budgets,stopLimits=d.get('budget_exhausted') or loop.get('budget_exhausted') or [],verifier=clean(h),callCounts={},video=r['video'],poster=r['poster'],mediaKind=r['mediaKind'],videoNote='Recorded excerpt; video time differs from episode time.',evidenceLevel='round_summary',timingNote='Decision timestamps report elapsed episode time.',recordId=r['recordId'],reportSha256=sha,steps=steps,unassignedCells=[],detailUrl=r['detailUrl'],mediaMatchesReport=bool(film),progress=progress,milestones=milestones)
             detail.update(nativeIdentity=native,identitySha256=r['identitySha256'],executionStarted=verified)
             r['progress']=detail['progress']
-            (pub/r['detailUrl']).write_text(json.dumps(detail,ensure_ascii=False,separators=(',',':'))+'\n')
+            (pub/r['detailUrl']).write_text(trace_json(detail)+'\n')
             runs[rid]=r;g['runIds'].append(rid)
             checks[g['id']][model]={'recordId':r['recordId'],'taskId':task,'reportSha256':sha,'identitySha256':r['identitySha256'],'executionStarted':verified,'mediaReportSha256':r['mediaReportSha256']}
         assert len(g['runIds'])==9
@@ -112,6 +113,9 @@ def build(source,pub):
     # Keep statements tied to the named comparison, not the old subset size.
         if st['id']=='time':st['takeaway']='Astra, Sol and DeepSeek-1017 reach the same chair. Compare elapsed time alongside decision count.'
         if st['id']=='horizon':st['takeaway']='All nine agents stop without completing the toolbox. Inspect which budget ends each attempt.'
+        if not st.get('featured'):
+            completed=sum(bool(r['success']) for r in st['runs'])
+            st['takeaway']=f"{completed} of {len(st['runs'])} models complete this task. Compare the decisions and final checks below."
     complete['runCount']=sum(len(st['runs']) for st in complete['stories']);complete['scope']='Nine models per exact task; full action traces or recorded round summaries.'
     (pub/'data/execution/complete-index.json').write_text(json.dumps(complete,ensure_ascii=False,separators=(',',':'))+'\n')
     # The static evidence page exposes the same nine selectable records.
