@@ -9,7 +9,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -27,7 +28,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -45,7 +47,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -63,7 +66,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -81,7 +85,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -99,7 +104,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -117,7 +123,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -135,7 +142,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -153,7 +161,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -171,7 +180,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -189,7 +199,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -207,7 +218,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -225,7 +237,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -243,7 +256,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -261,7 +275,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -279,7 +294,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -297,7 +313,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -315,7 +332,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -333,7 +351,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -351,7 +370,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -369,7 +389,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -387,7 +408,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -405,7 +427,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -423,7 +446,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -441,7 +465,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -459,7 +484,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -477,7 +503,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -495,7 +522,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -513,7 +541,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -531,7 +560,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -549,7 +579,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -567,7 +598,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -585,7 +617,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -603,7 +636,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -621,7 +655,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -639,7 +674,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -657,7 +693,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -675,7 +712,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -693,7 +731,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -711,7 +750,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -729,7 +769,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -747,7 +788,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -765,7 +807,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -783,7 +826,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -801,7 +845,8 @@
       "Qwen 3.5 397B-A17B": null,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": null,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -819,7 +864,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -833,7 +879,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -847,7 +894,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -861,7 +909,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -875,7 +924,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -889,7 +939,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -903,7 +954,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -917,7 +969,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -931,7 +984,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": []
   },
@@ -945,7 +999,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -959,7 +1014,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": []
   },
@@ -973,7 +1029,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": []
   },
@@ -987,7 +1044,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -1001,7 +1059,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": []
   },
@@ -1015,7 +1074,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": []
   },
@@ -1029,7 +1089,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": null,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": []
   },
@@ -1043,7 +1104,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": []
   },
@@ -1057,7 +1119,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": []
   },
@@ -4651,7 +4714,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4669,7 +4733,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4687,7 +4752,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4705,7 +4771,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4723,7 +4790,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4741,7 +4809,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4759,7 +4828,8 @@
       "Qwen 3.5 397B-A17B": false,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": false,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": false
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4777,7 +4847,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": true,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": true
+      "DeepSeek 4.1 Flash-1017": true,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [
@@ -4795,7 +4866,8 @@
       "Qwen 3.5 397B-A17B": true,
       "Qwen 3.5 27B": false,
       "Claude Opus 5.5": true,
-      "DeepSeek 4.1 Flash-1017": false
+      "DeepSeek 4.1 Flash-1017": false,
+      "Gemini 4 Argon": true
     },
     "recordedOutcomes": [],
     "imageSize": [

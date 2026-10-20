@@ -1,0 +1,2270 @@
+{
+  "revision": "2026-10-21",
+  "model": "Gemini 4 Argon",
+  "api_model": "gemini-4-argon",
+  "report_count": 3192,
+  "case_count": 1000,
+  "polygon_case_count": 70,
+  "unchanged_previous_models": 9,
+  "main": [
+    {
+      "mean": 18.53661471155445,
+      "sd": 1.7922118593169816,
+      "runs": 5,
+      "run_means": [
+        19.77847602850664,
+        20.014139302822564,
+        19.586798419147545,
+        15.975412287660513,
+        17.32824751963498
+      ],
+      "valid_counts": [
+        54,
+        53,
+        51,
+        52,
+        54
+      ],
+      "pooled_mean": 18.538487170394376,
+      "status": "verified",
+      "display": "18.5 \u00b1 1.8"
+    },
+    {
+      "mean": 105.61095605617135,
+      "sd": 9.578054195978904,
+      "runs": 5,
+      "run_means": [
+        119.5899520495202,
+        108.65228673536016,
+        94.08243555612519,
+        100.19038336377744,
+        105.5397225760737
+      ],
+      "valid_counts": [
+        54,
+        53,
+        51,
+        52,
+        54
+      ],
+      "pooled_mean": 105.77150672361732,
+      "status": "verified",
+      "display": "105.6 \u00b1 9.6"
+    },
+    {
+      "mean": 71.63636363636363,
+      "sd": 0.6893523130955935,
+      "runs": 5,
+      "run_means": [
+        70.9090909090909,
+        72.27272727272727,
+        72.27272727272727,
+        70.9090909090909,
+        71.81818181818181
+      ],
+      "valid_counts": [
+        220,
+        220,
+        220,
+        220,
+        220
+      ],
+      "pooled_mean": 71.63636363636364,
+      "status": "verified",
+      "display": "71.6 \u00b1 0.7"
+    },
+    {
+      "mean": 0.16904647201676343,
+      "sd": 0.02306366539988271,
+      "runs": 5,
+      "run_means": [
+        0.1605331919433569,
+        0.20785660751131213,
+        0.16749284264853495,
+        0.14650394087117125,
+        0.16284577710944195
+      ],
+      "valid_counts": [
+        18,
+        15,
+        16,
+        17,
+        18
+      ],
+      "pooled_mean": 0.16796575039055395,
+      "status": "verified",
+      "display": "0.169 \u00b1 0.023"
+    },
+    {
+      "mean": 0.3559407377409448,
+      "sd": 0.009393846907985335,
+      "runs": 5,
+      "run_means": [
+        0.36571227877893564,
+        0.3593344978832478,
+        0.34235816221249804,
+        0.3506084634450885,
+        0.36169028638495404
+      ],
+      "valid_counts": [
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "pooled_mean": 0.3559407377409448,
+      "status": "verified",
+      "display": "0.356 \u00b1 0.009"
+    }
+  ],
+  "full": {
+    "InFlux focal MAPE": {
+      "n": 26,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 34.83611631697712,
+          "sd": 1.629042045300613,
+          "runs": 5,
+          "run_means": [
+            32.975541295854214,
+            35.17697766978226,
+            35.30149884258424,
+            33.59342340585695,
+            37.13314037080794
+          ],
+          "valid_counts": [
+            26,
+            26,
+            26,
+            26,
+            26
+          ],
+          "pooled_mean": 34.83611631697712,
+          "status": "verified"
+        }
+      }
+    },
+    "InFlux principal error": {
+      "n": 26,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 3.819509091894007,
+          "sd": 0.0,
+          "runs": 5,
+          "run_means": [
+            3.819509091894007,
+            3.819509091894007,
+            3.819509091894007,
+            3.819509091894007,
+            3.819509091894007
+          ],
+          "valid_counts": [
+            26,
+            26,
+            26,
+            26,
+            26
+          ],
+          "pooled_mean": 3.819509091894007,
+          "status": "verified"
+        }
+      }
+    },
+    "Angle relative L2": {
+      "n": 12,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.7349761113937722,
+          "sd": 0.0458939112950193,
+          "runs": 5,
+          "run_means": [
+            0.6791361587854,
+            0.6962801204725072,
+            0.7594493881489868,
+            0.7505627225892509,
+            0.789452166972716
+          ],
+          "valid_counts": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "pooled_mean": 0.7349761113937722,
+          "status": "verified"
+        }
+      }
+    },
+    "Distance relative L2": {
+      "n": 10,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.3127230918304698,
+          "sd": 0.01694886309909212,
+          "runs": 5,
+          "run_means": [
+            0.323137423828924,
+            0.30367638025602245,
+            0.3331363674212575,
+            0.2894866119874441,
+            0.3141786756587011
+          ],
+          "valid_counts": [
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "pooled_mean": 0.3127230918304698,
+          "status": "verified"
+        }
+      }
+    },
+    "Vector relative L2": {
+      "n": 8,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.5289467615304035,
+          "sd": 0.1198790020857403,
+          "runs": 5,
+          "run_means": [
+            0.5350714339246456,
+            0.5841769955355007,
+            0.6457137433575648,
+            0.5514604082216584,
+            0.3283112266126481
+          ],
+          "valid_counts": [
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "pooled_mean": 0.5289467615304035,
+          "status": "verified"
+        }
+      }
+    },
+    "Map-free rotation": {
+      "n": 30,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 31.751259176673464,
+          "sd": 3.519598994332064,
+          "runs": 5,
+          "run_means": [
+            33.478769762586744,
+            34.216698957305915,
+            35.088428216725504,
+            27.279242668982114,
+            28.693156277767038
+          ],
+          "valid_counts": [
+            30,
+            29,
+            27,
+            28,
+            30
+          ],
+          "pooled_mean": 31.726725052469256,
+          "status": "verified"
+        }
+      }
+    },
+    "Map-free translation": {
+      "n": 30,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 185.05946947521593,
+          "sd": 14.783365505426932,
+          "runs": 5,
+          "run_means": [
+            207.2652236492602,
+            191.27395282689218,
+            169.10960784725577,
+            176.55238392355474,
+            181.09617912911673
+          ],
+          "valid_counts": [
+            30,
+            29,
+            27,
+            28,
+            30
+          ],
+          "pooled_mean": 185.46675609074043,
+          "status": "verified"
+        }
+      }
+    },
+    "Map-free direction": {
+      "n": 30,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 27.46593308289483,
+          "sd": 2.9483253045424993,
+          "runs": 5,
+          "run_means": [
+            28.514565629020638,
+            30.73431634326685,
+            28.128452268755556,
+            27.229131743857376,
+            22.723199429573715
+          ],
+          "valid_counts": [
+            30,
+            29,
+            27,
+            28,
+            30
+          ],
+          "pooled_mean": 27.432722401367887,
+          "status": "verified"
+        }
+      }
+    },
+    "GP focal MAPE": {
+      "n": 36,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 28.39051384379509,
+          "sd": 0.91448292339646,
+          "runs": 5,
+          "run_means": [
+            27.473272062139245,
+            28.800997982052664,
+            27.46318232548701,
+            29.58033572330447,
+            28.63478112599206
+          ],
+          "valid_counts": [
+            36,
+            36,
+            36,
+            36,
+            36
+          ],
+          "pooled_mean": 28.39051384379509,
+          "status": "verified"
+        }
+      }
+    },
+    "GP principal error": {
+      "n": 24,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 56.05041310924183,
+          "sd": 1.8886133404402474,
+          "runs": 5,
+          "run_means": [
+            57.29651017852344,
+            54.26167831175129,
+            54.199956167646725,
+            55.97663186954003,
+            58.517289018747675
+          ],
+          "valid_counts": [
+            24,
+            24,
+            24,
+            24,
+            24
+          ],
+          "pooled_mean": 56.05041310924183,
+          "status": "verified"
+        }
+      }
+    },
+    "Depth MAE": {
+      "n": 12,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.9274776046242978,
+          "sd": 0.024190307524201943,
+          "runs": 5,
+          "run_means": [
+            0.9481737685037983,
+            0.928293483340078,
+            0.9530913616385724,
+            0.9124353272219499,
+            0.8953940824170907
+          ],
+          "valid_counts": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "pooled_mean": 0.9274776046242978,
+          "status": "verified"
+        }
+      }
+    },
+    "Depth RMSE": {
+      "n": 12,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.9726016022162631,
+          "sd": 0.02437655344998746,
+          "runs": 5,
+          "run_means": [
+            0.9918544612545345,
+            0.9711522776775667,
+            1.0021174367389052,
+            0.9515251791839825,
+            0.9463586562263265
+          ],
+          "valid_counts": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "pooled_mean": 0.9726016022162631,
+          "status": "verified"
+        }
+      }
+    },
+    "Depth AbsRel": {
+      "n": 12,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.2993912941797416,
+          "sd": 0.005550260262926376,
+          "runs": 5,
+          "run_means": [
+            0.3030030752399806,
+            0.30094784196432434,
+            0.3050630194723512,
+            0.291070241614237,
+            0.29687229260781484
+          ],
+          "valid_counts": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "pooled_mean": 0.2993912941797416,
+          "status": "verified"
+        }
+      }
+    },
+    "Displacement MAE": {
+      "n": 40,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 1.3090002654619481,
+          "sd": 0.05042318830843005,
+          "runs": 5,
+          "run_means": [
+            1.297500315915722,
+            1.3800002531282114,
+            1.3375001965844282,
+            1.2525002564157888,
+            1.2775003052655907
+          ],
+          "valid_counts": [
+            40,
+            40,
+            40,
+            40,
+            40
+          ],
+          "pooled_mean": 1.3090002654619481,
+          "status": "verified"
+        }
+      }
+    },
+    "GP rotation": {
+      "n": 24,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 2.712601711904519,
+          "sd": 0.3591221248775612,
+          "runs": 5,
+          "run_means": [
+            2.6531088609065017,
+            2.852713053655186,
+            2.1474648968723438,
+            2.7876101761186476,
+            3.1221115719699157
+          ],
+          "valid_counts": [
+            24,
+            24,
+            24,
+            24,
+            24
+          ],
+          "pooled_mean": 2.7126017119045187,
+          "status": "verified"
+        }
+      }
+    },
+    "GP translation": {
+      "n": 24,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 10.137207483069597,
+          "sd": 0.9770074698105167,
+          "runs": 5,
+          "run_means": [
+            9.99586254984521,
+            8.81777354142564,
+            9.676866728603299,
+            11.101382710703934,
+            11.094151884769898
+          ],
+          "valid_counts": [
+            24,
+            24,
+            24,
+            24,
+            24
+          ],
+          "pooled_mean": 10.137207483069595,
+          "status": "verified"
+        }
+      }
+    },
+    "Scale MAPE": {
+      "n": 44,
+      "dp": 2,
+      "models": {
+        "gemini4argon": {
+          "mean": 2.2065559475241043,
+          "sd": 0.0897194391268549,
+          "runs": 5,
+          "run_means": [
+            2.2050649580562895,
+            2.1873547433554674,
+            2.358491790230725,
+            2.1490104379975135,
+            2.132857807980525
+          ],
+          "valid_counts": [
+            44,
+            44,
+            44,
+            44,
+            44
+          ],
+          "pooled_mean": 2.206555947524104,
+          "status": "verified"
+        }
+      }
+    },
+    "Scale judgment Pass@1": {
+      "n": 12,
+      "dp": 1,
+      "models": {
+        "gemini4argon": {
+          "mean": 100.0,
+          "sd": 0.0,
+          "runs": 5,
+          "run_means": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+          ],
+          "valid_counts": [
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "pooled_mean": 100.0,
+          "status": "verified"
+        }
+      }
+    },
+    "Numerical AbsRel": {
+      "n": 27,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.16904647201676343,
+          "sd": 0.02306366539988271,
+          "runs": 5,
+          "run_means": [
+            0.1605331919433569,
+            0.20785660751131213,
+            0.16749284264853495,
+            0.14650394087117125,
+            0.16284577710944195
+          ],
+          "valid_counts": [
+            18,
+            15,
+            16,
+            17,
+            18
+          ],
+          "pooled_mean": 0.16796575039055395,
+          "status": "verified"
+        }
+      }
+    },
+    "BBox--GT box IoU": {
+      "n": 70,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.4840939942209365,
+          "sd": 0.011896511014378964,
+          "runs": 5,
+          "run_means": [
+            0.49713089436493413,
+            0.4880068923093228,
+            0.46473519745948605,
+            0.4840391858505707,
+            0.4865578011203689
+          ],
+          "valid_counts": [
+            70,
+            70,
+            70,
+            70,
+            70
+          ],
+          "pooled_mean": 0.4840939942209365,
+          "status": "verified"
+        }
+      }
+    },
+    "BBox--GT mask IoU": {
+      "n": 70,
+      "dp": 3,
+      "models": {
+        "gemini4argon": {
+          "mean": 0.3559407377409448,
+          "sd": 0.009393846907985335,
+          "runs": 5,
+          "run_means": [
+            0.36571227877893564,
+            0.3593344978832478,
+            0.34235816221249804,
+            0.3506084634450885,
+            0.36169028638495404
+          ],
+          "valid_counts": [
+            70,
+            70,
+            70,
+            70,
+            70
+          ],
+          "pooled_mean": 0.3559407377409448,
+          "status": "verified"
+        }
+      }
+    },
+    "BBox success@0.5": {
+      "n": 70,
+      "dp": 1,
+      "models": {
+        "gemini4argon": {
+          "mean": 56.285714285714285,
+          "sd": 2.166535841157587,
+          "runs": 5,
+          "run_means": [
+            57.142857142857146,
+            55.714285714285715,
+            57.142857142857146,
+            52.857142857142854,
+            58.57142857142857
+          ],
+          "valid_counts": [
+            70,
+            70,
+            70,
+            70,
+            70
+          ],
+          "pooled_mean": 56.285714285714285,
+          "status": "verified"
+        }
+      }
+    },
+    "Contact-point validity": {
+      "n": 70,
+      "dp": 1,
+      "models": {
+        "gemini4argon": {
+          "mean": 59.714285714285715,
+          "sd": 1.1952286093343953,
+          "runs": 5,
+          "run_means": [
+            58.57142857142857,
+            60.0,
+            58.57142857142857,
+            61.42857142857143,
+            60.0
+          ],
+          "valid_counts": [
+            70,
+            70,
+            70,
+            70,
+            70
+          ],
+          "pooled_mean": 59.714285714285715,
+          "status": "verified"
+        }
+      }
+    },
+    "Spatial Native Pass@1": {
+      "n": 220,
+      "dp": 1,
+      "models": {
+        "gemini4argon": {
+          "mean": 71.63636363636363,
+          "sd": 0.6893523130955935,
+          "runs": 5,
+          "run_means": [
+            70.9090909090909,
+            72.27272727272727,
+            72.27272727272727,
+            70.9090909090909,
+            71.81818181818181
+          ],
+          "valid_counts": [
+            220,
+            220,
+            220,
+            220,
+            220
+          ],
+          "pooled_mean": 71.63636363636364,
+          "status": "verified",
+          "display": "71.6 \u00b1 0.7"
+        }
+      }
+    },
+    "Categorical Pass@1": {
+      "n": 183,
+      "dp": 1,
+      "models": {
+        "gemini4argon": {
+          "mean": 84.15300546448087,
+          "sd": 1.2815343606074943,
+          "runs": 5,
+          "run_means": [
+            83.06010928961749,
+            85.79234972677595,
+            85.24590163934427,
+            83.06010928961749,
+            83.60655737704919
+          ],
+          "valid_counts": [
+            183,
+            183,
+            183,
+            183,
+            183
+          ],
+          "pooled_mean": 84.15300546448087,
+          "status": "verified"
+        }
+      }
+    }
+  },
+  "sources": {
+    "w2_3dsrbench": {
+      "native": {
+        "gemini4argon": {
+          "mean": 88.0,
+          "sd": 1.4142135623730951,
+          "runs": 5,
+          "run_means": [
+            86.0,
+            90.0,
+            88.0,
+            88.0,
+            88.0
+          ],
+          "valid_counts": [
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "pooled_mean": 88.0,
+          "status": "verified"
+        }
+      }
+    },
+    "w2_bop_ask": {
+      "native": {
+        "gemini4argon": {
+          "mean": 98.0,
+          "sd": 2.7386127875258306,
+          "runs": 5,
+          "run_means": [
+            100.0,
+            100.0,
+            100.0,
+            95.0,
+            95.0
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 98.0,
+          "status": "verified"
+        }
+      }
+    },
+    "w2_mindcube": {
+      "native": {
+        "gemini4argon": {
+          "mean": 93.2,
+          "sd": 1.7888543819998317,
+          "runs": 5,
+          "run_means": [
+            94.0,
+            90.0,
+            94.0,
+            94.0,
+            94.0
+          ],
+          "valid_counts": [
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "pooled_mean": 93.2,
+          "status": "verified"
+        }
+      }
+    },
+    "w2_mmsi_bench": {
+      "native": {
+        "gemini4argon": {
+          "mean": 72.0,
+          "sd": 5.70087712549569,
+          "runs": 5,
+          "run_means": [
+            65.0,
+            75.0,
+            70.0,
+            80.0,
+            70.0
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 72.0,
+          "status": "verified"
+        }
+      }
+    },
+    "w2_robospatial": {
+      "native": {
+        "gemini4argon": {
+          "mean": 56.666666666666664,
+          "sd": 2.3570226039551576,
+          "runs": 5,
+          "run_means": [
+            60.0,
+            56.666666666666664,
+            56.666666666666664,
+            53.333333333333336,
+            56.666666666666664
+          ],
+          "valid_counts": [
+            30,
+            30,
+            30,
+            30,
+            30
+          ],
+          "pooled_mean": 56.666666666666664,
+          "status": "verified"
+        }
+      }
+    },
+    "w2_vsi_bench": {
+      "native": {
+        "gemini4argon": {
+          "mean": 32.0,
+          "sd": 2.8284271247461903,
+          "runs": 5,
+          "run_means": [
+            30.0,
+            34.0,
+            34.0,
+            28.0,
+            34.0
+          ],
+          "valid_counts": [
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "pooled_mean": 32.0,
+          "status": "verified"
+        }
+      }
+    },
+    "w5_ragnet": {
+      "bbox_iou": {
+        "gemini4argon": {
+          "mean": 0.3071863284254499,
+          "sd": 0.04977229636366584,
+          "runs": 5,
+          "run_means": [
+            0.382896083432461,
+            0.3016820126092628,
+            0.2587388107759279,
+            0.26835208278659467,
+            0.32426265252300307
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 0.3071863284254499,
+          "status": "verified"
+        }
+      },
+      "mask_iou": {
+        "gemini4argon": {
+          "mean": 0.2425717194987839,
+          "sd": 0.04554627929764346,
+          "runs": 5,
+          "run_means": [
+            0.31281095094106026,
+            0.24286751572204693,
+            0.19833693461712712,
+            0.2063819635214549,
+            0.2524612326922302
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 0.2425717194987839,
+          "status": "verified"
+        }
+      },
+      "point_hit": {
+        "gemini4argon": {
+          "mean": 39.0,
+          "sd": 4.183300132670378,
+          "runs": 5,
+          "run_means": [
+            45.0,
+            35.0,
+            35.0,
+            40.0,
+            40.0
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 39.0,
+          "status": "verified"
+        }
+      },
+      "bbox_success_iou50": {
+        "gemini4argon": {
+          "mean": 32.0,
+          "sd": 5.70087712549569,
+          "runs": 5,
+          "run_means": [
+            40.0,
+            30.0,
+            30.0,
+            25.0,
+            35.0
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 32.0,
+          "status": "verified"
+        }
+      }
+    },
+    "w5_reasonaff": {
+      "bbox_iou": {
+        "gemini4argon": {
+          "mean": 0.2410547292891783,
+          "sd": 0.02925414216817931,
+          "runs": 5,
+          "run_means": [
+            0.20064206672499496,
+            0.2536295256740274,
+            0.22648018102308898,
+            0.2783867950879702,
+            0.24613507793580994
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 0.24105472928917832,
+          "status": "verified"
+        }
+      },
+      "mask_iou": {
+        "gemini4argon": {
+          "mean": 0.1567123279081069,
+          "sd": 0.02124159183526782,
+          "runs": 5,
+          "run_means": [
+            0.12261627997711398,
+            0.16961096227110578,
+            0.15006376376356845,
+            0.1753258923833187,
+            0.16594474114542765
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 0.1567123279081069,
+          "status": "verified"
+        }
+      },
+      "point_hit": {
+        "gemini4argon": {
+          "mean": 31.0,
+          "sd": 4.183300132670378,
+          "runs": 5,
+          "run_means": [
+            25.0,
+            35.0,
+            30.0,
+            35.0,
+            30.0
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 31.0,
+          "status": "verified"
+        }
+      },
+      "bbox_success_iou50": {
+        "gemini4argon": {
+          "mean": 24.0,
+          "sd": 2.23606797749979,
+          "runs": 5,
+          "run_means": [
+            20.0,
+            25.0,
+            25.0,
+            25.0,
+            25.0
+          ],
+          "valid_counts": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "pooled_mean": 24.0,
+          "status": "verified"
+        }
+      }
+    },
+    "w5_umd": {
+      "bbox_iou": {
+        "gemini4argon": {
+          "mean": 0.7640586147057664,
+          "sd": 0.006306207295188878,
+          "runs": 5,
+          "run_means": [
+            0.7709466534132089,
+            0.768475056532893,
+            0.7609027995394562,
+            0.764932181734955,
+            0.7550363823083187
+          ],
+          "valid_counts": [
+            30,
+            30,
+            30,
+            30,
+            30
+          ],
+          "pooled_mean": 0.7640586147057664,
+          "status": "verified"
+        }
+      },
+      "mask_iou": {
+        "gemini4argon": {
+          "mean": 0.5643390231242774,
+          "sd": 0.0014482030861604793,
+          "runs": 5,
+          "run_means": [
+            0.563043829872067,
+            0.563461509732143,
+            0.5665685795753651,
+            0.5636145107686908,
+            0.5650066856731208
+          ],
+          "valid_counts": [
+            30,
+            30,
+            30,
+            30,
+            30
+          ],
+          "pooled_mean": 0.5643390231242774,
+          "status": "verified"
+        }
+      },
+      "point_hit": {
+        "gemini4argon": {
+          "mean": 92.66666666666666,
+          "sd": 1.4907119849998578,
+          "runs": 5,
+          "run_means": [
+            90.0,
+            93.33333333333333,
+            93.33333333333333,
+            93.33333333333333,
+            93.33333333333333
+          ],
+          "valid_counts": [
+            30,
+            30,
+            30,
+            30,
+            30
+          ],
+          "pooled_mean": 92.66666666666667,
+          "status": "verified"
+        }
+      },
+      "bbox_success_iou50": {
+        "gemini4argon": {
+          "mean": 94.0,
+          "sd": 2.788866755113588,
+          "runs": 5,
+          "run_means": [
+            93.33333333333333,
+            93.33333333333333,
+            96.66666666666667,
+            90.0,
+            96.66666666666667
+          ],
+          "valid_counts": [
+            30,
+            30,
+            30,
+            30,
+            30
+          ],
+          "pooled_mean": 94.0,
+          "status": "verified"
+        }
+      }
+    }
+  },
+  "polygon": {
+    "w5_ragnet": 0.14031445249877814,
+    "w5_reasonaff": 0.3070613820547487,
+    "w5_umd": 0.7307589899769332,
+    "overall": 0.4410040912911219
+  },
+  "rates": {
+    "alfred_official_visual": {
+      "n": 20,
+      "success": 14,
+      "rate": 70.0
+    },
+    "alfworld_visual": {
+      "n": 20,
+      "success": 16,
+      "rate": 80.0
+    },
+    "calvin": {
+      "n": 10,
+      "success": 4,
+      "rate": 40.0
+    },
+    "capx_behavior1k": {
+      "n": 5,
+      "success": 0,
+      "rate": 0.0
+    },
+    "capx_libero_pro": {
+      "n": 10,
+      "success": 8,
+      "rate": 80.0
+    },
+    "capx_robosuite": {
+      "n": 5,
+      "success": 5,
+      "rate": 100.0
+    },
+    "cliport": {
+      "n": 18,
+      "success": 7,
+      "rate": 38.888888888888886
+    },
+    "discoveryworld": {
+      "n": 10,
+      "success": 6,
+      "rate": 60.0
+    },
+    "humanclaw": {
+      "n": 13,
+      "success": 2,
+      "rate": 15.384615384615385
+    },
+    "maniskill": {
+      "n": 9,
+      "success": 5,
+      "rate": 55.55555555555556
+    },
+    "rlbench": {
+      "n": 10,
+      "success": 8,
+      "rate": 80.0
+    },
+    "robocasa": {
+      "n": 10,
+      "success": 2,
+      "rate": 20.0
+    },
+    "robocasa365": {
+      "n": 10,
+      "success": 1,
+      "rate": 10.0
+    },
+    "robotwin2": {
+      "n": 50,
+      "success": 14,
+      "rate": 28.0
+    },
+    "robowits": {
+      "n": 10,
+      "success": 1,
+      "rate": 10.0
+    },
+    "scienceworld_text": {
+      "n": 73,
+      "success": 52,
+      "rate": 71.23287671232876
+    },
+    "vimabench": {
+      "n": 10,
+      "success": 9,
+      "rate": 90.0
+    },
+    "virtualhome_symbolic": {
+      "n": 21,
+      "success": 20,
+      "rate": 95.23809523809524
+    },
+    "vlabench": {
+      "n": 25,
+      "success": 16,
+      "rate": 64.0
+    }
+  },
+  "trace": [
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "ALL",
+      "metric": "point_count",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "6.482142857142857",
+      "variance_population": "0.8568239795918368",
+      "variance_sample": "0.8724025974025974",
+      "sd_sample": "0.9340249447432319",
+      "complete_cases": "56",
+      "case_equal_mean": "6.482142857142857",
+      "balanced_round_mean": "6.482142857142857",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[6.482142857142857]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "ALL",
+      "metric": "trace_2d_frechet",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.13597846646527095",
+      "variance_population": "0.01250864221073932",
+      "variance_sample": "0.0127360720691164",
+      "sd_sample": "0.11285420713963835",
+      "complete_cases": "56",
+      "case_equal_mean": "0.13597846646527095",
+      "balanced_round_mean": "0.13597846646527095",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.13597846646527095]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "ALL",
+      "metric": "trace_2d_hausdorff",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.13326037456386441",
+      "variance_population": "0.01177206218728645",
+      "variance_sample": "0.011986099681600748",
+      "sd_sample": "0.1094810471341992",
+      "complete_cases": "56",
+      "case_equal_mean": "0.13326037456386441",
+      "balanced_round_mean": "0.13326037456386441",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.13326037456386441]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "ALL",
+      "metric": "trace_2d_mae",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.06345579745746883",
+      "variance_population": "0.0028858776638627415",
+      "variance_sample": "0.002938348166842064",
+      "sd_sample": "0.05420653251077829",
+      "complete_cases": "56",
+      "case_equal_mean": "0.06345579745746883",
+      "balanced_round_mean": "0.06345579745746883",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.06345579745746883]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "ALL",
+      "metric": "trace_2d_rmse",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.1067244476871565",
+      "variance_population": "0.00714161098441232",
+      "variance_sample": "0.007271458456856181",
+      "sd_sample": "0.0852728471253082",
+      "complete_cases": "56",
+      "case_equal_mean": "0.1067244476871565",
+      "balanced_round_mean": "0.1067244476871565",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.1067244476871565]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "pick&place",
+      "metric": "point_count",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "6.565217391304348",
+      "variance_population": "0.8979206049149339",
+      "variance_sample": "0.9178743961352657",
+      "sd_sample": "0.9580576162920817",
+      "complete_cases": "46",
+      "case_equal_mean": "6.565217391304348",
+      "balanced_round_mean": "6.565217391304348",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[6.565217391304348]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "pick&place",
+      "metric": "trace_2d_frechet",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.11770454417590213",
+      "variance_population": "0.00666086244749672",
+      "variance_sample": "0.006808881612996647",
+      "sd_sample": "0.0825159476283018",
+      "complete_cases": "46",
+      "case_equal_mean": "0.11770454417590213",
+      "balanced_round_mean": "0.11770454417590213",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.11770454417590213]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "pick&place",
+      "metric": "trace_2d_hausdorff",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.11439556258914887",
+      "variance_population": "0.00564126487067862",
+      "variance_sample": "0.005766626312249256",
+      "sd_sample": "0.07593830596115017",
+      "complete_cases": "46",
+      "case_equal_mean": "0.11439556258914887",
+      "balanced_round_mean": "0.11439556258914887",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.11439556258914887]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "pick&place",
+      "metric": "trace_2d_mae",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.05489329784177244",
+      "variance_population": "0.001436892506362142",
+      "variance_sample": "0.0014688234509479673",
+      "sd_sample": "0.03832523256221634",
+      "complete_cases": "46",
+      "case_equal_mean": "0.05489329784177244",
+      "balanced_round_mean": "0.05489329784177244",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.05489329784177244]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "pick&place",
+      "metric": "trace_2d_rmse",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.09390698711428305",
+      "variance_population": "0.003917906290845712",
+      "variance_sample": "0.004004970875086727",
+      "sd_sample": "0.06328483921988526",
+      "complete_cases": "46",
+      "case_equal_mean": "0.09390698711428305",
+      "balanced_round_mean": "0.09390698711428305",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.09390698711428305]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "push&pull",
+      "metric": "point_count",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "6.1",
+      "variance_population": "0.49",
+      "variance_sample": "0.5444444444444444",
+      "sd_sample": "0.7378647873726218",
+      "complete_cases": "10",
+      "case_equal_mean": "6.1",
+      "balanced_round_mean": "6.1",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[6.1]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "push&pull",
+      "metric": "trace_2d_frechet",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.22003850899636745",
+      "variance_population": "0.030806231686471234",
+      "variance_sample": "0.03422914631830137",
+      "sd_sample": "0.1850112059262935",
+      "complete_cases": "10",
+      "case_equal_mean": "0.22003850899636745",
+      "balanced_round_mean": "0.22003850899636745",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.22003850899636745]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "push&pull",
+      "metric": "trace_2d_hausdorff",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.22003850964755586",
+      "variance_population": "0.030806231913208762",
+      "variance_sample": "0.034229146570231954",
+      "sd_sample": "0.1850112066071457",
+      "complete_cases": "10",
+      "case_equal_mean": "0.22003850964755586",
+      "balanced_round_mean": "0.22003850964755586",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.22003850964755586]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "push&pull",
+      "metric": "trace_2d_mae",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.10284329568967224",
+      "variance_population": "0.007662578932897189",
+      "variance_sample": "0.008513976592107987",
+      "sd_sample": "0.09227121215258845",
+      "complete_cases": "10",
+      "case_equal_mean": "0.10284329568967224",
+      "balanced_round_mean": "0.10284329568967224",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.10284329568967224]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_2d",
+      "family": "push&pull",
+      "metric": "trace_2d_rmse",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.16568476632237433",
+      "variance_population": "0.017738611841781344",
+      "variance_sample": "0.019709568713090382",
+      "sd_sample": "0.1403907714669678",
+      "complete_cases": "10",
+      "case_equal_mean": "0.16568476632237433",
+      "balanced_round_mean": "0.16568476632237433",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.16568476632237433]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "derived_2d_frechet",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.13552579203886644",
+      "variance_population": "0.013752445104956811",
+      "variance_sample": "0.014002489561410572",
+      "sd_sample": "0.11833211551143068",
+      "complete_cases": "56",
+      "case_equal_mean": "0.13552579203886644",
+      "balanced_round_mean": "0.13552579203886644",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.13552579203886644]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "derived_2d_hausdorff",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.13272193651406322",
+      "variance_population": "0.012947215452715592",
+      "variance_sample": "0.013182619370037695",
+      "sd_sample": "0.11481558853238394",
+      "complete_cases": "56",
+      "case_equal_mean": "0.13272193651406322",
+      "balanced_round_mean": "0.13272193651406322",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.13272193651406322]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "derived_2d_mae",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.06749250462910693",
+      "variance_population": "0.0033111090092484427",
+      "variance_sample": "0.003371310991234778",
+      "sd_sample": "0.058062991580134574",
+      "complete_cases": "56",
+      "case_equal_mean": "0.06749250462910693",
+      "balanced_round_mean": "0.06749250462910693",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.06749250462910693]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "derived_2d_rmse",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.11519885736717177",
+      "variance_population": "0.008420872745832256",
+      "variance_sample": "0.008573979523029207",
+      "sd_sample": "0.09259578566559716",
+      "complete_cases": "56",
+      "case_equal_mean": "0.11519885736717177",
+      "balanced_round_mean": "0.11519885736717177",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.11519885736717177]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "end_distance_m",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.1280392321861593",
+      "variance_population": "0.02721796027953715",
+      "variance_sample": "0.027712832284619644",
+      "sd_sample": "0.16647171617010392",
+      "complete_cases": "56",
+      "case_equal_mean": "0.1280392321861593",
+      "balanced_round_mean": "0.1280392321861593",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.1280392321861593]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "max_collision_ratio",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.14355049336131803",
+      "variance_population": "0.018297085507175292",
+      "variance_sample": "0.018629759789123936",
+      "sd_sample": "0.13649087804364046",
+      "complete_cases": "56",
+      "case_equal_mean": "0.14355049336131803",
+      "balanced_round_mean": "0.14355049336131803",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.14355049336131803]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "native_success",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.42857142857142855",
+      "variance_population": "0.24489795918367346",
+      "variance_sample": "0.24935064935064935",
+      "sd_sample": "0.4993502271458874",
+      "complete_cases": "56",
+      "case_equal_mean": "0.42857142857142855",
+      "balanced_round_mean": "0.42857142857142855",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.42857142857142855]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "point_count",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "6.375",
+      "variance_population": "0.8058035714285714",
+      "variance_sample": "0.8204545454545454",
+      "sd_sample": "0.9057894597833127",
+      "complete_cases": "56",
+      "case_equal_mean": "6.375",
+      "balanced_round_mean": "6.375",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[6.375]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "start_distance_m",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.19158587955149892",
+      "variance_population": "0.03989357961825047",
+      "variance_sample": "0.04061891742949139",
+      "sd_sample": "0.2015413541422489",
+      "complete_cases": "56",
+      "case_equal_mean": "0.19158587955149892",
+      "balanced_round_mean": "0.19158587955149892",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.19158587955149892]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "trace_3d_frechet",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.39497344342193436",
+      "variance_population": "0.04528626961378163",
+      "variance_sample": "0.046109656334032204",
+      "sd_sample": "0.2147315913740505",
+      "complete_cases": "56",
+      "case_equal_mean": "0.39497344342193436",
+      "balanced_round_mean": "0.39497344342193436",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.39497344342193436]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "trace_3d_hausdorff",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.39218020078810517",
+      "variance_population": "0.044711493027207914",
+      "variance_sample": "0.04552442926406624",
+      "sd_sample": "0.21336454547104644",
+      "complete_cases": "56",
+      "case_equal_mean": "0.39218020078810517",
+      "balanced_round_mean": "0.39218020078810517",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.39218020078810517]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "trace_3d_mae",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.14322105036782368",
+      "variance_population": "0.007567347373719274",
+      "variance_sample": "0.007704935507786896",
+      "sd_sample": "0.08777776203450904",
+      "complete_cases": "56",
+      "case_equal_mean": "0.14322105036782368",
+      "balanced_round_mean": "0.14322105036782368",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.14322105036782368]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "ALL",
+      "metric": "trace_3d_rmse",
+      "expected_n": "56",
+      "n": "56",
+      "mean": "0.30974733510187696",
+      "variance_population": "0.032540626956226365",
+      "variance_sample": "0.033132274719066844",
+      "sd_sample": "0.18202273132514754",
+      "complete_cases": "56",
+      "case_equal_mean": "0.30974733510187696",
+      "balanced_round_mean": "0.30974733510187696",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.30974733510187696]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "derived_2d_frechet",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.11419171969527783",
+      "variance_population": "0.006544839942090333",
+      "variance_sample": "0.006690280829692341",
+      "sd_sample": "0.08179413689068638",
+      "complete_cases": "46",
+      "case_equal_mean": "0.11419171969527783",
+      "balanced_round_mean": "0.11419171969527783",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.11419171969527783]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "derived_2d_hausdorff",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.11077833175703751",
+      "variance_population": "0.005416837799866363",
+      "variance_sample": "0.005537211973196727",
+      "sd_sample": "0.07441244501558007",
+      "complete_cases": "46",
+      "case_equal_mean": "0.11077833175703751",
+      "balanced_round_mean": "0.11077833175703751",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.11077833175703751]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "derived_2d_mae",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.05899210837062286",
+      "variance_population": "0.0015780501879447168",
+      "variance_sample": "0.0016131179698990437",
+      "sd_sample": "0.040163639898533145",
+      "complete_cases": "46",
+      "case_equal_mean": "0.05899210837062286",
+      "balanced_round_mean": "0.05899210837062286",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.05899210837062286]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "derived_2d_rmse",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.10235547375581834",
+      "variance_population": "0.004665314348554668",
+      "variance_sample": "0.004768988000744772",
+      "sd_sample": "0.06905785980425959",
+      "complete_cases": "46",
+      "case_equal_mean": "0.10235547375581834",
+      "balanced_round_mean": "0.10235547375581834",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.10235547375581834]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "end_distance_m",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.09189139693696151",
+      "variance_population": "0.02074717301999408",
+      "variance_sample": "0.021208221309327282",
+      "sd_sample": "0.14563042714119628",
+      "complete_cases": "46",
+      "case_equal_mean": "0.09189139693696151",
+      "balanced_round_mean": "0.09189139693696151",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.09189139693696151]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "max_collision_ratio",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.1474441581994019",
+      "variance_population": "0.01940990177511283",
+      "variance_sample": "0.01984123292567089",
+      "sd_sample": "0.14085891141731463",
+      "complete_cases": "46",
+      "case_equal_mean": "0.1474441581994019",
+      "balanced_round_mean": "0.1474441581994019",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.1474441581994019]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "native_success",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.4782608695652174",
+      "variance_population": "0.2495274102079395",
+      "variance_sample": "0.25507246376811593",
+      "sd_sample": "0.5050469916434667",
+      "complete_cases": "46",
+      "case_equal_mean": "0.4782608695652174",
+      "balanced_round_mean": "0.4782608695652174",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.4782608695652174]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "point_count",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "6.434782608695652",
+      "variance_population": "0.7674858223062382",
+      "variance_sample": "0.7845410628019324",
+      "sd_sample": "0.8857432262241312",
+      "complete_cases": "46",
+      "case_equal_mean": "6.434782608695652",
+      "balanced_round_mean": "6.434782608695652",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[6.434782608695652]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "start_distance_m",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.1698858517090011",
+      "variance_population": "0.04188706610757123",
+      "variance_sample": "0.04281788979885059",
+      "sd_sample": "0.20692484094194827",
+      "complete_cases": "46",
+      "case_equal_mean": "0.1698858517090011",
+      "balanced_round_mean": "0.1698858517090011",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.1698858517090011]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "trace_3d_frechet",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.36926622510604235",
+      "variance_population": "0.03716162414962532",
+      "variance_sample": "0.037987438019617",
+      "sd_sample": "0.194903663433033",
+      "complete_cases": "46",
+      "case_equal_mean": "0.36926622510604235",
+      "balanced_round_mean": "0.36926622510604235",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.36926622510604235]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "trace_3d_hausdorff",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.3673845842970881",
+      "variance_population": "0.03753632193682587",
+      "variance_sample": "0.038370462424310886",
+      "sd_sample": "0.19588379826905258",
+      "complete_cases": "46",
+      "case_equal_mean": "0.3673845842970881",
+      "balanced_round_mean": "0.3673845842970881",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.3673845842970881]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "trace_3d_mae",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.1288492093267648",
+      "variance_population": "0.005415135694512714",
+      "variance_sample": "0.0055354720432796625",
+      "sd_sample": "0.0744007529752197",
+      "complete_cases": "46",
+      "case_equal_mean": "0.1288492093267648",
+      "balanced_round_mean": "0.1288492093267648",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.1288492093267648]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "pick&place",
+      "metric": "trace_3d_rmse",
+      "expected_n": "46",
+      "n": "46",
+      "mean": "0.28106947810105654",
+      "variance_population": "0.025928009360246185",
+      "variance_sample": "0.026504187346029436",
+      "sd_sample": "0.16280106678406453",
+      "complete_cases": "46",
+      "case_equal_mean": "0.28106947810105654",
+      "balanced_round_mean": "0.28106947810105654",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.28106947810105654]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "derived_2d_frechet",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.23366252481937408",
+      "variance_population": "0.035182954376607074",
+      "variance_sample": "0.039092171529563416",
+      "sd_sample": "0.19771740320357087",
+      "complete_cases": "10",
+      "case_equal_mean": "0.23366252481937408",
+      "balanced_round_mean": "0.23366252481937408",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.23366252481937408]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "derived_2d_hausdorff",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.23366251839638139",
+      "variance_population": "0.03518295135231128",
+      "variance_sample": "0.03909216816923476",
+      "sd_sample": "0.19771739470576372",
+      "complete_cases": "10",
+      "case_equal_mean": "0.23366251839638139",
+      "balanced_round_mean": "0.23366251839638139",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.23366251839638139]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "derived_2d_mae",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.10659432741813361",
+      "variance_population": "0.009421846053685387",
+      "variance_sample": "0.010468717837428207",
+      "sd_sample": "0.10231675247694391",
+      "complete_cases": "10",
+      "case_equal_mean": "0.10659432741813361",
+      "balanced_round_mean": "0.10659432741813361",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.10659432741813361]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "derived_2d_rmse",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.17427842197939752",
+      "variance_population": "0.021447264906632447",
+      "variance_sample": "0.023830294340702718",
+      "sd_sample": "0.15437063950344546",
+      "complete_cases": "10",
+      "case_equal_mean": "0.17427842197939752",
+      "balanced_round_mean": "0.17427842197939752",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.17427842197939752]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "end_distance_m",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.2943192743324692",
+      "variance_population": "0.023323865688522207",
+      "variance_sample": "0.02591540632058023",
+      "sd_sample": "0.16098262738749244",
+      "complete_cases": "10",
+      "case_equal_mean": "0.2943192743324692",
+      "balanced_round_mean": "0.2943192743324692",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.2943192743324692]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "max_collision_ratio",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.12563963510613219",
+      "variance_population": "0.012787592952217161",
+      "variance_sample": "0.014208436613574623",
+      "sd_sample": "0.11919914686596805",
+      "complete_cases": "10",
+      "case_equal_mean": "0.12563963510613219",
+      "balanced_round_mean": "0.12563963510613219",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.12563963510613219]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "native_success",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.2",
+      "variance_population": "0.16",
+      "variance_sample": "0.17777777777777778",
+      "sd_sample": "0.4216370213557839",
+      "complete_cases": "10",
+      "case_equal_mean": "0.2",
+      "balanced_round_mean": "0.2",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.2]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "point_count",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "6.1",
+      "variance_population": "0.89",
+      "variance_sample": "0.9888888888888889",
+      "sd_sample": "0.9944289260117533",
+      "complete_cases": "10",
+      "case_equal_mean": "6.1",
+      "balanced_round_mean": "6.1",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[6.1]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "start_distance_m",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.29140600762698887",
+      "variance_population": "0.018593384239887937",
+      "variance_sample": "0.020659315822097707",
+      "sd_sample": "0.14373348886775728",
+      "complete_cases": "10",
+      "case_equal_mean": "0.29140600762698887",
+      "balanced_round_mean": "0.29140600762698887",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.29140600762698887]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "trace_3d_frechet",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.5132266476750373",
+      "variance_population": "0.06563585749448624",
+      "variance_sample": "0.07292873054942915",
+      "sd_sample": "0.27005319948008233",
+      "complete_cases": "10",
+      "case_equal_mean": "0.5132266476750373",
+      "balanced_round_mean": "0.5132266476750373",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.5132266476750373]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "trace_3d_hausdorff",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.5062400366467835",
+      "variance_population": "0.061879449939876506",
+      "variance_sample": "0.06875494437764057",
+      "sd_sample": "0.26221164043123746",
+      "complete_cases": "10",
+      "case_equal_mean": "0.5062400366467835",
+      "balanced_round_mean": "0.5062400366467835",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.5062400366467835]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "trace_3d_mae",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.2093315191566944",
+      "variance_population": "0.012146797866001662",
+      "variance_sample": "0.01349644207333518",
+      "sd_sample": "0.11617418849871593",
+      "complete_cases": "10",
+      "case_equal_mean": "0.2093315191566944",
+      "balanced_round_mean": "0.2093315191566944",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.2093315191566944]"
+    },
+    {
+      "\ufeffmodel": "gemini4argon",
+      "benchmark": "w1_tracespatial_3d",
+      "family": "push&pull",
+      "metric": "trace_3d_rmse",
+      "expected_n": "10",
+      "n": "10",
+      "mean": "0.4416654773056507",
+      "variance_population": "0.04177314203730638",
+      "variance_sample": "0.046414602263673756",
+      "sd_sample": "0.21544048427274237",
+      "complete_cases": "10",
+      "case_equal_mean": "0.4416654773056507",
+      "balanced_round_mean": "0.4416654773056507",
+      "balanced_round_variance": "0.0",
+      "balanced_round_means": "[0.4416654773056507]"
+    }
+  ],
+  "scores": [
+    "18.5 \u00b1 1.8",
+    "105.6 \u00b1 9.6",
+    "71.6 \u00b1 0.7",
+    "0.169 \u00b1 0.023",
+    "0.356 \u00b1 0.009",
+    "0.441",
+    "70.1",
+    "44.0"
+  ],
+  "inputs": {
+    "gemini4argon-results-20261021.zip": "3b8ec1cdcf0b8aaeea978dcc4a1e172d8e4861eabf8afb0581ed69cf18b4a0d8",
+    "gemini4argon-case-study-20261021.zip": "a800cec978dfafabb4116e1158041ce5ad2df7c012003e5c176f8b1aba856377"
+  }
+}

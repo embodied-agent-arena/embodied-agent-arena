@@ -7,4 +7,4 @@
 | Failed-episode token share | 55.5–86.9%; Astra 55.5% | Sum observed input/output tokens; denominator only records with usage | planning.models | Execution appendix | Time & Tokens |
 | Recovery | Opus 5.5: 48/105 error episodes eventually complete | Native success after earlier execution error, exclude budget guards/timeouts | planning.models | Execution appendix | Error Recovery |
 | CALVIN progress | Opus 5/5,338 action calls; Gemini 0/5,501 action calls | Same sequence0526, per-record settings, native verifier and gateway traces | data/execution | Execution appendix | Execution explorer |
-| Representation | Polygon IoU greater for8/9 models | 70 identical task inputs; one polygon run vs repeated boxes | profiles | Existing Affordance appendix + report | Representation & Feedback |
+| Representation | Polygon IoU greater for9/10 models | 70 identical task inputs; one polygon run vs repeated boxes | profiles | Existing Affordance appendix + report | Representation & Feedback |

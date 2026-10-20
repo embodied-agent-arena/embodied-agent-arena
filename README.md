@@ -31,22 +31,23 @@ Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Yin
 
 ## Overview
 
-Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Claude Opus 5.5, DeepSeek 4.1 Flash-1017, Gemini 3.8 Flash, Qwen 3.8 Max, Qwen 3.5 397B-A17B, and Qwen 3.5 27B** on **1,000 cases across five robotic capabilities**: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. It combines 32 established sources with **GeoProbe**, our 168-case geometric-estimation benchmark. A minimal harness retains source-native observations and helpers while leaving task interpretation, reasoning, and action selection to the model.
+Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Claude Opus 5.5, DeepSeek 4.1 Flash-1017, Gemini 3.8 Flash, Gemini 4 Argon, Qwen 3.8 Max, Qwen 3.5 397B-A17B, and Qwen 3.5 27B** on **1,000 cases across five robotic capabilities**: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. It combines 32 established sources with **GeoProbe**, our 168-case geometric-estimation benchmark. A minimal harness retains source-native observations and helpers while leaving task interpretation, reasoning, and action selection to the model.
 
 ### Cross-Model Results
 
 <!-- BEGIN RESULT_TABLE -->
 | Model | Rot.&nbsp;↓ | Trans.&nbsp;↓ | Spatial&nbsp;↑ | AbsRel&nbsp;↓ | Box&nbsp;↑ | Polygon&nbsp;↑ | Plan&nbsp;↑ | Manip.&nbsp;↑ |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| GPT&#8209;6&nbsp;Astra | **17.2**&nbsp;±&nbsp;6.7 | **106.9**&nbsp;±&nbsp;36.0 | **69.4**&nbsp;±&nbsp;1.0 | 0.214&nbsp;±&nbsp;0.016 | 0.286&nbsp;±&nbsp;0.010 | 0.379 | **80.3** | 41.8 |
+| GPT&#8209;6&nbsp;Astra | **17.2**&nbsp;±&nbsp;6.7 | 106.9&nbsp;±&nbsp;36.0 | 69.4&nbsp;±&nbsp;1.0 | 0.214&nbsp;±&nbsp;0.016 | 0.286&nbsp;±&nbsp;0.010 | 0.379 | **80.3** | 41.8 |
 | GPT&#8209;6&nbsp;Sol | 27.0&nbsp;±&nbsp;1.5 | 151.9&nbsp;±&nbsp;6.2 | 60.7&nbsp;±&nbsp;2.5 | 0.273&nbsp;±&nbsp;0.016 | 0.264&nbsp;±&nbsp;0.010 | 0.325 | 44.6 | 19.8 |
 | Claude&nbsp;Fable&nbsp;5.1 | 24.2&nbsp;±&nbsp;8.3 | 116.6&nbsp;±&nbsp;42.6 | 62.0&nbsp;±&nbsp;4.6 | 0.185&nbsp;±&nbsp;0.011 | 0.284&nbsp;±&nbsp;0.013 | 0.328 | 63.7 | 24.7 |
 | Qwen&nbsp;3.8&nbsp;Max | 20.5&nbsp;±&nbsp;3.5 | 138.1&nbsp;±&nbsp;10.2 | 68.9&nbsp;±&nbsp;1.1 | 0.206&nbsp;±&nbsp;0.033 | 0.272&nbsp;±&nbsp;0.017 | 0.307 | 35.7 | 9.3 |
 | Gemini&nbsp;3.8&nbsp;Flash | 23.7&nbsp;±&nbsp;5.6 | 138.0&nbsp;±&nbsp;41.7 | 65.4&nbsp;±&nbsp;1.3 | **0.161**&nbsp;±&nbsp;0.028 | 0.251&nbsp;±&nbsp;0.081 | 0.291 | 48.4 | 18.7 |
 | Qwen&nbsp;3.5&nbsp;397B&#8209;A17B | 38.4&nbsp;±&nbsp;1.1 | 249.8&nbsp;±&nbsp;10.2 | 50.6&nbsp;±&nbsp;1.8 | 0.251&nbsp;±&nbsp;0.027 | 0.116&nbsp;±&nbsp;0.014 | 0.092 | 17.8 | 9.9 |
 | Qwen&nbsp;3.5&nbsp;27B | 38.4&nbsp;±&nbsp;3.6 | 213.7&nbsp;±&nbsp;12.6 | 48.0&nbsp;±&nbsp;0.9 | 0.288&nbsp;±&nbsp;0.023 | 0.013&nbsp;±&nbsp;0.006 | 0.051 | 19.1 | 11.0 |
-| Claude&nbsp;Opus&nbsp;5.5 | 23.4&nbsp;±&nbsp;3.7 | 135.8&nbsp;±&nbsp;12.7 | 67.5&nbsp;±&nbsp;5.1 | 0.184&nbsp;±&nbsp;0.040 | **0.311**&nbsp;±&nbsp;0.020 | **0.397** | 48.4 | **47.8** |
+| Claude&nbsp;Opus&nbsp;5.5 | 23.4&nbsp;±&nbsp;3.7 | 135.8&nbsp;±&nbsp;12.7 | 67.5&nbsp;±&nbsp;5.1 | 0.184&nbsp;±&nbsp;0.040 | 0.311&nbsp;±&nbsp;0.020 | 0.397 | 48.4 | **47.8** |
 | DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017 | 30.2&nbsp;±&nbsp;3.9 | 182.0&nbsp;±&nbsp;29.0 | 51.6&nbsp;±&nbsp;1.5 | 0.309&nbsp;±&nbsp;0.035 | 0.217&nbsp;±&nbsp;0.011 | 0.249 | 31.2 | 20.9 |
+| Gemini&nbsp;4&nbsp;Argon | 18.5&nbsp;±&nbsp;1.8 | **105.6**&nbsp;±&nbsp;9.6 | **71.6**&nbsp;±&nbsp;0.7 | 0.169&nbsp;±&nbsp;0.023 | **0.356**&nbsp;±&nbsp;0.009 | **0.441** | 70.1 | 44.0 |
 <!-- END RESULT_TABLE -->
 
 Mean ± run SD: five runs (Fable: three). Polygon, Planning, and Manipulation use one run.
@@ -55,15 +56,17 @@ Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent
 
 [Full Results & Evaluation Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv)
 
-[**Same Task. Nine Models.**](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) — Compare 11 fixed tasks with 99 execution records. Preview the 48 available recordings; each remaining cell links to its execution log.
+[**Same Task. Ten Models.**](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) — Compare 11 fixed tasks with 110 evaluation records. Preview the 59 available recordings; each remaining cell links to its recorded result.
 
 ![Benchmark construction: 1,000 cases, five capability domains, GeoProbe, and the unified evaluation harness](public/assets/construction.webp)
 
 ## Execution Analysis
 
-Across the same 157 Planning tasks, **19 defeat all nine models**. Combining their successes covers 138 tasks, only 12 more than Astra alone. Unsuccessful episodes consume **55.5–86.9% of recorded tokens** per model. Explore the [interactive comparisons](https://embodied-agent-arena.github.io/embodied-agent-arena/#technical-report) and [videos with action traces](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis), or read the [complete analysis and measurement definitions](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html).
+In the nine-model cohort with detailed execution logs, across the same 157 Planning tasks, **19 defeat all nine models**. Combining their successes covers 138 tasks, only 12 more than Astra alone. Unsuccessful episodes consume **55.5–86.9% of recorded tokens** per model. Explore the [interactive comparisons](https://embodied-agent-arena.github.io/embodied-agent-arena/#technical-report) and [videos with action traces](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis), or read the [complete analysis and measurement definitions](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html).
 
 ## News
+
+- **2026.10.21** — Added **Gemini 4 Argon** (`gemini-4-argon`) across all five domains. The manuscript, website, and downloadable results now compare **ten models**. Original model scores are unchanged; Argon’s per-round RGB and source budgets are documented in the manuscript.
 
 - **2026.10.20** — Compare [nine-model polygon predictions](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=W5-w5_ragnet-02#latest-cases) on identical images: region shape and target selection reveal different failures. Updated manuscript figures show measured run SDs and distinguish observation settings from uncertainty.
 - **2026.10.20** — Explore [Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis): 46 task-matched comparisons and 143 episodes across nine models. Compare videos, goal progress, key decisions and resource use; expand a decision to inspect its actions and feedback. The [technical analysis](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html) examines shared failures, token allocation and recovery.

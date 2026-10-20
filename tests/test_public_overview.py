@@ -30,7 +30,7 @@ class OverviewTests(unittest.TestCase):
 
     def test_every_column_is_one_native_task_across_all_models(self):
         m = self.manifest
-        self.assertEqual(len(self.cells), 99)
+        self.assertEqual(len(self.cells), 110)
         self.assertEqual(len(m["columns"]), 11)
         self.assertEqual(len({c["taskId"] for c in m["columns"]}), 11)
         for col, definition in enumerate(m["columns"], 1):

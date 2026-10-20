@@ -11,8 +11,9 @@ class CompleteCaseTests(unittest.TestCase):
         cls.data=read('data/case-comparisons.json')
         cls.audit=read('data/case-comparison-audit.json')
 
-    def test_nine_models_for_every_task(self):
+    def test_ten_models_for_every_task(self):
         d=self.data
+        self.assertEqual(len(d['models']),10)
         self.assertEqual(len(d['groups']),109)
         for g in d['groups']:
             with self.subTest(task=g['id']):
@@ -51,7 +52,7 @@ class CompleteCaseTests(unittest.TestCase):
         originals={s['id']:s for s in read('data/execution/index.json')['stories']}
         for s in read('data/execution/complete-index.json')['stories']:
             with self.subTest(story=s['id']):
-                self.assertEqual([r['model'] for r in s['runs']],self.data['models'])
+                self.assertEqual([r['model'] for r in s['runs']],self.data['models'][:9])
                 self.assertEqual(len({r['taskId'] for r in s['runs']}),1)
                 for old in originals[s['id']]['runs']:
                     self.assertEqual(old,next(r for r in s['runs'] if r['modelKey']==old['modelKey']))

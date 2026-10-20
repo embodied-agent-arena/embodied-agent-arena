@@ -7,7 +7,7 @@
   const compact = value => typeof value === 'object' ? JSON.stringify(value) : String(value ?? 'Not recorded');
   const shortNames = {'Claude Fable 5.1':'Fable 5.1','Claude Opus 5.5':'Opus 5.5','Qwen 3.5 397B-A17B':'Qwen 397B','Qwen 3.5 27B':'Qwen 27B'};
   const short = name => shortNames[name] || name;
-  const colours = ['#ad5a60','#456f8c','#9a7042','#71669e','#527e71','#75974f','#727d87','#a84f81','#237e83'];
+  const colours = ['#ad5a60','#456f8c','#9a7042','#71669e','#527e71','#75974f','#727d87','#a84f81','#237e83','#c37b28'];
   const domains = {geometry:'Geometry',spatial:'Spatial Reasoning',affordance:'Affordance',planning:'Task Planning',manipulation:'Manipulation'};
   const arrows = {right:'→',down_right:'↘',down:'↓',down_left:'↙',left:'←',up_left:'↖',up:'↑',up_right:'↗',none:'Stationary'};
   const budgetNames = {max_code_turns:'Code rounds',max_agent_iterations:'Model rounds',max_total_tokens:'Tokens',trial_timeout_seconds:'Time ceiling (s)',timeout_seconds:'Time ceiling (s)',max_env_steps:'Environment steps',max_primitive_calls:'Primitive calls',max_verifier_calls:'Verifier calls',code_timeout_seconds:'Per-cell time (s)',max_agent_attempts:'Agent attempts',llm_num_retries:'Request retries'};
@@ -19,9 +19,9 @@
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
-    fetch('data/case-studies.json?v=polygons-20261020').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json?v=polygons-20261020').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-comparisons.json?v=complete-20261020').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
+    fetch('data/case-studies.json?v=argon-20261021').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
+    fetch('data/case-gallery.json?v=argon-20261021').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-comparisons.json?v=argon-20261021').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media]) => {
     mediaData=media;
     const all=[...cases.filter(c=>c.predictions.length),...media.groups];
@@ -102,7 +102,7 @@
     // Every row comes from one audited task. Never fall back to a benchmark's
     // showcase, an ordinal case number, or legacy outcome-only metadata.
     const rows=(c.runIds||[]).map(id=>mediaData.runs[id]);
-    if(rows.length!==9 || rows.some(r=>!r || r.taskId!==c.taskId) || new Set(rows.map(r=>r.model)).size!==9)throw new Error('Task comparison failed validation.');
+    if(rows.length!==mediaData.models.length || rows.some(r=>!r || r.taskId!==c.taskId) || new Set(rows.map(r=>r.model)).size!==mediaData.models.length)throw new Error('Task comparison failed validation.');
     return rows;
   }
   const outcomeText = r => r.executionStarted===false ? 'Failed before execution' : r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',agent_failure:'Agent failure',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
@@ -114,7 +114,7 @@
   function runTile(c,r,i) {
     const hasMedia=!!(r.video||r.animation);
     const elapsed=r.elapsedSeconds==null?'—':r.elapsedSeconds<60?`${num(r.elapsedSeconds,0)} s`:`${num(r.elapsedSeconds/60,1)} min`;
-    const logPreview=`<span class="gallery-log-preview"><span class="gallery-log-label">Execution Log</span><span class="gallery-log-metrics"><span><strong>${num(r.modelRounds,0)}</strong>Rounds</span><span><strong>${esc(elapsed)}</strong>Elapsed</span></span><span class="gallery-log-link">Inspect recorded result ↗</span></span>`;
+    const logPreview=`<span class="gallery-log-preview"><span class="gallery-log-label">${r.detailedTraceAvailable===false?'Recorded Result':'Execution Log'}</span><span class="gallery-log-metrics"><span><strong>${num(r.modelRounds,0)}</strong>Rounds</span><span><strong>${esc(elapsed)}</strong>Elapsed</span></span><span class="gallery-log-link">Inspect recorded result ↗</span></span>`;
     return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(outcomeText(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${hasMedia?`<span class="gallery-run-kind">${esc(r.mediaKind||'Recording')}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${r.success?'success':''}">${esc(outcomeText(r))}</span></span></button>`;
   }
   function runBudget(r) {
@@ -138,7 +138,7 @@
     } else {
       const rows = executionRecords(c);
       const filmed=rows.filter(r=>r.video||r.animation);
-      body = `<div class="gallery-run-grid gallery-nine-models">${rows.map((r,i)=>runTile(c,r,i)).join('')}</div><div class="gallery-run-controls"><p>Nine models · Same task · ${filmed.length} recordings${filmed.length<9?` · ${9-filmed.length} logs without video`:''}</p>${filmed.length?`<button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button>`:''}</div>`;
+      body = `<div class="gallery-run-grid gallery-nine-models">${rows.map((r,i)=>runTile(c,r,i)).join('')}</div><div class="gallery-run-controls"><p>${rows.length} models · Same task · ${filmed.length} recordings${filmed.length<rows.length?` · ${rows.length-filmed.length} results without video`:''}</p>${filmed.length?`<button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button>`:''}</div>`;
     }
     return `<article class="gallery-slide" data-gallery-id="${esc(c.id)}" data-domain="${esc(c.domainKey)}" role="group" aria-roledescription="slide" aria-label="Case ${index+1} of ${total}: ${esc(c.benchmark)} — ${esc(c.title)}"><div class="gallery-slide-top"><div><p class="gallery-kicker">${esc(c.domain)} <span>/</span> ${esc(c.benchmark)}</p><h3>${esc(c.title)}</h3></div><button class="gallery-detail-button" data-case="${esc(c.id)}">Case Details <span aria-hidden="true">↗</span></button></div><p class="gallery-task">${esc(c.shortTask)}</p>${c.taskLabel?`<p class="gallery-task-identity">Case: ${esc(c.taskLabel)}</p>`:""}${body}</article>`;
   }
@@ -157,11 +157,12 @@
       selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index,true) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p>${polygon ? '<p>Green: reference region. Colored contour: predicted polygon.</p>' : ''}<details ${polygon?'':'open'}><summary>${polygon?'Polygon coordinates':'Recorded Answer'}</summary><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</details></div></div>${!polygon && Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     } else {
       selection.querySelectorAll('video').forEach(v=>v.pause());
-      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(outcomeText(p))}</span></div><p class="study-question">${esc(c.question)}</p>${p.video||p.animation?`<div class="gallery-detail-film">${runMedia(p,true)}</div>`:'<p class="study-meta">Execution log · No matching video in the supplied archive.</p>'}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
+      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(outcomeText(p))}</span></div><p class="study-question">${esc(c.question)}</p>${p.video||p.animation?`<div class="gallery-detail-film">${runMedia(p,true)}</div>`:'<p class="study-meta">Recorded result · No matching video in the supplied archive.</p>'}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
       const rounds=selection.querySelector('.gallery-rounds');
       try {
         const response=await fetch(p.detailUrl+'?v=research-story-20261021');if(!response.ok)throw Error();const d=await response.json();
         if(!rounds.isConnected)return;
+        if(p.detailedTraceAvailable===false){rounds.remove();return;}
         const useful=d.steps.filter((s,i)=>s.error||s.success||i===0||i===d.steps.length-1);
         rounds.removeAttribute('role');
         rounds.innerHTML=`<h4>Recorded Decisions</h4>${d.steps.length?`<p>${d.steps.length} rounds · ${d.steps.filter(s=>s.error).length} rounds with errors</p><div class="gallery-round-list">${useful.map(s=>`<details><summary>Round ${s.round}${s.at==null?'':` · ${num(s.at,1)} s`} — ${esc(s.title)}</summary>${s.code?`<pre>${esc(s.code)}</pre>`:''}<pre>${esc(JSON.stringify(s.feedback||{},null,2))}</pre>${s.error?`<pre>${esc(typeof s.error==='string'?s.error:JSON.stringify(s.error,null,2))}</pre>`:''}</details>`).join('')}</div>`:'<p>No per-round trace was recorded.</p>'}`;

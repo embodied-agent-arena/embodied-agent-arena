@@ -1,13 +1,13 @@
 {
   "title": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
-  "description": "Nine frontier VLM agents evaluated across five robotic capabilities on 1,000 cases, connecting local precision to complete task execution.",
+  "description": "Ten frontier VLM agents evaluated across five robotic capabilities on 1,000 cases, connecting local precision to complete task execution.",
   "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
-  "manuscript_date": "2026-10-20",
+  "manuscript_date": "2026-10-21",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
-  "paper_pages": 63,
-  "abstract": "A robot generalist must turn perception and reasoning into actions that satisfy complete task goals. Frontier vision-language models (VLMs) perform many of these operations, but local competence does not establish complete-task capability. We introduce Embodied Agent Arena to evaluate nine VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces, while separate measures of precision, grounding, and goal satisfaction expose where progress stops. The comparison reveals complementary strengths: Astra leads pose estimation and planning, whereas Opus 5.5 leads affordance overlap and manipulation success. Across TraceSpatial, HumanCLAW, CALVIN, and household manipulation, accurate paths, plausible contacts, and repeated actions can leave terminal conditions unsatisfied. The remaining challenge is sustained execution: reaching precise goal states, preserving achieved conditions, and recovering from failures within finite time and interaction budgets.",
+  "paper_pages": 65,
+  "abstract": "A robot generalist must turn perception and reasoning into actions that satisfy complete task goals. Frontier vision-language models (VLMs) perform many of these operations, but local competence does not establish complete-task capability. We introduce Embodied Agent Arena to evaluate ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces, while separate measures of precision, grounding, and goal satisfaction expose where progress stops. The comparison reveals complementary strengths: Astra leads rotation estimation and planning, Gemini 4 Argon leads spatial accuracy and region overlap, and Opus 5.5 leads manipulation success. Across TraceSpatial, HumanCLAW, CALVIN, and household manipulation, accurate paths, plausible contacts, and repeated actions can leave terminal conditions unsatisfied. The remaining challenge is sustained execution: reaching precise goal states, preserving achieved conditions, and recovering from failures within finite time and interaction budgets.",
   "authors": [
     {
       "name": "Haojian Huang",
@@ -327,14 +327,39 @@
         1,
         1
       ]
+    },
+    {
+      "alias": "Gemini 4 Argon",
+      "name": "Gemini 4 Argon",
+      "identifier": "gemini-4-argon",
+      "scores": [
+        "18.5 ± 1.8",
+        "105.6 ± 9.6",
+        "71.6 ± 0.7",
+        "0.169 ± 0.023",
+        "0.356 ± 0.009",
+        "0.441",
+        "70.1",
+        "44.0"
+      ],
+      "metric_runs": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1
+      ]
     }
   ],
   "source": {
     "table": "Table 2",
-    "page": 7,
+    "page": 8,
     "model_table": "Table A5",
-    "model_page": 22,
-    "protocol": "Source-native observations and tools. All agents use RGB. In Manipulation, the original eight use the native Baseline image schedule; DeepSeek-1017 receives current RGB at each decision, with the same listed per-source round, token, and in-episode time ceilings.",
+    "model_page": 23,
+    "protocol": "Source-native observations and tools. All agents use RGB. In Manipulation, the original eight use the native Baseline image schedule. DeepSeek-1017 and Gemini 4 Argon receive current RGB at each decision; the manuscript specifies each evaluation’s source budgets.",
     "repetitions": "Non-tracing Geometry, Spatial Reasoning, and box/point Affordance: five runs, except Fable (three). Polygon grounding, tracing, Planning, and Manipulation: one run per assignment.",
     "aggregation": "Mean of per-run metrics ± sample SD (ddof=1). Continuous metrics use valid predictions within each run; binary rates retain all assigned cases."
   }

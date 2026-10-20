@@ -9,9 +9,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PUB = ROOT / "public"
 MODELS = ["astra", "sol", "fable", "gemini", "qwen", "qwen35-397b",
-          "qwen35-27b", "opus55", "deepseek"]
+          "qwen35-27b", "opus55", "deepseek", "gemini4argon"]
 SHORT_NAMES = ["GPT-6 Astra", "GPT-6 Sol", "Fable 5.1", "Gemini 3.8 Flash",
-               "Qwen Max", "Qwen 397B", "Qwen 27B", "Opus 5.5", "DeepSeek-1017"]
+               "Qwen Max", "Qwen 397B", "Qwen 27B", "Opus 5.5", "DeepSeek-1017", "Gemini 4 Argon"]
 # Fixed native tasks; the choice is explicit and independent of model order.
 COLUMNS = [
     ("showcase-alfred_official_visual", "ALFRED", "Clean the soap"),
@@ -43,7 +43,7 @@ def build():
     h = html.escape
     for gid, label, short in COLUMNS:
         g = groups[gid]
-        assert len(g["runIds"]) == 9
+        assert len(g["runIds"]) == len(MODELS)
         columns.append({"groupId": gid, "benchmark": label, "title": short,
                         "taskId": g["taskId"], "nativeIdentity": g["nativeIdentity"],
                         "identitySha256": g["identitySha256"]})
@@ -98,7 +98,7 @@ def build():
                           f'data-poster="{h(r["poster"])}" alt="">')
             else:
                 visual = (f'<span class="overview-log-status">{status}</span>'
-                          '<span class="overview-log-link">Log · No video ↗</span>')
+                          '<span class="overview-log-link">Result · No video ↗</span>')
             if media:
                 visual += f'<span class="overview-media-status">{status} ↗</span>'
             rendered.append(f'<td><button type="button" {attrs}>{visual}</button></td>')
@@ -111,17 +111,17 @@ def build():
     block = (
         '<!-- BEGIN EXACT_TASK_OVERVIEW -->\n'
         '<figure class="execution-showcase task-overview" aria-labelledby="overview-title">\n'
-        '<div class="overview-toolbar"><div><h3 id="overview-title">Same Task. Nine Models.</h3>'
+        '<div class="overview-toolbar"><div><h3 id="overview-title">Same Task. Ten Models.</h3>'
         '<p>One fixed task per column · Hover to play · Click for details</p></div>'
         '<div class="overview-nav"><button type="button" data-overview-scroll="-1" '
         'aria-label="Show previous task columns">←</button><button type="button" '
         'data-overview-scroll="1" aria-label="Show next task columns">→</button></div></div>\n'
-        '<div class="overview-scroll" tabindex="0" role="region" aria-label="Nine-model task comparison">'
-        '<table class="overview-table"><caption class="sr-only">Nine models evaluated on the same '
-        'native task in each column. Missing recordings are shown as execution logs.</caption>'
+        '<div class="overview-scroll" tabindex="0" role="region" aria-label="Ten-model task comparison">'
+        '<table class="overview-table"><caption class="sr-only">Ten models evaluated on the same '
+        'native task in each column. Results remain visible when footage is unavailable.</caption>'
         f'<thead><tr>{"".join(heads)}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>\n'
         '<figcaption>Every cell links to the same task and its own execution record. '
-        '“No video” means the recording is absent; the result comes from the log.</figcaption>\n'
+        '“No video” means the recording is absent; the result is retained from the evaluation record.</figcaption>\n'
         '</figure>\n<!-- END EXACT_TASK_OVERVIEW -->'
     )
     index = PUB / "index.html"
@@ -147,7 +147,7 @@ def build():
                    json.dumps(cells, ensure_ascii=False, separators=(",", ":")) + ";", js, count=1)
     assert n == 1
     app.write_text(js)
-    print(f'{len(columns)} exact tasks × 9 models; {manifest["recordingCount"]} recordings; '
+    print(f'{len(columns)} exact tasks × {len(MODELS)} models; {manifest["recordingCount"]} recordings; '
           f'{len(cells)-manifest["recordingCount"]} log-only cells.')
 
 

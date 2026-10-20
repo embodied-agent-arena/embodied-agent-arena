@@ -11,7 +11,7 @@
     "images": [
       "assets/case-studies/89d7a1858012a05647.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Estimate this frame's pinhole intrinsics in pixels. Submit {\"fx\":..., \"fy\":..., \"cx\":..., \"cy\":...}. The lens zoom/focus may differ from a default 35mm assumption.",
     "options": [],
     "reference": {
@@ -213,6 +213,32 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "0c4224e7818aa87560dcc965dae0cb5e8f23fb6d58d06ee4b04dccfafbfad823"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "fx": 8800.0,
+          "fy": 8800.0,
+          "cx": 1712.0,
+          "cy": 1101.0
+        },
+        "valid": true,
+        "metrics": {
+          "passed": true,
+          "official_score": 1.0,
+          "metric": "k_10pct_pp_2pct_diag",
+          "focal_mape": 0.07043973200452638,
+          "fx_rel": 0.07031263189486335,
+          "fy_rel": 0.0705668321141894,
+          "principal_point_error_px": 2.8327123834878285,
+          "principal_point_rel_diag": 0.0006958368415721843,
+          "benchmark": "influx",
+          "sample_id": "statue_shot7_000018",
+          "task_family": "camera_intrinsics",
+          "native_success": 1.0
+        },
+        "taskId": "w1_influx--w1_influx-statue_shot7_000018--native_release--statue_shot7_000018--42--83d8dbbcc127",
+        "sourceReportSha256": "c2ee89174d48cabba519a90d6496301cc991c68ea477ce897e0d865668efa1ef"
       }
     ],
     "poster": "assets/case-studies/89d7a1858012a05647.webp",
@@ -232,7 +258,7 @@
     "images": [
       "assets/case-studies/a9d04891303c43c31d.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Estimate this frame's pinhole intrinsics in pixels. Submit {\"fx\":..., \"fy\":..., \"cx\":..., \"cy\":...}. The lens zoom/focus may differ from a default 35mm assumption.",
     "options": [],
     "reference": {
@@ -434,6 +460,32 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "4302a8a0fdc4e90d284d0c768779ffb6f87bb65f0fb338129838fb0b11e58121"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "fx": 6850.0,
+          "fy": 6850.0,
+          "cx": 1712.0,
+          "cy": 1101.0
+        },
+        "valid": true,
+        "metrics": {
+          "passed": false,
+          "official_score": 0.0,
+          "metric": "k_10pct_pp_2pct_diag",
+          "focal_mape": 0.1667599813373857,
+          "fx_rel": 0.16685891721820295,
+          "fy_rel": 0.16666104545656846,
+          "principal_point_error_px": 2.8327123834878285,
+          "principal_point_rel_diag": 0.0006958368415721843,
+          "benchmark": "influx",
+          "sample_id": "statue_shot7_000005",
+          "task_family": "camera_intrinsics",
+          "native_success": 0.0
+        },
+        "taskId": "w1_influx--w1_influx-statue_shot7_000005--native_release--statue_shot7_000005--42--fbee1b8aed32",
+        "sourceReportSha256": "93d85876093e10e4de7aa5a89af10c94d5e47ee34fd3bcdfb3b1790d8bf5fa10"
       }
     ],
     "poster": "assets/case-studies/a9d04891303c43c31d.webp",
@@ -453,7 +505,7 @@
     "images": [
       "assets/case-studies/04f9f18499d6cbb61c.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Estimate this frame's pinhole intrinsics in pixels. Submit {\"fx\":..., \"fy\":..., \"cx\":..., \"cy\":...}. The lens zoom/focus may differ from a default 35mm assumption.",
     "options": [],
     "reference": {
@@ -655,6 +707,32 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "d923565589bef9bd443c7ca7f65e72618c958462e4ac3a0f7d5fa1a94a30be2d"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "fx": 3800.0,
+          "fy": 3800.0,
+          "cx": 1712.0,
+          "cy": 1101.0
+        },
+        "valid": true,
+        "metrics": {
+          "passed": false,
+          "official_score": 0.0,
+          "metric": "k_10pct_pp_2pct_diag",
+          "focal_mape": 0.7461218438546261,
+          "fx_rel": 0.7462859136369298,
+          "fy_rel": 0.7459577740723224,
+          "principal_point_error_px": 0.09987640422737942,
+          "principal_point_rel_diag": 2.453397036362589e-05,
+          "benchmark": "influx",
+          "sample_id": "statue_shot12_000222",
+          "task_family": "camera_intrinsics",
+          "native_success": 0.0
+        },
+        "taskId": "w1_influx--w1_influx-statue_shot12_000222--native_release--statue_shot12_000222--42--519ec0b02d75",
+        "sourceReportSha256": "8f9e2ab09f4c8cb33e215e2444292f13d2d3b9fafc59016401691b44e1f19a18"
       }
     ],
     "poster": "assets/case-studies/04f9f18499d6cbb61c.webp",
@@ -675,7 +753,7 @@
       "assets/case-studies/2b557f5744d65205d6.webp",
       "assets/case-studies/5d4887a00cecfb3e48.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Estimate the metric relative pose of the query image with respect to the reference image. The reference camera is identity. Output a world-to-camera quaternion and translation in meters: {\"qw\":..., \"qx\":..., \"qy\":..., \"qz\":..., \"tx\":..., \"ty\":..., \"tz\":...}. p_query = R(q) p_reference + t.",
     "options": [],
     "reference": {
@@ -896,6 +974,34 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "a63655720e689424274af655307b6f9b74f9640d6ad6fa0b881b9c14a5c4cd7c"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "qw": 0.988353,
+          "qx": 0.037089,
+          "qy": -0.147094,
+          "qz": -0.012093,
+          "tx": 0.95,
+          "ty": 0.08,
+          "tz": -0.25
+        },
+        "valid": true,
+        "metrics": {
+          "passed": false,
+          "official_score": 0.0,
+          "metric": "pose_2deg_2cm",
+          "rotation_error_deg": 12.721413835328198,
+          "translation_error_m": 0.34978379477036486,
+          "translation_error_cm": 34.97837947703648,
+          "translation_direction_error_deg": 13.561539345405508,
+          "benchmark": "mapfree",
+          "sample_id": "s00524_frame_00230",
+          "task_family": "metric_relative_pose",
+          "native_success": 0.0
+        },
+        "taskId": "w1_mapfree--w1_mapfree-s00524_frame_00230--native_release--s00524_frame_00230--42--e6b3310255f1",
+        "sourceReportSha256": "26ba8843e0e8d76528ce9b439697b3e11299768f20e13ca6d9c1265451abd986"
       }
     ],
     "poster": "assets/case-studies/2b557f5744d65205d6.webp",
@@ -916,7 +1022,7 @@
       "assets/case-studies/2b557f5744d65205d6.webp",
       "assets/case-studies/3a35eea52872bb18d0.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Estimate the metric relative pose of the query image with respect to the reference image. The reference camera is identity. Output a world-to-camera quaternion and translation in meters: {\"qw\":..., \"qx\":..., \"qy\":..., \"qz\":..., \"tx\":..., \"ty\":..., \"tz\":...}. p_query = R(q) p_reference + t.",
     "options": [],
     "reference": {
@@ -1137,6 +1243,34 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "c4cdc2cfbf7aaaf3f6390f7f3c07183f1b01050a8737982f1e601c73aec5a044"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "qw": 0.995615,
+          "qx": 0.055,
+          "qy": -0.075,
+          "qz": 0.01,
+          "tx": -0.5,
+          "ty": -0.1,
+          "tz": 0.4
+        },
+        "valid": true,
+        "metrics": {
+          "passed": false,
+          "official_score": 0.0,
+          "metric": "pose_2deg_2cm",
+          "rotation_error_deg": 10.28133823919265,
+          "translation_error_m": 0.20990356557629,
+          "translation_error_cm": 20.990356557629,
+          "translation_direction_error_deg": 17.56037279428618,
+          "benchmark": "mapfree",
+          "sample_id": "s00524_frame_00013",
+          "task_family": "metric_relative_pose",
+          "native_success": 0.0
+        },
+        "taskId": "w1_mapfree--w1_mapfree-s00524_frame_00013--native_release--s00524_frame_00013--42--9e3f9916c92f",
+        "sourceReportSha256": "1706ad119085d3ebe00f2872248ddf61eaec48bea8370e1699749a1771df52e3"
       }
     ],
     "poster": "assets/case-studies/2b557f5744d65205d6.webp",
@@ -1157,7 +1291,7 @@
       "assets/case-studies/9d8cc4774d5dd8001b.webp",
       "assets/case-studies/6add7aee211ab44925.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Estimate the metric relative pose of the query image with respect to the reference image. The reference camera is identity. Output a world-to-camera quaternion and translation in meters: {\"qw\":..., \"qx\":..., \"qy\":..., \"qz\":..., \"tx\":..., \"ty\":..., \"tz\":...}. p_query = R(q) p_reference + t.",
     "options": [],
     "reference": {
@@ -1364,6 +1498,34 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "45751275d14858e6c4f59e726d0fdc2035ad780af7a17575cba7ec0caae9c657"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "qw": 0.21694389625591165,
+          "qx": 0.00758297218128976,
+          "qy": 0.9753830040940249,
+          "qz": -0.03880515087868496,
+          "tx": -1.3168616405642866,
+          "ty": 0.2772825399322978,
+          "tz": 6.329524661101754
+        },
+        "valid": true,
+        "metrics": {
+          "passed": false,
+          "official_score": 0.0,
+          "metric": "pose_2deg_2cm",
+          "rotation_error_deg": 57.61625600987921,
+          "translation_error_m": 4.949440486353249,
+          "translation_error_cm": 494.9440486353249,
+          "translation_direction_error_deg": 29.435195459903458,
+          "benchmark": "mapfree",
+          "sample_id": "s00515_frame_00539",
+          "task_family": "metric_relative_pose",
+          "native_success": 0.0
+        },
+        "taskId": "w1_mapfree--w1_mapfree-s00515_frame_00539--native_release--s00515_frame_00539--42--c23be2e35af9",
+        "sourceReportSha256": "90dda0cc96a3bbdb25f683c76752a6de06a5b2b5b11f67972fd7cc270edc0251"
       }
     ],
     "poster": "assets/case-studies/9d8cc4774d5dd8001b.webp",
@@ -1384,7 +1546,7 @@
       "assets/case-studies/2b557f5744d65205d6.webp",
       "assets/case-studies/5d4887a00cecfb3e48.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Compare these two images. Estimate the camera rotation magnitude in degrees. This is a MultiSPA-derived sample generated from Map-free val poses.",
     "options": [],
     "reference": {
@@ -1527,6 +1689,26 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "82f6887d8818d4d3e477209a753aa1e8c0727b2bbcf2200bb7b10d4c8da6e7a4"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "value": 22.0
+        },
+        "valid": true,
+        "metrics": {
+          "passed": true,
+          "official_score": 1.0,
+          "metric": "relative_l2_20pct",
+          "l2_error": 0.5342258317785422,
+          "relative_l2": 0.02488733122746746,
+          "benchmark": "multispa",
+          "sample_id": "s00524_frame_00230_camera_rotation_angle",
+          "task_family": "camera_rotation_angle",
+          "native_success": 1.0
+        },
+        "taskId": "w1_multispa--w1_multispa-s00524_frame_00230_camera_rotation_a--native_release--s00524_frame_00230_camera_rotation_angle--42--591aff4c2273",
+        "sourceReportSha256": "315071dc7ea094c83d6c657f1a1d9ea0f705247b80662dca8e7963e63893f7cc"
       }
     ],
     "poster": "assets/case-studies/2b557f5744d65205d6.webp",
@@ -1547,7 +1729,7 @@
       "assets/case-studies/2b557f5744d65205d6.webp",
       "assets/case-studies/3a35eea52872bb18d0.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Compare these two images. Estimate the camera-center travel distance in millimeters. This is a MultiSPA-derived sample generated from Map-free val poses.",
     "options": [],
     "reference": {
@@ -1678,6 +1860,26 @@
         "valid": false,
         "metrics": {},
         "sourceReportSha256": "106074f9db3bed74818d19f9582ae60ca5c30bb97d5f9ae658751a87ef1470ac"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "value": 1500.0
+        },
+        "valid": true,
+        "metrics": {
+          "passed": false,
+          "official_score": 0.0,
+          "metric": "relative_l2_20pct",
+          "l2_error": 805.7902667789076,
+          "relative_l2": 1.160730292616452,
+          "benchmark": "multispa",
+          "sample_id": "s00524_frame_00013_camera_translation_distance",
+          "task_family": "camera_translation_distance",
+          "native_success": 0.0
+        },
+        "taskId": "w1_multispa--w1_multispa-s00524_frame_00013_camera_translatio--native_release--s00524_frame_00013_camera_translation_distance--42--e4ffacad95f0",
+        "sourceReportSha256": "10c5557a7793032776621534ddb80bffed7d3cf2ceba29562809830e83bad94c"
       }
     ],
     "poster": "assets/case-studies/2b557f5744d65205d6.webp",
@@ -1698,7 +1900,7 @@
       "assets/case-studies/4ad08f7cda76ebd229.webp",
       "assets/case-studies/9f636cc0e915b1b998.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Compare these two images. The first is the reference camera. Give the camera-center displacement from image 1 to image 2 as [x, y, z] in millimeters. X is right, Y is down, Z is forward. This is a MultiSPA-derived sample generated from Map-free val poses.",
     "options": [],
     "reference": {
@@ -1881,6 +2083,30 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "ec1a875124d1f6430eabe090fe84a2aab3ffcbe4761342d2ca70c1d9938d8b2d"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "vector": [
+            1750.0,
+            -100.0,
+            1250.0
+          ]
+        },
+        "valid": true,
+        "metrics": {
+          "passed": false,
+          "official_score": 0.0,
+          "metric": "relative_l2_20pct",
+          "l2_error": 3919.506895098631,
+          "relative_l2": 1.5356356699284954,
+          "benchmark": "multispa",
+          "sample_id": "s00500_frame_00522_camera_translation_vector",
+          "task_family": "camera_translation_vector",
+          "native_success": 0.0
+        },
+        "taskId": "w1_multispa--w1_multispa-s00500_frame_00522_camera_translatio--native_release--s00500_frame_00522_camera_translation_vector--42--1fa888b8dee0",
+        "sourceReportSha256": "5acf5214c01002c93aaa486de081e75848a82a4e80b2f9cae0ba4053f1e6302c"
       }
     ],
     "poster": "assets/case-studies/4ad08f7cda76ebd229.webp",
@@ -1900,7 +2126,7 @@
     "images": [
       "assets/case-studies/cea6b791776819ede7.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "You are currently a robot performing robotic manipulation tasks. You have already pick up the toothpaste on the table. The task instruction is: move the toothpaste on the table to the blue waste bin next to the table. Please predict up to 10 key 2D trajectory points starting from the toothpaste on the table to complete the task. Coordinates x and y are image coordinates in 0-1000, with x to the right and y down. Pass the trajectory as a Python list of points to p.submit(answer), e.g. [[x1, y1], [x2, y2], ...]. Return executable Python; observe and yield first, then submit after receiving the image.",
     "options": [],
     "reference": {
@@ -2508,6 +2734,49 @@
           "upstream_path_aggregate_eligible": true
         },
         "sourceReportSha256": "3a64f3e0d4f4a28b8d54685660e357b9a345cb9524f8919782230cb99402f28f"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": [
+          [
+            480,
+            165
+          ],
+          [
+            560,
+            150
+          ],
+          [
+            680,
+            200
+          ],
+          [
+            770,
+            350
+          ],
+          [
+            825,
+            545
+          ]
+        ],
+        "valid": true,
+        "metrics": {
+          "submission_valid": true,
+          "task_family": "pick&place",
+          "start_in_mask": true,
+          "end_in_bbox_2d": true,
+          "xy_out_of_bounds": false,
+          "point_count": 5,
+          "mode": "2D",
+          "metric": "spatial_trace_2d",
+          "trace_2d_frechet": 0.09006202220916748,
+          "trace_2d_hausdorff": 0.09006202384780093,
+          "trace_2d_rmse": 0.08765672892332077,
+          "trace_2d_mae": 0.041549645364284515,
+          "passed": null
+        },
+        "taskId": "w1_tracespatial_2d--w1_tracespatial_2d-tracespatial_2d__098--tracespatial_bench_eval--tracespatial_2d__098--42--95b86082c58b",
+        "sourceReportSha256": "60df0974b59772986564395088cec68b4eda1b8fb1dfb3ff31e8a52449abbc10"
       }
     ],
     "poster": "assets/case-studies/cea6b791776819ede7.webp",
@@ -2527,7 +2796,7 @@
     "images": [
       "assets/case-studies/8be9d3c8e99020637c.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "You are currently a robot performing robotic manipulation tasks. You have already pick up the chair at center. The task instruction is: move the chair at center to make it closer to the desk on the right. Please predict up to 10 key 2D trajectory points starting from the chair at center to complete the task. Coordinates x and y are image coordinates in 0-1000, with x to the right and y down. Pass the trajectory as a Python list of points to p.submit(answer), e.g. [[x1, y1], [x2, y2], ...]. Return executable Python; observe and yield first, then submit after receiving the image.",
     "options": [],
     "reference": {
@@ -3097,6 +3366,53 @@
           "upstream_path_aggregate_eligible": true
         },
         "sourceReportSha256": "c273287762538e988922803da79958114331f5880af4b39ae8e32ecaf39f22e2"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": [
+          [
+            575,
+            625
+          ],
+          [
+            620,
+            630
+          ],
+          [
+            665,
+            635
+          ],
+          [
+            710,
+            640
+          ],
+          [
+            755,
+            645
+          ],
+          [
+            800,
+            650
+          ]
+        ],
+        "valid": true,
+        "metrics": {
+          "submission_valid": true,
+          "task_family": "push&pull",
+          "start_in_mask": false,
+          "end_in_bbox_2d": false,
+          "xy_out_of_bounds": false,
+          "point_count": 6,
+          "mode": "2D",
+          "metric": "spatial_trace_2d",
+          "trace_2d_frechet": 0.3249182403087616,
+          "trace_2d_hausdorff": 0.3249182337026869,
+          "trace_2d_rmse": 0.31347838044166565,
+          "trace_2d_mae": 0.1799738109111786,
+          "passed": null
+        },
+        "taskId": "w1_tracespatial_2d--w1_tracespatial_2d-tracespatial_2d__089--tracespatial_bench_eval--tracespatial_2d__089--42--df21f82ba0cb",
+        "sourceReportSha256": "88562eb67621119cdfe73aa131fb08fbe0b3a42c8ff081151e4e570da4585d5b"
       }
     ],
     "poster": "assets/case-studies/8be9d3c8e99020637c.webp",
@@ -3116,7 +3432,7 @@
     "images": [
       "assets/case-studies/f04d59129a7aafdcaa.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "You are currently a robot performing robotic manipulation tasks. You have already pick up the paper cup on the table. The task instruction is: move the paper cup on the table to the waste bin. Please predict up to 10 key 2D trajectory points starting from the paper cup on the table to complete the task. Coordinates x and y are image coordinates in 0-1000, with x to the right and y down. Pass the trajectory as a Python list of points to p.submit(answer), e.g. [[x1, y1], [x2, y2], ...]. Return executable Python; observe and yield first, then submit after receiving the image.",
     "options": [],
     "reference": {
@@ -3700,6 +4016,57 @@
           "upstream_path_aggregate_eligible": true
         },
         "sourceReportSha256": "a258f9b2fba6f514434f09e61f8121a6675b1296b22b0ca2a4b6d3ae37a302f2"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": [
+          [
+            350,
+            95
+          ],
+          [
+            360,
+            80
+          ],
+          [
+            400,
+            140
+          ],
+          [
+            450,
+            260
+          ],
+          [
+            475,
+            420
+          ],
+          [
+            485,
+            560
+          ],
+          [
+            485,
+            640
+          ]
+        ],
+        "valid": true,
+        "metrics": {
+          "submission_valid": true,
+          "task_family": "pick&place",
+          "start_in_mask": true,
+          "end_in_bbox_2d": true,
+          "xy_out_of_bounds": false,
+          "point_count": 7,
+          "mode": "2D",
+          "metric": "spatial_trace_2d",
+          "trace_2d_frechet": 0.2079167366027832,
+          "trace_2d_hausdorff": 0.20791674085225104,
+          "trace_2d_rmse": 0.16760416328907013,
+          "trace_2d_mae": 0.08923974633216858,
+          "passed": null
+        },
+        "taskId": "w1_tracespatial_2d--w1_tracespatial_2d-tracespatial_2d__097--tracespatial_bench_eval--tracespatial_2d__097--42--98c693fee2fa",
+        "sourceReportSha256": "f7b796b8801fcccb3f5bd1a76baaf2ad908d694f863e4f093753c9a4e50158f5"
       }
     ],
     "poster": "assets/case-studies/f04d59129a7aafdcaa.webp",
@@ -3719,7 +4086,7 @@
     "images": [
       "assets/case-studies/cea6b791776819ede7.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "You are currently a robot performing robotic manipulation tasks. You have already pick up the toothpaste on the table. The task instruction is: move the toothpaste on the table to the blue waste bin next to the table. Please predict up to 10 key 3D trajectory points starting from the toothpaste on the table to complete the task. Coordinates x and y are image coordinates in 0-1000, with x to the right and y down. The third coordinate d is absolute camera depth in meters, not world Z or XYZ. Pass the trajectory as a Python list of points to p.submit(answer), e.g. [[x1, y1, d1], [x2, y2, d2], ...]. Return executable Python; observe and yield first, then submit after receiving the image.",
     "options": [],
     "reference": {
@@ -4523,6 +4890,76 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "65fa0abaf9a80c05d503cf92d916d5a361baf35d3fd54e82146d0eefc517fb4f"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": [
+          [
+            480,
+            165,
+            1.7
+          ],
+          [
+            520,
+            150,
+            1.65
+          ],
+          [
+            600,
+            180,
+            1.62
+          ],
+          [
+            680,
+            250,
+            1.6
+          ],
+          [
+            750,
+            350,
+            1.58
+          ],
+          [
+            800,
+            450,
+            1.56
+          ],
+          [
+            825,
+            550,
+            1.55
+          ]
+        ],
+        "valid": true,
+        "metrics": {
+          "submission_valid": true,
+          "task_family": "pick&place",
+          "start_in_mask": true,
+          "end_in_bbox_2d": true,
+          "xy_out_of_bounds": false,
+          "point_count": 7,
+          "mode": "3D",
+          "metric": "spatial_trace_3d",
+          "trace_3d_frechet": 0.5739198923110962,
+          "trace_3d_hausdorff": 0.5739199050392813,
+          "trace_3d_rmse": 0.37067022919654846,
+          "trace_3d_mae": 0.15630215406417847,
+          "derived_2d_rmse": 0.09475654363632202,
+          "derived_2d_mae": 0.04539297893643379,
+          "derived_2d_frechet": 0.09158587455749512,
+          "derived_2d_hausdorff": 0.09158587528168673,
+          "start_distance_m": 0.015362059966950949,
+          "end_distance_m": 0.0,
+          "start_success": true,
+          "end_success": true,
+          "collision": false,
+          "max_collision_ratio": 0.12380952380952381,
+          "no_collision": true,
+          "passed": true,
+          "native_success": 1.0
+        },
+        "taskId": "w1_tracespatial_3d--w1_tracespatial_3d-tracespatial_3d__098--tracespatial_bench_eval--tracespatial_3d__098--42--01ab0cff4090",
+        "sourceReportSha256": "63c3420f7773f125f874f2fcfae6bba90845155d148d83f0d4514d483f9c873d"
       }
     ],
     "poster": "assets/case-studies/cea6b791776819ede7.webp",
@@ -4544,7 +4981,7 @@
     "images": [
       "assets/case-studies/8be9d3c8e99020637c.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "You are currently a robot performing robotic manipulation tasks. You have already pick up the chair at center. The task instruction is: move the chair at center to make it closer to the desk on the right. Please predict up to 10 key 3D trajectory points starting from the chair at center to complete the task. Coordinates x and y are image coordinates in 0-1000, with x to the right and y down. The third coordinate d is absolute camera depth in meters, not world Z or XYZ. Pass the trajectory as a Python list of points to p.submit(answer), e.g. [[x1, y1, d1], [x2, y2, d2], ...]. Return executable Python; observe and yield first, then submit after receiving the image.",
     "options": [],
     "reference": {
@@ -5258,6 +5695,76 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "a41e7c804a398a3a699a6249d526ea8ca69996e6420feea05401b729e5b4081a"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": [
+          [
+            580,
+            620,
+            2.3
+          ],
+          [
+            620,
+            625,
+            2.28
+          ],
+          [
+            660,
+            630,
+            2.26
+          ],
+          [
+            700,
+            635,
+            2.24
+          ],
+          [
+            740,
+            640,
+            2.22
+          ],
+          [
+            780,
+            645,
+            2.2
+          ],
+          [
+            810,
+            650,
+            2.18
+          ]
+        ],
+        "valid": true,
+        "metrics": {
+          "submission_valid": true,
+          "task_family": "push&pull",
+          "start_in_mask": false,
+          "end_in_bbox_2d": false,
+          "xy_out_of_bounds": false,
+          "point_count": 7,
+          "mode": "3D",
+          "metric": "spatial_trace_3d",
+          "trace_3d_frechet": 0.6210721135139465,
+          "trace_3d_hausdorff": 0.6210721324720456,
+          "trace_3d_rmse": 0.5998607873916626,
+          "trace_3d_mae": 0.2995866537094116,
+          "derived_2d_rmse": 0.3118445575237274,
+          "derived_2d_mae": 0.18287087976932526,
+          "derived_2d_frechet": 0.3263985812664032,
+          "derived_2d_hausdorff": 0.326398582580064,
+          "start_distance_m": 0.19102726347104895,
+          "end_distance_m": 0.16621038055094092,
+          "start_success": true,
+          "end_success": true,
+          "collision": false,
+          "max_collision_ratio": 0.02627939142461964,
+          "no_collision": true,
+          "passed": true,
+          "native_success": 1.0
+        },
+        "taskId": "w1_tracespatial_3d--w1_tracespatial_3d-tracespatial_3d__089--tracespatial_bench_eval--tracespatial_3d__089--42--7149eded32f8",
+        "sourceReportSha256": "42c4479164cc610682b266ee362ddb0ae2a2e8f10206fdf59126b9c8898d7d3e"
       }
     ],
     "poster": "assets/case-studies/8be9d3c8e99020637c.webp",
@@ -5277,7 +5784,7 @@
     "images": [
       "assets/case-studies/f04d59129a7aafdcaa.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "You are currently a robot performing robotic manipulation tasks. You have already pick up the paper cup on the table. The task instruction is: move the paper cup on the table to the waste bin. Please predict up to 10 key 3D trajectory points starting from the paper cup on the table to complete the task. Coordinates x and y are image coordinates in 0-1000, with x to the right and y down. The third coordinate d is absolute camera depth in meters, not world Z or XYZ. Pass the trajectory as a Python list of points to p.submit(answer), e.g. [[x1, y1, d1], [x2, y2, d2], ...]. Return executable Python; observe and yield first, then submit after receiving the image.",
     "options": [],
     "reference": {
@@ -6066,6 +6573,71 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "4a6d8866cbff5e332c9aac7829b103fd8394143c873ed697bf39155096240f6a"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": [
+          [
+            348,
+            100,
+            0.9
+          ],
+          [
+            370,
+            180,
+            0.95
+          ],
+          [
+            400,
+            300,
+            1.05
+          ],
+          [
+            435,
+            430,
+            1.15
+          ],
+          [
+            465,
+            540,
+            1.25
+          ],
+          [
+            485,
+            640,
+            1.35
+          ]
+        ],
+        "valid": true,
+        "metrics": {
+          "submission_valid": true,
+          "task_family": "pick&place",
+          "start_in_mask": true,
+          "end_in_bbox_2d": true,
+          "xy_out_of_bounds": false,
+          "point_count": 6,
+          "mode": "3D",
+          "metric": "spatial_trace_3d",
+          "trace_3d_frechet": 0.19537337124347687,
+          "trace_3d_hausdorff": 0.19537337444683042,
+          "trace_3d_rmse": 0.20721124112606049,
+          "trace_3d_mae": 0.10509653389453888,
+          "derived_2d_rmse": 0.204588383436203,
+          "derived_2d_mae": 0.10865873098373413,
+          "derived_2d_frechet": 0.22890281677246094,
+          "derived_2d_hausdorff": 0.22890281045512223,
+          "start_distance_m": 0.16965910021744937,
+          "end_distance_m": 0.0,
+          "start_success": true,
+          "end_success": true,
+          "collision": false,
+          "max_collision_ratio": 0.16339869281045752,
+          "no_collision": true,
+          "passed": true,
+          "native_success": 1.0
+        },
+        "taskId": "w1_tracespatial_3d--w1_tracespatial_3d-tracespatial_3d__097--tracespatial_bench_eval--tracespatial_3d__097--42--5c8a95d11de1",
+        "sourceReportSha256": "f48c79ccebcfb89df65edf619f2673263b8777bd01af0fc8055244e20aafff57"
       }
     ],
     "poster": "assets/case-studies/f04d59129a7aafdcaa.webp",
@@ -6085,7 +6657,7 @@
     "images": [
       "assets/case-studies/d252da0c66b7bac73f.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。\n原图宽 W=1024、高 H=768 像素。坐标以原图左上角外边缘为原点，u 向右、v 向下，左上像素中心为 (0.5,0.5)。即使图像在你内部被缩放，也必须按原图坐标定位。\n深度定义：以相机光心为原点、光轴向前为 +Z，回答表面点的相机坐标 Z，单位米。不是相机到点的欧氏斜距，不是物体的尺寸，也不是物体离桌面的高度。请估计该像素实际看到的最前方表面，不要回答被遮挡表面。\n未提供相机内参、位姿、物体尺寸或参照深度。单图的真实尺度存在歧义，请结合透视和常识给出你认为最合理的估计。必须分别判断各点的深度，不要假定这些点位于同一平面。\n采样点列表按输出顺序排列，每项是 [u,v]：\n[[397.5,395.5],[76.5,683.5],[633.5,437.5],[445.5,445.5],[558.5,408.5],[601.5,336.5],[496.5,454.5],[522.5,521.5],[488.5,246.5],[401.5,405.5],[526.5,456.5],[404.5,349.5],[644.5,256.5],[526.5,298.5],[218.5,368.5],[732.5,122.5],[1014.5,412.5],[423.5,705.5],[635.5,408.5],[430.5,390.5],[409.5,418.5],[1018.5,80.5],[990.5,729.5],[252.5,229.5]]\n只输出一个 JSON 对象，恰好含一个字段 depth_m；它是长度 24 的数组，顺序必须与采样点一致。每个元素为正数；完全无法估计的点填 null。不要解释、其他字段或 Markdown。",
     "options": [],
     "reference": {
@@ -6593,6 +7165,66 @@
           "ordinal_accuracy": 0.6910994764397905
         },
         "sourceReportSha256": "0a62a4a7c1632524d18a43e4a7ccbb8bd2dba0ed9e0723317eda49d893935f5a"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "depth_m": [
+            2.15,
+            2.5,
+            2.15,
+            2.08,
+            2.25,
+            2.4,
+            2.08,
+            1.92,
+            2.95,
+            2.15,
+            2.08,
+            2.55,
+            2.75,
+            2.32,
+            3.6,
+            2.85,
+            2.4,
+            2.15,
+            2.15,
+            2.32,
+            2.15,
+            2.65,
+            1.95,
+            3.65
+          ]
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_depth",
+          "sample_id": "vlm_depth__depth0011",
+          "task_family": "sparse_camera_z",
+          "metric": "vlm_depth",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "abs_rel",
+          "points": 24,
+          "valid_points": 24,
+          "coverage": 1.0,
+          "abs_rel": 0.3974276954877407,
+          "mae_m": 1.6130200843016305,
+          "rmse_m": 1.6677761742111006,
+          "delta1": 0.041666666666666664,
+          "within_10pct": 0.0,
+          "oracle_scale": 1.6721019902482286,
+          "median_pred_gt_ratio": 0.5856793877819382,
+          "scale_aligned_abs_rel": 0.08824116478756013,
+          "centered_log_rmse": 0.1233210891374563,
+          "ordinal_pairs": 191,
+          "ordinal_correct": 138,
+          "ordinal_accuracy": 0.7225130890052356
+        },
+        "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0011--vlm_test_v1--vlm_depth__depth0011--42--c01623e30343",
+        "sourceReportSha256": "d891aa0893d20a7519f7ec077c2c51598365298b7d2f5e18c4637c54a5ba3d64"
       }
     ],
     "poster": "assets/case-studies/d252da0c66b7bac73f.webp",
@@ -6612,7 +7244,7 @@
     "images": [
       "assets/case-studies/f2886888720d17dc36.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。\n原图宽 W=1024、高 H=768 像素。坐标以原图左上角外边缘为原点，u 向右、v 向下，左上像素中心为 (0.5,0.5)。即使图像在你内部被缩放，也必须按原图坐标定位。\n深度定义：以相机光心为原点、光轴向前为 +Z，回答表面点的相机坐标 Z，单位米。不是相机到点的欧氏斜距，不是物体的尺寸，也不是物体离桌面的高度。请估计该像素实际看到的最前方表面，不要回答被遮挡表面。\n未提供相机内参、位姿、物体尺寸或参照深度。单图的真实尺度存在歧义，请结合透视和常识给出你认为最合理的估计。必须分别判断各点的深度，不要假定这些点位于同一平面。\n采样点列表按输出顺序排列，每项是 [u,v]：\n[[13.5,450.5],[407.5,476.5],[356.5,454.5],[482.5,232.5],[205.5,517.5],[517.5,110.5],[648.5,266.5],[342.5,18.5],[459.5,468.5],[604.5,444.5],[538.5,490.5],[307.5,333.5],[1008.5,103.5],[688.5,407.5],[666.5,658.5],[883.5,384.5],[380.5,756.5],[201.5,175.5],[841.5,691.5],[694.5,465.5],[425.5,390.5],[353.5,403.5],[556.5,400.5],[353.5,412.5]]\n只输出一个 JSON 对象，恰好含一个字段 depth_m；它是长度 24 的数组，顺序必须与采样点一致。每个元素为正数；完全无法估计的点填 null。不要解释、其他字段或 Markdown。",
     "options": [],
     "reference": {
@@ -7120,6 +7752,66 @@
           "ordinal_accuracy": 0.8571428571428571
         },
         "sourceReportSha256": "a3f2b6e5fb4bfc6e5ae6cc95c605e7776e14b97d41820057b2b438a5345ea665"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "depth_m": [
+            3.2,
+            1.82,
+            1.88,
+            2.12,
+            2.6,
+            2.22,
+            2.08,
+            2.55,
+            1.82,
+            1.84,
+            1.73,
+            2.6,
+            1.72,
+            1.72,
+            2.05,
+            1.98,
+            2.05,
+            2.88,
+            1.95,
+            1.75,
+            2.1,
+            2.05,
+            1.98,
+            2.0
+          ]
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_depth",
+          "sample_id": "vlm_depth__depth0010",
+          "task_family": "sparse_camera_z",
+          "metric": "vlm_depth",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "abs_rel",
+          "points": 24,
+          "valid_points": 24,
+          "coverage": 1.0,
+          "abs_rel": 0.26932419120715617,
+          "mae_m": 0.7982393924395242,
+          "rmse_m": 0.8503574394488417,
+          "delta1": 0.125,
+          "within_10pct": 0.041666666666666664,
+          "oracle_scale": 1.3738130956842514,
+          "median_pred_gt_ratio": 0.7270108769603687,
+          "scale_aligned_abs_rel": 0.06344838302180637,
+          "centered_log_rmse": 0.08638277259539218,
+          "ordinal_pairs": 224,
+          "ordinal_correct": 184,
+          "ordinal_accuracy": 0.8214285714285714
+        },
+        "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0010--vlm_test_v1--vlm_depth__depth0010--42--22e27b530e40",
+        "sourceReportSha256": "f1287ed2b8e6f7f6804c78f187d2ec92859d2032f60c8158389fa7fb17e78641"
       }
     ],
     "poster": "assets/case-studies/f2886888720d17dc36.webp",
@@ -7139,7 +7831,7 @@
     "images": [
       "assets/case-studies/3d479925716bfd9370.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。\n原图宽 W=1024、高 H=768 像素。坐标以原图左上角外边缘为原点，u 向右、v 向下，左上像素中心为 (0.5,0.5)。即使图像在你内部被缩放，也必须按原图坐标定位。\n深度定义：以相机光心为原点、光轴向前为 +Z，回答表面点的相机坐标 Z，单位米。不是相机到点的欧氏斜距，不是物体的尺寸，也不是物体离桌面的高度。请估计该像素实际看到的最前方表面，不要回答被遮挡表面。\n未提供相机内参、位姿、物体尺寸或参照深度。单图的真实尺度存在歧义，请结合透视和常识给出你认为最合理的估计。必须分别判断各点的深度，不要假定这些点位于同一平面。\n采样点列表按输出顺序排列，每项是 [u,v]：\n[[420.5,620.5],[523.5,30.5],[340.5,529.5],[814.5,683.5],[953.5,249.5],[281.5,428.5],[367.5,179.5],[222.5,114.5],[105.5,555.5],[727.5,197.5],[777.5,507.5],[899.5,361.5],[574.5,460.5],[262.5,469.5],[312.5,365.5],[329.5,416.5],[476.5,545.5],[621.5,436.5],[230.5,508.5],[559.5,550.5],[520.5,515.5],[259.5,418.5],[464.5,161.5],[807.5,385.5]]\n只输出一个 JSON 对象，恰好含一个字段 depth_m；它是长度 24 的数组，顺序必须与采样点一致。每个元素为正数；完全无法估计的点填 null。不要解释、其他字段或 Markdown。",
     "options": [],
     "reference": {
@@ -7647,6 +8339,66 @@
           "ordinal_accuracy": 0.8547717842323651
         },
         "sourceReportSha256": "f641c68cbac24dc8be266ed5aec7923b45cc5e38533d78caa15701145c8b1a7a"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "depth_m": [
+            1.12,
+            1.72,
+            1.25,
+            0.98,
+            1.42,
+            1.43,
+            1.85,
+            2.02,
+            2.35,
+            1.58,
+            1.16,
+            1.45,
+            1.3,
+            1.3,
+            1.52,
+            1.44,
+            1.18,
+            1.32,
+            1.32,
+            1.16,
+            1.22,
+            1.45,
+            1.76,
+            1.15
+          ]
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_depth",
+          "sample_id": "vlm_depth__depth0009",
+          "task_family": "sparse_camera_z",
+          "metric": "vlm_depth",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "abs_rel",
+          "points": 24,
+          "valid_points": 24,
+          "coverage": 1.0,
+          "abs_rel": 0.23428823035682253,
+          "mae_m": 0.4615346177419027,
+          "rmse_m": 0.5255229188651418,
+          "delta1": 0.25,
+          "within_10pct": 0.08333333333333333,
+          "oracle_scale": 1.313219462713399,
+          "median_pred_gt_ratio": 0.7602758831683092,
+          "scale_aligned_abs_rel": 0.0835123531908998,
+          "centered_log_rmse": 0.11161411143252535,
+          "ordinal_pairs": 241,
+          "ordinal_correct": 213,
+          "ordinal_accuracy": 0.8838174273858921
+        },
+        "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0009--vlm_test_v1--vlm_depth__depth0009--42--adaebc78d865",
+        "sourceReportSha256": "7407645b06f393e29a4c49cbc064c1e5b7b4742359681a0be45c8cee0a685ce7"
       }
     ],
     "poster": "assets/case-studies/3d479925716bfd9370.webp",
@@ -7666,7 +8418,7 @@
     "images": [
       "assets/case-studies/137d528c503ba93040.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片估计拍摄它的相机焦距。\n原始图片宽度 W=768 像素，高度 H=1024 像素。答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。主点已知位于图像中心，即 cx=W/2、cy=H/2；不需要估计或输出主点。\n唯一需要估计的量是 f，满足 fx=fy=f。f 是像素焦距，不是毫米焦距，也不是视场角。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好只含 f 一个字段，值为正数，不要解释、其他字段或 Markdown。",
     "options": [],
     "reference": {
@@ -7817,6 +8569,30 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "98c502210c4ba56247af8839197842cc820f2c5dfcffcf73ad80041508853eea"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "f": 1100.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_focal",
+          "sample_id": "vlm_focal__intr0020",
+          "task_family": "centered_focal",
+          "metric": "vlm_focal",
+          "passed": true,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "focal_ape_pct",
+          "focal_ape_pct": 6.249999999999989,
+          "focal_signed_error_pct": -6.249999999999989,
+          "focal_absolute_error_px": 73.33333333333326,
+          "native_success": 1.0
+        },
+        "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0020--vlm_test_v1--vlm_focal__intr0020--42--e983115b8ae8",
+        "sourceReportSha256": "df3de3163d33a50fbcccbaf0ba903b18a774df87ba9e60c42c645971e5dd9a36"
       }
     ],
     "poster": "assets/case-studies/137d528c503ba93040.webp",
@@ -7836,7 +8612,7 @@
     "images": [
       "assets/case-studies/1adf97aeb0e54be7cc.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片估计拍摄它的相机焦距。\n原始图片宽度 W=768 像素，高度 H=1024 像素。答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。主点已知位于图像中心，即 cx=W/2、cy=H/2；不需要估计或输出主点。\n唯一需要估计的量是 f，满足 fx=fy=f。f 是像素焦距，不是毫米焦距，也不是视场角。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好只含 f 一个字段，值为正数，不要解释、其他字段或 Markdown。",
     "options": [],
     "reference": {
@@ -7987,6 +8763,30 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "b90a3ccbc0a5ab5efc32850479c565b688e2fa273f2004119c3133ff930f4478"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "f": 750.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_focal",
+          "sample_id": "vlm_focal__intr0019",
+          "task_family": "centered_focal",
+          "metric": "vlm_focal",
+          "passed": true,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "focal_ape_pct",
+          "focal_ape_pct": 0.44642857142858094,
+          "focal_signed_error_pct": 0.44642857142858094,
+          "focal_absolute_error_px": 3.3333333333333712,
+          "native_success": 1.0
+        },
+        "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0019--vlm_test_v1--vlm_focal__intr0019--42--857c8315255c",
+        "sourceReportSha256": "13d59d220fc266fac021571a974c091fe36aba750f6cbaa42e7a6bcba7f3be55"
       }
     ],
     "poster": "assets/case-studies/1adf97aeb0e54be7cc.webp",
@@ -8006,7 +8806,7 @@
     "images": [
       "assets/case-studies/e01a0314d872b985fa.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片估计拍摄它的相机焦距。\n原始图片宽度 W=768 像素，高度 H=1024 像素。答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。主点已知位于图像中心，即 cx=W/2、cy=H/2；不需要估计或输出主点。\n唯一需要估计的量是 f，满足 fx=fy=f。f 是像素焦距，不是毫米焦距，也不是视场角。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好只含 f 一个字段，值为正数，不要解释、其他字段或 Markdown。",
     "options": [],
     "reference": {
@@ -8157,6 +8957,30 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "2b78256e7b332c9ccbb46646d6146be2d00f54fb04ba5fec01b75526edd7fd2b"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "f": 580.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_focal",
+          "sample_id": "vlm_focal__intr0018",
+          "task_family": "centered_focal",
+          "metric": "vlm_focal",
+          "passed": false,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "focal_ape_pct",
+          "focal_ape_pct": 35.9375,
+          "focal_signed_error_pct": 35.9375,
+          "focal_absolute_error_px": 153.33333333333331,
+          "native_success": 0.0
+        },
+        "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0018--vlm_test_v1--vlm_focal__intr0018--42--4abbcbb5d756",
+        "sourceReportSha256": "d81739e5565a20eed92e2f99806b072f8d6d98a8356d85243860a1d4fff048c3"
       }
     ],
     "poster": "assets/case-studies/e01a0314d872b985fa.webp",
@@ -8176,7 +9000,7 @@
     "images": [
       "assets/case-studies/b9109694dffd1aee75.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片估计拍摄它的相机内参。\n原始图片宽度 W=768 像素，高度 H=1024 像素。所有答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。因此 fx=fy；主点可能偏离图像中心，请根据图片判断，不能默认居中。\n坐标原点是图像左上角的外边缘，u 向右、v 向下，左上角像素中心为 (0.5,0.5)。内参矩阵 K=[[fx,0,cx],[0,fy,cy],[0,0,1]]。\nfx、fy 是像素焦距，不是毫米；cx、cy 是主点坐标，不是画面中物体的中心。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好包含 fx、fy、cx、cy 四个数值字段，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -8381,6 +9205,38 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "1932ed2c2a668e0e8297a7ec8a770d5cbe05813b6546685d9c46690d45e8180c"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "fx": 680.0,
+          "fy": 680.0,
+          "cx": 384.0,
+          "cy": 500.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_intrinsics",
+          "sample_id": "vlm_intrinsics__intr0023",
+          "task_family": "camera_intrinsics",
+          "metric": "vlm_intrinsics",
+          "passed": false,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "focal_mape_pct",
+          "focal_mape_pct": 59.374999999999986,
+          "focal_max_relative_error": 0.5937499999999999,
+          "principal_error_px": 86.69947925662035,
+          "principal_error_diagonal_pct": 6.773396816923465,
+          "horizontal_fov_abs_error_deg": 24.700147310388168,
+          "focal_within_10pct": false,
+          "principal_within_2pct_diagonal": false,
+          "joint_within_10pct_focal_2pct_diagonal": false,
+          "native_success": 0.0
+        },
+        "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0023--vlm_test_v1--vlm_intrinsics__intr0023--42--d91665ffab48",
+        "sourceReportSha256": "55b2781c9b5971b3d0d9977004c1ac928e68fe576e74d8b9a3f680c02b5b10fd"
       }
     ],
     "poster": "assets/case-studies/b9109694dffd1aee75.webp",
@@ -8400,7 +9256,7 @@
     "images": [
       "assets/case-studies/581e1a5ee34d94f5a9.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片估计拍摄它的相机内参。\n原始图片宽度 W=768 像素，高度 H=1024 像素。所有答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。因此 fx=fy；主点可能偏离图像中心，请根据图片判断，不能默认居中。\n坐标原点是图像左上角的外边缘，u 向右、v 向下，左上角像素中心为 (0.5,0.5)。内参矩阵 K=[[fx,0,cx],[0,fy,cy],[0,0,1]]。\nfx、fy 是像素焦距，不是毫米；cx、cy 是主点坐标，不是画面中物体的中心。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好包含 fx、fy、cx、cy 四个数值字段，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -8605,6 +9461,38 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "d4f4bb022ac32076a2b85664f4c235d3b9a61756a539d8489262c494d4480702"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "fx": 960.0,
+          "fy": 960.0,
+          "cx": 384.0,
+          "cy": 512.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_intrinsics",
+          "sample_id": "vlm_intrinsics__intr0022",
+          "task_family": "camera_intrinsics",
+          "metric": "vlm_intrinsics",
+          "passed": false,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "focal_mape_pct",
+          "focal_mape_pct": 28.571428571428577,
+          "focal_max_relative_error": 0.28571428571428575,
+          "principal_error_px": 110.76253270651816,
+          "principal_error_diagonal_pct": 8.65332286769673,
+          "horizontal_fov_abs_error_deg": 10.27181896785752,
+          "focal_within_10pct": false,
+          "principal_within_2pct_diagonal": false,
+          "joint_within_10pct_focal_2pct_diagonal": false,
+          "native_success": 0.0
+        },
+        "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0022--vlm_test_v1--vlm_intrinsics__intr0022--42--95476ebe688b",
+        "sourceReportSha256": "9a13a6a8e23631356ffa412be9be98f1baad927f124d106c78aee380be2831b5"
       }
     ],
     "poster": "assets/case-studies/581e1a5ee34d94f5a9.webp",
@@ -8624,7 +9512,7 @@
     "images": [
       "assets/case-studies/1de63ec117c9dc7d37.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片估计拍摄它的相机内参。\n原始图片宽度 W=768 像素，高度 H=1024 像素。所有答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。因此 fx=fy；主点可能偏离图像中心，请根据图片判断，不能默认居中。\n坐标原点是图像左上角的外边缘，u 向右、v 向下，左上角像素中心为 (0.5,0.5)。内参矩阵 K=[[fx,0,cx],[0,fy,cy],[0,0,1]]。\nfx、fy 是像素焦距，不是毫米；cx、cy 是主点坐标，不是画面中物体的中心。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好包含 fx、fy、cx、cy 四个数值字段，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -8829,6 +9717,38 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "39a868f28ad890a3086541291771392e0270a09471d52daf0967e45db37088c4"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "fx": 920.0,
+          "fy": 920.0,
+          "cx": 384.0,
+          "cy": 512.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_intrinsics",
+          "sample_id": "vlm_intrinsics__intr0021",
+          "task_family": "camera_intrinsics",
+          "metric": "vlm_intrinsics",
+          "passed": false,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "focal_mape_pct",
+          "focal_mape_pct": 23.214285714285722,
+          "focal_max_relative_error": 0.2321428571428572,
+          "principal_error_px": 93.74634819762649,
+          "principal_error_diagonal_pct": 7.32393345293957,
+          "horizontal_fov_abs_error_deg": 8.733714299564319,
+          "focal_within_10pct": false,
+          "principal_within_2pct_diagonal": false,
+          "joint_within_10pct_focal_2pct_diagonal": false,
+          "native_success": 0.0
+        },
+        "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0021--vlm_test_v1--vlm_intrinsics__intr0021--42--c58fd2221bc1",
+        "sourceReportSha256": "e5b7d6985101dd33d7be35a5389becd2265c56b6a37b23a78b0834a427f467f6"
       }
     ],
     "poster": "assets/case-studies/1de63ec117c9dc7d37.webp",
@@ -8849,7 +9769,7 @@
       "assets/case-studies/f0c865d67c2962b657.webp",
       "assets/case-studies/8ec7fdc26e2373d337.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：电脑鼠标。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -9048,6 +9968,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "deedb782f97d34f2825626fca99ed435af0b3314036e7e355d8e43d694934af3"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "down",
+          "distance_cm": 2.5
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_camera",
+          "sample_id": "vlm_motion_camera__pair0009",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_camera",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 0.0,
+          "moving": true,
+          "absolute_error_cm": 3.500000193800938,
+          "distance_ape_pct": 58.33333467917314,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 0.0
+        },
+        "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0009--vlm_test_v1--vlm_motion_camera__pair0009--42--0f1f61677545",
+        "sourceReportSha256": "98f619ae9084200d56159e704c51b4e35e7008abbd8c90e505f037f85dfe3b6c"
       }
     ],
     "poster": "assets/case-studies/f0c865d67c2962b657.webp",
@@ -9068,7 +10017,7 @@
       "assets/case-studies/c37ec34acd9dfd5211.webp",
       "assets/case-studies/e4f47a50e08de6aecc.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：书。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -9267,6 +10216,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "c29f4d689b03f107ccd609400b1cf3a2a49f3bc63c33cbf89499d0c118d9a326"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": false,
+          "direction": "none",
+          "distance_cm": 0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_camera",
+          "sample_id": "vlm_motion_camera__pair0006",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_camera",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 0.0,
+          "direction_correct": 0.0,
+          "moving": true,
+          "absolute_error_cm": 4.000001752720767,
+          "distance_ape_pct": 100.0,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 0.0
+        },
+        "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0006--vlm_test_v1--vlm_motion_camera__pair0006--42--36eb1e8da975",
+        "sourceReportSha256": "d14f4ffe2aef3f6023814947b1c17346cb376653c52763459f8ece9ee744fba5"
       }
     ],
     "poster": "assets/case-studies/c37ec34acd9dfd5211.webp",
@@ -9287,7 +10265,7 @@
       "assets/case-studies/ee6ebaa0107e8dc213.webp",
       "assets/case-studies/386a46f46d5cc42ea7.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：电脑鼠标。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -9486,6 +10464,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "0c7202e7645b5c63ef230ee91c1331c6469fa7f341f33aab81c66826a1222fbd"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "down_right",
+          "distance_cm": 6.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_camera",
+          "sample_id": "vlm_motion_camera__pair0004",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_camera",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 0.9999997823266229,
+          "distance_ape_pct": 19.999994775839177,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 1.0
+        },
+        "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0004--vlm_test_v1--vlm_motion_camera__pair0004--42--c31ac0b58f18",
+        "sourceReportSha256": "efb937feddb60c39d0c0429bae37ca31ae68a2a6ef10a1be21bd122d31d71172"
       }
     ],
     "poster": "assets/case-studies/ee6ebaa0107e8dc213.webp",
@@ -9506,7 +10513,7 @@
       "assets/case-studies/c37ec34acd9dfd5211.webp",
       "assets/case-studies/f099436fbff247dee4.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：带把手的杯子。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -9705,6 +10712,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "dbf3efc582cf67174f955081d4bf4716a12b25e01109fbfd9e37a14a0fab004f"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": false,
+          "direction": "none",
+          "distance_cm": 0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_camera_large",
+          "sample_id": "vlm_motion_camera_large__pair0007",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_camera_large",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 0.0,
+          "direction_correct": 0.0,
+          "moving": true,
+          "absolute_error_cm": 2.0000006282178244,
+          "distance_ape_pct": 100.0,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 0.0
+        },
+        "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0007--42--9f3a9785dcef",
+        "sourceReportSha256": "3ac8f1343a04d17b42ae510146eeb40a7ebd5a07c86173a6b7e963aa8a35f7a7"
       }
     ],
     "poster": "assets/case-studies/c37ec34acd9dfd5211.webp",
@@ -9725,7 +10761,7 @@
       "assets/case-studies/ee6ebaa0107e8dc213.webp",
       "assets/case-studies/3e47c78c733d899cae.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：电脑鼠标。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -9924,6 +10960,35 @@
           "joint_direction_and_1cm": 1.0
         },
         "sourceReportSha256": "e78a8031570236fc578168b4cb6e6ec9598e14bd0c29de1b49293c6142d4060b"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "down_right",
+          "distance_cm": 5.5
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_camera_large",
+          "sample_id": "vlm_motion_camera_large__pair0004",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_camera_large",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 0.4999997823266229,
+          "distance_ape_pct": 9.999995211185912,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 1.0
+        },
+        "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0004--42--936e0ef1709a",
+        "sourceReportSha256": "d05f3a7824c84775bbe3d1d067d7250e103b445dd095409715a0392b2c569f93"
       }
     ],
     "poster": "assets/case-studies/ee6ebaa0107e8dc213.webp",
@@ -9944,7 +11009,7 @@
       "assets/case-studies/d2ccdd0f534a183398.webp",
       "assets/case-studies/6e1ec0a63b292f092a.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：书。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -10143,6 +11208,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "c1fe169a3a4fe8247c64e982429a214c50e9c22f30885a4759d31de4394aa0ac"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": false,
+          "direction": "none",
+          "distance_cm": 0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_camera_large",
+          "sample_id": "vlm_motion_camera_large__pair0002",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_camera_large",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 0.0,
+          "direction_correct": 0.0,
+          "moving": true,
+          "absolute_error_cm": 6.000000707618222,
+          "distance_ape_pct": 100.0,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 0.0
+        },
+        "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0002--42--0e5556be0d23",
+        "sourceReportSha256": "8dda0ae68eaf93d8eb785d492956dc9d5579d7cf7b55e89f68f75f97ebde97da"
       }
     ],
     "poster": "assets/case-studies/d2ccdd0f534a183398.webp",
@@ -10163,7 +11257,7 @@
       "assets/case-studies/f0c865d67c2962b657.webp",
       "assets/case-studies/51e4078f64114fc11d.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。\n请比较目标物体：带盖水瓶。目标可能在桌面上平移，也可能没有移动；不会旋转、缩放或离开桌面。\n请仅根据两张图片回答：\n1. moved：目标是否发生了位置变化，布尔值。\n2. direction：目标从 A 到 B 在画面中的移动方向。以物体整体中心的位置变化为准，右为图像右侧，下为图像下侧；不是物体自身的左右，也不是世界坐标的上下。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有移动则为 none。\n3. distance_cm：目标在桌面上从原位置到新位置的实际直线距离，单位厘米，不是图像上的像素距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -10362,6 +11456,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "79ad412f04cd2e658fa37acc0e3a0940d1f5574b9f5b81375d37b532236dc444"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "left",
+          "distance_cm": 2.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_fixed",
+          "sample_id": "vlm_motion_fixed__pair0010",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_fixed",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 0.9999982409065105,
+          "distance_ape_pct": 99.99964818192097,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 1.0
+        },
+        "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0010--vlm_test_v1--vlm_motion_fixed__pair0010--42--aa51e0011d4c",
+        "sourceReportSha256": "821d08d2b031362a53e1bf678c75e1825542ed8b265a3babd9574832ed9e7ebe"
       }
     ],
     "poster": "assets/case-studies/f0c865d67c2962b657.webp",
@@ -10382,7 +11505,7 @@
       "assets/case-studies/f0c865d67c2962b657.webp",
       "assets/case-studies/56fab5b82e0e1b9854.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。\n请比较目标物体：电脑鼠标。目标可能在桌面上平移，也可能没有移动；不会旋转、缩放或离开桌面。\n请仅根据两张图片回答：\n1. moved：目标是否发生了位置变化，布尔值。\n2. direction：目标从 A 到 B 在画面中的移动方向。以物体整体中心的位置变化为准，右为图像右侧，下为图像下侧；不是物体自身的左右，也不是世界坐标的上下。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有移动则为 none。\n3. distance_cm：目标在桌面上从原位置到新位置的实际直线距离，单位厘米，不是图像上的像素距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -10581,6 +11704,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "0487b70c3c9ca249ff26846fedbbd2ecf189aae3e1728a9f6dab1636feb7c8c7"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "down_left",
+          "distance_cm": 4.5
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_fixed",
+          "sample_id": "vlm_motion_fixed__pair0009",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_fixed",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 1.500000193800938,
+          "distance_ape_pct": 25.000002422511646,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 0.0
+        },
+        "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0009--vlm_test_v1--vlm_motion_fixed__pair0009--42--d6948e0e933f",
+        "sourceReportSha256": "894c6aa8b28ab94e5117a5a29f26cc68dfdee54143d177637ccb1ea71a63bb8c"
       }
     ],
     "poster": "assets/case-studies/f0c865d67c2962b657.webp",
@@ -10601,7 +11753,7 @@
       "assets/case-studies/c37ec34acd9dfd5211.webp",
       "assets/case-studies/2d4fa76c8246cb2690.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。\n请比较目标物体：电脑鼠标。目标可能在桌面上平移，也可能没有移动；不会旋转、缩放或离开桌面。\n请仅根据两张图片回答：\n1. moved：目标是否发生了位置变化，布尔值。\n2. direction：目标从 A 到 B 在画面中的移动方向。以物体整体中心的位置变化为准，右为图像右侧，下为图像下侧；不是物体自身的左右，也不是世界坐标的上下。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有移动则为 none。\n3. distance_cm：目标在桌面上从原位置到新位置的实际直线距离，单位厘米，不是图像上的像素距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -10800,6 +11952,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "a4e77c72edaec678c242932c659af76236ba1df089680432235169875a02d385"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "right",
+          "distance_cm": 1.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_fixed",
+          "sample_id": "vlm_motion_fixed__pair0008",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_fixed",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 5.004128640351269e-07,
+          "distance_ape_pct": 5.0041261362221766e-05,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 1.0
+        },
+        "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0008--vlm_test_v1--vlm_motion_fixed__pair0008--42--4d1e3037d3d2",
+        "sourceReportSha256": "03b0a09665e42e94a8d61b54f17ee70a3e5d8d9e20580089499f10c7150890ae"
       }
     ],
     "poster": "assets/case-studies/c37ec34acd9dfd5211.webp",
@@ -10820,7 +12001,7 @@
       "assets/case-studies/d37c605105afc9f846.webp",
       "assets/case-studies/f5843efa28c9a48ded.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。\n请只跟踪指定目标物体：桌面右侧带绿色把手的透明玻璃壶。目标可能相对于桌面移动，也可能没有移动。\n请利用桌面和能确认未移动的背景区分相机变化与目标的真实移动，仅根据两张照片回答：\n1. moved：指定目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断。右为图 A 的右侧，下为图 A 的下侧，不是物体自身的左右。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合照片中的场景线索估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -11019,6 +12200,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "1a499516383a6d9b7f3ab4af9ed86c34910d4cd3f8af4c63e932d1357688aac0"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "right",
+          "distance_cm": 2.5
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_real",
+          "sample_id": "vlm_motion_real__real0003",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_real",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 0.5,
+          "distance_ape_pct": 25.0,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 1.0
+        },
+        "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0003--vlm_test_v1--vlm_motion_real__real0003--42--73ff63cd73d2",
+        "sourceReportSha256": "aecf7703297d00724a29cdd9efb6f1f3ee75e99fb8a0f978118c6c14052d7ddc"
       }
     ],
     "poster": "assets/case-studies/d37c605105afc9f846.webp",
@@ -11041,7 +12251,7 @@
       "assets/case-studies/671e2edf4d5bdc4352.webp",
       "assets/case-studies/e1d581de7cf7af4350.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。\n请只跟踪指定目标物体：桌面右侧的蓝色字母 C 块。目标可能相对于桌面移动，也可能没有移动。\n请利用桌面和能确认未移动的背景区分相机变化与目标的真实移动，仅根据两张照片回答：\n1. moved：指定目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断。右为图 A 的右侧，下为图 A 的下侧，不是物体自身的左右。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合照片中的场景线索估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -11240,6 +12450,35 @@
           "joint_direction_and_1cm": 1.0
         },
         "sourceReportSha256": "21f84826c44c8aa244548461118a5df748713c60f300f20dac675d576cae03ce"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "left",
+          "distance_cm": 1.8
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_real",
+          "sample_id": "vlm_motion_real__real0002",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_real",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 0.19999999999999996,
+          "distance_ape_pct": 9.999999999999998,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 1.0
+        },
+        "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0002--vlm_test_v1--vlm_motion_real__real0002--42--da385ad5ac1a",
+        "sourceReportSha256": "dad059b744d606e562b60d78dc5ed0f8d6639cf9925d56b7bdbed2a9d8f3bd6f"
       }
     ],
     "poster": "assets/case-studies/671e2edf4d5bdc4352.webp",
@@ -11260,7 +12499,7 @@
       "assets/case-studies/1fcf861395cc885753.webp",
       "assets/case-studies/aa5e26135c4d7f9ce4.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。\n请只跟踪指定目标物体：桌面中间的蓝色字母 B 块。目标可能相对于桌面移动，也可能没有移动。\n请利用桌面和能确认未移动的背景区分相机变化与目标的真实移动，仅根据两张照片回答：\n1. moved：指定目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断。右为图 A 的右侧，下为图 A 的下侧，不是物体自身的左右。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合照片中的场景线索估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
     "options": [],
     "reference": {
@@ -11459,6 +12698,35 @@
           "joint_direction_and_1cm": 0.0
         },
         "sourceReportSha256": "fd19764f88abb6248d446369515032a5c4cf7baa628eb904e9330df035598e13"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "moved": true,
+          "direction": "down",
+          "distance_cm": 1.8
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_motion_real",
+          "sample_id": "vlm_motion_real__real0001",
+          "task_family": "object_motion",
+          "metric": "vlm_motion_real",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "absolute_error_cm",
+          "movement_correct": 1.0,
+          "direction_correct": 1.0,
+          "moving": true,
+          "absolute_error_cm": 0.19999999999999996,
+          "distance_ape_pct": 9.999999999999998,
+          "stationary_false_positive": 0.0,
+          "joint_direction_and_1cm": 1.0
+        },
+        "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0001--vlm_test_v1--vlm_motion_real__real0001--42--f75961a0b58c",
+        "sourceReportSha256": "6b1de54dd87d489ff1f6768c666c995dd2656db100f591d5bcc680d12b0646c5"
       }
     ],
     "poster": "assets/case-studies/1fcf861395cc885753.webp",
@@ -11479,7 +12747,7 @@
       "assets/case-studies/13db4d41dc42dd2a5b.webp",
       "assets/case-studies/09f24ee2cc1423a7d9.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。\n\n请仅根据这两张图片，估计相机 B 相对于相机 A 的三维位置和朝向。\n坐标系：以相机 A 的光心为原点，+X 向画面右方、+Y 向画面下方、+Z 向相机 A 前方（看向场景），为右手坐标系。\ntranslation_cm = [tx, ty, tz]：相机 B 光心在上述 A 坐标系中的坐标，单位厘米。这是相机本身的位移，不是画面中物体的表观运动，也不是把 A 中的点变换到 B 的外参 tvec。\nrotation_xyz_deg = [rx, ry, rz]：相机 B 相对于 A 的姿态，绕 A 的固定 X、Y、Z 轴依次按右手定则旋转，单位度。明确地说，R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx)，且 p_A = R_A_from_B @ p_B + translation_cm（p 使用厘米）。因此不动时六个数均为 0。\n\n在没有真实尺寸的情况下，厘米位移依赖视觉尺度先验，并非唯一可恢复的量；仍请给出你最合理的数值估计。不要假定所有变化都来自平移或都来自旋转。\n只输出以下 JSON 对象，两个数组各含 3 个有限数字，不要输出说明或 Markdown：\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
     "options": [],
     "reference": {
@@ -11803,6 +13071,56 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "3ce7a499be7fa7732817598a4e774c264b8b37c6530a280fa8b09dee824ae89c"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "translation_cm": [
+            -10.0,
+            15.0,
+            15.0
+          ],
+          "rotation_xyz_deg": [
+            3.5,
+            -4.5,
+            -1.0
+          ]
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_pose",
+          "sample_id": "vlm_pose__rt0022",
+          "task_family": "mixed",
+          "metric": "vlm_pose",
+          "passed": false,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "rotation_error_deg",
+          "rotation_error_deg": 4.471378615120085,
+          "true_rotation_deg": 9.89891827011744,
+          "predicted_rotation_deg": 5.763504845503223,
+          "translation_vector_error_cm": 27.294688127912362,
+          "true_translation_norm_cm": 15.0,
+          "predicted_translation_norm_cm": 23.45207879911715,
+          "translation_magnitude_error_cm": 8.45207879911715,
+          "translation_magnitude_ape_pct": 56.34719199411433,
+          "translation_direction_error_deg": 87.5561588129396,
+          "direction_penalized_error_deg": 87.5561588129396,
+          "direction_defined": true,
+          "translation_is_nonzero": true,
+          "rotation_is_nonzero": true,
+          "rotation_within_2deg": false,
+          "translation_within_2cm": false,
+          "joint_within_2deg_2cm": false,
+          "direction_within_15deg": false,
+          "direction_within_30deg": false,
+          "magnitude_within_2cm": false,
+          "magnitude_within_20pct": false,
+          "native_success": 0.0
+        },
+        "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0022--vlm_test_v1--vlm_pose__rt0022--42--9a1a2bc4a1dd",
+        "sourceReportSha256": "e6fe14efa6879ee8e7a4b7f74a31134aef9b272613c8a16110cebc5daeb83b88"
       }
     ],
     "poster": "assets/case-studies/13db4d41dc42dd2a5b.webp",
@@ -11825,7 +13143,7 @@
       "assets/case-studies/13db4d41dc42dd2a5b.webp",
       "assets/case-studies/311306f53b65608320.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。\n\n请仅根据这两张图片，估计相机 B 相对于相机 A 的三维位置和朝向。\n坐标系：以相机 A 的光心为原点，+X 向画面右方、+Y 向画面下方、+Z 向相机 A 前方（看向场景），为右手坐标系。\ntranslation_cm = [tx, ty, tz]：相机 B 光心在上述 A 坐标系中的坐标，单位厘米。这是相机本身的位移，不是画面中物体的表观运动，也不是把 A 中的点变换到 B 的外参 tvec。\nrotation_xyz_deg = [rx, ry, rz]：相机 B 相对于 A 的姿态，绕 A 的固定 X、Y、Z 轴依次按右手定则旋转，单位度。明确地说，R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx)，且 p_A = R_A_from_B @ p_B + translation_cm（p 使用厘米）。因此不动时六个数均为 0。\n\n在没有真实尺寸的情况下，厘米位移依赖视觉尺度先验，并非唯一可恢复的量；仍请给出你最合理的数值估计。不要假定所有变化都来自平移或都来自旋转。\n只输出以下 JSON 对象，两个数组各含 3 个有限数字，不要输出说明或 Markdown：\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
     "options": [],
     "reference": {
@@ -12128,6 +13446,56 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "df314c79c47ae9af08c01e658620e2564ca0f3f20b236af127cf37e059730d0e"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "translation_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_xyz_deg": [
+            0.0,
+            0.0,
+            -2.5
+          ]
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_pose",
+          "sample_id": "vlm_pose__rt0020",
+          "task_family": "rotation",
+          "metric": "vlm_pose",
+          "passed": true,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "rotation_error_deg",
+          "rotation_error_deg": 0.5000000000005914,
+          "true_rotation_deg": 3.000000000000166,
+          "predicted_rotation_deg": 2.4999999999998073,
+          "translation_vector_error_cm": 0.0,
+          "true_translation_norm_cm": 0.0,
+          "predicted_translation_norm_cm": 0.0,
+          "translation_magnitude_error_cm": 0.0,
+          "translation_magnitude_ape_pct": null,
+          "translation_direction_error_deg": null,
+          "direction_penalized_error_deg": null,
+          "direction_defined": false,
+          "translation_is_nonzero": false,
+          "rotation_is_nonzero": true,
+          "rotation_within_2deg": true,
+          "translation_within_2cm": true,
+          "joint_within_2deg_2cm": true,
+          "direction_within_15deg": false,
+          "direction_within_30deg": false,
+          "magnitude_within_2cm": false,
+          "magnitude_within_20pct": false,
+          "native_success": 1.0
+        },
+        "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0020--vlm_test_v1--vlm_pose__rt0020--42--17ca254950f1",
+        "sourceReportSha256": "bf05aab45a69df68e4eae937b677a3c6a8128056591dfa35fd1f64ece173cd71"
       }
     ],
     "poster": "assets/case-studies/13db4d41dc42dd2a5b.webp",
@@ -12148,7 +13516,7 @@
       "assets/case-studies/13db4d41dc42dd2a5b.webp",
       "assets/case-studies/5a762697b999498c8c.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。\n\n请仅根据这两张图片，估计相机 B 相对于相机 A 的三维位置和朝向。\n坐标系：以相机 A 的光心为原点，+X 向画面右方、+Y 向画面下方、+Z 向相机 A 前方（看向场景），为右手坐标系。\ntranslation_cm = [tx, ty, tz]：相机 B 光心在上述 A 坐标系中的坐标，单位厘米。这是相机本身的位移，不是画面中物体的表观运动，也不是把 A 中的点变换到 B 的外参 tvec。\nrotation_xyz_deg = [rx, ry, rz]：相机 B 相对于 A 的姿态，绕 A 的固定 X、Y、Z 轴依次按右手定则旋转，单位度。明确地说，R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx)，且 p_A = R_A_from_B @ p_B + translation_cm（p 使用厘米）。因此不动时六个数均为 0。\n\n在没有真实尺寸的情况下，厘米位移依赖视觉尺度先验，并非唯一可恢复的量；仍请给出你最合理的数值估计。不要假定所有变化都来自平移或都来自旋转。\n只输出以下 JSON 对象，两个数组各含 3 个有限数字，不要输出说明或 Markdown：\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
     "options": [],
     "reference": {
@@ -12469,6 +13837,56 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "f8e29da47b1309fc2c9ce4c3759fee36344d37f4597d7d6f7c55e9e59599bfc9"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "translation_cm": [
+            0.0,
+            0.0,
+            -8.0
+          ],
+          "rotation_xyz_deg": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_pose",
+          "sample_id": "vlm_pose__rt0018",
+          "task_family": "translation",
+          "metric": "vlm_pose",
+          "passed": false,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "rotation_error_deg",
+          "rotation_error_deg": 0.0,
+          "true_rotation_deg": 0.0,
+          "predicted_rotation_deg": 0.0,
+          "translation_vector_error_cm": 3.0,
+          "true_translation_norm_cm": 5.0,
+          "predicted_translation_norm_cm": 8.0,
+          "translation_magnitude_error_cm": 3.0,
+          "translation_magnitude_ape_pct": 60.0,
+          "translation_direction_error_deg": 0.0,
+          "direction_penalized_error_deg": 0.0,
+          "direction_defined": true,
+          "translation_is_nonzero": true,
+          "rotation_is_nonzero": false,
+          "rotation_within_2deg": true,
+          "translation_within_2cm": false,
+          "joint_within_2deg_2cm": false,
+          "direction_within_15deg": true,
+          "direction_within_30deg": true,
+          "magnitude_within_2cm": false,
+          "magnitude_within_20pct": false,
+          "native_success": 0.0
+        },
+        "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0018--vlm_test_v1--vlm_pose__rt0018--42--16364cfef62c",
+        "sourceReportSha256": "e5f78a60db89ea9d145c23c699293a5713ea4df5d1ebfe0cf86201176b6f81fe"
       }
     ],
     "poster": "assets/case-studies/13db4d41dc42dd2a5b.webp",
@@ -12488,7 +13906,7 @@
     "images": [
       "assets/case-studies/b81cbe4541cbfc182e.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "橙色物体是目标，蓝色物体是参照物。参照物高10厘米。两个物体竖直放置，最靠近相机的表面处于相同深度。目标的真实高度约是参照物的几倍？只输出包含height_ratio的JSON。",
     "options": [],
     "reference": {
@@ -12659,6 +14077,36 @@
           "measurement_count": 1
         },
         "sourceReportSha256": "efa9fbb0f6caa6e7b16736a6048ecac0ff640c93182483e84c65b12e9426b95f"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "height_ratio": 2.7
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_reference",
+          "sample_id": "vlm_reference__g0003_target_scaled_height_ratio",
+          "task_family": "height_ratio",
+          "metric": "vlm_reference",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "mape_pct",
+          "absolute_errors": {
+            "height_ratio": 0.040000000000000036
+          },
+          "relative_errors": {
+            "height_ratio": 0.015037593984962419
+          },
+          "mae": 0.040000000000000036,
+          "mape_pct": 1.5037593984962419,
+          "within_10pct_count": 1,
+          "measurement_count": 1
+        },
+        "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_target_sca--vlm_test_v1--vlm_reference__g0003_target_scaled_height_ratio--42--6f375c4e17fa",
+        "sourceReportSha256": "4ffcf4f2679712a888fead42ac8458477f939b700ae8e6e4145491f3da8f3051"
       }
     ],
     "poster": "assets/case-studies/b81cbe4541cbfc182e.webp",
@@ -12678,7 +14126,7 @@
     "images": [
       "assets/case-studies/b81cbe4541cbfc182e.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "橙色物体是目标，蓝色物体是参照物。参照物高10厘米。两个物体竖直放置，最靠近相机的表面处于相同深度。估计目标的真实高度（厘米），只输出包含height_cm的JSON。",
     "options": [],
     "reference": {
@@ -12849,6 +14297,36 @@
           "measurement_count": 1
         },
         "sourceReportSha256": "1d6596e4472e29ad35c93e40918bb3ef1a2bd6c7839d0fbcfa2118b1078ac3ff"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "height_cm": 27.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_reference",
+          "sample_id": "vlm_reference__g0003_target_scaled_height_cm",
+          "task_family": "height_cm",
+          "metric": "vlm_reference",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "mape_pct",
+          "absolute_errors": {
+            "height_cm": 0.3999999999999986
+          },
+          "relative_errors": {
+            "height_cm": 0.015037593984962351
+          },
+          "mae": 0.3999999999999986,
+          "mape_pct": 1.5037593984962352,
+          "within_10pct_count": 1,
+          "measurement_count": 1
+        },
+        "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_target_sca--vlm_test_v1--vlm_reference__g0003_target_scaled_height_cm--42--cde57954f097",
+        "sourceReportSha256": "93cd4b00a0841ea2eaef2cce6437d8a2391fec634fd13754114a82597cd6986f"
       }
     ],
     "poster": "assets/case-studies/b81cbe4541cbfc182e.webp",
@@ -12869,7 +14347,7 @@
       "assets/case-studies/f1590ed56c204d19cc.webp",
       "assets/case-studies/1102ae3de92da122aa.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "两张图中的橙色物体是比较目标。每张图中蓝色参照物均高10厘米，两个物体竖直放置，最靠近相机的表面等深。第二张图目标的真实高度是第一张图的几倍？只输出包含height_ratio_2_over_1的JSON。",
     "options": [],
     "reference": {
@@ -13040,6 +14518,36 @@
           "measurement_count": 1
         },
         "sourceReportSha256": "cb561385108fd0428aa20e8eac98357c1297f22101eb1e7bb5f8f49e9f2fff5b"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "height_ratio_2_over_1": 1.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_reference",
+          "sample_id": "vlm_reference__g0003_base_size_invariance",
+          "task_family": "size_invariance",
+          "metric": "vlm_reference",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "mape_pct",
+          "absolute_errors": {
+            "height_ratio_2_over_1": 0.0
+          },
+          "relative_errors": {
+            "height_ratio_2_over_1": 0.0
+          },
+          "mae": 0.0,
+          "mape_pct": 0.0,
+          "within_10pct_count": 1,
+          "measurement_count": 1
+        },
+        "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_base_size_--vlm_test_v1--vlm_reference__g0003_base_size_invariance--42--40ac3df3d3f8",
+        "sourceReportSha256": "a04d5d5cd15f5aa7b50277d0f35c52ad00764d94e6ea2e69d4cf8f9bb9705947"
       }
     ],
     "poster": "assets/case-studies/f1590ed56c204d19cc.webp",
@@ -13059,7 +14567,7 @@
     "images": [
       "assets/case-studies/b2b97114be65d997d9.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：\n- 带把手杯子的高度：从杯底到杯口，对应 mug_height_cm。\n- 带盖水瓶的总高度：从瓶底到瓶盖顶部，对应 bottle_height_cm。\n- 书的封面长边长度，对应 book_length_cm。\n- 键盘从最左端到最右端的宽度，包含外壳，对应 keyboard_width_cm。\n请结合图中的物体和场景上下文，对每项给出你认为最合理的单点估计。\n只输出一个 JSON 对象，包含上述四个字段，值均为正数。不要输出解释或 Markdown。",
     "options": [],
     "reference": {
@@ -13272,6 +14780,45 @@
           "measurement_count": 4
         },
         "sourceReportSha256": "c9b8a4f6a50ecebba590734cf5c2c056d99f77c424eacf19fef546e44c168140"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "mug_height_cm": 11.0,
+          "bottle_height_cm": 23.0,
+          "book_length_cm": 21.5,
+          "keyboard_width_cm": 31.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_size",
+          "sample_id": "vlm_size__desk0003_mug_resized",
+          "task_family": "object_size",
+          "metric": "vlm_size",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "mape_pct",
+          "absolute_errors": {
+            "mug_height_cm": 1.1945619583129883,
+            "bottle_height_cm": 1.444502592086792,
+            "book_length_cm": 0.5892526209354401,
+            "keyboard_width_cm": 2.9439645409584045
+          },
+          "relative_errors": {
+            "mug_height_cm": 0.09795857878262365,
+            "bottle_height_cm": 0.05909314728925629,
+            "book_length_cm": 0.02667598723448735,
+            "keyboard_width_cm": 0.0867301324630503
+          },
+          "mae": 1.5430704280734062,
+          "mape_pct": 6.761446144235439,
+          "within_10pct_count": 4,
+          "measurement_count": 4
+        },
+        "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_mug_resized--vlm_test_v1--vlm_size__desk0003_mug_resized--42--5b65d03bc35b",
+        "sourceReportSha256": "2752b09f70034d655ebefd1c7dffe2dfabb4e85c2c5e3f6fd9ec09464685ded6"
       }
     ],
     "poster": "assets/case-studies/b2b97114be65d997d9.webp",
@@ -13291,7 +14838,7 @@
     "images": [
       "assets/case-studies/57fedf394ae4d4c885.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：\n- 带把手杯子的高度：从杯底到杯口，对应 mug_height_cm。\n- 带盖水瓶的总高度：从瓶底到瓶盖顶部，对应 bottle_height_cm。\n- 书的封面长边长度，对应 book_length_cm。\n- 键盘从最左端到最右端的宽度，包含外壳，对应 keyboard_width_cm。\n请结合图中的物体和场景上下文，对每项给出你认为最合理的单点估计。\n只输出一个 JSON 对象，包含上述四个字段，值均为正数。不要输出解释或 Markdown。",
     "options": [],
     "reference": {
@@ -13504,6 +15051,45 @@
           "measurement_count": 4
         },
         "sourceReportSha256": "8788e658d070128ec168fee09473293660975171bdde8ad94aef973549d49264"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "mug_height_cm": 10.0,
+          "bottle_height_cm": 23.0,
+          "book_length_cm": 21.5,
+          "keyboard_width_cm": 31.5
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_size",
+          "sample_id": "vlm_size__desk0003_camera_change",
+          "task_family": "object_size",
+          "metric": "vlm_size",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "mape_pct",
+          "absolute_errors": {
+            "mug_height_cm": 1.085963249206543,
+            "bottle_height_cm": 1.444502592086792,
+            "book_length_cm": 0.5892526209354401,
+            "keyboard_width_cm": 2.4439645409584045
+          },
+          "relative_errors": {
+            "mug_height_cm": 0.097958402422475,
+            "bottle_height_cm": 0.05909314728925629,
+            "book_length_cm": 0.02667598723448735,
+            "keyboard_width_cm": 0.07199997330922853
+          },
+          "mae": 1.390920750796795,
+          "mape_pct": 6.393187756386179,
+          "within_10pct_count": 4,
+          "measurement_count": 4
+        },
+        "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_camera_change--vlm_test_v1--vlm_size__desk0003_camera_change--42--d02e8da567b2",
+        "sourceReportSha256": "ee82ee957ac82a3f3838f532662f0f853e6a723c63b1ee323b90baf6e78fd0f7"
       }
     ],
     "poster": "assets/case-studies/57fedf394ae4d4c885.webp",
@@ -13523,7 +15109,7 @@
     "images": [
       "assets/case-studies/6beec8881945c298b1.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：\n- 带把手杯子的高度：从杯底到杯口，对应 mug_height_cm。\n- 带盖水瓶的总高度：从瓶底到瓶盖顶部，对应 bottle_height_cm。\n- 书的封面长边长度，对应 book_length_cm。\n- 键盘从最左端到最右端的宽度，包含外壳，对应 keyboard_width_cm。\n请结合图中的物体和场景上下文，对每项给出你认为最合理的单点估计。\n只输出一个 JSON 对象，包含上述四个字段，值均为正数。不要输出解释或 Markdown。",
     "options": [],
     "reference": {
@@ -13736,6 +15322,45 @@
           "measurement_count": 4
         },
         "sourceReportSha256": "125f01a5207d724471e75485b74a9e97160566d9f96693a5acfb3f169a005ce6"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "mug_height_cm": 10.5,
+          "bottle_height_cm": 23.0,
+          "book_length_cm": 21.5,
+          "keyboard_width_cm": 31.0
+        },
+        "valid": true,
+        "metrics": {
+          "benchmark": "vlm_size",
+          "sample_id": "vlm_size__desk0003_base",
+          "task_family": "object_size",
+          "metric": "vlm_size",
+          "passed": null,
+          "official_score": null,
+          "score_kind": "local_diagnostic",
+          "submission_valid": true,
+          "primary_metric": "mape_pct",
+          "absolute_errors": {
+            "mug_height_cm": 0.585963249206543,
+            "bottle_height_cm": 1.444502592086792,
+            "book_length_cm": 0.5892526209354401,
+            "keyboard_width_cm": 2.9439645409584045
+          },
+          "relative_errors": {
+            "mug_height_cm": 0.05285632254359875,
+            "bottle_height_cm": 0.05909314728925629,
+            "book_length_cm": 0.02667598723448735,
+            "keyboard_width_cm": 0.0867301324630503
+          },
+          "mae": 1.390920750796795,
+          "mape_pct": 5.633889738259818,
+          "within_10pct_count": 4,
+          "measurement_count": 4
+        },
+        "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_base--vlm_test_v1--vlm_size__desk0003_base--42--198413f0d5ad",
+        "sourceReportSha256": "c95b841ee57e5534e557a70119a82c299766a5b815b3b8052664c7d876d2138a"
       }
     ],
     "poster": "assets/case-studies/6beec8881945c298b1.webp",
@@ -13755,7 +15380,7 @@
     "images": [
       "assets/case-studies/b9a84a3f10c9aaecb0.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Consider the real-world 3D locations and orientations of the objects. Which side of the person is facing the camera?",
     "options": [
       "A. front",
@@ -13838,6 +15463,16 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "e68f83e45d68a972801c06f921f18235c080aac4ed3d3c6a8591a1bdbb70f96d"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_3dsrbench--w2_3dsrbench-X727WAYB--native_release--X727WAYB--42--2cec6197cabf",
+        "sourceReportSha256": "2e23fb208a7e5bab3f58d81934226a444b548ccf7ca4c6559d68ba9784bd316e"
       }
     ],
     "poster": "assets/case-studies/b9a84a3f10c9aaecb0.webp",
@@ -13859,7 +15494,7 @@
     "images": [
       "assets/case-studies/47fa25454c12ae0ccb.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Consider the real-world 3D locations and orientations of the objects. Which side of the girl in light green shirt is facing the grey car?",
     "options": [
       "A. front",
@@ -13942,6 +15577,16 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "422120c2be9cb2417f34406cd12399a1a287864904a96352b35b21992f3b165b"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "C",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_3dsrbench--w2_3dsrbench-WMXV424F--native_release--WMXV424F--42--bbf1e00bf00a",
+        "sourceReportSha256": "7a1bbcea67f56e9587cad35407695141c10dbe0a8a087fe5a35d438e4ed02d9a"
       }
     ],
     "poster": "assets/case-studies/47fa25454c12ae0ccb.webp",
@@ -13961,7 +15606,7 @@
     "images": [
       "assets/case-studies/979978a269b3c6fccf.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Consider the real-world 3D locations and orientations of the objects. If I stand at the red car's position facing where it is facing, is the fire hydrant on the left or right of me?",
     "options": [
       "A. on the left",
@@ -14040,6 +15685,16 @@
         "valid": false,
         "metrics": {},
         "sourceReportSha256": "9d4a063bff68b52df9a1b561a3a17c0d850164d2129d93250c3143170caf8082"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "A",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_3dsrbench--w2_3dsrbench-UUBPYYRT--native_release--UUBPYYRT--42--c1c1911bae20",
+        "sourceReportSha256": "a477422f2f476d784417a76fbb2c6c0c5a0ff11a399007de4a2e127da91b6aca"
       }
     ],
     "poster": "assets/case-studies/979978a269b3c6fccf.webp",
@@ -14059,7 +15714,7 @@
     "images": [
       "assets/case-studies/ebcfcfa43df5b586f8.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Is the watch located to the left of the headset? Your response should be a single word: yes or no.",
     "options": [],
     "reference": "no",
@@ -14137,6 +15792,16 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "f7eff88d04c99fc13a2206c778103958724356657b437a872bb751e97be359fc"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_bop_ask--w2_bop_ask-lab_home_0195--native_release--lab_home_0195--42--89636b2a38b2",
+        "sourceReportSha256": "aaf37438cac0479610e097f4b81da2c5886eccdbd0db0ae76d87bf78a9a48212"
       }
     ],
     "poster": "assets/case-studies/ebcfcfa43df5b586f8.webp",
@@ -14157,7 +15822,7 @@
       "assets/case-studies/faf33737abca794485.webp",
       "assets/case-studies/bd9e392baca7c3b80e.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Is the can of Starkist Chunk Light tuna farther from the camera than the set of dry-erase markers? Your response should be a single word: yes or no.",
     "options": [],
     "reference": "no",
@@ -14235,6 +15900,16 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "d6dc322c4fa7c210882655fd54233ecc8094801611a6f79e9bdcdb5d16e4f8a4"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_bop_ask--w2_bop_ask-core_ycbv_0163--native_release--core_ycbv_0163--42--cb76aae21c29",
+        "sourceReportSha256": "02311187f989581990897e32fa9192a68b88b0f5fd510aeeb327f31dd37c625a"
       }
     ],
     "poster": "assets/case-studies/faf33737abca794485.webp",
@@ -14255,7 +15930,7 @@
       "assets/case-studies/7b31fb3056e3f19d24.webp",
       "assets/case-studies/6b85701cf8c1336d02.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Is the turquoise rounded colander closer to the camera than the green whisk with the green handle? Your response should be a single word: yes or no.",
     "options": [],
     "reference": "no",
@@ -14333,6 +16008,16 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "48d02ebe524fb9e544dec51fd44db48410ef22e27104947dec7d4f65516ae164"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_bop_ask--w2_bop_ask-core_handal_0199--native_release--core_handal_0199--42--1c5beb4eddcd",
+        "sourceReportSha256": "c909e960ff383aaac2b4e7965f57da05533c52af8bbb48df0c44baf578ec2050"
       }
     ],
     "poster": "assets/case-studies/7b31fb3056e3f19d24.webp",
@@ -14353,7 +16038,7 @@
       "assets/case-studies/345323ebf53413a524.webp",
       "assets/case-studies/42515a4036d2389274.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Based on these two views showing the same scene: in which direction did I move from the first view to the second view? A. Diagonally forward and right B. Directly right C. Directly left D. Diagonally forward and left",
     "options": [],
     "reference": "A",
@@ -14431,6 +16116,16 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "3ab9c930b2f723b70b4550695ff3feb1d2ba81fd46e8284dafdc666fd8bfd2eb"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "A",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_mindcube--w2_mindcube-among_group707_q3_1_2--native_release--among_group707_q3_1_2--42--b795dfe438a3",
+        "sourceReportSha256": "996f420a32c701839dd3d922307cfff0cc63951b71847735d2928dcfcbcb9526"
       }
     ],
     "poster": "assets/case-studies/345323ebf53413a524.webp",
@@ -14455,7 +16150,7 @@
       "assets/case-studies/8e881384f72dfa1209.webp",
       "assets/case-studies/38360855671d4bab68.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Based on these four images (image 1, 2, 3, and 4) showing the cans from different viewpoints (front, left, back, and right), with each camera aligned with room walls and partially capturing the surroundings: From the viewpoint presented in image 1, what is to the left of the cans? A. Wall B. Black chair C. Window with fencing D. Boxes and bottles",
     "options": [],
     "reference": "B",
@@ -14533,6 +16228,16 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "1da3ebc9f3cf554bf84143b4e46736ff8b3df32cf276d54d25e45b05ba1ae372"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_mindcube--w2_mindcube-among_group416_q0_5_1--native_release--among_group416_q0_5_1--42--5603058b5ef6",
+        "sourceReportSha256": "179214db7ffd3f8cbb70224bc46d889c41b97f8ec9a787b189eea07320755f6e"
       }
     ],
     "poster": "assets/case-studies/a216cf62801d67a92e.webp",
@@ -14554,7 +16259,7 @@
       "assets/case-studies/c666cfd3fabfdfaf24.webp",
       "assets/case-studies/6588c7d793738b8310.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Based on these three images (image 1, 2, and 3) showing the same scene from different viewpoints (front, left, and right): If I am standing at the same spot and facing the same direction as shown in image 3, then I turn left and move forward, what would happen to my relative position to black cabinet? A. The distance wouldn't change much, but it would be on my front-left. B. It would become farther from me. C. It would become closer to me. D. The distance wouldn't change much, but it would be on my front-right.",
     "options": [],
     "reference": "B",
@@ -14632,6 +16337,16 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "a2426bc9727ed93a20fe29e9be7e7f72938b3ca90026bd248ba5d76de586c8c4"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "D",
+        "valid": true,
+        "metrics": {
+          "native_success": 0.0
+        },
+        "taskId": "w2_mindcube--w2_mindcube-around_c3a4d9f0f1b01fb698c1557deca53--native_release--around_c3a4d9f0f1b01fb698c1557deca536ae703defca5--42--cb8843dd413c",
+        "sourceReportSha256": "50c84d2e8e842cc16b952dcb4bd80a05ad5f8065d078bb051e5eef4dd6ea6e91"
       }
     ],
     "poster": "assets/case-studies/cac4c790148f7b6666.webp",
@@ -14652,7 +16367,7 @@
       "assets/case-studies/5aa8d18cfdf7ced123.webp",
       "assets/case-studies/c0e1e548440d55131a.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "When the cabinet for placing cups is opened, it faces north. In which direction is the cooking area relative to the cabinet for placing cups?\nOptions: A: Northwest, B: Southwest, C: North, D: Northeast",
     "options": [],
     "reference": "A",
@@ -14730,6 +16445,16 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "58fa8056cc53ac9d7bd284f9df2b6034149a380e401ad4e56a17a6351afd4791"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "A",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_mmsi_bench--w2_mmsi_bench-987--native_release--987--42--24687cdd81d6",
+        "sourceReportSha256": "82f78eec649cbc7ecb762b9ed0a49f7f1bb8db1f70bf17e876f3ddb7917ddc6f"
       }
     ],
     "poster": "assets/case-studies/5aa8d18cfdf7ced123.webp",
@@ -14754,7 +16479,7 @@
       "assets/case-studies/153fa1db60bef5e368.webp",
       "assets/case-studies/df759fb90349d3ee09.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "These four photos show a meeting room. Suppose I am sitting on the chair to the left in photo 2. If I want to watch TV, which direction should I face?\nOptions: A: Look forward, B: Look to the right, C: Look backward, D: Look to the left",
     "options": [],
     "reference": "B",
@@ -14832,6 +16557,16 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "a70766b766d00813d30633ed0d461aa807c5422b0e167b862b7e6d7d8d58bbc4"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "C",
+        "valid": true,
+        "metrics": {
+          "native_success": 0.0
+        },
+        "taskId": "w2_mmsi_bench--w2_mmsi_bench-892--native_release--892--42--d72338022e9b",
+        "sourceReportSha256": "27184478f1bc87cce941b5270de3787473c365395b78e86a2f8183a92aec19c7"
       }
     ],
     "poster": "assets/case-studies/606040f3113b230a6b.webp",
@@ -14852,7 +16587,7 @@
       "assets/case-studies/ffafbeee693aa19ef9.webp",
       "assets/case-studies/0f1e17fdb1cd3c4c3d.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Continuous shooting from a first-person perspective, with the direction of the first photo as the front, what is the position of the second photo relative to the first photo's shooting position?\nOptions: A: Rear right, B: Front left, C: Front right, D: Rear left",
     "options": [],
     "reference": "C",
@@ -14928,6 +16663,16 @@
         "valid": false,
         "metrics": {},
         "sourceReportSha256": "97917d43e2afc43e7ad0884dcac2bc4f3c93c86b209018e2bcb9b74dd35b43df"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 0.0
+        },
+        "taskId": "w2_mmsi_bench--w2_mmsi_bench-173--native_release--173--42--a882c54b8f01",
+        "sourceReportSha256": "2b0a04a97abc4ae6b056284ec1a22a080bebda39be43cb92337b5f1d2ec946b4"
       }
     ],
     "poster": "assets/case-studies/ffafbeee693aa19ef9.webp",
@@ -14948,7 +16693,7 @@
       "assets/case-studies/a7c970d340b077f797.webp",
       "assets/case-studies/1c7d805872fef66df5.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Is the cactus behind the tissue box? Answer yes or no.",
     "options": [],
     "reference": "No",
@@ -15026,6 +16771,16 @@
           "native_success": 0.0
         },
         "sourceReportSha256": "bc83be3ae5f2680187814309c658d65f3301362b27abfe7a4b4403d7d5b3627c"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_robospatial--w2_robospatial-configuration_0107--native_release--configuration_0107--42--7034eeade5f0",
+        "sourceReportSha256": "28757b5101fdeeabc45e3a73564e423803c37ea4d684c0a2d0ad3d2f147d7781"
       }
     ],
     "poster": "assets/case-studies/a7c970d340b077f797.webp",
@@ -15046,7 +16801,7 @@
       "assets/case-studies/ff1a71ec643d2c0130.webp",
       "assets/case-studies/dc59990252d2e0b512.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Can the pot fit right of the pan? Answer yes or no.",
     "options": [],
     "reference": "Yes",
@@ -15124,6 +16879,16 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "407c0a9a2b2d7c5af7bd4a1fae44ff1c76ec0eae280c1485bf0a64a6863a81f2"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "B",
+        "valid": true,
+        "metrics": {
+          "native_success": 0.0
+        },
+        "taskId": "w2_robospatial--w2_robospatial-compatibility_0086--native_release--compatibility_0086--42--82d0459ac1a7",
+        "sourceReportSha256": "7f9faa9c22632baec4c7b3e27a335080e41b27609b765b92d75612c8756e56c2"
       }
     ],
     "poster": "assets/case-studies/ff1a71ec643d2c0130.webp",
@@ -15144,7 +16909,7 @@
       "assets/case-studies/d175435a8e1c9380f4.webp",
       "assets/case-studies/b42b43dab4aa38b80a.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Is the banana above the trash bin? Answer yes or no.",
     "options": [],
     "reference": "Yes",
@@ -15222,6 +16987,16 @@
           "native_success": 1.0
         },
         "sourceReportSha256": "3c46501459630f8259b49016faaa7726e9ea80f01ff1ff385ddd636f66377ae7"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "A",
+        "valid": true,
+        "metrics": {
+          "native_success": 1.0
+        },
+        "taskId": "w2_robospatial--w2_robospatial-configuration_0069--native_release--configuration_0069--42--cf1431cff219",
+        "sourceReportSha256": "1e28a3467f301281a0cf2be4efce2b7cea092848cef122fff0c9a7a218ec8ae2"
       }
     ],
     "poster": "assets/case-studies/d175435a8e1c9380f4.webp",
@@ -15248,7 +17023,7 @@
       "assets/case-studies/ace108323e26f75bae.webp",
       "assets/case-studies/86cfb11e8d9b568c74.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "If I am standing by the refrigerator and facing the washer, is the sofa to my front-left, front-right, back-left, or back-right?\nThe directions refer to the quadrants of a Cartesian plane (if I am standing at the origin and facing along the positive y-axis).",
     "options": [
       "A. front-right",
@@ -15329,6 +17104,14 @@
         "valid": false,
         "metrics": {},
         "sourceReportSha256": "1b13ef9a1930ea7af5c1d6d43e4ab8bdced8a475de6c24e8257b8a6c4b153d87"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": null,
+        "valid": false,
+        "metrics": {},
+        "taskId": "w2_vsi_bench--w2_vsi_bench-991--native_release--991--42--bf315a6eea9c",
+        "sourceReportSha256": "62f38badfde2bdef044dd2e692eceee35dfd808a15d47facebe938dd1116e899"
       }
     ],
     "poster": "assets/case-studies/7575413e7795cf06ab.webp",
@@ -15355,7 +17138,7 @@
       "assets/case-studies/4b5be15b010bff7ce5.webp",
       "assets/case-studies/bebfdc3e941d062edf.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Measuring from the closest point of each object, what is the distance between the bathtub and the washer (in meters)?",
     "options": null,
     "reference": "1.7",
@@ -15453,6 +17236,14 @@
           "absolute_error": 0.30000000000000004
         },
         "sourceReportSha256": "e31a14941ab3451ae45e425529d8e95cfd41b6753f2487f786a193a254e21a8e"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": null,
+        "valid": false,
+        "metrics": {},
+        "taskId": "w2_vsi_bench--w2_vsi_bench-915--native_release--915--42--09c446f19111",
+        "sourceReportSha256": "d54e0a72c43f2691f92ff55312fc0efabfdd3c2abc80a5bb7931e4bed2266e51"
       }
     ],
     "poster": "assets/case-studies/42fd12dc15af3507eb.webp",
@@ -15479,7 +17270,7 @@
       "assets/case-studies/0549dea183a7999466.webp",
       "assets/case-studies/714ab4d37cb1c73647.webp"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "What is the size of this room (in square meters)? \nIf multiple rooms are shown, estimate the size of the combined space.",
     "options": null,
     "reference": "26.4",
@@ -15580,6 +17371,18 @@
           "absolute_error": 1.3999999999999986
         },
         "sourceReportSha256": "c4e223b20217db02ad68e929f5ff4f34b5a2287711940e53d59c98d10d33a745"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": "17",
+        "valid": true,
+        "metrics": {
+          "absolute_relative_error": 0.356060606060606,
+          "native_success": 0.0,
+          "absolute_error": 9.399999999999999
+        },
+        "taskId": "w2_vsi_bench--w2_vsi_bench-598--native_release--598--42--bd05d7c3f167",
+        "sourceReportSha256": "df92639ab47e4ab7a650267d56b948a66af72eca9e558549c11243872fe41fb1"
       }
     ],
     "poster": "assets/case-studies/9d615fc3f2b66417d5.webp",
@@ -18078,7 +19881,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_ragnet-01.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "This is a RAGNet-3DOI interaction image. Localize where you should pull using one hand. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -18716,6 +20519,68 @@
         "sourceReportSha256": "cc65c2706691da4785bda287bfbfb1bfe91df9d296b8a6a5874a185089ff0e2e",
         "resultSha256": "1623a4eda0d0906dae01dc0f6375974ad9e128d7f5f279add4409d20b4229838",
         "taskId": "w5_ragnet--w5_ragnet-taskonomy_tallmadge_point_51_view_2_do--native_release--taskonomy_tallmadge_point_51_view_2_domain_rgb--42--f5556c4b8b88"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            340.0,
+            161.0
+          ],
+          "bbox_2d": [
+            332.0,
+            0.0,
+            410.0,
+            330.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  346,
+                  0
+                ],
+                [
+                  410,
+                  0
+                ],
+                [
+                  396,
+                  165
+                ],
+                [
+                  382,
+                  330
+                ],
+                [
+                  357,
+                  314
+                ],
+                [
+                  332,
+                  298
+                ],
+                [
+                  338,
+                  161
+                ],
+                [
+                  342,
+                  80
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.0
+        },
+        "taskId": "w5_ragnet--w5_ragnet-taskonomy_tallmadge_point_51_view_2_do--native_release--taskonomy_tallmadge_point_51_view_2_domain_rgb--42--f5556c4b8b88",
+        "resultSha256": "84b1f9778cb4dbac7edab59d2c9d8f8717f12c9f398a8bb2b3e2b851df9faa6f"
       }
     ],
     "poster": "assets/case-studies/d57bfd3f1b6631ee02.webp",
@@ -18988,6 +20853,40 @@
             "bbox_success_iou50": 0.0
           },
           "sourceReportSha256": "11c32c107bbc8213a2c2fb3856015356d4c830c769cb0d625f30baebe057b897"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              340.0,
+              161.0
+            ],
+            "bbox_2d": [
+              332.0,
+              0.0,
+              412.0,
+              330.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": false,
+            "official_score": 0.0,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.0,
+            "giou": 0.0,
+            "point_in_gt": false,
+            "has_mask": true,
+            "benchmark": "ragnet",
+            "sample_id": "taskonomy_tallmadge_point_51_view_2_domain_rgb",
+            "task_family": "pull-one_hand",
+            "mask_iou": 0.0,
+            "native_success": 0.0,
+            "point_hit": 0.0,
+            "bbox_success_iou50": 0.0
+          },
+          "taskId": "w5_ragnet--w5_ragnet-taskonomy_tallmadge_point_51_view_2_do--native_release--taskonomy_tallmadge_point_51_view_2_domain_rgb--42--f5556c4b8b88",
+          "sourceReportSha256": "f55fac13b74614aa133eb3618c0c76d99cf315f62422579071bc7262511085e5"
         }
       ],
       "poster": "assets/case-studies/d57bfd3f1b6631ee02.webp",
@@ -19016,7 +20915,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_ragnet-02.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "This is a RAGNet-3DOI interaction image. Localize where you should free using two hands. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -19743,6 +21642,84 @@
         "sourceReportSha256": "c9a7a69d5d5f2ec90b1c9b830321deab4a468bc72b278b9cfc0fc0e64795cbe5",
         "resultSha256": "40c1e41acc1aa97ec49695330695378085e148e0355a1d5cf12f497fd642a855",
         "taskId": "w5_ragnet--w5_ragnet-taskonomy_poipu_point_1187_view_1_doma--native_release--taskonomy_poipu_point_1187_view_1_domain_rgb--42--a155bc233c70"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            180.0,
+            446.0
+          ],
+          "bbox_2d": [
+            48.0,
+            421.0,
+            305.0,
+            471.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  48,
+                  448
+                ],
+                [
+                  60,
+                  430
+                ],
+                [
+                  112,
+                  429
+                ],
+                [
+                  163,
+                  426
+                ],
+                [
+                  215,
+                  424
+                ],
+                [
+                  264,
+                  421
+                ],
+                [
+                  305,
+                  437
+                ],
+                [
+                  303,
+                  446
+                ],
+                [
+                  250,
+                  452
+                ],
+                [
+                  180,
+                  458
+                ],
+                [
+                  100,
+                  466
+                ],
+                [
+                  48,
+                  471
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.0
+        },
+        "taskId": "w5_ragnet--w5_ragnet-taskonomy_poipu_point_1187_view_1_doma--native_release--taskonomy_poipu_point_1187_view_1_domain_rgb--42--a155bc233c70",
+        "resultSha256": "89bd9c24a06c307791fdf1248ceebc911a3efc1715c9472f9a7529d7740f20f3"
       }
     ],
     "poster": "assets/case-studies/58b4faa25dbda2720e.webp",
@@ -20017,6 +21994,40 @@
             "bbox_success_iou50": 0.0
           },
           "sourceReportSha256": "ff130b5d9c0a4fad90234fc9fa242041f22fb730de6eb02204b1ab4d7f01b5d7"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              402.0,
+              300.0
+            ],
+            "bbox_2d": [
+              382.0,
+              265.0,
+              441.0,
+              348.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": true,
+            "official_score": 0.7763937104349602,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.909740657545436,
+            "giou": 0.7763937104349602,
+            "point_in_gt": true,
+            "has_mask": true,
+            "benchmark": "ragnet",
+            "sample_id": "taskonomy_poipu_point_1187_view_1_domain_rgb",
+            "task_family": "free-two_hands",
+            "mask_iou": 0.7763937104349602,
+            "native_success": 1.0,
+            "point_hit": 1.0,
+            "bbox_success_iou50": 1.0
+          },
+          "taskId": "w5_ragnet--w5_ragnet-taskonomy_poipu_point_1187_view_1_doma--native_release--taskonomy_poipu_point_1187_view_1_domain_rgb--42--a155bc233c70",
+          "sourceReportSha256": "86daea372bf5931e7f6a6812d260c79d895b8412dd337c49a33e15316e477190"
         }
       ],
       "poster": "assets/case-studies/58b4faa25dbda2720e.webp",
@@ -20047,7 +22058,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_ragnet-03.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "This is a RAGNet-3DOI interaction image. Localize where you should free movement using two hands. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -20701,6 +22712,96 @@
         "sourceReportSha256": "db1e58dbca15a8639d107800cdb2b65bfea08325e7da7635bf044c293fe7bc35",
         "resultSha256": "00d43e82d95a4f40d0f7cff50c1e080534de891a14daefbeceb1da025abc5013",
         "taskId": "w5_ragnet--w5_ragnet-taskonomy_imbery_point_1096_view_0_dom--native_release--taskonomy_imbery_point_1096_view_0_domain_rgb--42--7d12ddc00ab5"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            205.0,
+            380.0
+          ],
+          "bbox_2d": [
+            166.0,
+            320.0,
+            245.0,
+            451.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  170,
+                  320
+                ],
+                [
+                  237,
+                  320
+                ],
+                [
+                  245,
+                  333
+                ],
+                [
+                  242,
+                  355
+                ],
+                [
+                  244,
+                  381
+                ],
+                [
+                  244,
+                  444
+                ],
+                [
+                  233,
+                  444
+                ],
+                [
+                  226,
+                  436
+                ],
+                [
+                  206,
+                  440
+                ],
+                [
+                  186,
+                  437
+                ],
+                [
+                  179,
+                  449
+                ],
+                [
+                  168,
+                  451
+                ],
+                [
+                  167,
+                  382
+                ],
+                [
+                  170,
+                  356
+                ],
+                [
+                  166,
+                  336
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.0
+        },
+        "taskId": "w5_ragnet--w5_ragnet-taskonomy_imbery_point_1096_view_0_dom--native_release--taskonomy_imbery_point_1096_view_0_domain_rgb--42--7d12ddc00ab5",
+        "resultSha256": "48a9d682d72af405eddd93deef3f99c59345741199c735ae9ff1db4b03741b46"
       }
     ],
     "poster": "assets/case-studies/cfa33e08a3bb45807a.webp",
@@ -20973,6 +23074,40 @@
             "bbox_success_iou50": 0.0
           },
           "sourceReportSha256": "882c01a6c60cf41599b920190e854d05a8ef576b4fb6c72c9e6252ed33c8fccb"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              205.0,
+              385.0
+            ],
+            "bbox_2d": [
+              166.0,
+              320.0,
+              245.0,
+              451.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": false,
+            "official_score": 0.0,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.0,
+            "giou": 0.0,
+            "point_in_gt": false,
+            "has_mask": true,
+            "benchmark": "ragnet",
+            "sample_id": "taskonomy_imbery_point_1096_view_0_domain_rgb",
+            "task_family": "free movement-two_hands",
+            "mask_iou": 0.0,
+            "native_success": 0.0,
+            "point_hit": 0.0,
+            "bbox_success_iou50": 0.0
+          },
+          "taskId": "w5_ragnet--w5_ragnet-taskonomy_imbery_point_1096_view_0_dom--native_release--taskonomy_imbery_point_1096_view_0_domain_rgb--42--7d12ddc00ab5",
+          "sourceReportSha256": "2a3008aaedd16db4d4d942f6abdc396dc80e6c0763035f5644d3b35b873496dc"
         }
       ],
       "poster": "assets/case-studies/cfa33e08a3bb45807a.webp",
@@ -21001,7 +23136,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_reasonaff-01.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "The object in this image needs to be operated. Infer the functional part a person would touch to free movement it. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -21724,6 +23859,80 @@
         "sourceReportSha256": "b2555cf6ac5a061b9920762ea8a49e3e745eb19b1c4f31da2d8b8f5b8cd1c822",
         "resultSha256": "87713cdf16f0b98a0abba3c04dc6689b735ea4857c942095b1f256715f582b3d",
         "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_wyldwood_point_161_view_1--native_release--taskonomy_wyldwood_point_161_view_12_domain_rgb--42--2470e33ae169"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            81.0,
+            326.0
+          ],
+          "bbox_2d": [
+            17.0,
+            311.0,
+            216.0,
+            511.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  17,
+                  311
+                ],
+                [
+                  145,
+                  322
+                ],
+                [
+                  158,
+                  396
+                ],
+                [
+                  216,
+                  415
+                ],
+                [
+                  216,
+                  511
+                ],
+                [
+                  145,
+                  511
+                ],
+                [
+                  142,
+                  495
+                ],
+                [
+                  77,
+                  480
+                ],
+                [
+                  77,
+                  511
+                ],
+                [
+                  58,
+                  511
+                ],
+                [
+                  42,
+                  410
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.8504140230132272
+        },
+        "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_wyldwood_point_161_view_1--native_release--taskonomy_wyldwood_point_161_view_12_domain_rgb--42--2470e33ae169",
+        "resultSha256": "a2854e606b425af87a9d75507073853247c6f2e45f28ba5daafd248893cbd81f"
       }
     ],
     "poster": "assets/case-studies/e15e6acf9854d8e202.webp",
@@ -21996,6 +24205,40 @@
             "bbox_success_iou50": 0.0
           },
           "sourceReportSha256": "da19b57d9aac95f2f8f7c0fbfd57af556782c8431817c70674a45a46ad3203e6"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              155.0,
+              338.0
+            ],
+            "bbox_2d": [
+              18.0,
+              310.0,
+              315.0,
+              490.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": true,
+            "official_score": 0.4173531925727899,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.6019757973505565,
+            "giou": 0.4173531925727899,
+            "point_in_gt": false,
+            "has_mask": true,
+            "benchmark": "reasonaff",
+            "sample_id": "taskonomy_wyldwood_point_161_view_12_domain_rgb",
+            "task_family": "free movement-two_hands",
+            "mask_iou": 0.4173531925727899,
+            "native_success": 1.0,
+            "point_hit": 0.0,
+            "bbox_success_iou50": 1.0
+          },
+          "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_wyldwood_point_161_view_1--native_release--taskonomy_wyldwood_point_161_view_12_domain_rgb--42--2470e33ae169",
+          "sourceReportSha256": "d7fedbe8c8f15e5311892182fdcac9606dac803e36941542529248f22d1ef42d"
         }
       ],
       "poster": "assets/case-studies/e15e6acf9854d8e202.webp",
@@ -22024,7 +24267,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_reasonaff-02.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "The object in this image needs to be operated. Infer the functional part a person would touch to free it. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -22498,6 +24741,88 @@
         "sourceReportSha256": "902e8e8482eee7fd47823231c7d06c4948542aa2b1787a757d0da42f86953882",
         "resultSha256": "be61fa7f0a7bfe90c4a439a6a1c5256dc150360a6d62f6f7c2b834db64079cf0",
         "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_shumway_point_317_view_3_--native_release--taskonomy_shumway_point_317_view_3_domain_rgb--42--dfa5134ae974"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            195.0,
+            445.0
+          ],
+          "bbox_2d": [
+            10.0,
+            344.0,
+            396.0,
+            511.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  10,
+                  511
+                ],
+                [
+                  18,
+                  440
+                ],
+                [
+                  40,
+                  405
+                ],
+                [
+                  95,
+                  368
+                ],
+                [
+                  138,
+                  348
+                ],
+                [
+                  175,
+                  344
+                ],
+                [
+                  198,
+                  358
+                ],
+                [
+                  218,
+                  400
+                ],
+                [
+                  235,
+                  455
+                ],
+                [
+                  310,
+                  455
+                ],
+                [
+                  368,
+                  462
+                ],
+                [
+                  388,
+                  482
+                ],
+                [
+                  396,
+                  511
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.0
+        },
+        "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_shumway_point_317_view_3_--native_release--taskonomy_shumway_point_317_view_3_domain_rgb--42--dfa5134ae974",
+        "resultSha256": "bcbbe95770f51a164163880fcf359a78b2afe136cde9c3c7086fd439bbca2fb2"
       }
     ],
     "poster": "assets/case-studies/ca9f9455dca34cdaae.webp",
@@ -22770,6 +25095,40 @@
             "bbox_success_iou50": 0.0
           },
           "sourceReportSha256": "24088ed6f9600a5545f03936596896993407b14dd64d9d77ffc1738de3a46cf4"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              222.0,
+              282.0
+            ],
+            "bbox_2d": [
+              143.0,
+              271.0,
+              299.0,
+              354.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": false,
+            "official_score": 0.015096705734818888,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.028533883987234842,
+            "giou": 0.015096705734818888,
+            "point_in_gt": false,
+            "has_mask": true,
+            "benchmark": "reasonaff",
+            "sample_id": "taskonomy_shumway_point_317_view_3_domain_rgb",
+            "task_family": "free-two_hands",
+            "mask_iou": 0.015096705734818888,
+            "native_success": 0.0,
+            "point_hit": 0.0,
+            "bbox_success_iou50": 0.0
+          },
+          "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_shumway_point_317_view_3_--native_release--taskonomy_shumway_point_317_view_3_domain_rgb--42--dfa5134ae974",
+          "sourceReportSha256": "510e90bd089cd085047cd515d6c9fdaa3444a9a8d14aba5ede740e0fde866da5"
         }
       ],
       "poster": "assets/case-studies/ca9f9455dca34cdaae.webp",
@@ -22798,7 +25157,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_reasonaff-03.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "The object in this image needs to be operated. Infer the functional part a person would touch to pull it. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -23534,6 +25893,104 @@
         "sourceReportSha256": "b7fc21bd817aab47a483187cc204c02c735df2f91648394e5a554a30968ca884",
         "resultSha256": "4e590ccc4663da5de2b9d805d3f912944baf081f606dcf83967357b504c419cc",
         "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_hercules_point_295_view_8--native_release--taskonomy_hercules_point_295_view_8_domain_rgb--42--408370c86670"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            214.0,
+            492.0
+          ],
+          "bbox_2d": [
+            169.0,
+            477.0,
+            258.0,
+            509.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  169,
+                  502
+                ],
+                [
+                  172,
+                  496
+                ],
+                [
+                  181,
+                  494
+                ],
+                [
+                  183,
+                  489
+                ],
+                [
+                  189,
+                  489
+                ],
+                [
+                  191,
+                  492
+                ],
+                [
+                  233,
+                  482
+                ],
+                [
+                  234,
+                  477
+                ],
+                [
+                  240,
+                  477
+                ],
+                [
+                  243,
+                  480
+                ],
+                [
+                  254,
+                  479
+                ],
+                [
+                  258,
+                  484
+                ],
+                [
+                  256,
+                  490
+                ],
+                [
+                  245,
+                  491
+                ],
+                [
+                  192,
+                  504
+                ],
+                [
+                  182,
+                  507
+                ],
+                [
+                  173,
+                  509
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.10426151884902568
+        },
+        "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_hercules_point_295_view_8--native_release--taskonomy_hercules_point_295_view_8_domain_rgb--42--408370c86670",
+        "resultSha256": "758603dae23b7e510b984fdbad9a8efcc704cd0e164849c113611233963bdbc6"
       }
     ],
     "poster": "assets/case-studies/d2b89fa20f6875b44c.webp",
@@ -23808,6 +26265,40 @@
             "bbox_success_iou50": 0.0
           },
           "sourceReportSha256": "8e0f5cd0b31ed5e5c78de35f809594ef0cadd208b990ae728d0510396f282072"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              214.0,
+              493.0
+            ],
+            "bbox_2d": [
+              168.0,
+              476.0,
+              259.0,
+              510.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": true,
+            "official_score": 0.2816170445233543,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.1585690856908569,
+            "giou": 0.2816170445233543,
+            "point_in_gt": true,
+            "has_mask": true,
+            "benchmark": "reasonaff",
+            "sample_id": "taskonomy_hercules_point_295_view_8_domain_rgb",
+            "task_family": "pull-one_hand",
+            "mask_iou": 0.2816170445233543,
+            "native_success": 1.0,
+            "point_hit": 1.0,
+            "bbox_success_iou50": 0.0
+          },
+          "taskId": "w5_reasonaff--w5_reasonaff-taskonomy_hercules_point_295_view_8--native_release--taskonomy_hercules_point_295_view_8_domain_rgb--42--408370c86670",
+          "sourceReportSha256": "2834510410b1b2513cae4850b7e0c3125624c02d818685b8d39aba698395f508"
         }
       ],
       "poster": "assets/case-studies/d2b89fa20f6875b44c.webp",
@@ -23838,7 +26329,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_umd-01.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Locate the scoop affordance on this spoon. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -24636,6 +27127,84 @@
         "sourceReportSha256": "0195e7bde1cf8397ff80f481822d810346e2fab9660b725921b9c1ed4b888c3e",
         "resultSha256": "63d1ac9f3837328874df33203daa05bb9068abe91bbf51ec3e6f6bff04c10c2b",
         "taskId": "w5_umd--w5_umd-spoon_02_00000233_scoop--native_release--spoon_02_00000233_scoop--42--079da9808c36"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            255.0,
+            198.0
+          ],
+          "bbox_2d": [
+            218.0,
+            174.0,
+            297.0,
+            222.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  218,
+                  188
+                ],
+                [
+                  224,
+                  178
+                ],
+                [
+                  238,
+                  174
+                ],
+                [
+                  255,
+                  176
+                ],
+                [
+                  272,
+                  186
+                ],
+                [
+                  286,
+                  200
+                ],
+                [
+                  297,
+                  213
+                ],
+                [
+                  288,
+                  222
+                ],
+                [
+                  268,
+                  219
+                ],
+                [
+                  246,
+                  214
+                ],
+                [
+                  227,
+                  205
+                ],
+                [
+                  219,
+                  196
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.11805749372034607
+        },
+        "taskId": "w5_umd--w5_umd-spoon_02_00000233_scoop--native_release--spoon_02_00000233_scoop--42--079da9808c36",
+        "resultSha256": "c1d0a5cd9a13a4a57b213b2b7369c94422e2069d860bcad111860a23c0f31019"
       }
     ],
     "poster": "assets/case-studies/c671a33aaa03701291.webp",
@@ -24908,6 +27477,40 @@
             "bbox_success_iou50": 1.0
           },
           "sourceReportSha256": "515a3ba2f6d954f7e45cb3fb97175091b8f29b179fa6a2c976675bb9cf1669a1"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              250.0,
+              197.0
+            ],
+            "bbox_2d": [
+              218.0,
+              173.0,
+              298.0,
+              221.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": false,
+            "official_score": 0.21994657168299198,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.3173228346456693,
+            "giou": 0.21994657168299198,
+            "point_in_gt": false,
+            "has_mask": true,
+            "benchmark": "umd",
+            "sample_id": "spoon_02_00000233_scoop",
+            "task_family": "scoop",
+            "mask_iou": 0.21994657168299198,
+            "native_success": 0.0,
+            "point_hit": 0.0,
+            "bbox_success_iou50": 0.0
+          },
+          "taskId": "w5_umd--w5_umd-spoon_02_00000233_scoop--native_release--spoon_02_00000233_scoop--42--079da9808c36",
+          "sourceReportSha256": "7664f35ee1958704c778bc7044d633ab6bbc834b930bcd57e1720c73bfb7ddad"
         }
       ],
       "poster": "assets/case-studies/c671a33aaa03701291.webp",
@@ -24936,7 +27539,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_umd-02.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Locate the support affordance on this shovel. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -25678,6 +28281,80 @@
         "sourceReportSha256": "cd7802efeb026edd76ff531ac0c8673db7e799dda713807fcd02c159f57acfb8",
         "resultSha256": "6d3f3c5b7b017433cd18fd5e40c92d751f763fab5e55d314a700c3f3a7d4a1fd",
         "taskId": "w5_umd--w5_umd-shovel_02_00000141_support--native_release--shovel_02_00000141_support--42--4dafa526977d"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            300.0,
+            205.0
+          ],
+          "bbox_2d": [
+            275.0,
+            177.0,
+            326.0,
+            233.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  278,
+                  179
+                ],
+                [
+                  315,
+                  177
+                ],
+                [
+                  320,
+                  181
+                ],
+                [
+                  326,
+                  219
+                ],
+                [
+                  324,
+                  227
+                ],
+                [
+                  316,
+                  231
+                ],
+                [
+                  309,
+                  231
+                ],
+                [
+                  297,
+                  232
+                ],
+                [
+                  285,
+                  233
+                ],
+                [
+                  279,
+                  228
+                ],
+                [
+                  275,
+                  185
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.9157175398633257
+        },
+        "taskId": "w5_umd--w5_umd-shovel_02_00000141_support--native_release--shovel_02_00000141_support--42--4dafa526977d",
+        "resultSha256": "64c63ee1e80ba79538fb11f10c78bf68a18e4022c85aa64105ffd347fde7ce63"
       }
     ],
     "poster": "assets/case-studies/51ca8244a30d734b9d.webp",
@@ -25950,6 +28627,40 @@
             "bbox_success_iou50": 1.0
           },
           "sourceReportSha256": "ec6e4f229373fa4dfcb9275cdd932186f678d964349c140de0ea84be8ef4bdb9"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              300.0,
+              208.0
+            ],
+            "bbox_2d": [
+              274.0,
+              178.0,
+              326.0,
+              238.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": true,
+            "official_score": 0.8003814367450731,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.9316770186335404,
+            "giou": 0.8003814367450731,
+            "point_in_gt": true,
+            "has_mask": true,
+            "benchmark": "umd",
+            "sample_id": "shovel_02_00000141_support",
+            "task_family": "support",
+            "mask_iou": 0.8003814367450731,
+            "native_success": 1.0,
+            "point_hit": 1.0,
+            "bbox_success_iou50": 1.0
+          },
+          "taskId": "w5_umd--w5_umd-shovel_02_00000141_support--native_release--shovel_02_00000141_support--42--4dafa526977d",
+          "sourceReportSha256": "04f43dace90b1800013d21e1854065cc1d9b52da1a09ce04748149f96080d85d"
         }
       ],
       "poster": "assets/case-studies/51ca8244a30d734b9d.webp",
@@ -25978,7 +28689,7 @@
     "images": [
       "assets/polygon-cases/W5-w5_umd-03.jpg"
     ],
-    "model": "Nine recorded models",
+    "model": "Ten recorded models",
     "question": "Locate the cut affordance on this scissors. Trace the functional region with polygon vertices in original image pixels.",
     "options": [],
     "reference": {
@@ -26652,6 +29363,92 @@
         "sourceReportSha256": "0271b5861c48bec49325b6a5f72b9fa2a08e0e9ec72be4ba6b50c14340d8e014",
         "resultSha256": "5c6d01c44a951113ea8f054d3d5d456e36f5900bd3ebfb756fe8c5e72e2320a4",
         "taskId": "w5_umd--w5_umd-scissors_02_00000232_cut--native_release--scissors_02_00000232_cut--42--91c19d2164c4"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "answer": {
+          "point_2d": [
+            330.0,
+            225.0
+          ],
+          "bbox_2d": [
+            298.0,
+            218.0,
+            377.0,
+            242.0
+          ],
+          "polygons": [
+            {
+              "outer": [
+                [
+                  298,
+                  218
+                ],
+                [
+                  320,
+                  221
+                ],
+                [
+                  345,
+                  226
+                ],
+                [
+                  373,
+                  234
+                ],
+                [
+                  373,
+                  236
+                ],
+                [
+                  345,
+                  231
+                ],
+                [
+                  315,
+                  229
+                ],
+                [
+                  315,
+                  233
+                ],
+                [
+                  345,
+                  237
+                ],
+                [
+                  377,
+                  239
+                ],
+                [
+                  377,
+                  242
+                ],
+                [
+                  345,
+                  242
+                ],
+                [
+                  315,
+                  239
+                ],
+                [
+                  298,
+                  236
+                ]
+              ],
+              "holes": []
+            }
+          ]
+        },
+        "valid": true,
+        "available": true,
+        "materialStatus": "valid_polygon",
+        "metrics": {
+          "polygon_mask_iou": 0.6126126126126126
+        },
+        "taskId": "w5_umd--w5_umd-scissors_02_00000232_cut--native_release--scissors_02_00000232_cut--42--91c19d2164c4",
+        "resultSha256": "0f6df929b0e8b527578e00944e42e63c75819a998e3a1172a8058014f71386b6"
       }
     ],
     "poster": "assets/case-studies/a5ecd12f00c5e4adef.webp",
@@ -26926,6 +29723,40 @@
             "bbox_success_iou50": 0.0
           },
           "sourceReportSha256": "ee6bd4feef717b99bbb4be308660bc569c0d76d92465e409e4491fbb39d44576"
+        },
+        {
+          "model": "Gemini 4 Argon",
+          "answer": {
+            "point_2d": [
+              325.0,
+              226.0
+            ],
+            "bbox_2d": [
+              298.0,
+              218.0,
+              378.0,
+              244.0
+            ]
+          },
+          "valid": true,
+          "metrics": {
+            "passed": true,
+            "official_score": 0.44553529686769516,
+            "metric": "bbox_iou_0.5_or_point_in_mask",
+            "bbox_iou": 0.6372367934983376,
+            "giou": 0.44553529686769516,
+            "point_in_gt": true,
+            "has_mask": true,
+            "benchmark": "umd",
+            "sample_id": "scissors_02_00000232_cut",
+            "task_family": "cut",
+            "mask_iou": 0.44553529686769516,
+            "native_success": 1.0,
+            "point_hit": 1.0,
+            "bbox_success_iou50": 1.0
+          },
+          "taskId": "w5_umd--w5_umd-scissors_02_00000232_cut--native_release--scissors_02_00000232_cut--42--91c19d2164c4",
+          "sourceReportSha256": "544ac0fed4617deaa3910dfc9b28bd8160fccf1e55c39b8d9eaf1fa1ad31c6c5"
         }
       ],
       "poster": "assets/case-studies/a5ecd12f00c5e4adef.webp",

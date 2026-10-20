@@ -10,13 +10,13 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,executionRecords,boxCa
   const html=context.checks.caseSlide(c,0,cs.length);
   assert(!html.includes('NaN'));assert(!html.includes('undefined'));
   if(!c.predictions.length){
-   executions++;assert.equal((html.match(/class="gallery-run /g)||[]).length,9,c.id);
-   assert.equal(context.checks.executionRecords(c).length,9);
+   executions++;assert.equal((html.match(/class="gallery-run /g)||[]).length,10,c.id);
+   assert.equal(context.checks.executionRecords(c).length,10);
    assert(!html.includes('gallery-record-strip'));
-  }else {staticCount++;assert.equal((html.match(/class="gallery-model /g)||[]).length,9,c.id);}
+  }else {staticCount++;assert.equal((html.match(/class="gallery-model /g)||[]).length,10,c.id);}
  }
  const original=JSON.parse(fs.readFileSync(pub+'/data/case-studies.json'));
  for(const c of original.filter(c=>!c.predictions.length))assert.equal(context.checks.lookup(c.id).taskId,c.sample);
  assert.throws(()=>context.checks.executionRecords({runIds:[],taskId:'wrong'}));
- console.log(`Rendered ${executions} execution tasks + ${staticCount} fixed-input tasks: exactly nine model cells each. All old links resolve to their exact task.`);
+ console.log(`Rendered ${executions} execution tasks + ${staticCount} fixed-input tasks: exactly ten model cells each. All old links resolve to their exact task.`);
 })().catch(e=>{console.error(e);process.exitCode=1;});

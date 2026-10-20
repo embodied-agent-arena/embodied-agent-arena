@@ -34,9 +34,9 @@ class PolygonComparisonTests(unittest.TestCase):
         for case in cases:
             with self.subTest(case=case['id']):
                 self.assertEqual(case['representation'], 'polygon')
-                self.assertEqual(len(case['predictions']), 9)
+                self.assertEqual(len(case['predictions']), 10)
                 self.assertEqual({p['taskId'] for p in case['predictions']}, {case['taskId']})
-                self.assertEqual(len({p['model'] for p in case['predictions']}), 9)
+                self.assertEqual(len({p['model'] for p in case['predictions']}), 10)
                 self.assertTrue((PUBLIC / case['images'][0]).is_file())
                 self.assertTrue((PUBLIC / case['reference']['mask']).is_file())
                 width, height = case['reference']['imageSize']

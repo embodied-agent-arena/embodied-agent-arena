@@ -20,6 +20,9 @@ data/
 !public/data/
 public/data/*
 !public/data/study.json
+!public/data/argon-results-audit.json
+!public/data/release.json
+!public/data/argon-case-audit.json
 !public/data/case-gallery.json
 !public/data/case-media.json
 !public/data/case-comparisons.json
