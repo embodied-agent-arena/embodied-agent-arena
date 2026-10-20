@@ -55,7 +55,7 @@ Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent
 
 [Full Results & Evaluation Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv)
 
-![Task Planning and Manipulation recordings from nine models](public/assets/reference-arena.gif)
+[**Same Task. Nine Models.**](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) — Compare 11 fixed tasks with 99 execution records. Preview the 48 available recordings; each remaining cell links to its execution log.
 
 ![Benchmark construction: 1,000 cases, five capability domains, GeoProbe, and the unified evaluation harness](public/assets/construction.webp)
 
