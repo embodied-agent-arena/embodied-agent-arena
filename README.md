@@ -51,7 +51,7 @@ Embodied Agent Arena compares **GPT-6 Astra, GPT-6 Sol, Claude Fable 5.1, Claude
 
 Mean ± run SD: five runs (Fable: three). Polygon, Planning, and Manipulation use one run.
 
-Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=7); **bold** marks the best mean. Affordance reports box–mask and direct-polygon IoU. [Model IDs and evaluation settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol).
+Mean scores from [Table 2](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf#page=8); **bold** marks the best mean. Affordance reports box–mask and direct-polygon IoU. [Model IDs and evaluation settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol).
 
 [Full Results & Evaluation Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv)
 
