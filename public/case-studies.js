@@ -218,6 +218,7 @@
   dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
   const grid=document.querySelector('.study-grid');
   if (!grid) return;
+  const atlasMode=document.body.classList.contains('case-atlas');
   const filters=[...document.querySelectorAll('[data-study-filter]')];
   const search=document.getElementById('study-search');
   let active=filters.find(b=>b.getAttribute('aria-pressed')==='true')?.dataset.studyFilter || 'highlights';
@@ -278,6 +279,12 @@
   function applyFilter() {
     const query=(search?.value||'').trim().toLowerCase();
     shown=allCases.filter(c=>(active==='all'||active==='highlights'&&aliases(c).length>0||c.domainKey===active)&&(!query||[c.benchmark,c.title,c.shortTask,c.question,...c.predictions.map(p=>p.model),...(c.runIds||[]).map(id=>{const r=mediaData.runs[id];return `${r.model} ${r.taskLabel} ${r.instruction}`;})].join(' ').toLowerCase().includes(query))).sort((a,b)=>priority(a)-priority(b));
+    if(atlasMode){
+      const ids=new Set(shown.map(c=>c.id));
+      grid.querySelectorAll('.study-card').forEach(card=>{card.hidden=!ids.has(card.querySelector('[data-case]').dataset.case);});
+      const count=document.getElementById('study-count');if(count)count.textContent=`${shown.length} cases`;
+      return;
+    }
     track.querySelectorAll('video').forEach(v=>v.pause());
     track.innerHTML=shown.map((c,i)=>`<div class="gallery-slot" aria-label="${esc(c.benchmark)}: ${esc(c.title)}"><p class="gallery-loading">${i+1} · ${esc(c.benchmark)}</p></div>`).join('');
     slides=[...track.children];current=0;hydrate(0);track.scrollLeft=0;
@@ -314,7 +321,7 @@
   reduced.addEventListener('change',updateActiveMedia);
   document.addEventListener('visibilitychange',()=>{if(document.hidden){document.querySelectorAll('.gallery-track video').forEach(v=>v.pause());}else updateActiveMedia();});
   window.addEventListener('resize',()=>go(current,false));
-  load().then(cases=>{allCases=cases;grid.hidden=true;gallery.classList.add('is-ready');applyFilter();const target=new URLSearchParams(location.search).get('case');const index=shown.findIndex(c=>c.id===target);if(index>=0)go(index,false);}).catch(error=>{
+  load().then(cases=>{allCases=cases;grid.hidden=!atlasMode;gallery.hidden=atlasMode;if(!atlasMode)gallery.classList.add('is-ready');applyFilter();const target=new URLSearchParams(location.search).get('case');const index=shown.findIndex(c=>c.id===target);if(index>=0)go(index,false);}).catch(error=>{
     gallery.innerHTML=`<p class="study-protocol">${esc(error.message)} <a href="case-atlas.html">Browse the Case Atlas ↗</a></p>`;
   });
 })();

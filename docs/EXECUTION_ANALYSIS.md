@@ -1,44 +1,66 @@
 # Reproducing the execution analysis
 
-The report joins measured Planning outcomes, token usage, elapsed time and native task feedback. The full Planning cohort contains 1,413 reports (nine models × 157 assignments). The video explorer contains 143 episodes grouped into 46 identical-task comparisons.
+**Task completion now compares ten models**, including Gemini 4 Argon: 1,570 outcomes on the same 157 Planning tasks. Their combined successes cover 142 tasks; 15 are unsuccessful for all ten models.
+
+**Time, token use and recovery** come from the nine-model detailed-log cohort: 1,413 Planning episodes. The selected execution explorer contains 46 task groups and 414 records, of which 143 have detailed action traces. Argon's results and recordings appear in the [ten-model Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html); its detailed action/feedback traces are still pending.
 
 ## Published evidence
 
-- `public/data/report/planning-episodes.csv`: one row per Planning episode, with source ID, SHA-256, outcome, duration, token usage and recovery counts.
-- `public/data/report/metrics.json`: model/source summaries, pairwise overlap and the 157-task outcome matrix.
-- `public/data/execution/index.json` and individual JSON files: video links, source IDs, settings, round timestamps, executed code, primitive arguments, feedback and verifier outcomes.
-- `public/assets/analysis/`: editable draw.io figures and SVG/PDF/PNG exports.
-- `public/data/report/overview-provenance.json`: provenance for the two added overview rows.
+- [Planning outcomes CSV](../public/data/report/planning-outcomes.csv) and [JSON](../public/data/report/planning-outcomes.json): ten-model outcomes joined by exact task ID, with report digests.
+- [Planning episode metrics](../public/data/report/planning-episodes.csv): one row per episode in the nine-model log cohort, including outcome, duration, usage and recovery counts.
+- [Analysis data](../public/data/report/metrics.json): ten-model capability profiles, plus the scoped nine-model log summaries.
+- [Complete execution index](../public/data/execution/complete-index.json) and [detailed trace index](../public/data/execution/index.json): individual report links, video links, settings, round timestamps, executed code, arguments, feedback and verifier outcomes.
+- [Editable figures](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip): current manuscript figures and execution-analysis figures, with each experiment's scope in the included manifest.
+- [Overview provenance](../public/data/report/overview-provenance.json): all 110 cells in the 11-task × 10-model overview, including native identity and matching media hashes.
 
-## Build the aggregate report
+## Build the report
 
-Python 3.9+; standard library only. Supply the original author-provided log archive, retained separately from the website:
+Python 3.10+; standard library only. The original author-supplied archives are retained separately from the public repository. Use the published CSV/JSON downloads above to inspect the evidence without them.
 
-```sh
-python scripts/analyze_execution_report.py --archive /path/to/all-model-logs-20261019.zip --output /path/to/analysis
+```bash
+# Verify the nine-model archive and derive episode/resource statistics.
+python scripts/analyze_execution_report.py \
+  --archive /path/to/all-model-logs-20261019.zip \
+  --output /path/to/analysis
+
+# Verify and join the 157 Argon Planning outcomes (unpacked results archive).
+python scripts/build_planning_outcomes.py \
+  --input /path/to/gemini4argon-results-20261021
+
+# Publish the ten-model outcome report and scoped execution analyses.
 python scripts/build_technical_report.py --analysis /path/to/analysis
 ```
 
-The first command verifies all Planning source-report digests, checks the common task IDs and reproduces the main-table completion counts. The second emits static HTML, CSV/JSON downloads and the interactive report section. Both support `--repo` to select a checkout.
+The first command verifies source-report digests and reproduces the nine-model Planning counts. The second verifies the Argon report digests, exact task IDs and 110/157 completion count. The final command writes static HTML, CSV/JSON downloads and the interactive report section. All three support `--repo` to select a checkout.
 
-## Build the episode explorer
+For the public case index and task map, no external archive is needed:
 
-```sh
+```bash
+python scripts/build_case_atlas.py
+python scripts/build_overview_matrix.py
+```
+
+## Episode traces
+
+```bash
 python scripts/build_execution_analysis.py --source /path/to/extracted-execution-materials
 ```
 
-The input directory contains `cases.json`, `records.json`, `reports/<case-id>.json` and `evidence/<case-id>.json`. These are the extracted case/report matches from the supplied archives. `public/data/case-media.json` supplies the published media mapping. The builder aligns code cells to rounds by timestamp and execution status, preserves unmatched cells separately, and writes an alignment audit beside the input directory. The published trace JSON files are sufficient to inspect and reuse the displayed evidence without those private input paths.
+The trace-builder input contains `cases.json`, `records.json`, `reports/<case-id>.json` and `evidence/<case-id>.json`. The builder aligns code cells to rounds by timestamps and execution status; unmatched cells remain separately available. This is a lower-level import step for prepared trace materials. The published trace JSON files already contain the evidence displayed in the explorer.
 
 ## Measurement definitions
 
-Token use is recorded input plus output, excluding missing usage. Failed-token share sums usage in unsuccessful episodes and divides by total recorded usage. Recovery requires native final success after an earlier execution error, excluding budget guards and timed-out rounds. Total episode time can include recorded setup; round timestamps start at the agent loop. Where an import-status duration differs from the matched report's episode duration, the latter is used in case displays and the former is retained separately in the media manifest. The full Planning timing summary retains the durations specified in its CSV and their source fields.
+- **Token use:** recorded input plus output. Missing usage is excluded. Failure-token share divides usage in unsuccessful episodes by usage in all episodes with recorded usage.
+- **Recovery:** native final success after an earlier execution error. Budget guards and timed-out rounds are excluded from execution errors.
+- **Elapsed time:** reported episode duration, including setup where recorded; the last recorded loop duration is used when no episode total exists. This is not model inference latency.
+- **Video time:** the recording's own playback clock, separate from execution wall time. Per-episode settings and budgets accompany each record.
 
-The overview is illustrative. Videos and saved-observation sequences keep their encoded playback clocks; they are not stretched to execution wall time. Manipulation episode settings remain attached to each recording and do not replace the original Baseline aggregate. Missing round values remain unknown in the plots.
+Manipulation traces include later observation configurations; the main results retain the adopted Baseline population. Case examples explain individual behavior; benchmark success rates use the complete evaluation population.
 
 ## Preview
 
-```sh
+```bash
 python -m http.server 8785 --directory public
 ```
 
-Open `http://127.0.0.1:8785/#technical-report` or `http://127.0.0.1:8785/?analysis=sequence#execution-analysis`.
+Open <http://127.0.0.1:8785/#technical-report> or <http://127.0.0.1:8785/#execution-analysis>.

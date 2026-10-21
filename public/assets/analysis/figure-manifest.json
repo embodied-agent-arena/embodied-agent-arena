@@ -1,0 +1,237 @@
+{
+  "manuscriptDate": "2026-10-21",
+  "modelsInMainComparison": 10,
+  "scopes": {
+    "figure3-tradeoffs": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure4-geometry": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure5-spatial": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure6-affordance": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure7-planning": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure8-manipulation": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "execution-progress": "Nine-model detailed execution-log cohort.",
+    "planning-execution-profile": "Nine-model detailed execution-log cohort.",
+    "cases-affordance": "Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas."
+  },
+  "files": [
+    {
+      "path": "cases-affordance.drawio",
+      "sha256": "23e3a4bf90056179544acfec4af144b4d0ba99e583e4bde33723b1b66c4a3909",
+      "bytes": 1824668
+    },
+    {
+      "path": "cases-affordance.pdf",
+      "sha256": "1282b1331bfdc7d2963a3daeb2c6d562ddb6d689646a4b4aba1c311b015150f9",
+      "bytes": 489658
+    },
+    {
+      "path": "cases-affordance.png",
+      "sha256": "77035a3426431135741b908d7dfbd67ef8e3f229ec65ff99b3f22f40fc6aa639",
+      "bytes": 456187
+    },
+    {
+      "path": "cases-affordance.svg",
+      "sha256": "576acfb76a0f3da3f47ca272ba3d8d817a40246afd6220413b5a775be23d9261",
+      "bytes": 780567
+    },
+    {
+      "path": "execution-progress.drawio",
+      "sha256": "ec8af474c212534c14e2b8d0fb2ad9ac3d63a14237263cbe03d1254723fe57b2",
+      "bytes": 26096
+    },
+    {
+      "path": "execution-progress.pdf",
+      "sha256": "447947b1a260ab3f21451b386007e477e8c9f4ee19d076ac58c3a64dccc42804",
+      "bytes": 46387
+    },
+    {
+      "path": "execution-progress.png",
+      "sha256": "839d19e8bd6dcac146ab529a2884385366c156e6a880a840758fa52ae91e54dc",
+      "bytes": 115390
+    },
+    {
+      "path": "execution-progress.svg",
+      "sha256": "9e04a9e897d50cda90c6310f5f53537ccc928db9d7097b6c1ba1ac7e45efe7b2",
+      "bytes": 174038
+    },
+    {
+      "path": "figure3-tradeoffs.drawio",
+      "sha256": "721543097ee86d93549073da0225734a45f5ef4d694d2e649a34f18b410de152",
+      "bytes": 111064
+    },
+    {
+      "path": "figure3-tradeoffs.pdf",
+      "sha256": "d8478be7ebbb0069ab582e17e2939feb81490eee77696e1d6d70217d0eb5d27c",
+      "bytes": 75343
+    },
+    {
+      "path": "figure3-tradeoffs.png",
+      "sha256": "4cb5a9c59efb8f02de30312bba5507ba7d426eee77a8c840fd2a6824e79f6bbe",
+      "bytes": 236027
+    },
+    {
+      "path": "figure3-tradeoffs.svg",
+      "sha256": "9636920047d603ec26b686d384902955ade4c049bb59f9244209bd0ee0fee57e",
+      "bytes": 168853
+    },
+    {
+      "path": "figure4-geometry.drawio",
+      "sha256": "6d626d7855b22b7ec2a12b16054d039168268fbd243f4bfd65d8b04c40b04778",
+      "bytes": 105962
+    },
+    {
+      "path": "figure4-geometry.pdf",
+      "sha256": "31765acc79f77c4096d15f9703a822698cfb68e002caf4f2bb72bfdd1f2eff67",
+      "bytes": 75765
+    },
+    {
+      "path": "figure4-geometry.png",
+      "sha256": "3dfb45bd7dc6a3dc462ed73cb8fb69afed7ed044493ecba09c10c2fa662bbdb1",
+      "bytes": 171568
+    },
+    {
+      "path": "figure4-geometry.svg",
+      "sha256": "aced1dce3de0b9d1092cf407387cc4505a526f289c1b78171131e80a2e2cca1b",
+      "bytes": 188647
+    },
+    {
+      "path": "figure5-spatial.drawio",
+      "sha256": "0ccc1c877b837fe6d3f9e13797db0b555da9669336762d287719656469944f14",
+      "bytes": 217826
+    },
+    {
+      "path": "figure5-spatial.pdf",
+      "sha256": "bc4d17bc48929f2268b1ceb7c0b7a073066f9fb9f46d103f1ab582b0e33e7725",
+      "bytes": 159182
+    },
+    {
+      "path": "figure5-spatial.png",
+      "sha256": "cf3d9201849bb7f0db337567ecdb30aabeda7cace04d22684fc7daa55fb8e41a",
+      "bytes": 202958
+    },
+    {
+      "path": "figure5-spatial.svg",
+      "sha256": "36a9edd81263473d04529da6a3d08338924d8552b255e1ef86731778a78ec431",
+      "bytes": 265529
+    },
+    {
+      "path": "figure6-affordance.drawio",
+      "sha256": "707d3e1542967898f58ec7adfc8c624a1199a40dc0027489f14febc3773133da",
+      "bytes": 115193
+    },
+    {
+      "path": "figure6-affordance.pdf",
+      "sha256": "f5dff313566666eea758d22d3cf8ae71bb9fdd53b598d11cdf32e76b5716b844",
+      "bytes": 78444
+    },
+    {
+      "path": "figure6-affordance.png",
+      "sha256": "6945952b2413681a93e1158aad0268a5f85a4b705c7651f6809e2c38555c2381",
+      "bytes": 175261
+    },
+    {
+      "path": "figure6-affordance.svg",
+      "sha256": "32176573b4f9fb8d11d1eb43ad5333cd9a92b44fec165607656a17e190633e22",
+      "bytes": 186415
+    },
+    {
+      "path": "figure7-planning.drawio",
+      "sha256": "b82d9ab04654350d0b83e9d6fec3cf5cc984d8ed743e2b0023595ca0bfe52a64",
+      "bytes": 102240
+    },
+    {
+      "path": "figure7-planning.pdf",
+      "sha256": "c67b637a211725d85dbbf173c416363d1bf17a8b9dd5fe42ead65dd7899cf54e",
+      "bytes": 80288
+    },
+    {
+      "path": "figure7-planning.png",
+      "sha256": "8c3daf28471339f2705f03c98f944d786ae2cd5d3f40bc726ec19250e8d28264",
+      "bytes": 168369
+    },
+    {
+      "path": "figure7-planning.svg",
+      "sha256": "57a0fe33b18e6a33570b50b1747be20c9c31500bc2f26aa5b90b061f04e8f22f",
+      "bytes": 150635
+    },
+    {
+      "path": "figure8-manipulation.drawio",
+      "sha256": "ff6762ae08726c523aa60876a4d91b330118a213b49c395f2f52e294dc94b52a",
+      "bytes": 201457
+    },
+    {
+      "path": "figure8-manipulation.pdf",
+      "sha256": "efbdc6875410e9a103ea2c7b8e9400b2035f3153d4d8ed10f77ac1b43ebaa2d0",
+      "bytes": 128320
+    },
+    {
+      "path": "figure8-manipulation.png",
+      "sha256": "9fbae357ccc997b861875c2e4a112f1ee870f1aea1452ad55fb20f4f4442c801",
+      "bytes": 277328
+    },
+    {
+      "path": "figure8-manipulation.svg",
+      "sha256": "4e52ea43c73ab1fbce1596f46ccf2d8f136416b4feb9ab5b471626bbbedf0a02",
+      "bytes": 228049
+    },
+    {
+      "path": "model-logos/LOBE-ICONS-LICENSE",
+      "sha256": "add9d7531d1b21646317a8958e38fc727506fa39d24bdecb44154d943c82753a",
+      "bytes": 1064
+    },
+    {
+      "path": "model-logos/README.md",
+      "sha256": "8edf146945e8945855d4fd081eb30b476c48af84dc9475a02bca8ef00ca55953",
+      "bytes": 677
+    },
+    {
+      "path": "model-logos/claude.svg",
+      "sha256": "6d53db4be375e899c937c26cf16684a80d6e869b1928d72b37748bef2560e219",
+      "bytes": 2580
+    },
+    {
+      "path": "model-logos/deepseek-icon.svg",
+      "sha256": "deba5f98a5c1796e20fcac3149bcd7eb8a32f0bdd04d048819400b1f28bd1439",
+      "bytes": 2164
+    },
+    {
+      "path": "model-logos/gemini.svg",
+      "sha256": "8ab0a9bafec11f7e69bcb9fc4ffd8f1bc927d1ddcbbb6ff36dee5ae8b5a9d602",
+      "bytes": 2836
+    },
+    {
+      "path": "model-logos/openai.svg",
+      "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186",
+      "bytes": 1687
+    },
+    {
+      "path": "model-logos/qwen.svg",
+      "sha256": "77f5768c66d08ce1d3d14e73373975c1bc0454be88c81523ddd0ffd7e2974029",
+      "bytes": 2044
+    },
+    {
+      "path": "model-logos/sources.json",
+      "sha256": "8838967a15c9d3ba76b2346f247d47a1d5392a8587bbb50dd55dd11763c28612",
+      "bytes": 1390
+    },
+    {
+      "path": "planning-execution-profile.drawio",
+      "sha256": "3964082798505b6a1a4dde6cc66e14768062c40ef70622d97f827403e6f26488",
+      "bytes": 42208
+    },
+    {
+      "path": "planning-execution-profile.pdf",
+      "sha256": "f0fca429bf5064d0c2d605ad34b6d2f3b3fa8229edfa71bd6a864cd01eda9f2c",
+      "bytes": 54627
+    },
+    {
+      "path": "planning-execution-profile.png",
+      "sha256": "dfafd4ecca8bf3715ecf5f7e5e154ade5c9454531f033d89ebaf8ebc24f321c0",
+      "bytes": 115760
+    },
+    {
+      "path": "planning-execution-profile.svg",
+      "sha256": "c64b70b2463c99a282c0a8a8acc50575fc523feade170a2c2e665a8f2464468f",
+      "bytes": 167794
+    }
+  ]
+}

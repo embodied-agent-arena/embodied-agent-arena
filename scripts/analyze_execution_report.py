@@ -102,7 +102,9 @@ profiles=[]
 for s in study['models']:
     m=aliases.get(s['alias'])
     if not m:
-        m=next(k for k,v in DISPLAY.items() if v==s['name'])
+        m=next((k for k,v in DISPLAY.items() if v==s['name']), None)
+    if m is None:
+        continue  # Aggregate-only additions are joined by build_technical_report.py.
     vals=[float(x.split('±')[0].strip()) for x in s['scores']]
     p=next(x for x in by_model if x['model']==m)
     assert abs(vals[6]-100*p['completed']/157)<.051

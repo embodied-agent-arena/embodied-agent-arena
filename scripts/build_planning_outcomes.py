@@ -5,7 +5,7 @@ This does not infer fine-grained traces from videos, nor alter the nine-model
 log-derived resource/recovery cohort. Supply the unpacked Argon results archive.
 """
 from pathlib import Path
-import argparse,copy,gzip,hashlib,json,collections
+import argparse,copy,csv,gzip,hashlib,json,collections
 ap=argparse.ArgumentParser(description=__doc__)
 ap.add_argument('--input',type=Path,required=True)
 ap.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1])
@@ -32,4 +32,10 @@ sources=list(dict.fromkeys(t['benchmark'] for t in tasks))
 summary=[dict(model=m,completed=sum(m in t['successModels'] for t in tasks),sourceResults=[dict(benchmark=b,n=sum(t['benchmark']==b for t in tasks),completed=sum(t['benchmark']==b and m in t['successModels'] for t in tasks)) for b in sources]) for m in models]
 result=dict(models=models,shortNames=names,tasks=tasks,sourceResults=summary,nTasks=157,nReports=1570,atLeastOneSucceeds=sum(bool(t['successModels']) for t in tasks),allFail=sum(not t['successModels'] for t in tasks),allSucceed=sum(len(t['successModels'])==10 for t in tasks),provenance={'argonArchive':'gemini4argon-results-20261021.zip','verifiedArgonReports':157,'identity':'Exact manifest task_id match for every task','baseCohort':'data/report/metrics.json: nine original models','scope':'Final task outcomes. Step-by-step traces remain the nine-model cohort.'})
 (u/'data/report/planning-outcomes.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
+with (u/'data/report/planning-outcomes.csv').open('w', newline='') as f:
+ writer=csv.DictWriter(f,fieldnames=['task_id','benchmark','model','outcome','record_id','argon_report_sha256'],lineterminator='\n')
+ writer.writeheader()
+ for t in tasks:
+  for m in models:
+   writer.writerow(dict(task_id=t['taskId'],benchmark=t['benchmark'],model=m,outcome=t['outcomes'][m],record_id=t['recordIds'][m],argon_report_sha256=t['argonReportSha256'] if m=='gemini4argon' else ''))
 print({k:result[k] for k in ['nReports','atLeastOneSucceeds','allFail','allSucceed']})
