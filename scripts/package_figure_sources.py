@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MAIN = ['figure3-tradeoffs', 'figure4-geometry', 'figure5-spatial',
         'figure6-affordance', 'figure7-planning', 'figure8-manipulation']
-ANALYSIS = ['execution-progress', 'planning-execution-profile']
+ANALYSIS = ['execution-progress', 'planning-execution-profile', 'model-task-comparison', 'figure-protocol-cases']
 FORMATS = ['drawio', 'svg', 'pdf', 'png']
 
 
@@ -33,8 +33,12 @@ def build(figures):
         for name in previous.namelist():
             if name.startswith('model-logos/') and not name.endswith('/'):
                 contents[name] = previous.read(name)
+    for path in (ROOT/'public/assets/model-logos').iterdir():
+        if path.is_file(): contents['model-logos/'+path.name] = path.read_bytes()
     scopes = {stem: 'Ten-model main results; ablation panels retain the original experiment cohort.' for stem in MAIN}
     scopes.update({stem: 'Ten-model Planning logs; selected exact-task progress comparisons include Argon.' for stem in ANALYSIS})
+    scopes['figure-protocol-cases'] = 'Original CALVIN/PickCube controller-construction case comparison; observations and results unchanged.'
+    scopes['model-task-comparison'] = 'Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.'
     scopes['cases-affordance'] = 'Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.'
     manifest = {'manuscriptDate': '2026-10-21', 'modelsInMainComparison': 10,
                 'scopes': scopes, 'files': [{'path': n, 'sha256': hashlib.sha256(b).hexdigest(), 'bytes': len(b)} for n,b in sorted(contents.items())]}
@@ -44,6 +48,8 @@ def build(figures):
 Updated for the 21 October 2026 author manuscript.
 
 - Figures 3-8: Gemini 4 Argon included in the main comparisons. Original observation-setting ablation panels keep their original cohort.
+- Model identity colours follow the supplied logo families, with shades and line styles distinguishing models. Numerical heatmaps retain common scales. See model-logos/palette.json.
+- model-task-comparison: the README comparison, using the unchanged Table 2 means.
 - cases-affordance: selected qualitative polygon examples. The online Case Atlas compares all ten models on each image.
 - execution-progress and planning-execution-profile: ten-model Planning resource analysis and exact-task progress comparisons including Argon.
 

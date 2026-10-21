@@ -62,7 +62,11 @@ class PublicResourceTests(unittest.TestCase):
             for stem in manifest['scopes']:
                 if not stem.startswith('figure'):
                     continue
-                self.assertIn(b'Argon', figures.read(stem+'.drawio'))
+                if re.match(r'figure[3-8]-', stem):
+                    self.assertIn(b'Argon', figures.read(stem+'.drawio'))
+                elif stem == 'figure-protocol-cases':
+                    self.assertNotIn(b'Argon', figures.read(stem+'.drawio'))
+                    self.assertIn(b'Fable', figures.read(stem+'.drawio'))
                 names = [n for n in source.namelist() if n.endswith('/'+stem+'.pdf')]
                 self.assertEqual(len(names), 1)
                 self.assertEqual(figures.read(stem+'.pdf'), source.read(names[0]))

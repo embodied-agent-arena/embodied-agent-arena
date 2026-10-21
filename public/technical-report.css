@@ -6,3 +6,9 @@
 .report-figure{margin:32px 0}.report-figure img{display:block;width:100%;height:auto;background:white;border:1px solid #e2e7e1;border-radius:12px}.report-figure figcaption{margin-top:10px;font-size:15px;color:#66736d}
 
 .report-reading,.report-task-identity{margin-top:16px}.report-reading summary,.report-task-identity summary{font-size:14px;color:#708160;cursor:pointer}.report-reading p{font-size:14px;color:#7e8973}.report-task-identity code{display:block;overflow-wrap:anywhere;font-size:12px;max-width:600px;margin-top:12px}
+
+.report-dumbbell .dot{background:var(--model-color,#525252);border:2px solid var(--model-color,#525252)}
+.report-dumbbell .dot.box{background:#fff;border:2px solid var(--model-color,#525252)}
+.report-dumbbell .link{background:var(--model-light,#cecece)}
+.report-matrix .row-name .model-label{gap:5px}
+.report-matrix .row-name .model-logo{width:16px;height:16px;flex-basis:16px}

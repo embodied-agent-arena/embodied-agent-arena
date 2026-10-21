@@ -4,20 +4,21 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 65,
-  "paper_sha256": "00f83f1ed503a34438c4669729fedd504f818320c00e601bdc4cc7639634fed6",
+  "paper_sha256": "0521d859cb6d9216c28efc02f9b158a3ad2244e715a6e92f8f0a2bd6a3c5639f",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 302,
   "figure_sha256": {
-    "geometry.webp": "a9fd585dd4ca1244621e96ad07719af9d6255769831704585bf643342b1c5bc3",
-    "spatial.webp": "56739eee4c270c11e2e88e2d0d2c25cc28f7e6c670891cfbbfaf3f4de936d75d",
-    "affordance.webp": "c8eadbf0afd4bfb5dae26953799681018cd4719b39dd74953fab773b11596d94",
-    "planning.webp": "850d31a9890c406c1aa29552e9206ca7af813fb8e1c3f904a60e43a953ed2361",
-    "manipulation.webp": "1a08577ccd73c94133fccb811b30861e81c5749c0a868822953b25b244a61381",
-    "nine-model-profiles.svg": "9636920047d603ec26b686d384902955ade4c049bb59f9244209bd0ee0fee57e"
+    "geometry.webp": "b52cde19ceae5713cc83bc8e46cc69858c012f241bdaf1ccae7919794f9846d0",
+    "spatial.webp": "99659bda51b98057106375529237dc784e753d4de033e7842a3f99f2bd880ba3",
+    "affordance.webp": "f9aad375e6d72cb9a2cef3200bdd6ed5649dd2025d97c7e6d821dbbcb3245ca3",
+    "planning.webp": "064c034686ea95e93cd891b046907f090837df274a23d7933df35c4a132d39e9",
+    "manipulation.webp": "89625be22d77e30e5a6776dd41dc5d9f6e7dd36a390272cdfa9d823460afa66d",
+    "nine-model-profiles.svg": "c0ece6cc272ffd9d09e81e95184a8edef42238c7bf36b6ae738418909b75c87f",
+    "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "ac15a3726485781501ba93e435f3f1741560d53ae1ce71eecbb8c484e09fb953",
+  "source_sha256": "84074a2310822c42309816880d128278ca8c0236584ef03b7836ad05c5cf3537",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -36,5 +37,12 @@
     "explorerTasks": 46,
     "explorerModels": 10,
     "explorerRecords": 460
+  },
+  "figure_style": {
+    "revision": "brand-20261021",
+    "palette": "assets/model-logos/palette.json",
+    "mainFigures": 6,
+    "additionalManuscriptFigures": 3,
+    "dataValues": "unchanged"
   }
 }

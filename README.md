@@ -35,6 +35,8 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 - **Local competence does not ensure task completion.** Even the highest Manipulation success rate is **47.8%** under the evaluated budgets. Successful perception must still translate into accurate actions and a verified final goal.
 - **Model diversity leaves shared gaps.** Across the same **157 Planning tasks**, at least one of the ten models succeeds on **142**; **15 defeat all ten**. Their combined successes cover **16 more tasks than Astra alone**. [Task-level analysis ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html)
 
+![Planning and Manipulation: ten models with matching logos and brand colours](public/assets/analysis/model-task-comparison.svg)
+
 ## Cross-Model Results
 
 <!-- BEGIN RESULT_TABLE -->

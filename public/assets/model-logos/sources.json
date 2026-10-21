@@ -1,0 +1,30 @@
+{
+  "openai.svg": {
+    "source": "https://github.com/lobehub/lobe-icons/blob/master/packages/static-svg/icons/openai.svg",
+    "reference": "https://openai.com/brand/",
+    "owner": "OpenAI",
+    "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186"
+  },
+  "claude.svg": {
+    "source": "https://anthropic.com/press-kit",
+    "member": "Anthropic media resources/Anthropic logos/Claude logos/3 Claude Spark/SVG/Claude Spark - Clay.svg",
+    "owner": "Anthropic",
+    "sha256": "6d53db4be375e899c937c26cf16684a80d6e869b1928d72b37748bef2560e219"
+  },
+  "gemini.svg": {
+    "source": "https://github.com/lobehub/lobe-icons/blob/master/packages/static-svg/icons/gemini-color.svg",
+    "owner": "Google",
+    "sha256": "8ab0a9bafec11f7e69bcb9fc4ffd8f1bc927d1ddcbbb6ff36dee5ae8b5a9d602"
+  },
+  "qwen.svg": {
+    "source": "https://github.com/lobehub/lobe-icons/blob/master/packages/static-svg/icons/qwen-color.svg",
+    "owner": "Alibaba / Qwen",
+    "sha256": "77f5768c66d08ce1d3d14e73373975c1bc0454be88c81523ddd0ffd7e2974029"
+  },
+  "deepseek-icon.svg": {
+    "source": "https://github.com/lobehub/lobe-icons/blob/master/packages/static-svg/icons/deepseek-color.svg",
+    "reference": "https://github.com/deepseek-ai/DeepSeek-LLM/blob/main/images/logo.svg",
+    "owner": "DeepSeek",
+    "sha256": "deba5f98a5c1796e20fcac3149bcd7eb8a32f0bdd04d048819400b1f28bd1439"
+  }
+}
