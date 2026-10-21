@@ -121,7 +121,7 @@ const figureSizes={"geometry": [2250, 765], "spatial": [1980, 1308], "affordance
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
 buildTabs(domains,'domain',d=>{
  const action=d.case?`<button type="button" data-case="${d.case}">${d.caseLabel} →</button>`:d.execution?`<a href="?analysis=${d.execution}#execution-analysis" data-execution-link="${d.execution}">${d.caseLabel} →</a>`:`<a href="#technical-report" data-report-link="${d.report}">${d.caseLabel} →</a>`;
- const figureVersion="font-consistency-20261022";
+ const figureVersion="model-names-20261022";
  return `<div class="domain-text"><h3>${d.title}</h3><p class="domain-argument">${d.text}</p><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=${figureVersion}" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=${figureVersion}" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><div class="domain-links">${action}<a href="paper.pdf#page=${d.paper}">Paper Evidence ↗</a></div><details class="figure-reading"><summary>Figure Key &amp; Measurement Details</summary><p>${d.caption}</p></details></figcaption></figure>`;
 });
 const citation=document.querySelector('#bibtex').textContent.trim();

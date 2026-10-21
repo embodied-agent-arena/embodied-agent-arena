@@ -202,7 +202,7 @@
       ]
     },
     {
-      "alias": "Gemini",
+      "alias": "Gemini 3.8",
       "name": "Gemini 3.8 Flash",
       "identifier": "gemini-3.8-flash",
       "scores": [

@@ -9,7 +9,7 @@ The revised narrative follows three findings: **local accuracy can miss a requir
 | Resource | Coverage | Download / view |
 | :--- | :--- | :--- |
 | Main comparison | 10 models × 8 metrics, matching manuscript Table 2 | [CSV](../public/data/model-comparison.csv) · [Model IDs and settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol) |
-| Source-level results | Benchmark-specific means, run SDs and run counts, including Argon | [CSV](../public/data/source-results-mean-sd.csv) |
+| Source-level results | Benchmark-specific means, run SDs and run counts, including Gemini 4 Argon | [CSV](../public/data/source-results-mean-sd.csv) |
 | Repeated-run details | Run means and valid sample counts for the repeated metrics | [CSV](../public/data/complementary-results-mean-sd.csv) |
 | Planning outcomes | 10 models × the same 157 tasks; 1,570 recorded outcomes | [CSV](../public/data/report/planning-outcomes.csv) · [JSON](../public/data/report/planning-outcomes.json) · [Analysis](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html) |
 | Case atlas | 181 comparisons: 72 perception/affordance cases and 109 execution tasks; ten-model results in each | [Browse](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html) · [Static cases](../public/data/case-studies.json) · [Execution comparisons](../public/data/case-comparisons.json) |
@@ -17,7 +17,7 @@ The revised narrative follows three findings: **local accuracy can miss a requir
 | Execution analysis | Ten-model logs: 1,570 Planning episodes; 46 selected tasks with 460 records, including 189 detailed action/feedback traces | [Planning episode CSV](../public/data/report/planning-episodes.csv) · [Selected episode CSV](../public/data/execution/complete-episodes.csv) · [Definitions and rebuild instructions](EXECUTION_ANALYSIS.md) |
 | Manuscript and figures | Latest author PDF/source; native draw.io figures with vector and raster exports | [PDF](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) · [LaTeX source](https://embodied-agent-arena.github.io/embodied-agent-arena/author-source.zip) · [Figure ZIP](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip) · [Figure manifest](../public/assets/analysis/figure-manifest.json) |
 
-**Argon coverage:** all five main-result domains, repeated metrics, polygon predictions, Planning outcomes and the case gallery are included. Detailed logs are joined to all 109 Argon gallery records by report hash. Time, token use and recovery now compare all ten models; video playback and episode timestamps retain their separate clocks.
+**Gemini 4 Argon coverage:** all five main-result domains, repeated metrics, polygon predictions, Planning outcomes and the case gallery are included. Detailed logs are joined to all 109 Gemini 4 Argon gallery records by report hash. Time, token use and recovery now compare all ten models; video playback and episode timestamps retain their separate clocks.
 
 **Interactive evidence:** visible clips play automatically and pause offscreen. Playback respects manual pause and reduced-motion settings; the ten-model wall keeps one fixed task in each column. Figure 4 places model icons at the original data coordinates, with adjacent variant labels and no label leaders.
 
@@ -49,7 +49,7 @@ python scripts/build_overview_matrix.py
 python scripts/build_case_atlas.py
 ```
 
-To regenerate the execution report from the original supplied logs and add the Argon outcome join, follow [Execution Analysis](EXECUTION_ANALYSIS.md). The published CSV/JSON records can be inspected without those archives. The original full log archives are not included in the repository.
+To regenerate the execution report from the original supplied logs and add the Gemini 4 Argon outcome join, follow [Execution Analysis](EXECUTION_ANALYSIS.md). The published CSV/JSON records can be inspected without those archives. The original full log archives are not included in the repository.
 
 To refresh the figure bundle from exported manuscript figures:
 
@@ -57,7 +57,7 @@ To refresh the figure bundle from exported manuscript figures:
 python scripts/package_figure_sources.py --figures /path/to/manuscript-figures
 ```
 
-The figure bundle contains editable **draw.io** files and matching **SVG/PDF/PNG** exports. Figures 3–8 include Argon where the experiment includes it; the original observation-setting ablation keeps its original model cohort. The token-allocation figure covers ten models; the progress figure compares Opus&nbsp;5.5, Argon and the matching Gemini&nbsp;3.8 or DeepSeek&#8209;1017 execution. The bundle provides editable figure sources; automated regeneration of every paper figure from raw logs is not yet packaged.
+The figure bundle contains editable **draw.io** files and matching **SVG/PDF/PNG** exports. Figures 3–8 include Gemini 4 Argon where the experiment includes it; the original observation-setting ablation keeps its original model cohort. The token-allocation figure covers ten models; the progress figure compares Opus&nbsp;5.5, Gemini 4 Argon and the matching Gemini&nbsp;3.8 or DeepSeek&#8209;1017 execution. The bundle provides editable figure sources; automated regeneration of every paper figure from raw logs is not yet packaged.
 
 ## Check consistency
 

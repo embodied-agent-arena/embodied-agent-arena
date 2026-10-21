@@ -70,7 +70,8 @@ class PublicResourceTests(unittest.TestCase):
                 if not stem.startswith('figure'):
                     continue
                 if re.match(r'figure[3-8]-', stem):
-                    self.assertIn(b'Argon', figures.read(stem+'.drawio'))
+                    self.assertTrue(b'Gemini 4' in figures.read(stem+'.drawio'), f'{stem}: Gemini 4 label missing')
+                    self.assertTrue(b'Gemini 3.8' in figures.read(stem+'.drawio'), f'{stem}: Gemini 3.8 label missing')
                 elif stem == 'figure-protocol-cases':
                     self.assertNotIn(b'Argon', figures.read(stem+'.drawio'))
                     self.assertIn(b'Fable', figures.read(stem+'.drawio'))

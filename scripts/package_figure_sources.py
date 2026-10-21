@@ -12,6 +12,7 @@ MAIN = ['figure3-tradeoffs', 'figure4-geometry', 'figure5-spatial',
 SUPPLEMENT = ['supplement-figure6-affordance', 'supplement-figure7-planning']
 ANALYSIS = ['execution-progress', 'planning-execution-profile', 'model-task-comparison', 'figure-protocol-cases']
 FORMATS = ['drawio', 'svg', 'pdf', 'png']
+QUALITATIVE = ['execution-cases', 'figure-cases-spatial-reasoning', 'figure-cases-affordance']
 
 
 def build(figures):
@@ -24,7 +25,7 @@ def build(figures):
                 raise FileNotFoundError(path)
             contents[path.name] = path.read_bytes()
         if stem in MAIN:
-            assert b'Argon' in contents[f'{stem}.drawio'], f'{stem}: stale model list'
+            assert b'Gemini 4' in contents[f'{stem}.drawio'], f'{stem}: stale model list'
     for stem in ANALYSIS:
         for ext in FORMATS:
             name = f'{stem}.{ext}'
@@ -32,18 +33,19 @@ def build(figures):
     # Attribution travels with the existing logo assets embedded in the figures.
     with zipfile.ZipFile(out/'editable-figures.zip') as previous:
         for name in previous.namelist():
-            if name.startswith('model-logos/') and not name.endswith('/'):
+            if (name.startswith('model-logos/') or Path(name).stem in QUALITATIVE) and not name.endswith('/'):
                 contents[name] = previous.read(name)
     for path in (ROOT/'public/assets/model-logos').iterdir():
         if path.is_file(): contents['model-logos/'+path.name] = path.read_bytes()
     scopes = json.loads((out/'figure-manifest.json').read_text())['scopes']
     scopes.update({stem: 'Original fine-grained diagnostics retained in the appendix.' for stem in SUPPLEMENT})
-    scopes.update({stem: 'Ten-model Planning logs; selected exact-task progress comparisons include Argon.' for stem in ANALYSIS})
+    scopes.update({stem: 'Ten-model Planning logs; selected exact-task progress comparisons include Gemini 4 Argon.' for stem in ANALYSIS})
     scopes['figure-protocol-cases'] = 'Original CALVIN/PickCube controller-construction case comparison; observations and results unchanged.'
     scopes['model-task-comparison'] = 'Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.'
     scopes['cases-affordance'] = 'Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.'
     manifest = {'manuscriptDate': '2026-10-22', 'modelsInMainComparison': 10,
                 'scopes': scopes, 'files': [{'path': n, 'sha256': hashlib.sha256(b).hexdigest(), 'bytes': len(b)} for n,b in sorted(contents.items())]}
+    manifest['naming'] = {'full': ['Gemini 3.8 Flash', 'Gemini 4 Argon'], 'compact': ['Gemini 3.8', 'Gemini 4']}
     contents['figure-manifest.json'] = (json.dumps(manifest, indent=2)+'\n').encode()
     contents['README.md'] = b'''# Editable manuscript and analysis figures
 
@@ -54,7 +56,9 @@ Updated for the 22 October 2026 author manuscript.
 - Model identity colours follow the supplied logo families, with shades and line styles distinguishing models. Numerical heatmaps retain common scales. See model-logos/palette.json.
 - model-task-comparison: the README comparison, using the unchanged Table 2 means.
 - cases-affordance: selected qualitative polygon examples. The online Case Atlas compares all ten models on each image.
-- execution-progress and planning-execution-profile: ten-model Planning resource analysis and exact-task progress comparisons including Argon.
+- execution-progress and planning-execution-profile: ten-model Planning resource analysis and exact-task progress comparisons including Gemini 4 Argon.
+
+Model names distinguish Gemini 3.8 Flash (Gemini 3.8) from Gemini 4 Argon (Gemini 4).
 
 Open .drawio files in draw.io / diagrams.net to edit the vector objects. SVG and PDF are vector exports; PNG is a preview. Keep the Comic Sans MS typeface installed when re-exporting to preserve the manuscript typography. Photographs and model logos retain their source formats and attribution; see model-logos/.
 

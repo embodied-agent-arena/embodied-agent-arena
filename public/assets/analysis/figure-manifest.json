@@ -8,13 +8,16 @@
     "figure6-affordance": "Ten models on 70 cases: polygon overlap vs box mean ± SD; tools vs interaction diagnosis for Gemini 4 Argon.",
     "figure7-planning": "All 157 Planning tasks: ten-model success and the full distribution of cross-model success coverage.",
     "figure8-manipulation": "Thirteen-suite results for nine agents with complete source records; paired CALVIN/ManiSkill panels retain seven/six original models. Same tasks, recorded Baseline vs Expanded observations and budgets.",
-    "execution-progress": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
-    "planning-execution-profile": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
+    "execution-progress": "Ten-model Planning logs; selected exact-task progress comparisons include Gemini 4 Argon.",
+    "planning-execution-profile": "Ten-model Planning logs; selected exact-task progress comparisons include Gemini 4 Argon.",
     "model-task-comparison": "Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.",
     "figure-protocol-cases": "Original CALVIN/PickCube controller-construction case comparison; observations and results unchanged.",
     "cases-affordance": "Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.",
     "supplement-figure6-affordance": "Original fine-grained diagnostics retained in the appendix.",
-    "supplement-figure7-planning": "Original fine-grained diagnostics retained in the appendix."
+    "supplement-figure7-planning": "Original fine-grained diagnostics retained in the appendix.",
+    "execution-cases": "Original-cohort qualitative examples; Gemini 3.8 Flash labels made explicit.",
+    "figure-cases-affordance": "Original-cohort qualitative examples; Gemini 3.8 Flash labels made explicit.",
+    "figure-cases-spatial-reasoning": "Original-cohort qualitative examples; Gemini 3.8 Flash labels made explicit."
   },
   "files": [
     {
@@ -39,23 +42,23 @@
     },
     {
       "path": "execution-progress.drawio",
-      "sha256": "d4eead39b97da683081a8d8902ef301363d631ed95ccd5ff354a035b4bc6d042",
-      "bytes": 55769
+      "sha256": "071a57e899afddbe01419448b7a3c90696ec56bd7860103492eef12544c8c112",
+      "bytes": 55949
     },
     {
       "path": "execution-progress.pdf",
-      "sha256": "9bf2091d0d279da8ab57dfb57b58ff7fd43852e63c2e54cbe0968272ce7dfd2b",
-      "bytes": 59527
+      "sha256": "be19f4f920efb0b17371157d615a531a7a12083525714da007f40cc6afb370c4",
+      "bytes": 59785
     },
     {
       "path": "execution-progress.png",
-      "sha256": "9fd59e2b39096ea7b2b9f287e0ea5a622c9c2b43b0883b2456136285c2f1493a",
-      "bytes": 163535
+      "sha256": "68ec79fbd9dc25b40d31faa0b82d152dcb3b3928141f2f72dfef22178b8dc895",
+      "bytes": 164788
     },
     {
       "path": "execution-progress.svg",
-      "sha256": "994fc78c14c668767fbd04cf9059cdffa8cd461af1406cd49bb1103926e8db18",
-      "bytes": 206299
+      "sha256": "7d55ffdc9e611bcdd46d854b649a81603b057a0b6f67f960c9eb7920e4af81e4",
+      "bytes": 208298
     },
     {
       "path": "figure-protocol-cases.drawio",
@@ -99,103 +102,103 @@
     },
     {
       "path": "figure4-geometry.drawio",
-      "sha256": "6e526dcc654814c02c10a3cec809019a6377585ebdee6c986e428c1ce5da0efb",
-      "bytes": 102648
+      "sha256": "d12879c41eeb9e5160c180fec9723b60d72e9c6925e721e1745324caf4ed9056",
+      "bytes": 102662
     },
     {
       "path": "figure4-geometry.pdf",
-      "sha256": "758f4eec677c5cc51ca4bf97e18868eedb67f195799b44acef89fd8f44003556",
-      "bytes": 71438
+      "sha256": "ec8488ab09b52def961aa78022446fa3819a610073952972676efcb541ff3461",
+      "bytes": 71730
     },
     {
       "path": "figure4-geometry.png",
-      "sha256": "78caaf05ffe7bf07d66924be81e00241db072bf5f6742f70a173eba341ae431c",
-      "bytes": 151020
+      "sha256": "9320bf5e99b0375eb183428f62d11945d03a5ce574e0c360610671e8516401e7",
+      "bytes": 155678
     },
     {
       "path": "figure4-geometry.svg",
-      "sha256": "f77cd90e9a552f182d888b30b56b50fff137260a32fe8f3b913d3238cdbe6159",
-      "bytes": 180351
+      "sha256": "6b2eab9f0ab6e8c0402d65a025b4cca79577af335a47db8041f6f804e31740b7",
+      "bytes": 183852
     },
     {
       "path": "figure5-spatial.drawio",
-      "sha256": "3539eb2520511d2c07c75a8a58f3dd0dc085b5340ef09e612dd5d4318cdaa953",
-      "bytes": 219984
+      "sha256": "69d6c90922703254d31690bb3d6801858bd1a3d64f50f4883ef2653a42ee9797",
+      "bytes": 220003
     },
     {
       "path": "figure5-spatial.pdf",
-      "sha256": "64231503f774d5c4fea6546f9c0dea352d4a677b912d39876292ad8ef28bad65",
-      "bytes": 158718
+      "sha256": "43938b83bd64ac7e2eff57fde97b7a97621429c9e34752157691c67030a73538",
+      "bytes": 158747
     },
     {
       "path": "figure5-spatial.png",
-      "sha256": "238e5939512ec02080ecef0fb4a96d5c9f2f887a2b4afb9ea0a3b1afca9f9a7d",
-      "bytes": 182773
+      "sha256": "8f4ff30067d51de622b74a90c8a79b0f1153d614a4f3e53807f9ef14b4f6b462",
+      "bytes": 187306
     },
     {
       "path": "figure5-spatial.svg",
-      "sha256": "8afd121fd4fcce1321d0ed3eb02e069346dfb4021d80d6a47955b82a26d6fecc",
-      "bytes": 270344
+      "sha256": "b0724132b1684edec1a8b22af5aa01a781ae4d0413ccaf7cdb9c58bbeaf59795",
+      "bytes": 272719
     },
     {
       "path": "figure6-affordance.drawio",
-      "sha256": "a6b07afd0f47da05369beb9cb836b8379d7c7bdf3fa4605033042a7f821b07be",
-      "bytes": 68652
+      "sha256": "d3cd4a65c9e6a08958d16f9675d67a398a8aeb8de65fd569aff115be2624d98f",
+      "bytes": 68666
     },
     {
       "path": "figure6-affordance.pdf",
-      "sha256": "fdd2a9f9f1fd0226310fa967c74e800b724cbe39496275f8d7caec5c1ebf3009",
-      "bytes": 56050
+      "sha256": "81cce6af8a7c7dbfd0de68abd4dfbe813bde8559207d1c0fe4690c3b10db9997",
+      "bytes": 55800
     },
     {
       "path": "figure6-affordance.png",
-      "sha256": "8ffaa6aa140542dead3788fac1e7dd0d57e54c3612b84e5e82476606eb750db7",
-      "bytes": 141696
+      "sha256": "858fff6e4467a826068526e0ecc5e589bfaf0d09e7e3969de52fcc909c1c875b",
+      "bytes": 142011
     },
     {
       "path": "figure6-affordance.svg",
-      "sha256": "e257f293fc58bf32df47fbf4be06b62a32a43354b2a87ca7eb97ee3c4ac527d9",
-      "bytes": 148400
+      "sha256": "5e7476b3876f9a01a62970ea402ce14cda6088f9f79241e61bf51b9228a41c07",
+      "bytes": 146651
     },
     {
       "path": "figure7-planning.drawio",
-      "sha256": "206b89ea864463279557bdccdc78d51acd2e5212f502f230bb0d1ecff9534c39",
-      "bytes": 63725
+      "sha256": "5a78857606f76406fd06a2ef4860b35088dc0d561994a70eb1bbcdf8b01afe17",
+      "bytes": 63739
     },
     {
       "path": "figure7-planning.pdf",
-      "sha256": "ec8f2a7ed67d5340d18c04f1ae6c9cdc0689a25747f8fc9803c4b02db34a3c74",
-      "bytes": 54214
+      "sha256": "96f948a25deab3cc8d3141fac7965d31d3c1a890594aa4560eba5429f1974f2f",
+      "bytes": 54476
     },
     {
       "path": "figure7-planning.png",
-      "sha256": "14b3e0d0e90e8bc165596786f702bdfed2946f85f9f506c459efc2e5db9fb854",
-      "bytes": 141480
+      "sha256": "a81682d05afe3b28ad9d898bc0dbcb379e189c9ef03fcb8455e5cfca41e9f2cc",
+      "bytes": 141796
     },
     {
       "path": "figure7-planning.svg",
-      "sha256": "9721c7daa1c1ca8fa9082b640bb9887d7df92aa6a8a21511f1356ad4f47ff2e2",
-      "bytes": 139769
+      "sha256": "4ac869a74173d09899ac363968e8754ec0ae23ad180ff699fad5c514ca6b972a",
+      "bytes": 141755
     },
     {
       "path": "figure8-manipulation.drawio",
-      "sha256": "aa829088d2b0b32d7a038150ab5fed12ad3b05855867b2865a875149fbe15336",
-      "bytes": 205513
+      "sha256": "2fa4832399bbdeba0bdcf11e31507a1e6de3078a52680d054f880d76adade34c",
+      "bytes": 205608
     },
     {
       "path": "figure8-manipulation.pdf",
-      "sha256": "08eab9ccaa336451d13cd1509548153bda000ad6df846cf926df4777fd60744c",
-      "bytes": 128474
+      "sha256": "2399c7b2051e308e5e02c547021a60c8bb7a36a88d38b60af82d4ce8bfc843a2",
+      "bytes": 128728
     },
     {
       "path": "figure8-manipulation.png",
-      "sha256": "db865510ab5c2498aa5608e7ddfb9fa6ab7315720abc39d2bc485009059ce915",
-      "bytes": 312295
+      "sha256": "6e20273fc6203f951de18e723cf878b0a49cab9768cca1532d7418ebb9bdec7a",
+      "bytes": 311822
     },
     {
       "path": "figure8-manipulation.svg",
-      "sha256": "c26bbd1681c9fa5bcf6dbb531e59256e5d21f554bc42322f13e7f1cc3450c72b",
-      "bytes": 235928
+      "sha256": "ac9760d503ecaef4de919a6500b51fa9945c5cebfa000793067be0f921c001ae",
+      "bytes": 238227
     },
     {
       "path": "model-logos/LOBE-ICONS-LICENSE",
@@ -284,43 +287,103 @@
     },
     {
       "path": "supplement-figure6-affordance.drawio",
-      "sha256": "58cc9c4ab7b07d8fd334af6d8b95801c358ed76519eb57e38710c2503ee39227",
-      "bytes": 115213
+      "sha256": "281adb116848302544479b1908695bc98f92fb8217edf9e46a0e7c95e4f2c124",
+      "bytes": 115925
     },
     {
       "path": "supplement-figure6-affordance.pdf",
-      "sha256": "4e1ccb715bba66e2d594e15172c07746eca4888ec00f8a02bea8edd9b6606ef8",
-      "bytes": 78150
+      "sha256": "4bafe59ac76384bb83f7b9a680232983939ad86de36192dfd74a18f753794473",
+      "bytes": 78169
     },
     {
       "path": "supplement-figure6-affordance.png",
-      "sha256": "1ded951e57467f27599bf73afadb3db365ff5c2f0da5b559fb69779e91cd1e58",
-      "bytes": 176738
+      "sha256": "8a0a47a54460a656da2e4da1b82ed921b86f42b8a9e44ca3da3a571d3a21cf6b",
+      "bytes": 180823
     },
     {
       "path": "supplement-figure6-affordance.svg",
-      "sha256": "4dbcddc56b4848a393b7b0c2a128ad16e72f4f85fdcdaf6265cd7a3789ad14ff",
-      "bytes": 186458
+      "sha256": "cb1becceecd60dfc0ee8310c8c98e53616e4c1bf8786cad78dea90d6321b1c0b",
+      "bytes": 187562
     },
     {
       "path": "supplement-figure7-planning.drawio",
-      "sha256": "30c03d00e5e81c696ea3d728c8c4e46ed5e3c186bceea95d68528181eb56a6ed",
-      "bytes": 102240
+      "sha256": "7c8130b80c22fa31e19ad91e470ab43f6fa500492a27213f6c222969f59287d6",
+      "bytes": 102504
     },
     {
       "path": "supplement-figure7-planning.pdf",
-      "sha256": "f2544b6c8456f2a41c2c08cf85a17fec84c2a9741596792ca6762d9f5bd4cdb8",
-      "bytes": 80144
+      "sha256": "d0df11e48d1a1242982584f42d83426e1b27af949f362fac89d4e2fbc368b17c",
+      "bytes": 80147
     },
     {
       "path": "supplement-figure7-planning.png",
-      "sha256": "a47b4bd55e2b89a2d83bca6f37076e4900777063e076855eb5f884a7c99d19f6",
-      "bytes": 168515
+      "sha256": "ba40a05ac619913b97124aa5c4d51408ff5ba878c2229d9f55b324466e832797",
+      "bytes": 169168
     },
     {
       "path": "supplement-figure7-planning.svg",
-      "sha256": "54c8373397b5b8de42ab044481d9a6896d5a50107be47f62cc8c1c1d5c1a523e",
-      "bytes": 150752
+      "sha256": "703d4c6fba2ed82e47778b66d1e518a193a6b7651a1cb43ab92097fdc46846ef",
+      "bytes": 151082
+    },
+    {
+      "path": "execution-cases.svg",
+      "sha256": "2e200e0c2b80b4cfe79bbad6377b808a4dfdf897d0accb19d0db5d2e38f2799b",
+      "bytes": 519009
+    },
+    {
+      "path": "figure-cases-affordance.drawio",
+      "sha256": "d671cd87a70f9da05a83fe422ac25426ac3911f50124b760255a47d238f3fb31",
+      "bytes": 2171464
+    },
+    {
+      "path": "execution-cases.png",
+      "sha256": "0f8372d92ba443bff187763f0d7b5f6074aa3c5e4bfa8ca3bc0c6965cfca4680",
+      "bytes": 556572
+    },
+    {
+      "path": "execution-cases.pdf",
+      "sha256": "f626424434cc37ba14aebf7bd6e260f012e6ddf85f4a6aad76e41fed2ea2da61",
+      "bytes": 363427
+    },
+    {
+      "path": "execution-cases.drawio",
+      "sha256": "e727213d08c4ed12a805934cdfba449e508d1bc16b63b658c70c9e8492e4fc78",
+      "bytes": 503341
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.png",
+      "sha256": "c833233e81f9e2c0b6a6ad7805113a287314b2b508192452611d2a177476fae2",
+      "bytes": 102132
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.pdf",
+      "sha256": "e76a866fe38f65d6c5cadc44085ca6446b822632962f1ddfaff91b397c397872",
+      "bytes": 583757
+    },
+    {
+      "path": "figure-cases-affordance.svg",
+      "sha256": "564902c4c1fc9249acb45f6c7eea2344bfe36a5a9d8688ca69d3feda7fd7f159",
+      "bytes": 783430
+    },
+    {
+      "path": "figure-cases-affordance.pdf",
+      "sha256": "8b3399c967b5fbe6dda4cc2a0c4c4eef1bf2f8fe88d0c92565629101cf191720",
+      "bytes": 544501
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.drawio",
+      "sha256": "9008c47cf47796e3910c7c5d61269a5ea945a8c26de4a21a08336d24f6461727",
+      "bytes": 738068
+    },
+    {
+      "path": "figure-cases-affordance.png",
+      "sha256": "9de5efb027ff45c726331a29759ed9afdb51bf8fb036801794726efa7e3da9f4",
+      "bytes": 69432
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.svg",
+      "sha256": "db06d89c7468dcd04b0b4544cac7f1c53b7273206d078ee94de878989d6b63c4",
+      "bytes": 873608
     }
   ],
   "typography": {
@@ -338,5 +401,17 @@
     "label_size_pt": 7.5,
     "panel_size_pt": 9.5,
     "policy": "Size is normalized at final manuscript width; long labels are reflowed without changing measurements."
+  },
+  "naming": {
+    "revision": "2026-10-22",
+    "full": [
+      "Gemini 3.8 Flash",
+      "Gemini 4 Argon"
+    ],
+    "compact": [
+      "Gemini 3.8",
+      "Gemini 4"
+    ],
+    "spatial_original_cohort": "Panels (a) and (b) use Gemini 3.8 Flash."
   }
 }

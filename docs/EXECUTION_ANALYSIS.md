@@ -2,7 +2,7 @@
 
 **Task completion now compares ten models**, including Gemini&nbsp;4&nbsp;Argon: 1,570 outcomes on the same 157 Planning tasks. Their combined successes cover 142 tasks; 15 are unsuccessful for all ten models.
 
-**Time, token use and recovery** now cover all ten models: 1,570 adopted Planning episodes. The explorer has 46 shared tasks × 10 models (460 records), including 189 detailed action/feedback traces and 271 round summaries. All 109 Argon gallery executions are matched to the supplied logs by report SHA-256; prior retries are excluded.
+**Time, token use and recovery** now cover all ten models: 1,570 adopted Planning episodes. The explorer has 46 shared tasks × 10 models (460 records), including 189 detailed action/feedback traces and 271 round summaries. All 109 Gemini 4 Argon gallery executions are matched to the supplied logs by report SHA-256; prior retries are excluded.
 
 **Failure cost:** Astra’s 31 unsuccessful episodes consume 18,326,033 tokens, versus 14,670,756 across 126 successes. The mean unsuccessful episode uses **5.1×** as many tokens (591,162 vs. 116,435). These totals use all 157 recorded episodes.
 
@@ -26,11 +26,11 @@ python scripts/analyze_execution_report.py \
   --output /path/to/analysis
 python scripts/build_technical_report.py --analysis /path/to/analysis
 
-# Verify and join the 157 Argon Planning outcomes (unpacked results archive).
+# Verify and join the 157 Gemini 4 Argon Planning outcomes (unpacked results archive).
 python scripts/build_planning_outcomes.py \
   --input /path/to/gemini4argon-results-20261021
 
-# Add adopted Argon logs to the existing published records and metrics.
+# Add adopted Gemini 4 Argon logs to the existing published records and metrics.
 python scripts/import_argon_logs.py \
   --archive /path/to/gemini4argon-logs-20261021.zip \
   --output /path/to/argon-analysis
@@ -38,7 +38,7 @@ python scripts/refresh_execution_views.py
 python scripts/build_technical_report.py --analysis /path/to/argon-analysis
 ```
 
-The Argon importer checks every adopted Planning report against the existing outcome digest, and all 109 gallery reports against their execution records. It preserves the other nine models' measurements. The [import audit](../public/data/argon-logs-audit.json) records the archive digest, selected attempts and code-cell alignment. Run the original nine-model publication first when rebuilding from scratch; the Argon import extends those published records.
+The Gemini 4 Argon importer checks every adopted Planning report against the existing outcome digest, and all 109 gallery reports against their execution records. It preserves the other nine models' measurements. The [import audit](../public/data/argon-logs-audit.json) records the archive digest, selected attempts and code-cell alignment. Run the original nine-model publication first when rebuilding from scratch; the Gemini 4 Argon import extends those published records.
 
 For the public case index and task map, no external archive is needed:
 
