@@ -108,8 +108,11 @@ def build():
                           f'data-preview-src="{h(animation)}" '
                           f'data-poster="{h(r["poster"])}" alt="">')
             else:
-                visual = ('<span class="overview-log-status">Stopped before action</span>'
-                          '<span class="overview-log-link">Inspect API error ↗</span>')
+                visual = ('<svg class="overview-error-icon" viewBox="0 0 24 24" fill="none" '
+                          'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">'
+                          '<path d="M8 3v4m8-4v4M6 7h12v4a6 6 0 0 1-6 6v4M3 3l18 18"/></svg>'
+                          '<span class="overview-log-status">API error</span>'
+                          '<span class="overview-log-link">0 actions · View log ↗</span>')
             if preview:
                 badge = "Demo · Not scored" if demo else status
                 if demo or kind == "Saved observations":
@@ -136,6 +139,7 @@ def build():
         f'<thead><tr>{"".join(heads)}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>\n'
         '<figcaption><details><summary>Recording Coverage</summary>Each column uses one fixed task. '
         '104 evaluation previews, 3 separately labeled same-task demos, and 3 API failures before action. '
+        'The three Qwen agents on HumanCLAW returned a connection error on their initial request; no action video was produced. '
         'Demos do not change scores; observed-frame slideshows show inputs rather than continuous actions.</details></figcaption>\n'
         '</figure>\n<!-- END EXACT_TASK_OVERVIEW -->'
     )
@@ -168,7 +172,8 @@ def build():
     doc += ["", "## Model rows", ""]
     for i, m in enumerate(MODELS):
         n = sum(bool(t['mediaSha256']) for t in cells if t['modelKey'] == m)
-        doc.append(f"{i+1}. **{data['models'][i]}** — {n} scene previews; {len(columns)} task results.")
+        model_name = h(data['models'][i]).replace('-', '&#8209;').replace(' ', '&nbsp;')
+        doc.append(f"{i+1}. **{model_name}** — {n} scene previews; {len(columns)} task results.")
     doc += ["", "The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.", ""]
     (ROOT / "docs/RECORDED_TASKS.md").write_text("\n".join(doc))
     app = PUB / "app.js"

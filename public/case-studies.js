@@ -165,6 +165,17 @@
       try {
         const response=await fetch(p.detailUrl+'?v=media-20261022');if(!response.ok)throw Error();const d=await response.json();
         if(!rounds.isConnected)return;
+        // A rejected initial model request is different from an unrecorded rollout.
+        const preActionFailure=d.steps?.length && d.steps.every(s=>!s.code && !s.calls?.length && s.feedback?.stage==='model_completion' && s.error);
+        if(preActionFailure && !hasPreview(p)) {
+          const connectionFailure=d.steps.every(s=>String(s.error).includes('Model API transport failure'));
+          const title=connectionFailure?'API connection failed':'Model request failed';
+          selection.querySelector('.study-outcome').textContent='API error';
+          selection.querySelectorAll('.study-meta').forEach(e=>e.remove());
+          rounds.removeAttribute('role');
+          rounds.innerHTML=`<div class="gallery-api-failure"><h4>${title}</h4><p>The initial request failed before any action was generated. No execution video was produced.</p><div class="gallery-api-facts"><strong>0 actions</strong><span>${num(p.elapsedSeconds,1)} s elapsed</span><a href="${esc(p.detailUrl)}" target="_blank" rel="noopener">Open original log ↗</a></div><details><summary>Recorded error</summary><pre>${esc(String(d.steps[0].error))}</pre></details></div>`;
+          return;
+        }
         if(p.detailedTraceAvailable===false){rounds.remove();return;}
         if(p.frames?.length && p.mediaKind==='Saved observations') {
           const box=document.createElement('div');box.className='gallery-observation-picker';
