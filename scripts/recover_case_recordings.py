@@ -41,6 +41,7 @@ def build(archives):
                 rel = dest.relative_to(PUB).as_posix()
                 patch = dict(video=rel+'/clip.mp4', animation=None, poster=rel+'/poster.webp',
                              mediaKind='Video excerpt', mediaReportSha256=k[2],
+                             mediaMatchesReport=True,
                              mediaProvenance=rel+'/provenance.json',
                              mediaNote='Excerpt from this evaluation recording; playback time is separate from episode time.')
                 proof = dict(archive=archive.name, member=member, modelKey=k[1], taskId=k[0],
@@ -49,6 +50,12 @@ def build(archives):
                 write(dest/'provenance.json', proof)
                 updates[k] = patch
                 entries.append(dict(runId=run['id'], **{k:proof[k] for k in ['archive','member','modelKey','taskId','reportSha256','video','videoSha256']}, provenance=rel+'/provenance.json'))
+    audit=PUB/'data/case-recovery-audit.json'
+    previous=read(audit)['entries'] if audit.exists() else []
+    for entry in previous:
+        k=entry['taskId'],entry['modelKey'],entry['reportSha256']
+        assert lookup[k]['video']==entry['video']
+        updates.setdefault(k,{}).update(mediaMatchesReport=True)
     def sync(obj):
         if isinstance(obj, dict):
             patch = updates.get(key(obj))
@@ -84,8 +91,6 @@ def build(archives):
             group=by_task.get(next(iter(task_ids)))
             if group: story['sceneContext']=group['sceneContext']
         write(path,index)
-    audit=PUB/'data/case-recovery-audit.json'
-    previous=read(audit)['entries'] if audit.exists() else []
     write(audit,dict(date='2026-10-22',matching=['taskId','modelKey','reportSha256'],entries=previous+entries))
     release=read(PUB/'data/release.json')
     release['playable_previews']=sum(bool(r.get('video') or r.get('animation')) for r in data['runs'].values())

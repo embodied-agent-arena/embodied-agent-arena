@@ -35,6 +35,8 @@ class CaseMediaTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256((PUB/entry['video']).read_bytes()).hexdigest(),entry['videoSha256'])
             self.assertEqual(run['video'],detail['video'])
             self.assertEqual(run['poster'],detail['poster'])
+            self.assertTrue(run['mediaMatchesReport'])
+            self.assertTrue(detail['mediaMatchesReport'])
             self.assertEqual(run['success'],detail['success'])
 
     def test_context_is_not_promoted_to_a_model_recording(self):
