@@ -14,7 +14,7 @@ for g in data['groups']:
                          display=kind,recording=r.get('video') or r.get('animation') or '',
                          scene_reference=g['sceneContext']['sourceRunId'],details=r['detailUrl']))
 with (PUB/'data/case-recording-coverage.csv').open('w',newline='') as f:
-    writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
+    writer=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');writer.writeheader();writer.writerows(rows)
 counts={kind:sum(r['display']==kind for r in rows) for kind in ['evaluation_scene_preview','action_log_animation','independent_demo','scene_only']}
 (ROOT/'docs/CASE_MEDIA.md').write_text(f'''# 🎬 Case media coverage
 
