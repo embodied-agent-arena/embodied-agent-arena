@@ -17,6 +17,8 @@ The **21 October 2026 author manuscript** and the public results compare **ten m
 
 **Argon coverage:** all five main-result domains, repeated metrics, polygon predictions, Planning outcomes and the case gallery are included. Detailed logs are joined to all 109 Argon gallery records by report hash. Time, token use and recovery now compare all ten models; video playback and episode timestamps retain their separate clocks.
 
+**Interactive evidence:** visible clips play automatically and pause offscreen. Playback respects manual pause and reduced-motion settings; the ten-model wall keeps one fixed task in each column. Figure 4 places model icons at the original data coordinates, with a separate key and no label leaders.
+
 **Statistics:** repeated metrics use mean ± run SD (five runs; Fable: three). Polygon IoU, Planning and Manipulation use one run. Qwen-Max's 11 missing polygon predictions count as errors in the 70-case denominator. Per-case examples and aggregate scores serve different purposes; each execution record retains its own settings and budget.
 
 ## Video supplement

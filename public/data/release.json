@@ -4,12 +4,12 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 65,
-  "paper_sha256": "0521d859cb6d9216c28efc02f9b158a3ad2244e715a6e92f8f0a2bd6a3c5639f",
+  "paper_sha256": "bda576130d3c7c653cfa35032587f06b0fa7fde044093122a3113f70376516b3",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 302,
   "figure_sha256": {
-    "geometry.webp": "b52cde19ceae5713cc83bc8e46cc69858c012f241bdaf1ccae7919794f9846d0",
+    "geometry.webp": "e87728e036d49cc80f60f9da092a5a1f27d04783fac6076cf0e493b452e4326d",
     "spatial.webp": "99659bda51b98057106375529237dc784e753d4de033e7842a3f99f2bd880ba3",
     "affordance.webp": "f9aad375e6d72cb9a2cef3200bdd6ed5649dd2025d97c7e6d821dbbcb3245ca3",
     "planning.webp": "064c034686ea95e93cd891b046907f090837df274a23d7933df35c4a132d39e9",
@@ -18,7 +18,7 @@
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "84074a2310822c42309816880d128278ca8c0236584ef03b7836ad05c5cf3537",
+  "source_sha256": "3609654a06086faf2a7ba964d09f281bab6daf4a653c7bf15c54a2543d294081",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -39,7 +39,7 @@
     "explorerRecords": 460
   },
   "figure_style": {
-    "revision": "brand-20261021",
+    "revision": "viewport-20261021",
     "palette": "assets/model-logos/palette.json",
     "mainFigures": 6,
     "additionalManuscriptFigures": 3,

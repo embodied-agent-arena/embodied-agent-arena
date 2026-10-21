@@ -111,17 +111,17 @@ def build():
     block = (
         '<!-- BEGIN EXACT_TASK_OVERVIEW -->\n'
         '<figure class="execution-showcase task-overview" aria-labelledby="overview-title">\n'
-        '<div class="overview-toolbar"><div><h3 id="overview-title">Same Task. Ten Models.</h3>'
-        '<p>One fixed task per column · Hover to play · Click for details</p></div>'
-        '<div class="overview-nav"><button type="button" data-overview-scroll="-1" '
+        '<div class="overview-toolbar"><div><h3 id="overview-title" class="sr-only">Compare the Same Task</h3>'
+        '<p>One Task per Column · Click a Clip for Details</p></div>'
+        '<div class="overview-nav"><button type="button" class="overview-motion" data-overview-motion aria-pressed="false">Ⅱ Pause previews</button><button type="button" data-overview-scroll="-1" '
         'aria-label="Show previous task columns">←</button><button type="button" '
         'data-overview-scroll="1" aria-label="Show next task columns">→</button></div></div>\n'
         '<div class="overview-scroll" tabindex="0" role="region" aria-label="Ten-model task comparison">'
         '<table class="overview-table"><caption class="sr-only">Ten models evaluated on the same '
         'native task in each column. Results remain visible when footage is unavailable.</caption>'
         f'<thead><tr>{"".join(heads)}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>\n'
-        '<figcaption>Every cell links to the same task and its own execution record. '
-        '“No video” means the recording is absent; the result is retained from the evaluation record.</figcaption>\n'
+        '<figcaption><details><summary>Recording Coverage</summary>Each column uses one fixed task. '
+        '“No video” retains the recorded outcome when footage is unavailable.</details></figcaption>\n'
         '</figure>\n<!-- END EXACT_TASK_OVERVIEW -->'
     )
     index = PUB / "index.html"

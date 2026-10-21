@@ -97,23 +97,23 @@
     },
     {
       "path": "figure4-geometry.drawio",
-      "sha256": "e5dda70e27d2998e55119a11de941b38b79b830c6dd1eeffa19592fe441f57e3",
-      "bytes": 105962
+      "sha256": "9ce316849246e2d3485b25014f0e3217c11861d28e5e2cd96a68867e732e1c72",
+      "bytes": 134118
     },
     {
       "path": "figure4-geometry.pdf",
-      "sha256": "f988c89005de355911f5fb91f0282623209e42f60482942655cf44cf235ec537",
-      "bytes": 75273
+      "sha256": "f67f2192a31f27658aab6b82f0c15cfc387e77ae61bc0277016c209c55c295a5",
+      "bytes": 80374
     },
     {
       "path": "figure4-geometry.png",
-      "sha256": "090b06161167a5763fa5e5ba5a05e1923e0b3d57b492853248423845c093b4a7",
-      "bytes": 172077
+      "sha256": "ea1b7add85c2f17436f93865eecdb47ba9ccdf89b2c41f84bd61b7e6753db682",
+      "bytes": 172386
     },
     {
       "path": "figure4-geometry.svg",
-      "sha256": "5a832733d3b9c931d40b9a12f71159b8158e1bc136733c7fbeb292bb1d926f2b",
-      "bytes": 188641
+      "sha256": "293844493fa8e986bad94bd91d7ba7aa6e412b3be331c29160c86850764e13ae",
+      "bytes": 203330
     },
     {
       "path": "figure5-spatial.drawio",

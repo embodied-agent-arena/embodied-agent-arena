@@ -175,7 +175,7 @@
     content.innerHTML='<h2 id="study-dialog-title">Loading Case…</h2>';
     if (!dialog.open) dialog.showModal();
     document.body.classList.add('study-modal-open');
-    document.querySelectorAll('.gallery-track video').forEach(v=>v.pause());
+    window.ArenaMedia.refresh();
     try {
       await load();
       const found = records.get(id); if (!found) throw new Error('Case not found.');
@@ -246,13 +246,8 @@
       const id=shown[i].id;
       const playing=!pausedCases.has(id)&&(manualPlay.has(id)||!reduced.matches);
       const visible=i===current && isVisible && !document.hidden && !dialog.open;
-      slide.querySelectorAll('video').forEach(v=>{
-        if(visible && playing){if(!v.getAttribute('src'))v.src=v.dataset.video;v.play().catch(()=>{});}
-        else {v.pause();if(Math.abs(i-current)>1&&v.getAttribute('src')){v.removeAttribute('src');v.load();}}
-      });
-      slide.querySelectorAll('[data-animation]').forEach(img=>{
-        const src=visible&&playing?img.dataset.animation:img.dataset.poster||shown[i].poster;
-        if(img.getAttribute('src')!==src)img.src=src;
+      slide.querySelectorAll('video, [data-animation]').forEach(media=>{
+        window.ArenaMedia.enable(media,visible && playing,manualPlay.has(id));
       });
       const toggle=slide.querySelector('[data-playback]');
       if(toggle){toggle.textContent=playing?'Pause previews':'Play previews';toggle.setAttribute('aria-pressed',String(!playing));}
@@ -319,7 +314,7 @@
   },{passive:false});
   observer=new IntersectionObserver(entries=>{isVisible=entries[0].isIntersecting;updateActiveMedia();},{threshold:.2});observer.observe(track);
   reduced.addEventListener('change',updateActiveMedia);
-  document.addEventListener('visibilitychange',()=>{if(document.hidden){document.querySelectorAll('.gallery-track video').forEach(v=>v.pause());}else updateActiveMedia();});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){window.ArenaMedia.refresh();}else updateActiveMedia();});
   window.addEventListener('resize',()=>go(current,false));
   load().then(cases=>{allCases=cases;grid.hidden=!atlasMode;gallery.hidden=atlasMode;if(!atlasMode)gallery.classList.add('is-ready');applyFilter();const target=new URLSearchParams(location.search).get('case');const index=shown.findIndex(c=>c.id===target);if(index>=0)go(index,false);}).catch(error=>{
     gallery.innerHTML=`<p class="study-protocol">${esc(error.message)} <a href="case-atlas.html">Browse the Case Atlas ↗</a></p>`;

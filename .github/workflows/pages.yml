@@ -32,6 +32,7 @@ jobs:
           node tests/check_case_rendering.cjs
           node tests/check_execution_rendering.cjs
           node tests/check_planning_comparison.cjs
+          node tests/check_viewport_media.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
