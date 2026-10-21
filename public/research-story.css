@@ -32,8 +32,54 @@
 .geo-links,.domain-links {display:flex;align-items:center;gap:16px 28px;flex-wrap:wrap}
 .geo-links {margin-top:18px}
 .geo-links>* {font-size:16px;font-weight:650;padding:0;text-align:left}
-.construction-details>summary {border-top:1px solid #dce4d8;padding:20px 32px;font-size:17px;font-weight:600;cursor:pointer}
-.construction-details[open]>summary {background:#eef3e9}
+.benchmark-comparison {margin-top:56px;scroll-margin-top:100px}
+.benchmark-heading {display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px 24px}
+.benchmark-heading h3 {font-size:clamp(28px,3vw,38px);line-height:1.25}
+.benchmark-heading>a {font-size:16px;font-weight:600;white-space:nowrap}
+.benchmark-heading>a:hover,.benchmark-scale-note a:hover {color:var(--accent)}
+.benchmark-argument {font-size:19px;line-height:1.65;max-width:none;margin:18px 0 26px;color:#43555d}
+.benchmark-argument strong {font-weight:650;color:var(--ink)}
+.benchmark-scroll {overflow-x:auto;border:1px solid var(--line);border-radius:12px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.benchmark-table {border-collapse:separate;border-spacing:0;width:100%;min-width:1120px;font-size:16px;line-height:1.4;table-layout:fixed;white-space:normal}
+.benchmark-table .benchmark-name-col {width:224px}
+.benchmark-table .benchmark-scale-col {width:124px}
+.benchmark-table th,.benchmark-table td {padding:13px 9px;text-align:center;border-bottom:1px solid var(--line);vertical-align:middle}
+.benchmark-table thead th {font-weight:600;background:#f6f7f6}
+.benchmark-table .benchmark-groups th {padding-block:13px;color:#3f748a;font-size:15px}
+.benchmark-table .benchmark-groups th:last-child {color:var(--accent);background:#f3f1f8}
+.benchmark-table thead tr:last-child th {font-size:15px;line-height:1.5;padding:15px 3px;white-space:nowrap}
+.benchmark-table thead tr:last-child th:nth-last-child(-n+2) {background:#f3f1f8}
+.benchmark-table tbody th {font-weight:550;text-align:left;white-space:nowrap}
+.benchmark-table tbody tr {background:#fff}
+.benchmark-table :is(th,td):first-child {position:sticky;left:0;z-index:1;background:#fff;text-align:left;padding-left:18px;border-right:1px solid var(--line)}
+.benchmark-table thead tr:last-child th:first-child {background:#f6f7f6}
+.benchmark-table .benchmark-groups th:first-child {background:#f6f7f6;border-right:0;position:static}
+.benchmark-table td:nth-child(2) {font-variant-numeric:tabular-nums;white-space:nowrap}
+.benchmark-table tbody a:hover {text-decoration:underline;text-underline-offset:3px}
+.benchmark-table tbody tr:last-child :is(th,td) {border-bottom:0}
+.benchmark-table .benchmark-own :is(th,td) {background:#eef2f7;font-weight:700}
+.benchmark-table .benchmark-own th {box-shadow:inset 4px 0 var(--accent)}
+.benchmark-table .benchmark-own td:nth-child(8) {background:#e5e0f1}
+.benchmark-yes {color:#486e58;font-size:22px;font-weight:650;line-height:1}
+.benchmark-no {color:#9da5a7;font-size:19px;font-weight:400;line-height:1}
+.benchmark-table sup {font-size:13px;color:var(--ink)}
+.benchmark-key {display:flex;flex-wrap:wrap;gap:8px 26px;font-size:15px;line-height:1.5;max-width:none;margin:17px 0 8px}
+.benchmark-key>span {white-space:nowrap}
+.benchmark-key b {display:inline-block;vertical-align:middle;margin-right:5px}
+.benchmark-scale-note {font-size:15px;line-height:1.6;max-width:none;color:#43555d}
+.benchmark-scale-note a {display:inline-block;text-decoration:underline;text-underline-offset:3px}
+.benchmark-scroll-hint {display:none;font-size:15px;font-weight:600;margin:0 0 10px}
+@media(max-width:1217px) {.benchmark-scroll-hint {display:block}}
+@media(max-width:760px) {
+  .benchmark-comparison {margin-top:36px}
+  .benchmark-argument {font-size:17px;margin-bottom:22px}
+  .benchmark-table {min-width:1080px;font-size:15px}
+  .benchmark-table .benchmark-name-col {width:174px}
+  .benchmark-table tbody th {white-space:normal}
+  .benchmark-table :is(th,td):first-child {padding-left:12px}
+  .benchmark-table .benchmark-own th a {display:block;max-width:146px;text-wrap:balance}
+  .benchmark-key {gap:8px 18px}
+}
 .domain-text {grid-template-columns:1.05fr 1fr;gap:42px;align-items:start;padding:0}
 .domain-argument {font-size:18px;line-height:1.7;color:var(--muted);margin-top:18px}
 .evidence {gap:24px;padding-top:4px}
@@ -120,7 +166,6 @@
   .evaluation-path {grid-template-columns:1fr;gap:22px}
   .evaluation-path li {padding:0 0 0 20px!important;border-right:0;border-left:2px solid #dedcea!important}
   .evaluation-path p {margin-top:5px}
-  .construction-details>summary {padding:18px 22px;font-size:16px}
   .domain-text {grid-template-columns:1fr;gap:24px}
   .domain-argument {font-size:17px}
   .evidence {gap:18px}
