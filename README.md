@@ -1,7 +1,9 @@
-# Embodied Agent Arena
+<h1 align="center">Embodied Agent Arena</h1>
 
-**Are Frontier VLM Agents Ready to Be Robot Generalists?**<br>
-*An Empirical Study with the Embodied Agent Arena*
+<p align="center">
+  <strong>Are Frontier VLM Agents Ready to Be Robot Generalists?</strong><br>
+  <em>An Empirical Study with the Embodied Agent Arena</em>
+</p>
 
 <p align="center">
   <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/">🌐 Project Page</a> ·
@@ -67,10 +69,14 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ## News
 
-- **2026.10.21** — Added Argon’s detailed logs to same-task execution comparisons and ten-model time/token/recovery analysis.
+- **2026.10.21** — Added **Gemini 4 Argon’s execution logs** to same-task comparisons and ten-model time, token-use and recovery analyses.
 - **2026.10.21** — Added **Gemini 4 Argon** (`gemini-4-argon`): ten-model results, matched case comparisons, Planning outcomes and updated manuscript figures.
-- **2026.10.20** — Released direct-polygon comparisons and execution analysis with task-matched videos, actions and feedback.
-- **2026.10.01** — Released the evaluation harness and 1,000-case dataset.
+- **2026.10.20** — Released **direct-polygon comparisons and execution analysis** with task-matched videos, actions and feedback.
+- **2026.10.19** — Added **DeepSeek 4.1 Flash-1017**, expanding the comparison to **nine models**; integrated polygon Affordance results and completed Opus 5.5 Planning results.
+- **2026.10.15** — Expanded the **eight-model video gallery** with task-matched recordings, instructions and run details.
+- **2026.10.12** — Added **Claude Opus 5.5**, expanding the quantitative comparison to **eight models**; introduced the **Case Atlas** and qualitative manuscript figures.
+- **2026.10.05** — Published the **seven-model comparison**, downloadable results and the model selection and evaluation guide.
+- **2026.10.01** — Released the **evaluation harness and 1,000-case dataset**.
 
 ## Release Status
 
