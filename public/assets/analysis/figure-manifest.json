@@ -13,8 +13,8 @@
     "model-task-comparison": "Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.",
     "figure-protocol-cases": "Original CALVIN/PickCube controller-construction case comparison; observations and results unchanged.",
     "cases-affordance": "Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.",
-    "supplement-figure6-affordance": "Original fine-grained diagnostics, retained in the appendix.",
-    "supplement-figure7-planning": "Original fine-grained diagnostics, retained in the appendix."
+    "supplement-figure6-affordance": "Original fine-grained diagnostics retained in the appendix.",
+    "supplement-figure7-planning": "Original fine-grained diagnostics retained in the appendix."
   },
   "files": [
     {
@@ -139,43 +139,43 @@
     },
     {
       "path": "figure6-affordance.drawio",
-      "sha256": "28ae2d2ac20464a4df57834038909a0a122b6bad9f28c7b2db3a28cc73a6c1b0",
-      "bytes": 68131
+      "sha256": "c72a58defdef4efc0c1a9a863e507b7a85417c206d3944ee81f714f1824a5d6e",
+      "bytes": 68112
     },
     {
       "path": "figure6-affordance.pdf",
-      "sha256": "8398e929d12140a16295a9a9a6101066b11a0f5181aa3076dd1a80175481b53b",
-      "bytes": 56484
+      "sha256": "20cd94d520669f38a0a4bffec4f46aea6801fc909236adb6a51244d903f060a3",
+      "bytes": 55854
     },
     {
       "path": "figure6-affordance.png",
-      "sha256": "186399ab4a1a7d9b560f55e676c81d16ef929c55f4531986b25acba54cca10f7",
-      "bytes": 137621
+      "sha256": "81bdc19c992070ed2879c076bdf66b35536c115904b48de4dcb0edd1e8d8f3cc",
+      "bytes": 136029
     },
     {
       "path": "figure6-affordance.svg",
-      "sha256": "e46cbc0a5f1b3ed42b7ee50c6a5102522ab13ede255dca5833bca7f904381286",
-      "bytes": 142504
+      "sha256": "42e3ed3d1999c54b93b09f9b5ca5a9eef6a6c14ee9c8c8b644df57cd817b4559",
+      "bytes": 144639
     },
     {
       "path": "figure7-planning.drawio",
-      "sha256": "f9fb1b0a9c5c406db3508aa3d89124b30b73a94a0cda818651f23260bab1759f",
-      "bytes": 63060
+      "sha256": "03818d57cc216421f55cbd87054923ee6154dd9a5df3855f4d6667697882bbb4",
+      "bytes": 63041
     },
     {
       "path": "figure7-planning.pdf",
-      "sha256": "f289bc9436c797096bcadfc241fac585a74277231c8ab50a472a1ba825d78af3",
-      "bytes": 55129
+      "sha256": "141951078781b3e79e786aec1ffea8142460ba0a458af780915295ebc86246b2",
+      "bytes": 53988
     },
     {
       "path": "figure7-planning.png",
-      "sha256": "d8cd130908ae385600bc9a430d43d0cf0baa920fd1257dfa5f7f3f22fbd4e586",
-      "bytes": 135400
+      "sha256": "3f7cc4e38a123bc1ea54cd6eda77f2f44a58d85f8930af8afa13bcb7eb422703",
+      "bytes": 133528
     },
     {
       "path": "figure7-planning.svg",
-      "sha256": "99271d28ee2ff46840da983f9e2ba423be7fa97d7099bd73640d223b419e2e98",
-      "bytes": 137884
+      "sha256": "e16f24f37101a1df9090c2e6efeb9aa94c5251b26c4a670c1aa6f1546f67537c",
+      "bytes": 136289
     },
     {
       "path": "figure8-manipulation.drawio",
@@ -322,6 +322,5 @@
       "sha256": "54c8373397b5b8de42ab044481d9a6896d5a50107be47f62cc8c1c1d5c1a523e",
       "bytes": 150752
     }
-  ],
-  "revision": "direct-labels-20261021"
+  ]
 }

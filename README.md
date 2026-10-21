@@ -1,29 +1,29 @@
 <h1 align="center">
-  <img src="public/assets/logo-transparent.png" width="64" height="64" align="absmiddle" alt="">&nbsp; Embodied Agent Arena
+  <img src="public/assets/logo-transparent.png" width="64" height="64" align="absmiddle" alt="">&nbsp; Embodied Agent&nbsp;Arena
 </h1>
 
 <h3 align="center">
-  Are Frontier VLM Agents Ready to Be Robot Generalists?<br>
-  <em>An Empirical Study with the Embodied Agent Arena</em>
+  Are Frontier VLM Agents Ready to Be Robot&nbsp;Generalists?<br>
+  <em>An Empirical Study with the Embodied&nbsp;Agent&nbsp;Arena</em>
 </h3>
 
 <p align="center">
-  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/">🌐 Project Page</a> ·
-  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf">📄 Latest Manuscript</a> ·
+  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/">🌐&nbsp;Project&nbsp;Page</a> ·
+  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf">📄&nbsp;Latest&nbsp;Manuscript</a> ·
   <a href="https://arxiv.org/abs/2610.00854">arXiv</a> ·
-  <a href="https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena">🤗 Dataset</a> ·
-  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html">🎬 Case Atlas</a>
+  <a href="https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena">🤗&nbsp;Dataset</a> ·
+  <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html">🎬&nbsp;Case&nbsp;Atlas</a>
 </p>
 
 <div align="center">
 
 <p>
-Haojian Huang<sup>1,3</sup> · Pukun Zhao<sup>3</sup> · Zexi Li<sup>2,3</sup> · Yehang Zhang<sup>1,3</sup> · Yangkai Wei<sup>3</sup><br>
-Wenqian Li<sup>3</sup> · Han Yang<sup>3</sup> · Kaiwen Zhou<sup>3</sup> · Ying-Cong Chen<sup>1,3,†</sup> · Yinchuan Li<sup>3,†</sup>
+Haojian&nbsp;Huang<sup>1,3</sup> · Pukun&nbsp;Zhao<sup>3</sup>&nbsp;· Zexi&nbsp;Li<sup>2,3</sup> · Yehang&nbsp;Zhang<sup>1,3</sup> · Yangkai&nbsp;Wei<sup>3</sup><br>
+Wenqian&nbsp;Li<sup>3</sup>&nbsp;· Han&nbsp;Yang<sup>3</sup>&nbsp;· Kaiwen&nbsp;Zhou<sup>3</sup>&nbsp;· Ying&#8209;Cong&nbsp;Chen<sup>1,3,†</sup> · Yinchuan&nbsp;Li<sup>3,†</sup>
 </p>
 
-<p><sup>1</sup> HKUST (GZ) &nbsp; <sup>2</sup> The Chinese University of Hong Kong &nbsp; <sup>3</sup> Knowin AI<br>
-<sup>†</sup> Corresponding authors</p>
+<p><sup>1</sup>&nbsp;HKUST&nbsp;(GZ) &nbsp; <sup>2</sup>&nbsp;The Chinese University of Hong&nbsp;Kong &nbsp; <sup>3</sup>&nbsp;Knowin&nbsp;AI<br>
+<sup>†</sup>&nbsp;Corresponding&nbsp;authors</p>
 
 </div>
 
@@ -37,7 +37,7 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ## 🔎 Key Findings
 
-- **Different capabilities, different leaders.** Gemini 4 Argon leads Spatial Pass@1 and both Affordance IoUs; GPT-6 Astra leads Planning; Claude Opus 5.5 leads Manipulation.
+- **Different capabilities, different leaders.** Gemini&nbsp;4&nbsp;Argon leads Spatial Pass@1 and both Affordance IoUs; GPT&#8209;6&nbsp;Astra leads Planning; Claude&nbsp;Opus&nbsp;5.5 leads Manipulation.
 - **Local competence does not ensure task completion.** Even the highest Manipulation success rate is **47.8%** under the evaluated budgets. Successful perception must still translate into accurate actions and a verified final goal.
 - **Model diversity leaves shared gaps.** Across the same **157 Planning tasks**, at least one of the ten models succeeds on **142**; **15 defeat all ten**. Their combined successes cover **16 more tasks than Astra alone**. [Task-level analysis ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html)
 
@@ -80,12 +80,12 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 ## 📰 News
 
 - **2026.10.22** — Filled the homepage media slots with 13 original videos, 3 labeled same-task demos and one observation sequence; redesigned Affordance and Planning figures and moved the supplementary review/protocol table to the appendix.
-- **2026.10.21** — Added **Gemini 4 Argon’s execution logs** to same-task comparisons and ten-model time, token-use and recovery analyses.
-- **2026.10.21** — Added **Gemini 4 Argon** (`gemini-4-argon`): ten-model results, matched case comparisons, Planning outcomes and updated manuscript figures.
+- **2026.10.21** — Added **Gemini&nbsp;4&nbsp;Argon’s execution logs** to same-task comparisons and ten-model time, token-use and recovery analyses.
+- **2026.10.21** — Added **Gemini&nbsp;4&nbsp;Argon** (`gemini-4-argon`): ten-model results, matched case comparisons, Planning outcomes and updated manuscript figures.
 - **2026.10.20** — Released **direct-polygon comparisons and execution analysis** with task-matched videos, actions and feedback.
-- **2026.10.19** — Added **DeepSeek 4.1 Flash-1017**, expanding the comparison to **nine models**; integrated polygon Affordance results and completed Opus 5.5 Planning results.
+- **2026.10.19** — Added **DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017**, expanding the comparison to **nine models**; integrated polygon Affordance results and completed Opus&nbsp;5.5 Planning results.
 - **2026.10.15** — Expanded the **eight-model video gallery** with task-matched recordings, instructions and run details.
-- **2026.10.12** — Added **Claude Opus 5.5**, expanding the quantitative comparison to **eight models**; introduced the **Case Atlas** and qualitative manuscript figures.
+- **2026.10.12** — Added **Claude&nbsp;Opus&nbsp;5.5**, expanding the quantitative comparison to **eight models**; introduced the **Case Atlas** and qualitative manuscript figures.
 - **2026.10.05** — Published the **seven-model comparison**, downloadable results and the model selection and evaluation guide.
 - **2026.10.01** — Released the **evaluation harness and 1,000-case dataset**.
 
@@ -97,7 +97,7 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 - [x] **Evaluation code and data** — [Harness and setup](#quick-start), [benchmark adapters](docs/INSTALL.md), and a pinned dataset release.
 - [x] **Results and analysis reports** — [Ten-model exports and task outcomes](docs/RESULTS.md), plus the published execution records and analyses.
 - [x] **Analysis tools and figure sources** — [Rebuild scripts](docs/RESULTS.md#rebuild-the-public-outputs) and [editable draw.io figures with SVG/PDF/PNG exports](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip).
-- [x] **Gemini 4 Argon execution logs** — Matched 109 gallery records; added time, token use and recovery across 157 Planning episodes.
+- [x] **Gemini&nbsp;4&nbsp;Argon execution logs** — Matched 109 gallery records; added time, token use and recovery across 157 Planning episodes.
 
 <a id="benchmark"></a>
 

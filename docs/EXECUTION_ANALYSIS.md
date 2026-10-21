@@ -1,6 +1,6 @@
 # Reproducing the execution analysis
 
-**Task completion now compares ten models**, including Gemini 4 Argon: 1,570 outcomes on the same 157 Planning tasks. Their combined successes cover 142 tasks; 15 are unsuccessful for all ten models.
+**Task completion now compares ten models**, including Gemini&nbsp;4&nbsp;Argon: 1,570 outcomes on the same 157 Planning tasks. Their combined successes cover 142 tasks; 15 are unsuccessful for all ten models.
 
 **Time, token use and recovery** now cover all ten models: 1,570 adopted Planning episodes. The explorer has 46 shared tasks × 10 models (460 records), including 189 detailed action/feedback traces and 271 round summaries. All 109 Argon gallery executions are matched to the supplied logs by report SHA-256; prior retries are excluded.
 

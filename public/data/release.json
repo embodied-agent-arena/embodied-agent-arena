@@ -4,21 +4,21 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 66,
-  "paper_sha256": "b9178a797862763e98bf395b5c329395f28f7d09107892cbfece2569202dd45b",
+  "paper_sha256": "d173c571730d37ccea85eb6b79a765fef4d53466623119265e6899193731cc04",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 316,
   "figure_sha256": {
     "geometry.webp": "f332426bb3e372160616dc91d90c13b801677197531428ab5a56033acd76c70e",
     "spatial.webp": "99659bda51b98057106375529237dc784e753d4de033e7842a3f99f2bd880ba3",
-    "affordance.webp": "aa2f8582e893a5ae4b8d2cc87b1f6106e9565a1a8f5a62662d0e4f3cdbc26bd8",
-    "planning.webp": "af7065eb1b056eb8d597599fc67fcdaa31df2105ed5e92113a3807f0ca7bd88f",
+    "affordance.webp": "1d40a8e60b682d2ef81e2ae1384f7b62ee914e6e44ffd5c11bb2dfbefbd14dcf",
+    "planning.webp": "1c692d5ae232d328ae89f1fdc1ee4795b176bc63fd06ab25aebfca613f3b10b0",
     "manipulation.webp": "89625be22d77e30e5a6776dd41dc5d9f6e7dd36a390272cdfa9d823460afa66d",
     "nine-model-profiles.svg": "aaf35d1b5987dadb7d183b15203c038ee6b23fc473a699fb1c8c89b015a36979",
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "7b86b0a70047b9835ba328ba36293e26489731ef3f86f2eb2892a20eb7206a47",
+  "source_sha256": "0e32691de1493e834ee1033781294dbf0491ff0b3737d83c2faa143f62067bb5",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -39,7 +39,7 @@
     "explorerRecords": 460
   },
   "figure_style": {
-    "revision": "refined-report-20261022",
+    "revision": "typography-20261022",
     "palette": "assets/model-logos/palette.json",
     "mainFigures": 6,
     "additionalManuscriptFigures": 3,
@@ -47,7 +47,8 @@
     "heatmap": "OpenReview muted warm scale; fixed 0\u2013100",
     "scatter": "Model logos at measured coordinates with adjacent variant labels; no separate model key",
     "bars": "Rounded solid brand-family fills; Comic Sans MS; labels and logos directly below each model",
-    "supplementaryFigures": "Former main Table 3 moved to Appendix E as Table A33; former Figure 6/7 fine-grained panels preserved in appendix figures"
+    "supplementaryFigures": "Former main Table 3 moved to Appendix E as Table A33; former Figure 6/7 fine-grained panels preserved in appendix figures",
+    "typography": "Comic Sans MS retained; intact one-line model variants, aligned labels; all result values unchanged"
   },
   "protocol_audit": {
     "date": "2026-10-21",

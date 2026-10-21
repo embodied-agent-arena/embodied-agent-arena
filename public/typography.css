@@ -1,0 +1,25 @@
+/* Shared line-breaking rules: preserve units and model versions, reflow prose. */
+:is(h1,h2,h3,h4,h5){text-wrap:balance;word-break:normal;overflow-wrap:normal;hyphens:none}
+:is(p,li,figcaption,summary,dd){text-wrap:pretty;word-break:normal;hyphens:none}
+:is(.evidence span,.evidence strong,.report-facts span,.insight-pair span,.stats span,.completion-score>span,.goal-stages span){text-wrap:balance}
+:is(.domain-text,.evidence,.exec-compare,.insight-grid)>*{min-width:0}
+:is(.evidence span,.evidence .peer){overflow-wrap:normal;word-break:normal}
+:is(.model-chip,.ranking-value,.report-stat strong,.exec-metrics strong){white-space:nowrap}
+/* Source identifiers remain copyable; only code may break a long token. */
+:not(pre)>code{overflow-wrap:anywhere}
+pre{white-space:pre;overflow-x:auto;overflow-wrap:normal;word-break:normal}
+.exec-evidence-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
+/* Reflow before the evidence columns become too narrow for complete labels. */
+@media(max-width:1000px){.domain-text{grid-template-columns:1fr}.evidence{max-width:100%}}
+@media(max-width:480px){
+ .evidence{grid-template-columns:1fr;gap:20px}
+ .evidence strong{margin-bottom:5px}
+ .evidence span{max-width:none;text-wrap:pretty}
+ .evidence .peer{margin-top:4px}
+}
+:is(.insight-card p,.evaluation-path p,.report-facts span,.completion-source,.gallery-kicker,.gallery-loading,.research-subtitle,.study-intro){text-wrap:balance}
+.model-version-note a{display:inline-block}
+
+.subtitle{text-wrap:balance}
+.subtitle :is(.subtitle-full,.subtitle-compact){text-wrap:balance}
+.result-key{text-wrap:balance}

@@ -1,6 +1,6 @@
 # Results and reproduction
 
-The **22 October 2026 author manuscript** and the public results compare **ten models**, including **Gemini 4 Argon (`gemini-4-argon`)**. The published arXiv version has its own version history; the current author manuscript is linked below.
+The **22 October 2026 author manuscript** and the public results compare **ten models**, including **Gemini&nbsp;4&nbsp;Argon (`gemini-4-argon`)**. The published arXiv version has its own version history; the current author manuscript is linked below.
 
 ## Results and evidence
 
@@ -19,7 +19,7 @@ The **22 October 2026 author manuscript** and the public results compare **ten m
 
 **Interactive evidence:** visible clips play automatically and pause offscreen. Playback respects manual pause and reduced-motion settings; the ten-model wall keeps one fixed task in each column. Figure 4 places model icons at the original data coordinates, with adjacent variant labels and no label leaders.
 
-**Statistics:** repeated metrics use mean ± run SD (five runs; Fable: three). Polygon IoU, Planning and Manipulation use one run. Qwen-Max's 11 missing polygon predictions count as errors in the 70-case denominator. Per-case examples and aggregate scores serve different purposes; each execution record retains its own settings and budget.
+**Statistics:** repeated metrics use mean ± run SD (five runs; Fable: three). Polygon IoU, Planning and Manipulation use one run. Qwen&#8209;Max's 11 missing polygon predictions count as errors in the 70-case denominator. Per-case examples and aggregate scores serve different purposes; each execution record retains its own settings and budget.
 
 ## Video supplement
 
@@ -55,7 +55,7 @@ To refresh the figure bundle from exported manuscript figures:
 python scripts/package_figure_sources.py --figures /path/to/manuscript-figures
 ```
 
-The figure bundle contains editable **draw.io** files and matching **SVG/PDF/PNG** exports. Figures 3–8 include Argon where the experiment includes it; the original observation-setting ablation keeps its original model cohort. The token-allocation figure covers ten models; the progress figure compares Opus 5.5, Argon and the matching Gemini 3.8 or DeepSeek-1017 execution. The bundle provides editable figure sources; automated regeneration of every paper figure from raw logs is not yet packaged.
+The figure bundle contains editable **draw.io** files and matching **SVG/PDF/PNG** exports. Figures 3–8 include Argon where the experiment includes it; the original observation-setting ablation keeps its original model cohort. The token-allocation figure covers ten models; the progress figure compares Opus&nbsp;5.5, Argon and the matching Gemini&nbsp;3.8 or DeepSeek&#8209;1017 execution. The bundle provides editable figure sources; automated regeneration of every paper figure from raw logs is not yet packaged.
 
 ## Check consistency
 
@@ -70,4 +70,4 @@ Open <http://127.0.0.1:8785/>. The checks compare model scores, repeated-run sta
 
 ## Recorded execution settings
 
-The task inventory, source-native interfaces and success criteria are shared. Manipulation retains each adopted batch’s RGB schedule and execution ceilings. The [protocol audit](W4_PROTOCOL_AUDIT.md) verifies all ten CALVIN tasks for Astra, Opus 5.5, DeepSeek-1017 and Gemini 4 Argon, including the actual round, token and time limits. It also separates later execution logs from the retained main-table population. No result values were changed by this clarification.
+The task inventory, source-native interfaces and success criteria are shared. Manipulation retains each adopted batch’s RGB schedule and execution ceilings. The [protocol audit](W4_PROTOCOL_AUDIT.md) verifies all ten CALVIN tasks for Astra, Opus&nbsp;5.5, DeepSeek&#8209;1017 and Gemini&nbsp;4&nbsp;Argon, including the actual round, token and time limits. It also separates later execution logs from the retained main-table population. No result values were changed by this clarification.

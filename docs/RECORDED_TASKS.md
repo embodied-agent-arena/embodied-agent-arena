@@ -20,15 +20,15 @@ The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent
 
 ## Model rows
 
-1. **GPT-6 Astra** — 8 scene previews; 11 task results.
-2. **GPT-6 Sol** — 11 scene previews; 11 task results.
-3. **Claude Fable 5.1** — 11 scene previews; 11 task results.
-4. **Gemini 3.8 Flash** — 11 scene previews; 11 task results.
-5. **Qwen 3.8 Max** — 10 scene previews; 11 task results.
-6. **Qwen 3.5 397B-A17B** — 10 scene previews; 11 task results.
-7. **Qwen 3.5 27B** — 10 scene previews; 11 task results.
-8. **Claude Opus 5.5** — 11 scene previews; 11 task results.
-9. **DeepSeek 4.1 Flash-1017** — 11 scene previews; 11 task results.
-10. **Gemini 4 Argon** — 11 scene previews; 11 task results.
+1. **GPT&#8209;6&nbsp;Astra** — 8 scene previews; 11 task results.
+2. **GPT&#8209;6&nbsp;Sol** — 11 scene previews; 11 task results.
+3. **Claude&nbsp;Fable&nbsp;5.1** — 11 scene previews; 11 task results.
+4. **Gemini&nbsp;3.8&nbsp;Flash** — 11 scene previews; 11 task results.
+5. **Qwen&nbsp;3.8&nbsp;Max** — 10 scene previews; 11 task results.
+6. **Qwen&nbsp;3.5&nbsp;397B&#8209;A17B** — 10 scene previews; 11 task results.
+7. **Qwen&nbsp;3.5&nbsp;27B** — 10 scene previews; 11 task results.
+8. **Claude&nbsp;Opus&nbsp;5.5** — 11 scene previews; 11 task results.
+9. **DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017** — 11 scene previews; 11 task results.
+10. **Gemini&nbsp;4&nbsp;Argon** — 11 scene previews; 11 task results.
 
 The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.

@@ -117,11 +117,11 @@ function buildTabs(items,prefix,render){
  list.addEventListener('keydown',e=>{const i=[...list.children].indexOf(document.activeElement);let n=i;if(e.key==='ArrowRight')n=(i+1)%items.length;else if(e.key==='ArrowLeft')n=(i-1+items.length)%items.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=items.length-1;else return;e.preventDefault();select(n,true);});select(0);
 }
 // Reserve figure space before lazy loading so in-page links keep their position.
-const figureSizes={"geometry": [2250, 765], "spatial": [1980, 1308], "affordance": [2400, 707], "planning": [2400, 707], "manipulation": [2400, 760]};
+const figureSizes={"geometry": [2250, 765], "spatial": [1980, 1308], "affordance": [2400, 674], "planning": [2400, 674], "manipulation": [2400, 760]};
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
 buildTabs(domains,'domain',d=>{
  const action=d.case?`<button type="button" data-case="${d.case}">${d.caseLabel} →</button>`:d.execution?`<a href="?analysis=${d.execution}#execution-analysis" data-execution-link="${d.execution}">${d.caseLabel} →</a>`:`<a href="#technical-report" data-report-link="${d.report}">${d.caseLabel} →</a>`;
- const figureVersion="refined-20261022";
+ const figureVersion="typography-20261022";
  return `<div class="domain-text"><div><h3>${d.title}</h3><p class="domain-argument">${d.text}</p></div><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=${figureVersion}" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=${figureVersion}" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><div class="domain-links">${action}<a href="paper.pdf#page=${d.paper}">Paper Evidence ↗</a></div><details class="figure-reading"><summary>Figure Key &amp; Measurement Details</summary><p>${d.caption}</p></details></figcaption></figure>`;
 });
 const citation=document.querySelector('#bibtex').textContent.trim();

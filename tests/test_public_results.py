@@ -26,7 +26,14 @@ class PublicResultTests(unittest.TestCase):
         md_rows = [line for line in readme.splitlines() if line.startswith('|')][2:]
         with zipfile.ZipFile(PUBLIC / 'author-source.zip') as archive:
             table = archive.read('sections/table_profile.tex').decode()
-        tex_rows = [line for line in table.splitlines() if line.count(' & ') == 8 and line.split(' & ')[0] in ['Astra','Sol','Fable','Qwen-Max','Gemini 3.8','Qwen-397B','Qwen-27B','Opus~5.5','DeepSeek-1017','Gemini 4 Argon']]
+        # Layout-only ties and boxes must not hide a model from the numeric audit.
+        def model_label(cell):
+            return re.sub(r'\\mbox\{([^{}]*)\}', r'\1', cell).replace('~', ' ')
+        expected_labels = ['Astra','Sol','Fable','Qwen-Max','Gemini 3.8',
+                           'Qwen-397B','Qwen-27B','Opus 5.5','DeepSeek-1017','Gemini 4 Argon']
+        tex_rows = [line for line in table.splitlines()
+                    if line.count(' & ') == 8 and model_label(line.split(' & ')[0]) in expected_labels]
+        self.assertEqual([model_label(line.split(' & ')[0]) for line in tex_rows], expected_labels)
         with (PUBLIC / 'data/model-comparison.csv').open() as source:
             csv_rows = list(csv.DictReader(source))
         self.assertEqual([len(html_rows), len(md_rows), len(tex_rows), len(csv_rows)], [10,10,10,80])

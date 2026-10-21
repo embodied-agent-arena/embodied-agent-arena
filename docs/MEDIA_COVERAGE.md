@@ -8,7 +8,7 @@
 - **3 same-task demos**: Astra on CALVIN, RLBench and CLIPort. Each is visibly labeled, has a separate report digest, and is excluded from evaluation. Original scores and timelines remain unchanged.
 - **3 API failures before action**: the Qwen models on HumanCLAW. The corresponding cells link to their error records; there is no action footage to show.
 
-The Qwen-27B RoboCasa365 preview is a slideshow of **24 original input RGB observations**. Its case detail lets readers select a round; intervening actions are not depicted.
+The Qwen&#8209;27B RoboCasa365 preview is a slideshow of **24 original input RGB observations**. Its case detail lets readers select a round; intervening actions are not depicted.
 
 [Overview manifest](../public/data/report/overview-provenance.json) · [Supplement audit](../public/data/homepage-supplement-audit.json)
 
