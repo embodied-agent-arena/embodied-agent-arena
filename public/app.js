@@ -25,17 +25,17 @@ const domains=[
     "id": "spatial",
     "label": "Spatial Reasoning",
     "title": "The Reference Frame Changes the Challenge.",
-    "text": "Camera-relative depth ordering does not transfer directly to relations between objects. Source-level diagnostics reveal the transformations hidden by an overall Spatial score.",
+    "text": "Gemini 4 Argon leads overall Spatial Pass@1 at 71.6%, yet its accuracy varies sharply by source. Strong object-pose answers do not guarantee equally strong reasoning about video scenes.",
     "evidence": [
       [
-        "96–100%",
-        "Astra · camera-relative depth",
-        "BOP-ASK near/far questions"
+        "98.0 ± 2.7%",
+        "Gemini 4 Argon · BOP-ASK",
+        "Object-pose questions"
       ],
       [
-        "50%",
-        "Astra · nearest-object relation",
-        "VSI-Bench; Qwen-Max: 76.7%"
+        "32.0 ± 2.8%",
+        "Gemini 4 Argon · VSI-Bench",
+        "Video-based spatial questions"
       ]
     ],
     "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Ten-model native Pass@1 across six sources: mean ± run SD (five runs; Fable: three). Opus 5.5 has zero SD on BOP-ASK.",
@@ -69,17 +69,17 @@ const domains=[
     "id": "planning",
     "label": "Task Planning",
     "title": "Different Models Still Share Hard Failures.",
-    "text": "In the nine-model cohort with execution-log analysis, at least one agent completes 138 of the 157 Planning tasks. The remaining 19 defeat all nine; only eight tasks are completed by every model in that cohort.",
+    "text": "At least one of the ten agents completes 142 of 157 Planning tasks: 16 more than Astra alone. But 15 tasks defeat every model. Different strengths expand coverage without eliminating shared obstacles.",
     "evidence": [
       [
-        "138 / 157",
+        "142 / 157",
         "Completed by at least one model",
-        "12 more than Astra alone"
+        "Ten agents on identical task IDs"
       ],
       [
-        "19 / 157",
-        "Completed by none of the models",
-        "Shared failures across nine agents"
+        "15 / 157",
+        "Completed by none",
+        "Including all eight sitting tasks"
       ]
     ],
     "caption": "(a) Source-level success for Astra, Fable, Opus 5.5, DeepSeek-1017, and Gemini 4 Argon. (b–c) Astra and Fable’s household-goal and ScienceWorld diagnostics. Each assignment uses one episode.",
@@ -91,17 +91,17 @@ const domains=[
     "id": "manipulation",
     "label": "Manipulation",
     "title": "Several Goals Reached. The Sequence Still Unfinished.",
-    "text": "On CALVIN, average consecutive goals and complete-sequence success reveal different limits. Reaching an intermediate state is useful only if the agent can preserve it and finish the remaining sequence.",
+    "text": "Gemini 4 Argon reaches 3.3 consecutive CALVIN goals on average, yet finishes only four of ten sequences. Astra reaches 3.1 goals and finishes three. Progress and complete success expose different limits.",
     "evidence": [
       [
-        "3.1 / 5",
-        "Astra · mean consecutive goals",
-        "Baseline, ten sequences"
+        "3.3 / 5",
+        "Gemini 4 Argon · consecutive goals",
+        "Astra: 3.1; Opus 5.5: 2.4"
       ],
       [
-        "3 / 10",
-        "Astra · complete sequences",
-        "Opus 5.5: 2.4 goals; 1/10 complete"
+        "4 / 10",
+        "Gemini 4 Argon · complete sequences",
+        "Astra: 3/10; Opus 5.5: 1/10"
       ]
     ],
     "caption": "(a) Success across thirteen suites for nine agents with complete source records; * marks per-round RGB agents; Argon uses source-specific budgets (see Evaluation Details). (b) Consecutive CALVIN goals for seven agents. (c) Condition satisfaction on five ManiSkill tasks for six agents. Paired panels use only models with both observation settings, matched budgets, and one run per task. Fable’s incomplete ManiSkill records exclude it from (a,c). The main results table retains all ten models.",

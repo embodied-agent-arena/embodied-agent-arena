@@ -5,7 +5,7 @@
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const num = (n, places = 2) => typeof n === 'number' && Number.isFinite(n) ? Number(n.toFixed(places)).toLocaleString('en-US', {maximumFractionDigits:places}) : '—';
   const compact = value => typeof value === 'object' ? JSON.stringify(value) : String(value ?? 'Not recorded');
-  const shortNames = {'Claude Fable 5.1':'Fable 5.1','Claude Opus 5.5':'Opus 5.5','Qwen 3.5 397B-A17B':'Qwen 397B','Qwen 3.5 27B':'Qwen 27B'};
+  const shortNames = {'Claude Fable 5.1':'Fable 5.1','Claude Opus 5.5':'Opus 5.5','Qwen 3.5 397B-A17B':'Qwen 397B','Qwen 3.5 27B':'Qwen 27B','DeepSeek 4.1 Flash-1017':'DeepSeek-1017'};
   const short = name => shortNames[name] || name;
   const colours = ['#ad5a60','#456f8c','#9a7042','#71669e','#527e71','#75974f','#727d87','#a84f81','#237e83','#c37b28'];
   const domains = {geometry:'Geometry',spatial:'Spatial Reasoning',affordance:'Affordance',planning:'Task Planning',manipulation:'Manipulation'};
@@ -138,7 +138,7 @@
     } else {
       const rows = executionRecords(c);
       const filmed=rows.filter(r=>r.video||r.animation);
-      body = `<div class="gallery-run-grid gallery-nine-models">${rows.map((r,i)=>runTile(c,r,i)).join('')}</div><div class="gallery-run-controls"><p>${rows.length} models · Same task · ${filmed.length} recordings${filmed.length<rows.length?` · ${rows.length-filmed.length} results without video`:''}</p>${filmed.length?`<button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button>`:''}</div>`;
+      body = `<div class="gallery-run-grid gallery-all-models">${rows.map((r,i)=>runTile(c,r,i)).join('')}</div><div class="gallery-run-controls"><p>${rows.length} models · Same task · ${filmed.length} recordings${filmed.length<rows.length?` · ${rows.length-filmed.length} results without video`:''}</p>${filmed.length?`<button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button>`:''}</div>`;
     }
     return `<article class="gallery-slide" data-gallery-id="${esc(c.id)}" data-domain="${esc(c.domainKey)}" role="group" aria-roledescription="slide" aria-label="Case ${index+1} of ${total}: ${esc(c.benchmark)} — ${esc(c.title)}"><div class="gallery-slide-top"><div><p class="gallery-kicker">${esc(c.domain)} <span>/</span> ${esc(c.benchmark)}</p><h3>${esc(c.title)}</h3></div><button class="gallery-detail-button" data-case="${esc(c.id)}">Case Details <span aria-hidden="true">↗</span></button></div><p class="gallery-task">${esc(c.shortTask)}</p>${c.taskLabel?`<p class="gallery-task-identity">Case: ${esc(c.taskLabel)}</p>`:""}${body}</article>`;
   }

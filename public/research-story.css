@@ -140,3 +140,5 @@
 @media(prefers-reduced-motion:reduce) {
   .insight-card {transition:none}
 }
+
+.insight-pair{gap:22px}.insight-card h3{min-height:0}.insight-card .insight-pair{margin-top:24px}.insight-card p{margin-top:0}.exec-scope{display:block;margin-top:12px;font-size:15px}.exec-scope a{text-decoration:underline;text-underline-offset:3px}
