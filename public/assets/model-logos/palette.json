@@ -39,7 +39,7 @@
     },
     {
       "key": "gemini",
-      "short": "Gemini",
+      "short": "Gemini 3.8",
       "name": "Gemini 3.8 Flash",
       "logo": "assets/model-logos/gemini.svg",
       "color": "#57A977",
@@ -84,7 +84,7 @@
     },
     {
       "key": "gemini4argon",
-      "short": "Argon",
+      "short": "Gemini 4",
       "name": "Gemini 4 Argon",
       "logo": "assets/model-logos/gemini.svg",
       "color": "#169B55",
@@ -136,6 +136,7 @@
     "qwen397b": "qwen35-397b",
     "qwen27b": "qwen35-27b",
     "gemini38": "gemini",
-    "gemini4": "gemini4argon"
+    "gemini4": "gemini4argon",
+    "Gemini 4": "gemini4argon"
   }
 }

@@ -4,21 +4,21 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 65,
-  "paper_sha256": "e377d41f5aa9d3b97c7ff84ba053a4f84fa6627b03246031facb5121fcc2319d",
+  "paper_sha256": "aed5712a918a01ac1c18ebe084e252141fc3a0d2822278792a78559497e0b56b",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 302,
   "figure_sha256": {
-    "geometry.webp": "e87728e036d49cc80f60f9da092a5a1f27d04783fac6076cf0e493b452e4326d",
+    "geometry.webp": "f332426bb3e372160616dc91d90c13b801677197531428ab5a56033acd76c70e",
     "spatial.webp": "99659bda51b98057106375529237dc784e753d4de033e7842a3f99f2bd880ba3",
     "affordance.webp": "f9aad375e6d72cb9a2cef3200bdd6ed5649dd2025d97c7e6d821dbbcb3245ca3",
     "planning.webp": "064c034686ea95e93cd891b046907f090837df274a23d7933df35c4a132d39e9",
     "manipulation.webp": "89625be22d77e30e5a6776dd41dc5d9f6e7dd36a390272cdfa9d823460afa66d",
-    "nine-model-profiles.svg": "c0ece6cc272ffd9d09e81e95184a8edef42238c7bf36b6ae738418909b75c87f",
+    "nine-model-profiles.svg": "aaf35d1b5987dadb7d183b15203c038ee6b23fc473a699fb1c8c89b015a36979",
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "24b2ca72c8e16a1d451d2f900cbf75edc9429be2285a66ce1ac721efe8454be2",
+  "source_sha256": "ca7ed37fa9857ff195a30e5866be9e236b29208665348b455da169ad81eb8f91",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -39,11 +39,13 @@
     "explorerRecords": 460
   },
   "figure_style": {
-    "revision": "viewport-20261021",
+    "revision": "direct-labels-20261021",
     "palette": "assets/model-logos/palette.json",
     "mainFigures": 6,
     "additionalManuscriptFigures": 3,
-    "dataValues": "unchanged"
+    "dataValues": "unchanged",
+    "heatmap": "OpenReview muted warm scale; fixed 0\u2013100",
+    "scatter": "Model logos at measured coordinates with adjacent variant labels; no separate model key"
   },
   "protocol_audit": {
     "date": "2026-10-21",

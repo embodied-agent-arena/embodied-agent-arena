@@ -2,8 +2,8 @@
   "manuscriptDate": "2026-10-21",
   "modelsInMainComparison": 10,
   "scopes": {
-    "figure3-tradeoffs": "Ten-model main results; ablation panels retain the original experiment cohort.",
-    "figure4-geometry": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure3-tradeoffs": "Ten-model profiles with a fixed 0\u2013100 OpenReview warm colour scale; Gemini 3.8 and Gemini 4 identified explicitly.",
+    "figure4-geometry": "Ten-model 3D tracing with logos at measured coordinates and adjacent variant labels; five-run SDs in displacement panel.",
     "figure5-spatial": "Ten-model main results; ablation panels retain the original experiment cohort.",
     "figure6-affordance": "Ten-model main results; ablation panels retain the original experiment cohort.",
     "figure7-planning": "Ten-model main results; ablation panels retain the original experiment cohort.",
@@ -77,43 +77,43 @@
     },
     {
       "path": "figure3-tradeoffs.drawio",
-      "sha256": "13c35277e1fe9c1fe3dbd5ab465eab9ff5bd7ec4dffbf22eb8fd6325aae6100c",
-      "bytes": 111146
+      "sha256": "9663b5c27f77c0400908b62d805faf8b858eab081c3f7e825a49183db246785f",
+      "bytes": 95186
     },
     {
       "path": "figure3-tradeoffs.pdf",
-      "sha256": "3048a61746da31317859df672387cb8d2811d096e379f569948345c10014ed85",
-      "bytes": 75629
+      "sha256": "64bc31f921d634c968bce4e33c70a6d418684e4a1f156687354137362f025084",
+      "bytes": 70922
     },
     {
       "path": "figure3-tradeoffs.png",
-      "sha256": "ed4933f5a45e97269dac941677c30cdc396cd585d00178ac83c9382a1fc33b23",
-      "bytes": 241725
+      "sha256": "b57cf0781ab65cd1989fdd48c13b85b31d9a4465431cb0d55e456cabc61ceef7",
+      "bytes": 224452
     },
     {
       "path": "figure3-tradeoffs.svg",
-      "sha256": "c0ece6cc272ffd9d09e81e95184a8edef42238c7bf36b6ae738418909b75c87f",
-      "bytes": 172965
+      "sha256": "aaf35d1b5987dadb7d183b15203c038ee6b23fc473a699fb1c8c89b015a36979",
+      "bytes": 152008
     },
     {
       "path": "figure4-geometry.drawio",
-      "sha256": "9ce316849246e2d3485b25014f0e3217c11861d28e5e2cd96a68867e732e1c72",
-      "bytes": 134118
+      "sha256": "ca3382f3a48155c4b398ce72042007facf6eddd99da1663c7301a8db7402f215",
+      "bytes": 102170
     },
     {
       "path": "figure4-geometry.pdf",
-      "sha256": "f67f2192a31f27658aab6b82f0c15cfc387e77ae61bc0277016c209c55c295a5",
-      "bytes": 80374
+      "sha256": "4d5e50090d876b5bd983ecd408cd2363b4e78cbcdac3a2b16a309866f00acb59",
+      "bytes": 71226
     },
     {
       "path": "figure4-geometry.png",
-      "sha256": "ea1b7add85c2f17436f93865eecdb47ba9ccdf89b2c41f84bd61b7e6753db682",
-      "bytes": 172386
+      "sha256": "6884c1155b6593dd89def24d4f6bd3d7d36e23bcdf4c2822c9b72c80f392a3d2",
+      "bytes": 159358
     },
     {
       "path": "figure4-geometry.svg",
-      "sha256": "293844493fa8e986bad94bd91d7ba7aa6e412b3be331c29160c86850764e13ae",
-      "bytes": 203330
+      "sha256": "e2a33cfc27d9332c1341fe5eb7793d122816aa9cc72714cf008c01e35e24a7b6",
+      "bytes": 176315
     },
     {
       "path": "figure5-spatial.drawio",
@@ -227,8 +227,8 @@
     },
     {
       "path": "model-logos/palette.json",
-      "sha256": "16e5058ab89e7e44f90e1d5b857aacc41dd83557fd17472d66e8f3b277e05f1e",
-      "bytes": 3627
+      "sha256": "2f2ae775b7fd85b85aaf9c0a1a8afb33c89c3c9e179a8a38219d77923a239982",
+      "bytes": 3666
     },
     {
       "path": "model-logos/qwen.svg",
@@ -280,5 +280,6 @@
       "sha256": "d3f34e2dd32fc8ee473de2e8d20f3eddcdb455cdb96c03cb0a24b999a7850cf8",
       "bytes": 196441
     }
-  ]
+  ],
+  "revision": "direct-labels-20261021"
 }
