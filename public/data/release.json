@@ -4,7 +4,7 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 65,
-  "paper_sha256": "b4088d71e58f36199103ccd204ccaa8b76a7b27a440aeb9cb893be057e5a0256",
+  "paper_sha256": "e377d41f5aa9d3b97c7ff84ba053a4f84fa6627b03246031facb5121fcc2319d",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 302,
@@ -18,7 +18,7 @@
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "d3cf901640eba50b49bb800ea6c3d288f08b10b19fdb6b9a0d21d3ec4c213af8",
+  "source_sha256": "24b2ca72c8e16a1d451d2f900cbf75edc9429be2285a66ce1ac721efe8454be2",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,

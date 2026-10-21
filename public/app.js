@@ -104,7 +104,7 @@ const domains=[
         "Astra: 3/10; Opus 5.5: 1/10"
       ]
     ],
-    "caption": "(a) Success across thirteen suites for nine agents with complete source records; * marks per-round RGB agents; Argon uses source-specific budgets (see Evaluation Details). (b) Consecutive CALVIN goals for seven agents. (c) Condition satisfaction on five ManiSkill tasks for six agents. Paired panels use only models with both observation settings, matched budgets, and one run per task. Fable’s incomplete ManiSkill records exclude it from (a,c). The main results table retains all ten models.",
+    "caption": "(a) Success across thirteen suites for nine agents with complete source records; * marks per-round RGB agents; Argon uses source-specific budgets (see Evaluation Details). (b) Consecutive CALVIN goals for seven agents. (c) Condition satisfaction on five ManiSkill tasks for six agents. Paired panels use only models with both recorded execution protocols and one run per task; feedback schedules and resource ceilings can differ. Fable’s incomplete ManiSkill records exclude it from (a,c). The main results table retains all ten models.",
     "paper": 12,
     "execution": "sequence",
     "caseLabel": "Inspect One Recorded Sequence"
