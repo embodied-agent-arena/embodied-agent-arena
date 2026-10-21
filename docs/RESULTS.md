@@ -1,6 +1,6 @@
 # Results and reproduction
 
-The **21 October 2026 author manuscript** and the public results compare **ten models**, including **Gemini 4 Argon (`gemini-4-argon`)**. The published arXiv version has its own version history; the current author manuscript is linked below.
+The **22 October 2026 author manuscript** and the public results compare **ten models**, including **Gemini 4 Argon (`gemini-4-argon`)**. The published arXiv version has its own version history; the current author manuscript is linked below.
 
 ## Results and evidence
 
@@ -11,24 +11,25 @@ The **21 October 2026 author manuscript** and the public results compare **ten m
 | Repeated-run details | Run means and valid sample counts for the repeated metrics | [CSV](../public/data/complementary-results-mean-sd.csv) |
 | Planning outcomes | 10 models × the same 157 tasks; 1,570 recorded outcomes | [CSV](../public/data/report/planning-outcomes.csv) · [JSON](../public/data/report/planning-outcomes.json) · [Analysis](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html) |
 | Case atlas | 181 comparisons: 72 perception/affordance cases and 109 execution tasks; ten-model results in each | [Browse](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html) · [Static cases](../public/data/case-studies.json) · [Execution comparisons](../public/data/case-comparisons.json) |
-| Overview task map | 11 fixed tasks × 10 models; 90 matching scene previews | [Task descriptions](RECORDED_TASKS.md) · [Identity and media manifest](../public/data/report/overview-provenance.json) |
+| Overview task map | 11 fixed tasks × 10 models; 104 evaluation previews + 3 labeled demos | [Task descriptions](RECORDED_TASKS.md) · [Identity and media manifest](../public/data/report/overview-provenance.json) |
 | Execution analysis | Ten-model logs: 1,570 Planning episodes; 46 selected tasks with 460 records, including 189 detailed action/feedback traces | [Planning episode CSV](../public/data/report/planning-episodes.csv) · [Selected episode CSV](../public/data/execution/complete-episodes.csv) · [Definitions and rebuild instructions](EXECUTION_ANALYSIS.md) |
 | Manuscript and figures | Latest author PDF/source; native draw.io figures with vector and raster exports | [PDF](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) · [LaTeX source](https://embodied-agent-arena.github.io/embodied-agent-arena/author-source.zip) · [Figure ZIP](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip) · [Figure manifest](../public/assets/analysis/figure-manifest.json) |
 
 **Argon coverage:** all five main-result domains, repeated metrics, polygon predictions, Planning outcomes and the case gallery are included. Detailed logs are joined to all 109 Argon gallery records by report hash. Time, token use and recovery now compare all ten models; video playback and episode timestamps retain their separate clocks.
 
-**Interactive evidence:** visible clips play automatically and pause offscreen. Playback respects manual pause and reduced-motion settings; the ten-model wall keeps one fixed task in each column. Figure 4 places model icons at the original data coordinates, with a separate key and no label leaders.
+**Interactive evidence:** visible clips play automatically and pause offscreen. Playback respects manual pause and reduced-motion settings; the ten-model wall keeps one fixed task in each column. Figure 4 places model icons at the original data coordinates, with adjacent variant labels and no label leaders.
 
 **Statistics:** repeated metrics use mean ± run SD (five runs; Fable: three). Polygon IoU, Planning and Manipulation use one run. Qwen-Max's 11 missing polygon predictions count as errors in the 70-case denominator. Per-case examples and aggregate scores serve different purposes; each execution record retains its own settings and budget.
 
 ## Video supplement
 
-The [21 October media supplement](../public/data/video-supplement-audit.json) matches all 70 assignments in the first seven overview columns. **65 have media**: 27 original video excerpts, 27 saved-observation sequences, 4 verified action replays and 7 saved-state renders. The full 11-column overview now has **90 scene previews across 110 results**. Media types and provenance are available in each updated case record.
+The [latest homepage supplement](../public/data/homepage-supplement-audit.json) adds **13 original videos, 3 separately labeled same-task demos and one 24-round observation sequence**. The overview now covers all 110 results with **104 evaluation previews, 3 demos and 3 explicit API failures before action**. Demos do not alter the original scores or timelines.
 
-The five remaining gaps in the supplied seven-task set are Astra/CALVIN, Astra/RLBench, and the three Qwen models/HumanCLAW. The first two lack the selected run's original recording; the three Qwen executions failed before actions began. The other four overview columns are outside this supplement's scope.
+The wider execution library still has records without original footage. [Media coverage](MEDIA_COVERAGE.md) describes the exact scope and links the task-level request list.
 
 ```bash
-python scripts/import_video_supplement.py --archive /path/to/ten-model-video-supplement-20261021.zip
+# Requires Pillow for the observation slideshow.
+python scripts/import_homepage_materials.py --materials /path/to/homepage-missing-materials-complete-20261021
 python scripts/build_overview_matrix.py
 python scripts/build_case_atlas.py
 ```

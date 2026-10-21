@@ -4,9 +4,9 @@
   "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
-  "manuscript_date": "2026-10-21",
+  "manuscript_date": "2026-10-22",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
-  "paper_pages": 65,
+  "paper_pages": 66,
   "abstract": "A robot generalist must turn perception and reasoning into actions that satisfy complete task goals. Frontier vision-language models (VLMs) perform many of these operations, but local competence does not establish complete-task capability. We introduce Embodied Agent Arena to evaluate ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces, while separate measures of precision, grounding, and goal satisfaction expose where progress stops. The comparison reveals complementary strengths: Astra leads rotation estimation and planning, Gemini 4 Argon leads spatial accuracy and region overlap, and Opus 5.5 leads manipulation success. Across TraceSpatial, HumanCLAW, CALVIN, and household manipulation, accurate paths, plausible contacts, and repeated actions can leave terminal conditions unsatisfied. The remaining challenge is sustained execution: reaching precise goal states, preserving achieved conditions, and recovering from failures within finite time and interaction budgets.",
   "authors": [
     {

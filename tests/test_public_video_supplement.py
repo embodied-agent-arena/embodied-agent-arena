@@ -43,7 +43,8 @@ class VideoSupplementTests(unittest.TestCase):
                     self.assertEqual(provenance['vlm_calls'],0)
         overview=read('data/report/overview-provenance.json')
         self.assertEqual(sum(bool(t['sourceVideo'] or t['sourceAnimation']) for t in overview['tiles'] if t['column']<=7),65)
-        self.assertEqual(overview['recordingCount'],90)
+        self.assertEqual(overview['recordingCount'],104)
+        self.assertEqual(overview['demoCount'],3)
 
     def test_missing_video_never_borrows_another_run(self):
         runs=read('data/case-comparisons.json')['runs']

@@ -65,6 +65,17 @@ def build():
             video = r["video"] if has_footage else None
             animation = r["animation"] if has_footage else None
             media = video or animation
+            demo = r.get("demoMedia") if not media else None
+            preview_video = video or (demo["video"] if demo else None)
+            preview = media or preview_video
+            poster = r["poster"] if media else demo["poster"] if demo else None
+            kind = "Same-task demo" if demo else r["mediaKind"]
+            stopped_before_action = bool(detail.get('steps')) and all(not s.get('code') and not s.get('calls') and s.get('feedback',{}).get('stage')=='model_completion' and s.get('error') for s in detail['steps'])
+            if not preview:
+                assert stopped_before_action, f"Missing original footage for {r['id']}"
+            if demo:
+                assert demo["taskId"] == r["taskId"] and demo["modelKey"] == model
+                assert demo["countInEvaluation"] is False
             if media:
                 assert r["sourceReportSha256"] == r["mediaReportSha256"]
                 assert (PUB / media).is_file() and (PUB / r["poster"]).is_file()
@@ -77,30 +88,33 @@ def build():
                 "identitySha256": r["identitySha256"], "recordId": r["recordId"],
                 "reportSha256": r["sourceReportSha256"], "detailUrl": r["detailUrl"],
                 "outcome": r["outcome"], "status": status, "sourceVideo": video,
-                "sourceAnimation": animation, "poster": r["poster"] if media else None,
+                "sourceAnimation": animation, "poster": poster, "demoMedia": demo, "previewVideo": preview_video,
                 "mediaKind": r["mediaKind"],
                 "mediaReportSha256": r["mediaReportSha256"] if media else None,
                 "mediaSha256": hashlib.sha256((PUB/media).read_bytes()).hexdigest() if media else None,
             }
             cells.append(cell)
-            attrs = (f'class="overview-cell {"has-media" if media else "log-only"}" '
+            attrs = (f'class="overview-cell {"has-media" if preview else "log-only"}" '
                      f'data-case="{h(gid)}" data-model="{row}" data-scene="{cid}" '
                      f'data-record="{h(r["recordId"])}" aria-describedby="scene-tooltip" '
                      f'aria-label="{h(r["model"])} · {h(benchmark)} · {h(title)}: {status}. '
-                     f'{"Play recording and inspect execution" if media else "No video; inspect execution log"}"')
-            if video:
+                     f'{"View same-task demo; inspect original evaluation separately" if demo else "Play recording and inspect execution" if media else "Stopped before action; inspect error record"}"')
+            if preview_video:
                 visual = (f'<video muted loop playsinline preload="none" '
-                          f'poster="{h(r["poster"])}" data-preview-src="{h(video)}" '
+                          f'poster="{h(poster)}" data-preview-src="{h(preview_video)}" '
                           f'aria-hidden="true"></video>')
             elif animation:
                 visual = (f'<img loading="lazy" src="{h(r["poster"])}" '
                           f'data-preview-src="{h(animation)}" '
                           f'data-poster="{h(r["poster"])}" alt="">')
             else:
-                visual = (f'<span class="overview-log-status">{status}</span>'
-                          '<span class="overview-log-link">Result · No video ↗</span>')
-            if media:
-                visual += f'<span class="overview-media-status">{status} ↗</span>'
+                visual = ('<span class="overview-log-status">Stopped before action</span>'
+                          '<span class="overview-log-link">Inspect API error ↗</span>')
+            if preview:
+                badge = "Demo · Not scored" if demo else status
+                if demo or kind == "Saved observations":
+                    visual += f'<span class="overview-kind">{"Same-task demo" if demo else "Observed frames"}</span>'
+                visual += f'<span class="overview-media-status">{badge} ↗</span>'
             rendered.append(f'<td><button type="button" {attrs}>{visual}</button></td>')
         rendered.append("</tr>")
         rows.append("".join(rendered))
@@ -121,7 +135,8 @@ def build():
         'native task in each column. Results remain visible when footage is unavailable.</caption>'
         f'<thead><tr>{"".join(heads)}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>\n'
         '<figcaption><details><summary>Recording Coverage</summary>Each column uses one fixed task. '
-        '“No video” retains the recorded outcome when footage is unavailable.</details></figcaption>\n'
+        '104 evaluation previews, 3 separately labeled same-task demos, and 3 API failures before action. '
+        'Demos do not change scores; observed-frame slideshows show inputs rather than continuous actions.</details></figcaption>\n'
         '</figure>\n<!-- END EXACT_TASK_OVERVIEW -->'
     )
     index = PUB / "index.html"
@@ -134,15 +149,16 @@ def build():
                          lambda _: block, text, count=1, flags=re.S)
         assert n == 1
     index.write_text(text)
-    manifest = {"updated": "2026-10-21", "rowOrder": MODELS, "columns": columns,
+    manifest = {"updated": "2026-10-22", "rowOrder": MODELS, "columns": columns,
                 "tiles": cells, "taskCount": len(columns), "recordCount": len(cells),
                 "recordingCount": sum(bool(c["mediaSha256"]) for c in cells),
+                "demoCount": sum(bool(c.get("demoMedia")) for c in cells),
                 "source": "data/case-comparisons.json",
                 "matching": ["taskId", "modelKey", "identitySha256", "reportSha256"]}
     (PUB / "data/report/overview-provenance.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     doc = ["# Tasks in the overview", "",
-           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} results and {manifest['recordingCount']} matching scene previews**; cells without footage link to the recorded result.", "",
+           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} results and {manifest['recordingCount']} matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). The remaining **3 records failed before actions began**.", "",
            "## Fixed tasks", "", "| Benchmark | Task | Compare |", "| :--- | :--- | :--- |"]
     for c in columns:
         gid = c['groupId']
@@ -162,7 +178,7 @@ def build():
     assert n == 1
     app.write_text(js)
     print(f'{len(columns)} exact tasks × {len(MODELS)} models; {manifest["recordingCount"]} recordings; '
-          f'{len(cells)-manifest["recordingCount"]} log-only cells.')
+          f'{manifest["demoCount"]} independent demos; {len(cells)-manifest["recordingCount"]-manifest["demoCount"]} pre-action failures.')
 
 
 if __name__ == "__main__":

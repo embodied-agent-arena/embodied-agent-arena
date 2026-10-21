@@ -1,9 +1,11 @@
-<h1 align="center">Embodied Agent Arena</h1>
+<h1 align="center">
+  <img src="public/assets/logo-transparent.png" width="64" height="64" align="absmiddle" alt="">&nbsp; Embodied Agent Arena
+</h1>
 
-<p align="center">
-  <strong>Are Frontier VLM Agents Ready to Be Robot Generalists?</strong><br>
+<h3 align="center">
+  Are Frontier VLM Agents Ready to Be Robot Generalists?<br>
   <em>An Empirical Study with the Embodied Agent Arena</em>
-</p>
+</h3>
 
 <p align="center">
   <a href="https://embodied-agent-arena.github.io/embodied-agent-arena/">🌐 Project Page</a> ·
@@ -31,7 +33,9 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ![Benchmark construction: five capability domains, GeoProbe, and the shared evaluation harness](public/assets/construction.webp)
 
-## Key Findings
+<a id="key-findings"></a>
+
+## 🔎 Key Findings
 
 - **Different capabilities, different leaders.** Gemini 4 Argon leads Spatial Pass@1 and both Affordance IoUs; GPT-6 Astra leads Planning; Claude Opus 5.5 leads Manipulation.
 - **Local competence does not ensure task completion.** Even the highest Manipulation success rate is **47.8%** under the evaluated budgets. Successful perception must still translate into accurate actions and a verified final goal.
@@ -39,7 +43,9 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ![Planning and Manipulation: ten models with matching logos and brand colours](public/assets/analysis/model-task-comparison.svg)
 
-## Cross-Model Results
+<a id="cross-model-results"></a>
+
+## 📊 Cross-Model Results
 
 <!-- BEGIN RESULT_TABLE -->
 | Model | Rot.&nbsp;↓ | Trans.&nbsp;↓ | Spatial&nbsp;↑ | AbsRel&nbsp;↓ | Box&nbsp;↑ | Polygon&nbsp;↑ | Plan&nbsp;↑ | Manip.&nbsp;↑ |
@@ -60,15 +66,20 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 [**Interactive Results**](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv) · [Exact Model IDs & Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol) · [Recorded Protocol Audit](docs/W4_PROTOCOL_AUDIT.md)
 
-## Explore the Evidence
+<a id="explore-the-evidence"></a>
 
-- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model results; 302 available scene previews.
-- **[Same Task. Ten Models.](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases)** — 11 fixed tasks × 10 models. Hover to preview and click for the matching result.
+## 🎬 Explore the Evidence
+
+- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model results; 316 evaluation scene previews and 3 separately labeled demos.
+- **[Same Task. Ten Models.](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases)** — 11 fixed tasks × 10 models. Visible clips play automatically; click for the matching result.
 - **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. All ten models are selectable on each of 46 tasks, including Argon’s recorded actions and feedback.
 - **[Results & Reproduction](docs/RESULTS.md)** — Main and source-level CSVs, task outcomes, analysis scripts, and editable manuscript figures.
 
-## News
+<a id="news"></a>
 
+## 📰 News
+
+- **2026.10.22** — Filled the homepage media slots with 13 original videos, 3 labeled same-task demos and one observation sequence; redesigned Affordance and Planning figures and moved the supplementary review/protocol table to the appendix.
 - **2026.10.21** — Added **Gemini 4 Argon’s execution logs** to same-task comparisons and ten-model time, token-use and recovery analyses.
 - **2026.10.21** — Added **Gemini 4 Argon** (`gemini-4-argon`): ten-model results, matched case comparisons, Planning outcomes and updated manuscript figures.
 - **2026.10.20** — Released **direct-polygon comparisons and execution analysis** with task-matched videos, actions and feedback.
@@ -78,7 +89,9 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 - **2026.10.05** — Published the **seven-model comparison**, downloadable results and the model selection and evaluation guide.
 - **2026.10.01** — Released the **evaluation harness and 1,000-case dataset**.
 
-## Release Status
+<a id="release-status"></a>
+
+## ✅ Release Status
 
 - [x] **Paper and project page** — [Latest author manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf), results and case studies.
 - [x] **Evaluation code and data** — [Harness and setup](#quick-start), [benchmark adapters](docs/INSTALL.md), and a pinned dataset release.
@@ -86,7 +99,9 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 - [x] **Analysis tools and figure sources** — [Rebuild scripts](docs/RESULTS.md#rebuild-the-public-outputs) and [editable draw.io figures with SVG/PDF/PNG exports](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip).
 - [x] **Gemini 4 Argon execution logs** — Matched 109 gallery records; added time, token use and recovery across 157 Planning episodes.
 
-## Benchmark
+<a id="benchmark"></a>
+
+## 🧩 Benchmark
 
 **GeoProbe** evaluates camera motion, object displacement, depth, and scale. Controlled Blender scenes isolate these geometric factors; real images extend the evaluation to natural scenes.
 
@@ -98,7 +113,9 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 | **Manipulation** | 183 | Execute placement, insertion, articulation, and sequential control tasks. |
 | **Affordance** | 70 | Locate usable contacts and functional regions for an intended action. |
 
-## Quick Start
+<a id="quick-start"></a>
+
+## 🚀 Quick Start
 
 ### 1. Install
 
@@ -150,7 +167,9 @@ arena score --data-root ../data --benchmark w5_umd \
   --predictions predictions.jsonl --output outputs/scores.jsonl
 ```
 
-## Citation
+<a id="citation"></a>
+
+## 📖 Citation
 
 If this work is useful for your research, please cite:
 

@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MAIN = ['figure3-tradeoffs', 'figure4-geometry', 'figure5-spatial',
         'figure6-affordance', 'figure7-planning', 'figure8-manipulation']
+SUPPLEMENT = ['supplement-figure6-affordance', 'supplement-figure7-planning']
 ANALYSIS = ['execution-progress', 'planning-execution-profile', 'model-task-comparison', 'figure-protocol-cases']
 FORMATS = ['drawio', 'svg', 'pdf', 'png']
 
@@ -16,7 +17,7 @@ FORMATS = ['drawio', 'svg', 'pdf', 'png']
 def build(figures):
     out = ROOT/'public/assets/analysis'
     contents = {}
-    for stem in MAIN + ['cases-affordance']:
+    for stem in MAIN + SUPPLEMENT + ['cases-affordance']:
         for ext in FORMATS:
             path = figures/f'{stem}.{ext}'
             if not path.is_file():
@@ -35,19 +36,21 @@ def build(figures):
                 contents[name] = previous.read(name)
     for path in (ROOT/'public/assets/model-logos').iterdir():
         if path.is_file(): contents['model-logos/'+path.name] = path.read_bytes()
-    scopes = {stem: 'Ten-model main results; ablation panels retain the original experiment cohort.' for stem in MAIN}
+    scopes = json.loads((out/'figure-manifest.json').read_text())['scopes']
+    scopes.update({stem: 'Original fine-grained diagnostics retained in the appendix.' for stem in SUPPLEMENT})
     scopes.update({stem: 'Ten-model Planning logs; selected exact-task progress comparisons include Argon.' for stem in ANALYSIS})
     scopes['figure-protocol-cases'] = 'Original CALVIN/PickCube controller-construction case comparison; observations and results unchanged.'
     scopes['model-task-comparison'] = 'Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.'
     scopes['cases-affordance'] = 'Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.'
-    manifest = {'manuscriptDate': '2026-10-21', 'modelsInMainComparison': 10,
+    manifest = {'manuscriptDate': '2026-10-22', 'modelsInMainComparison': 10,
                 'scopes': scopes, 'files': [{'path': n, 'sha256': hashlib.sha256(b).hexdigest(), 'bytes': len(b)} for n,b in sorted(contents.items())]}
     contents['figure-manifest.json'] = (json.dumps(manifest, indent=2)+'\n').encode()
     contents['README.md'] = b'''# Editable manuscript and analysis figures
 
-Updated for the 21 October 2026 author manuscript.
+Updated for the 22 October 2026 author manuscript.
 
 - Figures 3-8: Gemini 4 Argon included in the main comparisons. Original observation-setting ablation panels keep their original cohort.
+- Figures 6-7 use rounded vertical bars; supplement-figure6/7 retain the fine-grained diagnostics in the appendix.
 - Model identity colours follow the supplied logo families, with shades and line styles distinguishing models. Numerical heatmaps retain common scales. See model-logos/palette.json.
 - model-task-comparison: the README comparison, using the unchanged Table 2 means.
 - cases-affordance: selected qualitative polygon examples. The online Case Atlas compares all ten models on each image.
@@ -60,7 +63,7 @@ figure-manifest.json records exact file hashes and experiment scopes. These are 
     # Fixed timestamps/order make repeated packaging byte-for-byte reproducible.
     with zipfile.ZipFile(out/'editable-figures.zip', 'w', zipfile.ZIP_DEFLATED) as z:
         for name, data in sorted(contents.items()):
-            info = zipfile.ZipInfo(name, date_time=(2026,10,21,0,0,0))
+            info = zipfile.ZipInfo(name, date_time=(2026,10,22,0,0,0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o644 << 16
             z.writestr(info, data)

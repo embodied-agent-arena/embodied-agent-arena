@@ -1,18 +1,20 @@
 {
-  "manuscriptDate": "2026-10-21",
+  "manuscriptDate": "2026-10-22",
   "modelsInMainComparison": 10,
   "scopes": {
     "figure3-tradeoffs": "Ten-model profiles with a fixed 0\u2013100 OpenReview warm colour scale; Gemini 3.8 and Gemini 4 identified explicitly.",
     "figure4-geometry": "Ten-model 3D tracing with logos at measured coordinates and adjacent variant labels; five-run SDs in displacement panel.",
     "figure5-spatial": "Ten-model main results; ablation panels retain the original experiment cohort.",
-    "figure6-affordance": "Ten-model main results; ablation panels retain the original experiment cohort.",
-    "figure7-planning": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure6-affordance": "Ten models on 70 cases: polygon overlap vs box mean \u00b1 SD; tools vs interaction diagnosis for Gemini 4 Argon.",
+    "figure7-planning": "All 157 Planning tasks: ten-model success and the full distribution of cross-model success coverage.",
     "figure8-manipulation": "Ten-model main results; ablation panels retain the original experiment cohort.",
     "execution-progress": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
     "planning-execution-profile": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
     "model-task-comparison": "Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.",
     "figure-protocol-cases": "Original CALVIN/PickCube controller-construction case comparison; observations and results unchanged.",
-    "cases-affordance": "Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas."
+    "cases-affordance": "Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.",
+    "supplement-figure6-affordance": "Original fine-grained diagnostics, retained in the appendix.",
+    "supplement-figure7-planning": "Original fine-grained diagnostics, retained in the appendix."
   },
   "files": [
     {
@@ -137,43 +139,43 @@
     },
     {
       "path": "figure6-affordance.drawio",
-      "sha256": "58cc9c4ab7b07d8fd334af6d8b95801c358ed76519eb57e38710c2503ee39227",
-      "bytes": 115213
+      "sha256": "28ae2d2ac20464a4df57834038909a0a122b6bad9f28c7b2db3a28cc73a6c1b0",
+      "bytes": 68131
     },
     {
       "path": "figure6-affordance.pdf",
-      "sha256": "4e1ccb715bba66e2d594e15172c07746eca4888ec00f8a02bea8edd9b6606ef8",
-      "bytes": 78150
+      "sha256": "8398e929d12140a16295a9a9a6101066b11a0f5181aa3076dd1a80175481b53b",
+      "bytes": 56484
     },
     {
       "path": "figure6-affordance.png",
-      "sha256": "1ded951e57467f27599bf73afadb3db365ff5c2f0da5b559fb69779e91cd1e58",
-      "bytes": 176738
+      "sha256": "186399ab4a1a7d9b560f55e676c81d16ef929c55f4531986b25acba54cca10f7",
+      "bytes": 137621
     },
     {
       "path": "figure6-affordance.svg",
-      "sha256": "4dbcddc56b4848a393b7b0c2a128ad16e72f4f85fdcdaf6265cd7a3789ad14ff",
-      "bytes": 186458
+      "sha256": "e46cbc0a5f1b3ed42b7ee50c6a5102522ab13ede255dca5833bca7f904381286",
+      "bytes": 142504
     },
     {
       "path": "figure7-planning.drawio",
-      "sha256": "30c03d00e5e81c696ea3d728c8c4e46ed5e3c186bceea95d68528181eb56a6ed",
-      "bytes": 102240
+      "sha256": "f9fb1b0a9c5c406db3508aa3d89124b30b73a94a0cda818651f23260bab1759f",
+      "bytes": 63060
     },
     {
       "path": "figure7-planning.pdf",
-      "sha256": "f2544b6c8456f2a41c2c08cf85a17fec84c2a9741596792ca6762d9f5bd4cdb8",
-      "bytes": 80144
+      "sha256": "f289bc9436c797096bcadfc241fac585a74277231c8ab50a472a1ba825d78af3",
+      "bytes": 55129
     },
     {
       "path": "figure7-planning.png",
-      "sha256": "a47b4bd55e2b89a2d83bca6f37076e4900777063e076855eb5f884a7c99d19f6",
-      "bytes": 168515
+      "sha256": "d8cd130908ae385600bc9a430d43d0cf0baa920fd1257dfa5f7f3f22fbd4e586",
+      "bytes": 135400
     },
     {
       "path": "figure7-planning.svg",
-      "sha256": "54c8373397b5b8de42ab044481d9a6896d5a50107be47f62cc8c1c1d5c1a523e",
-      "bytes": 150752
+      "sha256": "99271d28ee2ff46840da983f9e2ba423be7fa97d7099bd73640d223b419e2e98",
+      "bytes": 137884
     },
     {
       "path": "figure8-manipulation.drawio",
@@ -279,6 +281,46 @@
       "path": "planning-execution-profile.svg",
       "sha256": "d3f34e2dd32fc8ee473de2e8d20f3eddcdb455cdb96c03cb0a24b999a7850cf8",
       "bytes": 196441
+    },
+    {
+      "path": "supplement-figure6-affordance.drawio",
+      "sha256": "58cc9c4ab7b07d8fd334af6d8b95801c358ed76519eb57e38710c2503ee39227",
+      "bytes": 115213
+    },
+    {
+      "path": "supplement-figure6-affordance.pdf",
+      "sha256": "4e1ccb715bba66e2d594e15172c07746eca4888ec00f8a02bea8edd9b6606ef8",
+      "bytes": 78150
+    },
+    {
+      "path": "supplement-figure6-affordance.png",
+      "sha256": "1ded951e57467f27599bf73afadb3db365ff5c2f0da5b559fb69779e91cd1e58",
+      "bytes": 176738
+    },
+    {
+      "path": "supplement-figure6-affordance.svg",
+      "sha256": "4dbcddc56b4848a393b7b0c2a128ad16e72f4f85fdcdaf6265cd7a3789ad14ff",
+      "bytes": 186458
+    },
+    {
+      "path": "supplement-figure7-planning.drawio",
+      "sha256": "30c03d00e5e81c696ea3d728c8c4e46ed5e3c186bceea95d68528181eb56a6ed",
+      "bytes": 102240
+    },
+    {
+      "path": "supplement-figure7-planning.pdf",
+      "sha256": "f2544b6c8456f2a41c2c08cf85a17fec84c2a9741596792ca6762d9f5bd4cdb8",
+      "bytes": 80144
+    },
+    {
+      "path": "supplement-figure7-planning.png",
+      "sha256": "a47b4bd55e2b89a2d83bca6f37076e4900777063e076855eb5f884a7c99d19f6",
+      "bytes": 168515
+    },
+    {
+      "path": "supplement-figure7-planning.svg",
+      "sha256": "54c8373397b5b8de42ab044481d9a6896d5a50107be47f62cc8c1c1d5c1a523e",
+      "bytes": 150752
     }
   ],
   "revision": "direct-labels-20261021"

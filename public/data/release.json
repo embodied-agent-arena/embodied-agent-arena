@@ -1,28 +1,28 @@
 {
-  "manuscript_date": "2026-10-21",
+  "manuscript_date": "2026-10-22",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
   "model_count": 10,
   "main_metric_values": 80,
-  "paper_pages": 65,
-  "paper_sha256": "aed5712a918a01ac1c18ebe084e252141fc3a0d2822278792a78559497e0b56b",
+  "paper_pages": 66,
+  "paper_sha256": "b9178a797862763e98bf395b5c329395f28f7d09107892cbfece2569202dd45b",
   "table_source": "Table 2",
   "case_views": 181,
-  "recordings": 302,
+  "recordings": 316,
   "figure_sha256": {
     "geometry.webp": "f332426bb3e372160616dc91d90c13b801677197531428ab5a56033acd76c70e",
     "spatial.webp": "99659bda51b98057106375529237dc784e753d4de033e7842a3f99f2bd880ba3",
-    "affordance.webp": "f9aad375e6d72cb9a2cef3200bdd6ed5649dd2025d97c7e6d821dbbcb3245ca3",
-    "planning.webp": "064c034686ea95e93cd891b046907f090837df274a23d7933df35c4a132d39e9",
+    "affordance.webp": "aa2f8582e893a5ae4b8d2cc87b1f6106e9565a1a8f5a62662d0e4f3cdbc26bd8",
+    "planning.webp": "af7065eb1b056eb8d597599fc67fcdaa31df2105ed5e92113a3807f0ca7bd88f",
     "manipulation.webp": "89625be22d77e30e5a6776dd41dc5d9f6e7dd36a390272cdfa9d823460afa66d",
     "nine-model-profiles.svg": "aaf35d1b5987dadb7d183b15203c038ee6b23fc473a699fb1c8c89b015a36979",
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "ca7ed37fa9857ff195a30e5866be9e236b29208665348b455da169ad81eb8f91",
+  "source_sha256": "7b86b0a70047b9835ba328ba36293e26489731ef3f86f2eb2892a20eb7206a47",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
-  "playable_previews": 327,
+  "playable_previews": 341,
   "recording_definition": "Scene previews: original recordings, saved observations, verified action replays and saved-state renders; excludes animated execution-log plots.",
   "video_supplement": {
     "archive": "ten-model-video-supplement-20261021.zip",
@@ -39,13 +39,15 @@
     "explorerRecords": 460
   },
   "figure_style": {
-    "revision": "direct-labels-20261021",
+    "revision": "refined-report-20261022",
     "palette": "assets/model-logos/palette.json",
     "mainFigures": 6,
     "additionalManuscriptFigures": 3,
-    "dataValues": "unchanged",
+    "dataValues": "unchanged; Planning coverage histogram derived from all 157 task outcomes",
     "heatmap": "OpenReview muted warm scale; fixed 0\u2013100",
-    "scatter": "Model logos at measured coordinates with adjacent variant labels; no separate model key"
+    "scatter": "Model logos at measured coordinates with adjacent variant labels; no separate model key",
+    "bars": "Rounded solid brand-family fills; Comic Sans MS; labels and logos directly below each model",
+    "supplementaryFigures": "Former main Table 3 moved to Appendix E as Table A33; former Figure 6/7 fine-grained panels preserved in appendix figures"
   },
   "protocol_audit": {
     "date": "2026-10-21",
@@ -60,5 +62,14 @@
     "data": "data/w4-protocol-audit.json",
     "metricValues": "unchanged",
     "scope": "CALVIN execution settings; retained main-table populations unchanged"
-  }
+  },
+  "homepage_supplement": {
+    "date": "2026-10-22",
+    "archive": "homepage-missing-materials-complete-20261021.zip",
+    "matchedAssignments": 17,
+    "originalVideos": 13,
+    "independentDemos": 3,
+    "observationSequences": 1
+  },
+  "independent_demo_previews": 3
 }

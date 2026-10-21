@@ -60,9 +60,16 @@ class OverviewTests(unittest.TestCase):
                     self.assertEqual(cell["mediaReportSha256"], cell["reportSha256"])
                     self.assertEqual(hashlib.sha256((PUBLIC / media).read_bytes()).hexdigest(),
                                      cell["mediaSha256"])
+                elif cell.get("demoMedia"):
+                    demo=cell["demoMedia"]
+                    self.assertFalse(demo["countInEvaluation"])
+                    self.assertEqual((demo["modelKey"],demo["taskId"]),(run["modelKey"],run["taskId"]))
+                    self.assertNotEqual(demo["reportSha256"],run["sourceReportSha256"])
+                    self.assertEqual(cell["previewVideo"],demo["video"])
+                    self.assertIn("same-task demo",button["aria-label"])
                 else:
                     self.assertIsNone(cell["poster"])
-                    self.assertIn("No video", button["aria-label"])
+                    self.assertIn("Stopped before action", button["aria-label"])
                     self.assertIn("log-only", button["class"])
 
     def test_old_mixed_task_montage_is_no_longer_displayed(self):
