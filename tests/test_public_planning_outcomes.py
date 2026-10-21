@@ -6,7 +6,7 @@ class PlanningOutcomes(unittest.TestCase):
  def test_matched_population_and_preserved_results(self):
   base=json.loads((U/'data/report/metrics.json').read_text())
   data=json.loads((U/'data/report/planning-outcomes.json').read_text())
-  self.assertEqual(data['models'],base['models']+['gemini4argon'])
+  self.assertEqual(data['models'],base['models'])
   original={t['taskId']:t for t in base['planning']['tasks']}
   self.assertEqual(set(original),{t['taskId'] for t in data['tasks']})
   self.assertEqual(len(data['tasks']),157)
@@ -25,8 +25,8 @@ class PlanningOutcomes(unittest.TestCase):
    model=next(m for m in study['models'] if m['name']==names[row['model']])
    self.assertEqual(round(100*row['completed']/157,1),float(model['scores'][6]))
    self.assertEqual(row['completed'],sum(s['completed'] for s in row['sourceResults']))
-  # Missing action logs must not become fabricated ten-model trace records.
-  self.assertEqual(base['execution']['modelCount'],9)
+  # All ten models now have hash-matched adopted logs.
+  self.assertEqual(base['execution']['modelCount'],10)
  def test_case_links_preserve_exact_task_identity(self):
   gallery=json.loads((U/'data/case-comparisons.json').read_text())
   cases={g['id']:g['taskId'] for g in gallery['groups']}

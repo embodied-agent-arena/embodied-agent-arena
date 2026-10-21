@@ -48,11 +48,11 @@ class CompleteCaseTests(unittest.TestCase):
             if not c['predictions']:
                 self.assertEqual(groups[self.data['aliases'][c['id']]]['taskId'],c['sample'])
 
-    def test_explorer_all_nine_selectable(self):
+    def test_explorer_all_ten_selectable(self):
         originals={s['id']:s for s in read('data/execution/index.json')['stories']}
         for s in read('data/execution/complete-index.json')['stories']:
             with self.subTest(story=s['id']):
-                self.assertEqual([r['model'] for r in s['runs']],self.data['models'][:9])
+                self.assertEqual([r['model'] for r in s['runs']],self.data['models'])
                 self.assertEqual(len({r['taskId'] for r in s['runs']}),1)
                 for old in originals[s['id']]['runs']:
                     self.assertEqual(old,next(r for r in s['runs'] if r['modelKey']==old['modelKey']))

@@ -2,13 +2,13 @@
 
 **Task completion now compares ten models**, including Gemini 4 Argon: 1,570 outcomes on the same 157 Planning tasks. Their combined successes cover 142 tasks; 15 are unsuccessful for all ten models.
 
-**Time, token use and recovery** come from the nine-model detailed-log cohort: 1,413 Planning episodes. The selected execution explorer contains 46 task groups and 414 records, of which 143 have detailed action traces. Argon's results and recordings appear in the [ten-model Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html); its detailed action/feedback traces are still pending.
+**Time, token use and recovery** now cover all ten models: 1,570 adopted Planning episodes. The explorer has 46 shared tasks × 10 models (460 records), including 189 detailed action/feedback traces and 271 round summaries. All 109 Argon gallery executions are matched to the supplied logs by report SHA-256; prior retries are excluded.
 
 ## Published evidence
 
 - [Planning outcomes CSV](../public/data/report/planning-outcomes.csv) and [JSON](../public/data/report/planning-outcomes.json): ten-model outcomes joined by exact task ID, with report digests.
-- [Planning episode metrics](../public/data/report/planning-episodes.csv): one row per episode in the nine-model log cohort, including outcome, duration, usage and recovery counts.
-- [Analysis data](../public/data/report/metrics.json): ten-model capability profiles, plus the scoped nine-model log summaries.
+- [Planning episode metrics](../public/data/report/planning-episodes.csv): one row per episode across ten models, including outcome, duration, usage and recovery counts.
+- [Analysis data](../public/data/report/metrics.json): ten-model capability profiles and execution-log summaries.
 - [Complete execution index](../public/data/execution/complete-index.json) and [detailed trace index](../public/data/execution/index.json): individual report links, video links, settings, round timestamps, executed code, arguments, feedback and verifier outcomes.
 - [Editable figures](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip): current manuscript figures and execution-analysis figures, with each experiment's scope in the included manifest.
 - [Overview provenance](../public/data/report/overview-provenance.json): all 110 cells in the 11-task × 10-model overview, including native identity and matching media hashes.
@@ -22,16 +22,21 @@ Python 3.10+; standard library only. The original author-supplied archives are r
 python scripts/analyze_execution_report.py \
   --archive /path/to/all-model-logs-20261019.zip \
   --output /path/to/analysis
+python scripts/build_technical_report.py --analysis /path/to/analysis
 
 # Verify and join the 157 Argon Planning outcomes (unpacked results archive).
 python scripts/build_planning_outcomes.py \
   --input /path/to/gemini4argon-results-20261021
 
-# Publish the ten-model outcome report and scoped execution analyses.
-python scripts/build_technical_report.py --analysis /path/to/analysis
+# Add adopted Argon logs to the existing published records and metrics.
+python scripts/import_argon_logs.py \
+  --archive /path/to/gemini4argon-logs-20261021.zip \
+  --output /path/to/argon-analysis
+python scripts/refresh_execution_views.py
+python scripts/build_technical_report.py --analysis /path/to/argon-analysis
 ```
 
-The first command verifies source-report digests and reproduces the nine-model Planning counts. The second verifies the Argon report digests, exact task IDs and 110/157 completion count. The final command writes static HTML, CSV/JSON downloads and the interactive report section. All three support `--repo` to select a checkout.
+The Argon importer checks every adopted Planning report against the existing outcome digest, and all 109 gallery reports against their execution records. It preserves the other nine models' measurements. The [import audit](../public/data/argon-logs-audit.json) records the archive digest, selected attempts and code-cell alignment. Run the original nine-model publication first when rebuilding from scratch; the Argon import extends those published records.
 
 For the public case index and task map, no external archive is needed:
 
@@ -52,7 +57,7 @@ The trace-builder input contains `cases.json`, `records.json`, `reports/<case-id
 
 - **Token use:** recorded input plus output. Missing usage is excluded. Failure-token share divides usage in unsuccessful episodes by usage in all episodes with recorded usage.
 - **Recovery:** native final success after an earlier execution error. Budget guards and timed-out rounds are excluded from execution errors.
-- **Elapsed time:** reported episode duration, including setup where recorded; the last recorded loop duration is used when no episode total exists. This is not model inference latency.
+- **Elapsed time:** reported episode duration, including setup where recorded; campaign elapsed time is used if supplied, otherwise the last recorded loop duration. This is not model inference latency.
 - **Video time:** the recording's own playback clock, separate from execution wall time. Per-episode settings and budgets accompany each record.
 
 Manipulation traces include later observation configurations; the main results retain the adopted Baseline population. Case examples explain individual behavior; benchmark success rates use the complete evaluation population.

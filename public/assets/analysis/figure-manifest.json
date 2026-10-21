@@ -8,8 +8,8 @@
     "figure6-affordance": "Ten-model main results; ablation panels retain the original experiment cohort.",
     "figure7-planning": "Ten-model main results; ablation panels retain the original experiment cohort.",
     "figure8-manipulation": "Ten-model main results; ablation panels retain the original experiment cohort.",
-    "execution-progress": "Nine-model detailed execution-log cohort.",
-    "planning-execution-profile": "Nine-model detailed execution-log cohort.",
+    "execution-progress": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
+    "planning-execution-profile": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
     "cases-affordance": "Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas."
   },
   "files": [
@@ -35,23 +35,23 @@
     },
     {
       "path": "execution-progress.drawio",
-      "sha256": "ec8af474c212534c14e2b8d0fb2ad9ac3d63a14237263cbe03d1254723fe57b2",
-      "bytes": 26096
+      "sha256": "9e4a30c5d0f56c9c5fc7d66d6edb4114edf3bade2619335979c242563b3385d9",
+      "bytes": 33066
     },
     {
       "path": "execution-progress.pdf",
-      "sha256": "447947b1a260ab3f21451b386007e477e8c9f4ee19d076ac58c3a64dccc42804",
-      "bytes": 46387
+      "sha256": "a8ab0eac1613225e4241f1f3ccf21a15d28143681405b92d416d5455fe1bc3ae",
+      "bytes": 50897
     },
     {
       "path": "execution-progress.png",
-      "sha256": "839d19e8bd6dcac146ab529a2884385366c156e6a880a840758fa52ae91e54dc",
-      "bytes": 115390
+      "sha256": "ec8e1a8a494c1f06494f45d1dd2216bff380c03aff62db0d9a9d9534616d6df3",
+      "bytes": 128677
     },
     {
       "path": "execution-progress.svg",
-      "sha256": "9e04a9e897d50cda90c6310f5f53537ccc928db9d7097b6c1ba1ac7e45efe7b2",
-      "bytes": 174038
+      "sha256": "b7fccb8dc1a6aebb39893da7d9b6808d2d5ec9bbbc1670ccb07a63dc74192ce0",
+      "bytes": 188152
     },
     {
       "path": "figure3-tradeoffs.drawio",
@@ -215,23 +215,23 @@
     },
     {
       "path": "planning-execution-profile.drawio",
-      "sha256": "3964082798505b6a1a4dde6cc66e14768062c40ef70622d97f827403e6f26488",
-      "bytes": 42208
+      "sha256": "439533a1c60651ea7e4a69ead5ffd363f4d812f149afba9081e580058628a7b6",
+      "bytes": 45976
     },
     {
       "path": "planning-execution-profile.pdf",
-      "sha256": "f0fca429bf5064d0c2d605ad34b6d2f3b3fa8229edfa71bd6a864cd01eda9f2c",
-      "bytes": 54627
+      "sha256": "4294e9a5e7f2b415aa02cc80ba62665518b60c87c79f37f3d301ab8a9c1ab2a0",
+      "bytes": 56736
     },
     {
       "path": "planning-execution-profile.png",
-      "sha256": "dfafd4ecca8bf3715ecf5f7e5e154ade5c9454531f033d89ebaf8ebc24f321c0",
-      "bytes": 115760
+      "sha256": "d73507f87574fb4510bc8d8bba8212ad1efd07fcdf3dc914d7e8b9b4284922ba",
+      "bytes": 127495
     },
     {
       "path": "planning-execution-profile.svg",
-      "sha256": "c64b70b2463c99a282c0a8a8acc50575fc523feade170a2c2e665a8f2464468f",
-      "bytes": 167794
+      "sha256": "ab963c3687a24f2d6107771d686acdc108c3aae234654ed76fe4bba7f22e2285",
+      "bytes": 171508
     }
   ]
 }

@@ -60,11 +60,12 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 - **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model results; 302 available scene previews.
 - **[Same Task. Ten Models.](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases)** — 11 fixed tasks × 10 models. Hover to preview and click for the matching result.
-- **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. Detailed trace analyses cover the nine models with available action logs; Argon's outcomes and recordings are in the Case Atlas.
+- **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. All ten models are selectable on each of 46 tasks, including Argon’s recorded actions and feedback.
 - **[Results & Reproduction](docs/RESULTS.md)** — Main and source-level CSVs, task outcomes, analysis scripts, and editable manuscript figures.
 
 ## News
 
+- **2026.10.21** — Added Argon’s detailed logs to same-task execution comparisons and ten-model time/token/recovery analysis.
 - **2026.10.21** — Added **Gemini 4 Argon** (`gemini-4-argon`): ten-model results, matched case comparisons, Planning outcomes and updated manuscript figures.
 - **2026.10.20** — Released direct-polygon comparisons and execution analysis with task-matched videos, actions and feedback.
 - **2026.10.01** — Released the evaluation harness and 1,000-case dataset.
@@ -75,7 +76,7 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 - [x] **Evaluation code and data** — [Harness and setup](#quick-start), [benchmark adapters](docs/INSTALL.md), and a pinned dataset release.
 - [x] **Results and analysis reports** — [Ten-model exports and task outcomes](docs/RESULTS.md), plus the published execution records and analyses.
 - [x] **Analysis tools and figure sources** — [Rebuild scripts](docs/RESULTS.md#rebuild-the-public-outputs) and [editable draw.io figures with SVG/PDF/PNG exports](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip).
-- [ ] **Gemini 4 Argon detailed action traces** — Add step-by-step action/feedback and video alignment when the logs are available.
+- [x] **Gemini 4 Argon execution logs** — Matched 109 gallery records; added time, token use and recovery across 157 Planning episodes.
 
 ## Benchmark
 

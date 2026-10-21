@@ -4,7 +4,7 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 65,
-  "paper_sha256": "20865cdc0678b2463a7445d709bba5183ccb65b239d649ac9d4ce1d5e4ae50ee",
+  "paper_sha256": "00f83f1ed503a34438c4669729fedd504f818320c00e601bdc4cc7639634fed6",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 302,
@@ -17,7 +17,7 @@
     "nine-model-profiles.svg": "9636920047d603ec26b686d384902955ade4c049bb59f9244209bd0ee0fee57e"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "ea515484efdf61c99a59924f0628efac41402242e0d77922e07881fcf7e7213f",
+  "source_sha256": "ac15a3726485781501ba93e435f3f1741560d53ae1ce71eecbb8c484e09fb953",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -28,5 +28,13 @@
     "matchedAssignments": 70,
     "availableMedia": 65,
     "missingMedia": 5
+  },
+  "argon_logs": {
+    "archive": "gemini4argon-logs-20261021.zip",
+    "matchedGalleryReports": 109,
+    "adoptedPlanningReports": 157,
+    "explorerTasks": 46,
+    "explorerModels": 10,
+    "explorerRecords": 460
   }
 }

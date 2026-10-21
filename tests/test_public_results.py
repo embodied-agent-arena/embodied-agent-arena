@@ -64,7 +64,7 @@ class PublicResultTests(unittest.TestCase):
         report = json.loads((PUBLIC / 'data/report/metrics.json').read_text())
         study = json.loads((PUBLIC / 'data/study.json').read_text())
         self.assertEqual(len(report['profiles']), 10)
-        self.assertEqual(len(report['models']), 9)
+        self.assertEqual(len(report['models']), 10)
         for profile, model in zip(report['profiles'],study['models']):
             self.assertEqual(profile['scores'], model['scores'])
         with zipfile.ZipFile(PUBLIC / 'author-source.zip') as archive:

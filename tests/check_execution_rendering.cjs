@@ -12,7 +12,7 @@ vm.runInContext(source.split('  function playbackLabel()')[0] +
 const index = JSON.parse(fs.readFileSync(path.join(pub, 'data/execution/complete-index.json')));
 let records = 0, summaries = 0;
 for (const story of index.stories) {
-  assert.equal(story.runs.length, 9);
+  assert.equal(story.runs.length, 10);
   assert.equal(new Set(story.runs.map(r => r.taskId)).size, 1);
   for (const run of story.runs) {
     const input = JSON.parse(fs.readFileSync(path.join(pub, run.detailUrl)));

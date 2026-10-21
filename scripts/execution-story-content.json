@@ -3,70 +3,98 @@
     "label": "Error Recovery",
     "taskLabel": "Date the Oldest Artifact",
     "title": "Recovery Means Making Progress.",
-    "takeaway": "Opus 5.5 recovers from two early errors and completes the task. DeepSeek-1017 stalls at a partial score of 0.5.",
-    "question": "Correction \u2192 Progress \u2192 Completion",
-    "answer": "Opus 5.5 finishes at 1.0; DeepSeek-1017 stops at 0.5 after three final code errors.",
+    "takeaway": "Argon and Opus 5.5 recover from early code errors and complete the task. DeepSeek-1017 stops at a partial score of 0.5.",
+    "question": "Correction → Progress → Completion",
+    "answer": "Argon: error in round 2 → score 0.3 in round 3 → 1.0 in round 8. Opus 5.5 finishes in round 7; DeepSeek-1017 remains at 0.5.",
     "goalLabels": [
       "Collect tools",
       "Excavate",
       "Date artifacts",
       "Place flag"
+    ],
+    "default": [
+      "gemini4argon",
+      "deepseek"
     ]
   },
   "sequence": {
     "label": "Goal Progress",
-    "taskLabel": "Sequence 0526 \u00b7 Five Goals",
+    "taskLabel": "Sequence 0526 · Five Goals",
     "title": "More Motion. Less Progress.",
-    "takeaway": "Opus 5.5 completes all five goals with 338 action submissions; Gemini completes none with 501.",
-    "question": "Actions \u2260 Completed Goals",
-    "answer": "Opus 5.5 completes 5/5 goals with 338 action submissions; Gemini completes 0/5 with 501.",
+    "takeaway": "Argon completes five goals with 475 action submissions; Opus 5.5 does so with 338. Gemini 3.8 Flash completes none with 501.",
+    "question": "Actions ≠ Completed Goals",
+    "answer": "Argon: 5/5 goals · 475 actions · 18 model calls. Opus 5.5: 5/5 · 338 · 18. Gemini 3.8 Flash: 0/5 · 501 · 36.",
     "goalLabels": [
       "Lift block",
       "Store in drawer",
       "Retrieve block",
       "Stack blocks",
       "Switch off light"
+    ],
+    "default": [
+      "gemini4argon",
+      "gemini"
     ]
   },
   "drawer": {
     "label": "Task Completion",
     "taskLabel": "Open the Left Drawer",
     "title": "A Valid Action Can Still Miss the Goal.",
-    "takeaway": "Fable 5.1 opens the drawer in 20 rounds. Sol reaches its 24-round limit without opening it.",
-    "question": "Call Accepted \u2260 Task Complete",
-    "answer": "The final drawer check succeeds for Fable 5.1 and fails for Sol."
+    "takeaway": "Argon opens the drawer in 13 rounds, recovering after a round-10 error. Sol reaches 24 rounds without completing the task.",
+    "question": "Call Accepted ≠ Task Complete",
+    "answer": "The native drawer check succeeds for Argon and Fable 5.1, after 13 and 20 rounds respectively; Sol reaches its round limit.",
+    "default": [
+      "gemini4argon",
+      "sol"
+    ]
   },
   "goal": {
     "label": "Goal Conditions",
     "taskLabel": "Clean Soap, Then Place It",
     "title": "The Whole Instruction Matters.",
-    "takeaway": "Eight rounds each. Gemini meets all three goal conditions; DeepSeek-1017 meets one.",
-    "question": "Partial Progress \u2260 Completion",
-    "answer": "The goal requires the cleaned soap bar in the bathtub. Gemini meets 3/3 conditions; DeepSeek-1017 meets 1/3."
+    "takeaway": "Argon reaches all three goal conditions in six rounds. DeepSeek-1017 ends with one of three after eight.",
+    "question": "Partial Progress ≠ Completion",
+    "answer": "Argon moves from 1/3 goal conditions in round 5 to 3/3 in round 6. The instruction requires the cleaned soap bar in the bathtub.",
+    "default": [
+      "gemini4argon",
+      "deepseek"
+    ]
   },
   "time": {
-    "label": "Decision Latency",
+    "label": "Time & Decisions",
     "taskLabel": "Reach the Chair",
     "title": "Fewer Decisions Can Take Longer.",
-    "takeaway": "All three agents reach the chair. Compare elapsed time alongside decision count.",
-    "question": "Decisions \u2260 Elapsed Time",
-    "answer": "Astra: 18 rounds / 471 s. Sol: 17 / 669 s. DeepSeek-1017: 65 / 406 s."
+    "takeaway": "Argon reaches the chair in 17 rounds; DeepSeek-1017 needs 65. Their elapsed times are much closer than their decision counts.",
+    "question": "Decisions ≠ Elapsed Time",
+    "answer": "Argon: 17 rounds / 437 s. DeepSeek-1017: 65 / 406 s. Astra: 18 / 471 s. Read both decision count and elapsed time.",
+    "default": [
+      "gemini4argon",
+      "deepseek"
+    ]
   },
   "horizon": {
     "label": "Budget Limits",
     "taskLabel": "Pack the Toolbox",
     "title": "Time Is Not the Only Limit.",
-    "takeaway": "Eight agents stop without completing the toolbox. Token and round limits end these attempts before the 180-minute ceiling.",
-    "question": "Time \u00b7 Tokens \u00b7 Rounds",
-    "answer": "These eight episodes end at token or round limits, with no successful toolbox completion."
+    "takeaway": "No model completes this toolbox task. Argon stops at its token limit after 17 model responses, well before the time ceiling.",
+    "question": "Time · Tokens · Rounds",
+    "answer": "Argon records 603,393 input + output tokens against a 640,000-token ceiling. Its next round is blocked by the token guard; the native goal remains incomplete.",
+    "default": [
+      "gemini4argon",
+      "astra"
+    ]
   },
   "precision": {
     "label": "Contact Precision",
     "taskLabel": "Insert the Charger",
-    "title": "Hundreds of Steps. No Insertion.",
-    "takeaway": "Qwen-Max takes 400 native steps and DeepSeek-1017 takes 385; neither reaches the required charger pose.",
-    "question": "Motion \u2260 Successful Contact",
-    "answer": "Qwen Max and Qwen 397B reach 400 native steps; DeepSeek-1017 reaches 385. None completes the insertion."
+    "title": "Motion Is Not Successful Contact.",
+    "takeaway": "Argon stops at its token limit with the charger 15.9 cm from the goal. Qwen-Max reaches 400 native steps without insertion.",
+    "question": "Motion ≠ Successful Contact",
+    "answer": "Argon: 23 native steps · 15.9 cm final goal distance · token limit. Qwen Max: 400 native steps · no successful insertion.",
+    "default": [
+      "gemini4argon",
+      "qwen"
+    ]
   },
   "task-6b0604e779": {
     "taskLabel": "Put the Salt Shaker in a Drawer",
@@ -89,13 +117,13 @@
     "title": "Inspect a Metal Box Under a Lamp"
   },
   "task-23011a5097": {
-    "taskLabel": "Sequence 0270 \u00b7 Five Goals",
-    "title": "Sequence 0270 \u00b7 Five Goals",
+    "taskLabel": "Sequence 0270 · Five Goals",
+    "title": "Sequence 0270 · Five Goals",
     "instruction": "Rotate the red block right, close the drawer, lift the red block, stack it, then lift the blue block from the cabinet."
   },
   "task-7e8019b11e": {
-    "taskLabel": "Sequence 0557 \u00b7 Five Goals",
-    "title": "Sequence 0557 \u00b7 Five Goals"
+    "taskLabel": "Sequence 0557 · Five Goals",
+    "title": "Sequence 0557 · Five Goals"
   },
   "task-3b7ce0c01b": {
     "taskLabel": "Put Shoes on the Rack",
@@ -187,8 +215,8 @@
     "title": "Push the Red Block to the Green Target"
   },
   "task-cc4c299566": {
-    "taskLabel": "Task 10 \u00b7 Screw, Dustpan & Container",
-    "title": "Task 10 \u00b7 Screw, Dustpan & Container"
+    "taskLabel": "Task 10 · Screw, Dustpan & Container",
+    "title": "Task 10 · Screw, Dustpan & Container"
   },
   "task-dd68cd9017": {
     "taskLabel": "Find an Animal",
@@ -197,7 +225,7 @@
   "task-eec30e591f": {
     "taskLabel": "Test Water Conductivity",
     "title": "Test Water Conductivity",
-    "instruction": "Test the water\u2019s electrical conductivity. Put conductive water in the blue box, otherwise in the orange box."
+    "instruction": "Test the water’s electrical conductivity. Put conductive water in the blue box, otherwise in the orange box."
   },
   "task-dfad12ffb7": {
     "taskLabel": "Sweep Without Touching",

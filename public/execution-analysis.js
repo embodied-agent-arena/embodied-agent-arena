@@ -11,7 +11,11 @@
   const stopNames = {max_total_tokens:'Token limit',max_agent_iterations:'Round limit',primitive_calls:'Action-call limit',max_env_steps:'Step limit',max_code_turns:'Code-round limit',max_primitive_calls:'Tool-call limit',max_rounds:'Round limit'};
   const cache = new Map(), panes = {};
   let data,story,generation=0,pendingStory;
-  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=video-supplement-20261021').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
+  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=argon-logs-20261021').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
+  const limitsOf = r => ({...r.budgets,
+    max_rounds: r.loopBudgets?.max_turns ?? r.budgets.max_rounds ?? r.budgets.max_code_turns ?? r.budgets.max_agent_iterations,
+    timeout_seconds: r.loopBudgets?.timeout_seconds ?? r.budgets.trial_timeout_seconds ?? r.budgets.timeout_seconds
+  });
   const pause=()=>root.querySelectorAll('video').forEach(v=>v.pause());
   // Some exact-task records retain round feedback without primitive-call traces.
   // Normalize that representation; never infer unseen actions or intermediate goals.
@@ -47,7 +51,7 @@
     pause();generation++;story=data.stories.find(s=>s.id===id)||data.stories[0];
     root.querySelectorAll('[data-exec-story]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.execStory===story.id)));
     document.getElementById('exec-library').value=story.id;
-    const common=key=>{const v=story.runs.map(r=>r.budgets[key]);return v[0]!=null&&v.every(x=>x===v[0])?v[0]:null;};
+    const common=key=>{const v=story.runs.map(r=>limitsOf(r)[key]);return v[0]!=null&&v.every(x=>x===v[0])?v[0]:null;};
     const limits=[common('max_rounds')?`${common('max_rounds')} rounds`:null,common('max_total_tokens')?`${tokens(common('max_total_tokens'))} tokens`:null,common('timeout_seconds')?`${num(common('timeout_seconds')/60)} min`:null].filter(Boolean).join(' · ');
     document.getElementById('exec-stage').innerHTML=`<div class="exec-story-heading"><p class="exec-kicker">${esc(story.benchmark)} <span>/</span> ${esc(story.taskLabel || story.label)}</p><h3>${esc(story.title)}</h3><p class="exec-takeaway">${esc(story.featured ? story.takeaway : `${story.runs.filter(r=>r.success).length} of ${story.runs.length} models complete this task. Compare the decisions and final checks below.`)}</p></div><div class="exec-task"><span>Task</span><p>${esc(story.instruction)}</p></div><div class="exec-compare-toolbar"><span>${story.runs.length} models · ${limits?`Ceilings: ${esc(limits)}`:"See each model’s episode limits below"}</span><button class="exec-play" type="button">▶ Play Both</button></div><p class="exec-clock-note">Video playback shows excerpts; decision timestamps use elapsed episode time.</p><div class="exec-compare"><article class="exec-pane" data-pane="0"></article><article class="exec-pane" data-pane="1"></article></div><details class="exec-methods"><summary>Task Identity, Settings &amp; Source Records</summary><p><strong>Task:</strong> <code>${esc(story.runs[0].taskId)}</code></p><p>${limits?`Shared ceilings: ${esc(limits)}.`:''} Each model’s settings are listed below. Videos are excerpts or saved observations; decision timestamps show episode time.</p><div class="exec-settings-grid"></div><p><a href="data/execution/identity-audit.json">Task-matching audit ↗</a> <a href="execution-guide.html#${esc(story.id)}">Episode metrics ↗</a></p></details>`;
     [0,1].forEach(i=>renderPane(i,(story.runs.find(r=>r.modelKey===story.default[i])||story.runs[i]).id));
@@ -56,7 +60,7 @@
   }
   function renderSettings(){
     const area=root.querySelector('.exec-settings-grid');if(!area)return;
-    area.innerHTML=[0,1].map(i=>{const r=panes[i];if(!r||!story.runs.some(x=>x.id===r.id))return '';const b=r.budgets;return `<div><h4>${esc(r.model)}</h4><p>Observation setting: ${esc(r.protocol)}</p><dl>${[['Rounds',b.max_rounds],['Tokens',tokens(b.max_total_tokens)],['Time ceiling',time(b.timeout_seconds)],['Tool calls',b.max_primitive_calls],['Environment steps',b.max_env_steps]].filter(([,v])=>v!=null&&v!=='—').map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}<div><dt>Stop</dt><dd>${esc(r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x).join(', '):outcome(r))}</dd></div><div><dt>Input / output tokens</dt><dd>${tokens(r.stats.promptTokens)} / ${tokens(r.stats.completionTokens)}</dd></div></dl><a href="${esc(r.detailUrl)}" download>Download trace ↓</a><p class="exec-record-id">${esc(r.recordId)}<br>SHA-256 ${esc(r.reportSha256)}</p></div>`;}).join('');
+    area.innerHTML=[0,1].map(i=>{const r=panes[i];if(!r||!story.runs.some(x=>x.id===r.id))return '';const b=limitsOf(r);return `<div><h4>${esc(r.model)}</h4><p>Observation setting: ${esc(r.protocol)}</p><dl>${[['Rounds',b.max_rounds],['Tokens',tokens(b.max_total_tokens)],['Time ceiling',time(b.timeout_seconds)],['Tool calls',b.max_primitive_calls],['Environment steps',b.max_env_steps]].filter(([,v])=>v!=null&&v!=='—').map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}<div><dt>Stop</dt><dd>${esc(r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x).join(', '):outcome(r))}</dd></div><div><dt>Input / output tokens</dt><dd>${tokens(r.stats.promptTokens)} / ${tokens(r.stats.completionTokens)}</dd></div></dl><a href="${esc(r.detailUrl)}" download>Download trace ↓</a><p class="exec-record-id">${esc(r.recordId)}<br>SHA-256 ${esc(r.reportSha256)}</p></div>`;}).join('');
   }
   function finalMetrics(r){
     const s=r.stats,p=r.progress;
@@ -67,7 +71,7 @@
     return metric(result,resultLabel,r.success?'is-success':'is-incomplete')+metric(...second)+metric(time(s.elapsedSeconds),'Episode time');
   }
   function episodeLimits(r){
-    const b=r.budgets;
+    const b=limitsOf(r);
     const limits=[b.max_rounds?`${num(b.max_rounds)} rounds`:null,b.max_total_tokens?`${tokens(b.max_total_tokens)} tokens`:null,b.timeout_seconds?`${num(b.timeout_seconds/60)} min`:null].filter(Boolean);
     const ending=r.success?'Goal satisfied':r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x.replaceAll('_',' ')).join(', '):'Task incomplete';
     return `<div class="exec-limit-strip"><span>Ceilings: ${esc(limits.join(' · '))}</span><strong>Ended: ${esc(ending)}</strong></div>`;

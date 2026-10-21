@@ -34,7 +34,7 @@ def build(figures):
             if name.startswith('model-logos/') and not name.endswith('/'):
                 contents[name] = previous.read(name)
     scopes = {stem: 'Ten-model main results; ablation panels retain the original experiment cohort.' for stem in MAIN}
-    scopes.update({stem: 'Nine-model detailed execution-log cohort.' for stem in ANALYSIS})
+    scopes.update({stem: 'Ten-model Planning logs; selected exact-task progress comparisons include Argon.' for stem in ANALYSIS})
     scopes['cases-affordance'] = 'Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.'
     manifest = {'manuscriptDate': '2026-10-21', 'modelsInMainComparison': 10,
                 'scopes': scopes, 'files': [{'path': n, 'sha256': hashlib.sha256(b).hexdigest(), 'bytes': len(b)} for n,b in sorted(contents.items())]}
@@ -45,7 +45,7 @@ Updated for the 21 October 2026 author manuscript.
 
 - Figures 3-8: Gemini 4 Argon included in the main comparisons. Original observation-setting ablation panels keep their original cohort.
 - cases-affordance: selected qualitative polygon examples. The online Case Atlas compares all ten models on each image.
-- execution-progress and planning-execution-profile: nine-model detailed-log analyses. Argon action traces are not yet available.
+- execution-progress and planning-execution-profile: ten-model Planning resource analysis and exact-task progress comparisons including Argon.
 
 Open .drawio files in draw.io / diagrams.net to edit the vector objects. SVG and PDF are vector exports; PNG is a preview. Keep the Comic Sans MS typeface installed when re-exporting to preserve the manuscript typography. Photographs and model logos retain their source formats and attribution; see model-logos/.
 
