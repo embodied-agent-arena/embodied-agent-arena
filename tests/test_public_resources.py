@@ -26,6 +26,10 @@ class Cards(HTMLParser):
             self.cards.append(self.active)
         if tag == 'img' and self.active is not None:
             self.active['image'] = attrs['src']
+        if tag == 'video' and self.active is not None:
+            self.active['image'] = attrs['poster']
+            self.active['video'] = attrs['data-video']
+            self.active['muted'] = 'muted' in attrs
 
     def handle_endtag(self, tag):
         if tag == 'button':
@@ -51,6 +55,9 @@ class PublicResourceTests(unittest.TestCase):
                     run = comp['runs'][card['record']]
                     self.assertEqual(run['identitySha256'], group['identitySha256'])
                     self.assertEqual(card['image'], run['poster'])
+                    if run.get('video'):
+                        self.assertEqual(card['video'], run['video'])
+                        self.assertTrue(card['muted'])
                     self.assertEqual(run['sourceReportSha256'], run['mediaReportSha256'])
 
     def test_current_figure_bundle_matches_manuscript_source(self):

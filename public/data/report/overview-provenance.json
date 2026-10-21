@@ -205,7 +205,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/astra/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "0e09a75cc2c9f0235662b7b4af337580044eda5226c82ce9e69abf3c1a5fb85b",
-      "mediaSha256": "3aa9a5e9fc1b82a027c96ed194b57b8a1544c013f37309e8a66f47091ae42110"
+      "mediaSha256": "3aa9a5e9fc1b82a027c96ed194b57b8a1544c013f37309e8a66f47091ae42110",
+      "sceneContext": null
     },
     {
       "id": "arena-1-2",
@@ -230,7 +231,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/astra/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "88953d11b36b3a76ce612b29aa49cec77e8bad8be6dff10c9ec76554e72134cd",
-      "mediaSha256": "223b02f9ef891ee065cb5d67c95cb0fb5b0b4de6f6014424af88e91b3b916aa7"
+      "mediaSha256": "223b02f9ef891ee065cb5d67c95cb0fb5b0b4de6f6014424af88e91b3b916aa7",
+      "sceneContext": null
     },
     {
       "id": "arena-1-3",
@@ -255,7 +257,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/astra/clip.mp4",
       "mediaKind": "Verified action replay",
       "mediaReportSha256": "1c3d675f161a39b056ef8f7952aa8b2858dc373e02217d5fc36940255c3844e3",
-      "mediaSha256": "00f914f44e61dcdf8aaa32cbe3664a6ef3a37078d196cfcd6d4c2453a407a7f2"
+      "mediaSha256": "00f914f44e61dcdf8aaa32cbe3664a6ef3a37078d196cfcd6d4c2453a407a7f2",
+      "sceneContext": null
     },
     {
       "id": "arena-1-4",
@@ -280,7 +283,8 @@
       "previewVideo": "assets/video-supplement-20261021/humanclaw/astra/clip.mp4",
       "mediaKind": "Saved-state render",
       "mediaReportSha256": "726aad43b1f55f9883080256d7ca3b571570b78cd618889bd1be950c160c87e7",
-      "mediaSha256": "da55b82ea07ca076558308f45a7cab00c77d61382f7f415c73233a62b2ddfd77"
+      "mediaSha256": "da55b82ea07ca076558308f45a7cab00c77d61382f7f415c73233a62b2ddfd77",
+      "sceneContext": null
     },
     {
       "id": "arena-1-5",
@@ -316,7 +320,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/e5ae9edae84afa842d0d/demo.mp4",
       "mediaKind": "Execution log",
       "mediaReportSha256": null,
-      "mediaSha256": null
+      "mediaSha256": null,
+      "sceneContext": null
     },
     {
       "id": "arena-1-6",
@@ -352,7 +357,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/489da732a469178fe67a/demo.mp4",
       "mediaKind": "Execution log",
       "mediaReportSha256": null,
-      "mediaSha256": null
+      "mediaSha256": null,
+      "sceneContext": null
     },
     {
       "id": "arena-1-7",
@@ -377,7 +383,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/astra/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "009c0a86b4f186dc2300c725558851fc5b51fd006ee82cb10019e273c4612e2d",
-      "mediaSha256": "53d5a166046de3914d3fdd02c70df234efd8602d330e90ab8ccdbdf417053a71"
+      "mediaSha256": "53d5a166046de3914d3fdd02c70df234efd8602d330e90ab8ccdbdf417053a71",
+      "sceneContext": null
     },
     {
       "id": "arena-1-8",
@@ -413,7 +420,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/8b836633fc501c749440/demo.mp4",
       "mediaKind": "Execution log",
       "mediaReportSha256": null,
-      "mediaSha256": null
+      "mediaSha256": null,
+      "sceneContext": null
     },
     {
       "id": "arena-1-9",
@@ -438,7 +446,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/c35bf226d544ddc5c964/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "7efbc23043667d9064635fc7cfa28249f1398a5cea6064de6c2157dcf6287cc4",
-      "mediaSha256": "66b73e55d19013ec06ac333511011e7d830030bf86b684436e3738b60ba6f3e2"
+      "mediaSha256": "66b73e55d19013ec06ac333511011e7d830030bf86b684436e3738b60ba6f3e2",
+      "sceneContext": null
     },
     {
       "id": "arena-1-10",
@@ -463,7 +472,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/cc90b9a47139a14f0709/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "1852ce5891f192d8903102bfe04b29180f062639108897eb22cf44c40cb9651f",
-      "mediaSha256": "df638723327bde313791b226dd48e994f860152d58cd1a323477b922510f24f0"
+      "mediaSha256": "df638723327bde313791b226dd48e994f860152d58cd1a323477b922510f24f0",
+      "sceneContext": null
     },
     {
       "id": "arena-1-11",
@@ -488,7 +498,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-astra-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "66abac85ea1c7f33a9428f0cee9d88e0789d5cd029552da4c2c3c6f6b0cd1b2a",
-      "mediaSha256": "35b9d5c53d6860ca6055e65fbe4228f8c501208b1cf187c92b9d9b33bf48c1a5"
+      "mediaSha256": "35b9d5c53d6860ca6055e65fbe4228f8c501208b1cf187c92b9d9b33bf48c1a5",
+      "sceneContext": null
     },
     {
       "id": "arena-2-1",
@@ -513,7 +524,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/sol/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "f0b910281f2b76d0c25aa8e1768ca3f74e1ac0115e170e969f180b164518ed3b",
-      "mediaSha256": "988534ab4aaa786c4d46e74a454fc799497bd9db52330e85ab5ebe9481d333c7"
+      "mediaSha256": "988534ab4aaa786c4d46e74a454fc799497bd9db52330e85ab5ebe9481d333c7",
+      "sceneContext": null
     },
     {
       "id": "arena-2-2",
@@ -538,7 +550,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/sol/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "c9faf05650c0b2c083947cf3fa89ea6bcfdb8bdd47e665239db2fdb462ab9267",
-      "mediaSha256": "afd7ddf488c2556713539a06e5c820bc56d5c1f7516baed2157704930da48a33"
+      "mediaSha256": "afd7ddf488c2556713539a06e5c820bc56d5c1f7516baed2157704930da48a33",
+      "sceneContext": null
     },
     {
       "id": "arena-2-3",
@@ -563,7 +576,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/sol/clip.mp4",
       "mediaKind": "Verified action replay",
       "mediaReportSha256": "a39bd11fe9a3841c844e3d36794a8201473c0b5383a84558caf37a4dc3cf9f69",
-      "mediaSha256": "e901eb009660d09448039b39e7e25677c33e39b58a98b9cbd0c7d5a7db0d9c1c"
+      "mediaSha256": "e901eb009660d09448039b39e7e25677c33e39b58a98b9cbd0c7d5a7db0d9c1c",
+      "sceneContext": null
     },
     {
       "id": "arena-2-4",
@@ -588,7 +602,8 @@
       "previewVideo": "assets/video-supplement-20261021/humanclaw/sol/clip.mp4",
       "mediaKind": "Saved-state render",
       "mediaReportSha256": "da1db328a685baa21f982cc09213906bcffaafc55a9a8d627451f40c74445ab8",
-      "mediaSha256": "82de4274e94a3a1af46a19da9f8c28ccd0906531312025d7429689a9e0453972"
+      "mediaSha256": "82de4274e94a3a1af46a19da9f8c28ccd0906531312025d7429689a9e0453972",
+      "sceneContext": null
     },
     {
       "id": "arena-2-5",
@@ -613,7 +628,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/sol/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "903a7d52f4f6f1c7d2c30e5208402f60556ab40c2ee5f90a83117261910004ac",
-      "mediaSha256": "c31d145d72d1964f11f17e779a90155f2b475d3e83cdd9adf5e3888b3562961d"
+      "mediaSha256": "c31d145d72d1964f11f17e779a90155f2b475d3e83cdd9adf5e3888b3562961d",
+      "sceneContext": null
     },
     {
       "id": "arena-2-6",
@@ -638,7 +654,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/sol/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "1b9a62ab35fb5195d1cb04cea9bc544dc313d9d1e9595afedc9817b0d4b0af6b",
-      "mediaSha256": "98b72df98624126947fc4505bf2de99a0f7b681ea4111c548aec41372e73a97b"
+      "mediaSha256": "98b72df98624126947fc4505bf2de99a0f7b681ea4111c548aec41372e73a97b",
+      "sceneContext": null
     },
     {
       "id": "arena-2-7",
@@ -663,7 +680,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/sol/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "e4800c0f251946aa146b503e6cca2c4e437a4bfe6f3f46d2f797d586763dc804",
-      "mediaSha256": "7dc05c03c04748f1d632f648ee9367fbdfacccaabbf5cdc69d9f68914256b77d"
+      "mediaSha256": "7dc05c03c04748f1d632f648ee9367fbdfacccaabbf5cdc69d9f68914256b77d",
+      "sceneContext": null
     },
     {
       "id": "arena-2-8",
@@ -688,7 +706,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/9e419adfbc2b0efeaa8a/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "cc3e99d36ba6ab6f6da7b5feebc2b14e7ae29aee683490377f6ce9e208fad32a",
-      "mediaSha256": "926810ddef0f24b5fc42d78b265ef9f6fef2839e0a671be50dcdaeb5dcdc39a0"
+      "mediaSha256": "926810ddef0f24b5fc42d78b265ef9f6fef2839e0a671be50dcdaeb5dcdc39a0",
+      "sceneContext": null
     },
     {
       "id": "arena-2-9",
@@ -713,7 +732,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa-sol-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "b6003b925f870f5d6e8dab41b93d2c180772f121437e672aa1c709f61608c02a",
-      "mediaSha256": "16a899e4eab8ae7f8c1127edb901dc7ae87503cea3563626a88c9622b32e3736"
+      "mediaSha256": "16a899e4eab8ae7f8c1127edb901dc7ae87503cea3563626a88c9622b32e3736",
+      "sceneContext": null
     },
     {
       "id": "arena-2-10",
@@ -738,7 +758,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa365-sol-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "0ac5a2811da309bf1871f7522ec968a09d0846060fabec6522ea2c6577b38ab9",
-      "mediaSha256": "24eef57de562eea7911e85786422d90085911af232d9ab9ad0bbb95b155c3e79"
+      "mediaSha256": "24eef57de562eea7911e85786422d90085911af232d9ab9ad0bbb95b155c3e79",
+      "sceneContext": null
     },
     {
       "id": "arena-2-11",
@@ -763,7 +784,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-sol-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "99908e530513c4d209b4be6c8c5dca445bbb7a7b0b2e8629308ed912d2e9af61",
-      "mediaSha256": "e89c1d964e668f321c0a0e45cad8e3f8632f01304685a7af826cb21ff77a799e"
+      "mediaSha256": "e89c1d964e668f321c0a0e45cad8e3f8632f01304685a7af826cb21ff77a799e",
+      "sceneContext": null
     },
     {
       "id": "arena-3-1",
@@ -788,7 +810,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/fable/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "2d6c8139354b49d966701012a2f5df67fe0ace94686ef68c4ef746d748d39c77",
-      "mediaSha256": "8df4b25b303204c5c194c031de86c99971b4f4fd04ed34fbba2b49bf8377b872"
+      "mediaSha256": "8df4b25b303204c5c194c031de86c99971b4f4fd04ed34fbba2b49bf8377b872",
+      "sceneContext": null
     },
     {
       "id": "arena-3-2",
@@ -813,7 +836,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/fable/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "a793e66994f63a6783984597dcbac7e83b6c8209b62ff7e5af39e3dc77c03940",
-      "mediaSha256": "02cefcb598133203aa286f278cfa2d865a8bc5406d862dcfd4abb55d858cc8d7"
+      "mediaSha256": "02cefcb598133203aa286f278cfa2d865a8bc5406d862dcfd4abb55d858cc8d7",
+      "sceneContext": null
     },
     {
       "id": "arena-3-3",
@@ -838,7 +862,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/fable/clip.mp4",
       "mediaKind": "Verified action replay",
       "mediaReportSha256": "0149fde9cf6eb9e37d5431ee506ef2508ec8732eb5fffa651b3e78569ea08321",
-      "mediaSha256": "29f351ce8bb59857f6b50d7f1d3a76f93d21a785035e6815ef9293a2948ce674"
+      "mediaSha256": "29f351ce8bb59857f6b50d7f1d3a76f93d21a785035e6815ef9293a2948ce674",
+      "sceneContext": null
     },
     {
       "id": "arena-3-4",
@@ -863,7 +888,8 @@
       "previewVideo": "assets/video-supplement-20261021/humanclaw/fable/clip.mp4",
       "mediaKind": "Saved-state render",
       "mediaReportSha256": "dbbd0b294b2f68297e01258d868779aac9c2e02e52a69160ac0f20219fb29f0b",
-      "mediaSha256": "c85dd8eaea1d09624eaa3431594ea083150c8d90d4c24ae1b1767c6decdd6913"
+      "mediaSha256": "c85dd8eaea1d09624eaa3431594ea083150c8d90d4c24ae1b1767c6decdd6913",
+      "sceneContext": null
     },
     {
       "id": "arena-3-5",
@@ -888,7 +914,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/fable/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "5fe956956f5a1d647f57b048f79a09559784545acfe13a3adbc2c1aa066a24e2",
-      "mediaSha256": "c74bbf2da14917e24d7dcbf41597f88388eb3219e2a36104e7216cff8cfda4ff"
+      "mediaSha256": "c74bbf2da14917e24d7dcbf41597f88388eb3219e2a36104e7216cff8cfda4ff",
+      "sceneContext": null
     },
     {
       "id": "arena-3-6",
@@ -913,7 +940,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/fable/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "bed16f4a3f3ae18ba5e5f36b30172874c341ac51ccd8ad7f9f763db985aa7aaa",
-      "mediaSha256": "d5f284cd470db94c96506577667acd8b10bd4540c54baac40239d5542b6343c6"
+      "mediaSha256": "d5f284cd470db94c96506577667acd8b10bd4540c54baac40239d5542b6343c6",
+      "sceneContext": null
     },
     {
       "id": "arena-3-7",
@@ -938,7 +966,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/fable/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "edf565dd7ee1033404a15ab71dc1d907223f31d106c0ad869d308d2541f31f52",
-      "mediaSha256": "d440060d3593ec4b4b65356e931072b3137700686738b4d72ddd350bade820b3"
+      "mediaSha256": "d440060d3593ec4b4b65356e931072b3137700686738b4d72ddd350bade820b3",
+      "sceneContext": null
     },
     {
       "id": "arena-3-8",
@@ -963,7 +992,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/b26f615415db27f9d056/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "6795150cbfb7a91212df68180f1d9106acb9b4da2bb9b81d48c336a495b7d7f4",
-      "mediaSha256": "6e17a7ff0d8e162a5e5d7091fdb043a837b48d3a4df96edb76c34279c3f000e4"
+      "mediaSha256": "6e17a7ff0d8e162a5e5d7091fdb043a837b48d3a4df96edb76c34279c3f000e4",
+      "sceneContext": null
     },
     {
       "id": "arena-3-9",
@@ -988,7 +1018,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa-fable-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "8cd3456b31ff712607c490add53b02ff89be8be1972e4831a47f145cc43ccbbd",
-      "mediaSha256": "2a4738fb18be714f472d48a787c8ff633e5acbd6c63062c625797a0e6d50361d"
+      "mediaSha256": "2a4738fb18be714f472d48a787c8ff633e5acbd6c63062c625797a0e6d50361d",
+      "sceneContext": null
     },
     {
       "id": "arena-3-10",
@@ -1013,7 +1044,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa365-fable-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "52a3dbf8ebe4fd55f1ca0da5c527179c324c1a247151c8b6bc1a31bd1f281b9b",
-      "mediaSha256": "69f3247fbe8e8b1e2ca5dd0c45fddce25972591d5b450ef68cd333f6a2506fd6"
+      "mediaSha256": "69f3247fbe8e8b1e2ca5dd0c45fddce25972591d5b450ef68cd333f6a2506fd6",
+      "sceneContext": null
     },
     {
       "id": "arena-3-11",
@@ -1038,7 +1070,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-fable-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "be2814e3c13d5972a59f359f9930587cc2bfe8a5176d7ef97c241437cd23e54c",
-      "mediaSha256": "d6d84b6fcd2f6ead18dd48892ad7e75d32552a35474621f6b1e1a4571c78a2a9"
+      "mediaSha256": "d6d84b6fcd2f6ead18dd48892ad7e75d32552a35474621f6b1e1a4571c78a2a9",
+      "sceneContext": null
     },
     {
       "id": "arena-4-1",
@@ -1063,7 +1096,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/gemini/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "480e2a9ef6385c3c6cf41b84f812f1294447afb30451636eb05b59b595b63997",
-      "mediaSha256": "0ce99de4362b3e5210d75094febe28ac9a1515e51f4534120d0365db8c9bffc4"
+      "mediaSha256": "0ce99de4362b3e5210d75094febe28ac9a1515e51f4534120d0365db8c9bffc4",
+      "sceneContext": null
     },
     {
       "id": "arena-4-2",
@@ -1088,7 +1122,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/gemini/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "da005f963dac5504c235ff7f0a4c15e7aaad90752182331a2877149418a7abde",
-      "mediaSha256": "9bf6169a894ac96c981716f3e713c77de49fc8d57868d7fff70a49966fdd4c3b"
+      "mediaSha256": "9bf6169a894ac96c981716f3e713c77de49fc8d57868d7fff70a49966fdd4c3b",
+      "sceneContext": null
     },
     {
       "id": "arena-4-3",
@@ -1113,7 +1148,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/gemini/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "b2710ff0339c477f09c3c863da02d7e53e1e4163396b98d41e5d01a6de84fdf0",
-      "mediaSha256": "7e737b61748304e58b4da4058c202d32b626214bda22b9e5aba63e048f5f71f8"
+      "mediaSha256": "7e737b61748304e58b4da4058c202d32b626214bda22b9e5aba63e048f5f71f8",
+      "sceneContext": null
     },
     {
       "id": "arena-4-4",
@@ -1138,7 +1174,8 @@
       "previewVideo": "assets/video-supplement-20261021/humanclaw/gemini/clip.mp4",
       "mediaKind": "Saved-state render",
       "mediaReportSha256": "b96b83770b65455abc0bdd263feaa5aef78d45d7c271fa791cfc26881ac2d866",
-      "mediaSha256": "d94cfc4ef66780611aa40260a29342181088b39fd54397377056569928abaf0f"
+      "mediaSha256": "d94cfc4ef66780611aa40260a29342181088b39fd54397377056569928abaf0f",
+      "sceneContext": null
     },
     {
       "id": "arena-4-5",
@@ -1163,7 +1200,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/gemini/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "9ac0306120cfdd97e422f53e8dbd6d15c3e296d64a1c9d6a2c8b6df53b910bd6",
-      "mediaSha256": "b3b65d3ecc19ef57b9e80f663843b76b18c20ba2315b4f6096439226a74adeb1"
+      "mediaSha256": "b3b65d3ecc19ef57b9e80f663843b76b18c20ba2315b4f6096439226a74adeb1",
+      "sceneContext": null
     },
     {
       "id": "arena-4-6",
@@ -1188,7 +1226,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/gemini/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "be7b4a46734764cc58422226ae718909b850f1ee02a32473f5325305a2e7eff1",
-      "mediaSha256": "4b509c00ee6e6c745e6b08103ecc0b5216e38bb0361d2a3b300b6a8351800013"
+      "mediaSha256": "4b509c00ee6e6c745e6b08103ecc0b5216e38bb0361d2a3b300b6a8351800013",
+      "sceneContext": null
     },
     {
       "id": "arena-4-7",
@@ -1213,7 +1252,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/gemini/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "75c8ecb706dd8bf95fa5add1cf3015bae5d8a283f5574fdcc6c5d61979c8e4ac",
-      "mediaSha256": "8923d4da23e00b4b84be659b0dace2a87d9a8c1e40e4b10cb909aa2b7c400c46"
+      "mediaSha256": "8923d4da23e00b4b84be659b0dace2a87d9a8c1e40e4b10cb909aa2b7c400c46",
+      "sceneContext": null
     },
     {
       "id": "arena-4-8",
@@ -1238,7 +1278,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/44f924b0bd8d2cdb25ee/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "f064cbac201cf453a1f99b39204c4a44c00c2c39af7f2f6a39bcfabd70c0c141",
-      "mediaSha256": "dd54b972aaa7f2d3e2e7a638872d78d60abcaafd39f7316a8ce44e86bb9e0a6e"
+      "mediaSha256": "dd54b972aaa7f2d3e2e7a638872d78d60abcaafd39f7316a8ce44e86bb9e0a6e",
+      "sceneContext": null
     },
     {
       "id": "arena-4-9",
@@ -1263,7 +1304,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa-gemini-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "5a9ed0ca7fb7a59b4716e5acadf5b986fd0a7a4ee5a1a2d491777aaa7ca28e2b",
-      "mediaSha256": "54da3a08759588e97cc754778866124120b4cb75da1e2711253c2107aaf23cd2"
+      "mediaSha256": "54da3a08759588e97cc754778866124120b4cb75da1e2711253c2107aaf23cd2",
+      "sceneContext": null
     },
     {
       "id": "arena-4-10",
@@ -1288,7 +1330,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa365-gemini-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "107f4b63318d420c85f90efd079b482b719e6d871aa47734ec0f5c91537d9d81",
-      "mediaSha256": "39c15d3dc7bfa3d668a85c57f651af551f25e9dfea4dfbc71a6654e65e714e03"
+      "mediaSha256": "39c15d3dc7bfa3d668a85c57f651af551f25e9dfea4dfbc71a6654e65e714e03",
+      "sceneContext": null
     },
     {
       "id": "arena-4-11",
@@ -1313,7 +1356,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-gemini-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "5270706464b7db31c3bc83f5fb435fc373c7ddd05c0d7a97ddd9e648e907e50e",
-      "mediaSha256": "eca224ed935d28a789f7913a52bd95715d95058eadfc67b45bc1f5bcc31ef55e"
+      "mediaSha256": "eca224ed935d28a789f7913a52bd95715d95058eadfc67b45bc1f5bcc31ef55e",
+      "sceneContext": null
     },
     {
       "id": "arena-5-1",
@@ -1338,7 +1382,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/qwen/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "993d77c2071407abfc3a13d8d924279377e8c2dfb49821d9b24e2f644d260e12",
-      "mediaSha256": "663bbcefda7ca444064d628bf47ab2c6827a29922ed55df4a2ea6a6a23a06fb8"
+      "mediaSha256": "663bbcefda7ca444064d628bf47ab2c6827a29922ed55df4a2ea6a6a23a06fb8",
+      "sceneContext": null
     },
     {
       "id": "arena-5-2",
@@ -1363,7 +1408,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/qwen/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "8397f45480f391f4dc9a88f29594636abcebdc1ef45a0bdfaa34e1b0d4000d3f",
-      "mediaSha256": "a6c893532bdaa10bc04832dd2ce2186f85a9d4d226a095fb0d8d181a84a244d7"
+      "mediaSha256": "a6c893532bdaa10bc04832dd2ce2186f85a9d4d226a095fb0d8d181a84a244d7",
+      "sceneContext": null
     },
     {
       "id": "arena-5-3",
@@ -1388,7 +1434,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/qwen/clip.mp4",
       "mediaKind": "Verified action replay",
       "mediaReportSha256": "dd58c08214172b3def0b7c7fc2c26d33c905ae1ee1a43b71e7afd69433e77c80",
-      "mediaSha256": "b0884206d881669563de7fb734bf6a2d0db868098909af1a935dfc05363eaa5a"
+      "mediaSha256": "b0884206d881669563de7fb734bf6a2d0db868098909af1a935dfc05363eaa5a",
+      "sceneContext": null
     },
     {
       "id": "arena-5-4",
@@ -1413,7 +1460,14 @@
       "previewVideo": null,
       "mediaKind": "Execution log",
       "mediaReportSha256": null,
-      "mediaSha256": null
+      "mediaSha256": null,
+      "sceneContext": {
+        "image": "assets/video-supplement-20261021/humanclaw/astra/poster.jpg",
+        "sourceRunId": "record-d22a2fde185991a86e5d",
+        "taskId": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
+        "model": "GPT-6 Astra",
+        "kind": "scene"
+      }
     },
     {
       "id": "arena-5-5",
@@ -1438,7 +1492,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/qwen/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "e0a82652f015f35d42118a8d6ae41b48ca2ca05ac9a8dd1c2c0289feb0966bb7",
-      "mediaSha256": "68fe904e0782773b8017f2bd0c26a561fc5b70ef736d6b45720b3e23df2b8989"
+      "mediaSha256": "68fe904e0782773b8017f2bd0c26a561fc5b70ef736d6b45720b3e23df2b8989",
+      "sceneContext": null
     },
     {
       "id": "arena-5-6",
@@ -1463,7 +1518,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/qwen/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "c4a5551d2269aff19912c6789b61004f2f6e3b35d19eee8eda4f22cace7f9bcf",
-      "mediaSha256": "7cbb2761469f33a2c5615d77a1cce14ad06f14ecf72e9c53b0652e95324ab3af"
+      "mediaSha256": "7cbb2761469f33a2c5615d77a1cce14ad06f14ecf72e9c53b0652e95324ab3af",
+      "sceneContext": null
     },
     {
       "id": "arena-5-7",
@@ -1488,7 +1544,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/qwen/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "13ec25f0d4eb2194c03ae7b317a035589e442228a1c41d114fd3d322efa3ddbb",
-      "mediaSha256": "5e34ce9e6c6a6a0ed799085b6188559bd8074e4a5dd6e98c29c7ab91ecde27a8"
+      "mediaSha256": "5e34ce9e6c6a6a0ed799085b6188559bd8074e4a5dd6e98c29c7ab91ecde27a8",
+      "sceneContext": null
     },
     {
       "id": "arena-5-8",
@@ -1513,7 +1570,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/59e95ad45f8aa07a7fa9/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "4dc4c3594f71ec9efe3fc2a8ee8d32b19408f4fe924d80bc67fc6a8d31e760e4",
-      "mediaSha256": "476adbe5d42b0790153d908a1e4541975deaaa7c890d455d8bb840701c13c183"
+      "mediaSha256": "476adbe5d42b0790153d908a1e4541975deaaa7c890d455d8bb840701c13c183",
+      "sceneContext": null
     },
     {
       "id": "arena-5-9",
@@ -1538,7 +1596,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa-qwen-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "29e7e48f3c10f3f3467c599a773cd9aa3d942d773f3c718c9b5b3d978ca7a0ee",
-      "mediaSha256": "f2848dd7b23549f6066e5925fbe8b8c2df5ac4c6496ec1ea5d656b5e49a6e904"
+      "mediaSha256": "f2848dd7b23549f6066e5925fbe8b8c2df5ac4c6496ec1ea5d656b5e49a6e904",
+      "sceneContext": null
     },
     {
       "id": "arena-5-10",
@@ -1563,7 +1622,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/47eb4d296519bf5ea5bc/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "0c251c63b5fe5008e465504a9bee977b9a043117cc30d67384c58891ca179837",
-      "mediaSha256": "dafffc9f7ddcae1268e896d8231d7dddf6da7627731a192b60a8b383151bf70a"
+      "mediaSha256": "dafffc9f7ddcae1268e896d8231d7dddf6da7627731a192b60a8b383151bf70a",
+      "sceneContext": null
     },
     {
       "id": "arena-5-11",
@@ -1588,7 +1648,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/6a2af64022bd0555647e/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "661540afbb8f68e210ce2f094e9ab08c460d65a367a942613513dde0310534aa",
-      "mediaSha256": "699136e2534a45e85d0bc70549ac081d8e9ca5b389290b6adb91f9aa016636bd"
+      "mediaSha256": "699136e2534a45e85d0bc70549ac081d8e9ca5b389290b6adb91f9aa016636bd",
+      "sceneContext": null
     },
     {
       "id": "arena-6-1",
@@ -1613,7 +1674,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/qwen35-397b/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "147317a3734b806cc99a723c6f701edfdd96d083003e5a4f9b7f5bb05b591c30",
-      "mediaSha256": "ac5f751254328c19f86c322258ce153cc5da81f1db6c1fa6fa16c715b303fc55"
+      "mediaSha256": "ac5f751254328c19f86c322258ce153cc5da81f1db6c1fa6fa16c715b303fc55",
+      "sceneContext": null
     },
     {
       "id": "arena-6-2",
@@ -1638,7 +1700,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/qwen35-397b/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "51eae4f6298edb3ea926a96ad869ea7661a2789311bfa077b6d856b86649f5d9",
-      "mediaSha256": "bebe2c932625c9e66f315e91a692f262b88f60d2cc0d540dc081488c0aa27a26"
+      "mediaSha256": "bebe2c932625c9e66f315e91a692f262b88f60d2cc0d540dc081488c0aa27a26",
+      "sceneContext": null
     },
     {
       "id": "arena-6-3",
@@ -1663,7 +1726,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/qwen35-397b/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "63640277a2e0f6c64d98e9e2234d05e3ddfcedc68eb9cf52bb53d7b8564ed102",
-      "mediaSha256": "5a6d572a92e2a24171c9c0972418e67cbdfb93b804abf96361fc8c3b972b6f0d"
+      "mediaSha256": "5a6d572a92e2a24171c9c0972418e67cbdfb93b804abf96361fc8c3b972b6f0d",
+      "sceneContext": null
     },
     {
       "id": "arena-6-4",
@@ -1688,7 +1752,14 @@
       "previewVideo": null,
       "mediaKind": "Execution log",
       "mediaReportSha256": null,
-      "mediaSha256": null
+      "mediaSha256": null,
+      "sceneContext": {
+        "image": "assets/video-supplement-20261021/humanclaw/astra/poster.jpg",
+        "sourceRunId": "record-d22a2fde185991a86e5d",
+        "taskId": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
+        "model": "GPT-6 Astra",
+        "kind": "scene"
+      }
     },
     {
       "id": "arena-6-5",
@@ -1713,7 +1784,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/qwen35-397b/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "a62fb8e8cf61aaf3545062366bbe11d0976682bae17672406a78197a56dedca4",
-      "mediaSha256": "981b9b8742fa21dada2a44feb9d221d02124a092df7d584ee47e9908adaa742a"
+      "mediaSha256": "981b9b8742fa21dada2a44feb9d221d02124a092df7d584ee47e9908adaa742a",
+      "sceneContext": null
     },
     {
       "id": "arena-6-6",
@@ -1738,7 +1810,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/qwen35-397b/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "ad8504d697e8f3736ebb61d5a0b42f963e107820bd6ae160eb67bf8d7ed056aa",
-      "mediaSha256": "d6764fe7e52cdfaf9198099727c3e12044f8da50531807b0fc494f1480da5092"
+      "mediaSha256": "d6764fe7e52cdfaf9198099727c3e12044f8da50531807b0fc494f1480da5092",
+      "sceneContext": null
     },
     {
       "id": "arena-6-7",
@@ -1763,7 +1836,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/qwen35-397b/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "4b1fb9c9443386e02f97bacfda7f567da2fc5818fcaeaa92aba2c3e4d111d40d",
-      "mediaSha256": "2da81efcf06f56b750b907710507ebbf88c39719290ef923724c3899bc7de3af"
+      "mediaSha256": "2da81efcf06f56b750b907710507ebbf88c39719290ef923724c3899bc7de3af",
+      "sceneContext": null
     },
     {
       "id": "arena-6-8",
@@ -1788,7 +1862,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/8d086218d0c1387957a6/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "30d373b1dd7100a221fe1ae630419eab48b3e564148b646838e06b04a23b28be",
-      "mediaSha256": "de9a1db5200c43c7ceed36ba1b61c61ad71181c18ff9cbe2c270bb152b029905"
+      "mediaSha256": "de9a1db5200c43c7ceed36ba1b61c61ad71181c18ff9cbe2c270bb152b029905",
+      "sceneContext": null
     },
     {
       "id": "arena-6-9",
@@ -1813,7 +1888,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/fd51830462c5d202ff9c/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "516e6dacd7d59c0697c6f1a076c2dee3326ffbe9d390365618715c8eed02edcd",
-      "mediaSha256": "d520cc7349aa0ab0d255dabf59b64df23414ce639adb76e35283ed525a7f66a5"
+      "mediaSha256": "d520cc7349aa0ab0d255dabf59b64df23414ce639adb76e35283ed525a7f66a5",
+      "sceneContext": null
     },
     {
       "id": "arena-6-10",
@@ -1838,7 +1914,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa365-qwen35-397b-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "20853a42a41935268e7c8c125ac715512c1ffaedadbf3e8528109be35f9137a9",
-      "mediaSha256": "b55b76daf81abbe198aa00ddd240f70c47cbc641cce7327e04b966647718a540"
+      "mediaSha256": "b55b76daf81abbe198aa00ddd240f70c47cbc641cce7327e04b966647718a540",
+      "sceneContext": null
     },
     {
       "id": "arena-6-11",
@@ -1863,7 +1940,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-qwen35-397b-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "f202ea5c346deac29e6d635b77dea44847ec64e0be15711ca9a42ac23736fc0c",
-      "mediaSha256": "26e8d77475be19bf8cfef45708e52eb57128bebac0ebf02454fc136fc93c7e34"
+      "mediaSha256": "26e8d77475be19bf8cfef45708e52eb57128bebac0ebf02454fc136fc93c7e34",
+      "sceneContext": null
     },
     {
       "id": "arena-7-1",
@@ -1888,7 +1966,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/qwen35-27b/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "87663ccac683ea54d03f24e8a084f84ce20dd6925140dadd46592e8bdd94749b",
-      "mediaSha256": "a447cf44ce8629571028d5ea584076090861e984f9cb590ac9924e663be01f5d"
+      "mediaSha256": "a447cf44ce8629571028d5ea584076090861e984f9cb590ac9924e663be01f5d",
+      "sceneContext": null
     },
     {
       "id": "arena-7-2",
@@ -1913,7 +1992,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/qwen35-27b/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "c957a7ee4f4162cd02995cbdc29a772649c9d646ffaa3cde51142099bc9f8bdf",
-      "mediaSha256": "a3c6ccb9a3643bbfe76d032b3c6da61232ce8b637e597115604fddeae98524e9"
+      "mediaSha256": "a3c6ccb9a3643bbfe76d032b3c6da61232ce8b637e597115604fddeae98524e9",
+      "sceneContext": null
     },
     {
       "id": "arena-7-3",
@@ -1938,7 +2018,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/qwen35-27b/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "0093ddac6eb13de52db23364bde86ca91711792cda7265ede4c9f3734b6dd1c5",
-      "mediaSha256": "e3c14fb9dfa44204b6e653526c6bd215718ed3ca6f3c26f0087ca8c6177917cc"
+      "mediaSha256": "e3c14fb9dfa44204b6e653526c6bd215718ed3ca6f3c26f0087ca8c6177917cc",
+      "sceneContext": null
     },
     {
       "id": "arena-7-4",
@@ -1963,7 +2044,14 @@
       "previewVideo": null,
       "mediaKind": "Execution log",
       "mediaReportSha256": null,
-      "mediaSha256": null
+      "mediaSha256": null,
+      "sceneContext": {
+        "image": "assets/video-supplement-20261021/humanclaw/astra/poster.jpg",
+        "sourceRunId": "record-d22a2fde185991a86e5d",
+        "taskId": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
+        "model": "GPT-6 Astra",
+        "kind": "scene"
+      }
     },
     {
       "id": "arena-7-5",
@@ -1988,7 +2076,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/qwen35-27b/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "217005d81c3138b92685cad6a84c8723930f09ad792cce96a8a92c0f8ab68289",
-      "mediaSha256": "f9fbb42ec322340ff16281aab1b0eadfe0579e81a610e8fbb696408f7ad63890"
+      "mediaSha256": "f9fbb42ec322340ff16281aab1b0eadfe0579e81a610e8fbb696408f7ad63890",
+      "sceneContext": null
     },
     {
       "id": "arena-7-6",
@@ -2013,7 +2102,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/qwen35-27b/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "973dbfa424efa1d4d6ca0243d90907d2f0324e14478abdac0f70eb673655feca",
-      "mediaSha256": "243233ee119cdc0f88f5879c0ee783379886c7e175771cf310b85da4e6c1b05c"
+      "mediaSha256": "243233ee119cdc0f88f5879c0ee783379886c7e175771cf310b85da4e6c1b05c",
+      "sceneContext": null
     },
     {
       "id": "arena-7-7",
@@ -2038,7 +2128,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/qwen35-27b/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "d7afd8fd2144ed59b0d2be0587f60dff6bc4517c9f43f882368cf9c522be4cfc",
-      "mediaSha256": "80df37e98e287d238166fdaada99698a2bced7a15e62b216a4f89f781f44e956"
+      "mediaSha256": "80df37e98e287d238166fdaada99698a2bced7a15e62b216a4f89f781f44e956",
+      "sceneContext": null
     },
     {
       "id": "arena-7-8",
@@ -2063,7 +2154,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/cfa8e31171b9d1f791db/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "36693b4dfdaf69063c50980e41dc9e486336a9bcf168ffde5559864027d4ac0f",
-      "mediaSha256": "6b0f2d55a08bee3dfffa5d48a656d1e9e9a5608ad586b3cfe0f31ba52d6ff7aa"
+      "mediaSha256": "6b0f2d55a08bee3dfffa5d48a656d1e9e9a5608ad586b3cfe0f31ba52d6ff7aa",
+      "sceneContext": null
     },
     {
       "id": "arena-7-9",
@@ -2088,7 +2180,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa-qwen35-27b-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "c906c5cd522e33c755b330bbc0ecec0fa2093ace833a1e6574707478909d6add",
-      "mediaSha256": "6e9349ea8068f9574b5d5376d6d3881761b78d54448c375c89605f991179f59b"
+      "mediaSha256": "6e9349ea8068f9574b5d5376d6d3881761b78d54448c375c89605f991179f59b",
+      "sceneContext": null
     },
     {
       "id": "arena-7-10",
@@ -2113,7 +2206,8 @@
       "previewVideo": null,
       "mediaKind": "Saved observations",
       "mediaReportSha256": "5d851e118e46dc60f79098366e30a8a78d26cde58104ab99fd4f4c8bf6456049",
-      "mediaSha256": "00dbfe5856d55e55cdddeff589e5e62e21fdf6802c39e034debb7c49869ae91d"
+      "mediaSha256": "00dbfe5856d55e55cdddeff589e5e62e21fdf6802c39e034debb7c49869ae91d",
+      "sceneContext": null
     },
     {
       "id": "arena-7-11",
@@ -2138,7 +2232,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-qwen35-27b-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "7e08cd6e74730c4f0ae68eb0899ed85e090bb6780e73416e82ee9f3e48d4d9af",
-      "mediaSha256": "be34374ce2f3921e0f29d1616aab9c203865b6319971c6463851b3b95e49a736"
+      "mediaSha256": "be34374ce2f3921e0f29d1616aab9c203865b6319971c6463851b3b95e49a736",
+      "sceneContext": null
     },
     {
       "id": "arena-8-1",
@@ -2163,7 +2258,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/opus55/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "bf5482562fc4507bc8b406e05ac104a731e94b37af5bdafa317f44e22b9ed568",
-      "mediaSha256": "03dd41f776e598f142575bf6c53884bd45ff211dc96d2b389315221d51f306f0"
+      "mediaSha256": "03dd41f776e598f142575bf6c53884bd45ff211dc96d2b389315221d51f306f0",
+      "sceneContext": null
     },
     {
       "id": "arena-8-2",
@@ -2188,7 +2284,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/opus55/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "a459cff978602711598eb2768cd86ff25831157b471d7e73a8fb5983f6cdd4f5",
-      "mediaSha256": "3436a2f6deca03ba5863fac6474576b8dae1e5884eaf79ff6ea35c2c4d9ed2cd"
+      "mediaSha256": "3436a2f6deca03ba5863fac6474576b8dae1e5884eaf79ff6ea35c2c4d9ed2cd",
+      "sceneContext": null
     },
     {
       "id": "arena-8-3",
@@ -2213,7 +2310,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/opus55/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "c69112a98751e2dcfdfde9c09bd26f0677fe984e082823f3afa6029d7a934293",
-      "mediaSha256": "8ee2dd0e64d15f05fb3c9183d3b1087d33db84a9c5c12cadeb7f4a4332a5ddf7"
+      "mediaSha256": "8ee2dd0e64d15f05fb3c9183d3b1087d33db84a9c5c12cadeb7f4a4332a5ddf7",
+      "sceneContext": null
     },
     {
       "id": "arena-8-4",
@@ -2238,7 +2336,8 @@
       "previewVideo": "assets/video-supplement-20261021/humanclaw/opus55/clip.mp4",
       "mediaKind": "Saved-state render",
       "mediaReportSha256": "252b0f64e3f5d54afffc38075b1767e41cf3afd57ac1834ff893890296440b9a",
-      "mediaSha256": "107ad18b0c939247f73895b36528e40bb12d738761201c448327d6adab79b993"
+      "mediaSha256": "107ad18b0c939247f73895b36528e40bb12d738761201c448327d6adab79b993",
+      "sceneContext": null
     },
     {
       "id": "arena-8-5",
@@ -2263,7 +2362,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/opus55/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "3d444d3e161da916afa32b06d85c13af0db632f069227494291dbbc29737df9b",
-      "mediaSha256": "692bac9d4771050dd3584af87a9f5112ceb81131dfc60f3833595f9cb160415c"
+      "mediaSha256": "692bac9d4771050dd3584af87a9f5112ceb81131dfc60f3833595f9cb160415c",
+      "sceneContext": null
     },
     {
       "id": "arena-8-6",
@@ -2288,7 +2388,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/opus55/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "a34c2e70b6441ff0168f6c3cd4767324a3d3f12283c1530f65501d1bdb6d094a",
-      "mediaSha256": "44a6e1c7570d7f7c81cfab78fb103327db33e8dbcfd19dd846ab690039b08051"
+      "mediaSha256": "44a6e1c7570d7f7c81cfab78fb103327db33e8dbcfd19dd846ab690039b08051",
+      "sceneContext": null
     },
     {
       "id": "arena-8-7",
@@ -2313,7 +2414,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/opus55/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "6e4f47a49f6fac7ede0a34b4eccd401717ae607c23e83c104e0e2e63e4cec5fa",
-      "mediaSha256": "dcde673063893d70acbf72909becf72c230f5d27a6101cb7783d27f4269f9943"
+      "mediaSha256": "dcde673063893d70acbf72909becf72c230f5d27a6101cb7783d27f4269f9943",
+      "sceneContext": null
     },
     {
       "id": "arena-8-8",
@@ -2338,7 +2440,8 @@
       "previewVideo": "assets/model-cases/W4-cliport-opus55-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "4b9bab1dae91f107019662566a361c11f45323c3e9211c0bd306913f82d4135d",
-      "mediaSha256": "23be3c184ea29b5168a739d69dcb6bc3e3ffabb435b2a1b9d14bd53162367807"
+      "mediaSha256": "23be3c184ea29b5168a739d69dcb6bc3e3ffabb435b2a1b9d14bd53162367807",
+      "sceneContext": null
     },
     {
       "id": "arena-8-9",
@@ -2363,7 +2466,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/710d465bd28ec7e3466a/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "ff20170ea550eae189a2e5e241cc92ea95c2bf6c982334d6f6e4b3da6c771502",
-      "mediaSha256": "827eea5b5272d81bddc9a52365ed4d022fb30e4f49404ceea78b991c8bb69420"
+      "mediaSha256": "827eea5b5272d81bddc9a52365ed4d022fb30e4f49404ceea78b991c8bb69420",
+      "sceneContext": null
     },
     {
       "id": "arena-8-10",
@@ -2388,7 +2492,8 @@
       "previewVideo": "assets/homepage-supplement-20261022/6b252b7a42f0f66bc255/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "20fcf1a89580fe984c9c85cf5ff53ad0c64187efae418549f93feff46f65ae2a",
-      "mediaSha256": "bf896fbdac3652c15120bae46eb2714edc8d2109ffde31188865f6b22b974323"
+      "mediaSha256": "bf896fbdac3652c15120bae46eb2714edc8d2109ffde31188865f6b22b974323",
+      "sceneContext": null
     },
     {
       "id": "arena-8-11",
@@ -2413,7 +2518,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-opus55-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "dc1082e3797be9493dfdf93254510fe7e58df88a7062c9d369d3c2f4b21379eb",
-      "mediaSha256": "b019b7ebf19bad29f150e972608c27c5287ccb52b09fcb52f3834d777d4dd8b4"
+      "mediaSha256": "b019b7ebf19bad29f150e972608c27c5287ccb52b09fcb52f3834d777d4dd8b4",
+      "sceneContext": null
     },
     {
       "id": "arena-9-1",
@@ -2438,7 +2544,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/deepseek/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "83165814a0683ca5fff84b2b6acba6343d952be2cd7956f26bb643eb6265c1b7",
-      "mediaSha256": "38a279a668b143e17e26ec3cda5c09021bd03bf99e53da757f8559057223090f"
+      "mediaSha256": "38a279a668b143e17e26ec3cda5c09021bd03bf99e53da757f8559057223090f",
+      "sceneContext": null
     },
     {
       "id": "arena-9-2",
@@ -2463,7 +2570,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/deepseek/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "2359f472c528f1da3057d410d1c73dde533afa84847b8db36aa6177441d83297",
-      "mediaSha256": "d93bfcfe8ea486bb9b8b4f321ec3647ad254343e707a2136d3ebc7f039cf650d"
+      "mediaSha256": "d93bfcfe8ea486bb9b8b4f321ec3647ad254343e707a2136d3ebc7f039cf650d",
+      "sceneContext": null
     },
     {
       "id": "arena-9-3",
@@ -2488,7 +2596,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/deepseek/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "b87667680e2752fb60f59610c51ef599a25e58b68350459b31d36186eefe3985",
-      "mediaSha256": "ee1d88bcbd7166ea5d7cbe9cef5d452a8da258c90a5baa7a2633a776c11eb877"
+      "mediaSha256": "ee1d88bcbd7166ea5d7cbe9cef5d452a8da258c90a5baa7a2633a776c11eb877",
+      "sceneContext": null
     },
     {
       "id": "arena-9-4",
@@ -2513,7 +2622,8 @@
       "previewVideo": "assets/video-supplement-20261021/humanclaw/deepseek/clip.mp4",
       "mediaKind": "Saved-state render",
       "mediaReportSha256": "d708ea6bdf0418dd7683f6f02d82bfbc721b8345252a6f2d5a8405b161360493",
-      "mediaSha256": "42928e0b7ee63acd8818eeb813661c1a9e13476e166091ef5af884ed83e09ab4"
+      "mediaSha256": "42928e0b7ee63acd8818eeb813661c1a9e13476e166091ef5af884ed83e09ab4",
+      "sceneContext": null
     },
     {
       "id": "arena-9-5",
@@ -2538,7 +2648,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/deepseek/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "5defe359986dc3000abe5d5818156093e27332b1d2122656450a5d66a20686cb",
-      "mediaSha256": "ad8764d5df75393668060de7a74c2bf85fb4fa86969362cf3c9213b36114f013"
+      "mediaSha256": "ad8764d5df75393668060de7a74c2bf85fb4fa86969362cf3c9213b36114f013",
+      "sceneContext": null
     },
     {
       "id": "arena-9-6",
@@ -2563,7 +2674,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/deepseek/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "086a73ba07f1b8664706a75e6fd6d37bdbe5c62b803c540f1a27585a43b06faa",
-      "mediaSha256": "fc30bae5bf1e1abc69802fec764c1337e191537b73fa33ad7fd1f76c4ece9a15"
+      "mediaSha256": "fc30bae5bf1e1abc69802fec764c1337e191537b73fa33ad7fd1f76c4ece9a15",
+      "sceneContext": null
     },
     {
       "id": "arena-9-7",
@@ -2588,7 +2700,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/deepseek/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "d18264307c75be15a81ed170e0a36267e8f6098f4375b5a8d25c6fb70ec17d86",
-      "mediaSha256": "8523b4fc4263ab156ed1472f2689a6ff9096c6bac29e2c1a24c88ed06d061ce6"
+      "mediaSha256": "8523b4fc4263ab156ed1472f2689a6ff9096c6bac29e2c1a24c88ed06d061ce6",
+      "sceneContext": null
     },
     {
       "id": "arena-9-8",
@@ -2613,7 +2726,8 @@
       "previewVideo": "assets/model-cases/W4-cliport-deepseek-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "4cbda27e5df56382b8d76251c194fb89f8182d1d0087ecc80311f81f7c1b1ab1",
-      "mediaSha256": "1d50e4fbff3765c2d4ba9e4e29f1fb764430db1408b0df4505dc90f9a3a80110"
+      "mediaSha256": "1d50e4fbff3765c2d4ba9e4e29f1fb764430db1408b0df4505dc90f9a3a80110",
+      "sceneContext": null
     },
     {
       "id": "arena-9-9",
@@ -2638,7 +2752,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa-deepseek-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "0fffc6da9fd567dc324bd4ed09f621cd37f1d5684a304b6c12cb31445dc8e8d1",
-      "mediaSha256": "f7c8e72edb47c976b18b524c5a8fb5ef295c95847edc88023231d6d5eafd8628"
+      "mediaSha256": "f7c8e72edb47c976b18b524c5a8fb5ef295c95847edc88023231d6d5eafd8628",
+      "sceneContext": null
     },
     {
       "id": "arena-9-10",
@@ -2663,7 +2778,8 @@
       "previewVideo": "assets/model-cases/W4-robocasa365-deepseek-03/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "bcba10e022bb4bb6a356a883a28ccab58cdbbc6bc6b3291480a7dcb8cb9bac11",
-      "mediaSha256": "8d86fc6d5431ef2e1b1e0623d7af2d8313602e74615897942066104e3ce378b1"
+      "mediaSha256": "8d86fc6d5431ef2e1b1e0623d7af2d8313602e74615897942066104e3ce378b1",
+      "sceneContext": null
     },
     {
       "id": "arena-9-11",
@@ -2688,7 +2804,8 @@
       "previewVideo": "assets/model-cases/W4-capx_behavior1k-deepseek-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "6bee5fd19473b2ccfb416a561699e79b2318a4d36bdb083b7e3e9979d386c051",
-      "mediaSha256": "94cdbb04a159061b2515997a1b0f3119ed55ae794f63c4480524ed7d72b55077"
+      "mediaSha256": "94cdbb04a159061b2515997a1b0f3119ed55ae794f63c4480524ed7d72b55077",
+      "sceneContext": null
     },
     {
       "id": "arena-10-1",
@@ -2713,7 +2830,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfred_official_visual/gemini4argon/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "b0f336ed6be3900ab0ca802e1714d513379de10dd4c00ab31e42f4357699c1d4",
-      "mediaSha256": "d561ba86dffa998f1363b20d31a4688507bcb8d4282273780b95652b0d5f903c"
+      "mediaSha256": "d561ba86dffa998f1363b20d31a4688507bcb8d4282273780b95652b0d5f903c",
+      "sceneContext": null
     },
     {
       "id": "arena-10-2",
@@ -2738,7 +2856,8 @@
       "previewVideo": "assets/video-supplement-20261021/alfworld_visual/gemini4argon/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "a5902ff8b212737b07daff17d8fd61b0132845d6b52a788eb2f120326331768d",
-      "mediaSha256": "c0ae76b0bc0a1aab2b63402f54009c6ad3c7657ac42dd2ec1e94c7778fb89d2f"
+      "mediaSha256": "c0ae76b0bc0a1aab2b63402f54009c6ad3c7657ac42dd2ec1e94c7778fb89d2f",
+      "sceneContext": null
     },
     {
       "id": "arena-10-3",
@@ -2763,7 +2882,8 @@
       "previewVideo": "assets/video-supplement-20261021/discoveryworld/gemini4argon/clip.mp4",
       "mediaKind": "Saved observations",
       "mediaReportSha256": "6c21a7ff23a70c12b18007b4454c9c2f05d11d1a880134a9ca58bf6ac3efedcc",
-      "mediaSha256": "88447006b37db515ab0712cb70fc2532bc065927b35336142dfc365a1928b862"
+      "mediaSha256": "88447006b37db515ab0712cb70fc2532bc065927b35336142dfc365a1928b862",
+      "sceneContext": null
     },
     {
       "id": "arena-10-4",
@@ -2788,7 +2908,8 @@
       "previewVideo": "assets/video-supplement-20261021/humanclaw/gemini4argon/clip.mp4",
       "mediaKind": "Saved-state render",
       "mediaReportSha256": "59d1f9a57afb4b63a100c08ed33309ec54a025cebbfd74c9f5e0dc5362fbbf9d",
-      "mediaSha256": "cd65ab59fd648996e8b6b68f063d234694feb3f84917bbed1d03e19afd5e88cd"
+      "mediaSha256": "cd65ab59fd648996e8b6b68f063d234694feb3f84917bbed1d03e19afd5e88cd",
+      "sceneContext": null
     },
     {
       "id": "arena-10-5",
@@ -2813,7 +2934,8 @@
       "previewVideo": "assets/video-supplement-20261021/calvin/gemini4argon/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "cc127581ca9f26df25426c3f08b9cacd8573a9106cd3a6ed69374ab79482a741",
-      "mediaSha256": "2330f4d07662d37c878c02fd00c1a5e1cce219886434b22f75b266b4f395bf40"
+      "mediaSha256": "2330f4d07662d37c878c02fd00c1a5e1cce219886434b22f75b266b4f395bf40",
+      "sceneContext": null
     },
     {
       "id": "arena-10-6",
@@ -2838,7 +2960,8 @@
       "previewVideo": "assets/video-supplement-20261021/rlbench/gemini4argon/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "9e7f81ace13fd87b8719ae3635d9b80980e3270cdf36d7865ab55849f5e8ba3a",
-      "mediaSha256": "8d072c3d7a1d845937b9afff4dddb0a7dee5e0d0a15488f35c05589dba299295"
+      "mediaSha256": "8d072c3d7a1d845937b9afff4dddb0a7dee5e0d0a15488f35c05589dba299295",
+      "sceneContext": null
     },
     {
       "id": "arena-10-7",
@@ -2863,7 +2986,8 @@
       "previewVideo": "assets/video-supplement-20261021/maniskill/gemini4argon/clip.mp4",
       "mediaKind": "Video excerpt",
       "mediaReportSha256": "1abb6e05cd3a780742636227c5588c6d01622cd0d90077e54136de598aff14af",
-      "mediaSha256": "de10142d7934c19578c69c29238ab5a9cf439eedcd37bec0bf39ca568d213615"
+      "mediaSha256": "de10142d7934c19578c69c29238ab5a9cf439eedcd37bec0bf39ca568d213615",
+      "sceneContext": null
     },
     {
       "id": "arena-10-8",
@@ -2888,7 +3012,8 @@
       "previewVideo": "assets/argon-cases/W4-cliport-gemini4argon-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "48c577fff3e85a0e01f0bbe67103afe0bb69d04634550ebc0c4cc79b7d136189",
-      "mediaSha256": "3494e4a85595b0e86338dbd889fa59a79501d827cc1e5b22b5e2a7dc42d7280c"
+      "mediaSha256": "3494e4a85595b0e86338dbd889fa59a79501d827cc1e5b22b5e2a7dc42d7280c",
+      "sceneContext": null
     },
     {
       "id": "arena-10-9",
@@ -2913,7 +3038,8 @@
       "previewVideo": "assets/argon-cases/W4-robocasa-gemini4argon-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "ab160d7379cc4d58a96b01bdbbf68a0bb072e8c074773533f70643088f5dda7e",
-      "mediaSha256": "a39027fb52926618380b0c80b46a1cbd7afdcdbafc3a36b20ced427b5d55cb1e"
+      "mediaSha256": "a39027fb52926618380b0c80b46a1cbd7afdcdbafc3a36b20ced427b5d55cb1e",
+      "sceneContext": null
     },
     {
       "id": "arena-10-10",
@@ -2938,7 +3064,8 @@
       "previewVideo": "assets/argon-cases/W4-robocasa365-gemini4argon-03/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "04501c15386bfe5c9805e4e6738d3ad9fdc4f55371d869c8a3f1b61c4906c48d",
-      "mediaSha256": "faae52198b62b1c443e0697479b58c537b8280be998fe2c0f6fe91ed70868385"
+      "mediaSha256": "faae52198b62b1c443e0697479b58c537b8280be998fe2c0f6fe91ed70868385",
+      "sceneContext": null
     },
     {
       "id": "arena-10-11",
@@ -2963,7 +3090,8 @@
       "previewVideo": "assets/argon-cases/W4-capx_behavior1k-gemini4argon-01/clip.mp4",
       "mediaKind": "Recorded video excerpt",
       "mediaReportSha256": "a15952bc8fdfb8c70bc006b228129198b9035a1fa81a8b23c45984ecddc8ea3a",
-      "mediaSha256": "fbb3723a4790a7cc3d6dcbe4dbc2c3265d3a2af06265f555b1d115846925819f"
+      "mediaSha256": "fbb3723a4790a7cc3d6dcbe4dbc2c3265d3a2af06265f555b1d115846925819f",
+      "sceneContext": null
     }
   ],
   "taskCount": 11,

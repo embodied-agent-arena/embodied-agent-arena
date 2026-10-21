@@ -92,6 +92,7 @@ def build():
                 "mediaKind": r["mediaKind"],
                 "mediaReportSha256": r["mediaReportSha256"] if media else None,
                 "mediaSha256": hashlib.sha256((PUB/media).read_bytes()).hexdigest() if media else None,
+                "sceneContext": g.get('sceneContext') if not preview else None,
             }
             cells.append(cell)
             attrs = (f'class="overview-cell {"has-media" if preview else "log-only"}" '
@@ -108,11 +109,12 @@ def build():
                           f'data-preview-src="{h(animation)}" '
                           f'data-poster="{h(r["poster"])}" alt="">')
             else:
-                visual = ('<svg class="overview-error-icon" viewBox="0 0 24 24" fill="none" '
-                          'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">'
-                          '<path d="M8 3v4m8-4v4M6 7h12v4a6 6 0 0 1-6 6v4M3 3l18 18"/></svg>'
-                          '<span class="overview-log-status">API error</span>'
-                          '<span class="overview-log-link">0 actions · View log ↗</span>')
+                context = g['sceneContext']
+                assert context['taskId']==r['taskId']
+                visual = (f'<img loading="lazy" src="{h(context["image"])}" '
+                          f'alt="Same-task scene from {h(context["model"])}; this model produced no actions">'
+                          '<span class="overview-context-label">Scene only</span>'
+                          '<span class="overview-media-status">API error · 0 actions ↗</span>')
             if preview:
                 badge = "Demo · Not scored" if demo else status
                 if demo or kind == "Saved observations":

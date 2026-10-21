@@ -367,3 +367,18 @@ dialog{padding:50px 8px 12px;width:97vw}.table-note{font-size:14px}
 .overview-cell:has(.overview-media-status){isolation:isolate}
 
 .overview-kind{position:absolute;top:6px;left:6px;padding:3px 6px;border-radius:4px;background:rgba(255,255,255,.94);color:#233b35;font-size:10px;line-height:1.2;font-weight:600}.overview-media-status{white-space:normal;line-height:1.25}.gallery-detail-film{position:relative}.gallery-demo-badge{position:absolute;z-index:2;top:12px;left:12px;background:#fff;color:#234238;padding:8px 12px;border-radius:8px;font-weight:600}
+
+/* Provenance is revealed on focus; scene-only and demo labels stay explicit. */
+.overview-cell .overview-kind{opacity:0;transition:opacity .15s;font-size:12px}
+.overview-cell:hover .overview-kind,.overview-cell:focus-visible .overview-kind{opacity:1}
+.overview-cell:has(.overview-kind):has([data-preview-src*="demo"]) .overview-kind{opacity:1}
+.overview-cell.log-only{padding:0;display:block;position:relative;background:#14292e}
+.overview-cell.log-only img{display:block;width:100%;height:100%;object-fit:contain;opacity:.72}
+.overview-cell.log-only .overview-media-status{color:#fff;background:linear-gradient(transparent,#10252de8)}
+.overview-table{width:2234px;font-size:14px}
+.overview-table thead th{width:184px}
+.overview-table thead strong{font-size:15px}
+.overview-table thead span{font-size:14px;color:#52635d}
+.overview-table th:first-child{width:160px}
+.overview-table td,.overview-cell{height:138px}
+.overview-cell .overview-media-status{font-size:13px;padding:23px 9px 8px}

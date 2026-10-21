@@ -7,7 +7,7 @@
   "paper_sha256": "54c3bce55f29f7a3f29b87c4f48ebd110935ba481bc1e794a368baeb1b7b8be4",
   "table_source": "Table 2",
   "case_views": 181,
-  "recordings": 316,
+  "recordings": 346,
   "figure_sha256": {
     "geometry.webp": "edf1a30a1f0c375f28d5ebb3f34e961e61341de8c42e99471a55e2b0e2c8de13",
     "spatial.webp": "b0403f110ea95e3406a704db2fe9b2042cf71122b748cfec44993ebef57ba380",
@@ -22,7 +22,7 @@
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
-  "playable_previews": 341,
+  "playable_previews": 371,
   "recording_definition": "Scene previews: original recordings, saved observations, verified action replays and saved-state renders; excludes animated execution-log plots.",
   "video_supplement": {
     "archive": "ten-model-video-supplement-20261021.zip",
@@ -44,11 +44,11 @@
     "mainFigures": 6,
     "additionalManuscriptFigures": 3,
     "dataValues": "unchanged; Planning coverage histogram derived from all 157 task outcomes",
-    "heatmap": "OpenReview muted warm scale; fixed 0\u2013100",
+    "heatmap": "OpenReview muted warm scale; fixed 0–100",
     "scatter": "Model logos at measured coordinates with adjacent variant labels; no separate model key",
     "bars": "Rounded solid brand-family fills; Comic Sans MS; labels and logos directly below each model",
     "supplementaryFigures": "Former main Table 3 moved to Appendix E as Table A33; former Figure 6/7 fine-grained panels preserved in appendix figures",
-    "typography": "Comic Sans MS; Figures 3\u20138 use 7.5 pt for labels, axes and numbers, and 9.5 pt for panel letters at 487.265 pt manuscript width. Label spacing adjusted; all measurements unchanged."
+    "typography": "Comic Sans MS; Figures 3–8 use 7.5 pt for labels, axes and numbers, and 9.5 pt for panel letters at 487.265 pt manuscript width. Label spacing adjusted; all measurements unchanged."
   },
   "protocol_audit": {
     "date": "2026-10-21",

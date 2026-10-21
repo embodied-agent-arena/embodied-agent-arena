@@ -7,7 +7,7 @@
   function allowed(s) {
     const modal = document.querySelector('dialog[open]');
     return s.visible && s.enabled && !s.paused && !document.hidden &&
-      (!reduced.matches || s.explicit) && !s.el.closest('[inert]') &&
+      (!reduced.matches || s.explicit) && !s.el.closest('[inert]') && !s.el.closest('[hidden]') && !s.el.dataset.mediaFailed &&
       (!s.el.closest('dialog') || s.el.closest('dialog').open) && (!modal || modal.contains(s.el));
   }
   function sync(s) {
@@ -62,7 +62,7 @@
     for (const record of records) for (const node of record.addedNodes) scan(node);
     for (const [el,s] of states) if (!el.isConnected) {if(el.tagName==='VIDEO')pause(s);observer.unobserve(el);states.delete(el);}
     refresh();
-  }).observe(document.documentElement, {childList:true,subtree:true,attributes:true,attributeFilter:['open','inert']});
+  }).observe(document.documentElement, {childList:true,subtree:true,attributes:true,attributeFilter:['open','inert','hidden']});
   document.addEventListener('visibilitychange',refresh);
   reduced.addEventListener('change',()=>{for(const s of states.values())s.explicit=false;refresh();});
 })();

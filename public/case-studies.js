@@ -19,9 +19,9 @@
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
-    fetch('data/case-studies.json?v=media-20261022').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json?v=media-20261022').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-comparisons.json?v=media-20261022').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
+    fetch('data/case-studies.json?v=case-display-20261022').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
+    fetch('data/case-gallery.json?v=case-display-20261022').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-comparisons.json?v=case-display-20261022').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media]) => {
     mediaData=media;
     const all=[...cases.filter(c=>c.predictions.length),...media.groups];
@@ -105,9 +105,15 @@
     if(rows.length!==mediaData.models.length || rows.some(r=>!r || r.taskId!==c.taskId) || new Set(rows.map(r=>r.model)).size!==mediaData.models.length)throw new Error('Task comparison failed validation.');
     return rows;
   }
-  const outcomeText = r => r.executionStarted===false ? 'Failed before execution' : r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Reported success' : ({budget_exhausted:'Budget exhausted',timeout:'Timed out',runtime_failure:'Runtime failure',task_failure:'Task not completed',agent_failure:'Agent failure',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
+  const outcomeText = r => r.executionStarted===false ? 'Failed before execution' : r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Completed' : ({budget_exhausted:'Budget reached',timeout:'Timed out',runtime_failure:'Runtime error',task_failure:'Not completed',agent_failure:'Agent error',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
   const previewOf = r => r.video || r.animation ? r : r.demoMedia ? {...r,...r.demoMedia} : r;
   const hasPreview = r => !!(r.video||r.animation||r.demoMedia);
+  function sceneMedia(c,r) {
+    const scene=c.sceneContext;
+    if(scene?.kind==='action_log') return `<span class="gallery-result-preview"><span class="gallery-scene-only">Result + log</span><span class="gallery-result-facts">${r?.modelRounds!=null?`<span><strong>${num(r.modelRounds,0)}</strong>rounds</span>`:''}${r?.elapsedSeconds!=null?`<span><strong>${num(r.elapsedSeconds/60,1)}</strong>minutes</span>`:''}</span></span>`;
+    if(!scene || scene.taskId!==c.taskId || !scene.image) return '<span class="gallery-no-recording">Execution record ↗</span>';
+    return `<img src="${esc(scene.image)}" alt="Shared task scene from ${esc(scene.model)}; not this model's execution" loading="lazy"><span class="gallery-scene-only" title="Scene from ${esc(scene.model)} on this exact task. This model has a result and log, but no recording.">Scene only</span>`;
+  }
   function runMedia(r, detail=false) {
     r=previewOf(r);
     if (r.video) return `<video ${detail ? 'controls' : 'muted loop'} playsinline preload="none" poster="${esc(r.poster)}" ${detail ? `src="${esc(r.video)}"` : `data-video="${esc(r.video)}"`} aria-label="${esc(r.model)}: ${esc(r.mediaKind)}"></video>`;
@@ -116,9 +122,8 @@
   }
   function runTile(c,r,i) {
     const hasMedia=hasPreview(r);
-    const elapsed=r.elapsedSeconds==null?'—':r.elapsedSeconds<60?`${num(r.elapsedSeconds,0)} s`:`${num(r.elapsedSeconds/60,1)} min`;
-    const logPreview=`<span class="gallery-log-preview"><span class="gallery-log-label">${r.detailedTraceAvailable===false?'Recorded Result':'Execution Log'}</span><span class="gallery-log-metrics"><span><strong>${num(r.modelRounds,0)}</strong>Rounds</span><span><strong>${esc(elapsed)}</strong>Elapsed</span></span><span class="gallery-log-link">Inspect recorded result ↗</span></span>`;
-    return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(outcomeText(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${hasMedia?`<span class="gallery-run-kind">${esc(previewOf(r).mediaKind||'Recording')}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${r.success?'success':''}">${esc(outcomeText(r))}</span></span></button>`;
+    const logPreview=sceneMedia(c,r);
+    return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(outcomeText(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${r.demoMedia?'<span class="gallery-demo-label">Demo · Not scored</span>':''}${r.mediaKind==='Animated execution log'?'<span class="gallery-scene-only">Action log</span>':''}${hasMedia?`<span class="gallery-run-kind">${esc(previewOf(r).mediaKind||'Recording')}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${r.success?'success':''}">${esc(outcomeText(r))}</span></span></button>`;
   }
   function runBudget(r) {
     const values=Object.entries(r.budgets||{}).filter(([k,v])=>budgetNames[k]&&v!=null);
@@ -141,9 +146,15 @@
     } else {
       const rows = executionRecords(c);
       const filmed=rows.filter(hasPreview);
-      body = `<div class="gallery-run-grid gallery-all-models">${rows.map((r,i)=>runTile(c,r,i)).join('')}</div><div class="gallery-run-controls"><p>${rows.length} models · Same task · ${filmed.length} previews${filmed.length<rows.length?` · ${rows.length-filmed.length} records without footage`:''}</p>${filmed.length?`<button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button>`:''}</div>`;
+      body = `<div class="gallery-run-grid gallery-all-models">${rows.map((r,i)=>runTile(c,r,i)).join('')}</div><div class="gallery-run-controls"><p>${rows.length} models · ${filmed.length} visual previews</p>${filmed.length?`<button data-playback="${esc(c.id)}" aria-pressed="false">Pause previews</button>`:''}</div>`;
     }
-    return `<article class="gallery-slide" data-gallery-id="${esc(c.id)}" data-domain="${esc(c.domainKey)}" role="group" aria-roledescription="slide" aria-label="Case ${index+1} of ${total}: ${esc(c.benchmark)} — ${esc(c.title)}"><div class="gallery-slide-top"><div><p class="gallery-kicker">${esc(c.domain)} <span>/</span> ${esc(c.benchmark)}</p><h3>${esc(c.title)}</h3></div><button class="gallery-detail-button" data-case="${esc(c.id)}">Case Details <span aria-hidden="true">↗</span></button></div><p class="gallery-task">${esc(c.shortTask)}</p>${c.taskLabel?`<p class="gallery-task-identity">Case: ${esc(c.taskLabel)}</p>`:""}${body}</article>`;
+    return `<article class="gallery-slide" data-gallery-id="${esc(c.id)}" data-domain="${esc(c.domainKey)}" role="group" aria-roledescription="slide" aria-label="Case ${index+1} of ${total}: ${esc(c.benchmark)} — ${esc(c.title)}"><div class="gallery-slide-top"><div><p class="gallery-kicker">${esc(c.benchmark)}</p><h3>${esc(c.title)}</h3></div><button class="gallery-detail-button" data-case="${esc(c.id)}">Compare <span aria-hidden="true">↗</span></button></div>${c.shortTask.trim().toLowerCase()!==c.title.trim().toLowerCase()?`<p class="gallery-task">${esc(c.shortTask)}</p>`:''}${body}</article>`;
+  }
+  function comparisonOverview(c) {
+    const tile=html=>html.replace(/data-case="[^"]*" data-model="(\d+)"/, 'data-detail-model="$1"');
+    if(!c.predictions.length) return `<div class="gallery-run-grid gallery-all-models">${executionRecords(c).map((r,i)=>tile(runTile(c,r,i))).join('')}</div>`;
+    if(isOverlay(c)) return `<div class="gallery-visual-grid">${c.predictions.map((p,i)=>tile(resultTile(c,p,i,true))).join('')}</div><p class="gallery-evidence-note">Green: reference · Colored outline: prediction</p>`;
+    return `<div class="gallery-comparison"><div>${inputMedia(c)}<div class="gallery-reference">${esc(referenceLabel(c))}</div></div><div class="gallery-model-grid">${c.predictions.map((p,i)=>tile(resultTile(c,p,i))).join('')}</div></div>`;
   }
   const content = document.getElementById('study-dialog-content');
   async function renderModelDetail(c,index) {
@@ -153,6 +164,10 @@
     const p = list[index] || list[0];
     const selection = document.getElementById('gallery-model-detail');
     if (!p || !selection) return;
+    content.querySelector('#gallery-comparison-overview').hidden=true;
+    content.querySelector('.gallery-model-switcher').hidden=false;
+    content.querySelector('[data-back-comparison]').hidden=false;
+    selection.hidden=false;
     dialog.querySelectorAll('[data-detail-model]').forEach(b => b.setAttribute('aria-pressed',String(Number(b.dataset.detailModel) === index)));
     if (staticCase) {
       const s = summary(c,p);
@@ -160,10 +175,10 @@
       selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index,true) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p>${polygon ? '<p>Green: reference region. Colored contour: predicted polygon.</p>' : ''}<details ${polygon?'':'open'}><summary>${polygon?'Polygon coordinates':'Recorded Answer'}</summary><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</details></div></div>${!polygon && Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     } else {
       selection.querySelectorAll('video').forEach(v=>v.pause());
-      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${p.demoMedia?"Original evaluation · ":""}${esc(outcomeText(p))}</span></div>${hasPreview(p)?`<div class="gallery-detail-film">${p.demoMedia?'<span class="gallery-demo-badge">Same-task demo · Not scored</span>':''}${runMedia(p,true)}</div>${previewOf(p).mediaNote?`<p class="study-media-note"><strong>${esc(previewOf(p).mediaKind)}</strong> · ${esc(previewOf(p).mediaNote)}</p>`:""}`:'<p class="study-meta">Recorded result · No matching video in the supplied archive.</p>'}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
+      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${p.demoMedia?"Original evaluation · ":""}${esc(outcomeText(p))}</span></div>${hasPreview(p)?`<div class="gallery-detail-film">${p.demoMedia?'<span class="gallery-demo-badge">Same-task demo · Not scored</span>':''}${runMedia(p,true)}</div>${previewOf(p).mediaNote?`<details class="study-media-note"><summary>${esc(previewOf(p).mediaKind)}</summary><p>${esc(previewOf(p).mediaNote)}</p></details>`:""}`:`<div class="gallery-detail-film gallery-context-film">${sceneMedia(c,p)}</div><p class="study-media-note">${c.sceneContext?.kind==='action_log'?'This text-based task is represented by its recorded results and decisions.':`Task scene from ${esc(c.sceneContext?.model)}. This model's result and log are shown below; no execution recording was supplied.`}</p>`}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
       const rounds=selection.querySelector('.gallery-rounds');
       try {
-        const response=await fetch(p.detailUrl+'?v=media-20261022');if(!response.ok)throw Error();const d=await response.json();
+        const response=await fetch(p.detailUrl+'?v=case-display-20261022');if(!response.ok)throw Error();const d=await response.json();
         if(!rounds.isConnected)return;
         // A rejected initial model request is different from an unrecorded rollout.
         const preActionFailure=d.steps?.length && d.steps.every(s=>!s.code && !s.calls?.length && s.feedback?.stage==='model_completion' && s.error);
@@ -202,10 +217,10 @@
       const c=representation(found);
       if (!dialog.open || openId !== id) return;
       const list = c.predictions.length ? c.predictions : executionRecords(c);
-      selectedModel=modelIndex ?? (c.predictions.length ? 0 : Math.max(0,list.findIndex(hasPreview)));
+      selectedModel=modelIndex;
       const budget = Object.entries(c.predictions.length ? c.budgets||{} : {}).filter(([k,v]) => budgetNames[k] && v!=null).map(([k,v])=>`<li><span>${budgetNames[k]}</span><strong>${num(v)}</strong></li>`).join('');
-      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2><p class="study-question">${esc(c.shortTask)}</p><div class="gallery-model-switcher" role="group" aria-label="Select model">${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-model-detail"></div>${isOverlay(c) && c.representation !== 'polygon' ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}${c.predictions.length ? `<h3>${esc(c.instructionKind || 'Original Instruction')}</h3><p class="study-original-instruction">${esc(c.question)}</p>` : ''}${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<h3>Reading This Case</h3><p class="study-protocol">${esc(c.protocolNote)}</p><a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
-      renderModelDetail(c,selectedModel);
+      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2>${c.shortTask.trim().toLowerCase()!==c.title.trim().toLowerCase()?`<p class="study-question">${esc(c.shortTask)}</p>`:''}<button class="gallery-back" data-back-comparison ${modelIndex===null?'hidden':''}>← All ten models</button><div class="gallery-model-switcher" role="group" aria-label="Select model" ${modelIndex===null?'hidden':''}>${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-comparison-overview" ${modelIndex===null?'':'hidden'}><p class="gallery-comparison-hint">Select a model to inspect its prediction or execution.</p>${comparisonOverview(c)}</div><div id="gallery-model-detail" ${modelIndex===null?'hidden':''}></div>${isOverlay(c) && c.representation !== 'polygon' ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}${c.predictions.length ? `<details class="gallery-method-note"><summary>${esc(c.instructionKind || 'Original instruction')}</summary><p class="study-original-instruction">${esc(c.question)}</p></details>` : ''}${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<details class="gallery-method-note"><summary>Evaluation details</summary><p class="study-protocol">${esc(c.protocolNote)}</p></details><a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
+      if(selectedModel!==null) renderModelDetail(c,selectedModel);
       dialog.scrollTop=0;
       if (currentUrl) URL.revokeObjectURL(currentUrl);
       currentUrl=URL.createObjectURL(new Blob([JSON.stringify({...c,galleryMetadata:metadata[c.id],recordings:c.predictions.length ? undefined : executionRecords(c)},null,2)],{type:'application/json'}));
@@ -213,6 +228,14 @@
     } catch(error) {content.innerHTML=`<h2 id="study-dialog-title">Case Details Unavailable</h2><p>${esc(error.message)} Please reload and try again.</p>`;}
   }
   document.addEventListener('click',event=>{
+    if(event.target.closest('[data-back-comparison]')) {
+      content.querySelectorAll('video').forEach(v=>v.pause());
+      content.querySelector('#gallery-model-detail').hidden=true;
+      content.querySelector('.gallery-model-switcher').hidden=true;
+      content.querySelector('[data-back-comparison]').hidden=true;
+      content.querySelector('#gallery-comparison-overview').hidden=false;
+      selectedModel=null; dialog.scrollTop=0; window.ArenaMedia.refresh(); return;
+    }
     const mode=event.target.closest('[data-representation]');
     if(mode){
       const id=mode.dataset.representationCase;
@@ -244,7 +267,16 @@
   let active=filters.find(b=>b.getAttribute('aria-pressed')==='true')?.dataset.studyFilter || 'highlights';
   const gallery=document.createElement('div'); gallery.className='case-gallery';
   gallery.innerHTML=`<div class="gallery-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Case comparisons; use left and right arrow keys to browse"></div><div class="gallery-navigation"><p class="gallery-help"><span aria-hidden="true">↔</span> Scroll to Explore · Click a Model for Details</p><div class="gallery-position"><output id="gallery-position" aria-live="polite"></output><button data-gallery-step="-1" aria-label="Previous case">←</button><button data-gallery-step="1" aria-label="Next case">→</button></div></div><input class="gallery-scrubber" type="range" min="1" max="15" value="1" aria-label="Choose a case"><p class="gallery-empty" hidden>No matching cases. Try another search.</p>`;
+  gallery.hidden=atlasMode;
   grid.before(gallery);
+  if(atlasMode) {
+    const empty=document.createElement('p');empty.id='atlas-empty';empty.hidden=true;
+    empty.textContent='No matching cases. Try a different task or capability.';grid.after(empty);
+    const motion=document.querySelector('[data-atlas-motion]');
+    motion?.addEventListener('click',()=>{const play=motion.getAttribute('aria-pressed')==='true';
+      window.ArenaMedia.toggle(grid.querySelectorAll('video,img[data-animation]'),play);
+      motion.setAttribute('aria-pressed',String(!play));motion.textContent=play?'Pause previews':'Play previews';});
+  }
   const track=gallery.querySelector('.gallery-track');
   const position=gallery.querySelector('#gallery-position');
   const scrubber=gallery.querySelector('.gallery-scrubber');
@@ -297,7 +329,8 @@
     if(atlasMode){
       const ids=new Set(shown.map(c=>c.id));
       grid.querySelectorAll('.study-card').forEach(card=>{card.hidden=!ids.has(card.querySelector('[data-case]').dataset.case);});
-      const count=document.getElementById('study-count');if(count)count.textContent=`${shown.length} cases`;
+      const count=document.getElementById('study-count');if(count)count.textContent=`${shown.length} ${shown.length===1?'case':'cases'}${shown.length?' · Select a card to compare':''}`;
+      document.getElementById('atlas-empty').hidden=!!shown.length;
       return;
     }
     track.querySelectorAll('video').forEach(v=>v.pause());
@@ -336,7 +369,7 @@
   reduced.addEventListener('change',updateActiveMedia);
   document.addEventListener('visibilitychange',()=>{if(document.hidden){window.ArenaMedia.refresh();}else updateActiveMedia();});
   window.addEventListener('resize',()=>go(current,false));
-  load().then(cases=>{allCases=cases;grid.hidden=!atlasMode;gallery.hidden=atlasMode;if(!atlasMode)gallery.classList.add('is-ready');applyFilter();const target=new URLSearchParams(location.search).get('case');const index=shown.findIndex(c=>c.id===target);if(index>=0)go(index,false);}).catch(error=>{
+  load().then(cases=>{allCases=cases;grid.hidden=!atlasMode;gallery.hidden=atlasMode;if(!atlasMode)gallery.classList.add('is-ready');applyFilter();const target=new URLSearchParams(location.search).get('case');const index=shown.findIndex(c=>c.id===target);if(index>=0){if(atlasMode)open(target,null);else go(index,false);}}).catch(error=>{
     gallery.innerHTML=`<p class="study-protocol">${esc(error.message)} <a href="case-atlas.html">Browse the Case Atlas ↗</a></p>`;
   });
 })();

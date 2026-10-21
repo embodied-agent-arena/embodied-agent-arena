@@ -70,7 +70,7 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ## 🎬 Explore the Evidence
 
-- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model results; 316 evaluation scene previews and 3 separately labeled demos.
+- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model results; 346 evaluation scene previews, 25 action-log animations and 3 separately labeled demos. [Media coverage ↗](docs/CASE_MEDIA.md)
 - **[Same Task. Ten Models.](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases)** — 11 fixed tasks × 10 models. Visible clips play automatically; click for the matching result.
 - **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. All ten models are selectable on each of 46 tasks, including Argon’s recorded actions and feedback.
 - **[Results & Reproduction](docs/RESULTS.md)** — Main and source-level CSVs, task outcomes, analysis scripts, and editable manuscript figures.
@@ -78,6 +78,8 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 <a id="news"></a>
 
 ## 📰 News
+
+- **2026.10.22** — Recovered **30 original case videos** by exact task, model and report matching; refreshed the compact Case Atlas with ten-model comparisons and labeled scene context for unrecorded executions.
 
 - **2026.10.22** — Filled the homepage media slots with 13 original videos, 3 labeled same-task demos and one observation sequence; redesigned Affordance and Planning figures and moved the supplementary review/protocol table to the appendix.
 - **2026.10.21** — Added **Gemini&nbsp;4&nbsp;Argon’s execution logs** to same-task comparisons and ten-model time, token-use and recovery analyses.
