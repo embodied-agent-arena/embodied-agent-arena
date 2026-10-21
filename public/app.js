@@ -16,7 +16,9 @@ const domains=[
         "24 of 56 paths meet all constraints"
       ]
     ],
-    "caption": "(a) Astra’s error reduction relative to the lowest-error original peer. (b) Displacement error: mean ± sample SD of five run means. (c) Single-run 3D path error and joint tracing success for all ten models. Logos mark measured coordinates; 4 denotes Gemini 4 Argon and 3.8 denotes Gemini 3.8 Flash.",
+    "insightLead": "Object motion must be separated from camera motion.",
+    "insight": "Astra’s displacement error rises from 0.24 cm with a fixed camera to 1.13 cm under a large camera shift (b). Recovering motion therefore requires resolving a changing viewpoint. Tracing adds another requirement (c): a geometrically close path must also satisfy its start, destination, and collision constraints.",
+    "caption": "(a) Astra versus the best original peer. (b) Mean ± sample SD over five runs. (c) One tracing run per case; all ten models.",
     "paper": 9,
     "case": "W1-w1_tracespatial_3d-01",
     "caseLabel": "Compare Paths on the Same Scene"
@@ -38,7 +40,9 @@ const domains=[
         "Video-based spatial questions"
       ]
     ],
-    "caption": "(a–b) Relation, viewpoint, and depth diagnostics for the original seven agents. (c) Ten-model native Pass@1 across six sources: mean ± run SD (five runs; Fable: three). Opus 5.5 has zero SD on BOP-ASK.",
+    "insightLead": "Different spatial relations expose different weaknesses.",
+    "insight": "Astra reaches 96–100% on camera-depth questions but 50% on nearest-object selection, where Qwen Max reaches 77% (b). Identifying what is closer to the camera and what is closest to another object require different relations. The relevant reference frame can reveal a weakness hidden by overall accuracy.",
+    "caption": "(a–b) Original-cohort diagnostics. (c) All ten models; mean ± sample SD over five runs (Fable: three). Opus 5.5’s BOP-ASK SD is zero.",
     "paper": 10,
     "case": "W2-w2_mindcube-01",
     "caseLabel": "Compare a Viewpoint-Change Case"
@@ -60,7 +64,9 @@ const domains=[
         "RAGNet / ReasonAff interaction scenes"
       ]
     ],
-    "caption": "(a) Polygon bars and box means with run SD on the same 70 cases, all ten models. (b) The aggregate leader, Gemini 4 Argon, still has much lower overlap on interaction scenes than tools. Polygons use one run; boxes use five (Fable: three).",
+    "insightLead": "Boundary quality and target selection are separate problems.",
+    "insight": "Polygons outperform boxes for nine of ten models (a), but the strongest polygon model still struggles on both interaction-scene sources (b). More expressive coordinates help describe a region; identifying which object or part the requested action needs remains a separate challenge.",
+    "caption": "Same 70 cases for all ten models. Bars: one polygon run. Dots and whiskers: box mean ± sample SD over five runs (Fable: three). Invalid or absent polygons score zero.",
     "paper": 11,
     "case": "W5-w5_ragnet-02",
     "caseLabel": "Compare Polygon Predictions"
@@ -82,7 +88,9 @@ const domains=[
         "Including all eight sitting tasks"
       ]
     ],
-    "caption": "(a) Success on all 157 Planning tasks for each model. (b) How many models complete each task: 15 defeat all ten; only eight are completed by every model. This is the full task set, not the selected gallery.",
+    "insightLead": "Most tasks separate the models.",
+    "insight": "On 134 of 157 tasks, some agents succeed while others fail (b). Only eight tasks are completed by every model; 15 defeat all ten. This broad middle ground reveals complementary strengths that aggregate rankings conceal, while the shared failures identify requirements that none of the recorded agents meets.",
+    "caption": "All 157 assigned tasks; one episode per model and task. Combined coverage is the union of recorded successes.",
     "paper": 11,
     "report": "coverage",
     "caseLabel": "Explore Task-by-Task Overlap"
@@ -104,7 +112,9 @@ const domains=[
         "Astra: 3/10; Opus 5.5: 1/10"
       ]
     ],
-    "caption": "(a) Thirteen-suite success for nine agents with complete source records. (b) Consecutive CALVIN goals for seven agents. (c) Condition satisfaction on five ManiSkill tasks for six agents. Paired panels compare the same tasks under Baseline and Expanded settings; Expanded adds per-round RGB and larger execution allowances. Each uses one episode per task and setting. Fable’s incomplete ManiSkill records exclude it from (a,c). Evaluation Details records each batch’s settings; the main results table includes all ten models.",
+    "insightLead": "Expanded settings change the ranking.",
+    "insight": "Fable’s CALVIN average rises from 0.9 to 2.9 goals while Astra’s falls from 3.1 to 1.1 (b). None of the paired agents improves on ManiSkill (c). Additional observations and execution time have different value for different controllers.",
+    "caption": "Expanded adds per-round RGB and larger execution allowances; one episode per task and setting. Paired panels retain agents with both records. Fable’s incomplete ManiSkill records exclude it from (a,c).",
     "paper": 12,
     "execution": "sequence",
     "caseLabel": "Inspect One Recorded Sequence"
@@ -122,7 +132,7 @@ function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="
 buildTabs(domains,'domain',d=>{
  const action=d.case?`<button type="button" data-case="${d.case}">${d.caseLabel} →</button>`:d.execution?`<a href="?analysis=${d.execution}#execution-analysis" data-execution-link="${d.execution}">${d.caseLabel} →</a>`:`<a href="#technical-report" data-report-link="${d.report}">${d.caseLabel} →</a>`;
  const figureVersion="model-names-20261022";
- return `<div class="domain-text"><h3>${d.title}</h3><p class="domain-argument">${d.text}</p><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=${figureVersion}" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=${figureVersion}" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><div class="domain-links">${action}<a href="paper.pdf#page=${d.paper}">Paper Evidence ↗</a></div><details class="figure-reading"><summary>Figure Key &amp; Measurement Details</summary><p>${d.caption}</p></details></figcaption></figure>`;
+ return `<div class="domain-text"><h3>${d.title}</h3><p class="domain-argument">${d.text}</p><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=${figureVersion}" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=${figureVersion}" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><div class="figure-reading"><p class="figure-insight"><strong>${d.insightLead}</strong> ${d.insight}</p><p class="figure-method">${d.caption}</p></div><div class="domain-links">${action}<a href="paper.pdf#page=${d.paper}">Paper Evidence ↗</a></div></figcaption></figure>`;
 });
 const citation=document.querySelector('#bibtex').textContent.trim();
 document.querySelector('#copy-citation').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(citation);document.querySelector('#copy-status').textContent='Citation copied.';document.querySelector('#copy-citation').textContent='Copied';setTimeout(()=>document.querySelector('#copy-citation').textContent='Copy BibTeX',2000);}catch{const range=document.createRange();range.selectNodeContents(document.querySelector('#bibtex'));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);document.querySelector('#copy-status').textContent='Citation selected. Use your browser’s copy command.';}});

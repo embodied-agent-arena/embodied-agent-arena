@@ -88,9 +88,12 @@
 .evidence .peer {font-size:15px}
 .domain-links>* {font-size:17px;font-weight:600;padding:0;text-align:left}
 .domain-links>*:hover,.geo-links>*:hover,.text-link:hover {color:var(--accent)}
-.figure-reading {margin-top:18px;font-size:15px;color:var(--muted)}
-.figure-reading summary {cursor:pointer}
-.figure-reading p {margin-top:12px;max-width:none}
+.figure-reading {margin:0 0 20px}
+.figure-reading p {max-width:none}
+.figure-insight {font-size:19px;line-height:1.7;color:var(--ink)}
+.figure-insight strong {font-weight:700}
+.figure-method {font-size:16px;line-height:1.65;color:#43555d;margin-top:12px}
+@media(max-width:760px) {.figure-insight {font-size:18px}.figure-reading {margin-bottom:18px}}
 .completion-section {border-top:1px solid var(--line)}
 .completion-section h2,.evaluation-section h2 {font-size:clamp(28px,3.3vw,42px);line-height:1.25}
 .completion-grid {display:grid;grid-template-columns:1fr 1fr;gap:24px}
