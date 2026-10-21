@@ -58,7 +58,7 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ## Explore the Evidence
 
-- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model results; 284 available recordings.
+- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model results; 302 available scene previews.
 - **[Same Task. Ten Models.](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases)** — 11 fixed tasks × 10 models. Hover to preview and click for the matching result.
 - **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. Detailed trace analyses cover the nine models with available action logs; Argon's outcomes and recordings are in the Case Atlas.
 - **[Results & Reproduction](docs/RESULTS.md)** — Main and source-level CSVs, task outcomes, analysis scripts, and editable manuscript figures.

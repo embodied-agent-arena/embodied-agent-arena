@@ -7,7 +7,7 @@
   "paper_sha256": "20865cdc0678b2463a7445d709bba5183ccb65b239d649ac9d4ce1d5e4ae50ee",
   "table_source": "Table 2",
   "case_views": 181,
-  "recordings": 284,
+  "recordings": 302,
   "figure_sha256": {
     "geometry.webp": "a9fd585dd4ca1244621e96ad07719af9d6255769831704585bf643342b1c5bc3",
     "spatial.webp": "56739eee4c270c11e2e88e2d0d2c25cc28f7e6c670891cfbbfaf3f4de936d75d",
@@ -20,5 +20,13 @@
   "source_sha256": "ea515484efdf61c99a59924f0628efac41402242e0d77922e07881fcf7e7213f",
   "static_cases": 72,
   "execution_cases": 109,
-  "new_argon_recordings": 79
+  "new_argon_recordings": 79,
+  "playable_previews": 327,
+  "recording_definition": "Scene previews: original recordings, saved observations, verified action replays and saved-state renders; excludes animated execution-log plots.",
+  "video_supplement": {
+    "archive": "ten-model-video-supplement-20261021.zip",
+    "matchedAssignments": 70,
+    "availableMedia": 65,
+    "missingMedia": 5
+  }
 }

@@ -215,9 +215,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-alfred_official_visual-gemini-01/clip.mp4",
-      "poster": "assets/model-cases/W3-alfred_official_visual-gemini-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/alfred_official_visual/gemini/clip.mp4",
+      "poster": "assets/video-supplement-20261021/alfred_official_visual/gemini/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-alfred_official_visual-gemini-01/frame-01.webp",
@@ -263,7 +263,12 @@
       "sourceMediaSha256": "2aeb47074f937d8bc81fc53042b3f4d51372ca493eb6b848a9fa36000b7ee205",
       "publishedVideoSha256": "27a1e8f32a3bb5de3d0b0a95b6849e3a2a5dbdf5782a2835e39b0db899b1f306",
       "comparisonInstruction": "Clean the soap bar and place it in the bathtub.",
-      "comparisonTaskLabel": "Clean Soap, Then Place It"
+      "comparisonTaskLabel": "Clean Soap, Then Place It",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/alfred_official_visual/gemini/provenance.json",
+      "mediaDurationSeconds": 8.4,
+      "mediaReportSha256": "480e2a9ef6385c3c6cf41b84f812f1294447afb30451636eb05b59b595b63997"
     },
     "W3-alfred_official_visual-qwen-01": {
       "id": "W3-alfred_official_visual-qwen-01",
@@ -281,9 +286,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-alfred_official_visual-qwen-01/clip.mp4",
-      "poster": "assets/model-cases/W3-alfred_official_visual-qwen-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/alfred_official_visual/qwen/clip.mp4",
+      "poster": "assets/video-supplement-20261021/alfred_official_visual/qwen/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-alfred_official_visual-qwen-01/frame-01.webp",
@@ -329,7 +334,12 @@
       "sourceMediaSha256": "797ea6166ed868221c883ee709bcf6450bc7b668f8970cb3f5c1a78d0ab9af29",
       "publishedVideoSha256": "596326bb432eb710faae41556a067cc5b9562fa9f24a9b12246b9f6b88ffa5b1",
       "comparisonInstruction": "Clean the soap bar and place it in the bathtub.",
-      "comparisonTaskLabel": "Clean Soap, Then Place It"
+      "comparisonTaskLabel": "Clean Soap, Then Place It",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/alfred_official_visual/qwen/provenance.json",
+      "mediaDurationSeconds": 8.4,
+      "mediaReportSha256": "993d77c2071407abfc3a13d8d924279377e8c2dfb49821d9b24e2f644d260e12"
     },
     "W3-alfred_official_visual-qwen35-397b-01": {
       "id": "W3-alfred_official_visual-qwen35-397b-01",
@@ -463,9 +473,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-alfred_official_visual-opus55-01/clip.mp4",
-      "poster": "assets/model-cases/W3-alfred_official_visual-opus55-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/alfred_official_visual/opus55/clip.mp4",
+      "poster": "assets/video-supplement-20261021/alfred_official_visual/opus55/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-alfred_official_visual-opus55-01/frame-01.webp",
@@ -507,7 +517,12 @@
       "sourceMediaSha256": "dd519eeb11d75c0513281cfda36dd7728ecc5a451e7909c38a9a4b17b6d31cdb",
       "publishedVideoSha256": "432ca57d653d2315bb899cd35bc1e7212a6cf7ca09f5e418d56cdb72e426e24c",
       "comparisonInstruction": "Clean the soap bar and place it in the bathtub.",
-      "comparisonTaskLabel": "Clean Soap, Then Place It"
+      "comparisonTaskLabel": "Clean Soap, Then Place It",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/alfred_official_visual/opus55/provenance.json",
+      "mediaDurationSeconds": 7.2,
+      "mediaReportSha256": "bf5482562fc4507bc8b406e05ac104a731e94b37af5bdafa317f44e22b9ed568"
     },
     "W3-alfworld_visual-astra-01": {
       "id": "W3-alfworld_visual-astra-01",
@@ -595,9 +610,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-alfworld_visual-sol-01/clip.mp4",
-      "poster": "assets/model-cases/W3-alfworld_visual-sol-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/alfworld_visual/sol/clip.mp4",
+      "poster": "assets/video-supplement-20261021/alfworld_visual/sol/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-alfworld_visual-sol-01/frame-01.webp",
@@ -639,7 +654,12 @@
       "sourceMediaSha256": "99b7d410dd43c6918a1e3d8c15dbdf678848fb2a14398f0be1e6d6bf7f1ff19f",
       "publishedVideoSha256": "6a827127bd45a8c5d198e68743496c1703c2f02a330770667dd36d0466a28556",
       "comparisonInstruction": "Put a cleaned bar of soap on a counter.",
-      "comparisonTaskLabel": "Clean Soap and Put It on the Counter"
+      "comparisonTaskLabel": "Clean Soap and Put It on the Counter",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/alfworld_visual/sol/provenance.json",
+      "mediaDurationSeconds": 7.2,
+      "mediaReportSha256": "c9faf05650c0b2c083947cf3fa89ea6bcfdb8bdd47e665239db2fdb462ab9267"
     },
     "W3-alfworld_visual-fable-01": {
       "id": "W3-alfworld_visual-fable-01",
@@ -657,9 +677,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-alfworld_visual-fable-01/clip.mp4",
-      "poster": "assets/model-cases/W3-alfworld_visual-fable-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/alfworld_visual/fable/clip.mp4",
+      "poster": "assets/video-supplement-20261021/alfworld_visual/fable/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-alfworld_visual-fable-01/frame-01.webp",
@@ -697,7 +717,12 @@
       "sourceMediaSha256": "2bbeba2711e0306d71cd368f9f392d316c147544cefc7e576f226e030a5e703b",
       "publishedVideoSha256": "133739a1243f96e5138d94536c58a709e9564cb63596e78601cbf7f32f0fcbcd",
       "comparisonInstruction": "Put a cleaned bar of soap on a counter.",
-      "comparisonTaskLabel": "Clean Soap and Put It on the Counter"
+      "comparisonTaskLabel": "Clean Soap and Put It on the Counter",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/alfworld_visual/fable/provenance.json",
+      "mediaDurationSeconds": 6.0,
+      "mediaReportSha256": "a793e66994f63a6783984597dcbac7e83b6c8209b62ff7e5af39e3dc77c03940"
     },
     "W3-alfworld_visual-gemini-01": {
       "id": "W3-alfworld_visual-gemini-01",
@@ -1091,9 +1116,9 @@
       "protocol": "RGB-expanded",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-calvin-sol-01/clip.mp4",
-      "poster": "assets/model-cases/W4-calvin-sol-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/calvin/sol/clip.mp4",
+      "poster": "assets/video-supplement-20261021/calvin/sol/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-calvin-sol-01/frame-01.webp",
@@ -1147,7 +1172,12 @@
       "sourceMediaSha256": "15e14f5f503e1ad9f5d10ecb6351866f6b6da7491e1e607fc0428da6feedd19a",
       "publishedVideoSha256": "c31d145d72d1964f11f17e779a90155f2b475d3e83cdd9adf5e3888b3562961d",
       "comparisonInstruction": "Lift the blue block from the sliding cabinet, put it in the drawer, retrieve it, stack it, and switch off the light.",
-      "comparisonTaskLabel": "Sequence 0526 · Five Goals"
+      "comparisonTaskLabel": "Sequence 0526 · Five Goals",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/calvin/sol/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "903a7d52f4f6f1c7d2c30e5208402f60556ab40c2ee5f90a83117261910004ac"
     },
     "W4-calvin-fable-01": {
       "id": "W4-calvin-fable-01",
@@ -1239,9 +1269,9 @@
       "protocol": "RGB-expanded",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-calvin-gemini-01/clip.mp4",
-      "poster": "assets/model-cases/W4-calvin-gemini-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/calvin/gemini/clip.mp4",
+      "poster": "assets/video-supplement-20261021/calvin/gemini/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-calvin-gemini-01/frame-01.webp",
@@ -1295,7 +1325,12 @@
       "sourceMediaSha256": "d1427175ccfbdfdec551897883143b5006b2fe44e423b1bfc77b8acb01943aa9",
       "publishedVideoSha256": "b3b65d3ecc19ef57b9e80f663843b76b18c20ba2315b4f6096439226a74adeb1",
       "comparisonInstruction": "Lift the blue block from the sliding cabinet, put it in the drawer, retrieve it, stack it, and switch off the light.",
-      "comparisonTaskLabel": "Sequence 0526 · Five Goals"
+      "comparisonTaskLabel": "Sequence 0526 · Five Goals",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/calvin/gemini/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "9ac0306120cfdd97e422f53e8dbd6d15c3e296d64a1c9d6a2c8b6df53b910bd6"
     },
     "W4-calvin-qwen-01": {
       "id": "W4-calvin-qwen-01",
@@ -1313,9 +1348,9 @@
       "protocol": "RGB-expanded",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-calvin-qwen-01/clip.mp4",
-      "poster": "assets/model-cases/W4-calvin-qwen-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/calvin/qwen/clip.mp4",
+      "poster": "assets/video-supplement-20261021/calvin/qwen/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-calvin-qwen-01/frame-01.webp",
@@ -1369,7 +1404,12 @@
       "sourceMediaSha256": "99fc753453eb1a9fcf74b274ae8f8d7036d068da79e6973a42dcd49bf6d0062e",
       "publishedVideoSha256": "68fe904e0782773b8017f2bd0c26a561fc5b70ef736d6b45720b3e23df2b8989",
       "comparisonInstruction": "Lift the blue block from the sliding cabinet, put it in the drawer, retrieve it, stack it, and switch off the light.",
-      "comparisonTaskLabel": "Sequence 0526 · Five Goals"
+      "comparisonTaskLabel": "Sequence 0526 · Five Goals",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/calvin/qwen/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "e0a82652f015f35d42118a8d6ae41b48ca2ca05ac9a8dd1c2c0289feb0966bb7"
     },
     "W4-calvin-qwen35-397b-01": {
       "id": "W4-calvin-qwen35-397b-01",
@@ -1387,9 +1427,9 @@
       "protocol": "RGB-expanded",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-calvin-qwen35-397b-01/clip.mp4",
-      "poster": "assets/model-cases/W4-calvin-qwen35-397b-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/calvin/qwen35-397b/clip.mp4",
+      "poster": "assets/video-supplement-20261021/calvin/qwen35-397b/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-calvin-qwen35-397b-01/frame-01.webp",
@@ -1443,7 +1483,12 @@
       "sourceMediaSha256": "839fee8724df14eb24c5083ceeffbc1d58f6dcea8fb55dd32644b574c80f9c7d",
       "publishedVideoSha256": "981b9b8742fa21dada2a44feb9d221d02124a092df7d584ee47e9908adaa742a",
       "comparisonInstruction": "Lift the blue block from the sliding cabinet, put it in the drawer, retrieve it, stack it, and switch off the light.",
-      "comparisonTaskLabel": "Sequence 0526 · Five Goals"
+      "comparisonTaskLabel": "Sequence 0526 · Five Goals",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/calvin/qwen35-397b/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "a62fb8e8cf61aaf3545062366bbe11d0976682bae17672406a78197a56dedca4"
     },
     "W4-calvin-qwen35-27b-01": {
       "id": "W4-calvin-qwen35-27b-01",
@@ -1535,9 +1580,9 @@
       "protocol": "Source-native primitives; per-round image delivery unverified",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-calvin-opus55-01/clip.mp4",
-      "poster": "assets/model-cases/W4-calvin-opus55-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/calvin/opus55/clip.mp4",
+      "poster": "assets/video-supplement-20261021/calvin/opus55/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-calvin-opus55-01/frame-01.webp",
@@ -1591,7 +1636,12 @@
       "sourceMediaSha256": "bfdedf020dbdffb3fc155f347ffe3d4a4c1d77195f437a0d6c2623eb1dc0bee6",
       "publishedVideoSha256": "692bac9d4771050dd3584af87a9f5112ceb81131dfc60f3833595f9cb160415c",
       "comparisonInstruction": "Lift the blue block from the sliding cabinet, put it in the drawer, retrieve it, stack it, and switch off the light.",
-      "comparisonTaskLabel": "Sequence 0526 · Five Goals"
+      "comparisonTaskLabel": "Sequence 0526 · Five Goals",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/calvin/opus55/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "3d444d3e161da916afa32b06d85c13af0db632f069227494291dbbc29737df9b"
     },
     "W4-capx_behavior1k-astra-01": {
       "id": "W4-capx_behavior1k-astra-01",
@@ -3977,9 +4027,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-discoveryworld-astra-01/clip.mp4",
-      "poster": "assets/model-cases/W3-discoveryworld-astra-01/poster.webp",
-      "mediaKind": "Animated execution log",
+      "video": "assets/video-supplement-20261021/discoveryworld/astra/clip.mp4",
+      "poster": "assets/video-supplement-20261021/discoveryworld/astra/poster.jpg",
+      "mediaKind": "Verified action replay",
       "frames": [
         {
           "label": "T1: Turn 1",
@@ -4147,7 +4197,12 @@
       "sourceMediaSha256": "e4daec33f3eea83145fcfd5628c5780e193a3afe390f039b652e4315f5514501",
       "publishedVideoSha256": "5a4d3ef8639b24274fa693b4f0cbaf02e6ee8787a0de44370727bfd9935303fa",
       "comparisonInstruction": "Excavate three sites, date the artifacts, and place the red flag at the oldest site.",
-      "comparisonTaskLabel": "Date the Oldest Artifact"
+      "comparisonTaskLabel": "Date the Oldest Artifact",
+      "animation": null,
+      "mediaNote": "Original actions and seed replayed; recorded states and action responses match the verification log.",
+      "mediaProvenance": "assets/video-supplement-20261021/discoveryworld/astra/provenance.json",
+      "mediaDurationSeconds": 12.067,
+      "mediaReportSha256": "1c3d675f161a39b056ef8f7952aa8b2858dc373e02217d5fc36940255c3844e3"
     },
     "W3-discoveryworld-sol-01": {
       "id": "W3-discoveryworld-sol-01",
@@ -4753,9 +4808,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-discoveryworld-opus55-01/clip.mp4",
-      "poster": "assets/model-cases/W3-discoveryworld-opus55-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/discoveryworld/opus55/clip.mp4",
+      "poster": "assets/video-supplement-20261021/discoveryworld/opus55/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-discoveryworld-opus55-01/frame-01.webp",
@@ -4805,7 +4860,12 @@
       "sourceMediaSha256": "e3606571b0a3dc653b1af475cb40934f513f43306a7180ead3ab96c0d7d0b961",
       "publishedVideoSha256": "64a8059f77ec00f33f8f1964a0d5d1530845051ee83c6fdff010dca7e651935c",
       "comparisonInstruction": "Excavate three sites, date the artifacts, and place the red flag at the oldest site.",
-      "comparisonTaskLabel": "Date the Oldest Artifact"
+      "comparisonTaskLabel": "Date the Oldest Artifact",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/discoveryworld/opus55/provenance.json",
+      "mediaDurationSeconds": 11.867,
+      "mediaReportSha256": "c69112a98751e2dcfdfde9c09bd26f0677fe984e082823f3afa6029d7a934293"
     },
     "W3-humanclaw-astra-01": {
       "id": "W3-humanclaw-astra-01",
@@ -4823,9 +4883,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-humanclaw-astra-01/clip.mp4",
-      "poster": "assets/model-cases/W3-humanclaw-astra-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/humanclaw/astra/clip.mp4",
+      "poster": "assets/video-supplement-20261021/humanclaw/astra/poster.jpg",
+      "mediaKind": "Saved-state render",
       "frames": [
         {
           "image": "assets/model-cases/W3-humanclaw-astra-01/frame-01.webp",
@@ -4882,7 +4942,12 @@
         "successes": 1,
         "score": 1,
         "reportSha256": "726aad43b1f55f9883080256d7ca3b571570b78cd618889bd1be950c160c87e7"
-      }
+      },
+      "animation": null,
+      "mediaNote": "Rendered from saved body and object poses, without advancing physics or calling the model.",
+      "mediaProvenance": "assets/video-supplement-20261021/humanclaw/astra/provenance.json",
+      "mediaDurationSeconds": 8.0,
+      "mediaReportSha256": "726aad43b1f55f9883080256d7ca3b571570b78cd618889bd1be950c160c87e7"
     },
     "W3-humanclaw-sol-01": {
       "id": "W3-humanclaw-sol-01",
@@ -4900,9 +4965,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-humanclaw-sol-01/clip.mp4",
-      "poster": "assets/model-cases/W3-humanclaw-sol-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/humanclaw/sol/clip.mp4",
+      "poster": "assets/video-supplement-20261021/humanclaw/sol/poster.jpg",
+      "mediaKind": "Saved-state render",
       "frames": [
         {
           "image": "assets/model-cases/W3-humanclaw-sol-01/frame-01.webp",
@@ -4959,7 +5024,12 @@
         "successes": 1,
         "score": 1,
         "reportSha256": "da1db328a685baa21f982cc09213906bcffaafc55a9a8d627451f40c74445ab8"
-      }
+      },
+      "animation": null,
+      "mediaNote": "Rendered from saved body and object poses, without advancing physics or calling the model.",
+      "mediaProvenance": "assets/video-supplement-20261021/humanclaw/sol/provenance.json",
+      "mediaDurationSeconds": 7.534,
+      "mediaReportSha256": "da1db328a685baa21f982cc09213906bcffaafc55a9a8d627451f40c74445ab8"
     },
     "W3-humanclaw-fable-01": {
       "id": "W3-humanclaw-fable-01",
@@ -5690,9 +5760,9 @@
       "protocol": "RGB-expanded",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-maniskill-qwen-01/clip.mp4",
-      "poster": "assets/model-cases/W4-maniskill-qwen-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/maniskill/qwen/clip.mp4",
+      "poster": "assets/video-supplement-20261021/maniskill/qwen/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-maniskill-qwen-01/frame-01.webp",
@@ -5746,7 +5816,12 @@
       "sourceMediaSha256": "529bb0c45f43d9e1545d3f4554cb96fc7088b7cbfa10c29642e9ecce39003af7",
       "publishedVideoSha256": "5e34ce9e6c6a6a0ed799085b6188559bd8074e4a5dd6e98c29c7ab91ecde27a8",
       "comparisonInstruction": "Insert the charger into the socket.",
-      "comparisonTaskLabel": "Insert the Charger"
+      "comparisonTaskLabel": "Insert the Charger",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/maniskill/qwen/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "13ec25f0d4eb2194c03ae7b317a035589e442228a1c41d114fd3d322efa3ddbb"
     },
     "W4-maniskill-qwen35-397b-01": {
       "id": "W4-maniskill-qwen35-397b-01",
@@ -5764,9 +5839,9 @@
       "protocol": "RGB-expanded",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-maniskill-qwen35-397b-01/clip.mp4",
-      "poster": "assets/model-cases/W4-maniskill-qwen35-397b-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/maniskill/qwen35-397b/clip.mp4",
+      "poster": "assets/video-supplement-20261021/maniskill/qwen35-397b/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-maniskill-qwen35-397b-01/frame-01.webp",
@@ -5820,7 +5895,12 @@
       "sourceMediaSha256": "cf51cb567c4a34c1cdb12707d047d06d922013ed5099ebfd8591f28bd8c2a97b",
       "publishedVideoSha256": "2da81efcf06f56b750b907710507ebbf88c39719290ef923724c3899bc7de3af",
       "comparisonInstruction": "Insert the charger into the socket.",
-      "comparisonTaskLabel": "Insert the Charger"
+      "comparisonTaskLabel": "Insert the Charger",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/maniskill/qwen35-397b/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "4b1fb9c9443386e02f97bacfda7f567da2fc5818fcaeaa92aba2c3e4d111d40d"
     },
     "W4-maniskill-qwen35-27b-01": {
       "id": "W4-maniskill-qwen35-27b-01",
@@ -6282,9 +6362,9 @@
       "protocol": "RGB-expanded",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-rlbench-qwen-01/clip.mp4",
-      "poster": "assets/model-cases/W4-rlbench-qwen-01/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/rlbench/qwen/clip.mp4",
+      "poster": "assets/video-supplement-20261021/rlbench/qwen/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-rlbench-qwen-01/frame-01.webp",
@@ -6338,7 +6418,12 @@
       "sourceMediaSha256": "a062ab579f119513f3a838b65eaaf865be26b1f50fe8b9a7b6fddf08cf057f27",
       "publishedVideoSha256": "7cbb2761469f33a2c5615d77a1cce14ad06f14ecf72e9c53b0652e95324ab3af",
       "comparisonInstruction": "Close Laptop Lid",
-      "comparisonTaskLabel": "Close the Laptop"
+      "comparisonTaskLabel": "Close the Laptop",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/rlbench/qwen/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "c4a5551d2269aff19912c6789b61004f2f6e3b35d19eee8eda4f22cace7f9bcf"
     },
     "W4-rlbench-qwen35-397b-01": {
       "id": "W4-rlbench-qwen35-397b-01",
@@ -11717,9 +11802,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-alfred_official_visual-deepseek-01/clip.mp4",
-      "poster": "assets/model-cases/W3-alfred_official_visual-deepseek-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/alfred_official_visual/deepseek/clip.mp4",
+      "poster": "assets/video-supplement-20261021/alfred_official_visual/deepseek/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-alfred_official_visual-deepseek-01/frame-01.webp",
@@ -11771,7 +11856,12 @@
       "importedStatusDurationSeconds": 76.68373084068298,
       "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately.",
       "comparisonInstruction": "Clean the soap bar and place it in the bathtub.",
-      "comparisonTaskLabel": "Clean Soap, Then Place It"
+      "comparisonTaskLabel": "Clean Soap, Then Place It",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/alfred_official_visual/deepseek/provenance.json",
+      "mediaDurationSeconds": 9.6,
+      "mediaReportSha256": "83165814a0683ca5fff84b2b6acba6343d952be2cd7956f26bb643eb6265c1b7"
     },
     "W3-alfred_official_visual-deepseek-04": {
       "id": "W3-alfred_official_visual-deepseek-04",
@@ -11837,9 +11927,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-alfworld_visual-deepseek-01/clip.mp4",
-      "poster": "assets/model-cases/W3-alfworld_visual-deepseek-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/alfworld_visual/deepseek/clip.mp4",
+      "poster": "assets/video-supplement-20261021/alfworld_visual/deepseek/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-alfworld_visual-deepseek-01/frame-01.webp",
@@ -11883,7 +11973,12 @@
       "importedStatusDurationSeconds": 73.84183025360107,
       "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately.",
       "comparisonInstruction": "Put a cleaned bar of soap on a counter.",
-      "comparisonTaskLabel": "Clean Soap and Put It on the Counter"
+      "comparisonTaskLabel": "Clean Soap and Put It on the Counter",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/alfworld_visual/deepseek/provenance.json",
+      "mediaDurationSeconds": 7.2,
+      "mediaReportSha256": "2359f472c528f1da3057d410d1c73dde533afa84847b8db36aa6177441d83297"
     },
     "W3-alfworld_visual-deepseek-04": {
       "id": "W3-alfworld_visual-deepseek-04",
@@ -11957,9 +12052,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-discoveryworld-deepseek-01/clip.mp4",
-      "poster": "assets/model-cases/W3-discoveryworld-deepseek-01/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/discoveryworld/deepseek/clip.mp4",
+      "poster": "assets/video-supplement-20261021/discoveryworld/deepseek/poster.jpg",
+      "mediaKind": "Saved observations",
       "frames": [
         {
           "image": "assets/model-cases/W3-discoveryworld-deepseek-01/frame-01.webp",
@@ -12011,7 +12106,12 @@
       "importedStatusDurationSeconds": 57.280498027801514,
       "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately.",
       "comparisonInstruction": "Excavate three sites, date the artifacts, and place the red flag at the oldest site.",
-      "comparisonTaskLabel": "Date the Oldest Artifact"
+      "comparisonTaskLabel": "Date the Oldest Artifact",
+      "animation": null,
+      "mediaNote": "Original saved observations shown in order at uniform display intervals.",
+      "mediaProvenance": "assets/video-supplement-20261021/discoveryworld/deepseek/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "b87667680e2752fb60f59610c51ef599a25e58b68350459b31d36186eefe3985"
     },
     "W3-discoveryworld-deepseek-06": {
       "id": "W3-discoveryworld-deepseek-06",
@@ -12172,9 +12272,9 @@
       "protocol": "Baseline",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W3-humanclaw-deepseek-02/clip.mp4",
-      "poster": "assets/model-cases/W3-humanclaw-deepseek-02/poster.webp",
-      "mediaKind": "Saved observation sequence",
+      "video": "assets/video-supplement-20261021/humanclaw/deepseek/clip.mp4",
+      "poster": "assets/video-supplement-20261021/humanclaw/deepseek/poster.jpg",
+      "mediaKind": "Saved-state render",
       "frames": [
         {
           "image": "assets/model-cases/W3-humanclaw-deepseek-02/frame-01.webp",
@@ -12232,7 +12332,12 @@
         "successes": 1,
         "score": 1,
         "reportSha256": "d708ea6bdf0418dd7683f6f02d82bfbc721b8345252a6f2d5a8405b161360493"
-      }
+      },
+      "animation": null,
+      "mediaNote": "Rendered from saved body and object poses, without advancing physics or calling the model.",
+      "mediaProvenance": "assets/video-supplement-20261021/humanclaw/deepseek/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "d708ea6bdf0418dd7683f6f02d82bfbc721b8345252a6f2d5a8405b161360493"
     },
     "W3-scienceworld_text-deepseek-01": {
       "id": "W3-scienceworld_text-deepseek-01",
@@ -12755,9 +12860,9 @@
       "protocol": "Per-round RGB",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-calvin-deepseek-02/clip.mp4",
-      "poster": "assets/model-cases/W4-calvin-deepseek-02/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/calvin/deepseek/clip.mp4",
+      "poster": "assets/video-supplement-20261021/calvin/deepseek/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-calvin-deepseek-02/frame-01.webp",
@@ -12813,7 +12918,12 @@
       "importedStatusDurationSeconds": 465.89950609207153,
       "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately.",
       "comparisonInstruction": "Lift the blue block from the sliding cabinet, put it in the drawer, retrieve it, stack it, and switch off the light.",
-      "comparisonTaskLabel": "Sequence 0526 · Five Goals"
+      "comparisonTaskLabel": "Sequence 0526 · Five Goals",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/calvin/deepseek/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "5defe359986dc3000abe5d5818156093e27332b1d2122656450a5d66a20686cb"
     },
     "W4-calvin-deepseek-05": {
       "id": "W4-calvin-deepseek-05",
@@ -13456,9 +13566,9 @@
       "protocol": "Per-round RGB",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-maniskill-deepseek-04/clip.mp4",
-      "poster": "assets/model-cases/W4-maniskill-deepseek-04/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/maniskill/deepseek/clip.mp4",
+      "poster": "assets/video-supplement-20261021/maniskill/deepseek/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-maniskill-deepseek-04/frame-01.webp",
@@ -13514,7 +13624,12 @@
       "importedStatusDurationSeconds": 482.12411427497864,
       "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately.",
       "comparisonInstruction": "Insert the charger into the socket.",
-      "comparisonTaskLabel": "Insert the Charger"
+      "comparisonTaskLabel": "Insert the Charger",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/maniskill/deepseek/provenance.json",
+      "mediaDurationSeconds": 12.0,
+      "mediaReportSha256": "d18264307c75be15a81ed170e0a36267e8f6098f4375b5a8d25c6fb70ec17d86"
     },
     "W4-rlbench-deepseek-02": {
       "id": "W4-rlbench-deepseek-02",
@@ -13532,9 +13647,9 @@
       "protocol": "Per-round RGB",
       "demoOnly": false,
       "note": "",
-      "video": "assets/model-cases/W4-rlbench-deepseek-02/clip.mp4",
-      "poster": "assets/model-cases/W4-rlbench-deepseek-02/poster.webp",
-      "mediaKind": "Recorded video excerpt",
+      "video": "assets/video-supplement-20261021/rlbench/deepseek/clip.mp4",
+      "poster": "assets/video-supplement-20261021/rlbench/deepseek/poster.jpg",
+      "mediaKind": "Video excerpt",
       "frames": [
         {
           "image": "assets/model-cases/W4-rlbench-deepseek-02/frame-01.webp",
@@ -13590,7 +13705,12 @@
       "importedStatusDurationSeconds": 246.09216618537903,
       "elapsedTimeDefinition": "Episode duration from the matched report; import status duration retained separately.",
       "comparisonInstruction": "Close Laptop Lid",
-      "comparisonTaskLabel": "Close the Laptop"
+      "comparisonTaskLabel": "Close the Laptop",
+      "animation": null,
+      "mediaNote": "Excerpt from the original recording; playback time is separate from episode time.",
+      "mediaProvenance": "assets/video-supplement-20261021/rlbench/deepseek/provenance.json",
+      "mediaDurationSeconds": 8.334,
+      "mediaReportSha256": "086a73ba07f1b8664706a75e6fd6d37bdbe5c62b803c540f1a27585a43b06faa"
     },
     "W4-rlbench-deepseek-04": {
       "id": "W4-rlbench-deepseek-04",

@@ -142,7 +142,7 @@ def build():
     (PUB / "data/report/overview-provenance.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     doc = ["# Tasks in the overview", "",
-           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} results and {manifest['recordingCount']} matching recordings**; cells without footage link to the recorded result.", "",
+           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} results and {manifest['recordingCount']} matching scene previews**; cells without footage link to the recorded result.", "",
            "## Fixed tasks", "", "| Benchmark | Task | Compare |", "| :--- | :--- | :--- |"]
     for c in columns:
         gid = c['groupId']
@@ -152,7 +152,7 @@ def build():
     doc += ["", "## Model rows", ""]
     for i, m in enumerate(MODELS):
         n = sum(bool(t['mediaSha256']) for t in cells if t['modelKey'] == m)
-        doc.append(f"{i+1}. **{data['models'][i]}** — {n} recordings; {len(columns)} task results.")
+        doc.append(f"{i+1}. **{data['models'][i]}** — {n} scene previews; {len(columns)} task results.")
     doc += ["", "The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.", ""]
     (ROOT / "docs/RECORDED_TASKS.md").write_text("\n".join(doc))
     app = PUB / "app.js"

@@ -11,13 +11,25 @@ The **21 October 2026 author manuscript** and the public results compare **ten m
 | Repeated-run details | Run means and valid sample counts for the repeated metrics | [CSV](../public/data/complementary-results-mean-sd.csv) |
 | Planning outcomes | 10 models × the same 157 tasks; 1,570 recorded outcomes | [CSV](../public/data/report/planning-outcomes.csv) · [JSON](../public/data/report/planning-outcomes.json) · [Analysis](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html) |
 | Case atlas | 181 comparisons: 72 perception/affordance cases and 109 execution tasks; ten-model results in each | [Browse](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html) · [Static cases](../public/data/case-studies.json) · [Execution comparisons](../public/data/case-comparisons.json) |
-| Overview task map | 11 fixed tasks × 10 models; 59 matching recordings | [Task descriptions](RECORDED_TASKS.md) · [Identity and media manifest](../public/data/report/overview-provenance.json) |
+| Overview task map | 11 fixed tasks × 10 models; 90 matching scene previews | [Task descriptions](RECORDED_TASKS.md) · [Identity and media manifest](../public/data/report/overview-provenance.json) |
 | Execution analysis | Nine-model log cohort: 1,413 Planning episodes; 46 selected tasks with 414 records, including 143 detailed traces | [Planning episode CSV](../public/data/report/planning-episodes.csv) · [Selected episode CSV](../public/data/execution/complete-episodes.csv) · [Definitions and rebuild instructions](EXECUTION_ANALYSIS.md) |
 | Manuscript and figures | Latest author PDF/source; native draw.io figures with vector and raster exports | [PDF](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) · [LaTeX source](https://embodied-agent-arena.github.io/embodied-agent-arena/author-source.zip) · [Figure ZIP](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip) · [Figure manifest](../public/assets/analysis/figure-manifest.json) |
 
 **Argon coverage:** all five main-result domains, repeated metrics, polygon predictions, Planning outcomes and the case gallery are included. Its detailed action/feedback traces and video-time alignment are not yet available. The nine-model token/recovery analyses retain their original cohort.
 
 **Statistics:** repeated metrics use mean ± run SD (five runs; Fable: three). Polygon IoU, Planning and Manipulation use one run. Qwen-Max's 11 missing polygon predictions count as errors in the 70-case denominator. Per-case examples and aggregate scores serve different purposes; each execution record retains its own settings and budget.
+
+## Video supplement
+
+The [21 October media supplement](../public/data/video-supplement-audit.json) matches all 70 assignments in the first seven overview columns. **65 have media**: 27 original video excerpts, 27 saved-observation sequences, 4 verified action replays and 7 saved-state renders. The full 11-column overview now has **90 scene previews across 110 results**. Media types and provenance are available in each updated case record.
+
+The five remaining gaps in the supplied seven-task set are Astra/CALVIN, Astra/RLBench, and the three Qwen models/HumanCLAW. The first two lack the selected run's original recording; the three Qwen executions failed before actions began. The other four overview columns are outside this supplement's scope.
+
+```bash
+python scripts/import_video_supplement.py --archive /path/to/ten-model-video-supplement-20261021.zip
+python scripts/build_overview_matrix.py
+python scripts/build_case_atlas.py
+```
 
 ## Rebuild the public outputs
 

@@ -1,6 +1,6 @@
 # Tasks in the overview
 
-The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 results and 59 matching recordings**; cells without footage link to the recorded result.
+The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 results and 90 matching scene previews**; cells without footage link to the recorded result.
 
 ## Fixed tasks
 
@@ -20,15 +20,15 @@ The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent
 
 ## Model rows
 
-1. **GPT-6 Astra** — 2 recordings; 11 task results.
-2. **GPT-6 Sol** — 6 recordings; 11 task results.
-3. **Claude Fable 5.1** — 4 recordings; 11 task results.
-4. **Gemini 3.8 Flash** — 5 recordings; 11 task results.
-5. **Qwen 3.8 Max** — 5 recordings; 11 task results.
-6. **Qwen 3.5 397B-A17B** — 4 recordings; 11 task results.
-7. **Qwen 3.5 27B** — 2 recordings; 11 task results.
-8. **Claude Opus 5.5** — 9 recordings; 11 task results.
-9. **DeepSeek 4.1 Flash-1017** — 11 recordings; 11 task results.
-10. **Gemini 4 Argon** — 11 recordings; 11 task results.
+1. **GPT-6 Astra** — 6 scene previews; 11 task results.
+2. **GPT-6 Sol** — 10 scene previews; 11 task results.
+3. **Claude Fable 5.1** — 10 scene previews; 11 task results.
+4. **Gemini 3.8 Flash** — 10 scene previews; 11 task results.
+5. **Qwen 3.8 Max** — 7 scene previews; 11 task results.
+6. **Qwen 3.5 397B-A17B** — 8 scene previews; 11 task results.
+7. **Qwen 3.5 27B** — 8 scene previews; 11 task results.
+8. **Claude Opus 5.5** — 9 scene previews; 11 task results.
+9. **DeepSeek 4.1 Flash-1017** — 11 scene previews; 11 task results.
+10. **Gemini 4 Argon** — 11 scene previews; 11 task results.
 
 The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.
