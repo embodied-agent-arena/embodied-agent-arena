@@ -2,10 +2,10 @@
   "manuscriptDate": "2026-10-22",
   "modelsInMainComparison": 10,
   "scopes": {
-    "figure3-tradeoffs": "Ten-model profiles with a fixed 0\u2013100 OpenReview warm colour scale; Gemini 3.8 and Gemini 4 identified explicitly.",
+    "figure3-tradeoffs": "Ten-model profiles with a fixed 0–100 OpenReview warm colour scale; Gemini 3.8 and Gemini 4 identified explicitly.",
     "figure4-geometry": "Ten-model 3D tracing with logos at measured coordinates and adjacent variant labels; five-run SDs in displacement panel.",
     "figure5-spatial": "Ten-model main results; ablation panels retain the original experiment cohort.",
-    "figure6-affordance": "Ten models on 70 cases: polygon overlap vs box mean \u00b1 SD; tools vs interaction diagnosis for Gemini 4 Argon.",
+    "figure6-affordance": "Ten models on 70 cases: polygon overlap vs box mean ± SD; tools vs interaction diagnosis for Gemini 4 Argon.",
     "figure7-planning": "All 157 Planning tasks: ten-model success and the full distribution of cross-model success coverage.",
     "figure8-manipulation": "Thirteen-suite results for nine agents with complete source records; paired CALVIN/ManiSkill panels retain seven/six original models. Same tasks, recorded Baseline vs Expanded observations and budgets.",
     "execution-progress": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
@@ -79,123 +79,123 @@
     },
     {
       "path": "figure3-tradeoffs.drawio",
-      "sha256": "9663b5c27f77c0400908b62d805faf8b858eab081c3f7e825a49183db246785f",
-      "bytes": 95186
+      "sha256": "4f63143473160c6ee45d01ab49ab17ef579fe927fde57853d02c88de9bdc6ba4",
+      "bytes": 95906
     },
     {
       "path": "figure3-tradeoffs.pdf",
-      "sha256": "64bc31f921d634c968bce4e33c70a6d418684e4a1f156687354137362f025084",
-      "bytes": 70922
+      "sha256": "2800a62734ffe3f7878a4a1ee42e730cef175da9386e155ecaab16034b083587",
+      "bytes": 71302
     },
     {
       "path": "figure3-tradeoffs.png",
-      "sha256": "b57cf0781ab65cd1989fdd48c13b85b31d9a4465431cb0d55e456cabc61ceef7",
-      "bytes": 224452
+      "sha256": "af528727cdbc7c08c5068e56ece3fb9910080af1fac76e30ab4e0f92b9cf4299",
+      "bytes": 208091
     },
     {
       "path": "figure3-tradeoffs.svg",
-      "sha256": "aaf35d1b5987dadb7d183b15203c038ee6b23fc473a699fb1c8c89b015a36979",
-      "bytes": 152008
+      "sha256": "a31434c7ef8c9fdd6a6bece6ec6c94a18105c0090e8b5a133c1af71ef5cd643d",
+      "bytes": 156905
     },
     {
       "path": "figure4-geometry.drawio",
-      "sha256": "ca3382f3a48155c4b398ce72042007facf6eddd99da1663c7301a8db7402f215",
-      "bytes": 102170
+      "sha256": "6e526dcc654814c02c10a3cec809019a6377585ebdee6c986e428c1ce5da0efb",
+      "bytes": 102648
     },
     {
       "path": "figure4-geometry.pdf",
-      "sha256": "4d5e50090d876b5bd983ecd408cd2363b4e78cbcdac3a2b16a309866f00acb59",
-      "bytes": 71226
+      "sha256": "758f4eec677c5cc51ca4bf97e18868eedb67f195799b44acef89fd8f44003556",
+      "bytes": 71438
     },
     {
       "path": "figure4-geometry.png",
-      "sha256": "6884c1155b6593dd89def24d4f6bd3d7d36e23bcdf4c2822c9b72c80f392a3d2",
-      "bytes": 159358
+      "sha256": "78caaf05ffe7bf07d66924be81e00241db072bf5f6742f70a173eba341ae431c",
+      "bytes": 151020
     },
     {
       "path": "figure4-geometry.svg",
-      "sha256": "e2a33cfc27d9332c1341fe5eb7793d122816aa9cc72714cf008c01e35e24a7b6",
-      "bytes": 176315
+      "sha256": "f77cd90e9a552f182d888b30b56b50fff137260a32fe8f3b913d3238cdbe6159",
+      "bytes": 180351
     },
     {
       "path": "figure5-spatial.drawio",
-      "sha256": "7a914d9479ba74fe3d4fed410ed9754b104c60a374be0bf6878494d202f90c05",
-      "bytes": 217826
+      "sha256": "3539eb2520511d2c07c75a8a58f3dd0dc085b5340ef09e612dd5d4318cdaa953",
+      "bytes": 219984
     },
     {
       "path": "figure5-spatial.pdf",
-      "sha256": "728d9f939b4b96b2d6f1582100a0ae2b7e33c76cdd3c4b356b0219cf1d2c41f1",
-      "bytes": 158258
+      "sha256": "64231503f774d5c4fea6546f9c0dea352d4a677b912d39876292ad8ef28bad65",
+      "bytes": 158718
     },
     {
       "path": "figure5-spatial.png",
-      "sha256": "2b9eccc3492d9cf0997259c0eb3c234b470d247697e259515fd4deb97be86c35",
-      "bytes": 204341
+      "sha256": "238e5939512ec02080ecef0fb4a96d5c9f2f887a2b4afb9ea0a3b1afca9f9a7d",
+      "bytes": 182773
     },
     {
       "path": "figure5-spatial.svg",
-      "sha256": "8030d6625d48b6bd4fd374f8bea2b3776754cc2d89867343cba2e8293f01e4d9",
-      "bytes": 265581
+      "sha256": "8afd121fd4fcce1321d0ed3eb02e069346dfb4021d80d6a47955b82a26d6fecc",
+      "bytes": 270344
     },
     {
       "path": "figure6-affordance.drawio",
-      "sha256": "c72a58defdef4efc0c1a9a863e507b7a85417c206d3944ee81f714f1824a5d6e",
-      "bytes": 68112
+      "sha256": "a6b07afd0f47da05369beb9cb836b8379d7c7bdf3fa4605033042a7f821b07be",
+      "bytes": 68652
     },
     {
       "path": "figure6-affordance.pdf",
-      "sha256": "20cd94d520669f38a0a4bffec4f46aea6801fc909236adb6a51244d903f060a3",
-      "bytes": 55854
+      "sha256": "fdd2a9f9f1fd0226310fa967c74e800b724cbe39496275f8d7caec5c1ebf3009",
+      "bytes": 56050
     },
     {
       "path": "figure6-affordance.png",
-      "sha256": "81bdc19c992070ed2879c076bdf66b35536c115904b48de4dcb0edd1e8d8f3cc",
-      "bytes": 136029
+      "sha256": "8ffaa6aa140542dead3788fac1e7dd0d57e54c3612b84e5e82476606eb750db7",
+      "bytes": 141696
     },
     {
       "path": "figure6-affordance.svg",
-      "sha256": "42e3ed3d1999c54b93b09f9b5ca5a9eef6a6c14ee9c8c8b644df57cd817b4559",
-      "bytes": 144639
+      "sha256": "e257f293fc58bf32df47fbf4be06b62a32a43354b2a87ca7eb97ee3c4ac527d9",
+      "bytes": 148400
     },
     {
       "path": "figure7-planning.drawio",
-      "sha256": "03818d57cc216421f55cbd87054923ee6154dd9a5df3855f4d6667697882bbb4",
-      "bytes": 63041
+      "sha256": "206b89ea864463279557bdccdc78d51acd2e5212f502f230bb0d1ecff9534c39",
+      "bytes": 63725
     },
     {
       "path": "figure7-planning.pdf",
-      "sha256": "141951078781b3e79e786aec1ffea8142460ba0a458af780915295ebc86246b2",
-      "bytes": 53988
+      "sha256": "ec8f2a7ed67d5340d18c04f1ae6c9cdc0689a25747f8fc9803c4b02db34a3c74",
+      "bytes": 54214
     },
     {
       "path": "figure7-planning.png",
-      "sha256": "3f7cc4e38a123bc1ea54cd6eda77f2f44a58d85f8930af8afa13bcb7eb422703",
-      "bytes": 133528
+      "sha256": "14b3e0d0e90e8bc165596786f702bdfed2946f85f9f506c459efc2e5db9fb854",
+      "bytes": 141480
     },
     {
       "path": "figure7-planning.svg",
-      "sha256": "e16f24f37101a1df9090c2e6efeb9aa94c5251b26c4a670c1aa6f1546f67537c",
-      "bytes": 136289
+      "sha256": "9721c7daa1c1ca8fa9082b640bb9887d7df92aa6a8a21511f1356ad4f47ff2e2",
+      "bytes": 139769
     },
     {
       "path": "figure8-manipulation.drawio",
-      "sha256": "c71d11da535574f2d0faa0bf1792c99a1bb530d66489d36d0464d0a5f864fb28",
-      "bytes": 201101
+      "sha256": "aa829088d2b0b32d7a038150ab5fed12ad3b05855867b2865a875149fbe15336",
+      "bytes": 205513
     },
     {
       "path": "figure8-manipulation.pdf",
-      "sha256": "354e3ffb12739401a807e0eb39f63ae0199519c7fa79d1ec9877a56c491ee4b3",
-      "bytes": 127548
+      "sha256": "08eab9ccaa336451d13cd1509548153bda000ad6df846cf926df4777fd60744c",
+      "bytes": 128474
     },
     {
       "path": "figure8-manipulation.png",
-      "sha256": "218dbf9ae0a067d397e5df0dceaecf6513cf34aff01de5f0fca1bf6fbbd1637b",
-      "bytes": 282889
+      "sha256": "db865510ab5c2498aa5608e7ddfb9fa6ab7315720abc39d2bc485009059ce915",
+      "bytes": 312295
     },
     {
       "path": "figure8-manipulation.svg",
-      "sha256": "9aa5235baeddf14d4cac2c5aabca844f8c4c6ec83b0def77708a1c78b78af388",
-      "bytes": 227256
+      "sha256": "c26bbd1681c9fa5bcf6dbb531e59256e5d21f554bc42322f13e7f1cc3450c72b",
+      "bytes": 235928
     },
     {
       "path": "model-logos/LOBE-ICONS-LICENSE",
@@ -322,5 +322,21 @@
       "sha256": "54c8373397b5b8de42ab044481d9a6896d5a50107be47f62cc8c1c1d5c1a523e",
       "bytes": 150752
     }
-  ]
+  ],
+  "typography": {
+    "revision": "2026-10-22",
+    "scope": [
+      "figure3-tradeoffs",
+      "figure4-geometry",
+      "figure5-spatial",
+      "figure6-affordance",
+      "figure7-planning",
+      "figure8-manipulation"
+    ],
+    "font": "Comic Sans MS",
+    "print_width_pt": 487.265,
+    "label_size_pt": 7.5,
+    "panel_size_pt": 9.5,
+    "policy": "Size is normalized at final manuscript width; long labels are reflowed without changing measurements."
+  }
 }

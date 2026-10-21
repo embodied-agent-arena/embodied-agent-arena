@@ -4,21 +4,21 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 67,
-  "paper_sha256": "8501d7a5dbbf40706944510c6b5c0ad509d983d962cd02d855ed814c4ee5d313",
+  "paper_sha256": "54c3bce55f29f7a3f29b87c4f48ebd110935ba481bc1e794a368baeb1b7b8be4",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 316,
   "figure_sha256": {
-    "geometry.webp": "f332426bb3e372160616dc91d90c13b801677197531428ab5a56033acd76c70e",
-    "spatial.webp": "99659bda51b98057106375529237dc784e753d4de033e7842a3f99f2bd880ba3",
-    "affordance.webp": "1d40a8e60b682d2ef81e2ae1384f7b62ee914e6e44ffd5c11bb2dfbefbd14dcf",
-    "planning.webp": "1c692d5ae232d328ae89f1fdc1ee4795b176bc63fd06ab25aebfca613f3b10b0",
-    "manipulation.webp": "c568f96f5cda33d02a840abcac2ba5f767359a9aa50f5877c064e911b55903de",
-    "nine-model-profiles.svg": "aaf35d1b5987dadb7d183b15203c038ee6b23fc473a699fb1c8c89b015a36979",
+    "geometry.webp": "edf1a30a1f0c375f28d5ebb3f34e961e61341de8c42e99471a55e2b0e2c8de13",
+    "spatial.webp": "b0403f110ea95e3406a704db2fe9b2042cf71122b748cfec44993ebef57ba380",
+    "affordance.webp": "9980bcffa3d424c766f509c5681851e3c0a86096b8ba31031c4f2fd8fe424c80",
+    "planning.webp": "3cbcd08ecefcd8677843ec4c6fcbd7d9cd40dafbebe952a73cd54ee3034970aa",
+    "manipulation.webp": "153a8a557dbb6c96207f0125a416bb50caf9a8f515c2cbc42ae970c62382241c",
+    "nine-model-profiles.svg": "a31434c7ef8c9fdd6a6bece6ec6c94a18105c0090e8b5a133c1af71ef5cd643d",
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "dd5563edb476aa336ab4da049986035c1e05c3658596d13df64e8368db8dc32f",
+  "source_sha256": "2cba813c0b0131f15fa9665742868f31ab687f43077f36556d91f5c1f34aee9d",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -39,7 +39,7 @@
     "explorerRecords": 460
   },
   "figure_style": {
-    "revision": "typography-20261022",
+    "revision": "font-consistency-20261022",
     "palette": "assets/model-logos/palette.json",
     "mainFigures": 6,
     "additionalManuscriptFigures": 3,
@@ -48,7 +48,7 @@
     "scatter": "Model logos at measured coordinates with adjacent variant labels; no separate model key",
     "bars": "Rounded solid brand-family fills; Comic Sans MS; labels and logos directly below each model",
     "supplementaryFigures": "Former main Table 3 moved to Appendix E as Table A33; former Figure 6/7 fine-grained panels preserved in appendix figures",
-    "typography": "Comic Sans MS retained; intact one-line model variants, aligned labels; all result values unchanged"
+    "typography": "Comic Sans MS; Figures 3\u20138 use 7.5 pt for labels, axes and numbers, and 9.5 pt for panel letters at 487.265 pt manuscript width. Label spacing adjusted; all measurements unchanged."
   },
   "protocol_audit": {
     "date": "2026-10-21",

@@ -51,9 +51,9 @@
 <ns0:path id="font_2_50" d="M.39160157-.030273438C.2998047-.030273438 .2220052-.0027313233 .15820313 .052352907 .09049479 .11101786 .056640626 .18663533 .056640626 .27920533 .056640626 .39197795 .09000651 .4944814 .15673828 .5867157 .23128255 .68906149 .32421876 .7402344 .43554688 .7402344 .54264327 .7402344 .6222331 .7161153 .6743164 .6678772 .7286784 .617686 .7558594 .53848269 .7558594 .43026734 .7558594 .31749473 .72526046 .21580506 .6640625 .12519837 .59375 .021550497 .5029297-.030273438 .39160157-.030273438M.43554688 .63964846C.35579429 .63964846 .2882487 .5999349 .23291016 .5205078 .18180339 .44759117 .15625 .3671875 .15625 .27929688 .15625 .21647136 .17952474 .16536458 .22607422 .12597656 .27067057 .08886719 .32584635 .0703125 .39160157 .0703125 .47070313 .0703125 .53597006 .110188808 .58740237 .1899414 .6333008 .26123048 .65625 .3413086 .65625 .43017579 .65625 .5079753 .63883468 .5626628 .6040039 .5942383 .5708008 .6245117 .51464846 .63964846 .43554688 .63964846Z" />
 </ns0:defs>
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M0-62H1360V440H0Z" fill="#ffffff" />
-<ns0:use data-text="(" ns1:href="#font_1_11" transform="matrix(29,0,0,-29,11.322754,27.570008)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_1_68" transform="matrix(29,0,0,-29,21.936755,27.570008)" fill="#30343b" />
-<ns0:use data-text=")" ns1:href="#font_1_12" transform="matrix(29,0,0,-29,38.031755,27.570008)" fill="#30343b" />
+<ns0:use data-text="(" ns1:href="#font_1_11" transform="matrix(26.51535,0,0,-26.51535,12.922976,26.750061)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_1_68" transform="matrix(26.51535,0,0,-26.51535,22.627594,26.750061)" fill="#30343b" />
+<ns0:use data-text=")" ns1:href="#font_1_12" transform="matrix(26.51535,0,0,-26.51535,37.343614,26.750061)" fill="#30343b" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.4" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#e1e4e7" d="M248 256.25 282.4758 231.20186 269.30723 190.67314H226.69278L213.5242 231.20186 248 256.25" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.4" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#e1e4e7" d="M248 292.5 316.9516 242.40373 290.61445 161.34629H205.38558L179.0484 242.40373 248 292.5" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.4" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#e1e4e7" d="M248 328.75 351.4274 253.60559 311.92167 132.01941H184.07836L144.5726 253.60559 248 328.75" />
@@ -63,51 +63,51 @@
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.4" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#e1e4e7" d="M248 220 333.22886 102.69254" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.4" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#e1e4e7" d="M248 220 162.77114 102.69254" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.4" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#e1e4e7" d="M248 220 110.0968 264.80747" />
-<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(24,0,0,-24,193.39649,46.669984)" fill="#30343b" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(24,0,0,-24,209.69249,46.669984)" fill="#30343b" />
-<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(24,0,0,-24,222.8205,46.669984)" fill="#30343b" />
-<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(24,0,0,-24,235.4205,46.669984)" fill="#30343b" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(24,0,0,-24,254.0445,46.669984)" fill="#30343b" />
-<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(24,0,0,-24,267.1725,46.669984)" fill="#30343b" />
-<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(24,0,0,-24,278.4765,46.669984)" fill="#30343b" />
-<ns0:use data-text="y" ns1:href="#font_2_92" transform="matrix(24,0,0,-24,289.9965,46.669984)" fill="#30343b" />
-<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(24,0,0,-24,381.05674,171.91068)" fill="#30343b" />
-<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(24,0,0,-24,397.68873,171.91068)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,410.50474,171.91068)" fill="#30343b" />
-<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(24,0,0,-24,422.76875,171.91068)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,434.07276,171.91068)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,440.79277,171.91068)" fill="#30343b" />
-<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(24,0,0,-24,453.05677,171.91068)" fill="#30343b" />
-<ns0:use data-text="A" ns1:href="#font_2_36" transform="matrix(24,0,0,-24,289.27436,374.55433)" fill="#30343b" />
-<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(24,0,0,-24,306.81837,374.55433)" fill="#30343b" />
-<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(24,0,0,-24,319.01036,374.55433)" fill="#30343b" />
-<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(24,0,0,-24,331.20234,374.55433)" fill="#30343b" />
-<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(24,0,0,-24,343.80235,374.55433)" fill="#30343b" />
-<ns0:use data-text="d" ns1:href="#font_2_71" transform="matrix(24,0,0,-24,355.32234,374.55433)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,369.41035,374.55433)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,381.67436,374.55433)" fill="#30343b" />
-<ns0:use data-text="c" ns1:href="#font_2_70" transform="matrix(24,0,0,-24,394.22636,374.55433)" fill="#30343b" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(24,0,0,-24,406.53837,374.55433)" fill="#30343b" />
-<ns0:use data-text="P" ns1:href="#font_2_51" transform="matrix(24,0,0,-24,97.21392,374.55433)" fill="#30343b" />
-<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(24,0,0,-24,109.693927,374.55433)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,116.245929,374.55433)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,128.50994,374.55433)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,141.06194,374.55433)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,153.61394,374.55433)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,160.33394,374.55433)" fill="#30343b" />
-<ns0:use data-text="g" ns1:href="#font_2_74" transform="matrix(24,0,0,-24,172.88594,374.55433)" fill="#30343b" />
-<ns0:use data-text="M" ns1:href="#font_2_48" transform="matrix(24,0,0,-24,5.548741,171.91068)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,26.716742,171.91068)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,38.980745,171.91068)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,51.532747,171.91068)" fill="#30343b" />
-<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(24,0,0,-24,58.252748,171.91068)" fill="#30343b" />
-<ns0:use data-text="u" ns1:href="#font_2_88" transform="matrix(24,0,0,-24,71.06875,171.91068)" fill="#30343b" />
-<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(24,0,0,-24,83.54875,171.91068)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,90.10075,171.91068)" fill="#30343b" />
-<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(24,0,0,-24,102.36475,171.91068)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,113.668758,171.91068)" fill="#30343b" />
-<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(24,0,0,-24,120.388759,171.91068)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,132.98876,171.91068)" fill="#30343b" />
+<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(20.93317,0,0,-20.93317,200.37398,45.65796)" fill="#30343b" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,214.5876,45.65796)" fill="#30343b" />
+<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(20.93317,0,0,-20.93317,226.03804,45.65796)" fill="#30343b" />
+<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(20.93317,0,0,-20.93317,237.02796,45.65796)" fill="#30343b" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,253.2721,45.65796)" fill="#30343b" />
+<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(20.93317,0,0,-20.93317,264.72254,45.65796)" fill="#30343b" />
+<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(20.93317,0,0,-20.93317,274.58207,45.65796)" fill="#30343b" />
+<ns0:use data-text="y" ns1:href="#font_2_92" transform="matrix(20.93317,0,0,-20.93317,284.62998,45.65796)" fill="#30343b" />
+<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(20.93317,0,0,-20.93317,386.0815,170.89862)" fill="#30343b" />
+<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(20.93317,0,0,-20.93317,400.5882,170.89862)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,411.7665,170.89862)" fill="#30343b" />
+<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(20.93317,0,0,-20.93317,422.46336,170.89862)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,432.32289,170.89862)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,438.18418,170.89862)" fill="#30343b" />
+<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(20.93317,0,0,-20.93317,448.881,170.89862)" fill="#30343b" />
+<ns0:use data-text="A" ns1:href="#font_2_36" transform="matrix(20.93317,0,0,-20.93317,297.6138,373.54228)" fill="#30343b" />
+<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(20.93317,0,0,-20.93317,312.91596,373.54228)" fill="#30343b" />
+<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(20.93317,0,0,-20.93317,323.55003,373.54228)" fill="#30343b" />
+<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(20.93317,0,0,-20.93317,334.18409,373.54228)" fill="#30343b" />
+<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(20.93317,0,0,-20.93317,345.174,373.54228)" fill="#30343b" />
+<ns0:use data-text="d" ns1:href="#font_2_71" transform="matrix(20.93317,0,0,-20.93317,355.22193,373.54228)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,367.5097,373.54228)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,378.20655,373.54228)" fill="#30343b" />
+<ns0:use data-text="c" ns1:href="#font_2_70" transform="matrix(20.93317,0,0,-20.93317,389.1546,373.54228)" fill="#30343b" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,399.8933,373.54228)" fill="#30343b" />
+<ns0:use data-text="P" ns1:href="#font_2_51" transform="matrix(20.93317,0,0,-20.93317,102.86839,373.54228)" fill="#30343b" />
+<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(20.93317,0,0,-20.93317,113.75364,373.54228)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,119.46839,373.54228)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,130.16524,373.54228)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,141.11328,373.54228)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,152.06133,373.54228)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,157.9226,373.54228)" fill="#30343b" />
+<ns0:use data-text="g" ns1:href="#font_2_74" transform="matrix(20.93317,0,0,-20.93317,168.87065,373.54228)" fill="#30343b" />
+<ns0:use data-text="M" ns1:href="#font_2_48" transform="matrix(20.93317,0,0,-20.93317,14.502896,170.89862)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,32.965955,170.89862)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,43.662805,170.89862)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,54.61085,170.89862)" fill="#30343b" />
+<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(20.93317,0,0,-20.93317,60.472139,170.89862)" fill="#30343b" />
+<ns0:use data-text="u" ns1:href="#font_2_88" transform="matrix(20.93317,0,0,-20.93317,71.65045,170.89862)" fill="#30343b" />
+<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(20.93317,0,0,-20.93317,82.5357,170.89862)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,88.25045,170.89862)" fill="#30343b" />
+<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(20.93317,0,0,-20.93317,98.9473,170.89862)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,108.80682,170.89862)" fill="#30343b" />
+<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(20.93317,0,0,-20.93317,114.66811,170.89862)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,125.65803,170.89862)" fill="#30343b" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="2" stroke-linecap="butt" stroke-dasharray="6,4" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#686868" d="M248 286.10707 313.0255 241.12807 281.39097 174.04126 209.98793 167.68088 220.69516 228.87187 248 286.10707" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#a6533a" d="M248 295.63954 323.56248 244.55173 284.43949 169.84537 193.70922 145.27515 213.93791 231.06745 248 295.63954" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#6336e7" d="M248 294.84864 325.8199 245.28522 282.10636 173.05661 217.5733 178.12125 235.175 224.1671 248 294.84864" />
@@ -147,369 +147,369 @@
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.5" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4d6bfe" d="M217.1086 183.40009C217.1086 181.02524 219.03377 179.10007 221.4086 179.10007 223.78342 179.10007 225.70859 181.02524 225.70859 183.40009 225.70859 185.7749 223.78342 187.70008 221.4086 187.70008 219.03377 187.70008 217.1086 185.7749 217.1086 183.40009Z" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M214.87824 229.36476C214.87824 226.98993 216.8034 225.06476 219.17824 225.06476 221.55306 225.06476 223.47823 226.98993 223.47823 229.36476 223.47823 231.73958 221.55306 233.66477 219.17824 233.66477 216.8034 233.66477 214.87824 231.73958 214.87824 229.36476Z" fill="#ffffff" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1.5" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4d6bfe" d="M214.87824 229.36476C214.87824 226.98993 216.8034 225.06476 219.17824 225.06476 221.55306 225.06476 223.47823 226.98993 223.47823 229.36476 223.47823 231.73958 221.55306 233.66477 219.17824 233.66477 216.8034 233.66477 214.87824 231.73958 214.87824 229.36476Z" />
-<ns0:use data-text="(" ns1:href="#font_1_11" transform="matrix(29,0,0,-29,630.7776,27.570008)" fill="#30343b" />
-<ns0:use data-text="b" ns1:href="#font_1_69" transform="matrix(29,0,0,-29,641.3916,27.570008)" fill="#30343b" />
-<ns0:use data-text=")" ns1:href="#font_1_12" transform="matrix(29,0,0,-29,658.5886,27.570008)" fill="#30343b" />
-<ns0:use data-text="D" ns1:href="#font_2_39" transform="matrix(26,0,0,-26,918.43948,26.579987)" fill="#30343b" />
-<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(26,0,0,-26,937.1854,26.579987)" fill="#30343b" />
-<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(26,0,0,-26,950.83547,26.579987)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(26,0,0,-26,971.0115,26.579987)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(26,0,0,-26,984.2975,26.579987)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(26,0,0,-26,991.5775,26.579987)" fill="#30343b" />
-<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(26,0,0,-26,1005.17556,26.579987)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(26,0,0,-26,1012.9235,26.579987)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(26,0,0,-26,1020.20358,26.579987)" fill="#30343b" />
-<ns0:use data-text="d" ns1:href="#font_2_71" transform="matrix(26,0,0,-26,1033.8015,26.579987)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(26,0,0,-26,1049.0635,26.579987)" fill="#30343b" />
-<ns0:use data-text="c" ns1:href="#font_2_70" transform="matrix(26,0,0,-26,1056.3435,26.579987)" fill="#30343b" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(26,0,0,-26,1069.6815,26.579987)" fill="#30343b" />
-<ns0:use data-text="s" ns1:href="#font_2_86" transform="matrix(26,0,0,-26,1083.9036,26.579987)" fill="#30343b" />
-<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(26,0,0,-26,1096.5396,26.579987)" fill="#30343b" />
-<ns0:use data-text="∙" ns1:href="#font_2_195" transform="matrix(26,0,0,-26,1104.2876,26.579987)" fill="#30343b" />
-<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(26,0,0,-26,1110.7616,26.579987)" fill="#30343b" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(26,0,0,-26,1118.5097,26.579987)" fill="#30343b" />
-<ns0:use data-text="–" ns1:href="#font_2_178" transform="matrix(26,0,0,-26,1134.3696,26.579987)" fill="#30343b" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(26,0,0,-26,1145.8356,26.579987)" fill="#30343b" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(26,0,0,-26,1157.5355,26.579987)" fill="#30343b" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(26,0,0,-26,1173.3955,26.579987)" fill="#30343b" />
-<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(23,0,0,-23,846.9719,63.589998)" fill="#30343b" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(23,0,0,-23,862.5889,63.589998)" fill="#30343b" />
-<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(23,0,0,-23,875.1699,63.589998)" fill="#30343b" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(23,0,0,-23,887.24496,63.589998)" fill="#30343b" />
-<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(23,0,0,-23,936.31619,63.589998)" fill="#30343b" />
-<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(23,0,0,-23,952.2552,63.589998)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(23,0,0,-23,964.5372,63.589998)" fill="#30343b" />
-<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(23,0,0,-23,976.29019,63.589998)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(23,0,0,-23,987.12319,63.589998)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(23,0,0,-23,993.5632,63.589998)" fill="#30343b" />
-<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(23,0,0,-23,1005.31619,63.589998)" fill="#30343b" />
-<ns0:use data-text="A" ns1:href="#font_2_36" transform="matrix(23,0,0,-23,1036.7056,63.589998)" fill="#30343b" />
-<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(23,0,0,-23,1053.5186,63.589998)" fill="#30343b" />
-<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(23,0,0,-23,1065.2025,63.589998)" fill="#30343b" />
-<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(23,0,0,-23,1076.8865,63.589998)" fill="#30343b" />
-<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(23,0,0,-23,1088.9614,63.589998)" fill="#30343b" />
-<ns0:use data-text="d" ns1:href="#font_2_71" transform="matrix(23,0,0,-23,1100.0015,63.589998)" fill="#30343b" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(23,0,0,-23,1113.5025,63.589998)" fill="#30343b" />
-<ns0:use data-text="P" ns1:href="#font_2_51" transform="matrix(23,0,0,-23,1158.096,63.589998)" fill="#30343b" />
-<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(23,0,0,-23,1170.0559,63.589998)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(23,0,0,-23,1176.335,63.589998)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(23,0,0,-23,1188.088,63.589998)" fill="#30343b" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(23,0,0,-23,1200.1171,63.589998)" fill="#30343b" />
-<ns0:use data-text="M" ns1:href="#font_2_48" transform="matrix(23,0,0,-23,1251.7078,63.589998)" fill="#30343b" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(23,0,0,-23,1271.9938,63.589998)" fill="#30343b" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(23,0,0,-23,1283.7468,63.589998)" fill="#30343b" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(23,0,0,-23,1295.7759,63.589998)" fill="#30343b" />
-<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(23,0,0,-23,1302.2158,63.589998)" fill="#30343b" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(23,0,0,-23,1314.4978,63.589998)" fill="#30343b" />
-<ns0:use data-text="A" ns1:href="#font_2_36" transform="matrix(24,0,0,-24,660,101.91998)" fill="#191919" />
-<ns0:use data-text="s" ns1:href="#font_2_86" transform="matrix(24,0,0,-24,677.544,101.91998)" fill="#191919" />
-<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(24,0,0,-24,689.208,101.91998)" fill="#191919" />
-<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(24,0,0,-24,700.512,101.91998)" fill="#191919" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,712.03207,101.91998)" fill="#191919" />
+<ns0:use data-text="(" ns1:href="#font_1_11" transform="matrix(26.51535,0,0,-26.51535,632.4245,26.750061)" fill="#30343b" />
+<ns0:use data-text="b" ns1:href="#font_1_69" transform="matrix(26.51535,0,0,-26.51535,642.1291,26.750061)" fill="#30343b" />
+<ns0:use data-text=")" ns1:href="#font_1_12" transform="matrix(26.51535,0,0,-26.51535,657.8527,26.750061)" fill="#30343b" />
+<ns0:use data-text="D" ns1:href="#font_2_39" transform="matrix(20.93317,0,0,-20.93317,944.85726,24.907959)" fill="#30343b" />
+<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(20.93317,0,0,-20.93317,959.9501,24.907959)" fill="#30343b" />
+<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(20.93317,0,0,-20.93317,970.94,24.907959)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,987.18417,24.907959)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,997.881,24.907959)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,1003.74227,24.907959)" fill="#30343b" />
+<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(20.93317,0,0,-20.93317,1014.6903,24.907959)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,1020.9284,24.907959)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,1026.7897,24.907959)" fill="#30343b" />
+<ns0:use data-text="d" ns1:href="#font_2_71" transform="matrix(20.93317,0,0,-20.93317,1037.7377,24.907959)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,1050.0254,24.907959)" fill="#30343b" />
+<ns0:use data-text="c" ns1:href="#font_2_70" transform="matrix(20.93317,0,0,-20.93317,1055.8867,24.907959)" fill="#30343b" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,1066.6255,24.907959)" fill="#30343b" />
+<ns0:use data-text="s" ns1:href="#font_2_86" transform="matrix(20.93317,0,0,-20.93317,1078.0759,24.907959)" fill="#30343b" />
+<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(20.93317,0,0,-20.93317,1088.2494,24.907959)" fill="#30343b" />
+<ns0:use data-text="∙" ns1:href="#font_2_195" transform="matrix(20.93317,0,0,-20.93317,1094.4874,24.907959)" fill="#30343b" />
+<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(20.93317,0,0,-20.93317,1099.6998,24.907959)" fill="#30343b" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1105.9379,24.907959)" fill="#30343b" />
+<ns0:use data-text="–" ns1:href="#font_2_178" transform="matrix(20.93317,0,0,-20.93317,1118.7072,24.907959)" fill="#30343b" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1127.9387,24.907959)" fill="#30343b" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1137.3587,24.907959)" fill="#30343b" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1150.1279,24.907959)" fill="#30343b" />
+<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(20.93317,0,0,-20.93317,849.04129,62.90796)" fill="#30343b" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,863.2549,62.90796)" fill="#30343b" />
+<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(20.93317,0,0,-20.93317,874.7053,62.90796)" fill="#30343b" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,885.69528,62.90796)" fill="#30343b" />
+<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(20.93317,0,0,-20.93317,939.7025,62.90796)" fill="#30343b" />
+<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(20.93317,0,0,-20.93317,954.2092,62.90796)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,965.3876,62.90796)" fill="#30343b" />
+<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(20.93317,0,0,-20.93317,976.0844,62.90796)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,985.9439,62.90796)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,991.8052,62.90796)" fill="#30343b" />
+<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(20.93317,0,0,-20.93317,1002.502,62.90796)" fill="#30343b" />
+<ns0:use data-text="A" ns1:href="#font_2_36" transform="matrix(20.93317,0,0,-20.93317,1040.4164,62.90796)" fill="#30343b" />
+<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(20.93317,0,0,-20.93317,1055.7185,62.90796)" fill="#30343b" />
+<ns0:use data-text="f" ns1:href="#font_2_73" transform="matrix(20.93317,0,0,-20.93317,1066.3526,62.90796)" fill="#30343b" />
+<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(20.93317,0,0,-20.93317,1076.9866,62.90796)" fill="#30343b" />
+<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(20.93317,0,0,-20.93317,1087.9765,62.90796)" fill="#30343b" />
+<ns0:use data-text="d" ns1:href="#font_2_71" transform="matrix(20.93317,0,0,-20.93317,1098.0244,62.90796)" fill="#30343b" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1110.3121,62.90796)" fill="#30343b" />
+<ns0:use data-text="P" ns1:href="#font_2_51" transform="matrix(20.93317,0,0,-20.93317,1160.244,62.90796)" fill="#30343b" />
+<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(20.93317,0,0,-20.93317,1171.1293,62.90796)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,1176.844,62.90796)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,1187.5409,62.90796)" fill="#30343b" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1198.4889,62.90796)" fill="#30343b" />
+<ns0:use data-text="M" ns1:href="#font_2_48" transform="matrix(20.93317,0,0,-20.93317,1254.7893,62.90796)" fill="#30343b" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,1273.2523,62.90796)" fill="#30343b" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,1283.9492,62.90796)" fill="#30343b" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,1294.8972,62.90796)" fill="#30343b" />
+<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(20.93317,0,0,-20.93317,1300.7586,62.90796)" fill="#30343b" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1311.9369,62.90796)" fill="#30343b" />
+<ns0:use data-text="A" ns1:href="#font_2_36" transform="matrix(20.93317,0,0,-20.93317,660,100.90796)" fill="#191919" />
+<ns0:use data-text="s" ns1:href="#font_2_86" transform="matrix(20.93317,0,0,-20.93317,675.3021,100.90796)" fill="#191919" />
+<ns0:use data-text="t" ns1:href="#font_2_87" transform="matrix(20.93317,0,0,-20.93317,685.47567,100.90796)" fill="#191919" />
+<ns0:use data-text="r" ns1:href="#font_2_85" transform="matrix(20.93317,0,0,-20.93317,695.33517,100.90796)" fill="#191919" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,705.38308,100.90796)" fill="#191919" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 330H920V362H820Z" fill="#d1775b" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,845.03909,101.91998)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,859.6791,101.91998)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,101.91998)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,880.2951,101.91998)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,848.2287,100.90796)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,860.9979,100.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,100.90796)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,878.9795,100.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 330H1024V362H924Z" fill="#d2805e" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,949.03909,101.91998)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,963.6791,101.91998)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,101.91998)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,984.2951,101.91998)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,952.2287,100.90796)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,964.9979,100.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,100.90796)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,982.9795,100.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 330H1128V362H1028Z" fill="#d69f6a" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1053.0391,101.91998)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1067.6791,101.91998)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1082.3191,101.91998)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1088.295,101.91998)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1056.2286,100.90796)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1068.9979,100.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,100.90796)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1086.9796,100.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 330H1232V362H1132Z" fill="#aa3842" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1157.0391,101.91998)" fill="#ffffff" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,1171.6791,101.91998)" fill="#ffffff" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1186.3191,101.91998)" fill="#ffffff" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1192.295,101.91998)" fill="#ffffff" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1160.2286,100.90796)" fill="#ffffff" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1172.9979,100.90796)" fill="#ffffff" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7672,100.90796)" fill="#ffffff" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1190.9796,100.90796)" fill="#ffffff" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 330H1336V362H1236Z" fill="#d7a46d" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1262.9609,101.91998)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1277.601,101.91998)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1288.401,101.91998)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1294.377,101.91998)" />
-<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(24,0,0,-24,660,136.91999)" fill="#515151" />
-<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(24,0,0,-24,676.632,136.91999)" fill="#515151" />
-<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(24,0,0,-24,689.232,136.91999)" fill="#515151" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1265.905,100.90796)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1278.6743,100.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1288.0942,100.90796)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1293.3067,100.90796)" />
+<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(20.93317,0,0,-20.93317,660,135.90796)" fill="#515151" />
+<ns0:use data-text="o" ns1:href="#font_2_82" transform="matrix(20.93317,0,0,-20.93317,674.5067,135.90796)" fill="#515151" />
+<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(20.93317,0,0,-20.93317,685.49667,135.90796)" fill="#515151" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 295H920V327H820Z" fill="#d69d69" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,845.03909,136.91999)" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,859.6791,136.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,136.91999)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,880.2951,136.91999)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,848.2287,135.90796)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,860.9979,135.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,135.90796)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,878.9795,135.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 295H1024V327H924Z" fill="#d59a68" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,949.03909,136.91999)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,963.6791,136.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,136.91999)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,984.2951,136.91999)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,952.2287,135.90796)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,964.9979,135.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,135.90796)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,982.9795,135.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 295H1128V327H1028Z" fill="#d8aa6f" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1053.0391,136.91999)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,1067.6791,136.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1082.3191,136.91999)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,1088.295,136.91999)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1056.2286,135.90796)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1068.9979,135.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,135.90796)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1086.9796,135.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 295H1232V327H1132Z" fill="#d69f6a" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1157.0391,136.91999)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1171.6791,136.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1186.3191,136.91999)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,1192.295,136.91999)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1160.2286,135.90796)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1172.9979,135.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7672,135.90796)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,1190.9796,135.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 295H1336V327H1236Z" fill="#e5d5a1" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1262.9609,136.91999)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,1273.761,136.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1288.401,136.91999)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1294.377,136.91999)" />
-<ns0:use data-text="F" ns1:href="#font_2_41" transform="matrix(24,0,0,-24,660,171.91999)" fill="#81412d" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,674.544,171.91999)" fill="#81412d" />
-<ns0:use data-text="b" ns1:href="#font_2_69" transform="matrix(24,0,0,-24,686.808,171.91999)" fill="#81412d" />
-<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(24,0,0,-24,701.04,171.91999)" fill="#81412d" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(24,0,0,-24,707.592,171.91999)" fill="#81412d" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1265.905,135.90796)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1275.325,135.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1288.0942,135.90796)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1293.3067,135.90796)" />
+<ns0:use data-text="F" ns1:href="#font_2_41" transform="matrix(20.93317,0,0,-20.93317,660,170.90796)" fill="#81412d" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,672.6855,170.90796)" fill="#81412d" />
+<ns0:use data-text="b" ns1:href="#font_2_69" transform="matrix(20.93317,0,0,-20.93317,683.3823,170.90796)" fill="#81412d" />
+<ns0:use data-text="l" ns1:href="#font_2_79" transform="matrix(20.93317,0,0,-20.93317,695.7957,170.90796)" fill="#81412d" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,701.5105,170.90796)" fill="#81412d" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 260H920V292H820Z" fill="#d38d62" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,845.03909,171.91999)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,859.6791,171.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,171.91999)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,880.2951,171.91999)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,848.2287,170.90796)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,860.9979,170.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,170.90796)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,878.9795,170.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 260H1024V292H924Z" fill="#d2845f" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,949.03909,171.91999)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,963.6791,171.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,171.91999)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,984.2951,171.91999)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,952.2287,170.90796)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,964.9979,170.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,170.90796)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,982.9795,170.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 260H1128V292H1028Z" fill="#d7a26c" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1053.0391,171.91999)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,1067.6791,171.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1082.3191,171.91999)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1088.295,171.91999)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1056.2286,170.90796)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1068.9979,170.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,170.90796)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1086.9796,170.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 260H1232V292H1132Z" fill="#ce6754" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,1157.0391,171.91999)" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1171.6791,171.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1186.3191,171.91999)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1192.295,171.91999)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,1160.2286,170.90796)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1172.9979,170.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7672,170.90796)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1190.9796,170.90796)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 260H1336V292H1236Z" fill="#e1cd94" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,1261.0391,171.91999)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1275.6791,171.91999)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1290.3191,171.91999)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1296.295,171.91999)" />
-<ns0:use data-text="Q" ns1:href="#font_2_52" transform="matrix(24,0,0,-24,660,206.92)" fill="#4d2ab4" />
-<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(24,0,0,-24,681.024,206.92)" fill="#4d2ab4" />
-<ns0:use data-text="M" ns1:href="#font_2_48" transform="matrix(24,0,0,-24,691.008,206.92)" fill="#4d2ab4" />
-<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(24,0,0,-24,712.176,206.92)" fill="#4d2ab4" />
-<ns0:use data-text="x" ns1:href="#font_2_91" transform="matrix(24,0,0,-24,724.44,206.92)" fill="#4d2ab4" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1264.2286,170.90796)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1276.9979,170.90796)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1289.7672,170.90796)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1294.9796,170.90796)" />
+<ns0:use data-text="Q" ns1:href="#font_2_52" transform="matrix(20.93317,0,0,-20.93317,660,205.90795)" fill="#4d2ab4" />
+<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(20.93317,0,0,-20.93317,678.33749,205.90795)" fill="#4d2ab4" />
+<ns0:use data-text="M" ns1:href="#font_2_48" transform="matrix(20.93317,0,0,-20.93317,687.04568,205.90795)" fill="#4d2ab4" />
+<ns0:use data-text="a" ns1:href="#font_2_68" transform="matrix(20.93317,0,0,-20.93317,705.5087,205.90795)" fill="#4d2ab4" />
+<ns0:use data-text="x" ns1:href="#font_2_91" transform="matrix(20.93317,0,0,-20.93317,716.20559,205.90795)" fill="#4d2ab4" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 225H920V257H820Z" fill="#d38f63" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,846.96096,206.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,861.60098,206.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,872.40097,206.92)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,878.37698,206.92)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,849.90499,205.90795)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,862.6742,205.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,872.0941,205.90795)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,877.30648,205.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 225H1024V257H924Z" fill="#d27f5d" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,949.03909,206.92)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,963.6791,206.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,206.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,984.2951,206.92)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,952.2287,205.90795)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,964.9979,205.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,205.90795)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,982.9795,205.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 225H1128V257H1028Z" fill="#d8a86f" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1053.0391,206.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,1067.6791,206.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1082.3191,206.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,1088.295,206.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1056.2286,205.90795)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1068.9979,205.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,205.90795)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1086.9796,205.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 225H1232V257H1132Z" fill="#dab176" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1157.0391,206.92)" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,1171.6791,206.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1186.3191,206.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1192.295,206.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1160.2286,205.90795)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,1172.9979,205.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7672,205.90795)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1190.9796,205.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 225H1336V257H1236Z" fill="#ede6bd" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,1268.3633,206.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1283.0033,206.92)" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1288.9793,206.92)" />
-<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(24,0,0,-24,660,241.92)" fill="#44845d" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(24,0,0,-24,676.296,241.92)" fill="#44845d" />
-<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(24,0,0,-24,689.424,241.92)" fill="#44845d" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,708.04806,241.92)" fill="#44845d" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,714.768,241.92)" fill="#44845d" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,727.32,241.92)" fill="#44845d" />
-<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(24,0,0,-24,734.04,241.92)" fill="#44845d" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,741.19198,241.92)" fill="#44845d" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,755.832,241.92)" fill="#44845d" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,761.808,241.92)" fill="#44845d" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1270.617,205.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1283.3862,205.90795)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1288.5986,205.90795)" />
+<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(20.93317,0,0,-20.93317,660,240.90795)" fill="#44845d" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,674.2136,240.90795)" fill="#44845d" />
+<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(20.93317,0,0,-20.93317,685.66409,240.90795)" fill="#44845d" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,701.9082,240.90795)" fill="#44845d" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,707.7695,240.90795)" fill="#44845d" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,718.7175,240.90795)" fill="#44845d" />
+<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(20.93317,0,0,-20.93317,724.5788,240.90795)" fill="#44845d" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,730.8169,240.90795)" fill="#44845d" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,743.5861,240.90795)" fill="#44845d" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,748.79849,240.90795)" fill="#44845d" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 190H920V222H820Z" fill="#d49566" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,845.03909,241.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,859.6791,241.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,241.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,880.2951,241.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,848.2287,240.90795)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,860.9979,240.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,240.90795)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,878.9795,240.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 190H1024V222H924Z" fill="#d1765a" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,949.03909,241.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,963.6791,241.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,241.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,984.2951,241.92)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,952.2287,240.90795)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,964.9979,240.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,240.90795)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,982.9795,240.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 190H1128V222H1028Z" fill="#dbb478" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1053.0391,241.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1067.6791,241.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1082.3191,241.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1088.295,241.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1056.2286,240.90795)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1068.9979,240.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,240.90795)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1086.9796,240.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 190H1232V222H1132Z" fill="#d59767" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1157.0391,241.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1171.6791,241.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1186.3191,241.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1192.295,241.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1160.2286,240.90795)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1172.9979,240.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7672,240.90795)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1190.9796,240.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 190H1336V222H1236Z" fill="#e6d7a4" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1262.9609,241.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1273.761,241.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1288.401,241.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1294.377,241.92)" />
-<ns0:use data-text="Q" ns1:href="#font_2_52" transform="matrix(24,0,0,-24,660,276.92)" fill="#6957a1" />
-<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(24,0,0,-24,681.024,276.92)" fill="#6957a1" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,691.008,276.92)" fill="#6957a1" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,705.648,276.92)" fill="#6957a1" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,720.288,276.92)" fill="#6957a1" />
-<ns0:use data-text="B" ns1:href="#font_2_37" transform="matrix(24,0,0,-24,734.92807,276.92)" fill="#6957a1" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1265.905,240.90795)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1275.325,240.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1288.0942,240.90795)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1293.3067,240.90795)" />
+<ns0:use data-text="Q" ns1:href="#font_2_52" transform="matrix(20.93317,0,0,-20.93317,660,275.90797)" fill="#6957a1" />
+<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(20.93317,0,0,-20.93317,678.33749,275.90797)" fill="#6957a1" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,687.04568,275.90797)" fill="#6957a1" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,699.8149,275.90797)" fill="#6957a1" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,712.5841,275.90797)" fill="#6957a1" />
+<ns0:use data-text="B" ns1:href="#font_2_37" transform="matrix(20.93317,0,0,-20.93317,725.35336,275.90797)" fill="#6957a1" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 155H920V187H820Z" fill="#ddbe83" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,845.03909,276.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,859.6791,276.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,276.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,880.2951,276.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,848.2287,275.90797)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,860.9979,275.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,275.90797)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,878.9795,275.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 155H1024V187H924Z" fill="#d7a16b" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,949.03909,276.92)" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,963.6791,276.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,276.92)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,984.2951,276.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,952.2287,275.90797)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,964.9979,275.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,275.90797)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,982.9795,275.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 155H1128V187H1028Z" fill="#e3d19b" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,1054.9609,276.92)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,1069.601,276.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1084.241,276.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1090.2169,276.92)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1057.905,275.90797)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1070.6743,275.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1083.4436,275.90797)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1088.656,275.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 155H1232V187H1132Z" fill="#e7d8a6" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1158.9609,276.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1169.761,276.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1184.401,276.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1190.377,276.92)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1161.905,275.90797)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1171.325,275.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1184.0942,275.90797)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1189.3067,275.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 155H1336V187H1236Z" fill="#ede5bb" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,1268.3633,276.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1283.0033,276.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,1288.9793,276.92)" />
-<ns0:use data-text="Q" ns1:href="#font_2_52" transform="matrix(24,0,0,-24,660,311.92)" fill="#6f6389" />
-<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(24,0,0,-24,681.024,311.92)" fill="#6f6389" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,691.008,311.92)" fill="#6f6389" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,705.648,311.92)" fill="#6f6389" />
-<ns0:use data-text="B" ns1:href="#font_2_37" transform="matrix(24,0,0,-24,720.288,311.92)" fill="#6f6389" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1270.617,275.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1283.3862,275.90797)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1288.5986,275.90797)" />
+<ns0:use data-text="Q" ns1:href="#font_2_52" transform="matrix(20.93317,0,0,-20.93317,660,310.90797)" fill="#6f6389" />
+<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(20.93317,0,0,-20.93317,678.33749,310.90797)" fill="#6f6389" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,687.04568,310.90797)" fill="#6f6389" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,699.8149,310.90797)" fill="#6f6389" />
+<ns0:use data-text="B" ns1:href="#font_2_37" transform="matrix(20.93317,0,0,-20.93317,712.5841,310.90797)" fill="#6f6389" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 120H920V152H820Z" fill="#dcb77c" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,845.03909,311.92)" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,859.6791,311.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,311.92)" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,880.2951,311.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,848.2287,310.90797)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,860.9979,310.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,310.90797)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,878.9795,310.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 120H1024V152H924Z" fill="#d8a86f" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,949.03909,311.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,963.6791,311.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,311.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,984.2951,311.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,952.2287,310.90797)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,964.9979,310.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,310.90797)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,982.9795,310.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 120H1128V152H1028Z" fill="#f1eecc" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1060.3633,311.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1075.0033,311.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1080.9793,311.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1062.617,310.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1075.3862,310.90797)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1080.5986,310.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 120H1232V152H1132Z" fill="#e6d6a3" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1160.8828,311.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,1171.6829,311.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1186.3229,311.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1192.2988,311.92)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1163.5813,310.90797)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1173.0012,310.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7705,310.90797)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1190.9829,310.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 120H1336V152H1236Z" fill="#ece3b8" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1264.8828,311.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1275.6829,311.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1286.4829,311.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,1292.4589,311.92)" />
-<ns0:use data-text="O" ns1:href="#font_2_50" transform="matrix(24,0,0,-24,660,346.92)" fill="#a95d44" />
-<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(24,0,0,-24,679.152,346.92)" fill="#a95d44" />
-<ns0:use data-text="u" ns1:href="#font_2_88" transform="matrix(24,0,0,-24,691.96798,346.92)" fill="#a95d44" />
-<ns0:use data-text="s" ns1:href="#font_2_86" transform="matrix(24,0,0,-24,704.44796,346.92)" fill="#a95d44" />
-<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(24,0,0,-24,716.11196,346.92)" fill="#a95d44" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,723.2639,346.92)" fill="#a95d44" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,737.90396,346.92)" fill="#a95d44" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,743.87997,346.92)" fill="#a95d44" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1267.5813,310.90797)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1277.0012,310.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1286.4212,310.90797)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1291.6336,310.90797)" />
+<ns0:use data-text="O" ns1:href="#font_2_50" transform="matrix(20.93317,0,0,-20.93317,660,345.90797)" fill="#a95d44" />
+<ns0:use data-text="p" ns1:href="#font_2_83" transform="matrix(20.93317,0,0,-20.93317,676.70468,345.90797)" fill="#a95d44" />
+<ns0:use data-text="u" ns1:href="#font_2_88" transform="matrix(20.93317,0,0,-20.93317,687.88296,345.90797)" fill="#a95d44" />
+<ns0:use data-text="s" ns1:href="#font_2_86" transform="matrix(20.93317,0,0,-20.93317,698.7682,345.90797)" fill="#a95d44" />
+<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(20.93317,0,0,-20.93317,708.9417,345.90797)" fill="#a95d44" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,715.1798,345.90797)" fill="#a95d44" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,727.94906,345.90797)" fill="#a95d44" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,733.1614,345.90797)" fill="#a95d44" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 85H920V117H820Z" fill="#d49465" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,845.03909,346.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,859.6791,346.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,346.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,880.2951,346.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,848.2287,345.90797)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,860.9979,345.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,345.90797)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,878.9795,345.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 85H1024V117H924Z" fill="#d27b5c" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,949.03909,346.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,963.6791,346.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,346.92)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,984.2951,346.92)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,952.2287,345.90797)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,964.9979,345.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,345.90797)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,982.9795,345.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 85H1128V117H1028Z" fill="#d69c69" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1054.9609,346.92)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,1069.601,346.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1084.241,346.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1090.2169,346.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1057.905,345.90797)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,1070.6743,345.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1083.4436,345.90797)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1088.656,345.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 85H1232V117H1132Z" fill="#d59767" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1157.0391,346.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1171.6791,346.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1186.3191,346.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1192.295,346.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1160.2286,345.90797)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1172.9979,345.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7672,345.90797)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1190.9796,345.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 85H1336V117H1236Z" fill="#d59867" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1261.0391,346.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1275.6791,346.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1290.3191,346.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,1296.295,346.92)" />
-<ns0:use data-text="D" ns1:href="#font_2_39" transform="matrix(24,0,0,-24,660,381.92)" fill="#3c53c6" />
-<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(24,0,0,-24,677.304,381.92)" fill="#3c53c6" />
-<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(24,0,0,-24,693.93606,381.92)" fill="#3c53c6" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,703.92007,381.92)" fill="#3c53c6" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,714.72006,381.92)" fill="#3c53c6" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,729.36007,381.92)" fill="#3c53c6" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,740.16006,381.92)" fill="#3c53c6" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1264.2286,345.90797)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1276.9979,345.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1289.7672,345.90797)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1294.9796,345.90797)" />
+<ns0:use data-text="D" ns1:href="#font_2_39" transform="matrix(20.93317,0,0,-20.93317,660,380.90797)" fill="#3c53c6" />
+<ns0:use data-text="S" ns1:href="#font_2_54" transform="matrix(20.93317,0,0,-20.93317,675.09286,380.90797)" fill="#3c53c6" />
+<ns0:use data-text="-" ns1:href="#font_2_16" transform="matrix(20.93317,0,0,-20.93317,689.59957,380.90797)" fill="#3c53c6" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,698.30776,380.90797)" fill="#3c53c6" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,707.72769,380.90797)" fill="#3c53c6" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,720.4969,380.90797)" fill="#3c53c6" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,729.9168,380.90797)" fill="#3c53c6" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 50H920V82H820Z" fill="#d8a76e" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,845.03909,381.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,859.6791,381.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,381.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,880.2951,381.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,848.2287,380.90797)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,860.9979,380.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,380.90797)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,878.9795,380.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 50H1024V82H924Z" fill="#d8a76e" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,949.03909,381.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,963.6791,381.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,978.3191,381.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,984.2951,381.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,952.2287,380.90797)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,964.9979,380.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,977.76718,380.90797)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,982.9795,380.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 50H1128V82H1028Z" fill="#dab074" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1053.0391,381.92)" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,1067.6791,381.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1082.3191,381.92)" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1088.295,381.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1056.2286,380.90797)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,1068.9979,380.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,380.90797)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1086.9796,380.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 50H1232V82H1132Z" fill="#ddbd82" />
-<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(24,0,0,-24,1158.9609,381.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1173.601,381.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1184.401,381.92)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,1190.377,381.92)" />
+<ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1161.905,380.90797)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1174.6743,380.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1184.0942,380.90797)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1189.3067,380.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 50H1336V82H1236Z" fill="#e4d39e" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,1261.0391,381.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,1275.6791,381.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1290.3191,381.92)" />
-<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(24,0,0,-24,1296.295,381.92)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1264.2286,380.90797)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1276.9979,380.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1289.7672,380.90797)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1294.9796,380.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M820 15H920V47H820Z" fill="#d27a5c" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(24,0,0,-24,845.03909,416.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,859.6791,416.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,874.3191,416.92)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(24,0,0,-24,880.2951,416.92)" />
+<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,848.2287,415.90797)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,860.9979,415.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,873.76718,415.90797)" />
+<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,878.9795,415.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M924 15H1024V47H924Z" fill="#d06f58" />
-<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(24,0,0,-24,950.96096,416.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,965.60098,416.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,976.40097,416.92)" />
-<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(24,0,0,-24,982.37698,416.92)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,953.90499,415.90797)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,966.6742,415.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,976.0941,415.90797)" />
+<ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,981.30648,415.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1028 15H1128V47H1028Z" fill="#d59967" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1053.0391,416.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1067.6791,416.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1082.3191,416.92)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1088.295,416.92)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1056.2286,415.90797)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1068.9979,415.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,415.90797)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1086.9796,415.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1132 15H1232V47H1132Z" fill="#c2534c" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(24,0,0,-24,1158.9609,416.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,1173.601,416.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1188.241,416.92)" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(24,0,0,-24,1194.2169,416.92)" />
+<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1161.905,415.90797)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1174.6743,415.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1187.4436,415.90797)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1192.656,415.90797)" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M1236 15H1336V47H1236Z" fill="#d6a06b" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1261.0391,416.92)" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,1275.6791,416.92)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(24,0,0,-24,1290.3191,416.92)" />
-<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(24,0,0,-24,1296.295,416.92)" />
-<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(24,0,0,-24,660,416.92)" fill="#117942" />
-<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(24,0,0,-24,676.296,416.92)" fill="#117942" />
-<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(24,0,0,-24,689.424,416.92)" fill="#117942" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,708.04806,416.92)" fill="#117942" />
-<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(24,0,0,-24,714.768,416.92)" fill="#117942" />
-<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(24,0,0,-24,727.32,416.92)" fill="#117942" />
-<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(24,0,0,-24,734.04,416.92)" fill="#117942" />
-<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(24,0,0,-24,741.19198,416.92)" fill="#117942" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1264.2286,415.90797)" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,1276.9979,415.90797)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1289.7672,415.90797)" />
+<ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1294.9796,415.90797)" />
+<ns0:use data-text="G" ns1:href="#font_2_42" transform="matrix(20.93317,0,0,-20.93317,660,415.90797)" fill="#117942" />
+<ns0:use data-text="e" ns1:href="#font_2_72" transform="matrix(20.93317,0,0,-20.93317,674.2136,415.90797)" fill="#117942" />
+<ns0:use data-text="m" ns1:href="#font_2_80" transform="matrix(20.93317,0,0,-20.93317,685.66409,415.90797)" fill="#117942" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,701.9082,415.90797)" fill="#117942" />
+<ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,707.7695,415.90797)" fill="#117942" />
+<ns0:use data-text="i" ns1:href="#font_2_76" transform="matrix(20.93317,0,0,-20.93317,718.7175,415.90797)" fill="#117942" />
+<ns0:use data-text=" " ns1:href="#font_2_3" transform="matrix(20.93317,0,0,-20.93317,724.5788,415.90797)" fill="#117942" />
+<ns0:use data-text="4" ns1:href="#font_2_23" transform="matrix(20.93317,0,0,-20.93317,730.8169,415.90797)" fill="#117942" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="3" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#169b55" d="M248 303.87825 332.45997 247.4427 288.6151 164.09809 188.25457 137.76746 187.3226 239.71529 248 303.87825" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" d="M245 303.87825C245 302.22138 246.34314 300.87825 248 300.87825 249.65686 300.87825 251 302.22138 251 303.87825 251 305.53507 249.65686 306.87825 248 306.87825 246.34314 306.87825 245 305.53507 245 303.87825Z" fill="#169b55" />
 <ns0:path transform="matrix(1,0,0,-1,0,440)" stroke-width="1" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#169b55" d="M245 303.87825C245 302.22138 246.34314 300.87825 248 300.87825 249.65686 300.87825 251 302.22138 251 303.87825 251 305.53507 249.65686 306.87825 248 306.87825 246.34314 306.87825 245 305.53507 245 303.87825Z" />
