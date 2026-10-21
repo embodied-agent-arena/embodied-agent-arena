@@ -359,7 +359,7 @@
     "page": 8,
     "model_table": "Table A5",
     "model_page": 23,
-    "protocol": "Source-native observations and tools. All agents use RGB. In Manipulation, the original eight use the native Baseline image schedule. DeepSeek-1017 and Gemini 4 Argon receive current RGB at each decision; the manuscript specifies each evaluation’s source budgets.",
+    "protocol": "All ten agents use the same assigned task inventory, source-native interfaces, RGB observations and native success criteria. Manipulation retains each evaluation batch’s recorded observation schedule and execution ceilings; the protocol audit documents the differences.",
     "repetitions": "Non-tracing Geometry, Spatial Reasoning, and box/point Affordance: five runs, except Fable (three). Polygon grounding, tracing, Planning, and Manipulation: one run per assignment.",
     "aggregation": "Mean of per-run metrics ± sample SD (ddof=1). Continuous metrics use valid predictions within each run; binary rates retain all assigned cases."
   }

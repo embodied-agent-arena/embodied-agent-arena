@@ -56,7 +56,7 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 **Units:** Rotation (°), Translation (cm), Spatial/Plan/Manip. (%), AbsRel (relative error), Box/Polygon (IoU). **Bold** marks the best mean. Mean ± run SD uses five runs (Fable: three); Polygon, Planning and Manipulation use one run.
 
-[**Interactive Results**](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv) · [Exact Model IDs & Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol)
+[**Interactive Results**](https://embodied-agent-arena.github.io/embodied-agent-arena/#results) · [Results CSV](public/data/model-comparison.csv) · [Exact Model IDs & Settings](https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol) · [Recorded Protocol Audit](docs/W4_PROTOCOL_AUDIT.md)
 
 ## Explore the Evidence
 

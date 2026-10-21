@@ -4,7 +4,7 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 65,
-  "paper_sha256": "bda576130d3c7c653cfa35032587f06b0fa7fde044093122a3113f70376516b3",
+  "paper_sha256": "b4088d71e58f36199103ccd204ccaa8b76a7b27a440aeb9cb893be057e5a0256",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 302,
@@ -18,7 +18,7 @@
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "3609654a06086faf2a7ba964d09f281bab6daf4a653c7bf15c54a2543d294081",
+  "source_sha256": "d3cf901640eba50b49bb800ea6c3d288f08b10b19fdb6b9a0d21d3ec4c213af8",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -44,5 +44,19 @@
     "mainFigures": 6,
     "additionalManuscriptFigures": 3,
     "dataValues": "unchanged"
+  },
+  "protocol_audit": {
+    "date": "2026-10-21",
+    "reportsVerified": 40,
+    "tasksPerModel": 10,
+    "models": [
+      "astra",
+      "opus55",
+      "deepseek",
+      "gemini4argon"
+    ],
+    "data": "data/w4-protocol-audit.json",
+    "metricValues": "unchanged",
+    "scope": "CALVIN execution settings; retained main-table populations unchanged"
   }
 }

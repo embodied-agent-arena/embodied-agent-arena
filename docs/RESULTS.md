@@ -66,3 +66,7 @@ python -m http.server 8785 --directory public
 ```
 
 Open <http://127.0.0.1:8785/>. The checks compare model scores, repeated-run statistics, task identities and media/report matches against the published manifests.
+
+## Recorded execution settings
+
+The task inventory, source-native interfaces and success criteria are shared. Manipulation retains each adopted batch’s RGB schedule and execution ceilings. The [protocol audit](W4_PROTOCOL_AUDIT.md) verifies all ten CALVIN tasks for Astra, Opus 5.5, DeepSeek-1017 and Gemini 4 Argon, including the actual round, token and time limits. It also separates later execution logs from the retained main-table population. No result values were changed by this clarification.
