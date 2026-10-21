@@ -3,8 +3,8 @@
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
   "model_count": 10,
   "main_metric_values": 80,
-  "paper_pages": 68,
-  "paper_sha256": "6a98e3d03cf3311ef1bf44610aa516a72e84946ed505e82a6780b332530f67c4",
+  "paper_pages": 67,
+  "paper_sha256": "8501d7a5dbbf40706944510c6b5c0ad509d983d962cd02d855ed814c4ee5d313",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 316,
@@ -18,7 +18,7 @@
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "2a2cc22aac8244d1aef76ce49b26fe5394353be9b894dc746ba68a47566eceb5",
+  "source_sha256": "dd5563edb476aa336ab4da049986035c1e05c3658596d13df64e8368db8dc32f",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -85,5 +85,12 @@
     "scope": "Abstract and all main sections; local capability, shared failures, token expenditure and productive recovery; Figure 8 protocol labels corrected",
     "measurements": "unchanged",
     "astra_failure_to_success_mean_tokens": 5.077206430921311
+  },
+  "pagination_revision": {
+    "date": "2026-10-22",
+    "scope": "Heading continuity, excessive reserved space, float placement and continued tables",
+    "text_and_measurements": "unchanged",
+    "pages_before": 68,
+    "pages_after": 67
   }
 }

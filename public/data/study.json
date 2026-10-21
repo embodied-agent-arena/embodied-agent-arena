@@ -6,7 +6,7 @@
   "date_published": "2026-10-01",
   "manuscript_date": "2026-10-22",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
-  "paper_pages": 68,
+  "paper_pages": 67,
   "abstract": "A robot generalist must turn scene understanding into actions that satisfy a complete goal. How far do frontier vision-language models (VLMs) meet this requirement? We introduce Embodied Agent Arena to evaluate ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces. Measuring precision, grounding, and goal satisfaction separately reveals a recurring gap: useful local predictions and actions can leave the condition that determines completion unresolved. Combined Planning successes cover 142 of 157 tasks, leaving 15 unsolved by any model; unsuccessful episodes consume 55.5–86.9% of each model's recorded tokens. Execution traces distinguish productive recovery from repeated activity: correcting an error helps when it enables the next required state change. Across TraceSpatial, HumanCLAW, and CALVIN, agents can produce accurate paths, approach interaction targets, and achieve early subgoals while failing the endpoint, interaction state, or full sequence required for success.",
   "authors": [
     {
