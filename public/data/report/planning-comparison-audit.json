@@ -1,0 +1,97 @@
+{
+  "scope": "All 157 Planning tasks, one episode per model; not all 1,000 benchmark cases.",
+  "models": [
+    "astra",
+    "sol",
+    "fable",
+    "gemini",
+    "qwen",
+    "qwen35-397b",
+    "qwen35-27b",
+    "opus55",
+    "deepseek",
+    "gemini4argon"
+  ],
+  "verifiedEpisodes": 1570,
+  "sourceArchives": [
+    "all-model-logs-20261019.zip",
+    "gemini4argon-logs-20261021.zip"
+  ],
+  "verification": "Every adopted report SHA-256, task ID, record ID and final outcome matches the public episode and task tables.",
+  "pair": [
+    "astra",
+    "opus55"
+  ],
+  "counts": {
+    "tasks": 157,
+    "both": 71,
+    "astraCompletedOpusIncomplete": 55,
+    "opusCompletedAstraIncomplete": 5,
+    "neither": 26,
+    "astraAloneAmongTen": 11,
+    "noneOfTen": 15,
+    "allTen": 8
+  },
+  "bySource": {
+    "ALFRED": {
+      "tasks": 20,
+      "both": 3,
+      "astraCompletedOpusIncomplete": 12,
+      "opusCompletedAstraIncomplete": 0,
+      "neither": 5,
+      "astraAloneAmongTen": 3,
+      "noneOfTen": 2,
+      "allTen": 0
+    },
+    "ALFWorld": {
+      "tasks": 20,
+      "both": 8,
+      "astraCompletedOpusIncomplete": 6,
+      "opusCompletedAstraIncomplete": 1,
+      "neither": 5,
+      "astraAloneAmongTen": 2,
+      "noneOfTen": 2,
+      "allTen": 0
+    },
+    "DiscoveryWorld": {
+      "tasks": 10,
+      "both": 3,
+      "astraCompletedOpusIncomplete": 7,
+      "opusCompletedAstraIncomplete": 0,
+      "neither": 0,
+      "astraAloneAmongTen": 1,
+      "noneOfTen": 0,
+      "allTen": 0
+    },
+    "HumanCLAW": {
+      "tasks": 13,
+      "both": 2,
+      "astraCompletedOpusIncomplete": 1,
+      "opusCompletedAstraIncomplete": 1,
+      "neither": 9,
+      "astraAloneAmongTen": 0,
+      "noneOfTen": 9,
+      "allTen": 0
+    },
+    "ScienceWorld": {
+      "tasks": 73,
+      "both": 40,
+      "astraCompletedOpusIncomplete": 24,
+      "opusCompletedAstraIncomplete": 3,
+      "neither": 6,
+      "astraAloneAmongTen": 4,
+      "noneOfTen": 2,
+      "allTen": 1
+    },
+    "VirtualHome": {
+      "tasks": 21,
+      "both": 15,
+      "astraCompletedOpusIncomplete": 5,
+      "opusCompletedAstraIncomplete": 0,
+      "neither": 1,
+      "astraAloneAmongTen": 1,
+      "noneOfTen": 0,
+      "allTen": 7
+    }
+  }
+}
