@@ -4,6 +4,8 @@
 
 **Time, token use and recovery** now cover all ten models: 1,570 adopted Planning episodes. The explorer has 46 shared tasks × 10 models (460 records), including 189 detailed action/feedback traces and 271 round summaries. All 109 Argon gallery executions are matched to the supplied logs by report SHA-256; prior retries are excluded.
 
+**Failure cost:** Astra’s 31 unsuccessful episodes consume 18,326,033 tokens, versus 14,670,756 across 126 successes. The mean unsuccessful episode uses **5.1×** as many tokens (591,162 vs. 116,435). These totals use all 157 recorded episodes.
+
 ## Published evidence
 
 - [Planning outcomes CSV](../public/data/report/planning-outcomes.csv) and [JSON](../public/data/report/planning-outcomes.json): ten-model outcomes joined by exact task ID, with report digests.
@@ -60,7 +62,7 @@ The trace-builder input contains `cases.json`, `records.json`, `reports/<case-id
 - **Elapsed time:** reported episode duration, including setup where recorded; campaign elapsed time is used if supplied, otherwise the last recorded loop duration. This is not model inference latency.
 - **Video time:** the recording's own playback clock, separate from execution wall time. Per-episode settings and budgets accompany each record.
 
-Manipulation traces include later observation configurations; the main results retain the adopted Baseline population. Case examples explain individual behavior; benchmark success rates use the complete evaluation population.
+Manipulation traces retain their recorded observation configurations; the main results use the adopted evaluation assignments. The [protocol audit](W4_PROTOCOL_AUDIT.md) details their schedules and execution ceilings. Case examples explain individual behavior; benchmark success rates use the complete evaluation population.
 
 ## Preview
 

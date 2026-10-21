@@ -3,8 +3,8 @@
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
   "model_count": 10,
   "main_metric_values": 80,
-  "paper_pages": 67,
-  "paper_sha256": "b175b21108f2ad1c3e044029d08918eaf3be4279046e7a8ba69e7e8fdb7838d8",
+  "paper_pages": 68,
+  "paper_sha256": "6a98e3d03cf3311ef1bf44610aa516a72e84946ed505e82a6780b332530f67c4",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 316,
@@ -13,12 +13,12 @@
     "spatial.webp": "99659bda51b98057106375529237dc784e753d4de033e7842a3f99f2bd880ba3",
     "affordance.webp": "1d40a8e60b682d2ef81e2ae1384f7b62ee914e6e44ffd5c11bb2dfbefbd14dcf",
     "planning.webp": "1c692d5ae232d328ae89f1fdc1ee4795b176bc63fd06ab25aebfca613f3b10b0",
-    "manipulation.webp": "89625be22d77e30e5a6776dd41dc5d9f6e7dd36a390272cdfa9d823460afa66d",
+    "manipulation.webp": "c568f96f5cda33d02a840abcac2ba5f767359a9aa50f5877c064e911b55903de",
     "nine-model-profiles.svg": "aaf35d1b5987dadb7d183b15203c038ee6b23fc473a699fb1c8c89b015a36979",
     "case-control.webp": "0776d3fd3179879fce54ba0f03d13775e9232fbdf63ed48d4003d97458cfd8f2"
   },
   "paired_comparison_revision": "2026-10-21",
-  "source_sha256": "0f8e0165960708fd88a72a43e3c56cb735d31fd877d5135d4bbf555d0b36d5ca",
+  "source_sha256": "2a2cc22aac8244d1aef76ce49b26fe5394353be9b894dc746ba68a47566eceb5",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -79,5 +79,11 @@
     "requested_papers_cited": 10,
     "additional_recent_papers": 4,
     "scope": "Related Work; verified primary-source metadata; figures and measurements unchanged"
+  },
+  "narrative_revision": {
+    "date": "2026-10-22",
+    "scope": "Abstract and all main sections; local capability, shared failures, token expenditure and productive recovery; Figure 8 protocol labels corrected",
+    "measurements": "unchanged",
+    "astra_failure_to_success_mean_tokens": 5.077206430921311
   }
 }

@@ -104,7 +104,7 @@ const domains=[
         "Astra: 3/10; Opus 5.5: 1/10"
       ]
     ],
-    "caption": "(a) Success across thirteen suites for nine agents with complete source records; * marks per-round RGB agents; Argon uses source-specific budgets (see Evaluation Details). (b) Consecutive CALVIN goals for seven agents. (c) Condition satisfaction on five ManiSkill tasks for six agents. Paired panels use only models with both recorded execution protocols and one run per task; feedback schedules and resource ceilings can differ. Fable’s incomplete ManiSkill records exclude it from (a,c). The main results table retains all ten models.",
+    "caption": "(a) Thirteen-suite success for nine agents with complete source records. (b) Consecutive CALVIN goals for seven agents. (c) Condition satisfaction on five ManiSkill tasks for six agents. Paired panels compare the same tasks under Baseline and Expanded settings; Expanded adds per-round RGB and larger execution allowances. Each uses one episode per task and setting. Fable’s incomplete ManiSkill records exclude it from (a,c). Evaluation Details records each batch’s settings; the main results table includes all ten models.",
     "paper": 12,
     "execution": "sequence",
     "caseLabel": "Inspect One Recorded Sequence"
@@ -121,7 +121,7 @@ const figureSizes={"geometry": [2250, 765], "spatial": [1980, 1308], "affordance
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
 buildTabs(domains,'domain',d=>{
  const action=d.case?`<button type="button" data-case="${d.case}">${d.caseLabel} →</button>`:d.execution?`<a href="?analysis=${d.execution}#execution-analysis" data-execution-link="${d.execution}">${d.caseLabel} →</a>`:`<a href="#technical-report" data-report-link="${d.report}">${d.caseLabel} →</a>`;
- const figureVersion="typography-20261022";
+ const figureVersion="story-review-20261022";
  return `<div class="domain-text"><div><h3>${d.title}</h3><p class="domain-argument">${d.text}</p></div><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=${figureVersion}" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=${figureVersion}" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><div class="domain-links">${action}<a href="paper.pdf#page=${d.paper}">Paper Evidence ↗</a></div><details class="figure-reading"><summary>Figure Key &amp; Measurement Details</summary><p>${d.caption}</p></details></figcaption></figure>`;
 });
 const citation=document.querySelector('#bibtex').textContent.trim();

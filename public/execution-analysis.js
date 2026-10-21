@@ -54,9 +54,10 @@
     const common=key=>{const v=story.runs.map(r=>limitsOf(r)[key]);return v[0]!=null&&v.every(x=>x===v[0])?v[0]:null;};
     const limits=[common('max_rounds')?`${common('max_rounds')} rounds`:null,common('max_total_tokens')?`${tokens(common('max_total_tokens'))} tokens`:null,common('timeout_seconds')?`${num(common('timeout_seconds')/60)} min`:null].filter(Boolean).join(' · ');
     document.getElementById('exec-stage').innerHTML=`<div class="exec-story-heading"><h3>${esc(story.title)}</h3></div><div class="exec-task"><span>Task</span><p>${esc(story.instruction)}</p></div><div class="exec-compare-toolbar"><button class="exec-play" type="button">▶ Play Both</button></div><div class="exec-compare"><article class="exec-pane" data-pane="0"></article><article class="exec-pane" data-pane="1"></article></div><details class="exec-methods"><summary>Evidence, Settings &amp; Source Records</summary><p>${esc(story.featured ? story.takeaway : `${story.runs.filter(r=>r.success).length} of ${story.runs.length} models complete this task.`)}</p><p><strong>Task:</strong> <code>${esc(story.runs[0].taskId)}</code></p><p>${limits?`Shared ceilings: ${esc(limits)}.`:''} Each model’s settings are listed below. Videos have their own playback clock; round sliders show episode time. Videos are excerpts or saved observations.</p><div class="exec-settings-grid"></div><p><a href="data/execution/identity-audit.json">Task-matching audit ↗</a> <a href="execution-guide.html#${esc(story.id)}">Episode metrics ↗</a></p></details>`;
-    const chosen=[0,1].map(i=>story.runs.find(r=>r.modelKey===(models?.[i]||story.default[i]))||story.runs[i]);if(chosen[0].id===chosen[1].id)chosen[1]=story.runs.find(r=>r.id!==chosen[0].id);[0,1].forEach(i=>renderPane(i,chosen[i].id));
+    const chosen=[0,1].map(i=>story.runs.find(r=>r.modelKey===(models?.[i]||story.default[i]))||story.runs[i]);if(chosen[0].id===chosen[1].id)chosen[1]=story.runs.find(r=>r.id!==chosen[0].id);const rendering=Promise.all([0,1].map(i=>renderPane(i,chosen[i].id)));
     root.querySelector('.exec-play').onclick=()=>{const vs=[...root.querySelectorAll('.exec-video')];window.ArenaMedia.toggle(vs,!vs.some(v=>!v.paused));};
     document.getElementById('exec-announcement').textContent=`${story.benchmark}. ${story.taskLabel}. ${story.runs.length} matching models.`;
+    return rendering;
   }
   function renderSettings(){
     const area=root.querySelector('.exec-settings-grid');if(!area)return;
@@ -137,8 +138,9 @@
       root.querySelectorAll('[data-exec-story]').forEach(b=>b.onclick=()=>selectStory(b.dataset.execStory));
       const chooser=document.createElement('div');chooser.className='exec-library-controls';chooser.innerHTML=`<label for="exec-library">Choose a Task</label><select id="exec-library">${[...new Set(data.stories.map(s=>s.benchmark))].map(b=>`<optgroup label="${esc(b)}">${data.stories.filter(s=>s.benchmark===b).map(s=>`<option value="${s.id}">${esc(s.benchmark+' · '+(s.taskLabel||s.title))} (${s.runs.length} models)</option>`).join('')}</optgroup>`).join('')}</select>`;document.getElementById('exec-questions').after(chooser);
       chooser.querySelector('select').onchange=e=>selectStory(e.target.value);
-      const params=new URLSearchParams(location.search);renderStory(pendingStory||params.get('analysis')||'sequence',pendingModels||(params.has('modelA')?[params.get('modelA'),params.get('modelB')]:null));
-      if(location.hash==='#execution-analysis')requestAnimationFrame(()=>root.scrollIntoView({block:'start',behavior:'instant'}));
+      const params=new URLSearchParams(location.search);await renderStory(pendingStory||params.get('analysis')||'sequence',pendingModels||(params.has('modelA')?[params.get('modelA'),params.get('modelB')]:null));
+      // Loading the two traces changes the section height above the report anchor.
+      const anchor=location.hash;if(['#execution-analysis','#technical-report'].includes(anchor))requestAnimationFrame(()=>{if(location.hash===anchor)document.querySelector(anchor)?.scrollIntoView({block:'start',behavior:'instant'});});
     }catch{document.getElementById('exec-stage').innerHTML='<p>Could not load comparisons. <a href="execution-guide.html">Open the case guide ↗</a></p>';}
   }
   document.addEventListener('execution-select',e=>{pendingStory=typeof e.detail==='string'?e.detail:e.detail.storyId;pendingModels=typeof e.detail==='object'?e.detail.models:null;if(data)selectStory(pendingStory,pendingModels);});

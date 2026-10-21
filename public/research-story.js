@@ -32,6 +32,6 @@
     url.hash = target.id;
     if (link.dataset.executionLink) url.searchParams.set('analysis', link.dataset.executionLink);
     history.replaceState(null, '', url);
-    target.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    target.scrollIntoView({behavior: link.dataset.reportLink || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
   });
 })();

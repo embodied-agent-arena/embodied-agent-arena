@@ -2,6 +2,8 @@
 
 The **22 October 2026 author manuscript** and the public results compare **ten models**, including **Gemini&nbsp;4&nbsp;Argon (`gemini-4-argon`)**. The published arXiv version has its own version history; the current author manuscript is linked below.
 
+The revised narrative follows three findings: **local accuracy can miss a required goal condition**, **complementary models still share failures**, and **unfinished tasks dominate recorded token use**. Source-level diagnostics and matched execution traces connect these claims to specific task states.
+
 ## Results and evidence
 
 | Resource | Coverage | Download / view |

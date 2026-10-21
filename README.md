@@ -37,9 +37,9 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ## 🔎 Key Findings
 
-- **Different capabilities, different leaders.** Gemini&nbsp;4&nbsp;Argon leads Spatial Pass@1 and both Affordance IoUs; GPT&#8209;6&nbsp;Astra leads Planning; Claude&nbsp;Opus&nbsp;5.5 leads Manipulation.
-- **Local competence does not ensure task completion.** Even the highest Manipulation success rate is **47.8%** under the evaluated budgets. Successful perception must still translate into accurate actions and a verified final goal.
-- **Model diversity leaves shared gaps.** Across the same **157 Planning tasks**, at least one of the ten models succeeds on **142**; **15 defeat all ten**. Their combined successes cover **16 more tasks than Astra alone**. [Task-level analysis ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html)
+- **Leading local scores still leave goals unfinished.** Gemini&nbsp;4&nbsp;Argon has the lowest 3D path error, **0.310 m**, yet only **24/56** paths satisfy all constraints. The highest recorded Manipulation success, from Opus&nbsp;5.5, is **47.8%**.
+- **Model diversity adds coverage, but shared failures remain.** Across the same **157 Planning tasks**, at least one model completes **142**, adding **16** beyond Astra alone; **15 defeat all ten**. [Task-level analysis ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html#coverage)
+- **Failures dominate token use.** Astra’s **31 failed tasks consume 55.5% of its tokens**. A failed task uses **5.1×** the tokens of a successful one on average. Matched execution traces distinguish productive recovery from repeated activity. [Execution analysis ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html#resources)
 
 ![Planning and Manipulation: ten models with matching logos and brand colours](public/assets/analysis/model-task-comparison.svg)
 

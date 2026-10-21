@@ -7,7 +7,7 @@
     "figure5-spatial": "Ten-model main results; ablation panels retain the original experiment cohort.",
     "figure6-affordance": "Ten models on 70 cases: polygon overlap vs box mean \u00b1 SD; tools vs interaction diagnosis for Gemini 4 Argon.",
     "figure7-planning": "All 157 Planning tasks: ten-model success and the full distribution of cross-model success coverage.",
-    "figure8-manipulation": "Ten-model main results; ablation panels retain the original experiment cohort.",
+    "figure8-manipulation": "Thirteen-suite results for nine agents with complete source records; paired CALVIN/ManiSkill panels retain seven/six original models. Same tasks, recorded Baseline vs Expanded observations and budgets.",
     "execution-progress": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
     "planning-execution-profile": "Ten-model Planning logs; selected exact-task progress comparisons include Argon.",
     "model-task-comparison": "Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.",
@@ -179,23 +179,23 @@
     },
     {
       "path": "figure8-manipulation.drawio",
-      "sha256": "5c6ea5625f027efc0db7c6fc3968e9cd5ccf6bb33ab147aa0f7831c5f0b15f22",
-      "bytes": 201457
+      "sha256": "c71d11da535574f2d0faa0bf1792c99a1bb530d66489d36d0464d0a5f864fb28",
+      "bytes": 201101
     },
     {
       "path": "figure8-manipulation.pdf",
-      "sha256": "2bdd7c99b8855946f26eb57c7ae4213f6319c05622ef71ba0354dc5df343f33e",
-      "bytes": 128169
+      "sha256": "354e3ffb12739401a807e0eb39f63ae0199519c7fa79d1ec9877a56c491ee4b3",
+      "bytes": 127548
     },
     {
       "path": "figure8-manipulation.png",
-      "sha256": "7aacfbec25fccf11d9a0c3160f9fede41f412e07a03a62df653845d18ea9a195",
-      "bytes": 280441
+      "sha256": "218dbf9ae0a067d397e5df0dceaecf6513cf34aff01de5f0fca1bf6fbbd1637b",
+      "bytes": 282889
     },
     {
       "path": "figure8-manipulation.svg",
-      "sha256": "9818647ede00029e70e69618cfd0db3e5608e46320761e1f819d5c55a39e74cb",
-      "bytes": 228394
+      "sha256": "9aa5235baeddf14d4cac2c5aabca844f8c4c6ec83b0def77708a1c78b78af388",
+      "bytes": 227256
     },
     {
       "path": "model-logos/LOBE-ICONS-LICENSE",
