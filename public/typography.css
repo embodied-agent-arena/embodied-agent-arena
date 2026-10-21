@@ -9,8 +9,24 @@
 :not(pre)>code{overflow-wrap:anywhere}
 pre{white-space:pre;overflow-x:auto;overflow-wrap:normal;word-break:normal}
 .exec-evidence-content pre{white-space:pre-wrap;overflow-wrap:anywhere}
-/* Reflow before the evidence columns become too narrow for complete labels. */
-@media(max-width:1000px){.domain-text{grid-template-columns:1fr}.evidence{max-width:100%}}
+/* Give claims a full row before arranging their explanation and evidence. */
+.domain-text{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px 42px;align-items:start}
+.domain-text>h3{grid-column:1/-1;max-width:none;font-size:clamp(28px,2.8vw,34px);line-height:1.25}
+.domain-text>.domain-argument{margin:0;max-width:none}
+.domain-text>.evidence{padding-top:0;max-width:100%}
+.research-lead-heading{grid-template-columns:1fr;gap:18px}
+.research-lead-heading>p:last-child{max-width:70ch}
+.arena-intro{gap:22px 64px}
+.arena-intro>h2{grid-column:1/-1;line-height:1.25}
+.arena-copy>p:not(.eyebrow){margin-top:0}
+.section-heading{max-width:none}
+:is(.research-lead h2,.arena-intro>h2,.section-heading h2,.results-heading,.completion-section h2,.exec-heading h2,.report-heading h2,.study-heading h2,.evaluation-section h2){font-size:clamp(28px,3.2vw,40px);line-height:1.25;max-width:none}
+:is(.exec-heading,.report-heading,.study-heading){flex-wrap:wrap;gap:12px 24px}
+:is(.exec-heading,.report-heading,.study-heading)>div{flex:1 1 max-content;min-width:0}
+:is(.exec-heading,.report-heading,.study-heading)>:is(p,a){flex:none;margin-top:0}
+/* Narrow screens keep legible type and natural wrapping, never clipped titles. */
+@media(max-width:1000px){.domain-text{grid-template-columns:1fr}.domain-text>.evidence{max-width:100%}}
+@media(max-width:760px){.arena-intro{gap:20px}.domain-text{gap:18px}.domain-text>h3{font-size:28px}}
 @media(max-width:480px){
  .evidence{grid-template-columns:1fr;gap:20px}
  .evidence strong{margin-bottom:5px}

@@ -38,7 +38,7 @@
   <link rel="preload" href="assets/allura.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="icon" href="assets/logo-transparent.png?v=20261002"><link rel="stylesheet" href="styles.css?v=case-display-20261022">
   <script src="viewport-media.js?v=case-display-20261022" defer></script>
-<script src="app.js?v=case-display-20261022" defer></script>
+<script src="app.js?v=headings-20261022" defer></script>
   <script src="research-story.js?v=story-review-20261022" defer></script>
 <link rel="stylesheet" href="case-studies.css?v=case-display-20261022">
 <script src="case-studies.js?v=case-display-20261022" defer></script>
@@ -48,7 +48,7 @@
 <link rel="stylesheet" href="technical-report.css?v=viewport-20261021"><script src="planning-comparison.js?v=viewport-20261021" defer></script><script src="technical-report.js?v=story-review-20261022" defer></script>
 <link rel="stylesheet" href="research-story.css?v=video-supplement-20261021">
 <link rel="stylesheet" href="model-comparison.css?v=viewport-20261021"><script src="model-comparison.js?v=viewport-20261021" defer></script>
-<link rel="stylesheet" href="typography.css?v=20261022">
+<link rel="stylesheet" href="typography.css?v=headings-20261022">
 <script src="typography.js?v=20261022" defer></script>
 <script src="case-media-health.js?v=case-display-20261022" defer></script>
 </head>
@@ -76,7 +76,7 @@
 <figure class="wrap overview"><button class="figure-button" data-zoom="assets/overview.webp" aria-label="Enlarge the five-domain task overview"><img src="assets/overview.webp" alt="Thirty representative tasks organized in five rows: Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation." width="1442" height="921" fetchpriority="high"></button></figure>
 
 <section id="takeaways" class="wrap research-lead" aria-labelledby="takeaways-title">
-  <div class="research-lead-heading"><h2 id="takeaways-title">Local Competence.<br><span>Incomplete Tasks.</span></h2><p>Models can estimate, reason, and act. The harder test is satisfying every goal within finite time and interaction budgets.</p></div>
+  <div class="research-lead-heading"><h2 id="takeaways-title">Local Competence. <span>Incomplete Tasks.</span></h2><p>Models can estimate, reason, and act. The harder test is satisfying every goal within finite time and interaction budgets.</p></div>
   <div class="insight-grid">
     <a class="insight-card" href="#findings" data-domain-link="geometry"><span class="insight-label">Geometry</span><h3>A Precise Path Can Still Miss Its Goal.</h3><div class="insight-pair"><div><strong>0.310 m</strong><span>Lowest 3D path RMSE</span></div><div><strong>24 / 56</strong><span>Paths meeting all constraints</span></div></div><p>Gemini 4 Argon leads both measures. Yet more than half its paths violate at least one required condition.</p><span class="insight-link">Compare Geometry →</span></a>
     <a class="insight-card" href="#technical-report" data-report-link="coverage"><span class="insight-label">Task Planning</span><h3>Different Strengths. Shared Unsolved Tasks.</h3><div class="insight-pair"><div><strong>142 / 157</strong><span>At least one model succeeds</span></div><div><strong>15 / 157</strong><span>All ten models fail</span></div></div><p>Combined successes cover 16 more tasks than Astra alone. All eight sitting tasks remain unfinished.</p><span class="insight-link">Explore Shared Failures →</span></a>
@@ -112,7 +112,7 @@
 
 
 <section id="arena" class="wrap section arena-section">
-  <div class="arena-intro"><div class="arena-copy"><h2>From Seeing a Scene to Completing a Task.</h2><p>Task decisions stay with the model: interpret observations, choose actions, and recover through source-provided interfaces. The evaluator checks the final environment state independently of the agent’s declaration.</p></div>
+  <div class="arena-intro"><h2>From Seeing a Scene to Completing a Task.</h2><div class="arena-copy"><p>Task decisions stay with the model: interpret observations, choose actions, and recover through source-provided interfaces. The evaluator checks the final environment state independently of the agent’s declaration.</p></div>
   <div class="stats" aria-label="Benchmark scale"><div><strong>1,000</strong><span>evaluation cases</span></div><div><strong>32 + 1</strong><span>sources + GeoProbe</span></div><div><strong>5</strong><span>capability domains</span></div><div><strong>10</strong><span>frontier VLM agents</span></div></div></div>
   <ol class="evaluation-path" aria-label="From local capability to complete task goals">
     <li><span>Estimate</span><strong>Geometry &amp; Spatial Reasoning</strong><p>What is where, in which reference frame?</p></li>
