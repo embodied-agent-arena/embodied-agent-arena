@@ -4,7 +4,7 @@
   if (!window.IntersectionObserver || !Element.prototype.animate) return;
 
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const selector = '.figure-button, .report-figure > img, .ranking, .benchmark-scroll, .table-scroll, .report-table-scroll, .report-matrix-scroll, .exec-chart';
+  const selector = '.figure-button, .report-figure img, .ranking, .benchmark-scroll, .table-scroll, .report-table-scroll, .report-matrix-scroll, .exec-chart';
   const states = new Map();
   let printing = false;
   const permitted = () => !reduced.matches && !document.hidden && !printing;
@@ -37,7 +37,7 @@
       return;
     }
     // Tables only fade: sticky labels, horizontal scrolling and column alignment stay fixed.
-    const figure = el.matches('.figure-button, .report-figure > img, .exec-chart');
+    const figure = el.matches('.figure-button, .report-figure img, .exec-chart');
     animate(state, el, figure ? [
       {opacity: 0, transform: 'translateY(16px)'},
       {opacity: 1, transform: 'translateY(0)'}
