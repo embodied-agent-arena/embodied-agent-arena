@@ -1,10 +1,10 @@
 {
-  "manuscript_date": "2026-10-22",
+  "manuscript_date": "2026-10-23",
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
   "model_count": 10,
   "main_metric_values": 80,
-  "paper_pages": 63,
-  "paper_sha256": "fc111f014307fc9cd7a0556ab951528683429f221c81eaa1d1da6b346f1b13ae",
+  "paper_pages": 65,
+  "paper_sha256": "cb7e01d23722ae4657278bcfe55d901b7def61cc1d0512dd1fed358308fe939d",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 346,
@@ -16,7 +16,7 @@
     "manipulation.webp": "65069eabaabc1ed0fc04a364fe308a350fef08eda75879a0ab71ab397ef35277",
     "nine-model-profiles.svg": "4dd81b750627f8028ecdf40a32dbfa85f186d4af1864925543b1e94bec77f236"
   },
-  "source_sha256": "db13aaa993b65129cb75b3d2d09c903b83bab19f5ec31d5a6c35e17f4d6a319f",
+  "source_sha256": "a30164eefe789fcc64820a6763fff39021264c050739ce3b3790c425525cd176",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -153,7 +153,7 @@
     "main_tables": 2,
     "max_floats_per_main_page": 2,
     "placement": "Table 2 followed by Figure 3 in the page-top group on page 7; other main-text floats occupy individual page tops",
-    "pages": 63,
+    "pages": 65,
     "content": "Expanded and restructured experiment analysis; main-figure placements preserved.",
     "placements": {
       "Figure 1": 2,
@@ -258,5 +258,27 @@
       "Figure 7": 11,
       "Figure 8": 12
     }
+  },
+  "appendix_metrics_revision": {
+    "date": "2026-10-23",
+    "scope": "Appendix metric equations; five source sections",
+    "display_blocks_added": 18,
+    "notation": "Complete calculations use display math; related expressions align together. Existing numbered equations retain their numbers. Short variable references and thresholds remain inline.",
+    "definitions_and_measurements": "Unchanged",
+    "pages_before": 63,
+    "pages_after": 65,
+    "main_pages": "Pages 1–13 are pixel-identical to the previous release. Table 2 and Figure 3 remain on page 7.",
+    "reviewed_pages": [
+      24,
+      25,
+      26,
+      31,
+      36,
+      37,
+      46,
+      47,
+      48
+    ],
+    "audit": "docs/APPENDIX_METRICS_LAYOUT.md"
   }
 }
