@@ -6658,7 +6658,7 @@
       "assets/case-studies/d252da0c66b7bac73f.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。\n原图宽 W=1024、高 H=768 像素。坐标以原图左上角外边缘为原点，u 向右、v 向下，左上像素中心为 (0.5,0.5)。即使图像在你内部被缩放，也必须按原图坐标定位。\n深度定义：以相机光心为原点、光轴向前为 +Z，回答表面点的相机坐标 Z，单位米。不是相机到点的欧氏斜距，不是物体的尺寸，也不是物体离桌面的高度。请估计该像素实际看到的最前方表面，不要回答被遮挡表面。\n未提供相机内参、位姿、物体尺寸或参照深度。单图的真实尺度存在歧义，请结合透视和常识给出你认为最合理的估计。必须分别判断各点的深度，不要假定这些点位于同一平面。\n采样点列表按输出顺序排列，每项是 [u,v]：\n[[397.5,395.5],[76.5,683.5],[633.5,437.5],[445.5,445.5],[558.5,408.5],[601.5,336.5],[496.5,454.5],[522.5,521.5],[488.5,246.5],[401.5,405.5],[526.5,456.5],[404.5,349.5],[644.5,256.5],[526.5,298.5],[218.5,368.5],[732.5,122.5],[1014.5,412.5],[423.5,705.5],[635.5,408.5],[430.5,390.5],[409.5,418.5],[1018.5,80.5],[990.5,729.5],[252.5,229.5]]\n只输出一个 JSON 对象，恰好含一个字段 depth_m；它是长度 24 的数组，顺序必须与采样点一致。每个元素为正数；完全无法估计的点填 null。不要解释、其他字段或 Markdown。",
+    "question": "Using only this RGB image, estimate the depth of the visible surface at each sampled pixel.\nThe original image is W=1024 by H=768 pixels. The origin is the outer top-left edge, u increases to the right, and v increases downward; the top-left pixel center is (0.5,0.5). Locate points in these original coordinates even if the image is internally resized.\nDepth is the camera-coordinate Z value in meters, with the origin at the camera's optical center and +Z along its forward optical axis. It is not Euclidean range, object size, or height above the table. Estimate the foremost surface visible at each pixel, not an occluded surface.\nCamera intrinsics, pose, object sizes, and reference depths are not provided. Absolute scale is ambiguous in a single image; use perspective and common knowledge to give your most plausible estimate. Estimate each point independently rather than assuming a common plane.\nSample points in output order, each given as [u,v]:\n[[397.5,395.5],[76.5,683.5],[633.5,437.5],[445.5,445.5],[558.5,408.5],[601.5,336.5],[496.5,454.5],[522.5,521.5],[488.5,246.5],[401.5,405.5],[526.5,456.5],[404.5,349.5],[644.5,256.5],[526.5,298.5],[218.5,368.5],[732.5,122.5],[1014.5,412.5],[423.5,705.5],[635.5,408.5],[430.5,390.5],[409.5,418.5],[1018.5,80.5],[990.5,729.5],[252.5,229.5]]\nReturn only a JSON object with one field, depth_m: an array of 24 values in the same order as the sampled points. Use positive numbers, or null for a point whose depth cannot be estimated. Do not include explanations, extra fields, or Markdown.",
     "options": [],
     "reference": {
       "depth_m": [
@@ -7229,8 +7229,15 @@
     ],
     "poster": "assets/case-studies/d252da0c66b7bac73f.webp",
     "title": "sparse camera z",
-    "shortTask": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。",
-    "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0011--vlm_test_v1--vlm_depth__depth0011--42--c01623e30343"
+    "shortTask": "Estimate surface depth at 24 sampled pixels.",
+    "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0011--vlm_test_v1--vlm_depth__depth0011--42--c01623e30343",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_depth-01",
+      "language": "zh-CN",
+      "sha256": "eacf459da1a7f0a2d8eb64ce0c4fcb98d5f5f0cad4535d419d6a225658f73671"
+    }
   },
   {
     "id": "W1-w1_vlm_depth-02",
@@ -7245,7 +7252,7 @@
       "assets/case-studies/f2886888720d17dc36.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。\n原图宽 W=1024、高 H=768 像素。坐标以原图左上角外边缘为原点，u 向右、v 向下，左上像素中心为 (0.5,0.5)。即使图像在你内部被缩放，也必须按原图坐标定位。\n深度定义：以相机光心为原点、光轴向前为 +Z，回答表面点的相机坐标 Z，单位米。不是相机到点的欧氏斜距，不是物体的尺寸，也不是物体离桌面的高度。请估计该像素实际看到的最前方表面，不要回答被遮挡表面。\n未提供相机内参、位姿、物体尺寸或参照深度。单图的真实尺度存在歧义，请结合透视和常识给出你认为最合理的估计。必须分别判断各点的深度，不要假定这些点位于同一平面。\n采样点列表按输出顺序排列，每项是 [u,v]：\n[[13.5,450.5],[407.5,476.5],[356.5,454.5],[482.5,232.5],[205.5,517.5],[517.5,110.5],[648.5,266.5],[342.5,18.5],[459.5,468.5],[604.5,444.5],[538.5,490.5],[307.5,333.5],[1008.5,103.5],[688.5,407.5],[666.5,658.5],[883.5,384.5],[380.5,756.5],[201.5,175.5],[841.5,691.5],[694.5,465.5],[425.5,390.5],[353.5,403.5],[556.5,400.5],[353.5,412.5]]\n只输出一个 JSON 对象，恰好含一个字段 depth_m；它是长度 24 的数组，顺序必须与采样点一致。每个元素为正数；完全无法估计的点填 null。不要解释、其他字段或 Markdown。",
+    "question": "Using only this RGB image, estimate the depth of the visible surface at each sampled pixel.\nThe original image is W=1024 by H=768 pixels. The origin is the outer top-left edge, u increases to the right, and v increases downward; the top-left pixel center is (0.5,0.5). Locate points in these original coordinates even if the image is internally resized.\nDepth is the camera-coordinate Z value in meters, with the origin at the camera's optical center and +Z along its forward optical axis. It is not Euclidean range, object size, or height above the table. Estimate the foremost surface visible at each pixel, not an occluded surface.\nCamera intrinsics, pose, object sizes, and reference depths are not provided. Absolute scale is ambiguous in a single image; use perspective and common knowledge to give your most plausible estimate. Estimate each point independently rather than assuming a common plane.\nSample points in output order, each given as [u,v]:\n[[13.5,450.5],[407.5,476.5],[356.5,454.5],[482.5,232.5],[205.5,517.5],[517.5,110.5],[648.5,266.5],[342.5,18.5],[459.5,468.5],[604.5,444.5],[538.5,490.5],[307.5,333.5],[1008.5,103.5],[688.5,407.5],[666.5,658.5],[883.5,384.5],[380.5,756.5],[201.5,175.5],[841.5,691.5],[694.5,465.5],[425.5,390.5],[353.5,403.5],[556.5,400.5],[353.5,412.5]]\nReturn only a JSON object with one field, depth_m: an array of 24 values in the same order as the sampled points. Use positive numbers, or null for a point whose depth cannot be estimated. Do not include explanations, extra fields, or Markdown.",
     "options": [],
     "reference": {
       "depth_m": [
@@ -7816,8 +7823,15 @@
     ],
     "poster": "assets/case-studies/f2886888720d17dc36.webp",
     "title": "sparse camera z",
-    "shortTask": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。",
-    "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0010--vlm_test_v1--vlm_depth__depth0010--42--22e27b530e40"
+    "shortTask": "Estimate surface depth at 24 sampled pixels.",
+    "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0010--vlm_test_v1--vlm_depth__depth0010--42--22e27b530e40",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_depth-02",
+      "language": "zh-CN",
+      "sha256": "7fee135b7bed79e8a11f98f0680d12005d2a1a5be90d77d4bcc4dbde7d80f517"
+    }
   },
   {
     "id": "W1-w1_vlm_depth-03",
@@ -7832,7 +7846,7 @@
       "assets/case-studies/3d479925716bfd9370.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。\n原图宽 W=1024、高 H=768 像素。坐标以原图左上角外边缘为原点，u 向右、v 向下，左上像素中心为 (0.5,0.5)。即使图像在你内部被缩放，也必须按原图坐标定位。\n深度定义：以相机光心为原点、光轴向前为 +Z，回答表面点的相机坐标 Z，单位米。不是相机到点的欧氏斜距，不是物体的尺寸，也不是物体离桌面的高度。请估计该像素实际看到的最前方表面，不要回答被遮挡表面。\n未提供相机内参、位姿、物体尺寸或参照深度。单图的真实尺度存在歧义，请结合透视和常识给出你认为最合理的估计。必须分别判断各点的深度，不要假定这些点位于同一平面。\n采样点列表按输出顺序排列，每项是 [u,v]：\n[[420.5,620.5],[523.5,30.5],[340.5,529.5],[814.5,683.5],[953.5,249.5],[281.5,428.5],[367.5,179.5],[222.5,114.5],[105.5,555.5],[727.5,197.5],[777.5,507.5],[899.5,361.5],[574.5,460.5],[262.5,469.5],[312.5,365.5],[329.5,416.5],[476.5,545.5],[621.5,436.5],[230.5,508.5],[559.5,550.5],[520.5,515.5],[259.5,418.5],[464.5,161.5],[807.5,385.5]]\n只输出一个 JSON 对象，恰好含一个字段 depth_m；它是长度 24 的数组，顺序必须与采样点一致。每个元素为正数；完全无法估计的点填 null。不要解释、其他字段或 Markdown。",
+    "question": "Using only this RGB image, estimate the depth of the visible surface at each sampled pixel.\nThe original image is W=1024 by H=768 pixels. The origin is the outer top-left edge, u increases to the right, and v increases downward; the top-left pixel center is (0.5,0.5). Locate points in these original coordinates even if the image is internally resized.\nDepth is the camera-coordinate Z value in meters, with the origin at the camera's optical center and +Z along its forward optical axis. It is not Euclidean range, object size, or height above the table. Estimate the foremost surface visible at each pixel, not an occluded surface.\nCamera intrinsics, pose, object sizes, and reference depths are not provided. Absolute scale is ambiguous in a single image; use perspective and common knowledge to give your most plausible estimate. Estimate each point independently rather than assuming a common plane.\nSample points in output order, each given as [u,v]:\n[[420.5,620.5],[523.5,30.5],[340.5,529.5],[814.5,683.5],[953.5,249.5],[281.5,428.5],[367.5,179.5],[222.5,114.5],[105.5,555.5],[727.5,197.5],[777.5,507.5],[899.5,361.5],[574.5,460.5],[262.5,469.5],[312.5,365.5],[329.5,416.5],[476.5,545.5],[621.5,436.5],[230.5,508.5],[559.5,550.5],[520.5,515.5],[259.5,418.5],[464.5,161.5],[807.5,385.5]]\nReturn only a JSON object with one field, depth_m: an array of 24 values in the same order as the sampled points. Use positive numbers, or null for a point whose depth cannot be estimated. Do not include explanations, extra fields, or Markdown.",
     "options": [],
     "reference": {
       "depth_m": [
@@ -8403,8 +8417,15 @@
     ],
     "poster": "assets/case-studies/3d479925716bfd9370.webp",
     "title": "sparse camera z",
-    "shortTask": "请仅根据这张 RGB 图片，估计下列采样点处可见表面的深度。",
-    "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0009--vlm_test_v1--vlm_depth__depth0009--42--adaebc78d865"
+    "shortTask": "Estimate surface depth at 24 sampled pixels.",
+    "taskId": "w1_vlm_depth--w1_vlm_depth-vlm_depth__depth0009--vlm_test_v1--vlm_depth__depth0009--42--adaebc78d865",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_depth-03",
+      "language": "zh-CN",
+      "sha256": "917ed2bca12f50b4b95eb64366b9cd0bd87258a870b714929e09d44f58639a87"
+    }
   },
   {
     "id": "W1-w1_vlm_focal-01",
@@ -8419,7 +8440,7 @@
       "assets/case-studies/137d528c503ba93040.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片估计拍摄它的相机焦距。\n原始图片宽度 W=768 像素，高度 H=1024 像素。答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。主点已知位于图像中心，即 cx=W/2、cy=H/2；不需要估计或输出主点。\n唯一需要估计的量是 f，满足 fx=fy=f。f 是像素焦距，不是毫米焦距，也不是视场角。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好只含 f 一个字段，值为正数，不要解释、其他字段或 Markdown。",
+    "question": "Using only this image, estimate the focal length of the camera that captured it.\nThe original image is W=768 by H=1024 pixels. Report the answer in pixels at this original resolution, even if the visual input is internally resized.\nThe camera follows a pinhole perspective model with square pixels, zero skew, and no lens distortion. The principal point is known to be at the image center: cx=W/2, cy=H/2. Do not estimate or output the principal point.\nEstimate only f, with fx=fy=f. This is focal length in pixels, not millimeters or field of view.\nSensor size, camera-to-scene distance, object sizes, camera pose, and calibration patterns are not provided. Use perspective cues to give your most plausible single estimate.\nReturn only a JSON object containing exactly one field, f, with a positive numeric value. Do not include explanations, extra fields, or Markdown.",
     "options": [],
     "reference": {
       "f": 1173.3333333333333
@@ -8597,8 +8618,15 @@
     ],
     "poster": "assets/case-studies/137d528c503ba93040.webp",
     "title": "centered focal",
-    "shortTask": "请仅根据这张图片估计拍摄它的相机焦距。",
-    "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0020--vlm_test_v1--vlm_focal__intr0020--42--e983115b8ae8"
+    "shortTask": "Estimate focal length in pixels from a single image.",
+    "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0020--vlm_test_v1--vlm_focal__intr0020--42--e983115b8ae8",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_focal-01",
+      "language": "zh-CN",
+      "sha256": "725dc3d27652d2487ec745571028f7057f7c5a893b5e11b2e0bce88c55705ce2"
+    }
   },
   {
     "id": "W1-w1_vlm_focal-02",
@@ -8613,7 +8641,7 @@
       "assets/case-studies/1adf97aeb0e54be7cc.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片估计拍摄它的相机焦距。\n原始图片宽度 W=768 像素，高度 H=1024 像素。答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。主点已知位于图像中心，即 cx=W/2、cy=H/2；不需要估计或输出主点。\n唯一需要估计的量是 f，满足 fx=fy=f。f 是像素焦距，不是毫米焦距，也不是视场角。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好只含 f 一个字段，值为正数，不要解释、其他字段或 Markdown。",
+    "question": "Using only this image, estimate the focal length of the camera that captured it.\nThe original image is W=768 by H=1024 pixels. Report the answer in pixels at this original resolution, even if the visual input is internally resized.\nThe camera follows a pinhole perspective model with square pixels, zero skew, and no lens distortion. The principal point is known to be at the image center: cx=W/2, cy=H/2. Do not estimate or output the principal point.\nEstimate only f, with fx=fy=f. This is focal length in pixels, not millimeters or field of view.\nSensor size, camera-to-scene distance, object sizes, camera pose, and calibration patterns are not provided. Use perspective cues to give your most plausible single estimate.\nReturn only a JSON object containing exactly one field, f, with a positive numeric value. Do not include explanations, extra fields, or Markdown.",
     "options": [],
     "reference": {
       "f": 746.6666666666666
@@ -8791,8 +8819,15 @@
     ],
     "poster": "assets/case-studies/1adf97aeb0e54be7cc.webp",
     "title": "centered focal",
-    "shortTask": "请仅根据这张图片估计拍摄它的相机焦距。",
-    "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0019--vlm_test_v1--vlm_focal__intr0019--42--857c8315255c"
+    "shortTask": "Estimate focal length in pixels from a single image.",
+    "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0019--vlm_test_v1--vlm_focal__intr0019--42--857c8315255c",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_focal-02",
+      "language": "zh-CN",
+      "sha256": "725dc3d27652d2487ec745571028f7057f7c5a893b5e11b2e0bce88c55705ce2"
+    }
   },
   {
     "id": "W1-w1_vlm_focal-03",
@@ -8807,7 +8842,7 @@
       "assets/case-studies/e01a0314d872b985fa.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片估计拍摄它的相机焦距。\n原始图片宽度 W=768 像素，高度 H=1024 像素。答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。主点已知位于图像中心，即 cx=W/2、cy=H/2；不需要估计或输出主点。\n唯一需要估计的量是 f，满足 fx=fy=f。f 是像素焦距，不是毫米焦距，也不是视场角。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好只含 f 一个字段，值为正数，不要解释、其他字段或 Markdown。",
+    "question": "Using only this image, estimate the focal length of the camera that captured it.\nThe original image is W=768 by H=1024 pixels. Report the answer in pixels at this original resolution, even if the visual input is internally resized.\nThe camera follows a pinhole perspective model with square pixels, zero skew, and no lens distortion. The principal point is known to be at the image center: cx=W/2, cy=H/2. Do not estimate or output the principal point.\nEstimate only f, with fx=fy=f. This is focal length in pixels, not millimeters or field of view.\nSensor size, camera-to-scene distance, object sizes, camera pose, and calibration patterns are not provided. Use perspective cues to give your most plausible single estimate.\nReturn only a JSON object containing exactly one field, f, with a positive numeric value. Do not include explanations, extra fields, or Markdown.",
     "options": [],
     "reference": {
       "f": 426.6666666666667
@@ -8985,8 +9020,15 @@
     ],
     "poster": "assets/case-studies/e01a0314d872b985fa.webp",
     "title": "centered focal",
-    "shortTask": "请仅根据这张图片估计拍摄它的相机焦距。",
-    "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0018--vlm_test_v1--vlm_focal__intr0018--42--4abbcbb5d756"
+    "shortTask": "Estimate focal length in pixels from a single image.",
+    "taskId": "w1_vlm_focal--w1_vlm_focal-vlm_focal__intr0018--vlm_test_v1--vlm_focal__intr0018--42--4abbcbb5d756",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_focal-03",
+      "language": "zh-CN",
+      "sha256": "725dc3d27652d2487ec745571028f7057f7c5a893b5e11b2e0bce88c55705ce2"
+    }
   },
   {
     "id": "W1-w1_vlm_intrinsics-01",
@@ -9001,7 +9043,7 @@
       "assets/case-studies/b9109694dffd1aee75.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片估计拍摄它的相机内参。\n原始图片宽度 W=768 像素，高度 H=1024 像素。所有答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。因此 fx=fy；主点可能偏离图像中心，请根据图片判断，不能默认居中。\n坐标原点是图像左上角的外边缘，u 向右、v 向下，左上角像素中心为 (0.5,0.5)。内参矩阵 K=[[fx,0,cx],[0,fy,cy],[0,0,1]]。\nfx、fy 是像素焦距，不是毫米；cx、cy 是主点坐标，不是画面中物体的中心。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好包含 fx、fy、cx、cy 四个数值字段，不要解释或 Markdown。",
+    "question": "Using only this image, estimate the intrinsics of the camera that captured it.\nThe original image is W=768 by H=1024 pixels. Report all values in pixels at this original resolution, even if the visual input is internally resized.\nThe camera follows a pinhole perspective model with square pixels, zero skew, and no lens distortion, so fx=fy. The principal point may be off-center; infer it from the image rather than assuming it is centered.\nThe origin is the outer top-left edge, u increases to the right, and v increases downward; the top-left pixel center is (0.5,0.5). The intrinsic matrix is K=[[fx,0,cx],[0,fy,cy],[0,0,1]].\nfx and fy are focal lengths in pixels, not millimeters. cx and cy are principal-point coordinates, not the center of an object in the image.\nSensor size, camera-to-scene distance, object sizes, camera pose, and calibration patterns are not provided. Use perspective cues to give your most plausible single estimate.\nReturn only a JSON object containing exactly four numeric fields: fx, fy, cx, cy. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "fx": 426.6666666666667,
@@ -9241,8 +9283,15 @@
     ],
     "poster": "assets/case-studies/b9109694dffd1aee75.webp",
     "title": "camera intrinsics",
-    "shortTask": "请仅根据这张图片估计拍摄它的相机内参。",
-    "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0023--vlm_test_v1--vlm_intrinsics__intr0023--42--d91665ffab48"
+    "shortTask": "Estimate focal length and principal point from a single image.",
+    "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0023--vlm_test_v1--vlm_intrinsics__intr0023--42--d91665ffab48",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_intrinsics-01",
+      "language": "zh-CN",
+      "sha256": "42175a47996ead854d9ef68e849ab9277510c6f650480c938e93a342cda49049"
+    }
   },
   {
     "id": "W1-w1_vlm_intrinsics-02",
@@ -9257,7 +9306,7 @@
       "assets/case-studies/581e1a5ee34d94f5a9.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片估计拍摄它的相机内参。\n原始图片宽度 W=768 像素，高度 H=1024 像素。所有答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。因此 fx=fy；主点可能偏离图像中心，请根据图片判断，不能默认居中。\n坐标原点是图像左上角的外边缘，u 向右、v 向下，左上角像素中心为 (0.5,0.5)。内参矩阵 K=[[fx,0,cx],[0,fy,cy],[0,0,1]]。\nfx、fy 是像素焦距，不是毫米；cx、cy 是主点坐标，不是画面中物体的中心。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好包含 fx、fy、cx、cy 四个数值字段，不要解释或 Markdown。",
+    "question": "Using only this image, estimate the intrinsics of the camera that captured it.\nThe original image is W=768 by H=1024 pixels. Report all values in pixels at this original resolution, even if the visual input is internally resized.\nThe camera follows a pinhole perspective model with square pixels, zero skew, and no lens distortion, so fx=fy. The principal point may be off-center; infer it from the image rather than assuming it is centered.\nThe origin is the outer top-left edge, u increases to the right, and v increases downward; the top-left pixel center is (0.5,0.5). The intrinsic matrix is K=[[fx,0,cx],[0,fy,cy],[0,0,1]].\nfx and fy are focal lengths in pixels, not millimeters. cx and cy are principal-point coordinates, not the center of an object in the image.\nSensor size, camera-to-scene distance, object sizes, camera pose, and calibration patterns are not provided. Use perspective cues to give your most plausible single estimate.\nReturn only a JSON object containing exactly four numeric fields: fx, fy, cx, cy. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "fx": 746.6666666666666,
@@ -9497,8 +9546,15 @@
     ],
     "poster": "assets/case-studies/581e1a5ee34d94f5a9.webp",
     "title": "camera intrinsics",
-    "shortTask": "请仅根据这张图片估计拍摄它的相机内参。",
-    "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0022--vlm_test_v1--vlm_intrinsics__intr0022--42--95476ebe688b"
+    "shortTask": "Estimate focal length and principal point from a single image.",
+    "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0022--vlm_test_v1--vlm_intrinsics__intr0022--42--95476ebe688b",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_intrinsics-02",
+      "language": "zh-CN",
+      "sha256": "42175a47996ead854d9ef68e849ab9277510c6f650480c938e93a342cda49049"
+    }
   },
   {
     "id": "W1-w1_vlm_intrinsics-03",
@@ -9513,7 +9569,7 @@
       "assets/case-studies/1de63ec117c9dc7d37.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片估计拍摄它的相机内参。\n原始图片宽度 W=768 像素，高度 H=1024 像素。所有答案必须使用这个原始分辨率的像素单位，即使你的视觉输入被内部缩放。\n已知这是针孔透视相机，方形像素、零 skew、无镜头畸变。因此 fx=fy；主点可能偏离图像中心，请根据图片判断，不能默认居中。\n坐标原点是图像左上角的外边缘，u 向右、v 向下，左上角像素中心为 (0.5,0.5)。内参矩阵 K=[[fx,0,cx],[0,fy,cy],[0,0,1]]。\nfx、fy 是像素焦距，不是毫米；cx、cy 是主点坐标，不是画面中物体的中心。\n没有提供传感器大小、拍摄距离、物体尺寸、相机位姿或标定板。请结合透视线索，给出你认为最合理的单点估计。\n只输出一个 JSON 对象，恰好包含 fx、fy、cx、cy 四个数值字段，不要解释或 Markdown。",
+    "question": "Using only this image, estimate the intrinsics of the camera that captured it.\nThe original image is W=768 by H=1024 pixels. Report all values in pixels at this original resolution, even if the visual input is internally resized.\nThe camera follows a pinhole perspective model with square pixels, zero skew, and no lens distortion, so fx=fy. The principal point may be off-center; infer it from the image rather than assuming it is centered.\nThe origin is the outer top-left edge, u increases to the right, and v increases downward; the top-left pixel center is (0.5,0.5). The intrinsic matrix is K=[[fx,0,cx],[0,fy,cy],[0,0,1]].\nfx and fy are focal lengths in pixels, not millimeters. cx and cy are principal-point coordinates, not the center of an object in the image.\nSensor size, camera-to-scene distance, object sizes, camera pose, and calibration patterns are not provided. Use perspective cues to give your most plausible single estimate.\nReturn only a JSON object containing exactly four numeric fields: fx, fy, cx, cy. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "fx": 746.6666666666666,
@@ -9753,8 +9809,15 @@
     ],
     "poster": "assets/case-studies/1de63ec117c9dc7d37.webp",
     "title": "camera intrinsics",
-    "shortTask": "请仅根据这张图片估计拍摄它的相机内参。",
-    "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0021--vlm_test_v1--vlm_intrinsics__intr0021--42--c58fd2221bc1"
+    "shortTask": "Estimate focal length and principal point from a single image.",
+    "taskId": "w1_vlm_intrinsics--w1_vlm_intrinsics-vlm_intrinsics__intr0021--vlm_test_v1--vlm_intrinsics__intr0021--42--c58fd2221bc1",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_intrinsics-03",
+      "language": "zh-CN",
+      "sha256": "42175a47996ead854d9ef68e849ab9277510c6f650480c938e93a342cda49049"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_camera-01",
@@ -9770,7 +9833,7 @@
       "assets/case-studies/8ec7fdc26e2373d337.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：电脑鼠标。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position and orientation may change slightly; focal length and resolution are unchanged.\nTrack the target object: computer mouse. It may translate relative to the table or remain stationary; it does not rotate, change size, or leave the table. Other objects remain fixed relative to the table.\nUse the table and other objects to separate camera motion from actual target motion. Using only the two images, report:\n1. moved: whether the target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Do not directly compare pixel coordinates across the two original images. Right and down refer to image A. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -10001,8 +10064,15 @@
     ],
     "poster": "assets/case-studies/f0c865d67c2962b657.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。",
-    "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0009--vlm_test_v1--vlm_motion_camera__pair0009--42--0f1f61677545"
+    "shortTask": "Track the computer mouse and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0009--vlm_test_v1--vlm_motion_camera__pair0009--42--0f1f61677545",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_camera-01",
+      "language": "zh-CN",
+      "sha256": "c7fcba81d6950483c76bf6f6ec8d381528be576aa4f0bc807ab6523be8830618"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_camera-02",
@@ -10018,7 +10088,7 @@
       "assets/case-studies/e4f47a50e08de6aecc.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：书。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position and orientation may change slightly; focal length and resolution are unchanged.\nTrack the target object: book. It may translate relative to the table or remain stationary; it does not rotate, change size, or leave the table. Other objects remain fixed relative to the table.\nUse the table and other objects to separate camera motion from actual target motion. Using only the two images, report:\n1. moved: whether the target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Do not directly compare pixel coordinates across the two original images. Right and down refer to image A. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -10249,8 +10319,15 @@
     ],
     "poster": "assets/case-studies/c37ec34acd9dfd5211.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。",
-    "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0006--vlm_test_v1--vlm_motion_camera__pair0006--42--36eb1e8da975"
+    "shortTask": "Track the book and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0006--vlm_test_v1--vlm_motion_camera__pair0006--42--36eb1e8da975",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_camera-02",
+      "language": "zh-CN",
+      "sha256": "424e1c39457160c64a44e5d19f7976f6fde8ae6b92d44b66abe090b3007dd254"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_camera-03",
@@ -10266,7 +10343,7 @@
       "assets/case-studies/386a46f46d5cc42ea7.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：电脑鼠标。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position and orientation may change slightly; focal length and resolution are unchanged.\nTrack the target object: computer mouse. It may translate relative to the table or remain stationary; it does not rotate, change size, or leave the table. Other objects remain fixed relative to the table.\nUse the table and other objects to separate camera motion from actual target motion. Using only the two images, report:\n1. moved: whether the target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Do not directly compare pixel coordinates across the two original images. Right and down refer to image A. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -10497,8 +10574,15 @@
     ],
     "poster": "assets/case-studies/ee6ebaa0107e8dc213.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。",
-    "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0004--vlm_test_v1--vlm_motion_camera__pair0004--42--c31ac0b58f18"
+    "shortTask": "Track the computer mouse and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_camera--w1_vlm_motion_camera-vlm_motion_camera__pair0004--vlm_test_v1--vlm_motion_camera__pair0004--42--c31ac0b58f18",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_camera-03",
+      "language": "zh-CN",
+      "sha256": "c7fcba81d6950483c76bf6f6ec8d381528be576aa4f0bc807ab6523be8830618"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_camera_large-01",
@@ -10514,7 +10598,7 @@
       "assets/case-studies/f099436fbff247dee4.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：带把手的杯子。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position and orientation may change slightly; focal length and resolution are unchanged.\nTrack the target object: mug with a handle. It may translate relative to the table or remain stationary; it does not rotate, change size, or leave the table. Other objects remain fixed relative to the table.\nUse the table and other objects to separate camera motion from actual target motion. Using only the two images, report:\n1. moved: whether the target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Do not directly compare pixel coordinates across the two original images. Right and down refer to image A. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -10745,8 +10829,15 @@
     ],
     "poster": "assets/case-studies/c37ec34acd9dfd5211.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。",
-    "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0007--42--9f3a9785dcef"
+    "shortTask": "Track the mug with a handle and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0007--42--9f3a9785dcef",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_camera_large-01",
+      "language": "zh-CN",
+      "sha256": "c143233c7b9731f7f6858d4bb7d28d1b8893c4eb28fd2a608da3af48431fcb9e"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_camera_large-02",
@@ -10762,7 +10853,7 @@
       "assets/case-studies/3e47c78c733d899cae.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：电脑鼠标。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position and orientation may change slightly; focal length and resolution are unchanged.\nTrack the target object: computer mouse. It may translate relative to the table or remain stationary; it does not rotate, change size, or leave the table. Other objects remain fixed relative to the table.\nUse the table and other objects to separate camera motion from actual target motion. Using only the two images, report:\n1. moved: whether the target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Do not directly compare pixel coordinates across the two original images. Right and down refer to image A. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -10993,8 +11084,15 @@
     ],
     "poster": "assets/case-studies/ee6ebaa0107e8dc213.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。",
-    "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0004--42--936e0ef1709a"
+    "shortTask": "Track the computer mouse and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0004--42--936e0ef1709a",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_camera_large-02",
+      "language": "zh-CN",
+      "sha256": "c7fcba81d6950483c76bf6f6ec8d381528be576aa4f0bc807ab6523be8830618"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_camera_large-03",
@@ -11010,7 +11108,7 @@
       "assets/case-studies/6e1ec0a63b292f092a.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。\n请比较目标物体：书。目标可能相对于桌面平移，也可能没有移动；不会旋转、缩放或离开桌面。其他物体相对于桌面保持不动。\n请利用桌面和其他物体区分相机变化与目标的真实移动，仅根据两张图片回答：\n1. moved：目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断；不是直接比较两张原图的像素坐标。右为图 A 的右侧，下为图 A 的下侧。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position and orientation may change slightly; focal length and resolution are unchanged.\nTrack the target object: book. It may translate relative to the table or remain stationary; it does not rotate, change size, or leave the table. Other objects remain fixed relative to the table.\nUse the table and other objects to separate camera motion from actual target motion. Using only the two images, report:\n1. moved: whether the target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Do not directly compare pixel coordinates across the two original images. Right and down refer to image A. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -11241,8 +11339,15 @@
     ],
     "poster": "assets/case-studies/d2ccdd0f534a183398.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。拍摄相机的位置和朝向可能有少量变化，焦距和分辨率不变。",
-    "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0002--42--0e5556be0d23"
+    "shortTask": "Track the book and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_camera_large--w1_vlm_motion_camera_large-vlm_motion_camera_lar--vlm_test_v1--vlm_motion_camera_large__pair0002--42--0e5556be0d23",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_camera_large-03",
+      "language": "zh-CN",
+      "sha256": "424e1c39457160c64a44e5d19f7976f6fde8ae6b92d44b66abe090b3007dd254"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_fixed-01",
@@ -11258,7 +11363,7 @@
       "assets/case-studies/51e4078f64114fc11d.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。\n请比较目标物体：带盖水瓶。目标可能在桌面上平移，也可能没有移动；不会旋转、缩放或离开桌面。\n请仅根据两张图片回答：\n1. moved：目标是否发生了位置变化，布尔值。\n2. direction：目标从 A 到 B 在画面中的移动方向。以物体整体中心的位置变化为准，右为图像右侧，下为图像下侧；不是物体自身的左右，也不是世界坐标的上下。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有移动则为 none。\n3. distance_cm：目标在桌面上从原位置到新位置的实际直线距离，单位厘米，不是图像上的像素距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position, orientation, focal length, and resolution are unchanged.\nTrack the target object: capped water bottle. It may translate on the table or remain stationary; it does not rotate, change size, or leave the table.\nUsing only the two images, report:\n1. moved: whether the target changed position, as a Boolean.\n2. direction: the image-plane direction of the target from A to B, based on the displacement of its overall center. Right and down refer to image coordinates, not the object or world coordinate system. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -11489,8 +11594,15 @@
     ],
     "poster": "assets/case-studies/f0c865d67c2962b657.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。",
-    "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0010--vlm_test_v1--vlm_motion_fixed__pair0010--42--aa51e0011d4c"
+    "shortTask": "Track the capped water bottle and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0010--vlm_test_v1--vlm_motion_fixed__pair0010--42--aa51e0011d4c",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_fixed-01",
+      "language": "zh-CN",
+      "sha256": "0e8c60a3e50dd0f9078abcb8f494d2ddeedc784c6da89066b764178b54441a1d"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_fixed-02",
@@ -11506,7 +11618,7 @@
       "assets/case-studies/56fab5b82e0e1b9854.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。\n请比较目标物体：电脑鼠标。目标可能在桌面上平移，也可能没有移动；不会旋转、缩放或离开桌面。\n请仅根据两张图片回答：\n1. moved：目标是否发生了位置变化，布尔值。\n2. direction：目标从 A 到 B 在画面中的移动方向。以物体整体中心的位置变化为准，右为图像右侧，下为图像下侧；不是物体自身的左右，也不是世界坐标的上下。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有移动则为 none。\n3. distance_cm：目标在桌面上从原位置到新位置的实际直线距离，单位厘米，不是图像上的像素距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position, orientation, focal length, and resolution are unchanged.\nTrack the target object: computer mouse. It may translate on the table or remain stationary; it does not rotate, change size, or leave the table.\nUsing only the two images, report:\n1. moved: whether the target changed position, as a Boolean.\n2. direction: the image-plane direction of the target from A to B, based on the displacement of its overall center. Right and down refer to image coordinates, not the object or world coordinate system. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -11737,8 +11849,15 @@
     ],
     "poster": "assets/case-studies/f0c865d67c2962b657.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。",
-    "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0009--vlm_test_v1--vlm_motion_fixed__pair0009--42--d6948e0e933f"
+    "shortTask": "Track the computer mouse and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0009--vlm_test_v1--vlm_motion_fixed__pair0009--42--d6948e0e933f",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_fixed-02",
+      "language": "zh-CN",
+      "sha256": "fa90ecd499a62b4637cf16890a3fcf9f21bbeb6f182ed83ce5f2fd63bf166080"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_fixed-03",
@@ -11754,7 +11873,7 @@
       "assets/case-studies/2d4fa76c8246cb2690.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。\n请比较目标物体：电脑鼠标。目标可能在桌面上平移，也可能没有移动；不会旋转、缩放或离开桌面。\n请仅根据两张图片回答：\n1. moved：目标是否发生了位置变化，布尔值。\n2. direction：目标从 A 到 B 在画面中的移动方向。以物体整体中心的位置变化为准，右为图像右侧，下为图像下侧；不是物体自身的左右，也不是世界坐标的上下。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有移动则为 none。\n3. distance_cm：目标在桌面上从原位置到新位置的实际直线距离，单位厘米，不是图像上的像素距离。结合场景中日常物体估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Images A and B show a scene before and after, in that order. Camera position, orientation, focal length, and resolution are unchanged.\nTrack the target object: computer mouse. It may translate on the table or remain stationary; it does not rotate, change size, or leave the table.\nUsing only the two images, report:\n1. moved: whether the target changed position, as a Boolean.\n2. direction: the image-plane direction of the target from A to B, based on the displacement of its overall center. Right and down refer to image coordinates, not the object or world coordinate system. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -11985,8 +12104,15 @@
     ],
     "poster": "assets/case-studies/c37ec34acd9dfd5211.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张图片：图 A 是之前，图 B 是之后。两图的相机位置、朝向、焦距和分辨率相同。",
-    "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0008--vlm_test_v1--vlm_motion_fixed__pair0008--42--4d1e3037d3d2"
+    "shortTask": "Track the computer mouse and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_fixed--w1_vlm_motion_fixed-vlm_motion_fixed__pair0008--vlm_test_v1--vlm_motion_fixed__pair0008--42--4d1e3037d3d2",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_fixed-03",
+      "language": "zh-CN",
+      "sha256": "fa90ecd499a62b4637cf16890a3fcf9f21bbeb6f182ed83ce5f2fd63bf166080"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_real-01",
@@ -12002,7 +12128,7 @@
       "assets/case-studies/f5843efa28c9a48ded.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。\n请只跟踪指定目标物体：桌面右侧带绿色把手的透明玻璃壶。目标可能相对于桌面移动，也可能没有移动。\n请利用桌面和能确认未移动的背景区分相机变化与目标的真实移动，仅根据两张照片回答：\n1. moved：指定目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断。右为图 A 的右侧，下为图 A 的下侧，不是物体自身的左右。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合照片中的场景线索估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Photographs A and B show a scene before and after, in that order. The camera may change; other objects on the table may also move, appear, or disappear.\nTrack only the designated target: transparent glass jug with a green handle on the right side of the table. It may move relative to the table or remain stationary.\nUse the table and background elements that can be confirmed stationary to separate camera motion from actual target motion. Using only the two photographs, report:\n1. moved: whether the designated target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Right and down refer to image A, not the target itself. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -12233,10 +12359,17 @@
     ],
     "poster": "assets/case-studies/d37c605105afc9f846.webp",
     "title": "Real Object Motion",
-    "shortTask": "Track the green-handled glass jug relative to the table.",
+    "shortTask": "Track the transparent glass jug with a green handle on the right side of the table and estimate its direction and travel distance.",
     "takeaway": "Reference: right, 2 cm",
     "comparisonFigure": "assets/latest-cases/cases-geometry.webp?v=names-1017-20261019",
-    "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0003--vlm_test_v1--vlm_motion_real__real0003--42--73ff63cd73d2"
+    "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0003--vlm_test_v1--vlm_motion_real__real0003--42--73ff63cd73d2",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_real-01",
+      "language": "zh-CN",
+      "sha256": "d5da11f8123093f4f3522e2c5cb0611ea7d81badb4e1ea4eb36356ec56f30c36"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_real-02",
@@ -12252,7 +12385,7 @@
       "assets/case-studies/e1d581de7cf7af4350.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。\n请只跟踪指定目标物体：桌面右侧的蓝色字母 C 块。目标可能相对于桌面移动，也可能没有移动。\n请利用桌面和能确认未移动的背景区分相机变化与目标的真实移动，仅根据两张照片回答：\n1. moved：指定目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断。右为图 A 的右侧，下为图 A 的下侧，不是物体自身的左右。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合照片中的场景线索估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Photographs A and B show a scene before and after, in that order. The camera may change; other objects on the table may also move, appear, or disappear.\nTrack only the designated target: blue letter C block on the right side of the table. It may move relative to the table or remain stationary.\nUse the table and background elements that can be confirmed stationary to separate camera motion from actual target motion. Using only the two photographs, report:\n1. moved: whether the designated target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Right and down refer to image A, not the target itself. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -12483,8 +12616,15 @@
     ],
     "poster": "assets/case-studies/671e2edf4d5bdc4352.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。",
-    "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0002--vlm_test_v1--vlm_motion_real__real0002--42--da385ad5ac1a"
+    "shortTask": "Track the blue letter C block on the right side of the table and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0002--vlm_test_v1--vlm_motion_real__real0002--42--da385ad5ac1a",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_real-02",
+      "language": "zh-CN",
+      "sha256": "a9c5b9b06fd726c7f83fe8d3a609bd657ddce62d1877308d635620c93d9b413f"
+    }
   },
   {
     "id": "W1-w1_vlm_motion_real-03",
@@ -12500,7 +12640,7 @@
       "assets/case-studies/aa5e26135c4d7f9ce4.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。\n请只跟踪指定目标物体：桌面中间的蓝色字母 B 块。目标可能相对于桌面移动，也可能没有移动。\n请利用桌面和能确认未移动的背景区分相机变化与目标的真实移动，仅根据两张照片回答：\n1. moved：指定目标相对于桌面是否发生了位置变化，布尔值。仅由相机变化导致的画面位置变化不算目标移动。\n2. direction：目标真实移动在图 A 视角中的方向。设想相机仍固定在图 A 的位置和朝向，把目标的新旧两个位置都投影到图 A，以物体整体中心的变化判断。右为图 A 的右侧，下为图 A 的下侧，不是物体自身的左右。选择最接近的八方向之一：right（右）、down_right（右下）、down（下）、down_left（左下）、left（左）、up_left（左上）、up（上）、up_right（右上）。没有真实移动则为 none。\n3. distance_cm：目标相对于桌面从原位置到新位置的实际直线距离，单位厘米，不是像素距离，也不是相机移动距离。结合照片中的场景线索估计，给出最合理的单个数值。\n若没有移动，moved 为 false、direction 为 none、distance_cm 为 0；否则 moved 为 true、distance_cm 为正数。\n只输出包含 moved、direction、distance_cm 三个字段的 JSON 对象，不要解释或 Markdown。",
+    "question": "Photographs A and B show a scene before and after, in that order. The camera may change; other objects on the table may also move, appear, or disappear.\nTrack only the designated target: blue letter B block in the middle of the table. It may move relative to the table or remain stationary.\nUse the table and background elements that can be confirmed stationary to separate camera motion from actual target motion. Using only the two photographs, report:\n1. moved: whether the designated target changed position relative to the table, as a Boolean. Apparent image motion caused only by camera motion does not count.\n2. direction: the direction of actual target motion in the viewpoint of image A. Imagine keeping the camera at its position and orientation in A, project both target positions into that view, and use the displacement of the overall center. Right and down refer to image A, not the target itself. Choose the closest of eight directions: right, down_right, down, down_left, left, up_left, up, up_right. Use none if there is no actual motion.\n3. distance_cm: the actual straight-line distance traveled by the target on the table, in centimeters, not pixel distance or camera displacement. Use everyday objects and scene cues to give your most plausible single estimate.\nIf the target did not move, return moved=false, direction=none, and distance_cm=0. Otherwise, moved=true and distance_cm must be positive.\nReturn only a JSON object with moved, direction, and distance_cm. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "moved": true,
@@ -12731,8 +12871,15 @@
     ],
     "poster": "assets/case-studies/1fcf861395cc885753.webp",
     "title": "object motion",
-    "shortTask": "这里有按时间顺序排列的两张真实照片：图 A 是之前，图 B 是之后。相机可能有变化，桌面上的其他物体也可能移动或增减。",
-    "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0001--vlm_test_v1--vlm_motion_real__real0001--42--f75961a0b58c"
+    "shortTask": "Track the blue letter B block in the middle of the table and estimate its direction and travel distance.",
+    "taskId": "w1_vlm_motion_real--w1_vlm_motion_real-vlm_motion_real__real0001--vlm_test_v1--vlm_motion_real__real0001--42--f75961a0b58c",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_motion_real-03",
+      "language": "zh-CN",
+      "sha256": "10370e8bae5f97512f91a7d792b9aa48b3afef8fe40f3498294348c1aa7f9ced"
+    }
   },
   {
     "id": "W1-w1_vlm_pose-01",
@@ -12748,7 +12895,7 @@
       "assets/case-studies/09f24ee2cc1423a7d9.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。\n\n请仅根据这两张图片，估计相机 B 相对于相机 A 的三维位置和朝向。\n坐标系：以相机 A 的光心为原点，+X 向画面右方、+Y 向画面下方、+Z 向相机 A 前方（看向场景），为右手坐标系。\ntranslation_cm = [tx, ty, tz]：相机 B 光心在上述 A 坐标系中的坐标，单位厘米。这是相机本身的位移，不是画面中物体的表观运动，也不是把 A 中的点变换到 B 的外参 tvec。\nrotation_xyz_deg = [rx, ry, rz]：相机 B 相对于 A 的姿态，绕 A 的固定 X、Y、Z 轴依次按右手定则旋转，单位度。明确地说，R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx)，且 p_A = R_A_from_B @ p_B + translation_cm（p 使用厘米）。因此不动时六个数均为 0。\n\n在没有真实尺寸的情况下，厘米位移依赖视觉尺度先验，并非唯一可恢复的量；仍请给出你最合理的数值估计。不要假定所有变化都来自平移或都来自旋转。\n只输出以下 JSON 对象，两个数组各含 3 个有限数字，不要输出说明或 Markdown：\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
+    "question": "Images A and B show the same static scene, in that order. All objects and lighting remain unchanged. Only the camera may translate or rotate, or it may remain stationary. Both images use the same camera with unchanged intrinsics and no zoom. Camera intrinsics, real object sizes, and metric calibration are not provided.\nUsing only these two images, estimate the 3D position and orientation of camera B relative to camera A.\nUse a right-handed coordinate system centered at camera A's optical center: +X points right in the image, +Y points down, and +Z points forward from camera A into the scene.\ntranslation_cm = [tx, ty, tz] gives camera B's optical center in A's coordinate frame, in centimeters. This is the camera's displacement, not apparent object motion or the extrinsic tvec that transforms points from A to B.\nrotation_xyz_deg = [rx, ry, rz] gives B's orientation relative to A, using right-handed rotations about A's fixed X, Y, and Z axes in that order, in degrees. Specifically, R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx), and p_A = R_A_from_B @ p_B + translation_cm, with p in centimeters. All six values are zero if the camera is unchanged.\nWithout real object dimensions, translation in centimeters depends on visual scale priors and cannot be uniquely recovered; still provide your most plausible numerical estimate. Do not assume all changes arise exclusively from translation or rotation.\nReturn only this JSON object, with three finite numbers in each array and no explanation or Markdown:\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
     "options": [],
     "reference": {
       "translation_cm": [
@@ -13125,10 +13272,17 @@
     ],
     "poster": "assets/case-studies/13db4d41dc42dd2a5b.webp",
     "title": "Camera Translation",
-    "shortTask": "Estimate camera B’s position in the coordinate frame of camera A.",
+    "shortTask": "Estimate camera B's position and orientation in camera A's coordinate frame.",
     "takeaway": "Reference translation: [12, 9, 0] cm",
     "comparisonFigure": "assets/latest-cases/cases-geometry.webp?v=names-1017-20261019",
-    "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0022--vlm_test_v1--vlm_pose__rt0022--42--9a1a2bc4a1dd"
+    "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0022--vlm_test_v1--vlm_pose__rt0022--42--9a1a2bc4a1dd",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_pose-01",
+      "language": "zh-CN",
+      "sha256": "c05bc98a0f357ffb2209c170d97a864f41566544643fc09a17f82a71859055d8"
+    }
   },
   {
     "id": "W1-w1_vlm_pose-02",
@@ -13144,7 +13298,7 @@
       "assets/case-studies/311306f53b65608320.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。\n\n请仅根据这两张图片，估计相机 B 相对于相机 A 的三维位置和朝向。\n坐标系：以相机 A 的光心为原点，+X 向画面右方、+Y 向画面下方、+Z 向相机 A 前方（看向场景），为右手坐标系。\ntranslation_cm = [tx, ty, tz]：相机 B 光心在上述 A 坐标系中的坐标，单位厘米。这是相机本身的位移，不是画面中物体的表观运动，也不是把 A 中的点变换到 B 的外参 tvec。\nrotation_xyz_deg = [rx, ry, rz]：相机 B 相对于 A 的姿态，绕 A 的固定 X、Y、Z 轴依次按右手定则旋转，单位度。明确地说，R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx)，且 p_A = R_A_from_B @ p_B + translation_cm（p 使用厘米）。因此不动时六个数均为 0。\n\n在没有真实尺寸的情况下，厘米位移依赖视觉尺度先验，并非唯一可恢复的量；仍请给出你最合理的数值估计。不要假定所有变化都来自平移或都来自旋转。\n只输出以下 JSON 对象，两个数组各含 3 个有限数字，不要输出说明或 Markdown：\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
+    "question": "Images A and B show the same static scene, in that order. All objects and lighting remain unchanged. Only the camera may translate or rotate, or it may remain stationary. Both images use the same camera with unchanged intrinsics and no zoom. Camera intrinsics, real object sizes, and metric calibration are not provided.\nUsing only these two images, estimate the 3D position and orientation of camera B relative to camera A.\nUse a right-handed coordinate system centered at camera A's optical center: +X points right in the image, +Y points down, and +Z points forward from camera A into the scene.\ntranslation_cm = [tx, ty, tz] gives camera B's optical center in A's coordinate frame, in centimeters. This is the camera's displacement, not apparent object motion or the extrinsic tvec that transforms points from A to B.\nrotation_xyz_deg = [rx, ry, rz] gives B's orientation relative to A, using right-handed rotations about A's fixed X, Y, and Z axes in that order, in degrees. Specifically, R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx), and p_A = R_A_from_B @ p_B + translation_cm, with p in centimeters. All six values are zero if the camera is unchanged.\nWithout real object dimensions, translation in centimeters depends on visual scale priors and cannot be uniquely recovered; still provide your most plausible numerical estimate. Do not assume all changes arise exclusively from translation or rotation.\nReturn only this JSON object, with three finite numbers in each array and no explanation or Markdown:\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
     "options": [],
     "reference": {
       "translation_cm": [
@@ -13500,8 +13654,15 @@
     ],
     "poster": "assets/case-studies/13db4d41dc42dd2a5b.webp",
     "title": "rotation",
-    "shortTask": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。",
-    "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0020--vlm_test_v1--vlm_pose__rt0020--42--17ca254950f1"
+    "shortTask": "Estimate camera B's position and orientation in camera A's coordinate frame.",
+    "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0020--vlm_test_v1--vlm_pose__rt0020--42--17ca254950f1",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_pose-02",
+      "language": "zh-CN",
+      "sha256": "c05bc98a0f357ffb2209c170d97a864f41566544643fc09a17f82a71859055d8"
+    }
   },
   {
     "id": "W1-w1_vlm_pose-03",
@@ -13517,7 +13678,7 @@
       "assets/case-studies/5a762697b999498c8c.webp"
     ],
     "model": "Ten recorded models",
-    "question": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。\n\n请仅根据这两张图片，估计相机 B 相对于相机 A 的三维位置和朝向。\n坐标系：以相机 A 的光心为原点，+X 向画面右方、+Y 向画面下方、+Z 向相机 A 前方（看向场景），为右手坐标系。\ntranslation_cm = [tx, ty, tz]：相机 B 光心在上述 A 坐标系中的坐标，单位厘米。这是相机本身的位移，不是画面中物体的表观运动，也不是把 A 中的点变换到 B 的外参 tvec。\nrotation_xyz_deg = [rx, ry, rz]：相机 B 相对于 A 的姿态，绕 A 的固定 X、Y、Z 轴依次按右手定则旋转，单位度。明确地说，R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx)，且 p_A = R_A_from_B @ p_B + translation_cm（p 使用厘米）。因此不动时六个数均为 0。\n\n在没有真实尺寸的情况下，厘米位移依赖视觉尺度先验，并非唯一可恢复的量；仍请给出你最合理的数值估计。不要假定所有变化都来自平移或都来自旋转。\n只输出以下 JSON 对象，两个数组各含 3 个有限数字，不要输出说明或 Markdown：\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
+    "question": "Images A and B show the same static scene, in that order. All objects and lighting remain unchanged. Only the camera may translate or rotate, or it may remain stationary. Both images use the same camera with unchanged intrinsics and no zoom. Camera intrinsics, real object sizes, and metric calibration are not provided.\nUsing only these two images, estimate the 3D position and orientation of camera B relative to camera A.\nUse a right-handed coordinate system centered at camera A's optical center: +X points right in the image, +Y points down, and +Z points forward from camera A into the scene.\ntranslation_cm = [tx, ty, tz] gives camera B's optical center in A's coordinate frame, in centimeters. This is the camera's displacement, not apparent object motion or the extrinsic tvec that transforms points from A to B.\nrotation_xyz_deg = [rx, ry, rz] gives B's orientation relative to A, using right-handed rotations about A's fixed X, Y, and Z axes in that order, in degrees. Specifically, R_A_from_B = Rz(rz) @ Ry(ry) @ Rx(rx), and p_A = R_A_from_B @ p_B + translation_cm, with p in centimeters. All six values are zero if the camera is unchanged.\nWithout real object dimensions, translation in centimeters depends on visual scale priors and cannot be uniquely recovered; still provide your most plausible numerical estimate. Do not assume all changes arise exclusively from translation or rotation.\nReturn only this JSON object, with three finite numbers in each array and no explanation or Markdown:\n{\"translation_cm\": [tx, ty, tz], \"rotation_xyz_deg\": [rx, ry, rz]}",
     "options": [],
     "reference": {
       "translation_cm": [
@@ -13891,8 +14052,15 @@
     ],
     "poster": "assets/case-studies/13db4d41dc42dd2a5b.webp",
     "title": "translation",
-    "shortTask": "这两张图片依次为同一个静止场景的图 A、图 B。所有物体与光照保持不变，只有相机可能移动或转动，也可能完全不动。同一对图片使用同一相机，内参保持不变、没有变焦。没有提供相机内参、物体真实尺寸或任何米制标定信息。",
-    "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0018--vlm_test_v1--vlm_pose__rt0018--42--16364cfef62c"
+    "shortTask": "Estimate camera B's position and orientation in camera A's coordinate frame.",
+    "taskId": "w1_vlm_pose--w1_vlm_pose-vlm_pose__rt0018--vlm_test_v1--vlm_pose__rt0018--42--16364cfef62c",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_pose-03",
+      "language": "zh-CN",
+      "sha256": "c05bc98a0f357ffb2209c170d97a864f41566544643fc09a17f82a71859055d8"
+    }
   },
   {
     "id": "W1-w1_vlm_reference-01",
@@ -13907,7 +14075,7 @@
       "assets/case-studies/b81cbe4541cbfc182e.webp"
     ],
     "model": "Ten recorded models",
-    "question": "橙色物体是目标，蓝色物体是参照物。参照物高10厘米。两个物体竖直放置，最靠近相机的表面处于相同深度。目标的真实高度约是参照物的几倍？只输出包含height_ratio的JSON。",
+    "question": "The orange object is the target and the blue object is the reference. The reference is 10 cm tall. Both objects stand upright, and their nearest surfaces are at the same depth. Approximately how many times taller is the target than the reference? Return only JSON containing height_ratio.",
     "options": [],
     "reference": {
       "height_ratio": 2.66
@@ -14111,8 +14279,15 @@
     ],
     "poster": "assets/case-studies/b81cbe4541cbfc182e.webp",
     "title": "height ratio",
-    "shortTask": "橙色物体是目标，蓝色物体是参照物。参照物高10厘米。两个物体竖直放置，最靠近相机的表面处于相同深度。目标的真实高度约是参照物的几倍？只输出包含height_ratio的JSON。",
-    "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_target_sca--vlm_test_v1--vlm_reference__g0003_target_scaled_height_ratio--42--6f375c4e17fa"
+    "shortTask": "Compare target height against a 10 cm reference.",
+    "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_target_sca--vlm_test_v1--vlm_reference__g0003_target_scaled_height_ratio--42--6f375c4e17fa",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_reference-01",
+      "language": "zh-CN",
+      "sha256": "a2d3c6f3edd01ad39e2b191b67773498e5a2c3397012478f4936c6fd17170132"
+    }
   },
   {
     "id": "W1-w1_vlm_reference-02",
@@ -14127,7 +14302,7 @@
       "assets/case-studies/b81cbe4541cbfc182e.webp"
     ],
     "model": "Ten recorded models",
-    "question": "橙色物体是目标，蓝色物体是参照物。参照物高10厘米。两个物体竖直放置，最靠近相机的表面处于相同深度。估计目标的真实高度（厘米），只输出包含height_cm的JSON。",
+    "question": "The orange object is the target and the blue object is the reference. The reference is 10 cm tall. Both objects stand upright, and their nearest surfaces are at the same depth. Estimate the target height in centimeters. Return only JSON containing height_cm.",
     "options": [],
     "reference": {
       "height_cm": 26.6
@@ -14331,8 +14506,15 @@
     ],
     "poster": "assets/case-studies/b81cbe4541cbfc182e.webp",
     "title": "height cm",
-    "shortTask": "橙色物体是目标，蓝色物体是参照物。参照物高10厘米。两个物体竖直放置，最靠近相机的表面处于相同深度。估计目标的真实高度（厘米），只输出包含height_cm的JSON。",
-    "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_target_sca--vlm_test_v1--vlm_reference__g0003_target_scaled_height_cm--42--cde57954f097"
+    "shortTask": "Estimate target height using a 10 cm reference.",
+    "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_target_sca--vlm_test_v1--vlm_reference__g0003_target_scaled_height_cm--42--cde57954f097",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_reference-02",
+      "language": "zh-CN",
+      "sha256": "7f2543ab56bcc93a2a3e44874e3d6e9718169262d9ba87d398fd605483c0e7b0"
+    }
   },
   {
     "id": "W1-w1_vlm_reference-03",
@@ -14348,7 +14530,7 @@
       "assets/case-studies/1102ae3de92da122aa.webp"
     ],
     "model": "Ten recorded models",
-    "question": "两张图中的橙色物体是比较目标。每张图中蓝色参照物均高10厘米，两个物体竖直放置，最靠近相机的表面等深。第二张图目标的真实高度是第一张图的几倍？只输出包含height_ratio_2_over_1的JSON。",
+    "question": "Compare the orange target objects in the two images. The blue reference in each image is 10 cm tall. Both objects stand upright, and their nearest surfaces are at the same depth within each image. What is the ratio of the target height in the second image to its height in the first? Return only JSON containing height_ratio_2_over_1.",
     "options": [],
     "reference": {
       "height_ratio_2_over_1": 1.0
@@ -14552,8 +14734,15 @@
     ],
     "poster": "assets/case-studies/f1590ed56c204d19cc.webp",
     "title": "size invariance",
-    "shortTask": "两张图中的橙色物体是比较目标。每张图中蓝色参照物均高10厘米，两个物体竖直放置，最靠近相机的表面等深。第二张图目标的真实高度是第一张图的几倍？只输出包含height_ratio_2_over_1的JSON。",
-    "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_base_size_--vlm_test_v1--vlm_reference__g0003_base_size_invariance--42--40ac3df3d3f8"
+    "shortTask": "Compare target heights across two images using a 10 cm reference.",
+    "taskId": "w1_vlm_reference--w1_vlm_reference-vlm_reference__g0003_base_size_--vlm_test_v1--vlm_reference__g0003_base_size_invariance--42--40ac3df3d3f8",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_reference-03",
+      "language": "zh-CN",
+      "sha256": "4446cb5a2673ae89ecb361c14f80b85080681581824b81cda73afe4706bea100"
+    }
   },
   {
     "id": "W1-w1_vlm_size-01",
@@ -14568,7 +14757,7 @@
       "assets/case-studies/b2b97114be65d997d9.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：\n- 带把手杯子的高度：从杯底到杯口，对应 mug_height_cm。\n- 带盖水瓶的总高度：从瓶底到瓶盖顶部，对应 bottle_height_cm。\n- 书的封面长边长度，对应 book_length_cm。\n- 键盘从最左端到最右端的宽度，包含外壳，对应 keyboard_width_cm。\n请结合图中的物体和场景上下文，对每项给出你认为最合理的单点估计。\n只输出一个 JSON 对象，包含上述四个字段，值均为正数。不要输出解释或 Markdown。",
+    "question": "Using only this image, estimate the following real object dimensions in centimeters:\n- Mug height, from the bottom to the rim: mug_height_cm.\n- Total height of the capped water bottle, from the bottom to the top of the cap: bottle_height_cm.\n- Length of the longer edge of the book cover: book_length_cm.\n- Keyboard width from its leftmost to rightmost edge, including its casing: keyboard_width_cm.\nUse the objects and scene context to give your most plausible single estimate for each dimension.\nReturn only a JSON object with these four fields and positive numeric values. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "mug_height_cm": 12.194561958312988,
@@ -14823,8 +15012,15 @@
     ],
     "poster": "assets/case-studies/b2b97114be65d997d9.webp",
     "title": "object size",
-    "shortTask": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：",
-    "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_mug_resized--vlm_test_v1--vlm_size__desk0003_mug_resized--42--5b65d03bc35b"
+    "shortTask": "Estimate mug, bottle, book, and keyboard dimensions in centimeters.",
+    "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_mug_resized--vlm_test_v1--vlm_size__desk0003_mug_resized--42--5b65d03bc35b",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_size-01",
+      "language": "zh-CN",
+      "sha256": "ddfeb7fea79f65eb967b3ec98dee4ac46e4cb17133b288206b0570226465fc22"
+    }
   },
   {
     "id": "W1-w1_vlm_size-02",
@@ -14839,7 +15035,7 @@
       "assets/case-studies/57fedf394ae4d4c885.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：\n- 带把手杯子的高度：从杯底到杯口，对应 mug_height_cm。\n- 带盖水瓶的总高度：从瓶底到瓶盖顶部，对应 bottle_height_cm。\n- 书的封面长边长度，对应 book_length_cm。\n- 键盘从最左端到最右端的宽度，包含外壳，对应 keyboard_width_cm。\n请结合图中的物体和场景上下文，对每项给出你认为最合理的单点估计。\n只输出一个 JSON 对象，包含上述四个字段，值均为正数。不要输出解释或 Markdown。",
+    "question": "Using only this image, estimate the following real object dimensions in centimeters:\n- Mug height, from the bottom to the rim: mug_height_cm.\n- Total height of the capped water bottle, from the bottom to the top of the cap: bottle_height_cm.\n- Length of the longer edge of the book cover: book_length_cm.\n- Keyboard width from its leftmost to rightmost edge, including its casing: keyboard_width_cm.\nUse the objects and scene context to give your most plausible single estimate for each dimension.\nReturn only a JSON object with these four fields and positive numeric values. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "mug_height_cm": 11.085963249206543,
@@ -15094,8 +15290,15 @@
     ],
     "poster": "assets/case-studies/57fedf394ae4d4c885.webp",
     "title": "object size",
-    "shortTask": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：",
-    "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_camera_change--vlm_test_v1--vlm_size__desk0003_camera_change--42--d02e8da567b2"
+    "shortTask": "Estimate mug, bottle, book, and keyboard dimensions in centimeters.",
+    "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_camera_change--vlm_test_v1--vlm_size__desk0003_camera_change--42--d02e8da567b2",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_size-02",
+      "language": "zh-CN",
+      "sha256": "ddfeb7fea79f65eb967b3ec98dee4ac46e4cb17133b288206b0570226465fc22"
+    }
   },
   {
     "id": "W1-w1_vlm_size-03",
@@ -15110,7 +15313,7 @@
       "assets/case-studies/6beec8881945c298b1.webp"
     ],
     "model": "Ten recorded models",
-    "question": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：\n- 带把手杯子的高度：从杯底到杯口，对应 mug_height_cm。\n- 带盖水瓶的总高度：从瓶底到瓶盖顶部，对应 bottle_height_cm。\n- 书的封面长边长度，对应 book_length_cm。\n- 键盘从最左端到最右端的宽度，包含外壳，对应 keyboard_width_cm。\n请结合图中的物体和场景上下文，对每项给出你认为最合理的单点估计。\n只输出一个 JSON 对象，包含上述四个字段，值均为正数。不要输出解释或 Markdown。",
+    "question": "Using only this image, estimate the following real object dimensions in centimeters:\n- Mug height, from the bottom to the rim: mug_height_cm.\n- Total height of the capped water bottle, from the bottom to the top of the cap: bottle_height_cm.\n- Length of the longer edge of the book cover: book_length_cm.\n- Keyboard width from its leftmost to rightmost edge, including its casing: keyboard_width_cm.\nUse the objects and scene context to give your most plausible single estimate for each dimension.\nReturn only a JSON object with these four fields and positive numeric values. Do not include explanations or Markdown.",
     "options": [],
     "reference": {
       "mug_height_cm": 11.085963249206543,
@@ -15365,8 +15568,15 @@
     ],
     "poster": "assets/case-studies/6beec8881945c298b1.webp",
     "title": "object size",
-    "shortTask": "请仅根据这张图片，估计以下物体的实际尺寸，所有数值单位都是厘米：",
-    "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_base--vlm_test_v1--vlm_size__desk0003_base--42--198413f0d5ad"
+    "shortTask": "Estimate mug, bottle, book, and keyboard dimensions in centimeters.",
+    "taskId": "w1_vlm_size--w1_vlm_size-vlm_size__desk0003_base--vlm_test_v1--vlm_size__desk0003_base--42--198413f0d5ad",
+    "instructionKind": "Task instructions (English translation)",
+    "originalInstruction": {
+      "url": "data/source-instructions.json",
+      "id": "W1-w1_vlm_size-03",
+      "language": "zh-CN",
+      "sha256": "ddfeb7fea79f65eb967b3ec98dee4ac46e4cb17133b288206b0570226465fc22"
+    }
   },
   {
     "id": "W2-w2_3dsrbench-01",

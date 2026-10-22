@@ -47,6 +47,7 @@ python scripts/build_public_results.py
 # Exact-task overview and its task documentation.
 python scripts/build_overview_matrix.py
 # Searchable case atlas from the same ten-model case manifests.
+python scripts/build_english_case_instructions.py
 python scripts/build_case_atlas.py
 ```
 

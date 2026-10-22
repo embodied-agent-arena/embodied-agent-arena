@@ -3,12 +3,19 @@ const pub=path.resolve(__dirname,'../public');
 const context={document:{getElementById:()=>({})},fetch:async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(pub,url.split('?')[0]),'utf8'))})};
 vm.createContext(context);
 const source=fs.readFileSync(pub+'/case-studies.js','utf8').split("  const content = document.getElementById('study-dialog-content');")[0];
-vm.runInContext(source+'globalThis.checks={load,caseSlide,executionRecords,boxCases,lookup:id=>records.get(id)};})();',context);
+vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,executionRecords,boxCases,lookup:id=>records.get(id)};})();',context);
 (async()=>{
  const cs=await context.checks.load();let executions=0,staticCount=0;
  for(const c of cs){
   const html=context.checks.caseSlide(c,0,cs.length);
   assert(!html.includes('NaN'));assert(!html.includes('undefined'));
+  assert(!/\p{Script=Han}/u.test(html),`${c.id}: non-English gallery text`);
+  const instructions=context.checks.taskInstructions(c);
+  assert(!/\p{Script=Han}/u.test(instructions),`${c.id}: non-English instruction text`);
+  if(c.originalInstruction){
+   assert(instructions.includes('English translation'));
+   assert(instructions.includes('Download original evaluation prompts'));
+  }
   if(!c.predictions.length){
    executions++;assert.equal((html.match(/class="gallery-run /g)||[]).length,10,c.id);
    assert.equal(context.checks.executionRecords(c).length,10);

@@ -19,7 +19,7 @@
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
-    fetch('data/case-studies.json?v=toolbox-cameras-20261022').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
+    fetch('data/case-studies.json?v=english-20261022').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
     fetch('data/case-gallery.json?v=toolbox-cameras-20261022').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
     fetch('data/case-comparisons.json?v=toolbox-cameras-20261022').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media]) => {
@@ -157,6 +157,11 @@
     if(isOverlay(c)) return `<div class="gallery-visual-grid">${c.predictions.map((p,i)=>tile(resultTile(c,p,i,true))).join('')}</div><p class="gallery-evidence-note">Green: reference · Colored outline: prediction</p>`;
     return `<div class="gallery-comparison"><div>${inputMedia(c)}<div class="gallery-reference">${esc(referenceLabel(c))}</div></div><div class="gallery-model-grid">${c.predictions.map((p,i)=>tile(resultTile(c,p,i))).join('')}</div></div>`;
   }
+  function taskInstructions(c) {
+    if (!c.predictions.length) return '';
+    const original = c.originalInstruction;
+    return `<details class="gallery-method-note"><summary>${esc(c.instructionKind || 'Original instruction')}</summary><p class="study-original-instruction">${esc(c.question)}</p>${original ? `<a class="study-download" href="${esc(original.url)}" download>Download original evaluation prompts (JSON) ↓</a>` : ''}</details>`;
+  }
   const content = document.getElementById('study-dialog-content');
   async function renderModelDetail(c,index) {
     c=representation(c);
@@ -220,7 +225,7 @@
       const list = c.predictions.length ? c.predictions : executionRecords(c);
       selectedModel=modelIndex;
       const budget = Object.entries(c.predictions.length ? c.budgets||{} : {}).filter(([k,v]) => budgetNames[k] && v!=null).map(([k,v])=>`<li><span>${budgetNames[k]}</span><strong>${num(v)}</strong></li>`).join('');
-      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2>${c.shortTask.trim().toLowerCase()!==c.title.trim().toLowerCase()?`<p class="study-question">${esc(c.shortTask)}</p>`:''}<button class="gallery-back" data-back-comparison ${modelIndex===null?'hidden':''}>← All ten models</button><div class="gallery-model-switcher" role="group" aria-label="Select model" ${modelIndex===null?'hidden':''}>${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-comparison-overview" ${modelIndex===null?'':'hidden'}><p class="gallery-comparison-hint">Select a model to inspect its prediction or execution.</p>${comparisonOverview(c)}</div><div id="gallery-model-detail" ${modelIndex===null?'hidden':''}></div>${isOverlay(c) && c.representation !== 'polygon' ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}${c.predictions.length ? `<details class="gallery-method-note"><summary>${esc(c.instructionKind || 'Original instruction')}</summary><p class="study-original-instruction">${esc(c.question)}</p></details>` : ''}${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<details class="gallery-method-note"><summary>Evaluation details</summary><p class="study-protocol">${esc(c.protocolNote)}</p></details><a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
+      content.innerHTML=`<p class="eyebrow">${esc(c.domain)} · ${esc(c.benchmark)}</p><h2 id="study-dialog-title">${esc(c.title)}</h2>${c.shortTask.trim().toLowerCase()!==c.title.trim().toLowerCase()?`<p class="study-question">${esc(c.shortTask)}</p>`:''}<button class="gallery-back" data-back-comparison ${modelIndex===null?'hidden':''}>← All ten models</button><div class="gallery-model-switcher" role="group" aria-label="Select model" ${modelIndex===null?'hidden':''}>${list.map((p,i)=>`<button data-detail-model="${i}" aria-pressed="${i===selectedModel}">${esc(short(p.model))}</button>`).join('')}</div><div id="gallery-comparison-overview" ${modelIndex===null?'':'hidden'}><p class="gallery-comparison-hint">Select a model to inspect its prediction or execution.</p>${comparisonOverview(c)}</div><div id="gallery-model-detail" ${modelIndex===null?'hidden':''}></div>${isOverlay(c) && c.representation !== 'polygon' ? '<p class="gallery-evidence-note">Dashed mint: reference. Solid colour: prediction. Overlays preserve the original image coordinates.</p>' : ''}${c.comparisonFigure ? `<a class="study-download" href="${esc(c.comparisonFigure)}" target="_blank" rel="noopener">Open Full Comparison Figure ↗</a>` : ''}${budget ? `<h3>${c.predictions.length ? '' : 'Opus 5.5 · '}Recorded Budget Ceilings</h3><ul class="study-budget-list">${budget}</ul>` : ''}${taskInstructions(c)}${c.options?.length ? `<ul>${c.options.map(v=>`<li>${esc(compact(v))}</li>`).join('')}</ul>` : ''}<details class="gallery-method-note"><summary>Evaluation details</summary><p class="study-protocol">${esc(c.protocolNote)}</p></details><a class="study-download" id="study-json-download">Download Case Record (JSON) ↓</a>`;
       if(selectedModel!==null) renderModelDetail(c,selectedModel);
       dialog.scrollTop=0;
       if (currentUrl) URL.revokeObjectURL(currentUrl);

@@ -78,6 +78,8 @@ Manipulation suites such as [LIBERO](https://arxiv.org/abs/2306.03310), [RoboTwi
 - **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. All ten models are selectable on each of 46 tasks, including Gemini&nbsp;4&nbsp;Argon’s recorded actions and feedback.
 - **[Results & Reproduction](docs/RESULTS.md)** — Main and source-level CSVs, task outcomes, analysis scripts, and editable manuscript figures.
 
+All pages and documentation are in English. Translated task instructions link to their original evaluation prompts. [Language and source records](docs/LANGUAGE.md).
+
 <a id="news"></a>
 
 ## 📰 News
