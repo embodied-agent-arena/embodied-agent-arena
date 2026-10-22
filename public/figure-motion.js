@@ -1,10 +1,10 @@
-// Scroll-only enhancement: the original figure, values and layout remain the source of truth.
+// Viewport motion enhances native data marks without moving axes or changing values.
 (() => {
   'use strict';
   if (!window.IntersectionObserver || !Element.prototype.animate) return;
 
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const selector = '.figure-button, .report-figure img, .ranking, .benchmark-scroll, .table-scroll, .report-table-scroll, .report-matrix-scroll, .exec-chart';
+  const selector = '.figure-button, .report-figure img, .ranking, .benchmark-scroll, .table-scroll, .report-table-scroll, .report-matrix-scroll, .exec-chart, .dc-plot, .dc-heat-scroll';
   const states = new Map();
   let printing = false;
   const permitted = () => !reduced.matches && !document.hidden && !printing;
@@ -25,6 +25,23 @@
   function enter(state) {
     if (!permitted() || state.el.contains(document.activeElement)) return;
     const el = state.el;
+    const nativeBars = el.querySelectorAll('.dc-bar');
+    const cells = el.querySelectorAll('.dc-heat-cell');
+    const points = el.querySelectorAll('.dc-point');
+    if (nativeBars.length || cells.length || points.length) {
+      nativeBars.forEach((bar, i) => animate(state, bar,
+        [{transform: 'scaleY(0)'}, {transform: 'scaleY(1)'}],
+        {id: 'arena-native-bar-grow', delay: Math.min(i, 10) * 35, fill: 'backwards'}));
+      cells.forEach((cell, i) => animate(state, cell,
+        [{clipPath: 'inset(100% 0 0 0)'}, {clipPath: 'inset(0% 0 0 0)'}],
+        {id: 'arena-heat-reveal', duration: 650, delay: Math.min(i % 11, 10) * 35, fill: 'backwards'}));
+      points.forEach((point, i) => animate(state, point,
+        [{opacity: 0}, {opacity: 1}],
+        {id: 'arena-point-reveal', duration: 600, delay: i * 35, fill: 'backwards'}));
+      el.querySelectorAll('.dc-whisker, .dc-comparison').forEach(mark => animate(state, mark,
+        [{opacity: 0}, {opacity: 1}], {id: 'arena-uncertainty-reveal', duration: 300, delay: 550, fill: 'backwards'}));
+      return;
+    }
     const bars = el.querySelectorAll('.ranking-fill, .report-bar');
     if (bars.length) {
       // Keep axes, exact values and model labels readable while bars unfold.

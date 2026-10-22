@@ -1,0 +1,4351 @@
+{
+  "version": "20261022",
+  "models": [
+    "astra",
+    "sol",
+    "fable",
+    "qwen",
+    "gemini",
+    "qwen35-397b",
+    "qwen35-27b",
+    "opus55",
+    "deepseek",
+    "gemini4argon"
+  ],
+  "heatRamp": [
+    "#F4F4D7",
+    "#F3F2D4",
+    "#F3F1D1",
+    "#F2EFCF",
+    "#F1EECC",
+    "#F0ECC9",
+    "#F0EBC6",
+    "#EFE9C3",
+    "#EEE8C0",
+    "#EDE6BE",
+    "#EDE5BB",
+    "#ECE3B8",
+    "#EBE2B5",
+    "#EAE0B2",
+    "#EADEB0",
+    "#E9DDAD",
+    "#E8DBAA",
+    "#E7D9A8",
+    "#E6D7A5",
+    "#E6D6A2",
+    "#E5D4A0",
+    "#E4D29D",
+    "#E3D19A",
+    "#E2CF98",
+    "#E2CD95",
+    "#E1CB92",
+    "#E0C990",
+    "#E0C68D",
+    "#DFC48A",
+    "#DEC187",
+    "#DEBF85",
+    "#DDBC82",
+    "#DCBA7F",
+    "#DCB77C",
+    "#DBB57A",
+    "#DAB277",
+    "#DAB074",
+    "#D9AD71",
+    "#D9AB70",
+    "#D8A96F",
+    "#D8A76E",
+    "#D7A56D",
+    "#D7A36C",
+    "#D7A16B",
+    "#D69F6A",
+    "#D69D69",
+    "#D59B68",
+    "#D59967",
+    "#D59766",
+    "#D49565",
+    "#D49264",
+    "#D48F63",
+    "#D38C62",
+    "#D38861",
+    "#D38560",
+    "#D2825E",
+    "#D27E5D",
+    "#D27B5C",
+    "#D1785B",
+    "#D17559",
+    "#D17158",
+    "#D06E57",
+    "#D06B56",
+    "#CE6754",
+    "#CC6453",
+    "#CA6152",
+    "#C85E50",
+    "#C65B4F",
+    "#C5584E",
+    "#C3554C",
+    "#C1514B",
+    "#BF4E49",
+    "#BD4B48",
+    "#BB4847",
+    "#B94545",
+    "#B74245",
+    "#B44044",
+    "#B13E43",
+    "#AE3C43",
+    "#AB3942",
+    "#A83742",
+    "#A53541",
+    "#A23241",
+    "#A03040",
+    "#9D2E3F",
+    "#9A2C3F",
+    "#97293E",
+    "#94283E",
+    "#90273D",
+    "#8C263C",
+    "#88243A",
+    "#842339",
+    "#802238",
+    "#7C2137",
+    "#782036",
+    "#751F35",
+    "#711E34",
+    "#6D1D33",
+    "#691C32",
+    "#651B31"
+  ],
+  "progress": [
+    {
+      "model": "opus55",
+      "rounds": [
+        {
+          "round": 1,
+          "score": 0.0
+        },
+        {
+          "round": 2,
+          "score": 0.0
+        },
+        {
+          "round": 3,
+          "score": 0.3
+        },
+        {
+          "round": 4,
+          "score": 0.7
+        },
+        {
+          "round": 5,
+          "score": 0.7
+        },
+        {
+          "round": 6,
+          "score": 0.7
+        },
+        {
+          "round": 7,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "model": "gemini4argon",
+      "rounds": [
+        {
+          "round": 1,
+          "score": 0.0
+        },
+        {
+          "round": 2,
+          "score": 0.0
+        },
+        {
+          "round": 3,
+          "score": 0.3
+        },
+        {
+          "round": 4,
+          "score": 0.3
+        },
+        {
+          "round": 5,
+          "score": 0.5
+        },
+        {
+          "round": 6,
+          "score": 0.5
+        },
+        {
+          "round": 7,
+          "score": 0.9
+        },
+        {
+          "round": 8,
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "rounds": [
+        {
+          "round": 1,
+          "score": 0.0
+        },
+        {
+          "round": 2,
+          "score": 0.3
+        },
+        {
+          "round": 3,
+          "score": 0.3
+        },
+        {
+          "round": 4,
+          "score": 0.4
+        },
+        {
+          "round": 5,
+          "score": 0.5
+        },
+        {
+          "round": 6,
+          "score": 0.5
+        },
+        {
+          "round": 7,
+          "score": 0.5
+        },
+        {
+          "round": 8,
+          "score": 0.5
+        }
+      ]
+    }
+  ],
+  "geometry": {
+    "reductions": [
+      {
+        "label": "Focal length",
+        "definition": "Estimate focal length from a GeoProbe image; error is mean absolute percentage error.",
+        "value": 44.33910674981826,
+        "peer": "sol",
+        "astra": 6.211846421807359,
+        "peerMean": 11.160163014069266,
+        "cases": 12
+      },
+      {
+        "label": "Depth",
+        "definition": "Estimate depth in GeoProbe; error is mean absolute relative error, expressed as a percentage.",
+        "value": 26.853974077876032,
+        "peer": "fable",
+        "astra": 10.35265792857327,
+        "peerMean": 14.153411341301556,
+        "cases": 12
+      },
+      {
+        "label": "Object size",
+        "definition": "Estimate physical object size; error is mean absolute percentage error.",
+        "value": 16.991839406033204,
+        "peer": "fable",
+        "astra": 6.336330517850518,
+        "peerMean": 7.633382636732051,
+        "cases": 12
+      },
+      {
+        "label": "Ref. height",
+        "definition": "Estimate target height using a reference object of known size; error is mean absolute percentage error.",
+        "value": 65.98553693684237,
+        "peer": "sol",
+        "astra": 0.30597484157855553,
+        "peerMean": 0.8995433531037231,
+        "cases": 12
+      },
+      {
+        "label": "Height ratio",
+        "definition": "Estimate the target-to-reference height ratio; error is mean absolute percentage error.",
+        "value": 66.62779751332153,
+        "peer": "sol",
+        "astra": 0.31566346736625334,
+        "peerMean": 0.945887426795579,
+        "cases": 12
+      },
+      {
+        "label": "InFlux focal",
+        "definition": "Estimate focal length on InFlux photographs; error is mean absolute percentage error.",
+        "value": -10.9604256835389,
+        "peer": "sol",
+        "astra": 53.02390326053333,
+        "peerMean": 47.78631925201733,
+        "cases": 30
+      }
+    ],
+    "motion": [
+      {
+        "label": "Fixed camera",
+        "definition": "Object displacement with a fixed camera in Blender.",
+        "results": {
+          "astra": {
+            "mean": 0.24000028714831592,
+            "sd": 0.10919520779202069,
+            "runs": 5
+          },
+          "sol": {
+            "mean": 0.4666668446337156,
+            "sd": 0.26744656221978236,
+            "runs": 5
+          },
+          "deepseek": {
+            "mean": 1.516666919093153,
+            "sd": 0.10458242309997884,
+            "runs": 5
+          },
+          "opus55": {
+            "mean": 0.4783337052131942,
+            "sd": 0.20220999933538156,
+            "runs": 5
+          }
+        }
+      },
+      {
+        "label": "Small shift",
+        "definition": "Object displacement with a small camera-view change in Blender.",
+        "results": {
+          "astra": {
+            "mean": 0.5666668367611116,
+            "sd": 0.15756377432423574,
+            "runs": 5
+          },
+          "sol": {
+            "mean": 0.6783336499034013,
+            "sd": 0.15190904710946018,
+            "runs": 5
+          },
+          "deepseek": {
+            "mean": 2.021666841269213,
+            "sd": 0.3457379693209372,
+            "runs": 5
+          },
+          "opus55": {
+            "mean": 1.2083337317051992,
+            "sd": 0.917140032114621,
+            "runs": 5
+          }
+        }
+      },
+      {
+        "label": "Large shift",
+        "definition": "Object displacement with a large camera-view change in Blender.",
+        "results": {
+          "astra": {
+            "mean": 1.125000250212785,
+            "sd": 0.14433748938120905,
+            "runs": 5
+          },
+          "sol": {
+            "mean": 1.9583334711614158,
+            "sd": 0.294627578966013,
+            "runs": 5
+          },
+          "deepseek": {
+            "mean": 2.4916668081102467,
+            "sd": 0.9078171508547251,
+            "runs": 5
+          },
+          "opus55": {
+            "mean": 1.9916668746369257,
+            "sd": 0.5670342345081618,
+            "runs": 5
+          }
+        }
+      },
+      {
+        "label": "Photographs",
+        "definition": "Object displacement between real photographs.",
+        "results": {
+          "astra": {
+            "mean": 0.05,
+            "sd": 0.06846531968814576,
+            "runs": 5
+          },
+          "sol": {
+            "mean": 0.41500000000000004,
+            "sd": 0.236246693098549,
+            "runs": 5
+          },
+          "deepseek": {
+            "mean": 1.25,
+            "sd": 0.23385358667337133,
+            "runs": 5
+          },
+          "opus55": {
+            "mean": 0.6,
+            "sd": 0.3468609231377902,
+            "runs": 5
+          }
+        }
+      }
+    ],
+    "trace": [
+      {
+        "model": "astra",
+        "rmse": 0.382,
+        "success": 33.9,
+        "cases": 56
+      },
+      {
+        "model": "sol",
+        "rmse": 0.463,
+        "success": 21.4,
+        "cases": 56
+      },
+      {
+        "model": "fable",
+        "rmse": 0.435,
+        "success": 25.0,
+        "cases": 56
+      },
+      {
+        "model": "qwen",
+        "rmse": 0.469,
+        "success": 17.9,
+        "cases": 56
+      },
+      {
+        "model": "gemini",
+        "rmse": 0.426,
+        "success": 37.5,
+        "cases": 56
+      },
+      {
+        "model": "qwen35-397b",
+        "rmse": 0.629,
+        "success": 8.9,
+        "cases": 56
+      },
+      {
+        "model": "qwen35-27b",
+        "rmse": 0.682,
+        "success": 7.1,
+        "cases": 56
+      },
+      {
+        "model": "opus55",
+        "rmse": 0.683,
+        "success": 8.9,
+        "cases": 56
+      },
+      {
+        "model": "deepseek",
+        "rmse": 0.47,
+        "success": 14.3,
+        "cases": 56
+      },
+      {
+        "model": "gemini4argon",
+        "rmse": 0.31,
+        "success": 42.9,
+        "cases": 56
+      }
+    ]
+  },
+  "spatial": {
+    "models": [
+      "astra",
+      "sol",
+      "fable",
+      "qwen",
+      "gemini",
+      "qwen35-397b",
+      "qwen35-27b",
+      "opus55",
+      "deepseek",
+      "gemini4argon"
+    ],
+    "panels": {
+      "a": [
+        {
+          "source": "w2_bop_ask",
+          "category": "spatial_reasoning / relative_position",
+          "label": "Left/right",
+          "cases": 12,
+          "results": {
+            "astra": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                12,
+                11,
+                12,
+                11,
+                11
+              ],
+              "mean": 95.0,
+              "sd": 4.5643546458763815,
+              "run_means": [
+                100.0,
+                91.66666666666667,
+                100.0,
+                91.66666666666667,
+                91.66666666666667
+              ]
+            },
+            "sol": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                10,
+                9,
+                10,
+                9,
+                10
+              ],
+              "mean": 80.0,
+              "sd": 4.5643546458763815,
+              "run_means": [
+                83.33333333333333,
+                75.0,
+                83.33333333333333,
+                75.0,
+                83.33333333333333
+              ]
+            },
+            "fable": {
+              "cases": 12,
+              "runs": 3,
+              "counts": [
+                10,
+                10,
+                11
+              ],
+              "mean": 86.11111111111111,
+              "sd": 4.811252243246886,
+              "run_means": [
+                83.33333333333333,
+                83.33333333333333,
+                91.66666666666667
+              ]
+            },
+            "qwen": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                11,
+                11,
+                10,
+                10,
+                10
+              ],
+              "mean": 86.66666666666667,
+              "sd": 4.5643546458763895,
+              "run_means": [
+                91.66666666666667,
+                91.66666666666667,
+                83.33333333333333,
+                83.33333333333333,
+                83.33333333333333
+              ]
+            },
+            "gemini": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                12,
+                12,
+                11,
+                12,
+                11
+              ],
+              "mean": 96.66666666666667,
+              "sd": 4.5643546458763815,
+              "run_means": [
+                100.0,
+                100.0,
+                91.66666666666667,
+                100.0,
+                91.66666666666667
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                11,
+                11,
+                11,
+                11,
+                11
+              ],
+              "mean": 91.66666666666667,
+              "sd": 0.0,
+              "run_means": [
+                91.66666666666667,
+                91.66666666666667,
+                91.66666666666667,
+                91.66666666666667,
+                91.66666666666667
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                11,
+                12,
+                12,
+                11,
+                11
+              ],
+              "mean": 95.0,
+              "sd": 4.5643546458763815,
+              "run_means": [
+                91.66666666666667,
+                100.0,
+                100.0,
+                91.66666666666667,
+                91.66666666666667
+              ]
+            },
+            "opus55": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                12,
+                11,
+                11,
+                11,
+                11
+              ],
+              "mean": 93.33333333333334,
+              "sd": 3.726779962499647,
+              "run_means": [
+                100.0,
+                91.66666666666667,
+                91.66666666666667,
+                91.66666666666667,
+                91.66666666666667
+              ]
+            },
+            "deepseek": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                10,
+                12,
+                10,
+                11,
+                11
+              ],
+              "mean": 90.0,
+              "sd": 6.972166887783966,
+              "run_means": [
+                83.33333333333333,
+                100.0,
+                83.33333333333333,
+                91.66666666666667,
+                91.66666666666667
+              ]
+            },
+            "gemini4argon": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                12,
+                12,
+                12,
+                12,
+                12
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "title": "Image-relative left/right",
+          "definition": "Identify whether one object lies to the left or right of another in the supplied view.",
+          "exampleQuestion": "Is the cooking spoon with green heads to the right of the gray whisk? Your response should be a single word: yes or no."
+        },
+        {
+          "source": "w2_mindcube",
+          "category": "object-relation",
+          "label": "Relations",
+          "cases": 12,
+          "results": {
+            "astra": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                12,
+                12,
+                11,
+                12,
+                11
+              ],
+              "mean": 96.66666666666667,
+              "sd": 4.5643546458763815,
+              "run_means": [
+                100.0,
+                100.0,
+                91.66666666666667,
+                100.0,
+                91.66666666666667
+              ]
+            },
+            "sol": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                5,
+                8,
+                8,
+                8,
+                9
+              ],
+              "mean": 63.333333333333336,
+              "sd": 12.638125740085918,
+              "run_means": [
+                41.666666666666664,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                75.0
+              ]
+            },
+            "fable": {
+              "cases": 12,
+              "runs": 3,
+              "counts": [
+                12,
+                10,
+                11
+              ],
+              "mean": 91.66666666666667,
+              "sd": 8.333333333333336,
+              "run_means": [
+                100.0,
+                83.33333333333333,
+                91.66666666666667
+              ]
+            },
+            "qwen": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                10,
+                11,
+                10,
+                10,
+                10
+              ],
+              "mean": 85.0,
+              "sd": 3.726779962499654,
+              "run_means": [
+                83.33333333333333,
+                91.66666666666667,
+                83.33333333333333,
+                83.33333333333333,
+                83.33333333333333
+              ]
+            },
+            "gemini": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                10,
+                12,
+                11,
+                12,
+                12
+              ],
+              "mean": 95.0,
+              "sd": 7.4535599249993005,
+              "run_means": [
+                83.33333333333333,
+                100.0,
+                91.66666666666667,
+                100.0,
+                100.0
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                4,
+                4,
+                5,
+                3,
+                3
+              ],
+              "mean": 31.666666666666668,
+              "sd": 6.972166887783962,
+              "run_means": [
+                33.333333333333336,
+                33.333333333333336,
+                41.666666666666664,
+                25.0,
+                25.0
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                4,
+                4,
+                5,
+                4,
+                4
+              ],
+              "mean": 35.0,
+              "sd": 3.7267799624996476,
+              "run_means": [
+                33.333333333333336,
+                33.333333333333336,
+                41.666666666666664,
+                33.333333333333336,
+                33.333333333333336
+              ]
+            },
+            "opus55": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                6,
+                12,
+                11,
+                11,
+                12
+              ],
+              "mean": 86.66666666666667,
+              "sd": 20.91650066335189,
+              "run_means": [
+                50.0,
+                100.0,
+                91.66666666666667,
+                91.66666666666667,
+                100.0
+              ]
+            },
+            "deepseek": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                5,
+                4,
+                6,
+                7,
+                5
+              ],
+              "mean": 45.0,
+              "sd": 9.50146187582615,
+              "run_means": [
+                41.666666666666664,
+                33.333333333333336,
+                50.0,
+                58.333333333333336,
+                41.666666666666664
+              ]
+            },
+            "gemini4argon": {
+              "cases": 12,
+              "runs": 5,
+              "counts": [
+                12,
+                11,
+                12,
+                12,
+                12
+              ],
+              "mean": 98.33333333333333,
+              "sd": 3.726779962499647,
+              "run_means": [
+                100.0,
+                91.66666666666667,
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "title": "Object relations",
+          "definition": "Infer the spatial relation between objects across the supplied MindCube views.",
+          "exampleQuestion": "Based on these four images (image 1, 2, 3, and 4) showing the green ball from different viewpoints (front, left, back, and right), with each camera aligned with room walls and partially capturing the surroundings: From the viewpoint presented in image 1, what is to the left of the green ball? A. Wall B. Cardboard-covered sliding door C. Window D. Smoking machine"
+        },
+        {
+          "source": "w2_mindcube",
+          "category": "camera-motion",
+          "label": "Shift",
+          "cases": 13,
+          "results": {
+            "astra": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                8,
+                11,
+                10,
+                11,
+                11
+              ],
+              "mean": 78.46153846153845,
+              "sd": 10.029542161850227,
+              "run_means": [
+                61.53846153846154,
+                84.61538461538461,
+                76.92307692307692,
+                84.61538461538461,
+                84.61538461538461
+              ]
+            },
+            "sol": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                7,
+                8,
+                8,
+                9,
+                10
+              ],
+              "mean": 64.61538461538461,
+              "sd": 8.770580193070291,
+              "run_means": [
+                53.84615384615385,
+                61.53846153846154,
+                61.53846153846154,
+                69.23076923076923,
+                76.92307692307692
+              ]
+            },
+            "fable": {
+              "cases": 13,
+              "runs": 3,
+              "counts": [
+                8,
+                5,
+                9
+              ],
+              "mean": 56.41025641025641,
+              "sd": 16.012815380508712,
+              "run_means": [
+                61.53846153846154,
+                38.46153846153846,
+                69.23076923076923
+              ]
+            },
+            "qwen": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                12,
+                12,
+                12,
+                12,
+                10
+              ],
+              "mean": 89.23076923076923,
+              "sd": 6.880209161537816,
+              "run_means": [
+                92.3076923076923,
+                92.3076923076923,
+                92.3076923076923,
+                92.3076923076923,
+                76.92307692307692
+              ]
+            },
+            "gemini": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                12,
+                10,
+                11,
+                11,
+                11
+              ],
+              "mean": 84.61538461538461,
+              "sd": 5.439282932204212,
+              "run_means": [
+                92.3076923076923,
+                76.92307692307692,
+                84.61538461538461,
+                84.61538461538461,
+                84.61538461538461
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                3,
+                2,
+                4,
+                2,
+                2
+              ],
+              "mean": 20.0,
+              "sd": 6.880209161537814,
+              "run_means": [
+                23.076923076923077,
+                15.384615384615385,
+                30.76923076923077,
+                15.384615384615385,
+                15.384615384615385
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                2,
+                6,
+                5,
+                4,
+                6
+              ],
+              "mean": 35.38461538461539,
+              "sd": 12.871692715908853,
+              "run_means": [
+                15.384615384615385,
+                46.15384615384615,
+                38.46153846153846,
+                30.76923076923077,
+                46.15384615384615
+              ]
+            },
+            "opus55": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                11,
+                10,
+                9,
+                10,
+                11
+              ],
+              "mean": 78.46153846153845,
+              "sd": 6.4358463579544285,
+              "run_means": [
+                84.61538461538461,
+                76.92307692307692,
+                69.23076923076923,
+                76.92307692307692,
+                84.61538461538461
+              ]
+            },
+            "deepseek": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                4,
+                6,
+                3,
+                4,
+                1
+              ],
+              "mean": 27.692307692307693,
+              "sd": 13.973770865065346,
+              "run_means": [
+                30.76923076923077,
+                46.15384615384615,
+                23.076923076923077,
+                30.76923076923077,
+                7.6923076923076925
+              ]
+            },
+            "gemini4argon": {
+              "cases": 13,
+              "runs": 5,
+              "counts": [
+                12,
+                12,
+                12,
+                13,
+                12
+              ],
+              "mean": 93.84615384615384,
+              "sd": 3.440104580768908,
+              "run_means": [
+                92.3076923076923,
+                92.3076923076923,
+                92.3076923076923,
+                100.0,
+                92.3076923076923
+              ]
+            }
+          },
+          "title": "Camera shift",
+          "definition": "Infer how the camera moves between views of the same scene.",
+          "exampleQuestion": "Based on these two views showing the same scene: in which direction did I move from the first view to the second view? A. Directly left B. Diagonally forward and left C. Directly right D. Diagonally forward and right"
+        },
+        {
+          "source": "w2_3dsrbench",
+          "category": "orientation_on_the_left",
+          "label": "Actor",
+          "cases": 7,
+          "results": {
+            "astra": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                6,
+                5,
+                5,
+                5,
+                5
+              ],
+              "mean": 74.28571428571429,
+              "sd": 6.388765649999395,
+              "run_means": [
+                85.71428571428571,
+                71.42857142857143,
+                71.42857142857143,
+                71.42857142857143,
+                71.42857142857143
+              ]
+            },
+            "sol": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                5,
+                6,
+                4,
+                4,
+                6
+              ],
+              "mean": 71.42857142857143,
+              "sd": 14.285714285714281,
+              "run_means": [
+                71.42857142857143,
+                85.71428571428571,
+                57.142857142857146,
+                57.142857142857146,
+                85.71428571428571
+              ]
+            },
+            "fable": {
+              "cases": 7,
+              "runs": 3,
+              "counts": [
+                4,
+                4,
+                5
+              ],
+              "mean": 61.904761904761905,
+              "sd": 8.247860988423225,
+              "run_means": [
+                57.142857142857146,
+                57.142857142857146,
+                71.42857142857143
+              ]
+            },
+            "qwen": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                5,
+                5,
+                5,
+                4,
+                6
+              ],
+              "mean": 71.42857142857143,
+              "sd": 10.101525445522105,
+              "run_means": [
+                71.42857142857143,
+                71.42857142857143,
+                71.42857142857143,
+                57.142857142857146,
+                85.71428571428571
+              ]
+            },
+            "gemini": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                5,
+                4,
+                4,
+                5,
+                5
+              ],
+              "mean": 65.71428571428572,
+              "sd": 7.824607964359515,
+              "run_means": [
+                71.42857142857143,
+                57.142857142857146,
+                57.142857142857146,
+                71.42857142857143,
+                71.42857142857143
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                3,
+                2,
+                3,
+                4,
+                4
+              ],
+              "mean": 45.714285714285715,
+              "sd": 11.952286093343938,
+              "run_means": [
+                42.857142857142854,
+                28.571428571428573,
+                42.857142857142854,
+                57.142857142857146,
+                57.142857142857146
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "mean": 5.714285714285714,
+              "sd": 7.824607964359517,
+              "run_means": [
+                14.285714285714286,
+                0.0,
+                0.0,
+                0.0,
+                14.285714285714286
+              ]
+            },
+            "opus55": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                3,
+                5,
+                6,
+                5,
+                6
+              ],
+              "mean": 71.42857142857143,
+              "sd": 17.496355305594125,
+              "run_means": [
+                42.857142857142854,
+                71.42857142857143,
+                85.71428571428571,
+                71.42857142857143,
+                85.71428571428571
+              ]
+            },
+            "deepseek": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                5,
+                6,
+                5,
+                5,
+                5
+              ],
+              "mean": 74.28571428571429,
+              "sd": 6.388765649999395,
+              "run_means": [
+                71.42857142857143,
+                85.71428571428571,
+                71.42857142857143,
+                71.42857142857143,
+                71.42857142857143
+              ]
+            },
+            "gemini4argon": {
+              "cases": 7,
+              "runs": 5,
+              "counts": [
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "title": "Actor-relative left/right",
+          "definition": "Judge left and right from the depicted person’s own orientation, rather than the image frame.",
+          "exampleQuestion": "Consider the real-world 3D locations and orientations of the objects. If I stand at the man's position facing where it is facing, is the skateboard on the left or right of me?"
+        },
+        {
+          "source": "w2_3dsrbench",
+          "category": "multi_object_viewpoint_towards_object",
+          "label": "Facing",
+          "cases": 6,
+          "results": {
+            "astra": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                3,
+                4,
+                4
+              ],
+              "mean": 56.66666666666667,
+              "sd": 9.128709291752772,
+              "run_means": [
+                50.0,
+                50.0,
+                50.0,
+                66.66666666666667,
+                66.66666666666667
+              ]
+            },
+            "sol": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                4,
+                4,
+                2
+              ],
+              "mean": 53.333333333333336,
+              "sd": 13.944333775567927,
+              "run_means": [
+                50.0,
+                50.0,
+                66.66666666666667,
+                66.66666666666667,
+                33.333333333333336
+              ]
+            },
+            "fable": {
+              "cases": 6,
+              "runs": 3,
+              "counts": [
+                5,
+                4,
+                4
+              ],
+              "mean": 72.22222222222223,
+              "sd": 9.622504486493757,
+              "run_means": [
+                83.33333333333333,
+                66.66666666666667,
+                66.66666666666667
+              ]
+            },
+            "qwen": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                4,
+                4,
+                4,
+                4,
+                4
+              ],
+              "mean": 66.66666666666667,
+              "sd": 0.0,
+              "run_means": [
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667
+              ]
+            },
+            "gemini": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                4,
+                4,
+                4,
+                4,
+                4
+              ],
+              "mean": 66.66666666666667,
+              "sd": 0.0,
+              "run_means": [
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                3,
+                1,
+                1,
+                3,
+                3
+              ],
+              "mean": 36.666666666666664,
+              "sd": 18.257418583505537,
+              "run_means": [
+                50.0,
+                16.666666666666668,
+                16.666666666666668,
+                50.0,
+                50.0
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                1,
+                1,
+                2,
+                1,
+                2
+              ],
+              "mean": 23.333333333333336,
+              "sd": 9.128709291752768,
+              "run_means": [
+                16.666666666666668,
+                16.666666666666668,
+                33.333333333333336,
+                16.666666666666668,
+                33.333333333333336
+              ]
+            },
+            "opus55": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                2,
+                5,
+                5,
+                5,
+                5
+              ],
+              "mean": 73.33333333333333,
+              "sd": 22.360679774997894,
+              "run_means": [
+                33.333333333333336,
+                83.33333333333333,
+                83.33333333333333,
+                83.33333333333333,
+                83.33333333333333
+              ]
+            },
+            "deepseek": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                4,
+                3,
+                5,
+                3,
+                2
+              ],
+              "mean": 56.666666666666664,
+              "sd": 19.002923751652297,
+              "run_means": [
+                66.66666666666667,
+                50.0,
+                83.33333333333333,
+                50.0,
+                33.333333333333336
+              ]
+            },
+            "gemini4argon": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                4,
+                6,
+                5,
+                5,
+                6
+              ],
+              "mean": 86.66666666666667,
+              "sd": 13.944333775567925,
+              "run_means": [
+                66.66666666666667,
+                100.0,
+                83.33333333333333,
+                83.33333333333333,
+                100.0
+              ]
+            }
+          },
+          "title": "Object-facing side",
+          "definition": "Identify which side of an object—front, back, left, or right—faces another specified object.",
+          "exampleQuestion": "Consider the real-world 3D locations and orientations of the objects. Which side of the person on bicycle is facing the \"Santa Cruz County Bank\" sign?"
+        },
+        {
+          "source": "w2_vsi_bench",
+          "category": "object_rel_direction_hard",
+          "label": "Hard",
+          "cases": 4,
+          "results": {
+            "astra": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                2,
+                2,
+                2,
+                2,
+                1
+              ],
+              "mean": 45.0,
+              "sd": 11.180339887498949,
+              "run_means": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                25.0
+              ]
+            },
+            "sol": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                0,
+                1,
+                1,
+                3,
+                1
+              ],
+              "mean": 30.0,
+              "sd": 27.386127875258307,
+              "run_means": [
+                0.0,
+                25.0,
+                25.0,
+                75.0,
+                25.0
+              ]
+            },
+            "fable": {
+              "cases": 4,
+              "runs": 3,
+              "counts": [
+                3,
+                0,
+                0
+              ],
+              "mean": 25.0,
+              "sd": 43.30127018922193,
+              "run_means": [
+                75.0,
+                0.0,
+                0.0
+              ]
+            },
+            "qwen": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                4,
+                3,
+                1,
+                3,
+                2
+              ],
+              "mean": 65.0,
+              "sd": 28.50438562747845,
+              "run_means": [
+                100.0,
+                75.0,
+                25.0,
+                75.0,
+                50.0
+              ]
+            },
+            "gemini": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                3,
+                1,
+                2
+              ],
+              "mean": 60.0,
+              "sd": 22.360679774997898,
+              "run_means": [
+                75.0,
+                75.0,
+                75.0,
+                25.0,
+                50.0
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                2,
+                0,
+                0,
+                1,
+                3
+              ],
+              "mean": 30.0,
+              "sd": 32.59601202601324,
+              "run_means": [
+                50.0,
+                0.0,
+                0.0,
+                25.0,
+                75.0
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              "mean": 5.0,
+              "sd": 11.180339887498949,
+              "run_means": [
+                0.0,
+                0.0,
+                25.0,
+                0.0,
+                0.0
+              ]
+            },
+            "opus55": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                2,
+                2,
+                1,
+                2,
+                1
+              ],
+              "mean": 40.0,
+              "sd": 13.693063937629153,
+              "run_means": [
+                50.0,
+                50.0,
+                25.0,
+                50.0,
+                25.0
+              ]
+            },
+            "deepseek": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "mean": 0.0,
+              "sd": 0.0,
+              "run_means": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "gemini4argon": {
+              "cases": 4,
+              "runs": 5,
+              "counts": [
+                2,
+                3,
+                1,
+                0,
+                0
+              ],
+              "mean": 30.0,
+              "sd": 32.59601202601324,
+              "run_means": [
+                50.0,
+                75.0,
+                25.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "title": "Four-way video directions",
+          "definition": "From a video, imagine standing beside one object and facing a second. Locate a third object in the front-left, front-right, back-left, or back-right quadrant.",
+          "exampleQuestion": "If I am standing by the tv and facing the stove, is the refrigerator to my front-left, front-right, back-left, or back-right?\nThe directions refer to the quadrants of a Cartesian plane (if I am standing at the origin and facing along the positive y-axis)."
+        }
+      ],
+      "b": [
+        {
+          "source": "w2_bop_ask",
+          "category": "depth_relative / closer",
+          "label": "Near",
+          "cases": 5,
+          "results": {
+            "astra": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                5,
+                5,
+                5,
+                4,
+                5
+              ],
+              "mean": 96.0,
+              "sd": 8.94427190999916,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                80.0,
+                100.0
+              ]
+            },
+            "sol": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                5,
+                4,
+                5,
+                5,
+                5
+              ],
+              "mean": 96.0,
+              "sd": 8.94427190999916,
+              "run_means": [
+                100.0,
+                80.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "fable": {
+              "cases": 5,
+              "runs": 3,
+              "counts": [
+                4,
+                5,
+                4
+              ],
+              "mean": 86.66666666666667,
+              "sd": 11.547005383792516,
+              "run_means": [
+                80.0,
+                100.0,
+                80.0
+              ]
+            },
+            "qwen": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "gemini": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                5,
+                5,
+                5,
+                4,
+                5
+              ],
+              "mean": 96.0,
+              "sd": 8.94427190999916,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                80.0,
+                100.0
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                4,
+                4,
+                4,
+                3,
+                5
+              ],
+              "mean": 80.0,
+              "sd": 14.142135623730951,
+              "run_means": [
+                80.0,
+                80.0,
+                80.0,
+                60.0,
+                100.0
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                4,
+                5,
+                4,
+                4,
+                4
+              ],
+              "mean": 84.0,
+              "sd": 8.94427190999916,
+              "run_means": [
+                80.0,
+                100.0,
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "opus55": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                5,
+                5,
+                5,
+                5,
+                5
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "deepseek": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                3,
+                4,
+                5,
+                5,
+                4
+              ],
+              "mean": 84.0,
+              "sd": 16.73320053068151,
+              "run_means": [
+                60.0,
+                80.0,
+                100.0,
+                100.0,
+                80.0
+              ]
+            },
+            "gemini4argon": {
+              "cases": 5,
+              "runs": 5,
+              "counts": [
+                5,
+                5,
+                5,
+                4,
+                4
+              ],
+              "mean": 92.0,
+              "sd": 10.954451150103322,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                80.0,
+                80.0
+              ]
+            }
+          },
+          "title": "Closer depth",
+          "definition": "Choose the object that is closer to the camera in BOP-ASK.",
+          "exampleQuestion": "Is the cooking spoon with green heads closer to the camera than the whisk with a black handle and yellow wires? Your response should be a single word: yes or no."
+        },
+        {
+          "source": "w2_bop_ask",
+          "category": "depth_relative / farther",
+          "label": "Far",
+          "cases": 3,
+          "results": {
+            "astra": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "sol": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "fable": {
+              "cases": 3,
+              "runs": 3,
+              "counts": [
+                3,
+                3,
+                3
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "qwen": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "gemini": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "mean": 66.66666666666667,
+              "sd": 0.0,
+              "run_means": [
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                1,
+                1,
+                1,
+                2,
+                1
+              ],
+              "mean": 40.0,
+              "sd": 14.907119849998598,
+              "run_means": [
+                33.333333333333336,
+                33.333333333333336,
+                33.333333333333336,
+                66.66666666666667,
+                33.333333333333336
+              ]
+            },
+            "opus55": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                2,
+                3,
+                3,
+                3,
+                3
+              ],
+              "mean": 93.33333333333333,
+              "sd": 14.907119849998596,
+              "run_means": [
+                66.66666666666667,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "deepseek": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                2,
+                3,
+                3,
+                2,
+                3
+              ],
+              "mean": 86.66666666666667,
+              "sd": 18.257418583505537,
+              "run_means": [
+                66.66666666666667,
+                100.0,
+                100.0,
+                66.66666666666667,
+                100.0
+              ]
+            },
+            "gemini4argon": {
+              "cases": 3,
+              "runs": 5,
+              "counts": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "title": "Farther depth",
+          "definition": "Choose the object that is farther from the camera in BOP-ASK.",
+          "exampleQuestion": "Is the teal colored cooking spoon farther from the camera than the turquoise colored rounded colander? Your response should be a single word: yes or no."
+        },
+        {
+          "source": "w2_3dsrbench",
+          "category": "location_closer_to_camera",
+          "label": "Camera",
+          "cases": 10,
+          "results": {
+            "astra": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                8,
+                9,
+                10,
+                9,
+                9
+              ],
+              "mean": 90.0,
+              "sd": 7.0710678118654755,
+              "run_means": [
+                80.0,
+                90.0,
+                100.0,
+                90.0,
+                90.0
+              ]
+            },
+            "sol": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                10,
+                10,
+                9,
+                10,
+                10
+              ],
+              "mean": 98.0,
+              "sd": 4.47213595499958,
+              "run_means": [
+                100.0,
+                100.0,
+                90.0,
+                100.0,
+                100.0
+              ]
+            },
+            "fable": {
+              "cases": 10,
+              "runs": 3,
+              "counts": [
+                9,
+                9,
+                10
+              ],
+              "mean": 93.33333333333333,
+              "sd": 5.773502691896257,
+              "run_means": [
+                90.0,
+                90.0,
+                100.0
+              ]
+            },
+            "qwen": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                9,
+                9,
+                9,
+                9,
+                9
+              ],
+              "mean": 90.0,
+              "sd": 0.0,
+              "run_means": [
+                90.0,
+                90.0,
+                90.0,
+                90.0,
+                90.0
+              ]
+            },
+            "gemini": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                9,
+                9,
+                9,
+                9,
+                10
+              ],
+              "mean": 92.0,
+              "sd": 4.47213595499958,
+              "run_means": [
+                90.0,
+                90.0,
+                90.0,
+                90.0,
+                100.0
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                10,
+                10,
+                9,
+                10,
+                9
+              ],
+              "mean": 96.0,
+              "sd": 5.477225575051661,
+              "run_means": [
+                100.0,
+                100.0,
+                90.0,
+                100.0,
+                90.0
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "opus55": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                9,
+                10,
+                10,
+                10,
+                10
+              ],
+              "mean": 98.0,
+              "sd": 4.47213595499958,
+              "run_means": [
+                90.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "deepseek": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                10,
+                9,
+                10,
+                8,
+                9
+              ],
+              "mean": 92.0,
+              "sd": 8.366600265340756,
+              "run_means": [
+                100.0,
+                90.0,
+                100.0,
+                80.0,
+                90.0
+              ]
+            },
+            "gemini4argon": {
+              "cases": 10,
+              "runs": 5,
+              "counts": [
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "title": "Camera-relative depth",
+          "definition": "Compare objects by their distance to the camera in 3DSRBench.",
+          "exampleQuestion": "Consider the real-world 3D location of the objects. Which object is further away from the camera?"
+        },
+        {
+          "source": "w2_3dsrbench",
+          "category": "multi_object_closer_to",
+          "label": "Object",
+          "cases": 2,
+          "results": {
+            "astra": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                1,
+                2,
+                2,
+                1,
+                1
+              ],
+              "mean": 70.0,
+              "sd": 27.386127875258307,
+              "run_means": [
+                50.0,
+                100.0,
+                100.0,
+                50.0,
+                50.0
+              ]
+            },
+            "sol": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                2,
+                2,
+                2,
+                1,
+                1
+              ],
+              "mean": 80.0,
+              "sd": 27.386127875258307,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                50.0,
+                50.0
+              ]
+            },
+            "fable": {
+              "cases": 2,
+              "runs": 3,
+              "counts": [
+                2,
+                1,
+                2
+              ],
+              "mean": 83.33333333333333,
+              "sd": 28.867513459481287,
+              "run_means": [
+                100.0,
+                50.0,
+                100.0
+              ]
+            },
+            "qwen": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "gemini": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "mean": 50.0,
+              "sd": 0.0,
+              "run_means": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                1,
+                2,
+                2,
+                2,
+                1
+              ],
+              "mean": 80.0,
+              "sd": 27.386127875258307,
+              "run_means": [
+                50.0,
+                100.0,
+                100.0,
+                100.0,
+                50.0
+              ]
+            },
+            "opus55": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                1,
+                2,
+                0,
+                0,
+                2
+              ],
+              "mean": 50.0,
+              "sd": 50.0,
+              "run_means": [
+                50.0,
+                100.0,
+                0.0,
+                0.0,
+                100.0
+              ]
+            },
+            "deepseek": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "mean": 50.0,
+              "sd": 0.0,
+              "run_means": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
+              ]
+            },
+            "gemini4argon": {
+              "cases": 2,
+              "runs": 5,
+              "counts": [
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "mean": 100.0,
+              "sd": 0.0,
+              "run_means": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "title": "Inter-object proximity",
+          "definition": "Identify which object is closer to a specified reference object in 3DSRBench.",
+          "exampleQuestion": "Consider the real-world 3D locations of the objects. Which is closer to the tv, the wooden table or the orange chair?"
+        },
+        {
+          "source": "w2_vsi_bench",
+          "category": "object_rel_distance",
+          "label": "Relative",
+          "cases": 6,
+          "results": {
+            "astra": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                5,
+                3,
+                2,
+                3,
+                2
+              ],
+              "mean": 50.0,
+              "sd": 20.41241452319315,
+              "run_means": [
+                83.33333333333333,
+                50.0,
+                33.333333333333336,
+                50.0,
+                33.333333333333336
+              ]
+            },
+            "sol": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                6,
+                6,
+                3,
+                4,
+                4
+              ],
+              "mean": 76.66666666666667,
+              "sd": 22.360679774997894,
+              "run_means": [
+                100.0,
+                100.0,
+                50.0,
+                66.66666666666667,
+                66.66666666666667
+              ]
+            },
+            "fable": {
+              "cases": 6,
+              "runs": 3,
+              "counts": [
+                3,
+                2,
+                2
+              ],
+              "mean": 38.88888888888889,
+              "sd": 9.622504486493762,
+              "run_means": [
+                50.0,
+                33.333333333333336,
+                33.333333333333336
+              ]
+            },
+            "qwen": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                4,
+                5,
+                4,
+                5,
+                5
+              ],
+              "mean": 76.66666666666667,
+              "sd": 9.128709291752763,
+              "run_means": [
+                66.66666666666667,
+                83.33333333333333,
+                66.66666666666667,
+                83.33333333333333,
+                83.33333333333333
+              ]
+            },
+            "gemini": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                3,
+                4,
+                4,
+                2,
+                4
+              ],
+              "mean": 56.66666666666667,
+              "sd": 14.9071198499986,
+              "run_means": [
+                50.0,
+                66.66666666666667,
+                66.66666666666667,
+                33.333333333333336,
+                66.66666666666667
+              ]
+            },
+            "qwen35-397b": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                2,
+                4,
+                3,
+                4,
+                5
+              ],
+              "mean": 60.0,
+              "sd": 19.002923751652297,
+              "run_means": [
+                33.333333333333336,
+                66.66666666666667,
+                50.0,
+                66.66666666666667,
+                83.33333333333333
+              ]
+            },
+            "qwen35-27b": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                4,
+                3,
+                3,
+                2,
+                4
+              ],
+              "mean": 53.333333333333336,
+              "sd": 13.944333775567927,
+              "run_means": [
+                66.66666666666667,
+                50.0,
+                50.0,
+                33.333333333333336,
+                66.66666666666667
+              ]
+            },
+            "opus55": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                4,
+                4,
+                4,
+                4,
+                3
+              ],
+              "mean": 63.333333333333336,
+              "sd": 7.453559924999301,
+              "run_means": [
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                66.66666666666667,
+                50.0
+              ]
+            },
+            "deepseek": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                1,
+                3,
+                4,
+                4,
+                2
+              ],
+              "mean": 46.66666666666667,
+              "sd": 21.73067468400883,
+              "run_means": [
+                16.666666666666668,
+                50.0,
+                66.66666666666667,
+                66.66666666666667,
+                33.333333333333336
+              ]
+            },
+            "gemini4argon": {
+              "cases": 6,
+              "runs": 5,
+              "counts": [
+                3,
+                5,
+                3,
+                3,
+                3
+              ],
+              "mean": 56.666666666666664,
+              "sd": 14.907119849998596,
+              "run_means": [
+                50.0,
+                83.33333333333333,
+                50.0,
+                50.0,
+                50.0
+              ]
+            }
+          },
+          "title": "Relative distance",
+          "definition": "Choose the nearest object to a reference object in a video scene, measuring between their closest points.",
+          "exampleQuestion": "Measuring from the closest point of each object, which of these objects (chair, tv, sofa, stool) is the closest to the dishwasher?"
+        }
+      ]
+    },
+    "aggregation": "Equal-weight run mean; five runs except Fable (three). Invalid outputs count as unsuccessful on fixed task IDs.",
+    "inputs": {
+      "trial-provenance.csv": "dd9d199f7179be70537d41c69e09a3a4ab4f2fe820836ce09dc03560043910f0",
+      "all-results.json (Opus)": "537ed931bed64addfebedd38f7c6302ca26bc7abc6eb9cb22ce9874678cd567f",
+      "selected-results.json (DeepSeek)": "59b2807780dcdc1588e8828a4d68c5886218366bc91363b5ebeb2889dbfe54bd",
+      "selected-results.json (Gemini 4)": "d9dd24db6818786055ce3492cfda75bd75156eda8beaaab7d1c81cf811110be5",
+      "task-taxonomy.csv": "5da5f96045c16bf066520dea2783b08edb00a25ceef59b0a1180e36e16dbaec7"
+    },
+    "sources": {
+      "w2_3dsrbench": {
+        "astra": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            35,
+            37,
+            38,
+            36,
+            38
+          ],
+          "mean": 73.6,
+          "sd": 2.6076809620810595,
+          "run_means": [
+            70.0,
+            74.0,
+            76.0,
+            72.0,
+            76.0
+          ]
+        },
+        "sol": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            35,
+            37,
+            35,
+            36,
+            35
+          ],
+          "mean": 71.2,
+          "sd": 1.7888543819998317,
+          "run_means": [
+            70.0,
+            74.0,
+            70.0,
+            72.0,
+            70.0
+          ]
+        },
+        "fable": {
+          "cases": 50,
+          "runs": 3,
+          "counts": [
+            36,
+            35,
+            38
+          ],
+          "mean": 72.66666666666667,
+          "sd": 3.055050463303893,
+          "run_means": [
+            72.0,
+            70.0,
+            76.0
+          ]
+        },
+        "qwen": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            39,
+            35,
+            38,
+            35,
+            38
+          ],
+          "mean": 74.0,
+          "sd": 3.7416573867739413,
+          "run_means": [
+            78.0,
+            70.0,
+            76.0,
+            70.0,
+            76.0
+          ]
+        },
+        "gemini": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            35,
+            35,
+            34,
+            34,
+            37
+          ],
+          "mean": 70.0,
+          "sd": 2.449489742783178,
+          "run_means": [
+            70.0,
+            70.0,
+            68.0,
+            68.0,
+            74.0
+          ]
+        },
+        "qwen35-397b": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            33,
+            34,
+            33,
+            37,
+            36
+          ],
+          "mean": 69.2,
+          "sd": 3.6331804249169903,
+          "run_means": [
+            66.0,
+            68.0,
+            66.0,
+            74.0,
+            72.0
+          ]
+        },
+        "qwen35-27b": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            30,
+            27,
+            28,
+            29,
+            30
+          ],
+          "mean": 57.6,
+          "sd": 2.6076809620810595,
+          "run_means": [
+            60.0,
+            54.0,
+            56.0,
+            58.0,
+            60.0
+          ]
+        },
+        "opus55": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            30,
+            40,
+            40,
+            39,
+            43
+          ],
+          "mean": 76.8,
+          "sd": 9.85900603509299,
+          "run_means": [
+            60.0,
+            80.0,
+            80.0,
+            78.0,
+            86.0
+          ]
+        },
+        "deepseek": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            34,
+            33,
+            32,
+            25,
+            30
+          ],
+          "mean": 61.6,
+          "sd": 7.127411872482185,
+          "run_means": [
+            68.0,
+            66.0,
+            64.0,
+            50.0,
+            60.0
+          ]
+        },
+        "gemini4argon": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            43,
+            45,
+            44,
+            44,
+            44
+          ],
+          "mean": 88.0,
+          "sd": 1.4142135623730951,
+          "run_means": [
+            86.0,
+            90.0,
+            88.0,
+            88.0,
+            88.0
+          ]
+        }
+      },
+      "w2_bop_ask": {
+        "astra": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            20,
+            19,
+            20,
+            18,
+            19
+          ],
+          "mean": 96.0,
+          "sd": 4.183300132670378,
+          "run_means": [
+            100.0,
+            95.0,
+            100.0,
+            90.0,
+            95.0
+          ]
+        },
+        "sol": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            18,
+            16,
+            18,
+            17,
+            18
+          ],
+          "mean": 87.0,
+          "sd": 4.47213595499958,
+          "run_means": [
+            90.0,
+            80.0,
+            90.0,
+            85.0,
+            90.0
+          ]
+        },
+        "fable": {
+          "cases": 20,
+          "runs": 3,
+          "counts": [
+            17,
+            18,
+            18
+          ],
+          "mean": 88.33333333333333,
+          "sd": 2.8867513459481287,
+          "run_means": [
+            85.0,
+            90.0,
+            90.0
+          ]
+        },
+        "qwen": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            19,
+            19,
+            18,
+            18,
+            18
+          ],
+          "mean": 92.0,
+          "sd": 2.7386127875258306,
+          "run_means": [
+            95.0,
+            95.0,
+            90.0,
+            90.0,
+            90.0
+          ]
+        },
+        "gemini": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            20,
+            20,
+            19,
+            19,
+            19
+          ],
+          "mean": 97.0,
+          "sd": 2.7386127875258306,
+          "run_means": [
+            100.0,
+            100.0,
+            95.0,
+            95.0,
+            95.0
+          ]
+        },
+        "qwen35-397b": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            17,
+            17,
+            17,
+            16,
+            18
+          ],
+          "mean": 85.0,
+          "sd": 3.5355339059327378,
+          "run_means": [
+            85.0,
+            85.0,
+            85.0,
+            80.0,
+            90.0
+          ]
+        },
+        "qwen35-27b": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            16,
+            18,
+            17,
+            17,
+            16
+          ],
+          "mean": 84.0,
+          "sd": 4.183300132670378,
+          "run_means": [
+            80.0,
+            90.0,
+            85.0,
+            85.0,
+            80.0
+          ]
+        },
+        "opus55": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            19,
+            19,
+            19,
+            19,
+            19
+          ],
+          "mean": 95.0,
+          "sd": 0.0,
+          "run_means": [
+            95.0,
+            95.0,
+            95.0,
+            95.0,
+            95.0
+          ]
+        },
+        "deepseek": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            15,
+            19,
+            18,
+            18,
+            18
+          ],
+          "mean": 88.0,
+          "sd": 7.582875444051551,
+          "run_means": [
+            75.0,
+            95.0,
+            90.0,
+            90.0,
+            90.0
+          ]
+        },
+        "gemini4argon": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            20,
+            20,
+            20,
+            19,
+            19
+          ],
+          "mean": 98.0,
+          "sd": 2.7386127875258306,
+          "run_means": [
+            100.0,
+            100.0,
+            100.0,
+            95.0,
+            95.0
+          ]
+        }
+      },
+      "w2_mindcube": {
+        "astra": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            45,
+            46,
+            45,
+            46,
+            45
+          ],
+          "mean": 90.8,
+          "sd": 1.0954451150103321,
+          "run_means": [
+            90.0,
+            92.0,
+            90.0,
+            92.0,
+            90.0
+          ]
+        },
+        "sol": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            28,
+            36,
+            33,
+            36,
+            37
+          ],
+          "mean": 68.0,
+          "sd": 7.3484692283495345,
+          "run_means": [
+            56.0,
+            72.0,
+            66.0,
+            72.0,
+            74.0
+          ]
+        },
+        "fable": {
+          "cases": 50,
+          "runs": 3,
+          "counts": [
+            42,
+            35,
+            42
+          ],
+          "mean": 79.33333333333333,
+          "sd": 8.082903768654761,
+          "run_means": [
+            84.0,
+            70.0,
+            84.0
+          ]
+        },
+        "qwen": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            46,
+            46,
+            46,
+            46,
+            43
+          ],
+          "mean": 90.8,
+          "sd": 2.6832815729997477,
+          "run_means": [
+            92.0,
+            92.0,
+            92.0,
+            92.0,
+            86.0
+          ]
+        },
+        "gemini": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            43,
+            44,
+            45,
+            47,
+            44
+          ],
+          "mean": 89.2,
+          "sd": 3.0331501776206204,
+          "run_means": [
+            86.0,
+            88.0,
+            90.0,
+            94.0,
+            88.0
+          ]
+        },
+        "qwen35-397b": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            22,
+            21,
+            24,
+            24,
+            24
+          ],
+          "mean": 46.0,
+          "sd": 2.8284271247461903,
+          "run_means": [
+            44.0,
+            42.0,
+            48.0,
+            48.0,
+            48.0
+          ]
+        },
+        "qwen35-27b": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            23,
+            27,
+            23,
+            27,
+            26
+          ],
+          "mean": 50.4,
+          "sd": 4.09878030638384,
+          "run_means": [
+            46.0,
+            54.0,
+            46.0,
+            54.0,
+            52.0
+          ]
+        },
+        "opus55": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            37,
+            43,
+            44,
+            43,
+            46
+          ],
+          "mean": 85.2,
+          "sd": 6.723094525588644,
+          "run_means": [
+            74.0,
+            86.0,
+            88.0,
+            86.0,
+            92.0
+          ]
+        },
+        "deepseek": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            27,
+            28,
+            27,
+            30,
+            24
+          ],
+          "mean": 54.4,
+          "sd": 4.33589667773576,
+          "run_means": [
+            54.0,
+            56.0,
+            54.0,
+            60.0,
+            48.0
+          ]
+        },
+        "gemini4argon": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            47,
+            45,
+            47,
+            47,
+            47
+          ],
+          "mean": 93.2,
+          "sd": 1.7888543819998317,
+          "run_means": [
+            94.0,
+            90.0,
+            94.0,
+            94.0,
+            94.0
+          ]
+        }
+      },
+      "w2_mmsi_bench": {
+        "astra": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            14,
+            15,
+            17,
+            16,
+            15
+          ],
+          "mean": 77.0,
+          "sd": 5.70087712549569,
+          "run_means": [
+            70.0,
+            75.0,
+            85.0,
+            80.0,
+            75.0
+          ]
+        },
+        "sol": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            8,
+            13,
+            12,
+            9,
+            13
+          ],
+          "mean": 55.0,
+          "sd": 11.726039399558575,
+          "run_means": [
+            40.0,
+            65.0,
+            60.0,
+            45.0,
+            65.0
+          ]
+        },
+        "fable": {
+          "cases": 20,
+          "runs": 3,
+          "counts": [
+            15,
+            13,
+            12
+          ],
+          "mean": 66.66666666666667,
+          "sd": 7.637626158259733,
+          "run_means": [
+            75.0,
+            65.0,
+            60.0
+          ]
+        },
+        "qwen": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            11,
+            10,
+            10,
+            14,
+            10
+          ],
+          "mean": 55.0,
+          "sd": 8.660254037844387,
+          "run_means": [
+            55.0,
+            50.0,
+            50.0,
+            70.0,
+            50.0
+          ]
+        },
+        "gemini": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            11,
+            12,
+            8,
+            12,
+            13
+          ],
+          "mean": 56.0,
+          "sd": 9.617692030835672,
+          "run_means": [
+            55.0,
+            60.0,
+            40.0,
+            60.0,
+            65.0
+          ]
+        },
+        "qwen35-397b": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            9,
+            7,
+            8,
+            4,
+            7
+          ],
+          "mean": 35.0,
+          "sd": 9.354143466934854,
+          "run_means": [
+            45.0,
+            35.0,
+            40.0,
+            20.0,
+            35.0
+          ]
+        },
+        "qwen35-27b": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            6,
+            5,
+            8,
+            6,
+            4
+          ],
+          "mean": 29.0,
+          "sd": 7.416198487095663,
+          "run_means": [
+            30.0,
+            25.0,
+            40.0,
+            30.0,
+            20.0
+          ]
+        },
+        "opus55": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            9,
+            12,
+            13,
+            13,
+            12
+          ],
+          "mean": 59.0,
+          "sd": 8.215838362577491,
+          "run_means": [
+            45.0,
+            60.0,
+            65.0,
+            65.0,
+            60.0
+          ]
+        },
+        "deepseek": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            11,
+            9,
+            11,
+            12,
+            10
+          ],
+          "mean": 53.0,
+          "sd": 5.70087712549569,
+          "run_means": [
+            55.0,
+            45.0,
+            55.0,
+            60.0,
+            50.0
+          ]
+        },
+        "gemini4argon": {
+          "cases": 20,
+          "runs": 5,
+          "counts": [
+            13,
+            15,
+            14,
+            16,
+            14
+          ],
+          "mean": 72.0,
+          "sd": 5.70087712549569,
+          "run_means": [
+            65.0,
+            75.0,
+            70.0,
+            80.0,
+            70.0
+          ]
+        }
+      },
+      "w2_robospatial": {
+        "astra": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            18,
+            16,
+            17,
+            17,
+            17
+          ],
+          "mean": 56.666666666666664,
+          "sd": 2.3570226039551576,
+          "run_means": [
+            60.0,
+            53.333333333333336,
+            56.666666666666664,
+            56.666666666666664,
+            56.666666666666664
+          ]
+        },
+        "sol": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            16,
+            14,
+            18,
+            18,
+            15
+          ],
+          "mean": 54.0,
+          "sd": 5.96284793999944,
+          "run_means": [
+            53.333333333333336,
+            46.666666666666664,
+            60.0,
+            60.0,
+            50.0
+          ]
+        },
+        "fable": {
+          "cases": 30,
+          "runs": 3,
+          "counts": [
+            17,
+            18,
+            18
+          ],
+          "mean": 58.888888888888886,
+          "sd": 1.9245008972987538,
+          "run_means": [
+            56.666666666666664,
+            60.0,
+            60.0
+          ]
+        },
+        "qwen": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            16,
+            17,
+            19,
+            18,
+            18
+          ],
+          "mean": 58.666666666666664,
+          "sd": 3.80058475033046,
+          "run_means": [
+            53.333333333333336,
+            56.666666666666664,
+            63.333333333333336,
+            60.0,
+            60.0
+          ]
+        },
+        "gemini": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            15,
+            15,
+            14,
+            16,
+            16
+          ],
+          "mean": 50.666666666666664,
+          "sd": 2.7888667551135873,
+          "run_means": [
+            50.0,
+            50.0,
+            46.666666666666664,
+            53.333333333333336,
+            53.333333333333336
+          ]
+        },
+        "qwen35-397b": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            18,
+            17,
+            19,
+            18,
+            18
+          ],
+          "mean": 60.0,
+          "sd": 2.3570226039551603,
+          "run_means": [
+            60.0,
+            56.666666666666664,
+            63.333333333333336,
+            60.0,
+            60.0
+          ]
+        },
+        "qwen35-27b": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            20,
+            18,
+            17,
+            18,
+            19
+          ],
+          "mean": 61.333333333333336,
+          "sd": 3.800584750330463,
+          "run_means": [
+            66.66666666666667,
+            60.0,
+            56.666666666666664,
+            60.0,
+            63.333333333333336
+          ]
+        },
+        "opus55": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            16,
+            19,
+            19,
+            19,
+            19
+          ],
+          "mean": 61.333333333333336,
+          "sd": 4.47213595499958,
+          "run_means": [
+            53.333333333333336,
+            63.333333333333336,
+            63.333333333333336,
+            63.333333333333336,
+            63.333333333333336
+          ]
+        },
+        "deepseek": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            17,
+            17,
+            18,
+            16,
+            19
+          ],
+          "mean": 58.0,
+          "sd": 3.8005847503304606,
+          "run_means": [
+            56.666666666666664,
+            56.666666666666664,
+            60.0,
+            53.333333333333336,
+            63.333333333333336
+          ]
+        },
+        "gemini4argon": {
+          "cases": 30,
+          "runs": 5,
+          "counts": [
+            18,
+            17,
+            17,
+            16,
+            17
+          ],
+          "mean": 56.666666666666664,
+          "sd": 2.3570226039551576,
+          "run_means": [
+            60.0,
+            56.666666666666664,
+            56.666666666666664,
+            53.333333333333336,
+            56.666666666666664
+          ]
+        }
+      },
+      "w2_vsi_bench": {
+        "astra": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            22,
+            18,
+            19,
+            18,
+            17
+          ],
+          "mean": 37.6,
+          "sd": 3.8470768123342687,
+          "run_means": [
+            44.0,
+            36.0,
+            38.0,
+            36.0,
+            34.0
+          ]
+        },
+        "sol": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            19,
+            18,
+            19,
+            21,
+            20
+          ],
+          "mean": 38.8,
+          "sd": 2.280350850198276,
+          "run_means": [
+            38.0,
+            36.0,
+            38.0,
+            42.0,
+            40.0
+          ]
+        },
+        "fable": {
+          "cases": 50,
+          "runs": 3,
+          "counts": [
+            20,
+            8,
+            7
+          ],
+          "mean": 23.333333333333332,
+          "sd": 14.46835627614047,
+          "run_means": [
+            40.0,
+            16.0,
+            14.0
+          ]
+        },
+        "qwen": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            22,
+            24,
+            18,
+            24,
+            23
+          ],
+          "mean": 44.4,
+          "sd": 4.979959839195493,
+          "run_means": [
+            44.0,
+            48.0,
+            36.0,
+            48.0,
+            46.0
+          ]
+        },
+        "gemini": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            20,
+            20,
+            19,
+            17,
+            16
+          ],
+          "mean": 36.8,
+          "sd": 3.6331804249169903,
+          "run_means": [
+            40.0,
+            40.0,
+            38.0,
+            34.0,
+            32.0
+          ]
+        },
+        "qwen35-397b": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            12,
+            9,
+            11,
+            14,
+            13
+          ],
+          "mean": 23.6,
+          "sd": 3.847076812334269,
+          "run_means": [
+            24.0,
+            18.0,
+            22.0,
+            28.0,
+            26.0
+          ]
+        },
+        "qwen35-27b": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            10,
+            10,
+            12,
+            12,
+            9
+          ],
+          "mean": 21.2,
+          "sd": 2.6832815729997477,
+          "run_means": [
+            20.0,
+            20.0,
+            24.0,
+            24.0,
+            18.0
+          ]
+        },
+        "opus55": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            18,
+            17,
+            18,
+            19,
+            19
+          ],
+          "mean": 36.4,
+          "sd": 1.6733200530681511,
+          "run_means": [
+            36.0,
+            34.0,
+            36.0,
+            38.0,
+            38.0
+          ]
+        },
+        "deepseek": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            9,
+            11,
+            11,
+            10,
+            9
+          ],
+          "mean": 20.0,
+          "sd": 2.0,
+          "run_means": [
+            18.0,
+            22.0,
+            22.0,
+            20.0,
+            18.0
+          ]
+        },
+        "gemini4argon": {
+          "cases": 50,
+          "runs": 5,
+          "counts": [
+            15,
+            17,
+            17,
+            14,
+            17
+          ],
+          "mean": 32.0,
+          "sd": 2.8284271247461903,
+          "run_means": [
+            30.0,
+            34.0,
+            34.0,
+            28.0,
+            34.0
+          ]
+        }
+      }
+    },
+    "sourceInfo": [
+      {
+        "key": "w2_3dsrbench",
+        "label": "3DSRBench",
+        "definition": "Spatial relations and imagined viewpoints in static images."
+      },
+      {
+        "key": "w2_bop_ask",
+        "label": "BOP-ASK",
+        "definition": "Object-pose, position, and depth questions."
+      },
+      {
+        "key": "w2_mindcube",
+        "label": "MindCube",
+        "definition": "Spatial inference across multiple views of a scene."
+      },
+      {
+        "key": "w2_mmsi_bench",
+        "label": "MMSI-Bench",
+        "definition": "Multi-image spatial reasoning."
+      },
+      {
+        "key": "w2_robospatial",
+        "label": "RoboSpatial-Home",
+        "definition": "Spatial reasoning in home scenes."
+      },
+      {
+        "key": "w2_vsi_bench",
+        "label": "VSI-Bench",
+        "definition": "Video-based spatial reasoning."
+      }
+    ]
+  },
+  "affordance": {
+    "regions": [
+      {
+        "model": "astra",
+        "box": 28.600071430205322,
+        "sd": 0.9516676630433288,
+        "runs": 5,
+        "polygon": 37.9,
+        "cases": 70
+      },
+      {
+        "model": "sol",
+        "box": 26.35601453850207,
+        "sd": 1.0490106231589178,
+        "runs": 5,
+        "polygon": 32.5,
+        "cases": 70
+      },
+      {
+        "model": "fable",
+        "box": 28.36685977406172,
+        "sd": 1.294262539818116,
+        "runs": 3,
+        "polygon": 32.800000000000004,
+        "cases": 70
+      },
+      {
+        "model": "qwen",
+        "box": 27.17762802767651,
+        "sd": 1.6649142185392585,
+        "runs": 5,
+        "polygon": 30.7,
+        "cases": 70
+      },
+      {
+        "model": "gemini",
+        "box": 25.11787675295281,
+        "sd": 8.081554569374314,
+        "runs": 5,
+        "polygon": 29.099999999999998,
+        "cases": 70
+      },
+      {
+        "model": "qwen35-397b",
+        "box": 11.64273981327534,
+        "sd": 1.443734761873512,
+        "runs": 5,
+        "polygon": 9.2,
+        "cases": 70
+      },
+      {
+        "model": "qwen35-27b",
+        "box": 1.2729761268164614,
+        "sd": 0.6361032398339558,
+        "runs": 5,
+        "polygon": 5.1,
+        "cases": 70
+      },
+      {
+        "model": "opus55",
+        "box": 31.078247051038705,
+        "sd": 2.016278243064904,
+        "runs": 5,
+        "polygon": 39.7,
+        "cases": 70
+      },
+      {
+        "model": "deepseek",
+        "box": 21.663883640999547,
+        "sd": 1.0981184064461735,
+        "runs": 5,
+        "polygon": 24.9,
+        "cases": 70
+      },
+      {
+        "model": "gemini4argon",
+        "box": 35.59407377409448,
+        "sd": 0.9393846907985335,
+        "runs": 5,
+        "polygon": 44.1,
+        "cases": 70
+      }
+    ],
+    "sources": [
+      {
+        "label": "UMD",
+        "value": 73.07589899769333,
+        "definition": "Functional regions on tools: localize the part that supports the requested action.",
+        "model": "gemini4argon"
+      },
+      {
+        "label": "RAGNet",
+        "value": 14.031445249877814,
+        "definition": "Action-conditioned regions in interaction scenes.",
+        "model": "gemini4argon"
+      },
+      {
+        "label": "ReasonAff",
+        "value": 30.70613820547487,
+        "definition": "Reason about action-conditioned target regions in interaction scenes.",
+        "model": "gemini4argon"
+      }
+    ]
+  },
+  "planning": {
+    "total": 157,
+    "models": [
+      {
+        "model": "astra",
+        "count": 126,
+        "value": 80.2547770700637
+      },
+      {
+        "model": "sol",
+        "count": 70,
+        "value": 44.5859872611465
+      },
+      {
+        "model": "fable",
+        "count": 100,
+        "value": 63.69426751592356
+      },
+      {
+        "model": "qwen",
+        "count": 56,
+        "value": 35.6687898089172
+      },
+      {
+        "model": "gemini",
+        "count": 76,
+        "value": 48.40764331210191
+      },
+      {
+        "model": "qwen35-397b",
+        "count": 28,
+        "value": 17.8343949044586
+      },
+      {
+        "model": "qwen35-27b",
+        "count": 30,
+        "value": 19.10828025477707
+      },
+      {
+        "model": "opus55",
+        "count": 76,
+        "value": 48.40764331210191
+      },
+      {
+        "model": "deepseek",
+        "count": 49,
+        "value": 31.210191082802545
+      },
+      {
+        "model": "gemini4argon",
+        "count": 110,
+        "value": 70.06369426751591
+      }
+    ],
+    "histogram": [
+      15,
+      19,
+      20,
+      5,
+      15,
+      17,
+      21,
+      14,
+      9,
+      14,
+      8
+    ]
+  },
+  "manipulation": {
+    "scope": "All ten CALVIN sequences for all ten models: 100 adopted single-run episodes. Prefixes and full-sequence success reproduce the retained CALVIN results.",
+    "definition": "An execution-error episode contains a failed code-execution round, excluding transport failures, timeouts, and budget guards. Resumed execution requires a later execution_ok=true round. Recovered completion requires a later native-success round.",
+    "models": [
+      {
+        "model": "astra",
+        "n": 10,
+        "mean_prefix": 3.1,
+        "prefix_observed": 10,
+        "reached": [
+          8,
+          8,
+          7,
+          5,
+          3
+        ],
+        "error_episodes": 3,
+        "resumed": 3,
+        "completed_after_error": 1,
+        "completed": 3
+      },
+      {
+        "model": "sol",
+        "n": 10,
+        "mean_prefix": 1.4,
+        "prefix_observed": 10,
+        "reached": [
+          8,
+          4,
+          1,
+          1,
+          0
+        ],
+        "error_episodes": 3,
+        "resumed": 3,
+        "completed_after_error": 0,
+        "completed": 0
+      },
+      {
+        "model": "fable",
+        "n": 10,
+        "mean_prefix": 0.9,
+        "prefix_observed": 10,
+        "reached": [
+          7,
+          2,
+          0,
+          0,
+          0
+        ],
+        "error_episodes": 9,
+        "resumed": 9,
+        "completed_after_error": 0,
+        "completed": 0
+      },
+      {
+        "model": "qwen",
+        "n": 10,
+        "mean_prefix": 0.8,
+        "prefix_observed": 9,
+        "reached": [
+          5,
+          1,
+          1,
+          1,
+          0
+        ],
+        "error_episodes": 10,
+        "resumed": 9,
+        "completed_after_error": 0,
+        "completed": 0
+      },
+      {
+        "model": "gemini",
+        "n": 10,
+        "mean_prefix": 1.8,
+        "prefix_observed": 10,
+        "reached": [
+          8,
+          5,
+          4,
+          1,
+          0
+        ],
+        "error_episodes": 8,
+        "resumed": 8,
+        "completed_after_error": 0,
+        "completed": 0
+      },
+      {
+        "model": "qwen35-397b",
+        "n": 10,
+        "mean_prefix": 0,
+        "prefix_observed": 5,
+        "reached": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "error_episodes": 2,
+        "resumed": 2,
+        "completed_after_error": 0,
+        "completed": 0
+      },
+      {
+        "model": "qwen35-27b",
+        "n": 10,
+        "mean_prefix": 0.1,
+        "prefix_observed": 10,
+        "reached": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "error_episodes": 7,
+        "resumed": 6,
+        "completed_after_error": 0,
+        "completed": 0
+      },
+      {
+        "model": "opus55",
+        "n": 10,
+        "mean_prefix": 2.4,
+        "prefix_observed": 10,
+        "reached": [
+          8,
+          7,
+          4,
+          4,
+          1
+        ],
+        "error_episodes": 9,
+        "resumed": 9,
+        "completed_after_error": 1,
+        "completed": 1
+      },
+      {
+        "model": "deepseek",
+        "n": 10,
+        "mean_prefix": 1.4,
+        "prefix_observed": 10,
+        "reached": [
+          5,
+          4,
+          3,
+          1,
+          1
+        ],
+        "error_episodes": 10,
+        "resumed": 10,
+        "completed_after_error": 1,
+        "completed": 1
+      },
+      {
+        "model": "gemini4argon",
+        "n": 10,
+        "mean_prefix": 3.3,
+        "prefix_observed": 10,
+        "reached": [
+          10,
+          9,
+          5,
+          5,
+          4
+        ],
+        "error_episodes": 4,
+        "resumed": 3,
+        "completed_after_error": 0,
+        "completed": 4
+      }
+    ],
+    "total": {
+      "n": 100,
+      "error_episodes": 65,
+      "resumed": 62,
+      "completed_after_error": 3,
+      "completed": 9
+    }
+  },
+  "provenance": {
+    "work/discoverability-20261005/repository/public/data/spatial-recovery/spatial-summary.json": "e1b0c73eb8facbbfff842a45012951e5527a96ffdaac246036586428134777f8",
+    "work/discoverability-20261005/repository/public/data/spatial-recovery/calvin-summary.json": "a29d36173e23abd79244b69b2214a833c9f3c8eed3ca6205f9ffc4502c94b267",
+    "work/discoverability-20261005/repository/public/data/report/planning-outcomes.json": "3ff185d197e7ab3ee1b86b97230aa7fc722db331a361678eb320b4c5791833a7",
+    "work/discoverability-20261005/repository/public/data/report/metrics.json": "9d3ac341153f1d77dfc4463bb27b03913bd64c629b3fec8482e3c581d4361bac",
+    "output/geometry-deep-dive/geometry-data.json": "626ddd9f415e63b0bb8f86bb5dc6f0b422110a2bc3e430b4bd226c792e9979bb",
+    "work/figure-audit-20261020/motion-data.json": "dcc0e7d8f9f3b15ac9b570171177b221e6298a0356cee7755e2ba59f3df61dad",
+    "work/gemini4argon-20261021/derived.json": "92549610cc224552acaf76dc11bcde098e8fb6873f726386cb9f26b4a6305284",
+    "work/discoverability-20261005/repository/public/assets/analysis/figure5-spatial.drawio": "b05662e188c184a41f8dcd54385fe11846e52feccd99dcee32068e021c2469f1",
+    "sources/materials-20260920/W2/w2-error-taxonomy-20260918/snapshot.json": "78481eb9936e70b2679f12ce31f92ef4a8f1354eebb18e624f462c0584967d64",
+    "work/deepseek-update-20261019/source/sections/table_profile_full.tex": "90989aeb246a62a8b7a0018488f702f62d238f97d39e1aa477d1378a38a78150",
+    "output/run-statistics/run-statistics.json": "7e5944c211945c56678d78f261ab682b777128301ec9f322c7b1414e6140c965",
+    "work/discoverability-20261005/repository/public/data/execution/complete-index.json": "2ef9b0deee791f44f0c261cbb4108483331dc1be7bd43f633eadf07d67022ad2",
+    "work/discoverability-20261005/repository/public/data/execution/W3-discoveryworld-opus55-01.json": "4e02407e2cb0683ef4ee62254c261212656dbaee78903e8d3392ebbb9988675e",
+    "work/discoverability-20261005/repository/public/data/case-records/record-argon-016986939ab1f398.json": "efcba29a0d7373ebb378835039313fd450758496f69ae36ef0d9bab3a1e361ee",
+    "work/discoverability-20261005/repository/public/data/execution/W3-discoveryworld-deepseek-01.json": "0f130d699e2450d9facc46a1c564615f0b95c7f4b99e68647c867c59b0deea24"
+  }
+}

@@ -70,5 +70,18 @@ assert(observed.has(next)); assert(!observed.has(ranking));
 visit(next, 1); assert.equal(total(next.children[0]), 1, 'replacement metric chart animates');
 const focus = new Event('focusin'); Object.defineProperty(focus, 'target', {value: next});
 doc.dispatchEvent(focus); assert(next.children[0].calls[0].cancelled);
+const vertical = new Element('.dc-plot', [new Element('.dc-bar'), new Element('.dc-whisker')]);
+const heatmap = new Element('.dc-heat-scroll', [new Element('.dc-heat-cell')]);
+const scatter = new Element('.dc-plot', [new Element('.dc-point')]);
+mutate([{addedNodes: [vertical, heatmap, scatter]}]);
+for (const plot of [vertical, heatmap, scatter]) {
+  visit(plot, 1); assert.equal(total(plot), 0, 'axes and labels remain stationary');
+  assert.equal(total(plot.children[0]), 1);
+  visit(plot, 0); visit(plot, 1); assert.equal(total(plot.children[0]), 2);
+}
+assert.equal(vertical.children[0].calls[1].keyframes[0].transform, 'scaleY(0)');
+assert.equal(heatmap.children[0].calls[1].keyframes[0].clipPath, 'inset(100% 0 0 0)');
+reduced.matches = true; reduced.dispatchEvent(new Event('change'));
+for (const plot of [vertical, heatmap, scatter]) assert(plot.children[0].calls[1].cancelled);
 vm.runInNewContext(source, {window: {}, Element}); // No animation API: original page remains usable.
 console.log('Figure motion: viewport replay, stable scores/layout, dynamic tabs, reduced motion, focus, print and cleanup passed.');
