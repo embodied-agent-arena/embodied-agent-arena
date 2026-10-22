@@ -94,7 +94,7 @@
 .figure-insight strong {font-weight:700}
 .figure-method {font-size:16px;line-height:1.65;color:#43555d;margin-top:12px}
 @media(max-width:760px) {.figure-insight {font-size:18px}.figure-reading {margin-bottom:18px}}
-.completion-section {border-top:1px solid var(--line);padding-block:48px}
+.completion-section.section {border-top:1px solid var(--line);padding-block:48px}
 .completion-section h2,.evaluation-section h2 {font-size:clamp(28px,3.3vw,42px);line-height:1.25}
 .completion-section>.section-deck {max-width:80ch;margin-bottom:26px}
 .completion-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
