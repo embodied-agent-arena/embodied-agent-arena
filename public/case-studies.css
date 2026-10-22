@@ -275,3 +275,8 @@
  .gallery-all-models .gallery-run-media{aspect-ratio:4/3}
  .gallery-run-controls{flex-wrap:wrap}
 }
+
+/* Recording cameras are distinct from the shared task identity. */
+.gallery-detail-film{position:relative}
+.gallery-camera-label{position:absolute;top:8px;left:8px;z-index:1;background:rgba(255,255,255,.94);border-radius:5px;padding:5px 8px;font-size:13px;line-height:1.25;color:#203b35;white-space:nowrap}
+.gallery-camera-note{font-size:16px;line-height:1.45;margin:12px 0;color:var(--ink)}

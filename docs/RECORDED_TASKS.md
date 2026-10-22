@@ -32,3 +32,5 @@ The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent
 10. **Gemini&nbsp;4&nbsp;Argon** — 11 scene previews; 11 task results.
 
 The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.
+
+The toolbox task uses the same configuration, seed and scene revision for all ten models. Eight previews use the robot head camera; DeepSeek-1017 and Gemini 4 Argon use a separate external recording camera, labeled in the page. [Camera and task audit](../public/data/toolbox-camera-audit.json).

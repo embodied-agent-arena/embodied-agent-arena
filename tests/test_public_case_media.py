@@ -8,6 +8,30 @@ PUB=Path(__file__).resolve().parents[1]/'public'
 def read(path): return json.loads((PUB/path).read_text())
 
 class CaseMediaTests(unittest.TestCase):
+    def test_toolbox_camera_provenance(self):
+        data=read('data/case-comparisons.json'); audit=read('data/toolbox-camera-audit.json')
+        group=next(g for g in data['groups'] if g['id']==audit['groupId'])
+        self.assertEqual(len(audit['entries']),10)
+        external=set()
+        for e in audit['entries']:
+            r=data['runs'][e['runId']]; d=read(r['detailUrl'])
+            self.assertEqual(r['nativeIdentity'],audit['nativeIdentity'])
+            self.assertEqual(r['taskId'],group['taskId'])
+            self.assertEqual(e['reportSha256'],r['sourceReportSha256'])
+            self.assertEqual(r['sourceReportSha256'],r['mediaReportSha256'])
+            self.assertEqual(e['video'],r['video'])
+            self.assertEqual(hashlib.sha256((PUB/r['video']).read_bytes()).hexdigest(),e['videoSha256'])
+            for key in ['video','poster','cameraView','cameraLabel','cameraSource']:
+                self.assertEqual(r[key],d[key])
+            if r['cameraView']=='external':
+                external.add(r['modelKey']);self.assertEqual(r['cameraSource'],'hq.capx.external')
+            else:self.assertIn(':zed_link:Camera:0.rgb',r['cameraSource'])
+            if r.get('observationPreview'):
+                img=r['observationPreview']
+                self.assertEqual(img['reportSha256'],r['sourceReportSha256'])
+                self.assertEqual(hashlib.sha256((PUB/img['image']).read_bytes()).hexdigest(),img['sha256'])
+        self.assertEqual(external,{'deepseek','gemini4argon'})
+
     def test_every_task_has_verified_context(self):
         data=read('data/case-comparisons.json')
         self.assertEqual(len(data['groups']),109)

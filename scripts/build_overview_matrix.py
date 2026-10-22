@@ -90,6 +90,7 @@ def build():
                 "outcome": r["outcome"], "status": status, "sourceVideo": video,
                 "sourceAnimation": animation, "poster": poster, "demoMedia": demo, "previewVideo": preview_video,
                 "mediaKind": r["mediaKind"],
+                **({"cameraView": r["cameraView"], "cameraLabel": r["cameraLabel"]} if r.get("cameraView") else {}),
                 "mediaReportSha256": r["mediaReportSha256"] if media else None,
                 "mediaSha256": hashlib.sha256((PUB/media).read_bytes()).hexdigest() if media else None,
                 "sceneContext": g.get('sceneContext') if not preview else None,
@@ -119,6 +120,8 @@ def build():
                 badge = "Demo · Not scored" if demo else status
                 if demo or kind == "Saved observations":
                     visual += f'<span class="overview-kind">{"Same-task demo" if demo else "Observed frames"}</span>'
+                if r.get("cameraView") == "external":
+                    visual += '<span class="overview-kind">External camera</span>'
                 visual += f'<span class="overview-media-status">{badge} ↗</span>'
             rendered.append(f'<td><button type="button" {attrs}>{visual}</button></td>')
         rendered.append("</tr>")
@@ -177,6 +180,7 @@ def build():
         model_name = h(data['models'][i]).replace('-', '&#8209;').replace(' ', '&nbsp;')
         doc.append(f"{i+1}. **{model_name}** — {n} scene previews; {len(columns)} task results.")
     doc += ["", "The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.", ""]
+    doc += ["The toolbox task uses the same configuration, seed and scene revision for all ten models. Eight previews use the robot head camera; DeepSeek-1017 and Gemini 4 Argon use a separate external recording camera, labeled in the page. [Camera and task audit](../public/data/toolbox-camera-audit.json).", ""]
     (ROOT / "docs/RECORDED_TASKS.md").write_text("\n".join(doc))
     app = PUB / "app.js"
     js = app.read_text()

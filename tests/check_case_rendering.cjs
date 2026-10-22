@@ -16,6 +16,10 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,executionRecords,boxCa
   }else {staticCount++;assert.equal((html.match(/class="gallery-model /g)||[]).length,10,c.id);}
  }
  const original=JSON.parse(fs.readFileSync(pub+'/data/case-studies.json'));
+ const toolbox=cs.find(c=>c.id==='showcase-capx_behavior1k');
+ const toolboxHTML=context.checks.caseSlide(toolbox,0,cs.length);
+ assert.equal((toolboxHTML.match(/class="gallery-camera-label"/g)||[]).length,2);
+ assert(toolboxHTML.includes('Same task and seed.'));
  for(const c of original.filter(c=>!c.predictions.length))assert.equal(context.checks.lookup(c.id).taskId,c.sample);
  assert.throws(()=>context.checks.executionRecords({runIds:[],taskId:'wrong'}));
  console.log(`Rendered ${executions} execution tasks + ${staticCount} fixed-input tasks: exactly ten model cells each. All old links resolve to their exact task.`);
