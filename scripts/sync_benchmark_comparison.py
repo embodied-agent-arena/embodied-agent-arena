@@ -48,8 +48,8 @@ def render():
     for name, scale, coverage in manuscript_rows():
         cls = ' class="benchmark-own"' if name == 'Embodied Agent Arena' else ''
         row = f'<tr{cls}><th scope="row"><a href="{LINKS[name]}">{escape(name)}</a></th><td data-scale="{escape(scale)}">{escape(scale) if scale != "NR" else "Not reported"}</td>'
-        for item in coverage:
-            label = 'Evaluated; BEAR-Agent online validation' if item == 'yes*' else 'Evaluated' if item == 'yes' else 'Not evaluated'
+        for column, item in enumerate(coverage):
+            label = 'Evaluated; separate BEAR-Agent online validation' if name == 'BEAR' and column == 3 else 'Evaluated' if item.startswith('yes') else 'Not evaluated'
             symbol = '<span class="benchmark-yes" aria-hidden="true">✓</span>' if item.startswith('yes') else '<span class="benchmark-no" aria-hidden="true">—</span>'
             star = '<sup aria-hidden="true">*</sup>' if item == 'yes*' else ''
             row += f'<td data-coverage="{item}" aria-label="{label}">{symbol}{star}</td>'

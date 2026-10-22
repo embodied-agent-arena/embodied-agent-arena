@@ -33,6 +33,8 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ![Benchmark construction: five capability domains, GeoProbe, and the shared evaluation harness](public/assets/construction.webp)
 
+Manipulation suites such as [LIBERO](https://arxiv.org/abs/2306.03310), [RoboTwin 2.0](https://robotwin-platform.github.io/), and [RoboDojo](https://arxiv.org/abs/2607.04434) test transfer and robustness through robot interaction. The Arena also **measures geometry, spatial inference, and visual grounding directly**, linking these capabilities to planning and manipulation outcomes. [Benchmark comparison ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/#benchmark-comparison)
+
 <a id="key-findings"></a>
 
 ## 🔎 Key Findings
