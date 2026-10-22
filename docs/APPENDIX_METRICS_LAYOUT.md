@@ -1,5 +1,7 @@
 # Appendix metric typography — 23 October 2026
 
+This note records the equation-typography revision before the subsequent pagination pass. The current manuscript has 63 pages; see [the current layout audit](MANUSCRIPT_LAYOUT_AUDIT.md) for page positions and verification. All displayed equations below are retained.
+
 Complete metric calculations now use display math in the existing manuscript. This is a presentation revision; evaluated records, formulas, scoring denominators, invalid-record handling, thresholds and units are unchanged.
 
 | Appendix | Displayed calculations | PDF pages |

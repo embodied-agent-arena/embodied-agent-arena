@@ -112,8 +112,8 @@ const domains=[
         "Full completion across four models"
       ]
     ],
-    "insightLead": "The gap opens after the first successful action.",
-    "insight": "Astra, Sol, Gemini 3.8 Flash, and Opus 5.5 each reach the first CALVIN goal in eight episodes, yet finish three, zero, zero, and one full sequences. Across all models, only nine of the 18 episodes that reach four goals finish the fifth (a). Starting successfully does not establish reliable completion.",
+    "insightLead": "Sequence depth and precision contact pose distinct demands.",
+    "insight": "Astra, Sol, Gemini 3.8 Flash, and Opus 5.5 each reach the first CALVIN goal eight times but complete three, zero, zero, and one sequences (a). In five ManiSkill diagnostic tasks, Opus 5.5 completes picking, placement, and stacking but neither peg nor charger insertion. <a href=\"paper.pdf#page=31\">ManiSkill diagnostic ↗</a>",
     "caption": "Ten tasks × ten models, one adopted episode each. (a) Verified consecutive goals; six records with no prefix receive no goal credit. (b) Nested counts after execution errors; transport failures and budget guards excluded. Recorded model-specific settings are retained.",
     "paper": 12,
     "execution": null,
