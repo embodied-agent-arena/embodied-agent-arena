@@ -1,0 +1,237 @@
+{
+  "models": [
+    "astra",
+    "sol",
+    "fable",
+    "qwen",
+    "gemini",
+    "qwen35-397b",
+    "qwen35-27b",
+    "opus55",
+    "deepseek",
+    "gemini4argon"
+  ],
+  "sources": [
+    {
+      "benchmark": "calvin",
+      "label": "CALVIN",
+      "n": 10,
+      "successes": {
+        "astra": 3,
+        "sol": 0,
+        "fable": 0,
+        "qwen": 0,
+        "gemini": 0,
+        "qwen35-397b": 0,
+        "qwen35-27b": 0,
+        "opus55": 1,
+        "deepseek": 1,
+        "gemini4argon": 4
+      }
+    },
+    {
+      "benchmark": "cliport",
+      "label": "CLIPort",
+      "n": 18,
+      "successes": {
+        "astra": 11,
+        "sol": 5,
+        "fable": 6,
+        "qwen": 4,
+        "gemini": 5,
+        "qwen35-397b": 4,
+        "qwen35-27b": 3,
+        "opus55": 11,
+        "deepseek": 6,
+        "gemini4argon": 7
+      }
+    },
+    {
+      "benchmark": "rlbench",
+      "label": "RLBench",
+      "n": 10,
+      "successes": {
+        "astra": 6,
+        "sol": 2,
+        "fable": 1,
+        "qwen": 0,
+        "gemini": 2,
+        "qwen35-397b": 0,
+        "qwen35-27b": 1,
+        "opus55": 3,
+        "deepseek": 2,
+        "gemini4argon": 8
+      }
+    },
+    {
+      "benchmark": "robocasa",
+      "label": "RoboCasa",
+      "n": 10,
+      "successes": {
+        "astra": 1,
+        "sol": 0,
+        "fable": 0,
+        "qwen": 0,
+        "gemini": 0,
+        "qwen35-397b": 0,
+        "qwen35-27b": 0,
+        "opus55": 0,
+        "deepseek": 0,
+        "gemini4argon": 2
+      }
+    },
+    {
+      "benchmark": "robocasa365",
+      "label": "RoboCasa365",
+      "n": 10,
+      "successes": {
+        "astra": 0,
+        "sol": 0,
+        "fable": 1,
+        "qwen": 0,
+        "gemini": 0,
+        "qwen35-397b": 0,
+        "qwen35-27b": 0,
+        "opus55": 1,
+        "deepseek": 0,
+        "gemini4argon": 1
+      }
+    },
+    {
+      "benchmark": "robotwin2",
+      "label": "RoboTwin 2.0",
+      "n": 50,
+      "successes": {
+        "astra": 19,
+        "sol": 5,
+        "fable": 7,
+        "qwen": 2,
+        "gemini": 4,
+        "qwen35-397b": 3,
+        "qwen35-27b": 4,
+        "opus55": 23,
+        "deepseek": 2,
+        "gemini4argon": 14
+      }
+    },
+    {
+      "benchmark": "robowits",
+      "label": "RoboWits",
+      "n": 10,
+      "successes": {
+        "astra": 1,
+        "sol": 1,
+        "fable": 1,
+        "qwen": 1,
+        "gemini": 2,
+        "qwen35-397b": 0,
+        "qwen35-27b": 1,
+        "opus55": 1,
+        "deepseek": 2,
+        "gemini4argon": 1
+      }
+    },
+    {
+      "benchmark": "vimabench",
+      "label": "VIMA-Bench",
+      "n": 10,
+      "successes": {
+        "astra": 4,
+        "sol": 3,
+        "fable": 3,
+        "qwen": 1,
+        "gemini": 2,
+        "qwen35-397b": 3,
+        "qwen35-27b": 3,
+        "opus55": 10,
+        "deepseek": 6,
+        "gemini4argon": 9
+      }
+    },
+    {
+      "benchmark": "vlabench",
+      "label": "VLABench",
+      "n": 25,
+      "successes": {
+        "astra": 18,
+        "sol": 13,
+        "fable": 15,
+        "qwen": 5,
+        "gemini": 9,
+        "qwen35-397b": 6,
+        "qwen35-27b": 6,
+        "opus55": 19,
+        "deepseek": 9,
+        "gemini4argon": 16
+      }
+    },
+    {
+      "benchmark": "maniskill",
+      "label": "ManiSkill",
+      "n": 9,
+      "successes": {
+        "astra": 5,
+        "sol": 0,
+        "fable": null,
+        "qwen": 0,
+        "gemini": 1,
+        "qwen35-397b": 0,
+        "qwen35-27b": 0,
+        "opus55": 5,
+        "deepseek": 1,
+        "gemini4argon": 5
+      }
+    },
+    {
+      "benchmark": "capx_libero_pro",
+      "label": "LIBERO-PRO",
+      "n": 10,
+      "successes": {
+        "astra": 4,
+        "sol": 3,
+        "fable": 6,
+        "qwen": 1,
+        "gemini": 4,
+        "qwen35-397b": 0,
+        "qwen35-27b": 1,
+        "opus55": 8,
+        "deepseek": 5,
+        "gemini4argon": 8
+      }
+    },
+    {
+      "benchmark": "capx_robosuite",
+      "label": "robosuite",
+      "n": 5,
+      "successes": {
+        "astra": 4,
+        "sol": 4,
+        "fable": 5,
+        "qwen": 3,
+        "gemini": 5,
+        "qwen35-397b": 2,
+        "qwen35-27b": 1,
+        "opus55": 5,
+        "deepseek": 4,
+        "gemini4argon": 5
+      }
+    },
+    {
+      "benchmark": "capx_behavior1k",
+      "label": "BEHAVIOR-1K",
+      "n": 5,
+      "successes": {
+        "astra": 0,
+        "sol": 0,
+        "fable": 0,
+        "qwen": 0,
+        "gemini": 0,
+        "qwen35-397b": 0,
+        "qwen35-27b": 0,
+        "opus55": 0,
+        "deepseek": 0,
+        "gemini4argon": 0
+      }
+    }
+  ]
+}

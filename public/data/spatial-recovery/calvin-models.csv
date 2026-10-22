@@ -1,0 +1,11 @@
+model,n,mean_prefix,prefix_observed,error_episodes,resumed,completed_after_error,completed
+astra,10,3.1,10,3,3,1,3
+sol,10,1.4,10,3,3,0,0
+fable,10,0.9,10,9,9,0,0
+qwen,10,0.8,9,10,9,0,0
+gemini,10,1.8,10,8,8,0,0
+qwen35-397b,10,0,5,2,2,0,0
+qwen35-27b,10,0.1,10,7,6,0,0
+opus55,10,2.4,10,9,9,1,1
+deepseek,10,1.4,10,10,10,1,1
+gemini4argon,10,3.3,10,4,3,0,4

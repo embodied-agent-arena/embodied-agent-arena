@@ -1,0 +1,183 @@
+{
+  "scope": "All ten CALVIN sequences for all ten models: 100 adopted single-run episodes. Prefixes and full-sequence success reproduce the retained CALVIN results.",
+  "definition": "An execution-error episode contains a failed code-execution round, excluding transport failures, timeouts, and budget guards. Resumed execution requires a later execution_ok=true round. Recovered completion requires a later native-success round.",
+  "models": [
+    {
+      "model": "astra",
+      "n": 10,
+      "mean_prefix": 3.1,
+      "prefix_observed": 10,
+      "reached": [
+        8,
+        8,
+        7,
+        5,
+        3
+      ],
+      "error_episodes": 3,
+      "resumed": 3,
+      "completed_after_error": 1,
+      "completed": 3
+    },
+    {
+      "model": "sol",
+      "n": 10,
+      "mean_prefix": 1.4,
+      "prefix_observed": 10,
+      "reached": [
+        8,
+        4,
+        1,
+        1,
+        0
+      ],
+      "error_episodes": 3,
+      "resumed": 3,
+      "completed_after_error": 0,
+      "completed": 0
+    },
+    {
+      "model": "fable",
+      "n": 10,
+      "mean_prefix": 0.9,
+      "prefix_observed": 10,
+      "reached": [
+        7,
+        2,
+        0,
+        0,
+        0
+      ],
+      "error_episodes": 9,
+      "resumed": 9,
+      "completed_after_error": 0,
+      "completed": 0
+    },
+    {
+      "model": "qwen",
+      "n": 10,
+      "mean_prefix": 0.8,
+      "prefix_observed": 9,
+      "reached": [
+        5,
+        1,
+        1,
+        1,
+        0
+      ],
+      "error_episodes": 10,
+      "resumed": 9,
+      "completed_after_error": 0,
+      "completed": 0
+    },
+    {
+      "model": "gemini",
+      "n": 10,
+      "mean_prefix": 1.8,
+      "prefix_observed": 10,
+      "reached": [
+        8,
+        5,
+        4,
+        1,
+        0
+      ],
+      "error_episodes": 8,
+      "resumed": 8,
+      "completed_after_error": 0,
+      "completed": 0
+    },
+    {
+      "model": "qwen35-397b",
+      "n": 10,
+      "mean_prefix": 0,
+      "prefix_observed": 5,
+      "reached": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "error_episodes": 2,
+      "resumed": 2,
+      "completed_after_error": 0,
+      "completed": 0
+    },
+    {
+      "model": "qwen35-27b",
+      "n": 10,
+      "mean_prefix": 0.1,
+      "prefix_observed": 10,
+      "reached": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "error_episodes": 7,
+      "resumed": 6,
+      "completed_after_error": 0,
+      "completed": 0
+    },
+    {
+      "model": "opus55",
+      "n": 10,
+      "mean_prefix": 2.4,
+      "prefix_observed": 10,
+      "reached": [
+        8,
+        7,
+        4,
+        4,
+        1
+      ],
+      "error_episodes": 9,
+      "resumed": 9,
+      "completed_after_error": 1,
+      "completed": 1
+    },
+    {
+      "model": "deepseek",
+      "n": 10,
+      "mean_prefix": 1.4,
+      "prefix_observed": 10,
+      "reached": [
+        5,
+        4,
+        3,
+        1,
+        1
+      ],
+      "error_episodes": 10,
+      "resumed": 10,
+      "completed_after_error": 1,
+      "completed": 1
+    },
+    {
+      "model": "gemini4argon",
+      "n": 10,
+      "mean_prefix": 3.3,
+      "prefix_observed": 10,
+      "reached": [
+        10,
+        9,
+        5,
+        5,
+        4
+      ],
+      "error_episodes": 4,
+      "resumed": 3,
+      "completed_after_error": 0,
+      "completed": 4
+    }
+  ],
+  "total": {
+    "n": 100,
+    "error_episodes": 65,
+    "resumed": 62,
+    "completed_after_error": 3,
+    "completed": 9
+  }
+}

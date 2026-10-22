@@ -15,6 +15,7 @@ The revised narrative follows three findings: **local accuracy can miss a requir
 | Case atlas | 181 comparisons: 72 perception/affordance cases and 109 execution tasks; ten-model results in each | [Browse](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html) · [Static cases](../public/data/case-studies.json) · [Execution comparisons](../public/data/case-comparisons.json) |
 | Overview task map | 11 fixed tasks × 10 models; 104 evaluation previews + 3 labeled demos | [Task descriptions](RECORDED_TASKS.md) · [Identity and media manifest](../public/data/report/overview-provenance.json) |
 | Execution analysis | Ten-model logs: 1,570 Planning episodes; 46 selected tasks with 460 records, including 189 detailed action/feedback traces | [Planning episode CSV](../public/data/report/planning-episodes.csv) · [Selected episode CSV](../public/data/execution/complete-episodes.csv) · [Definitions and rebuild instructions](EXECUTION_ANALYSIS.md) |
+| Spatial and CALVIN diagnostics | 10,560 Spatial case-runs; all 100 adopted CALVIN episodes | [Figures, data and definitions](SPATIAL_RECOVERY.md) |
 | Manuscript and figures | Latest author PDF/source; native draw.io figures with vector and raster exports | [PDF](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) · [LaTeX source](https://embodied-agent-arena.github.io/embodied-agent-arena/author-source.zip) · [Figure ZIP](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip) · [Figure manifest](../public/assets/analysis/figure-manifest.json) |
 
 **Gemini 4 Argon coverage:** all five main-result domains, repeated metrics, polygon predictions, Planning outcomes and the case gallery are included. Detailed logs are joined to all 109 Gemini 4 Argon gallery records by report hash. Time, token use and recovery now compare all ten models; video playback and episode timestamps retain their separate clocks.
@@ -57,11 +58,12 @@ To refresh the figure bundle from exported manuscript figures:
 python scripts/package_figure_sources.py --figures /path/to/manuscript-figures
 ```
 
-The figure bundle contains editable **draw.io** files and matching **SVG/PDF/PNG** exports. Figures 3–8 include Gemini 4 Argon where the experiment includes it; the original observation-setting ablation keeps its original model cohort. The token-allocation figure covers ten models; the progress figure compares Opus&nbsp;5.5, Gemini 4 Argon and the matching Gemini&nbsp;3.8 or DeepSeek&#8209;1017 execution. The bundle provides editable figure sources; automated regeneration of every paper figure from raw logs is not yet packaged.
+The figure bundle contains editable **draw.io** files and matching **SVG/PDF/PNG** exports. Figure 5 compares all ten models on the same spatial task groups; Figure 8 reports CALVIN goal progress and execution recovery on all 100 adopted episodes. The token-allocation figure covers ten models; the Planning progress figure compares Opus 5.5, Gemini 4 Argon and DeepSeek-1017 on Archaeology Dating. The bundle provides editable figure sources; automated regeneration of every paper figure from raw logs is not yet packaged.
 
 ## Check consistency
 
 ```bash
+python scripts/check_spatial_recovery.py
 python -m unittest discover -s tests -p 'test_public*.py'
 node tests/check_case_rendering.cjs
 node tests/check_execution_rendering.cjs
@@ -72,4 +74,4 @@ Open <http://127.0.0.1:8785/>. The checks compare model scores, repeated-run sta
 
 ## Recorded execution settings
 
-The task inventory, source-native interfaces and success criteria are shared. Manipulation retains each adopted batch’s RGB schedule and execution ceilings. The [protocol audit](W4_PROTOCOL_AUDIT.md) verifies all ten CALVIN tasks for Astra, Opus&nbsp;5.5, DeepSeek&#8209;1017 and Gemini&nbsp;4&nbsp;Argon, including the actual round, token and time limits. It also separates later execution logs from the retained main-table population. No result values were changed by this clarification.
+The task inventory, source-native interfaces and success criteria are shared. Manipulation retains each adopted batch’s RGB schedule and execution ceilings. The [protocol audit](W4_PROTOCOL_AUDIT.md) verifies all ten CALVIN tasks for each of the ten models, including the actual round, token and time limits. It also separates later execution logs from the retained main-table population. No result values were changed by this clarification.

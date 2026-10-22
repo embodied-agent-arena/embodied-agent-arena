@@ -40,6 +40,7 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 - **Leading local scores still leave goals unfinished.** Gemini&nbsp;4&nbsp;Argon has the lowest 3D path error, **0.310 m**, yet only **24/56** paths satisfy all constraints. The highest recorded Manipulation success, from Opus&nbsp;5.5, is **47.8%**.
 - **Model diversity adds coverage, but shared failures remain.** Across the same **157 Planning tasks**, at least one model completes **142**, adding **16** beyond Astra alone; **15 defeat all ten**. [Task-level analysis ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html#coverage)
 - **Failures dominate token use.** Astra’s **31 failed tasks consume 55.5% of its tokens**. A failed task uses **5.1×** the tokens of a successful one on average. Matched execution traces distinguish productive recovery from repeated activity. [Execution analysis ↗](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html#resources)
+- **Executable again does not mean completed.** In **100 CALVIN episodes**, **65** encounter execution errors; **62** later execute code without an error, but only **3** subsequently complete the sequence. [Figure and per-model evidence ↗](docs/SPATIAL_RECOVERY.md)
 
 ![Planning and Manipulation: ten models with matching logos and brand colours](public/assets/analysis/model-task-comparison.svg)
 
@@ -79,9 +80,10 @@ Official repository for **Embodied Agent Arena**, a study of the **native embodi
 
 ## 📰 News
 
+- **2026.10.22** — Updated **all ten models in the spatial diagnostics** and released **100-episode CALVIN recovery analysis**, with matching figures, data and revised manuscript.
 - **2026.10.22** — Recovered **30 original case videos** by exact task, model and report matching; refreshed the compact Case Atlas with ten-model comparisons and labeled scene context for unrecorded executions.
 
-- **2026.10.22** — Filled the homepage media slots with 13 original videos, 3 labeled same-task demos and one observation sequence; redesigned Affordance and Planning figures and moved the supplementary review/protocol table to the appendix.
+- **2026.10.22** — Filled the homepage media slots with 13 original videos, 3 labeled same-task demos and one observation sequence; redesigned Affordance and Planning figures and moved the supplementary review table to the appendix.
 - **2026.10.21** — Added **Gemini&nbsp;4&nbsp;Argon’s execution logs** to same-task comparisons and ten-model time, token-use and recovery analyses.
 - **2026.10.21** — Added **Gemini&nbsp;4&nbsp;Argon** (`gemini-4-argon`): ten-model results, matched case comparisons, Planning outcomes and updated manuscript figures.
 - **2026.10.20** — Released **direct-polygon comparisons and execution analysis** with task-matched videos, actions and feedback.

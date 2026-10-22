@@ -40,9 +40,9 @@ const domains=[
         "Video-based spatial questions"
       ]
     ],
-    "insightLead": "Different spatial relations expose different weaknesses.",
-    "insight": "Astra reaches 96–100% on camera-depth questions but 50% on nearest-object selection, where Qwen Max reaches 77% (b). Identifying what is closer to the camera and what is closest to another object require different relations. The relevant reference frame can reveal a weakness hidden by overall accuracy.",
-    "caption": "(a–b) Original-cohort diagnostics. (c) All ten models; mean ± sample SD over five runs (Fable: three). Opus 5.5’s BOP-ASK SD is zero.",
+    "insightLead": "Spatial strengths depend on the relation.",
+    "insight": "Gemini 4 Argon reaches 93.8% on camera shifts and 86.7% on object-facing questions, compared with Astra’s 78.5% and 56.7% (a). Yet on hard video directions it reaches 30%, behind Gemini 3.8 Flash at 60% and Qwen Max at 65%. Better viewpoint reasoning does not imply uniformly better spatial understanding.",
+    "caption": "All panels compare ten models. (a–b) Task-level accuracy, rounded to integers on a shared 0–100 scale. (c) Native source Pass@1; mean ± sample SD over five runs (Fable: three).",
     "paper": 10,
     "case": "W2-w2_mindcube-01",
     "caseLabel": "Compare a Viewpoint-Change Case"
@@ -67,7 +67,7 @@ const domains=[
     "insightLead": "Boundary quality and target selection are separate problems.",
     "insight": "Polygons outperform boxes for nine of ten models (a), but the strongest polygon model still struggles on both interaction-scene sources (b). More expressive coordinates help describe a region; identifying which object or part the requested action needs remains a separate challenge.",
     "caption": "Same 70 cases for all ten models. Bars: one polygon run. Dots and whiskers: box mean ± sample SD over five runs (Fable: three). Invalid or absent polygons score zero.",
-    "paper": 11,
+    "paper": 10,
     "case": "W5-w5_ragnet-02",
     "caseLabel": "Compare Polygon Predictions"
   },
@@ -98,26 +98,27 @@ const domains=[
   {
     "id": "manipulation",
     "label": "Manipulation",
-    "title": "Several Goals Reached. The Sequence Still Unfinished.",
-    "text": "Gemini 4 Argon reaches 3.3 consecutive CALVIN goals on average, yet finishes only four of ten sequences. Astra reaches 3.1 goals and finishes three. Progress and complete success expose different limits.",
+    "title": "Recovery Must Reach the Goal.",
+    "text": "Code execution often resumes after an error, but the task remains unfinished. Across all 100 CALVIN episodes, 65 encounter an execution error; 62 later run code without an error, and only three subsequently complete the full sequence.",
     "evidence": [
       [
-        "3.3 / 5",
-        "Gemini 4 Argon · consecutive goals",
-        "Astra: 3.1; Opus 5.5: 2.4"
+        "62 / 65",
+        "Error episodes with later executable code",
+        "All 100 assigned CALVIN runs"
       ],
       [
-        "4 / 10",
-        "Gemini 4 Argon · complete sequences",
-        "Astra: 3/10; Opus 5.5: 1/10"
+        "3 / 65",
+        "Error episodes that later complete the task",
+        "Nine complete sequences overall"
       ]
     ],
-    "insightLead": "Expanded settings change the ranking.",
-    "insight": "Fable’s CALVIN average rises from 0.9 to 2.9 goals while Astra’s falls from 3.1 to 1.1 (b). None of the paired agents improves on ManiSkill (c). Additional observations and execution time have different value for different controllers.",
-    "caption": "Expanded adds per-round RGB and larger execution allowances; one episode per task and setting. Paired panels retain agents with both records. Fable’s incomplete ManiSkill records exclude it from (a,c).",
-    "paper": 12,
-    "execution": "sequence",
-    "caseLabel": "Inspect One Recorded Sequence"
+    "insightLead": "Early progress must survive the full sequence.",
+    "insight": "Gemini 4 Argon reaches the first goal in all ten sequences, but only five reach the third and four finish all five (a). Resuming executable code is much more common than restoring end-to-end completion (b). Recovery must preserve earlier progress while enabling the next required state change.",
+    "caption": "Ten tasks × ten models, one adopted episode each. (a) Verified consecutive goals; six records with no prefix receive no goal credit. (b) Nested counts after execution errors; transport failures and budget guards excluded. Recorded model-specific settings are retained.",
+    "paper": 11,
+    "execution": null,
+    "caseLabel": "See Recovery Counts and Definitions",
+    "report": "recovery"
   }
 ];
 function buildTabs(items,prefix,render){
@@ -127,11 +128,11 @@ function buildTabs(items,prefix,render){
  list.addEventListener('keydown',e=>{const i=[...list.children].indexOf(document.activeElement);let n=i;if(e.key==='ArrowRight')n=(i+1)%items.length;else if(e.key==='ArrowLeft')n=(i-1+items.length)%items.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=items.length-1;else return;e.preventDefault();select(n,true);});select(0);
 }
 // Reserve figure space before lazy loading so in-page links keep their position.
-const figureSizes={"geometry": [2250, 765], "spatial": [1980, 1308], "affordance": [2400, 674], "planning": [2400, 674], "manipulation": [2400, 760]};
+const figureSizes={"geometry": [2250, 765], "spatial": [1980, 1238], "affordance": [2400, 674], "planning": [2400, 674], "manipulation": [1980, 720]};
 function figureSizeAttrs(name){const size=figureSizes[name];return size?`width="${size[0]}" height="${size[1]}"`:'';}
 buildTabs(domains,'domain',d=>{
  const action=d.case?`<button type="button" data-case="${d.case}">${d.caseLabel} →</button>`:d.execution?`<a href="?analysis=${d.execution}#execution-analysis" data-execution-link="${d.execution}">${d.caseLabel} →</a>`:`<a href="#technical-report" data-report-link="${d.report}">${d.caseLabel} →</a>`;
- const figureVersion="model-names-20261022";
+ const figureVersion="spatial-recovery-20261022";
  return `<div class="domain-text"><h3>${d.title}</h3><p class="domain-argument">${d.text}</p><ul class="evidence">${d.evidence.map(([value,label,peer])=>`<li><strong>${value}</strong><span>${label}</span><span class="peer">${peer}</span></li>`).join('')}</ul></div><figure><button class="figure-button" data-zoom="assets/${d.id}.webp?v=${figureVersion}" aria-label="Enlarge ${d.label} results"><img ${figureSizeAttrs(d.id)} src="assets/${d.id}.webp?v=${figureVersion}" alt="${d.label}: ${d.caption}" loading="lazy"></button><figcaption><div class="figure-reading"><p class="figure-insight"><strong>${d.insightLead}</strong> ${d.insight}</p><p class="figure-method">${d.caption}</p></div><div class="domain-links">${action}<a href="paper.pdf#page=${d.paper}">Paper Evidence ↗</a></div></figcaption></figure>`;
 });
 const citation=document.querySelector('#bibtex').textContent.trim();

@@ -33,6 +33,7 @@ public/data/*
 !public/data/citation.bib
 !public/data/execution/
 !public/data/report/
+!public/data/spatial-recovery/
 outputs/
 artifacts/
 reports/

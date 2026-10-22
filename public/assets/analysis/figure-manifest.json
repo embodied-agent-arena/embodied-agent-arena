@@ -2,16 +2,15 @@
   "manuscriptDate": "2026-10-22",
   "modelsInMainComparison": 10,
   "scopes": {
-    "figure3-tradeoffs": "Ten-model profiles with a fixed 0–100 OpenReview warm colour scale; Gemini 3.8 and Gemini 4 identified explicitly.",
+    "figure3-tradeoffs": "Ten-model profiles with a fixed 0\u2013100 OpenReview warm colour scale; Gemini 3.8 and Gemini 4 identified explicitly.",
     "figure4-geometry": "Ten-model 3D tracing with logos at measured coordinates and adjacent variant labels; five-run SDs in displacement panel.",
-    "figure5-spatial": "Ten-model main results; ablation panels retain the original experiment cohort.",
-    "figure6-affordance": "Ten models on 70 cases: polygon overlap vs box mean ± SD; tools vs interaction diagnosis for Gemini 4 Argon.",
+    "figure5-spatial": "All ten models: 11 task-level spatial diagnostics and six native source scores, with repeated-run means and SD.",
+    "figure6-affordance": "Ten models on 70 cases: polygon overlap vs box mean \u00b1 SD; tools vs interaction diagnosis for Gemini 4 Argon.",
     "figure7-planning": "All 157 Planning tasks: ten-model success and the full distribution of cross-model success coverage.",
-    "figure8-manipulation": "Thirteen-suite results for nine agents with complete source records; paired CALVIN/ManiSkill panels retain seven/six original models. Same tasks, recorded Baseline vs Expanded observations and budgets.",
-    "execution-progress": "Ten-model Planning logs; selected exact-task progress comparisons include Gemini 4 Argon.",
+    "figure8-manipulation": "All 100 adopted CALVIN episodes: verified consecutive goals and execution-error recovery.",
+    "execution-progress": "Exact Archaeology Dating task: native progress for Opus 5.5, Gemini 4 Argon, and DeepSeek-1017.",
     "planning-execution-profile": "Ten-model Planning logs; selected exact-task progress comparisons include Gemini 4 Argon.",
     "model-task-comparison": "Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.",
-    "figure-protocol-cases": "Original CALVIN/PickCube controller-construction case comparison; observations and results unchanged.",
     "cases-affordance": "Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.",
     "supplement-figure6-affordance": "Original fine-grained diagnostics retained in the appendix.",
     "supplement-figure7-planning": "Original fine-grained diagnostics retained in the appendix.",
@@ -41,44 +40,84 @@
       "bytes": 780567
     },
     {
+      "path": "execution-cases.drawio",
+      "sha256": "e727213d08c4ed12a805934cdfba449e508d1bc16b63b658c70c9e8492e4fc78",
+      "bytes": 503341
+    },
+    {
+      "path": "execution-cases.pdf",
+      "sha256": "f626424434cc37ba14aebf7bd6e260f012e6ddf85f4a6aad76e41fed2ea2da61",
+      "bytes": 363427
+    },
+    {
+      "path": "execution-cases.png",
+      "sha256": "0f8372d92ba443bff187763f0d7b5f6074aa3c5e4bfa8ca3bc0c6965cfca4680",
+      "bytes": 556572
+    },
+    {
+      "path": "execution-cases.svg",
+      "sha256": "2e200e0c2b80b4cfe79bbad6377b808a4dfdf897d0accb19d0db5d2e38f2799b",
+      "bytes": 519009
+    },
+    {
       "path": "execution-progress.drawio",
-      "sha256": "071a57e899afddbe01419448b7a3c90696ec56bd7860103492eef12544c8c112",
-      "bytes": 55949
+      "sha256": "d55e4f50cf0221b7b41204b11f61533209929c20dd621b63b9c97881ea0ddb5a",
+      "bytes": 31246
     },
     {
       "path": "execution-progress.pdf",
-      "sha256": "be19f4f920efb0b17371157d615a531a7a12083525714da007f40cc6afb370c4",
-      "bytes": 59785
+      "sha256": "a86b792cff21a271ca43cf3bdd16abf75eec6d33c33e8e69a7ab63d789e531d2",
+      "bytes": 35358
     },
     {
       "path": "execution-progress.png",
-      "sha256": "68ec79fbd9dc25b40d31faa0b82d152dcb3b3928141f2f72dfef22178b8dc895",
-      "bytes": 164788
+      "sha256": "c5d9064cd12b9a1f363cab8012484c7e7ff74e9dfe2100785bdb047f14d22202",
+      "bytes": 42059
     },
     {
       "path": "execution-progress.svg",
-      "sha256": "7d55ffdc9e611bcdd46d854b649a81603b057a0b6f67f960c9eb7920e4af81e4",
-      "bytes": 208298
+      "sha256": "6942f6b0d35dc0ebbc8a5f4baae43618d10135dbac8ba3578b9c4871933cf2d2",
+      "bytes": 88360
     },
     {
-      "path": "figure-protocol-cases.drawio",
-      "sha256": "3c818253f323ffabce64c1bc3cd4086095060df9abf748cc80e3239909fe90b7",
-      "bytes": 48690
+      "path": "figure-cases-affordance.drawio",
+      "sha256": "d671cd87a70f9da05a83fe422ac25426ac3911f50124b760255a47d238f3fb31",
+      "bytes": 2171464
     },
     {
-      "path": "figure-protocol-cases.pdf",
-      "sha256": "ec1e38862cdc5d847ded0459c70b81ea697343aefc353db86908c6bd892d7ba0",
-      "bytes": 48456
+      "path": "figure-cases-affordance.pdf",
+      "sha256": "7c4258379ed333ef520086b350cfc79fa10e20ff3d99984247e81808c71eb471",
+      "bytes": 544972
     },
     {
-      "path": "figure-protocol-cases.png",
-      "sha256": "a0349e17fa1680c6b8b855897f2f836de31ecefe47642ae2a877ed098bcaee5c",
-      "bytes": 102737
+      "path": "figure-cases-affordance.png",
+      "sha256": "819cb4a9f3ded261660bc92cadcd8230fa7829579f931d1605a0114b5e3f18ea",
+      "bytes": 240759
     },
     {
-      "path": "figure-protocol-cases.svg",
-      "sha256": "1325bd15450d3ce37abe65f1c90ceea9067be2b2435f4cbd6900428adbd698ad",
-      "bytes": 139592
+      "path": "figure-cases-affordance.svg",
+      "sha256": "dbd2cc0b6e77509306298f88de6f9072cce9df7ffb7209d01d132d6092f8acba",
+      "bytes": 780710
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.drawio",
+      "sha256": "9008c47cf47796e3910c7c5d61269a5ea945a8c26de4a21a08336d24f6461727",
+      "bytes": 738068
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.pdf",
+      "sha256": "319064e3a893eba6d4f57dc152354913ae6e873c0fd195a2879da3e1ee5dbe0b",
+      "bytes": 584245
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.png",
+      "sha256": "dac3aac872227076d4615ef62b32fa8886e42c5ec7b547a74ed51850e399fdac",
+      "bytes": 251118
+    },
+    {
+      "path": "figure-cases-spatial-reasoning.svg",
+      "sha256": "c11d9e5864b2a6c413b8a02f591d5da14d2ac51f73e05e7d9183d5c5d552e174",
+      "bytes": 870735
     },
     {
       "path": "figure3-tradeoffs.drawio",
@@ -122,23 +161,23 @@
     },
     {
       "path": "figure5-spatial.drawio",
-      "sha256": "69d6c90922703254d31690bb3d6801858bd1a3d64f50f4883ef2653a42ee9797",
-      "bytes": 220003
+      "sha256": "b05662e188c184a41f8dcd54385fe11846e52feccd99dcee32068e021c2469f1",
+      "bytes": 297424
     },
     {
       "path": "figure5-spatial.pdf",
-      "sha256": "43938b83bd64ac7e2eff57fde97b7a97621429c9e34752157691c67030a73538",
-      "bytes": 158747
+      "sha256": "f030ddb997b5f62026f2f6cbe96c5a01c3853c1fb804e24eddae94c9a2562050",
+      "bytes": 164638
     },
     {
       "path": "figure5-spatial.png",
-      "sha256": "8f4ff30067d51de622b74a90c8a79b0f1153d614a4f3e53807f9ef14b4f6b462",
-      "bytes": 187306
+      "sha256": "f900c9a1c8786a05a09e145ca9d2fc71a936828f37392de550aeb34ac79fc4dc",
+      "bytes": 281834
     },
     {
       "path": "figure5-spatial.svg",
-      "sha256": "b0724132b1684edec1a8b22af5aa01a781ae4d0413ccaf7cdb9c58bbeaf59795",
-      "bytes": 272719
+      "sha256": "dd070f4cdfbf2f50f3c6b4b461c2cf7618e82138eec005f3316be74c734f5f3c",
+      "bytes": 313088
     },
     {
       "path": "figure6-affordance.drawio",
@@ -182,23 +221,23 @@
     },
     {
       "path": "figure8-manipulation.drawio",
-      "sha256": "2fa4832399bbdeba0bdcf11e31507a1e6de3078a52680d054f880d76adade34c",
-      "bytes": 205608
+      "sha256": "fd1bb6f9febfb1342c5dab687f041c850bbc81d95d45afaa858e946dd677b5b0",
+      "bytes": 80821
     },
     {
       "path": "figure8-manipulation.pdf",
-      "sha256": "2399c7b2051e308e5e02c547021a60c8bb7a36a88d38b60af82d4ce8bfc843a2",
-      "bytes": 128728
+      "sha256": "502d98dd5318f8e5fbae3cc3568faf1aacf876e459220ae08b0b965cd3f3a62d",
+      "bytes": 67493
     },
     {
       "path": "figure8-manipulation.png",
-      "sha256": "6e20273fc6203f951de18e723cf878b0a49cab9768cca1532d7418ebb9bdec7a",
-      "bytes": 311822
+      "sha256": "a8897afdebf1586dd15085ad39d7d51d18fa1b12d27e29c7fd93dda5ded255a2",
+      "bytes": 116771
     },
     {
       "path": "figure8-manipulation.svg",
-      "sha256": "ac9760d503ecaef4de919a6500b51fa9945c5cebfa000793067be0f921c001ae",
-      "bytes": 238227
+      "sha256": "1e71a85aae214104542e233a39f9f76461245b487b1f33ffb8c2fb1e48719c34",
+      "bytes": 142206
     },
     {
       "path": "model-logos/LOBE-ICONS-LICENSE",
@@ -324,86 +363,9 @@
       "path": "supplement-figure7-planning.svg",
       "sha256": "703d4c6fba2ed82e47778b66d1e518a193a6b7651a1cb43ab92097fdc46846ef",
       "bytes": 151082
-    },
-    {
-      "path": "execution-cases.svg",
-      "sha256": "2e200e0c2b80b4cfe79bbad6377b808a4dfdf897d0accb19d0db5d2e38f2799b",
-      "bytes": 519009
-    },
-    {
-      "path": "figure-cases-affordance.drawio",
-      "sha256": "d671cd87a70f9da05a83fe422ac25426ac3911f50124b760255a47d238f3fb31",
-      "bytes": 2171464
-    },
-    {
-      "path": "execution-cases.png",
-      "sha256": "0f8372d92ba443bff187763f0d7b5f6074aa3c5e4bfa8ca3bc0c6965cfca4680",
-      "bytes": 556572
-    },
-    {
-      "path": "execution-cases.pdf",
-      "sha256": "f626424434cc37ba14aebf7bd6e260f012e6ddf85f4a6aad76e41fed2ea2da61",
-      "bytes": 363427
-    },
-    {
-      "path": "execution-cases.drawio",
-      "sha256": "e727213d08c4ed12a805934cdfba449e508d1bc16b63b658c70c9e8492e4fc78",
-      "bytes": 503341
-    },
-    {
-      "path": "figure-cases-spatial-reasoning.png",
-      "sha256": "c833233e81f9e2c0b6a6ad7805113a287314b2b508192452611d2a177476fae2",
-      "bytes": 102132
-    },
-    {
-      "path": "figure-cases-spatial-reasoning.pdf",
-      "sha256": "e76a866fe38f65d6c5cadc44085ca6446b822632962f1ddfaff91b397c397872",
-      "bytes": 583757
-    },
-    {
-      "path": "figure-cases-affordance.svg",
-      "sha256": "564902c4c1fc9249acb45f6c7eea2344bfe36a5a9d8688ca69d3feda7fd7f159",
-      "bytes": 783430
-    },
-    {
-      "path": "figure-cases-affordance.pdf",
-      "sha256": "8b3399c967b5fbe6dda4cc2a0c4c4eef1bf2f8fe88d0c92565629101cf191720",
-      "bytes": 544501
-    },
-    {
-      "path": "figure-cases-spatial-reasoning.drawio",
-      "sha256": "9008c47cf47796e3910c7c5d61269a5ea945a8c26de4a21a08336d24f6461727",
-      "bytes": 738068
-    },
-    {
-      "path": "figure-cases-affordance.png",
-      "sha256": "9de5efb027ff45c726331a29759ed9afdb51bf8fb036801794726efa7e3da9f4",
-      "bytes": 69432
-    },
-    {
-      "path": "figure-cases-spatial-reasoning.svg",
-      "sha256": "db06d89c7468dcd04b0b4544cac7f1c53b7273206d078ee94de878989d6b63c4",
-      "bytes": 873608
     }
   ],
-  "typography": {
-    "revision": "2026-10-22",
-    "scope": [
-      "figure3-tradeoffs",
-      "figure4-geometry",
-      "figure5-spatial",
-      "figure6-affordance",
-      "figure7-planning",
-      "figure8-manipulation"
-    ],
-    "font": "Comic Sans MS",
-    "print_width_pt": 487.265,
-    "label_size_pt": 7.5,
-    "panel_size_pt": 9.5,
-    "policy": "Size is normalized at final manuscript width; long labels are reflowed without changing measurements."
-  },
   "naming": {
-    "revision": "2026-10-22",
     "full": [
       "Gemini 3.8 Flash",
       "Gemini 4 Argon"
@@ -411,7 +373,6 @@
     "compact": [
       "Gemini 3.8",
       "Gemini 4"
-    ],
-    "spatial_original_cohort": "Panels (a) and (b) use Gemini 3.8 Flash."
+    ]
   }
 }
