@@ -16,7 +16,9 @@
     "supplement-figure7-planning": "Original fine-grained diagnostics retained in the appendix.",
     "execution-cases": "Original-cohort qualitative examples; Gemini 3.8 Flash labels made explicit.",
     "figure-cases-affordance": "Original-cohort qualitative examples; Gemini 3.8 Flash labels made explicit.",
-    "figure-cases-spatial-reasoning": "Original-cohort qualitative examples; Gemini 3.8 Flash labels made explicit."
+    "figure-cases-spatial-reasoning": "Original-cohort qualitative examples; Gemini 3.8 Flash labels made explicit.",
+    "figure1-overview-bands": "Thirty representative tasks across five capability domains.",
+    "figure2-construction-statistics": "Composition of the 1,000-case arena, source collection, GeoProbe and the agent-environment loop."
   },
   "files": [
     {
@@ -120,124 +122,164 @@
       "bytes": 870735
     },
     {
+      "path": "figure1-overview-bands.drawio",
+      "sha256": "232ce29aeaa7816761d2a8b8f0e4d9aed552a371cf941e584f5a0a7ce9130265",
+      "bytes": 9657682
+    },
+    {
+      "path": "figure1-overview-bands.pdf",
+      "sha256": "0f3dfb8179d0b83ab559aa793d1f8b6888f5f720328b2bd13ac53c635e22bc5d",
+      "bytes": 5642966
+    },
+    {
+      "path": "figure1-overview-bands.png",
+      "sha256": "8d0fbd8ce6b3b5c5aad2309cc683ba8ebc20f2c69649d88fe73281e41bbc80cd",
+      "bytes": 747886
+    },
+    {
+      "path": "figure1-overview-bands.svg",
+      "sha256": "42ee5bae07ca534d801e41c6c20563123b304686ac31a33ab24371795bfea093",
+      "bytes": 10422750
+    },
+    {
+      "path": "figure2-construction-statistics.drawio",
+      "sha256": "0d447ae20ae7246665a0669449b117b19432424d825b540eede1f7e142fecc57",
+      "bytes": 30223852
+    },
+    {
+      "path": "figure2-construction-statistics.pdf",
+      "sha256": "0fdc3c811e1f355321d404e155aed2695c987a54440b43134fcd6f3b3f1658c2",
+      "bytes": 13362260
+    },
+    {
+      "path": "figure2-construction-statistics.png",
+      "sha256": "d92880d50533f8172a3de7ebcad6d1f1a346f1a5802b1b1af16af76d360e00e7",
+      "bytes": 772898
+    },
+    {
+      "path": "figure2-construction-statistics.svg",
+      "sha256": "322254a67cf7d377f631804a0f8bdb5c1fa6d4276430d0bc19e6eea6341c6712",
+      "bytes": 31984494
+    },
+    {
       "path": "figure3-tradeoffs.drawio",
-      "sha256": "4f63143473160c6ee45d01ab49ab17ef579fe927fde57853d02c88de9bdc6ba4",
-      "bytes": 95906
+      "sha256": "d054be43c52c5dae8610aca0f2e4eb60023f617a75e29287a080cdbcd5bdbe36",
+      "bytes": 95837
     },
     {
       "path": "figure3-tradeoffs.pdf",
-      "sha256": "2800a62734ffe3f7878a4a1ee42e730cef175da9386e155ecaab16034b083587",
-      "bytes": 71302
+      "sha256": "917526c4fbf8f2f7b625c304917420e775ba272643fceff04c0f70c628164155",
+      "bytes": 70937
     },
     {
       "path": "figure3-tradeoffs.png",
-      "sha256": "af528727cdbc7c08c5068e56ece3fb9910080af1fac76e30ab4e0f92b9cf4299",
-      "bytes": 208091
+      "sha256": "d882a4f02a9d87f2843cbc7e117c19f5109e46a041cea78cdac1e23b9c92be6f",
+      "bytes": 202008
     },
     {
       "path": "figure3-tradeoffs.svg",
-      "sha256": "a31434c7ef8c9fdd6a6bece6ec6c94a18105c0090e8b5a133c1af71ef5cd643d",
-      "bytes": 156905
+      "sha256": "4dd81b750627f8028ecdf40a32dbfa85f186d4af1864925543b1e94bec77f236",
+      "bytes": 152705
     },
     {
       "path": "figure4-geometry.drawio",
-      "sha256": "d12879c41eeb9e5160c180fec9723b60d72e9c6925e721e1745324caf4ed9056",
-      "bytes": 102662
+      "sha256": "da514a5ac2c45bd7d99a6d1c258cf6769b122e0edfb096152984f3fcd31b1322",
+      "bytes": 101929
     },
     {
       "path": "figure4-geometry.pdf",
-      "sha256": "ec8488ab09b52def961aa78022446fa3819a610073952972676efcb541ff3461",
-      "bytes": 71730
+      "sha256": "14d8cca088d9cc3a8c2a7c64e447481d7b51f564e59ba2e3a23efda37ccdc6d2",
+      "bytes": 71041
     },
     {
       "path": "figure4-geometry.png",
-      "sha256": "9320bf5e99b0375eb183428f62d11945d03a5ce574e0c360610671e8516401e7",
-      "bytes": 155678
+      "sha256": "5df73af8ed0d17023a74e2f61276671f0e2c85dac73396f9988bf2f75c5567d2",
+      "bytes": 151278
     },
     {
       "path": "figure4-geometry.svg",
-      "sha256": "6b2eab9f0ab6e8c0402d65a025b4cca79577af335a47db8041f6f804e31740b7",
-      "bytes": 183852
+      "sha256": "3da55cd4ff267857fdb9a58ff264e76b42fa558840c595ff80c3ffb9fd129b29",
+      "bytes": 177800
     },
     {
       "path": "figure5-spatial.drawio",
-      "sha256": "b05662e188c184a41f8dcd54385fe11846e52feccd99dcee32068e021c2469f1",
-      "bytes": 297424
+      "sha256": "55ff6c7b4a065cc1cff3bd21cc5107e3da5669b12d936958cc707f4835dc3a1b",
+      "bytes": 298455
     },
     {
       "path": "figure5-spatial.pdf",
-      "sha256": "f030ddb997b5f62026f2f6cbe96c5a01c3853c1fb804e24eddae94c9a2562050",
-      "bytes": 164638
+      "sha256": "1a29b2c5933760bb2459c58629de985537eb03536f1b5e86a7abe47ea010245f",
+      "bytes": 162830
     },
     {
       "path": "figure5-spatial.png",
-      "sha256": "f900c9a1c8786a05a09e145ca9d2fc71a936828f37392de550aeb34ac79fc4dc",
-      "bytes": 281834
+      "sha256": "c6f5fff5d9022635974cbfc1d3df4efaa82db181a896d006c0bc08acfbee796a",
+      "bytes": 262642
     },
     {
       "path": "figure5-spatial.svg",
-      "sha256": "dd070f4cdfbf2f50f3c6b4b461c2cf7618e82138eec005f3316be74c734f5f3c",
-      "bytes": 313088
+      "sha256": "316fdeb114ddf75c2c57e0fa72bb26ad655192341c802c1250645269c1fa40d3",
+      "bytes": 295176
     },
     {
       "path": "figure6-affordance.drawio",
-      "sha256": "d3cd4a65c9e6a08958d16f9675d67a398a8aeb8de65fd569aff115be2624d98f",
-      "bytes": 68666
+      "sha256": "408b3e5581025cd5eca0246591c6522aeb74538215fd47a4036db39c9ff69d2c",
+      "bytes": 68440
     },
     {
       "path": "figure6-affordance.pdf",
-      "sha256": "81cce6af8a7c7dbfd0de68abd4dfbe813bde8559207d1c0fe4690c3b10db9997",
-      "bytes": 55800
+      "sha256": "774ae7c8201f67bdc1ac9aed5bc8df54e034ca55b62223e9ab2a83fde997bd68",
+      "bytes": 53294
     },
     {
       "path": "figure6-affordance.png",
-      "sha256": "858fff6e4467a826068526e0ecc5e589bfaf0d09e7e3969de52fcc909c1c875b",
-      "bytes": 142011
+      "sha256": "27182ef8a6d78d58d552a44e520dc79011f1f3b85ea44243b7ffbcb3b3146fb8",
+      "bytes": 116170
     },
     {
       "path": "figure6-affordance.svg",
-      "sha256": "5e7476b3876f9a01a62970ea402ce14cda6088f9f79241e61bf51b9228a41c07",
-      "bytes": 146651
+      "sha256": "f52fd95cb734123b677994fa03adf839a73d644208c9f760790c0e74d13b382d",
+      "bytes": 123302
     },
     {
       "path": "figure7-planning.drawio",
-      "sha256": "5a78857606f76406fd06a2ef4860b35088dc0d561994a70eb1bbcdf8b01afe17",
-      "bytes": 63739
+      "sha256": "fef14cde22482807e82228e41b8e6f67a0b7e7692ccdb47985f3025fe4910295",
+      "bytes": 63521
     },
     {
       "path": "figure7-planning.pdf",
-      "sha256": "96f948a25deab3cc8d3141fac7965d31d3c1a890594aa4560eba5429f1974f2f",
-      "bytes": 54476
+      "sha256": "fa7f5264bc638e27aa713325ad58789824dc60dd507831babdf8f39f4f1485f4",
+      "bytes": 52889
     },
     {
       "path": "figure7-planning.png",
-      "sha256": "a81682d05afe3b28ad9d898bc0dbcb379e189c9ef03fcb8455e5cfca41e9f2cc",
-      "bytes": 141796
+      "sha256": "4ad5fe52d032429d1710a496af552fb121c39037badb561a35f9ac72bd14cae0",
+      "bytes": 128625
     },
     {
       "path": "figure7-planning.svg",
-      "sha256": "4ac869a74173d09899ac363968e8754ec0ae23ad180ff699fad5c514ca6b972a",
-      "bytes": 141755
+      "sha256": "b093c0bf92780c2e0d1eb7bbf3fb8536462f3103b74433ef560676f3aa67ada0",
+      "bytes": 126374
     },
     {
       "path": "figure8-manipulation.drawio",
-      "sha256": "fd1bb6f9febfb1342c5dab687f041c850bbc81d95d45afaa858e946dd677b5b0",
-      "bytes": 80821
+      "sha256": "441448c08e3ec27499cef61079a4cf810f732a2426a4cbbcd11fa55be79bf3fb",
+      "bytes": 80250
     },
     {
       "path": "figure8-manipulation.pdf",
-      "sha256": "502d98dd5318f8e5fbae3cc3568faf1aacf876e459220ae08b0b965cd3f3a62d",
-      "bytes": 67493
+      "sha256": "fca87366003bc00aee8cdfa90b1419edf8af93b7b39320f3d1d4ecd6c180f618",
+      "bytes": 65474
     },
     {
       "path": "figure8-manipulation.png",
-      "sha256": "a8897afdebf1586dd15085ad39d7d51d18fa1b12d27e29c7fd93dda5ded255a2",
-      "bytes": 116771
+      "sha256": "dcf9a3ba669144acf13b81784e3894df3b0bb72ef6292b915be3c31c9f1f92ef",
+      "bytes": 95920
     },
     {
       "path": "figure8-manipulation.svg",
-      "sha256": "1e71a85aae214104542e233a39f9f76461245b487b1f33ffb8c2fb1e48719c34",
-      "bytes": 142206
+      "sha256": "c5beb5051c787fe586868ac5162fa36d5a7b5339ee769d07ff16b549be1fe750",
+      "bytes": 121416
     },
     {
       "path": "model-logos/LOBE-ICONS-LICENSE",

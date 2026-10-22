@@ -4,19 +4,19 @@
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 62,
-  "paper_sha256": "ffe32c888c1873150eb05cb36101d9f28baf9e0d1da3e8ccd994e58976969d4a",
+  "paper_sha256": "81f3fad35c0ac56840eaa0b06f29a2e3f2706a17f42be6d9f9664be0f37ac970",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 346,
   "figure_sha256": {
-    "geometry.webp": "7f6caa3df2f66938c6b8e1609bca885ce70d0f847b5388f6ec382db142fde5fa",
-    "spatial.webp": "4713d648c5f527e678fbfec9454ebdd8ffda3b76686fb8dc7f7047f5fa52d389",
-    "affordance.webp": "b37ce30b846267456ed75d650a5fd89d7248dc8ff23bfcde67d3a9d606dc8728",
-    "planning.webp": "1f8c7e82bfc04c00bc2ba7a8e733e85dbfe71fbacfc66ab4aea0356ba86ec397",
-    "manipulation.webp": "49e98e619d5774eee171aa5a1fd3fd3cdbcd7b9d4a1fd0fe6e1c8f03563181a8",
-    "nine-model-profiles.svg": "a31434c7ef8c9fdd6a6bece6ec6c94a18105c0090e8b5a133c1af71ef5cd643d"
+    "geometry.webp": "ce448e9ee407be362bddd6ceae5df7bf68442061e38785fa281c2f098d8a5794",
+    "spatial.webp": "446d6b107eb5eb31eafbf0d00b7df806b96197fd3bb819eff42cbc0918999888",
+    "affordance.webp": "ea09252a6ca53e66e7b34130759daceac983812fed42ec92ca2a8e6e29ecb204",
+    "planning.webp": "0b82660972043b6ec025d8d65b1de83f6d3abf0c9f617f9667b8264551082eb6",
+    "manipulation.webp": "65069eabaabc1ed0fc04a364fe308a350fef08eda75879a0ab71ab397ef35277",
+    "nine-model-profiles.svg": "4dd81b750627f8028ecdf40a32dbfa85f186d4af1864925543b1e94bec77f236"
   },
-  "source_sha256": "eedd00728cbf8c67e1a31a9b0ca9eb0e6e714a15d25b3f2649223c7d9b78a7c5",
+  "source_sha256": "b0110c92c7104a251187582bbc91756bc4ddf01b207b7f3c76d2d19b53b88d9c",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -37,7 +37,7 @@
     "explorerRecords": 460
   },
   "figure_style": {
-    "revision": "spatial-recovery-20261022",
+    "revision": "caption-canvas-20261022",
     "palette": "assets/model-logos/palette.json",
     "mainFigures": 6,
     "additionalManuscriptFigures": 2,
@@ -46,7 +46,8 @@
     "scatter": "Model logos at measured coordinates with adjacent variant labels; no separate model key",
     "bars": "Rounded solid brand-family fills; Comic Sans MS; labels and logos directly below each model",
     "supplementaryFigures": "Fixed-input review retained in Appendix E; retired RGB comparison removed throughout; former Figure 6/7 fine-grained diagnostics retained.",
-    "typography": "Comic Sans MS; Figures 3–8 use 7.5 pt for labels, axes and numbers, and 9.5 pt for panel letters at 487.265 pt manuscript width. Label spacing adjusted; all measurements unchanged."
+    "typography": "Comic Sans MS; Figures 3–8 use 7.5 pt for labels, axes and numbers, and 9.5 pt for panel letters at 487.265 pt manuscript width. Label spacing adjusted; all measurements unchanged.",
+    "canvas": "Axes, units, identities and data labels only; explanations and descriptive titles in captions."
   },
   "protocol_audit": {
     "date": "2026-10-22",
@@ -79,7 +80,7 @@
   "independent_demo_previews": 3,
   "literature_revision": {
     "date": "2026-10-22",
-    "references": 77,
+    "references": 79,
     "requested_papers_cited": 11,
     "additional_recent_papers": 4,
     "scope": "Related Work; verified primary-source metadata, including Anvil (arXiv:2610.21882); figures and measurements unchanged"
@@ -153,7 +154,7 @@
     "max_floats_per_main_page": 2,
     "placement": "Table 2 followed by Figure 3 in the page-top group on page 7; other main-text floats occupy individual page tops",
     "pages": 62,
-    "content": "All prose, captions, measurements and figure dimensions unchanged",
+    "content": "Figure canvases tightened and captions expanded; measurements and figure font sizes preserved.",
     "placements": {
       "Figure 1": 2,
       "Table 1": 4,
@@ -212,5 +213,25 @@
     },
     "focus": "Sequence completion across models and the gap between resumed code execution and task completion.",
     "result_data_changed": false
+  },
+  "figure_canvas_revision": {
+    "date": "2026-10-22",
+    "main_figures": 8,
+    "scope": "Removed decorative titles, descriptive panel headings and explanatory small print; captions carry definitions and measurement details.",
+    "data": "All plotted values, scientific colors, error bars and main-table values preserved.",
+    "layout": "Compact native canvases; Table 2 followed by Figure 3 on page 7; remaining main floats at individual page tops. Conclusion flows across pages 11-12 without a forced blank area.",
+    "native_workspace": "draw.io",
+    "placements": {
+      "Figure 1": 2,
+      "Table 1": 4,
+      "Figure 2": 5,
+      "Table 2": 7,
+      "Figure 3": 7,
+      "Figure 4": 8,
+      "Figure 5": 9,
+      "Figure 6": 10,
+      "Figure 7": 11,
+      "Figure 8": 12
+    }
   }
 }

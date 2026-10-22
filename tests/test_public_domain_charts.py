@@ -17,7 +17,9 @@ class NativeChartDataTests(unittest.TestCase):
   cells=ET.parse(U/'assets/analysis/figure5-spatial.drawio').findall('.//mxCell');ramp=[]
   for c in cells:
    g=c.find('mxGeometry');st=dict(x.split('=',1)for x in c.get('style','').split(';')if'='in x)
-   if g is not None and abs(float(g.get('y','-1'))-419)<.01 and float(g.get('width',0))<4:ramp.append((float(g.get('x')),st['fillColor']))
+   # Identify the thin, unoutlined colorbar cells independently of canvas position.
+   if g is not None and st.get('strokeColor')=='none' and 0<float(g.get('width',0))<4 and float(g.get('height',0))>2*float(g.get('width',0)):ramp.append((float(g.get('x')),st['fillColor']))
+  self.assertEqual(len(ramp),100)
   self.assertEqual(D['heatRamp'],[color for _,color in sorted(ramp)])
  def test_planning_partitions_every_task_once(self):
   tasks=json.loads((U/'data/report/planning-outcomes.json').read_text())['tasks']

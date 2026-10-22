@@ -7,7 +7,8 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MAIN = ['figure3-tradeoffs', 'figure4-geometry', 'figure5-spatial',
+MAIN = ['figure1-overview-bands', 'figure2-construction-statistics',
+        'figure3-tradeoffs', 'figure4-geometry', 'figure5-spatial',
         'figure6-affordance', 'figure7-planning', 'figure8-manipulation']
 SUPPLEMENT = ['supplement-figure6-affordance', 'supplement-figure7-planning']
 ANALYSIS = ['execution-progress', 'planning-execution-profile', 'model-task-comparison']
@@ -24,7 +25,7 @@ def build(figures):
             if not path.is_file():
                 raise FileNotFoundError(path)
             contents[path.name] = path.read_bytes()
-        if stem in MAIN:
+        if stem in MAIN[2:]:
             assert b'Gemini 4' in contents[f'{stem}.drawio'], f'{stem}: stale model list'
     for stem in ANALYSIS:
         for ext in FORMATS:
@@ -39,6 +40,8 @@ def build(figures):
     for path in (ROOT/'public/assets/model-logos').iterdir():
         if path.is_file(): contents['model-logos/'+path.name] = path.read_bytes()
     scopes = json.loads((out/'figure-manifest.json').read_text())['scopes']
+    scopes['figure1-overview-bands'] = 'Thirty representative tasks across five capability domains.'
+    scopes['figure2-construction-statistics'] = 'Composition of the 1,000-case arena, source collection, GeoProbe and the agent-environment loop.'
     scopes.update({stem: 'Original fine-grained diagnostics retained in the appendix.' for stem in SUPPLEMENT})
     scopes.update({stem: 'Ten-model Planning logs; selected exact-task progress comparisons include Gemini 4 Argon.' for stem in ANALYSIS})
     scopes.pop('figure-protocol-cases', None)
@@ -56,6 +59,7 @@ def build(figures):
 Updated for the 22 October 2026 author manuscript.
 
 - Figures 3-8: ten-model comparisons. Figure 5 includes all models in its task-level heatmaps. Figure 8 examines goal completion and execution recovery in all 100 adopted CALVIN episodes.
+- Figures 1-2: the task overview and benchmark construction. All eight main-text canvases omit descriptive titles and explanatory prose; captions carry definitions and measurement details. Axes, units, model identities and data labels remain in the native drawing.
 - Figures 6-8 use rounded vertical bars; supplement-figure6/7 retain the fine-grained diagnostics in the appendix.
 - Model identity colours follow the supplied logo families, with shades and line styles distinguishing models. Numerical heatmaps retain common scales. See model-logos/palette.json.
 - model-task-comparison: the README comparison, using the unchanged Table 2 means.
@@ -76,7 +80,7 @@ figure-manifest.json records exact file hashes and experiment scopes. These are 
             info.external_attr = 0o644 << 16
             z.writestr(info, data)
     (out/'figure-manifest.json').write_bytes(contents['figure-manifest.json'])
-    print(f'Packaged {len(contents)} files; six current manuscript figures plus scoped qualitative/execution figures.')
+    print(f'Packaged {len(contents)} files; eight current manuscript figures plus scoped qualitative/execution figures.')
 
 
 if __name__ == '__main__':
