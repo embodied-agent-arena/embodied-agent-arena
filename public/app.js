@@ -41,7 +41,7 @@ const domains=[
       ]
     ],
     "insightLead": "Spatial strengths depend on the relation.",
-    "insight": "Gemini 4 Argon reaches 93.8% on camera shifts and 86.7% on object-facing questions, compared with Astra’s 78.5% and 56.7% (a). Yet on hard video directions it reaches 30%, behind Gemini 3.8 Flash at 60% and Qwen Max at 65%. Better viewpoint reasoning does not imply uniformly better spatial understanding.",
+    "insight": "Qwen 3.5 27B reaches 95.0% on image left/right relations but only 5.7% on actor-relative left/right questions (a). A shared directional vocabulary can require different reference frames. Gemini 4 Argon leads camera shifts and object-facing judgments, yet scores 30% on hard video directions, below Gemini 3.8 Flash at 60% and Qwen 3.8 Max at 65%.",
     "caption": "All panels compare ten models. (a–b) Task-level accuracy, rounded to integers on a shared 0–100 scale. (c) Native source Pass@1; mean ± sample SD over five runs (Fable: three).",
     "paper": 9,
     "case": "W2-w2_mindcube-01",
@@ -88,8 +88,8 @@ const domains=[
         "Including all eight sitting tasks"
       ]
     ],
-    "insightLead": "Most tasks separate the models.",
-    "insight": "On 134 of 157 tasks, some agents succeed while others fail (b). Only eight tasks are completed by every model; 15 defeat all ten. This broad middle ground reveals complementary strengths that aggregate rankings conceal, while the shared failures identify requirements that none of the recorded agents meets.",
+    "insightLead": "Most complementary coverage comes from two models.",
+    "insight": "Astra and Gemini 4 Argon together cover 137 of 157 tasks, recovering 11 of the 16 additional successes found across all ten models. This is the union of recorded results. Meanwhile, 39 of the 142 solved tasks are completed by only one or two models, so broad coverage can still depend strongly on model choice.",
     "caption": "All 157 assigned tasks; one episode per model and task. Combined coverage is the union of recorded successes.",
     "paper": 11,
     "report": "coverage",
@@ -112,8 +112,8 @@ const domains=[
         "Full completion across four models"
       ]
     ],
-    "insightLead": "The recovery gap spans models.",
-    "insight": "After an execution error, DeepSeek 4.1 Flash-1017 resumes code in all ten affected episodes, and Claude Opus 5.5 and Claude Fable 5.1 each resume in all nine. Yet only one, one, and zero of those episodes finish, respectively. Across all ten models, 62 of 65 error episodes resume execution and only three complete the task (b). Clearing an execution error leaves the remaining subgoals to be solved.",
+    "insightLead": "The gap opens after the first successful action.",
+    "insight": "Astra, Sol, Gemini 3.8 Flash, and Opus 5.5 each reach the first CALVIN goal in eight episodes, yet finish three, zero, zero, and one full sequences. Across all models, only nine of the 18 episodes that reach four goals finish the fifth (a). Starting successfully does not establish reliable completion.",
     "caption": "Ten tasks × ten models, one adopted episode each. (a) Verified consecutive goals; six records with no prefix receive no goal credit. (b) Nested counts after execution errors; transport failures and budget guards excluded. Recorded model-specific settings are retained.",
     "paper": 12,
     "execution": null,

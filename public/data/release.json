@@ -3,8 +3,8 @@
   "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
   "model_count": 10,
   "main_metric_values": 80,
-  "paper_pages": 62,
-  "paper_sha256": "81f3fad35c0ac56840eaa0b06f29a2e3f2706a17f42be6d9f9664be0f37ac970",
+  "paper_pages": 63,
+  "paper_sha256": "fc111f014307fc9cd7a0556ab951528683429f221c81eaa1d1da6b346f1b13ae",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 346,
@@ -16,7 +16,7 @@
     "manipulation.webp": "65069eabaabc1ed0fc04a364fe308a350fef08eda75879a0ab71ab397ef35277",
     "nine-model-profiles.svg": "4dd81b750627f8028ecdf40a32dbfa85f186d4af1864925543b1e94bec77f236"
   },
-  "source_sha256": "b0110c92c7104a251187582bbc91756bc4ddf01b207b7f3c76d2d19b53b88d9c",
+  "source_sha256": "db13aaa993b65129cb75b3d2d09c903b83bab19f5ec31d5a6c35e17f4d6a319f",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -153,8 +153,8 @@
     "main_tables": 2,
     "max_floats_per_main_page": 2,
     "placement": "Table 2 followed by Figure 3 in the page-top group on page 7; other main-text floats occupy individual page tops",
-    "pages": 62,
-    "content": "Figure canvases tightened and captions expanded; measurements and figure font sizes preserved.",
+    "pages": 63,
+    "content": "Expanded and restructured experiment analysis; main-figure placements preserved.",
     "placements": {
       "Figure 1": 2,
       "Table 1": 4,
@@ -221,6 +221,31 @@
     "data": "All plotted values, scientific colors, error bars and main-table values preserved.",
     "layout": "Compact native canvases; Table 2 followed by Figure 3 on page 7; remaining main floats at individual page tops. Conclusion flows across pages 11-12 without a forced blank area.",
     "native_workspace": "draw.io",
+    "placements": {
+      "Figure 1": 2,
+      "Table 1": 4,
+      "Figure 2": 5,
+      "Table 2": 7,
+      "Figure 3": 7,
+      "Figure 4": 8,
+      "Figure 5": 9,
+      "Figure 6": 10,
+      "Figure 7": 11,
+      "Figure 8": 12
+    }
+  },
+  "experiment_insights_revision": {
+    "date": "2026-10-23",
+    "sections": {
+      "4.2": "Main Results",
+      "4.3": "Where Local Competence Breaks Down",
+      "4.4": "Feedback and the Cost of Progress"
+    },
+    "evidence": "Existing adopted results; reproducible pair coverage, source weighting, source exclusion, and CALVIN prefix aggregation. No new evaluations.",
+    "analysis": "docs/EXPERIMENT_FINDINGS_AUDIT.md",
+    "measurements": "All main-table values, figures, captions, abstract and references unchanged.",
+    "layout": "Table 2 and Figure 3 remain together on page 7; all other main figures remain at individual page tops.",
+    "pages": 63,
     "placements": {
       "Figure 1": 2,
       "Table 1": 4,

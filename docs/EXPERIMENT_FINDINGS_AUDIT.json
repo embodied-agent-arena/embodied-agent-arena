@@ -1,0 +1,432 @@
+{
+  "input_sha256": {
+    "report/planning-outcomes.json": "3ff185d197e7ab3ee1b86b97230aa7fc722db331a361678eb320b4c5791833a7",
+    "spatial-recovery/manipulation-sources.json": "a6efdd2839c34e665c734d1afebf89ef7d561699173b07765683934f5cf5e6fa",
+    "spatial-recovery/calvin-summary.json": "a29d36173e23abd79244b69b2214a833c9f3c8eed3ca6205f9ffc4502c94b267",
+    "spatial-recovery/spatial-summary.json": "e1b0c73eb8facbbfff842a45012951e5527a96ffdaac246036586428134777f8"
+  },
+  "planning": {
+    "histogram": {
+      "0": 15,
+      "1": 19,
+      "2": 20,
+      "3": 5,
+      "4": 15,
+      "5": 17,
+      "6": 21,
+      "7": 14,
+      "8": 9,
+      "9": 14,
+      "10": 8
+    },
+    "full_successes": {
+      "astra": 126,
+      "sol": 70,
+      "fable": 100,
+      "gemini": 76,
+      "qwen": 56,
+      "qwen35-397b": 28,
+      "qwen35-27b": 30,
+      "opus55": 76,
+      "deepseek": 49,
+      "gemini4argon": 110
+    },
+    "source_exclusion": {
+      "astra": {
+        "successes": 42,
+        "n": 63
+      },
+      "sol": {
+        "successes": 13,
+        "n": 63
+      },
+      "fable": {
+        "successes": 21,
+        "n": 63
+      },
+      "gemini": {
+        "successes": 14,
+        "n": 63
+      },
+      "qwen": {
+        "successes": 8,
+        "n": 63
+      },
+      "qwen35-397b": {
+        "successes": 5,
+        "n": 63
+      },
+      "qwen35-27b": {
+        "successes": 5,
+        "n": 63
+      },
+      "opus55": {
+        "successes": 18,
+        "n": 63
+      },
+      "deepseek": {
+        "successes": 9,
+        "n": 63
+      },
+      "gemini4argon": {
+        "successes": 38,
+        "n": 63
+      }
+    },
+    "all_union": 142,
+    "pairs": [
+      {
+        "models": [
+          "astra",
+          "gemini4argon"
+        ],
+        "union": 137
+      },
+      {
+        "models": [
+          "astra",
+          "fable"
+        ],
+        "union": 135
+      },
+      {
+        "models": [
+          "astra",
+          "sol"
+        ],
+        "union": 133
+      },
+      {
+        "models": [
+          "astra",
+          "qwen"
+        ],
+        "union": 132
+      },
+      {
+        "models": [
+          "astra",
+          "opus55"
+        ],
+        "union": 131
+      },
+      {
+        "models": [
+          "astra",
+          "gemini"
+        ],
+        "union": 129
+      },
+      {
+        "models": [
+          "astra",
+          "deepseek"
+        ],
+        "union": 128
+      },
+      {
+        "models": [
+          "astra",
+          "qwen35-397b"
+        ],
+        "union": 127
+      },
+      {
+        "models": [
+          "astra",
+          "qwen35-27b"
+        ],
+        "union": 127
+      },
+      {
+        "models": [
+          "fable",
+          "gemini4argon"
+        ],
+        "union": 125
+      },
+      {
+        "models": [
+          "gemini",
+          "gemini4argon"
+        ],
+        "union": 120
+      },
+      {
+        "models": [
+          "opus55",
+          "gemini4argon"
+        ],
+        "union": 119
+      },
+      {
+        "models": [
+          "qwen",
+          "gemini4argon"
+        ],
+        "union": 115
+      },
+      {
+        "models": [
+          "deepseek",
+          "gemini4argon"
+        ],
+        "union": 115
+      },
+      {
+        "models": [
+          "sol",
+          "gemini4argon"
+        ],
+        "union": 113
+      },
+      {
+        "models": [
+          "qwen35-397b",
+          "gemini4argon"
+        ],
+        "union": 113
+      },
+      {
+        "models": [
+          "qwen35-27b",
+          "gemini4argon"
+        ],
+        "union": 112
+      },
+      {
+        "models": [
+          "fable",
+          "gemini"
+        ],
+        "union": 108
+      },
+      {
+        "models": [
+          "fable",
+          "opus55"
+        ],
+        "union": 108
+      },
+      {
+        "models": [
+          "sol",
+          "fable"
+        ],
+        "union": 104
+      },
+      {
+        "models": [
+          "fable",
+          "qwen"
+        ],
+        "union": 103
+      },
+      {
+        "models": [
+          "fable",
+          "qwen35-397b"
+        ],
+        "union": 102
+      },
+      {
+        "models": [
+          "fable",
+          "deepseek"
+        ],
+        "union": 102
+      },
+      {
+        "models": [
+          "fable",
+          "qwen35-27b"
+        ],
+        "union": 101
+      },
+      {
+        "models": [
+          "sol",
+          "opus55"
+        ],
+        "union": 96
+      },
+      {
+        "models": [
+          "gemini",
+          "opus55"
+        ],
+        "union": 96
+      },
+      {
+        "models": [
+          "qwen",
+          "opus55"
+        ],
+        "union": 93
+      },
+      {
+        "models": [
+          "sol",
+          "gemini"
+        ],
+        "union": 91
+      },
+      {
+        "models": [
+          "gemini",
+          "qwen"
+        ],
+        "union": 89
+      },
+      {
+        "models": [
+          "sol",
+          "deepseek"
+        ],
+        "union": 82
+      },
+      {
+        "models": [
+          "gemini",
+          "qwen35-397b"
+        ],
+        "union": 82
+      },
+      {
+        "models": [
+          "qwen35-27b",
+          "opus55"
+        ],
+        "union": 82
+      },
+      {
+        "models": [
+          "sol",
+          "qwen"
+        ],
+        "union": 81
+      },
+      {
+        "models": [
+          "gemini",
+          "deepseek"
+        ],
+        "union": 81
+      },
+      {
+        "models": [
+          "opus55",
+          "deepseek"
+        ],
+        "union": 80
+      },
+      {
+        "models": [
+          "gemini",
+          "qwen35-27b"
+        ],
+        "union": 79
+      },
+      {
+        "models": [
+          "sol",
+          "qwen35-397b"
+        ],
+        "union": 78
+      },
+      {
+        "models": [
+          "qwen35-397b",
+          "opus55"
+        ],
+        "union": 78
+      },
+      {
+        "models": [
+          "sol",
+          "qwen35-27b"
+        ],
+        "union": 76
+      },
+      {
+        "models": [
+          "qwen",
+          "deepseek"
+        ],
+        "union": 76
+      },
+      {
+        "models": [
+          "qwen",
+          "qwen35-27b"
+        ],
+        "union": 67
+      },
+      {
+        "models": [
+          "qwen",
+          "qwen35-397b"
+        ],
+        "union": 64
+      },
+      {
+        "models": [
+          "qwen35-397b",
+          "deepseek"
+        ],
+        "union": 58
+      },
+      {
+        "models": [
+          "qwen35-27b",
+          "deepseek"
+        ],
+        "union": 57
+      },
+      {
+        "models": [
+          "qwen35-397b",
+          "qwen35-27b"
+        ],
+        "union": 44
+      }
+    ]
+  },
+  "manipulation_reweighting": {
+    "astra": {
+      "successes": 76,
+      "assignments": 182,
+      "micro_percent": 41.75824175824176,
+      "equal_source_percent": 38.205128205128204
+    },
+    "opus55": {
+      "successes": 87,
+      "assignments": 182,
+      "micro_percent": 47.8021978021978,
+      "equal_source_percent": 44.51282051282051
+    },
+    "gemini4argon": {
+      "successes": 80,
+      "assignments": 182,
+      "micro_percent": 43.956043956043956,
+      "equal_source_percent": 47.41880341880342
+    }
+  },
+  "calvin": {
+    "reached": [
+      60,
+      40,
+      25,
+      18,
+      9
+    ],
+    "unverified_prefixes": 6,
+    "totals": {
+      "n": 100,
+      "error_episodes": 65,
+      "resumed": 62,
+      "completed_after_error": 3,
+      "completed": 9
+    }
+  }
+}
