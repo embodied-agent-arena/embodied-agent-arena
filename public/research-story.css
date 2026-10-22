@@ -249,3 +249,14 @@
 .overview-toolbar p{font-size:17px;color:#283f49;font-weight:550}
 .exec-compare-toolbar{justify-content:flex-end;margin-top:14px}
 @media(max-width:600px){.overview-toolbar p{font-size:15px}}
+
+/* Put recorded behavior immediately after the project introduction. */
+.hero-stage + .cases-section {border-top:0;padding-block:32px 40px}
+.cases-section .section-heading {display:flex;justify-content:space-between;align-items:center;gap:20px}
+.cases-section .section-heading>.text-link {flex-shrink:0}
+.benchmark-overview {margin:30px 0 40px}
+@media(max-width:760px) {
+  .hero-stage + .cases-section {padding-block:24px 32px}
+  .cases-section .section-heading {align-items:flex-start;flex-direction:column;gap:8px}
+  .benchmark-overview {margin:24px 0 30px}
+}
