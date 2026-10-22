@@ -94,26 +94,63 @@
 .figure-insight strong {font-weight:700}
 .figure-method {font-size:16px;line-height:1.65;color:#43555d;margin-top:12px}
 @media(max-width:760px) {.figure-insight {font-size:18px}.figure-reading {margin-bottom:18px}}
-.completion-section {border-top:1px solid var(--line)}
+.completion-section {border-top:1px solid var(--line);padding-block:48px}
 .completion-section h2,.evaluation-section h2 {font-size:clamp(28px,3.3vw,42px);line-height:1.25}
-.completion-grid {display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.completion-card {display:flex;flex-direction:column;border:1px solid #e1dfdc;border-radius:16px;padding:30px;background:#fcfbf9}
-.completion-source {color:#805b48;font-size:16px;font-weight:600}
-.completion-score {display:flex;align-items:center;gap:24px;margin:18px 0 22px}
-.completion-score>strong {font-size:58px;font-weight:650;letter-spacing:-.04em;color:#a24e55;line-height:1.1}
-.completion-score>span {font-size:16px;line-height:1.6;color:var(--muted)}
-.completion-card h3 {font-size:26px;line-height:1.35;margin-bottom:24px}
-.goal-stages {display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 26px}
-.goal-stages-label {font-size:15px;color:var(--muted);margin:-8px 0 14px}
+.completion-section>.section-deck {max-width:80ch;margin-bottom:26px}
+.completion-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.completion-card {display:flex;flex-direction:column;min-width:0;border:1px solid #e1dfdc;border-radius:14px;padding:22px;background:#fcfbf9}
+.completion-header {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.completion-source {color:#805b48;font-size:16px;font-weight:650}
+.completion-score {display:flex;align-items:center;gap:10px;flex-shrink:0}
+.completion-score>strong {font-size:30px;font-weight:700;letter-spacing:-.035em;color:#a24e55;line-height:1.15;white-space:nowrap}
+.completion-score>span {max-width:9ch;font-size:14px;line-height:1.35;color:#526169}
+.completion-card h3 {font-size:24px;line-height:1.3;margin:0 0 18px;text-wrap:pretty}
+.completion-case {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+.completion-media {min-width:0;margin:0}
+.completion-media video {display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#17252b;border-radius:8px}
+.completion-media figcaption {font-size:14px;line-height:1.5;color:#43555d;padding-top:8px;text-wrap:pretty}
+.completion-reading {min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.completion-reading p {font-size:17px;line-height:1.6;color:#43555d;margin:0}
+.completion-reading code {font-size:.92em;white-space:nowrap;color:var(--ink)}
+.completion-reading .text-link {font-size:16px;line-height:1.5}
+.completion-evidence {width:100%;border-top:1px solid #e6e0da;padding-top:12px;margin-top:2px}
+.completion-evidence .goal-stages-label {font-size:14px;font-weight:600;color:#43555d;margin:0 0 10px}
+.goal-stages {display:flex;align-items:center;justify-content:space-between;gap:10px}
 .goal-stages>div {flex:1}
-.goal-stages strong {font-size:32px;font-weight:600;display:block;line-height:1.3}
-.goal-stages span {font-size:15px;display:block;color:var(--muted);line-height:1.5}
+.goal-stages strong {font-size:25px;font-weight:650;display:block;line-height:1.2}
+.goal-stages span {font-size:13px;display:block;color:#43555d;line-height:1.5}
 .goal-stages>div:last-child strong {color:#a24e55}
-.completion-explanation {font-size:18px;line-height:1.75;color:var(--muted);margin-bottom:26px}
-.completion-budget {padding-top:20px;border-top:1px solid #e6e0da;margin-top:auto;font-size:16px;line-height:1.6}
-.completion-card details {font-size:15px;color:var(--muted);margin:14px 0 20px}
-.completion-card summary {cursor:pointer}
-.completion-card details p {padding-top:12px}
+.completion-resources {display:grid;gap:10px}
+.completion-resources>div {display:grid;grid-template-columns:auto 1fr;gap:4px 8px;align-items:baseline}
+.completion-resources span {font-size:14px;color:#43555d}
+.completion-resources strong {font-size:15px;text-align:right;font-weight:650;font-variant-numeric:tabular-nums}
+.completion-resources meter {grid-column:1/-1;display:block;width:100%;height:8px;border:0;border-radius:4px;background:#e6e6e1;appearance:none;-moz-appearance:none}
+.completion-resources meter::-webkit-meter-bar {background:#e6e6e1;border:0;border-radius:4px;height:8px}
+.completion-resources meter::-webkit-meter-optimum-value {background:#527e74;border-radius:4px}
+.completion-resources>div:last-child meter::-webkit-meter-optimum-value {background:#a24e55}
+.completion-resources meter::-moz-meter-bar {background:#527e74;border-radius:4px}
+.completion-resources>div:last-child meter::-moz-meter-bar {background:#a24e55}
+.completion-budget {border-top:1px solid #e6e0da;padding-top:12px;margin:16px 0 0;font-size:14px;line-height:1.5;color:#526169}
+@media(min-width:761px) and (max-width:1100px) {
+  .completion-grid {grid-template-columns:1fr}
+  .completion-case {grid-template-columns:230px minmax(0,1fr)}
+  .completion-reading p {font-size:18px}
+}
+@media(max-width:480px) {
+  .completion-card {padding:18px}
+  .completion-header {align-items:flex-start;gap:8px}
+  .completion-source {font-size:15px;max-width:13ch}
+  .completion-score>strong {font-size:27px}
+  .completion-score>span {font-size:13px}
+  .completion-card h3 {font-size:22px}
+  .completion-case {grid-template-columns:1fr;gap:14px}
+  .completion-media figcaption {font-size:14px}
+  .completion-reading {gap:10px}
+  .goal-stages {gap:6px}
+  .goal-stages span {font-size:13px}
+  .completion-resources {gap:14px}
+  .completion-resources strong {font-size:16px}
+}
 .text-link {padding:0;font-size:17px;font-weight:600;text-align:left}
 .exec-clock-note {font-size:14px;color:var(--muted);margin:0 0 14px}
 .exec-limit-strip {display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;line-height:1.6;padding:14px 0;color:var(--muted);border-bottom:1px solid #e6eadf}
@@ -149,7 +186,6 @@
   .insight-pair {gap:16px;flex-wrap:wrap}
   .insight-pair strong {font-size:30px}
   .domain-text {gap:28px}
-  .completion-card {padding:24px}
 }
 @media(max-width:760px) {
   .mobile-nav nav {top:68px}
@@ -178,9 +214,6 @@
   .evidence .peer {font-size:14px}
   .domain-links>* {font-size:16px}
   .completion-grid {grid-template-columns:1fr;gap:18px}
-  .completion-score>strong {font-size:52px}
-  .completion-explanation {font-size:17px}
-  .completion-budget {font-size:15px}
   .exec-compare-toolbar>span {font-size:14px}
   .research-implication {padding-block:32px}
   .research-implication>p:not(.eyebrow) {font-size:21px}

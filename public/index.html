@@ -46,7 +46,7 @@
 <script src="model-style.js?v=direct-labels-20261021" defer></script>
 <script src="execution-analysis.js?v=case-display-20261022" defer></script>
 <link rel="stylesheet" href="technical-report.css?v=viewport-20261021"><script src="planning-comparison.js?v=viewport-20261021" defer></script><script src="technical-report.js?v=model-names-20261022" defer></script>
-<link rel="stylesheet" href="research-story.css?v=figure-insights-20261022">
+<link rel="stylesheet" href="research-story.css?v=completion-cases-20261022">
 <link rel="stylesheet" href="model-comparison.css?v=viewport-20261021"><script src="model-comparison.js?v=viewport-20261021" defer></script>
 <link rel="stylesheet" href="typography.css?v=headings-20261022">
 <script src="typography.js?v=20261022" defer></script>
@@ -175,13 +175,57 @@
 
 
 <section id="completion" class="wrap section completion-section" aria-labelledby="completion-title">
-  <h2 id="completion-title">An Attempt Is Not a Completed Task.</h2>
-  <p class="section-deck">For each of the ten agents, these tasks remain incomplete under the stated per-episode limits.</p>
+  <h2 id="completion-title">Action Is Not Completion.</h2>
+  <p class="section-deck">None of the ten models completes these tasks. Two Gemini 4 Argon episodes show why.</p>
   <div class="completion-grid">
-    <article class="completion-card"><p class="completion-source">HumanCLAW · Sitting</p><div class="completion-score"><strong>0 / 8</strong><span>tasks completed<br>per model</span></div><h3>Finding the Seat Is Only the Start.</h3><p class="goal-stages-label">Astra on the same eight sitting tasks</p><div class="goal-stages" aria-label="Astra on eight sitting tasks"><div><strong>6</strong><span>Found the target</span></div><span aria-hidden="true">→</span><div><strong>5</strong><span>Within 20 cm + sit action</span></div><span aria-hidden="true">→</span><div><strong>0</strong><span>Sitting confirmed</span></div></div><p class="completion-budget"><strong>180 min · 101 code rounds · 2M tokens</strong></p><details><summary>Success Criterion &amp; Remaining Limits</summary><p>The evaluator must confirm the required sitting state. These eight cases are the sitting subset of 13 HumanCLAW tasks. Astra’s stages above refer to that same subset. Additional limits: 100 environment steps, 400 primitive calls, and an 11,000 s outer timeout.</p></details><a class="text-link" href="paper.pdf#page=9">Read the Planning Diagnosis ↗</a></article>
-    <article class="completion-card"><p class="completion-source">BEHAVIOR-1K · Household Manipulation</p><div class="completion-score"><strong>0 / 5</strong><span>tasks completed<br>per model</span></div><h3>Useful Actions Can Leave the Goal Unmet.</h3><p class="completion-explanation">Success requires all final household conditions to hold. The toolbox example shows why continuing to act can end at a token or round limit before the time ceiling.</p><p class="completion-budget"><strong>180 min · 24 model rounds · 640k tokens</strong></p><details><summary>Success Criterion &amp; Remaining Limits</summary><p>One episode per task and model, scored by the native complete-task check. Additional limits: 256 tool calls and 1,000 environment control steps. An episode can stop at any of its limits.</p></details><a class="text-link" href="?analysis=horizon#execution-analysis" data-execution-link="horizon">Inspect the Toolbox Execution →</a></article>
+    <article class="completion-card" data-completion-record="record-argon-e0a6cd8e48cb6f1d">
+      <header class="completion-header"><p class="completion-source">HumanCLAW</p><p class="completion-score"><strong>0 / 8</strong><span>completed per model</span></p></header>
+      <h3>A Sit Command Is Not Enough.</h3>
+      <div class="completion-case">
+        <figure class="completion-media">
+          <video muted loop playsinline controls preload="none" poster="assets/argon-cases/W3-humanclaw-gemini4argon-01/poster.webp" data-video="assets/argon-cases/W3-humanclaw-gemini4argon-01/clip.mp4" aria-label="Gemini 4 Argon: observed frames from the sit-on-the-couch task"></video>
+          <figcaption>Gemini 4 Argon · Observed frames</figcaption>
+        </figure>
+        <div class="completion-reading">
+          <p>Gemini 4 issues <code>sit()</code>, then <code>stop()</code>. The evaluator still marks the task incomplete.</p>
+          <button type="button" class="text-link" data-case="task-video-11a68ccf99" data-model="9">Inspect this episode ↗</button>
+          <div class="completion-evidence">
+            <p class="goal-stages-label">Astra · Eight sitting tasks</p>
+            <div class="goal-stages" aria-label="Astra: six targets found, five within twenty centimeters with a sit action, zero sitting successes">
+              <div><strong>6</strong><span>Target found</span></div><span aria-hidden="true">→</span>
+              <div><strong>5</strong><span>≤20 cm + sit</span></div><span aria-hidden="true">→</span>
+              <div><strong>0</strong><span>Completed</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="completion-budget">Limits: 101 code rounds · 2M tokens · 180 min</p>
+    </article>
+    <article class="completion-card" data-completion-record="record-argon-24313d05e03782c5">
+      <header class="completion-header"><p class="completion-source">BEHAVIOR-1K</p><p class="completion-score"><strong>0 / 5</strong><span>completed per model</span></p></header>
+      <h3>Tokens Run Out Before Time.</h3>
+      <div class="completion-case">
+        <figure class="completion-media">
+          <video muted loop playsinline controls preload="none" poster="assets/argon-cases/W4-capx_behavior1k-gemini4argon-01/poster.webp" data-video="assets/argon-cases/W4-capx_behavior1k-gemini4argon-01/clip.mp4" aria-label="Gemini 4 Argon: recorded execution excerpt from the pack-the-toolbox task"></video>
+          <figcaption>Gemini 4 Argon · Video excerpt</figcaption>
+        </figure>
+        <div class="completion-reading">
+          <p>After 17 model responses, the token guard blocks the next round—well before the 180&nbsp;min ceiling.</p>
+          <a class="text-link" href="?analysis=horizon#execution-analysis" data-execution-link="horizon">Inspect the stopping point →</a>
+          <div class="completion-evidence">
+            <p class="goal-stages-label">This episode · Goal not completed</p>
+            <div class="completion-resources">
+              <div><span>Elapsed time</span><strong>37.5 / 180 min</strong><meter min="0" max="10800" value="2251.8822984695435" aria-label="Elapsed episode time: 37.5 of 180 minutes"></meter></div>
+              <div><span>Tokens used</span><strong>603k / 640k</strong><meter min="0" max="640000" value="603393" aria-label="Tokens used: 603393 of 640000"></meter></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="completion-budget">Limits: 24 model rounds · 640k tokens · 180 min</p>
+    </article>
   </div>
 </section>
+
 
 <section id="execution-analysis" class="execution-section" aria-labelledby="exec-title">
   <div class="wrap">
