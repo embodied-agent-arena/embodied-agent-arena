@@ -4,10 +4,10 @@
   "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
-  "manuscript_date": "2026-10-22",
-  "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
-  "paper_pages": 67,
-  "abstract": "A robot generalist must turn scene understanding into actions that satisfy a complete goal. How far do frontier vision-language models (VLMs) meet this requirement? We introduce Embodied Agent Arena to evaluate ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces. Our results reveal complementary model strengths but a shared gap between local competence and complete goal satisfaction. Better geometric estimates and region overlap do not establish reliable interaction, while successful early actions can fail to compose into a complete procedure. These failures are costly: unsuccessful attempts consume most planning tokens. Execution traces further show that agents often resume code execution after an error without completing the task. Across the evaluated tasks, the central bottleneck is sustaining progress through the state changes that a complete goal requires.",
+  "manuscript_date": "2026-10-23",
+  "manuscript_version": "Updated author manuscript; arXiv replacement submitted, awaiting announcement",
+  "paper_pages": 63,
+  "abstract": "A robot generalist must turn scene understanding into actions that satisfy a complete goal. How far do frontier vision-language models (VLMs) meet this requirement? We introduce Embodied Agent Arena to evaluate ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces. Model rankings change with the metric and task mixture, while similar perceptual scores conceal large differences in procedural success. Model diversity broadens coverage, yet some tasks defeat every agent. Low geometric error and valid contact points can leave path constraints or functional regions unresolved. Long-horizon tasks often stall after early subgoals; precision contact remains difficult even when transport and placement succeed. Additional computation does not reliably close these gaps: self-review can degrade answers, and repaired code can resume activity without restoring task progress. Unsuccessful attempts absorb most planning tokens. Across CALVIN, ManiSkill, and household tasks, reliable completion requires precise interactions and sustained progress through dependent goals.",
   "authors": [
     {
       "name": "Haojian Huang",
@@ -356,7 +356,7 @@
   ],
   "source": {
     "table": "Table 2",
-    "page": 8,
+    "page": 7,
     "model_table": "Table A5",
     "model_page": 23,
     "protocol": "All ten agents use the same assigned task inventory, source-native interfaces, RGB observations and native success criteria. Manipulation retains each evaluation batch’s recorded observation schedule and execution ceilings; the protocol audit documents the differences.",

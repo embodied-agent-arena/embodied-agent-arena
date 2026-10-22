@@ -85,6 +85,8 @@ All pages and documentation are in English. Translated task instructions link to
 
 ## 📰 News
 
+- **2026.10.23** — Submitted the **63-page, ten-model manuscript** as a replacement of [arXiv:2610.00854](https://arxiv.org/abs/2610.00854); awaiting announcement. The [current manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf), figures, source archive and project page are synchronized.
+
 - **2026.10.22** — Updated **all ten models in the spatial diagnostics** and released **100-episode CALVIN recovery analysis**, with matching figures, data and revised manuscript.
 - **2026.10.22** — Recovered **30 original case videos** by exact task, model and report matching; refreshed the compact Case Atlas with ten-model comparisons and labeled scene context for unrecorded executions.
 

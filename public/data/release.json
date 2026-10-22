@@ -1,6 +1,6 @@
 {
   "manuscript_date": "2026-10-23",
-  "manuscript_version": "Updated author manuscript; arXiv replacement not yet submitted",
+  "manuscript_version": "Updated author manuscript; arXiv replacement submitted, awaiting announcement",
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 63,
@@ -101,7 +101,7 @@
   "submission_preparation": {
     "date": "2026-10-22",
     "scope": "Five recovered TODOs completed; 79 references, unchanged main-table values, isolated source ZIP verified",
-    "status": "prepared; not submitted"
+    "status": "submitted; awaiting announcement"
   },
   "model_naming": {
     "full": [
@@ -305,5 +305,17 @@
     "all_nonfinal_max_extra_bottom_space_pt": 77.5,
     "audit": "docs/MANUSCRIPT_LAYOUT_AUDIT.md"
   },
-  "revision_history_note": "Earlier *_revision records describe their dated release. narrative_layout_revision and top-level hashes identify the current manuscript."
+  "revision_history_note": "Earlier *_revision records describe their dated release. narrative_layout_revision and top-level hashes identify the current manuscript.",
+  "arxiv_submission": {
+    "article_id": "2610.00854",
+    "type": "replacement",
+    "status": "submitted",
+    "announcement_status": "pending",
+    "submitted_verified_at": "2026-10-23T02:14:18+08:00",
+    "category": "cs.RO",
+    "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "pages": 63,
+    "source_sha256": "8c1e621e6f816147f509eb35dfe127dfd8c19ae19bd06c0e30381d2b18fd4fbd",
+    "arxiv_preview_sha256": "b96be9e8435b01be78c1bbfa5ef9bce2911e32741af3cc3f820ad649331a9025"
+  }
 }

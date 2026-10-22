@@ -51,7 +51,7 @@ class PublicResultTests(unittest.TestCase):
                     self.assertEqual(row['model_identifier'], model['identifier'])
                     self.assertEqual(numbers(row['value']+' ± '+row['run_sd']), numbers(expected))
                     self.assertEqual(int(row['runs']), model['metric_runs'][j])
-                    self.assertTrue(row['source_url'].endswith('#page=8'))
+                    self.assertTrue(row['source_url'].endswith('#page=7'))
 
     def test_argon_repeated_statistics_are_run_sd_not_case_spread(self):
         audit = json.loads((PUBLIC / 'data/argon-results-audit.json').read_text())

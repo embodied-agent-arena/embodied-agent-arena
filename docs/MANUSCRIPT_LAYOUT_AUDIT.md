@@ -31,4 +31,4 @@ The spacing figures exclude the running header and footer. Ordinary margins and 
 3. Render every page, inspect flagged pages at reading size, and check table continuations, captions, headings and page-top figures.
 4. Recompile after any correction and repeat the whole-document check. Synchronize PDF page links, page counts, source archives and release hashes only after the final check.
 
-The arXiv replacement package is prepared; no arXiv submission was performed.
+The replacement was submitted to arXiv on 23 October 2026 after 02:00 CST and is awaiting announcement. The server-compiled 63-page PDF passed a second full-page review: Table 2 precedes Figure 3 on page 7, with no unresolved references, overfull boxes, or abnormal page-bottom gaps. TeX Live 2025 introduces minor caption wrapping differences; content and pagination are unchanged.
