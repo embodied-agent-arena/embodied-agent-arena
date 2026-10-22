@@ -19,7 +19,7 @@ const domains=[
     "insightLead": "Object motion must be separated from camera motion.",
     "insight": "Astra’s displacement error rises from 0.24 cm with a fixed camera to 1.13 cm under a large camera shift (b). Recovering motion therefore requires resolving a changing viewpoint. Tracing adds another requirement (c): a geometrically close path must also satisfy its start, destination, and collision constraints.",
     "caption": "(a) Astra versus the best original peer. (b) Mean ± sample SD over five runs. (c) One tracing run per case; all ten models.",
-    "paper": 9,
+    "paper": 8,
     "case": "W1-w1_tracespatial_3d-01",
     "caseLabel": "Compare Paths on the Same Scene"
   },
@@ -43,7 +43,7 @@ const domains=[
     "insightLead": "Spatial strengths depend on the relation.",
     "insight": "Gemini 4 Argon reaches 93.8% on camera shifts and 86.7% on object-facing questions, compared with Astra’s 78.5% and 56.7% (a). Yet on hard video directions it reaches 30%, behind Gemini 3.8 Flash at 60% and Qwen Max at 65%. Better viewpoint reasoning does not imply uniformly better spatial understanding.",
     "caption": "All panels compare ten models. (a–b) Task-level accuracy, rounded to integers on a shared 0–100 scale. (c) Native source Pass@1; mean ± sample SD over five runs (Fable: three).",
-    "paper": 10,
+    "paper": 9,
     "case": "W2-w2_mindcube-01",
     "caseLabel": "Compare a Viewpoint-Change Case"
   },
@@ -98,24 +98,24 @@ const domains=[
   {
     "id": "manipulation",
     "label": "Manipulation",
-    "title": "Recovery Must Reach the Goal.",
-    "text": "Code execution often resumes after an error, but the task remains unfinished. Across all 100 CALVIN episodes, 65 encounter an execution error; 62 later run code without an error, and only three subsequently complete the full sequence.",
+    "title": "Early Progress Rarely Reaches the Goal.",
+    "text": "Across ten models on ten CALVIN sequences each, 60 of 100 episodes reach the first goal, but only nine finish all five. Gemini 4 Argon completes four sequences, GPT-6 Astra three, and Claude Opus 5.5 and DeepSeek 4.1 Flash-1017 one each.",
     "evidence": [
       [
-        "62 / 65",
-        "Error episodes with later executable code",
-        "All 100 assigned CALVIN runs"
+        "60 / 100",
+        "Episodes reaching the first goal",
+        "Ten sequences × ten models"
       ],
       [
-        "3 / 65",
-        "Error episodes that later complete the task",
-        "Nine complete sequences overall"
+        "9 / 100",
+        "Episodes completing all five goals",
+        "Full completion across four models"
       ]
     ],
-    "insightLead": "Early progress must survive the full sequence.",
-    "insight": "Gemini 4 Argon reaches the first goal in all ten sequences, but only five reach the third and four finish all five (a). Resuming executable code is much more common than restoring end-to-end completion (b). Recovery must preserve earlier progress while enabling the next required state change.",
+    "insightLead": "The recovery gap spans models.",
+    "insight": "After an execution error, DeepSeek 4.1 Flash-1017 resumes code in all ten affected episodes, and Claude Opus 5.5 and Claude Fable 5.1 each resume in all nine. Yet only one, one, and zero of those episodes finish, respectively. Across all ten models, 62 of 65 error episodes resume execution and only three complete the task (b). Clearing an execution error leaves the remaining subgoals to be solved.",
     "caption": "Ten tasks × ten models, one adopted episode each. (a) Verified consecutive goals; six records with no prefix receive no goal credit. (b) Nested counts after execution errors; transport failures and budget guards excluded. Recorded model-specific settings are retained.",
-    "paper": 11,
+    "paper": 12,
     "execution": null,
     "caseLabel": "See Recovery Counts and Definitions",
     "report": "recovery"

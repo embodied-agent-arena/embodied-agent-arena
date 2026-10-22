@@ -16,7 +16,9 @@ The heatmaps retain the original 0–100 warm scale. They show mean accuracy acr
 
 ![CALVIN: consecutive goals and recovery after execution errors](../public/assets/analysis/figure8-manipulation.svg)
 
-Across **100 CALVIN episodes**—ten sequences for each of ten models—**65** contain execution errors. **62** later execute code without an error, but only **3** subsequently complete all five goals. There are nine complete sequences overall; six finish without a preceding execution error.
+Across **100 CALVIN episodes**, ten sequences for each of ten models, **60 reach the first goal and nine complete all five**. Gemini 4 Argon completes four sequences, GPT-6 Astra three, and Claude Opus 5.5 and DeepSeek 4.1 Flash-1017 one each.
+
+The recovery gap spans models. DeepSeek 4.1 Flash-1017 resumes code in all ten episodes with an execution error; Claude Opus 5.5 and Claude Fable 5.1 each resume in all nine. Only one, one, and zero of those episodes finish, respectively. Across all ten models, **65** episodes contain execution errors, **62** later execute code without an error, and only **3** subsequently complete all five goals. Six of the nine complete sequences finish without a preceding execution error.
 
 These are nested episode counts, not error-event totals. Execution errors include syntax, interface-contract and native runtime/tool failures; transport failures, timeouts and budget guards are excluded. “Resumed” requires a later `execution_ok=true` round. “Then complete” requires a later native-success round. Neither resuming code nor a large action count establishes physical progress.
 
