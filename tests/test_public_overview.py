@@ -69,8 +69,23 @@ class OverviewTests(unittest.TestCase):
                     self.assertIn("same-task demo",button["aria-label"])
                 else:
                     self.assertIsNone(cell["poster"])
-                    self.assertIn("Stopped before action", button["aria-label"])
+                    self.assertIn("API-interrupted attempt", button["aria-label"])
+                    self.assertEqual(cell["status"], "Rerun required")
                     self.assertIn("log-only", button["class"])
+
+    def test_api_interruptions_are_not_presented_as_runtime_failures(self):
+        health = json.loads((PUBLIC / 'data/report/case-execution-health.json').read_text())
+        count = 0
+        for cell in self.manifest['tiles']:
+            issue = health['runs'].get('record-' + cell['recordId'])
+            if issue:
+                count += 1
+                self.assertEqual(cell['status'], 'Rerun required')
+                self.assertEqual(cell['executionReview']['reason'], 'api_failure')
+            elif cell['outcome'] == 'runtime_failure':
+                self.assertEqual(cell['status'], 'Runtime error')
+        self.assertEqual(count, self.manifest['rerunCount'])
+        self.assertEqual(count, 4)
 
     def test_old_mixed_task_montage_is_no_longer_displayed(self):
         self.assertNotIn("reference-arena", self.html)

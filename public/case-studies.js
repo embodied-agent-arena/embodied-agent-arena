@@ -21,8 +21,14 @@
   const load = () => loadPromise ||= Promise.all([
     fetch('data/case-studies.json?v=english-20261022').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
     fetch('data/case-gallery.json?v=toolbox-cameras-20261022').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-comparisons.json?v=toolbox-cameras-20261022').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();})
-  ]).then(([cases, meta, media]) => {
+    fetch('data/case-comparisons.json?v=toolbox-cameras-20261022').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();}),
+    fetch('data/report/case-execution-health.json?v=scene-review-20261022').then(r => {if (!r.ok) throw new Error('Execution audit could not be loaded.'); return r.json();})
+  ]).then(([cases, meta, media, health]) => {
+    for(const [id,issue] of Object.entries(health.runs)) {
+      const run=media.runs[id];
+      if(!run || run.taskId!==issue.taskId || run.sourceReportSha256!==issue.reportSha256)throw new Error('Execution audit does not match the source record.');
+      run.executionReview=issue;
+    }
     mediaData=media;
     const all=[...cases.filter(c=>c.predictions.length),...media.groups];
     records=new Map(all.map(c=>[c.id,c]));
@@ -106,15 +112,19 @@
     return rows;
   }
   const outcomeText = r => r.executionStarted===false ? 'Failed before execution' : r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Completed' : ({budget_exhausted:'Budget reached',timeout:'Timed out',runtime_failure:'Runtime error',task_failure:'Not completed',agent_failure:'Agent error',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
-  const previewOf = r => r.video || r.animation ? r : r.demoMedia ? {...r,...r.demoMedia} : r;
-  const hasPreview = r => !!(r.video||r.animation||r.demoMedia);
+  const isScenePreview = r => !!(r && r.mediaKind!=='Animated execution log' && (r.video||r.animation));
+  const previewOf = r => isScenePreview(r) ? r : isScenePreview(r.demoMedia) ? {...r,...r.demoMedia} : r;
+  const hasPreview = r => isScenePreview(r) || isScenePreview(r.demoMedia);
+  const needsRerun = r => r.executionReview?.status==='rerun_required';
+  const displayOutcome = r => needsRerun(r) ? 'Rerun required' : outcomeText(r);
   function sceneMedia(c,r) {
     const scene=c.sceneContext;
-    if(scene?.kind==='action_log') return `<span class="gallery-result-preview"><span class="gallery-scene-only">Result + log</span><span class="gallery-result-facts">${r?.modelRounds!=null?`<span><strong>${num(r.modelRounds,0)}</strong>rounds</span>`:''}${r?.elapsedSeconds!=null?`<span><strong>${num(r.elapsedSeconds/60,1)}</strong>minutes</span>`:''}</span></span>`;
+    if(scene?.kind==='action_log') return `<span class="gallery-result-preview"><span class="gallery-scene-only">Text-based task</span><span class="gallery-result-facts">${r?.modelRounds!=null?`<span><strong>${num(r.modelRounds,0)}</strong>rounds</span>`:''}${r?.elapsedSeconds!=null?`<span><strong>${num(r.elapsedSeconds/60,1)}</strong>minutes</span>`:''}</span></span>`;
     if(!scene || scene.taskId!==c.taskId || !scene.image) return '<span class="gallery-no-recording">Execution record ↗</span>';
     return `<img src="${esc(scene.image)}" alt="Shared task scene from ${esc(scene.model)}; not this model's execution" loading="lazy"><span class="gallery-scene-only" title="Scene from ${esc(scene.model)} on this exact task. This model has a result and log, but no recording.">Scene only</span>`;
   }
   function runMedia(r, detail=false) {
+    if(!hasPreview(r)) return '<span class="gallery-no-recording">No matching recording</span>';
     r=previewOf(r);
     if (r.video) return `<video ${detail ? 'controls' : 'muted loop'} playsinline preload="none" poster="${esc(r.poster)}" ${detail ? `src="${esc(r.video)}"` : `data-video="${esc(r.video)}"`} aria-label="${esc(r.model)}: ${esc(r.mediaKind)}"></video>`;
     if (r.animation) return `<img src="${esc(detail ? r.animation : r.poster)}" ${detail ? '' : `data-animation="${esc(r.animation)}" data-poster="${esc(r.poster)}"`} alt="${esc(r.model)}: ${esc(r.mediaKind)}" loading="lazy">`;
@@ -124,7 +134,7 @@
   function runTile(c,r,i) {
     const hasMedia=hasPreview(r);
     const logPreview=sceneMedia(c,r);
-    return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(outcomeText(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${hasMedia?cameraBadge(r):''}${r.demoMedia?'<span class="gallery-demo-label">Demo · Not scored</span>':''}${r.mediaKind==='Animated execution log'?'<span class="gallery-scene-only">Action log</span>':''}${hasMedia?`<span class="gallery-run-kind">${esc(previewOf(r).mediaKind||'Recording')}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${r.success?'success':''}">${esc(outcomeText(r))}</span></span></button>`;
+    return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'} ${needsRerun(r)?'rerun-required':''}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(displayOutcome(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${hasMedia?cameraBadge(r):''}${r.demoMedia?'<span class="gallery-demo-label">Demo · Not scored</span>':''}${hasMedia?`<span class="gallery-run-kind">${esc(previewOf(r).mediaKind||'Recording')}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${needsRerun(r)?'pending':r.success?'success':''}"${needsRerun(r)?' title="API-interrupted attempt; replacement evaluation needed"':''}>${esc(displayOutcome(r))}</span></span></button>`;
   }
   function runBudget(r) {
     const values=Object.entries(r.budgets||{}).filter(([k,v])=>budgetNames[k]&&v!=null);
@@ -181,21 +191,22 @@
       selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index,true) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p>${polygon ? '<p>Green: reference region. Colored contour: predicted polygon.</p>' : ''}<details ${polygon?'':'open'}><summary>${polygon?'Polygon coordinates':'Recorded Answer'}</summary><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</details></div></div>${!polygon && Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     } else {
       selection.querySelectorAll('video').forEach(v=>v.pause());
-      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${p.demoMedia?"Original evaluation · ":""}${esc(outcomeText(p))}</span></div>${hasPreview(p)?`<div class="gallery-detail-film">${p.demoMedia?'<span class="gallery-demo-badge">Same-task demo · Not scored</span>':''}${runMedia(p,true)}${cameraBadge(p)}</div>${p.observationPreview?`<p class="gallery-camera-note"><a href="${esc(p.observationPreview.image)}" target="_blank" rel="noopener">View the robot’s recorded observation · Round ${num(p.observationPreview.round,0)} ↗</a></p>`:''}${previewOf(p).mediaNote?`<details class="study-media-note"><summary>${esc(previewOf(p).mediaKind)}</summary><p>${esc(previewOf(p).mediaNote)}</p></details>`:""}`:`<div class="gallery-detail-film gallery-context-film">${sceneMedia(c,p)}</div><p class="study-media-note">${c.sceneContext?.kind==='action_log'?'This text-based task is represented by its recorded results and decisions.':`Task scene from ${esc(c.sceneContext?.model)}. This model's result and log are shown below; no execution recording was supplied.`}</p>`}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
+      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${p.demoMedia?"Original evaluation · ":""}${esc(displayOutcome(p))}</span></div>${hasPreview(p)?`<div class="gallery-detail-film">${p.demoMedia?'<span class="gallery-demo-badge">Same-task demo · Not scored</span>':''}${runMedia(p,true)}${cameraBadge(p)}</div>${p.observationPreview?`<p class="gallery-camera-note"><a href="${esc(p.observationPreview.image)}" target="_blank" rel="noopener">View the robot’s recorded observation · Round ${num(p.observationPreview.round,0)} ↗</a></p>`:''}${previewOf(p).mediaNote?`<details class="study-media-note"><summary>${esc(previewOf(p).mediaKind)}</summary><p>${esc(previewOf(p).mediaNote)}</p></details>`:""}`:`<div class="gallery-detail-film gallery-context-film">${sceneMedia(c,p)}</div><p class="study-media-note">${c.sceneContext?.kind==='action_log'?'This text-based task is represented by its recorded results and decisions.':`Task scene from ${esc(c.sceneContext?.model)}. This model's result and log are shown below; no execution recording was supplied.`}</p>`}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
       const rounds=selection.querySelector('.gallery-rounds');
       try {
         const response=await fetch(p.detailUrl+'?v=toolbox-cameras-20261022');if(!response.ok)throw Error();const d=await response.json();
         if(!rounds.isConnected)return;
-        // A rejected initial model request is different from an unrecorded rollout.
-        const preActionFailure=d.steps?.length && d.steps.every(s=>!s.code && !s.calls?.length && s.feedback?.stage==='model_completion' && s.error);
-        if(preActionFailure && !hasPreview(p)) {
-          const connectionFailure=d.steps.every(s=>String(s.error).includes('Model API transport failure'));
-          const title=connectionFailure?'API connection failed':'Model request failed';
-          selection.querySelector('.study-outcome').textContent='API error';
-          selection.querySelectorAll('.study-meta').forEach(e=>e.remove());
-          rounds.removeAttribute('role');
-          rounds.innerHTML=`<div class="gallery-api-failure"><h4>${title}</h4><p>The initial request failed before any action was generated. No execution video was produced.</p><div class="gallery-api-facts"><strong>0 actions</strong><span>${num(p.elapsedSeconds,1)} s elapsed</span><a href="${esc(p.detailUrl)}" target="_blank" rel="noopener">Open original log ↗</a></div><details><summary>Recorded error</summary><pre>${esc(String(d.steps[0].error))}</pre></details></div>`;
-          return;
+        // API interruptions need replacement runs, including interruptions after
+        // useful actions. A budget stop or generated-code error is not an API failure.
+        if(needsRerun(p)) {
+          const before=p.executionReview.phase==='before_actions';
+          selection.querySelector('.study-outcome').textContent='Rerun required';
+          const notice=`<div class="gallery-api-failure"><h4>API-interrupted attempt</h4><p>${before?'The initial API request failed before any action was generated.':'An API request failed after execution began.'} A replacement evaluation is needed.</p><p><code>${esc(c.taskId)}</code></p><div class="gallery-api-facts"><a href="data/report/case-reruns.csv" download>Download rerun list ↓</a><a href="${esc(p.detailUrl)}" target="_blank" rel="noopener">Original record ↗</a></div><details><summary>Recorded error</summary><pre>${esc(p.executionReview.error)}</pre></details></div>`;
+          if(before) {
+            selection.querySelectorAll('.study-meta').forEach(e=>e.remove());
+            rounds.removeAttribute('role');rounds.innerHTML=notice;return;
+          }
+          rounds.insertAdjacentHTML('beforebegin',notice);
         }
         if(p.detailedTraceAvailable===false){rounds.remove();return;}
         if(p.frames?.length && p.mediaKind==='Saved observations') {

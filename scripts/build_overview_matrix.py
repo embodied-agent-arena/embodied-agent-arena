@@ -5,6 +5,7 @@ import html
 import json
 import re
 from pathlib import Path
+from audit_case_execution_health import api_interruption
 
 ROOT = Path(__file__).resolve().parents[1]
 PUB = ROOT / "public"
@@ -70,16 +71,16 @@ def build():
             preview = media or preview_video
             poster = r["poster"] if media else demo["poster"] if demo else None
             kind = "Same-task demo" if demo else r["mediaKind"]
-            stopped_before_action = bool(detail.get('steps')) and all(not s.get('code') and not s.get('calls') and s.get('feedback',{}).get('stage')=='model_completion' and s.get('error') for s in detail['steps'])
+            review = api_interruption(detail)
             if not preview:
-                assert stopped_before_action, f"Missing original footage for {r['id']}"
+                assert g.get('sceneContext', {}).get('image'), f"Missing task scene for {r['id']}"
             if demo:
                 assert demo["taskId"] == r["taskId"] and demo["modelKey"] == model
                 assert demo["countInEvaluation"] is False
             if media:
                 assert r["sourceReportSha256"] == r["mediaReportSha256"]
                 assert (PUB / media).is_file() and (PUB / r["poster"]).is_file()
-            status = OUTCOMES.get(r["outcome"], "Not completed")
+            status = "Rerun required" if review else OUTCOMES.get(r["outcome"], "Not completed")
             cid = f"arena-{row+1}-{col+1}"
             cell = {
                 "id": cid, "row": row + 1, "column": col + 1, "groupId": gid,
@@ -90,6 +91,7 @@ def build():
                 "outcome": r["outcome"], "status": status, "sourceVideo": video,
                 "sourceAnimation": animation, "poster": poster, "demoMedia": demo, "previewVideo": preview_video,
                 "mediaKind": r["mediaKind"],
+                "executionReview": review,
                 **({"cameraView": r["cameraView"], "cameraLabel": r["cameraLabel"]} if r.get("cameraView") else {}),
                 "mediaReportSha256": r["mediaReportSha256"] if media else None,
                 "mediaSha256": hashlib.sha256((PUB/media).read_bytes()).hexdigest() if media else None,
@@ -100,7 +102,7 @@ def build():
                      f'data-case="{h(gid)}" data-model="{row}" data-scene="{cid}" '
                      f'data-record="{h(r["recordId"])}" aria-describedby="scene-tooltip" '
                      f'aria-label="{h(r["model"])} · {h(benchmark)} · {h(title)}: {status}. '
-                     f'{"View same-task demo; inspect original evaluation separately" if demo else "Play recording and inspect execution" if media else "Stopped before action; inspect error record"}"')
+                     f'{"API-interrupted attempt; inspect rerun details" if review else "View same-task demo; inspect original evaluation separately" if demo else "Play recording and inspect execution" if media else "Shared task scene; inspect execution record"}"')
             if preview_video:
                 visual = (f'<video muted loop playsinline preload="none" '
                           f'poster="{h(poster)}" data-preview-src="{h(preview_video)}" '
@@ -113,9 +115,9 @@ def build():
                 context = g['sceneContext']
                 assert context['taskId']==r['taskId']
                 visual = (f'<img loading="lazy" src="{h(context["image"])}" '
-                          f'alt="Same-task scene from {h(context["model"])}; this model produced no actions">'
+                          f'alt="Shared task scene from {h(context["model"])}; not this model\'s execution">'
                           '<span class="overview-context-label">Scene only</span>'
-                          '<span class="overview-media-status">API error · 0 actions ↗</span>')
+                          f'<span class="overview-media-status">{status} ↗</span>')
             if preview:
                 badge = "Demo · Not scored" if demo else status
                 if demo or kind == "Saved observations":
@@ -143,9 +145,9 @@ def build():
         'native task in each column. Results remain visible when footage is unavailable.</caption>'
         f'<thead><tr>{"".join(heads)}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>\n'
         '<figcaption><details><summary>Recording Coverage</summary>Each column uses one fixed task. '
-        '104 evaluation previews, 3 separately labeled same-task demos, and 3 API failures before action. '
-        'The three Qwen agents on HumanCLAW returned a connection error on their initial request; no action video was produced. '
-        'Demos do not change scores; observed-frame slideshows show inputs rather than continuous actions.</details></figcaption>\n'
+        'Scene only shows the shared task context when a model has no execution footage. '
+        'API-interrupted attempts are marked Rerun required; runtime errors and budget stops retain their outcomes. '
+        'Demos do not change scores. <a href="data/report/case-reruns.csv" download>Download rerun list ↓</a></details></figcaption>\n'
         '</figure>\n<!-- END EXACT_TASK_OVERVIEW -->'
     )
     index = PUB / "index.html"
@@ -162,12 +164,13 @@ def build():
                 "tiles": cells, "taskCount": len(columns), "recordCount": len(cells),
                 "recordingCount": sum(bool(c["mediaSha256"]) for c in cells),
                 "demoCount": sum(bool(c.get("demoMedia")) for c in cells),
+                "rerunCount": sum(bool(c.get("executionReview")) for c in cells),
                 "source": "data/case-comparisons.json",
                 "matching": ["taskId", "modelKey", "identitySha256", "reportSha256"]}
     (PUB / "data/report/overview-provenance.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     doc = ["# Tasks in the overview", "",
-           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} results and {manifest['recordingCount']} matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). The remaining **3 records failed before actions began**.", "",
+           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} attempt records and {manifest['recordingCount']} matching evaluation previews**, plus **{manifest['demoCount']} independently recorded same-task demos** (excluded from scores). **{manifest['rerunCount']} API-interrupted attempts require reruns**; these are labeled separately from runtime errors and budget stops. [Rerun list](../public/data/report/case-reruns.csv).", "",
            "## Fixed tasks", "", "| Benchmark | Task | Compare |", "| :--- | :--- | :--- |"]
     for c in columns:
         gid = c['groupId']

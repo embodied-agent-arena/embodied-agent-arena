@@ -138,6 +138,7 @@
 .gallery-run-task{font-size:12px;line-height:1.35;color:#677970;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .gallery-run-outcome{font-size:13px;line-height:1.35;font-weight:600}
 .gallery-run-outcome.success{color:#567650}
+.gallery-run-outcome.pending{color:#8b5b24}
 .gallery-run.demo{border-color:#d9c99f}.gallery-run.demo .gallery-run-outcome{color:#8a6a32}
 .gallery-run.uncertain .gallery-run-outcome{color:#896633}
 .gallery-no-recording{display:flex;align-items:center;justify-content:center;height:100%;font-size:13px;color:#7b8a81;padding:20px;text-align:center;box-sizing:border-box}

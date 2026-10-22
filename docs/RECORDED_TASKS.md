@@ -1,6 +1,6 @@
 # Tasks in the overview
 
-The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 results and 104 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). The remaining **3 records failed before actions began**.
+The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 104 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **4 API-interrupted attempts require reruns**; these are labeled separately from runtime errors and budget stops. [Rerun list](../public/data/report/case-reruns.csv).
 
 ## Fixed tasks
 

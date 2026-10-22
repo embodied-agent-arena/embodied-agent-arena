@@ -3,7 +3,7 @@ const pub=path.resolve(__dirname,'../public');
 const context={document:{getElementById:()=>({})},fetch:async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(pub,url.split('?')[0]),'utf8'))})};
 vm.createContext(context);
 const source=fs.readFileSync(pub+'/case-studies.js','utf8').split("  const content = document.getElementById('study-dialog-content');")[0];
-vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,executionRecords,boxCases,lookup:id=>records.get(id)};})();',context);
+vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,executionRecords,runTile,hasPreview,displayOutcome,boxCases,lookup:id=>records.get(id)};})();',context);
 (async()=>{
  const cs=await context.checks.load();let executions=0,staticCount=0;
  for(const c of cs){
@@ -20,6 +20,17 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,execu
    executions++;assert.equal((html.match(/class="gallery-run /g)||[]).length,10,c.id);
    assert.equal(context.checks.executionRecords(c).length,10);
    assert(!html.includes('gallery-record-strip'));
+   assert(!html.includes('>Action log<'),`${c.id}: a log animation is not execution footage`);
+   for(const [i,r] of context.checks.executionRecords(c).entries()){
+    const tile=context.checks.runTile(c,r,i);
+    if(r.mediaKind==='Animated execution log'){
+     assert(!context.checks.hasPreview(r));
+     assert(!tile.includes(r.animation));
+     assert(tile.includes(c.sceneContext.kind==='scene'?'Scene only':'Text-based task'));
+    }
+    if(r.executionReview) assert(tile.includes('Rerun required'));
+    if(r.outcome==='runtime_failure' && !r.executionReview) assert.equal(context.checks.displayOutcome(r),'Runtime error');
+   }
   }else {staticCount++;assert.equal((html.match(/class="gallery-model /g)||[]).length,10,c.id);}
  }
  const original=JSON.parse(fs.readFileSync(pub+'/data/case-studies.json'));
@@ -27,6 +38,11 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,execu
  const toolboxHTML=context.checks.caseSlide(toolbox,0,cs.length);
  assert.equal((toolboxHTML.match(/class="gallery-camera-label"/g)||[]).length,2);
  assert(toolboxHTML.includes('Same task and seed.'));
+ const calvin=context.checks.lookup('task-video-720f338150');
+ const ds=context.checks.executionRecords(calvin).find(r=>r.modelKey==='deepseek');
+ const dsTile=context.checks.runTile(calvin,ds,8);
+ assert(dsTile.includes('Scene only'));assert(dsTile.includes('Budget reached'));
+ assert(dsTile.includes(calvin.sceneContext.image));assert(!dsTile.includes('Rerun required'));
  for(const c of original.filter(c=>!c.predictions.length))assert.equal(context.checks.lookup(c.id).taskId,c.sample);
  assert.throws(()=>context.checks.executionRecords({runIds:[],taskId:'wrong'}));
  console.log(`Rendered ${executions} execution tasks + ${staticCount} fixed-input tasks: exactly ten model cells each. All old links resolve to their exact task.`);

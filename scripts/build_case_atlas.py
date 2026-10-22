@@ -33,18 +33,18 @@ def build():
                 and not r.get('video') and not r.get('animation')
             ) for r in runs)
             preview = dynamic['runs'][c['sceneContext']['sourceRunId']]
-            if preview:
+            if preview and preview['mediaKind'] != 'Animated execution log':
                 assert preview['sourceReportSha256'] == preview['mediaReportSha256']
                 assert (PUB/preview['poster']).is_file()
                 record = f' data-preview-record="{h(preview["id"])}"'
-                label = f'{preview["model"]} · {"Action log" if preview["mediaKind"]=="Animated execution log" else "Preview"}'
+                label = f'{preview["model"]} · Preview'
                 if preview.get('video'):
                     media = f'<video muted loop playsinline preload="none" poster="{h(preview["poster"])}" data-video="{h(preview["video"])}" aria-label="{h(label)}"></video>'
                 else:
                     media = f'<img src="{h(preview["poster"])}" data-animation="{h(preview["animation"])}" data-poster="{h(preview["poster"])}" alt="{h(label)}" loading="lazy">'
                 media += f'<span class="atlas-preview-label">{h(label)}</span>'
             else:
-                media = '<span class="study-result">Recorded outcomes · Open to compare ↗</span>'
+                media = '<span class="study-result">Text-based task<br>Compare recorded outcomes ↗</span>'
             result = f'{model_count} model outcomes'
         else:
             assert len(c['predictions']) == model_count

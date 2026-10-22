@@ -8,13 +8,17 @@ const source = fs.readFileSync(path.join(pub, 'execution-analysis.js'), 'utf8');
 const context = {document: {getElementById: () => ({})}};
 vm.createContext(context);
 vm.runInContext(source.split('  function playbackLabel()')[0] +
-  'globalThis.normalizeTrace = normalizeTrace;})();', context);
+  'globalThis.normalizeTrace = normalizeTrace;globalThis.hasSceneAnimation=hasSceneAnimation;globalThis.outcome=outcome;})();', context);
 const index = JSON.parse(fs.readFileSync(path.join(pub, 'data/execution/complete-index.json')));
+const health = JSON.parse(fs.readFileSync(path.join(pub, 'data/report/case-execution-health.json')));
 let records = 0, summaries = 0;
 for (const story of index.stories) {
   assert.equal(story.runs.length, 10);
   assert.equal(new Set(story.runs.map(r => r.taskId)).size, 1);
   for (const run of story.runs) {
+    if(run.mediaKind==='Animated execution log') assert.equal(context.hasSceneAnimation(run),false);
+    const issue=health.runs['record-'+run.recordId];
+    if(issue) assert.equal(context.outcome({...run,executionReview:issue}),'Rerun required');
     const input = JSON.parse(fs.readFileSync(path.join(pub, run.detailUrl)));
     const detail = context.normalizeTrace(input, run);
     assert.equal(detail.steps.length, input.steps.length);

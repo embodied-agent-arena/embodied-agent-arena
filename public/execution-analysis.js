@@ -11,6 +11,9 @@
   const stopNames = {max_total_tokens:'Token limit',max_agent_iterations:'Round limit',primitive_calls:'Action-call limit',max_env_steps:'Step limit',max_code_turns:'Code-round limit',max_primitive_calls:'Tool-call limit',max_rounds:'Round limit'};
   const cache = new Map(), panes = {};
   let data,story,generation=0,pendingStory,pendingModels;
+  const needsRerun=r=>r.executionReview?.status==='rerun_required';
+  const hasSceneAnimation=r=>!!(r.animation && r.mediaKind!=='Animated execution log');
+  const outcome=r=>needsRerun(r)?'Rerun required':r.success?'Completed':({budget_exhausted:'Budget reached',timeout:'Timed out',runtime_failure:'Runtime error',agent_failure:'Agent error'}[r.outcome]||'Not completed');
   async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=toolbox-cameras-20261022').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
   const limitsOf = r => ({...r.budgets,
     max_rounds: r.loopBudgets?.max_turns ?? r.budgets.max_rounds ?? r.budgets.max_code_turns ?? r.budgets.max_agent_iterations,
@@ -43,7 +46,6 @@
     return d;
   }
   function playbackLabel(){const b=root.querySelector('.exec-play');if(!b)return;const vs=[...root.querySelectorAll('.exec-video')];b.hidden=!vs.length;b.textContent=vs.some(v=>!v.paused)?'Ⅱ Pause':vs.length===2?'▶ Play Both':'▶ Play Clip';}
-  const outcome=r=>r.success?'Completed':'Not completed';
   const metric=(value,label,cls='')=>`<div class="${cls}"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`;
   function updateUrl(){const u=new URL(location.href);u.searchParams.set('analysis',story.id);[0,1].forEach(i=>{const r=story.runs.find(r=>r.id===root.querySelector(`[data-pane="${i}"]`)?.dataset.run);if(r)u.searchParams.set(i?'modelB':'modelA',r.modelKey);});u.hash='execution-analysis';history.replaceState(null,'',u);}
   function selectStory(id,models){renderStory(id,models);updateUrl();}
@@ -69,12 +71,13 @@
     let second=s.actionSubmissions!=null?[num(s.actionSubmissions),'Action submissions']:[num(s.rounds),'Decision rounds'];
     if(story.id==='precision'){result=num(s.nativeSteps);resultLabel='Native steps';second=[`${num(s.finalGoalDistanceCm)} cm`,'Final goal distance'];}
     if(['time','horizon'].includes(story.id)){result=num(s.rounds);resultLabel='Decision rounds';second=[tokens(s.tokens),'Tokens used'];}
+    if(needsRerun(r)){result='Pending';resultLabel='API-interrupted attempt';}
     return metric(result,resultLabel,r.success?'is-success':'is-incomplete')+metric(...second)+metric(time(s.elapsedSeconds),'Episode time');
   }
   function episodeLimits(r){
     const b=limitsOf(r);
     const limits=[b.max_rounds?`${num(b.max_rounds)} rounds`:null,b.max_total_tokens?`${tokens(b.max_total_tokens)} tokens`:null,b.timeout_seconds?`${num(b.timeout_seconds/60)} min`:null].filter(Boolean);
-    const ending=r.success?'Goal satisfied':r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x.replaceAll('_',' ')).join(', '):'Task incomplete';
+    const ending=needsRerun(r)?'API request failed · Rerun required':r.success?'Goal satisfied':r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x.replaceAll('_',' ')).join(', '):'Task incomplete';
     return `<div class="exec-limit-strip"><span>Ceilings: ${esc(limits.join(' · '))}</span><strong>Ended: ${esc(ending)}</strong></div>`;
   }
   function actionSummary(step){
@@ -93,7 +96,7 @@
     const scene=story.sceneContext?.taskId===r.taskId && story.sceneContext.kind==='scene'?story.sceneContext:null;
     const sceneOnly=scene?`<div class="exec-video-frame"><img src="${esc(scene.image)}" alt="Shared task scene from ${esc(scene.model)}; no recording for this model"><span class="exec-video-kind">Scene only · ${esc(scene.model)} reference view</span></div>`:`<div class="exec-log-preview"><h4>Recorded result</h4><p>Inspect the actions and feedback below.</p></div>`;
     const style=window.ArenaModelStyle.get(r.modelKey);pane.style.setProperty('--model-color',style.color);pane.style.setProperty('--model-light',style.light);
-    pane.innerHTML=`<header class="exec-model"><div class="exec-model-picker"><label class="sr-only" for="exec-model-${i}">Model ${i?'B':'A'}</label><div><img src="${style.logo}" width="22" height="22" alt=""><select id="exec-model-${i}">${story.runs.map(x=>`<option value="${esc(x.id)}" ${x.id===id?'selected':''}>${esc(short(x))}</option>`).join('')}</select></div></div><span class="exec-outcome ${r.success?'is-success':''}">${outcome(r)}</span></header>${isLog&&(r.animation||r.demoMedia)?`<div class="exec-video-frame">${r.demoMedia?`<video class="exec-demo-video" controls muted loop playsinline preload="metadata" poster="${esc(r.demoMedia.poster)}" src="${esc(r.demoMedia.video)}"></video>`:`<img src="${esc(r.animation)}" alt="${esc(r.model)} original input observations">`}<span class="exec-video-kind">${r.demoMedia?'Same-task demo · Separate from the evaluation below':'Observed frames · Original evaluation'}</span></div>`:isLog?sceneOnly:`<div class="exec-video-frame"><video class="exec-video" controls muted playsinline preload="metadata" poster="${esc(r.poster)}" src="${esc(r.video)}" aria-label="${esc(r.model+' — '+story.taskLabel)}"></video><span class="exec-video-kind">${esc(r.cameraView==='external'?'External camera':r.mediaKind||'Video excerpt')}</span></div>`}<div class="exec-metrics">${finalMetrics(r)}</div>${episodeLimits(r)}${story.goalLabels&&story.id==='sequence'?`<div class="exec-goal-sequence" aria-label="Final subgoal check">${story.goalLabels.map((label,j)=>`<span class="${j<r.progress.value?'done':''}"><b>${j<r.progress.value?'✓':j+1}</b>${esc(label)}</span>`).join('')}</div>`:''}<div class="exec-trace-loading" role="status">Loading decisions…</div>`;
+    pane.innerHTML=`<header class="exec-model"><div class="exec-model-picker"><label class="sr-only" for="exec-model-${i}">Model ${i?'B':'A'}</label><div><img src="${style.logo}" width="22" height="22" alt=""><select id="exec-model-${i}">${story.runs.map(x=>`<option value="${esc(x.id)}" ${x.id===id?'selected':''}>${esc(short(x))}</option>`).join('')}</select></div></div><span class="exec-outcome ${r.success?'is-success':''}">${outcome(r)}</span></header>${isLog&&(hasSceneAnimation(r)||r.demoMedia)?`<div class="exec-video-frame">${r.demoMedia?`<video class="exec-demo-video" controls muted loop playsinline preload="metadata" poster="${esc(r.demoMedia.poster)}" src="${esc(r.demoMedia.video)}"></video>`:`<img src="${esc(r.animation)}" alt="${esc(r.model)} original input observations">`}<span class="exec-video-kind">${r.demoMedia?'Same-task demo · Separate from the evaluation below':'Observed frames · Original evaluation'}</span></div>`:isLog?sceneOnly:`<div class="exec-video-frame"><video class="exec-video" controls muted playsinline preload="metadata" poster="${esc(r.poster)}" src="${esc(r.video)}" aria-label="${esc(r.model+' — '+story.taskLabel)}"></video><span class="exec-video-kind">${esc(r.cameraView==='external'?'External camera':r.mediaKind||'Video excerpt')}</span></div>`}<div class="exec-metrics">${finalMetrics(r)}</div>${episodeLimits(r)}${story.goalLabels&&story.id==='sequence'?`<div class="exec-goal-sequence" aria-label="Final subgoal check">${story.goalLabels.map((label,j)=>`<span class="${j<r.progress.value?'done':''}"><b>${j<r.progress.value?'✓':j+1}</b>${esc(label)}</span>`).join('')}</div>`:''}<div class="exec-trace-loading" role="status">Loading decisions…</div>`;
     pane.querySelector('select').onchange=e=>{const newId=e.target.value;renderPane(i,newId);const other=root.querySelector(`[data-pane="${1-i}"]`);if(other.dataset.run===newId)renderPane(1-i,story.runs.find(x=>x.id!==newId).id);updateUrl();};
     const v=pane.querySelector('video');
     if(v){['play','pause','ended'].forEach(type=>v.addEventListener(type,playbackLabel));}
@@ -134,7 +137,15 @@
   }
   async function init(){
     try{
-      data=await get('data/execution/complete-index.json');
+      const [index,health]=await Promise.all([get('data/execution/complete-index.json'),get('data/report/case-execution-health.json')]);
+      data=index;
+      for(const s of data.stories)for(const r of s.runs){
+        const issue=health.runs['record-'+r.recordId];
+        if(issue){
+          if(issue.taskId!==r.taskId || issue.reportSha256!==r.reportSha256)throw Error('Execution audit mismatch');
+          r.executionReview=issue;
+        }
+      }
       document.getElementById('exec-counts').textContent=`${data.stories.length} Tasks · ${data.modelCount} Models`;
       document.getElementById('exec-questions').innerHTML=data.stories.filter(s=>s.featured).map(s=>`<button type="button" data-exec-story="${s.id}" aria-pressed="false">${esc(s.label)}</button>`).join('');
       root.querySelectorAll('[data-exec-story]').forEach(b=>b.onclick=()=>selectStory(b.dataset.execStory));
