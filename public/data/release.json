@@ -1,6 +1,6 @@
 {
   "manuscript_date": "2026-10-23",
-  "manuscript_version": "Updated author manuscript with Qwen HumanCLAW results and final error scoring",
+  "manuscript_version": "Updated author manuscript; arXiv replacement submitted, awaiting announcement",
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 73,
@@ -305,18 +305,20 @@
     "all_nonfinal_max_extra_bottom_space_pt": 77.5,
     "audit": "docs/MANUSCRIPT_LAYOUT_AUDIT.md"
   },
-  "revision_history_note": "Top-level hashes, humanclaw_qwen_refresh, and final_error_policy describe the current author manuscript. Earlier entries and arxiv_submission preserve their historical scope; the submitted arXiv archive is unchanged.",
+  "revision_history_note": "Top-level hashes, humanclaw_qwen_refresh, final_error_policy, and arxiv_submission describe the current 73-page manuscript, submitted as an arXiv replacement on 23 October 2026. Earlier entries retain their historical scope.",
   "arxiv_submission": {
     "article_id": "2610.00854",
     "type": "replacement",
     "status": "submitted",
     "announcement_status": "pending",
-    "submitted_verified_at": "2026-10-23T02:14:18+08:00",
+    "new_version_number": null,
+    "submitted_verified_at": "2026-10-23T22:24:21.661210+08:00",
     "category": "cs.RO",
     "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "pages": 63,
-    "source_sha256": "8c1e621e6f816147f509eb35dfe127dfd8c19ae19bd06c0e30381d2b18fd4fbd",
-    "arxiv_preview_sha256": "b96be9e8435b01be78c1bbfa5ef9bce2911e32741af3cc3f820ad649331a9025"
+    "pages": 73,
+    "source_sha256": "bdfddfe312aaf6762520a0c7650eb8fc0a954ba659bb55fb6150734bf7fcb331",
+    "reference_pdf_sha256": "5aeb0b0da28e4403dd53717df54ab9a90ad8cf6e47ea44bd500c1f6ea864db99",
+    "arxiv_preview_sha256": "4f30a5dc625c8bd5324275a7118ce7b3bcd9be69429fe15480910648442663fd"
   },
   "humanclaw_qwen_refresh": {
     "date": "2026-10-23",
@@ -346,7 +348,7 @@
     "audit": "data/report/planning-comparison-audit.json",
     "complete_index": "humanclaw-refresh.html",
     "remaining_gaps": "data/humanclaw-refresh/remaining-gaps.csv",
-    "arxiv_updated": false,
+    "arxiv_updated": true,
     "pending_reruns": 0,
     "provider_interruptions_final": true
   },
@@ -360,6 +362,6 @@
     "paper_sha256": "5aeb0b0da28e4403dd53717df54ab9a90ad8cf6e47ea44bd500c1f6ea864db99",
     "source_sha256": "bdfddfe312aaf6762520a0c7650eb8fc0a954ba659bb55fb6150734bf7fcb331",
     "paper_pages": 73,
-    "arxiv_updated": false
+    "arxiv_updated": true
   }
 }

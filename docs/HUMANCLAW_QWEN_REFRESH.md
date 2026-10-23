@@ -14,7 +14,7 @@ HumanCLAW evaluates three Qwen models on the same 13 tasks with seed 42. Results
 
 The four new successes are navigation tasks. None of the three models completes a sitting task. Two Qwen Max attempts end in provider interruptions. Both count as unsuccessful outcomes and are labeled **API error**, with their original error reasons and partial observation replays retained. No reruns are scheduled. The ten-model success union remains **142/157**, with **15** tasks unsolved by all models and **8** solved by all ten.
 
-Table 2, Figures 3 and 7, the Planning execution profile, the README comparison, interactive charts and affected appendix tables use these replacement results. Other capability scores are unchanged. The current author PDF includes the earlier expanded experimental analysis and this refresh; the previously submitted arXiv archive remains unchanged.
+Table 2, Figures 3 and 7, the Planning execution profile, the README comparison, interactive charts and affected appendix tables use these replacement results. Other capability scores are unchanged. The current 73-page author PDF includes the expanded experimental analysis and this refresh. This version was submitted as a replacement of arXiv:2610.00854 on 23 October 2026 and is awaiting announcement.
 
 ## Footage and final error outcomes
 
