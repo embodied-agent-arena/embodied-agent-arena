@@ -69,7 +69,8 @@ def build():
     intro_end = page.index('<div class="study-grid atlas-grid">', intro_start)
     filters = ''.join(f'<button data-study-filter="{key}" aria-pressed="{str(key=="all").lower()}">{label}</button>' for key,label in [
         ('all','All'),('geometry','Geometry'),('spatial','Spatial'),('affordance','Affordance'),('planning','Planning'),('manipulation','Manipulation')])
-    intro = (f'<div class="atlas-heading"><div><h1>Case Atlas</h1><p>Same task. Ten models.</p></div>'
+    intro = (f'<div class="atlas-heading"><div><h1>Case Atlas</h1><p>Same task. Ten models. '
+             '<a href="humanclaw-refresh.html">HumanCLAW: all refreshed Qwen runs ↗</a></p></div>'
              '<button class="atlas-motion" data-atlas-motion aria-pressed="false">Pause previews</button></div>'
              '<div class="atlas-tools"><label class="study-search"><span class="sr-only">Find a case</span>'
              '<input type="search" id="study-search" placeholder="Search a task, object or benchmark…"></label>'

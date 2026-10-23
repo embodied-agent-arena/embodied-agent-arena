@@ -1,0 +1,86 @@
+{
+  "qwen": {
+    "old": {
+      "successes": 56,
+      "n": 157,
+      "percent": 35.6687898089172,
+      "token_coverage": 133,
+      "total_recorded_tokens": 11086742.0,
+      "failed_recorded_tokens": 7544899.0,
+      "failed_token_share_pct": 68.05334696162318,
+      "human_failed_share_of_failed_pct": 1.1830907212939497,
+      "outside_human_failed_token_share_pct": 67.79404625369142,
+      "mean_worker_or_report_seconds": 327.97969249044587,
+      "median_worker_or_report_seconds": 273.595426
+    },
+    "new": {
+      "successes": 58,
+      "n": 157,
+      "percent": 36.94267515923567,
+      "token_coverage": 145,
+      "total_recorded_tokens": 21208755.0,
+      "failed_recorded_tokens": 17217938.0,
+      "failed_token_share_pct": 81.18316233083931,
+      "human_failed_share_of_failed_pct": 56.698438570286406,
+      "outside_human_failed_token_share_pct": 67.79404625369142,
+      "mean_worker_or_report_seconds": 609.6047043566879,
+      "median_worker_or_report_seconds": 299.998177
+    }
+  },
+  "qwen35-27b": {
+    "old": {
+      "successes": 30,
+      "n": 157,
+      "percent": 19.10828025477707,
+      "token_coverage": 145,
+      "total_recorded_tokens": 14280995.0,
+      "failed_recorded_tokens": 12408751.0,
+      "failed_token_share_pct": 86.88996109864894,
+      "human_failed_share_of_failed_pct": 8.686732451960717,
+      "outside_human_failed_token_share_pct": 85.81964208351384,
+      "mean_worker_or_report_seconds": 128.29125640764332,
+      "median_worker_or_report_seconds": 77.868721
+    },
+    "new": {
+      "successes": 30,
+      "n": 157,
+      "percent": 19.10828025477707,
+      "token_coverage": 157,
+      "total_recorded_tokens": 32765703.0,
+      "failed_recorded_tokens": 30893459.0,
+      "failed_token_share_pct": 94.2859641986012,
+      "human_failed_share_of_failed_pct": 63.322863911095226,
+      "outside_human_failed_token_share_pct": 85.81964208351384,
+      "mean_worker_or_report_seconds": 292.96770641401275,
+      "median_worker_or_report_seconds": 94.546354
+    }
+  },
+  "qwen35-397b": {
+    "old": {
+      "successes": 28,
+      "n": 157,
+      "percent": 17.8343949044586,
+      "token_coverage": 144,
+      "total_recorded_tokens": 12970394.0,
+      "failed_recorded_tokens": 11034061.0,
+      "failed_token_share_pct": 85.07113199491087,
+      "human_failed_share_of_failed_pct": 0.0,
+      "outside_human_failed_token_share_pct": 85.07113199491087,
+      "mean_worker_or_report_seconds": 128.92912818471336,
+      "median_worker_or_report_seconds": 98.695765
+    },
+    "new": {
+      "successes": 30,
+      "n": 157,
+      "percent": 19.10828025477707,
+      "token_coverage": 157,
+      "total_recorded_tokens": 27827378.0,
+      "failed_recorded_tokens": 25560379.0,
+      "failed_token_share_pct": 91.85335032283675,
+      "human_failed_share_of_failed_pct": 56.83138735931889,
+      "outside_human_failed_token_share_pct": 85.07113199491087,
+      "mean_worker_or_report_seconds": 296.74656060509557,
+      "median_worker_or_report_seconds": 106.528403
+    }
+  }
+}

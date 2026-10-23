@@ -1,6 +1,6 @@
 # Tasks in the overview
 
-The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 104 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **4 API-interrupted attempts require reruns**; these are labeled separately from runtime errors and budget stops. [Rerun list](../public/data/report/case-reruns.csv).
+The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 107 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **1 API-interrupted attempts require reruns**; these are labeled separately from runtime errors and budget stops. [Rerun list](../public/data/report/case-reruns.csv).
 
 ## Fixed tasks
 
@@ -24,9 +24,9 @@ The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent
 2. **GPT&#8209;6&nbsp;Sol** — 11 scene previews; 11 task results.
 3. **Claude&nbsp;Fable&nbsp;5.1** — 11 scene previews; 11 task results.
 4. **Gemini&nbsp;3.8&nbsp;Flash** — 11 scene previews; 11 task results.
-5. **Qwen&nbsp;3.8&nbsp;Max** — 10 scene previews; 11 task results.
-6. **Qwen&nbsp;3.5&nbsp;397B&#8209;A17B** — 10 scene previews; 11 task results.
-7. **Qwen&nbsp;3.5&nbsp;27B** — 10 scene previews; 11 task results.
+5. **Qwen&nbsp;3.8&nbsp;Max** — 11 scene previews; 11 task results.
+6. **Qwen&nbsp;3.5&nbsp;397B&#8209;A17B** — 11 scene previews; 11 task results.
+7. **Qwen&nbsp;3.5&nbsp;27B** — 11 scene previews; 11 task results.
 8. **Claude&nbsp;Opus&nbsp;5.5** — 11 scene previews; 11 task results.
 9. **DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017** — 11 scene previews; 11 task results.
 10. **Gemini&nbsp;4&nbsp;Argon** — 11 scene previews; 11 task results.

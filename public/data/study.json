@@ -1,13 +1,13 @@
 {
   "title": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
-  "description": "Ten frontier VLM agents evaluated across five robotic capabilities on 1,000 cases, connecting local precision to complete task execution.",
+  "description": "Ten frontier VLM agents evaluated across five embodied capabilities on 1,000 cases, from perception and interaction to complete task execution.",
   "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
   "manuscript_date": "2026-10-23",
-  "manuscript_version": "Updated author manuscript; arXiv replacement submitted, awaiting announcement",
-  "paper_pages": 63,
-  "abstract": "A robot generalist must turn scene understanding into actions that satisfy a complete goal. How far do frontier vision-language models (VLMs) meet this requirement? We introduce Embodied Agent Arena to evaluate ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces. Model rankings change with the metric and task mixture, while similar perceptual scores conceal large differences in procedural success. Model diversity broadens coverage, yet some tasks defeat every agent. Low geometric error and valid contact points can leave path constraints or functional regions unresolved. Long-horizon tasks often stall after early subgoals; precision contact remains difficult even when transport and placement succeed. Additional computation does not reliably close these gaps: self-review can degrade answers, and repaired code can resume activity without restoring task progress. Unsuccessful attempts absorb most planning tokens. Across CALVIN, ManiSkill, and household tasks, reliable completion requires precise interactions and sustained progress through dependent goals.",
+  "manuscript_version": "Updated author manuscript with refreshed Qwen HumanCLAW results",
+  "paper_pages": 73,
+  "abstract": "A robot generalist must interpret a scene, act on it, and satisfy every condition of a task. How far do frontier vision-language models (VLMs) meet these demands? We introduce Embodied Agent Arena, evaluating ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces. Closed-weight models lead all five domains, whereas open-weight VLMs show useful spatial reasoning but substantially lower planning and manipulation success. Beneath these averages, similar geometric errors conceal different scale and shape distortions, and valid region estimates need not identify usable action points. During execution, agents can achieve early subgoals yet lose object control, bind an action to the wrong receiving region, or stop before the required physical state holds. Additional computation does not uniformly resolve these failures: code repair can restore execution without completing the task, while self-review can reverse correct judgments. Failure costs also differ: the strongest planners concentrate failed-token expenditure in prolonged body-control tasks, whereas other models fail broadly across procedures. Matched traces show how successful recovery uses feedback to restore a missing prerequisite and advance the remaining task.",
   "authors": [
     {
       "name": "Haojian Huang",
@@ -187,7 +187,7 @@
         "0.206 ± 0.033",
         "0.272 ± 0.017",
         "0.307",
-        "35.7",
+        "36.9",
         "9.3"
       ],
       "metric_runs": [
@@ -237,7 +237,7 @@
         "0.251 ± 0.027",
         "0.116 ± 0.014",
         "0.092",
-        "17.8",
+        "19.1",
         "9.9"
       ],
       "metric_runs": [
@@ -358,9 +358,16 @@
     "table": "Table 2",
     "page": 7,
     "model_table": "Table A5",
-    "model_page": 23,
+    "model_page": 25,
     "protocol": "All ten agents use the same assigned task inventory, source-native interfaces, RGB observations and native success criteria. Manipulation retains each evaluation batch’s recorded observation schedule and execution ceilings; the protocol audit documents the differences.",
     "repetitions": "Non-tracing Geometry, Spatial Reasoning, and box/point Affordance: five runs, except Fable (three). Polygon grounding, tracing, Planning, and Manipulation: one run per assignment.",
     "aggregation": "Mean of per-run metrics ± sample SD (ddof=1). Continuous metrics use valid predictions within each run; binary rates retain all assigned cases."
+  },
+  "humanclaw_refresh": {
+    "date": "2026-10-23",
+    "replaced_records": 39,
+    "source": "humanclaw-qwen-results-20261023.zip",
+    "selection": "Latest per-case worker result; not best outcome. Native success flags; all assigned cases retained.",
+    "provider_interruptions": 2
   }
 }

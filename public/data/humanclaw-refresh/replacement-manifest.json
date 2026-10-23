@@ -1,0 +1,314 @@
+[
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--102816036-2-couch--42--657a2443a8bd",
+    "recordId": "ec2f58abe5ef09b72ac6",
+    "replacementRecordId": "qwen-01",
+    "oldReportSha256": "23f45a9993a51a0e99d2dace7aae9e27a103802e92a055b76b2007e48c7ff076",
+    "newReportSha256": "08142eeaa25f818ccc858ba11a06de12feb0797d44a0b00f0da79a79a6f04e31"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--102816756-20-couch--42--43365d945e10",
+    "recordId": "1bfcefcdec8968d5c699",
+    "replacementRecordId": "qwen-02",
+    "oldReportSha256": "4a5eca22254e68b70c3ab174733fc4a8d379567092be85c4a0c0357b78c345d7",
+    "newReportSha256": "0c4488b40230c285ba104414b4d6bcf2b19b2aec867a69b7d5cb49f2176b69e3"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--103997586_171030669-20-couch--42--4d79f1e67c3f",
+    "recordId": "34e8af5f637e12a56dd0",
+    "replacementRecordId": "qwen-03",
+    "oldReportSha256": "cad9d2cc61c0eb384cec39b02739c72fa49901d809e3e2904422453f1a5357f4",
+    "newReportSha256": "fd1d4237f3968b6279e1820cc2bff244a914eed069b06f9903394015067e1549"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--104862384_172226319-19-couch--42--5355e60f1f7f",
+    "recordId": "d35dde7391864de5cac4",
+    "replacementRecordId": "qwen-04",
+    "oldReportSha256": "85fbb50e797f2619801d6b962969a81489d3002dfb4099075fa3d1cccd9070a9",
+    "newReportSha256": "5831f1918ac6fba9ee8e24387e4fcced351fed5676805d5890c2c2a851600f8c"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
+    "recordId": "8ffa102eebf9c3e0efa5",
+    "replacementRecordId": "qwen-00",
+    "oldReportSha256": "b11b13962ed87bc01718fb1e95ffc60a9d38b6a0944be420024be9df25e75107",
+    "newReportSha256": "35d725204ee4ffbb38c86dcd4fcf96e8abffd047ddbaee5a3100b667929d38d1"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--104862501_172226556-17-potted_plant--42--0bbe551ad27b",
+    "recordId": "145c1e8441abf1d91f2c",
+    "replacementRecordId": "qwen-05",
+    "oldReportSha256": "a3e413adf21d73c2b2c025bea387dd9d5eb682cbddec9058f193c19728e49e61",
+    "newReportSha256": "e042021756fa8bdee9c64b685973a678b70aaa03743057e8bc7fe880502d5fe0"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--105515184_173104128-13-chair--42--33c178bb7d0f",
+    "recordId": "d1ead04bd22345fb2e38",
+    "replacementRecordId": "qwen-06",
+    "oldReportSha256": "e0883a31121da20a1e6cfad72f0cadf0445a3e8a9a25b228bc9718679246ed04",
+    "newReportSha256": "40ad7d43660f9c0b5344284fddb035c25e5a166f21cea6c13cca6e7cd277a9db"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--105515211_173104185-14-toilet--42--9a3d816c6e98",
+    "recordId": "33a2afbf6b6aca7804f4",
+    "replacementRecordId": "qwen-07",
+    "oldReportSha256": "8a5c727f74e117c64b3446d4c70cfaadc381e92e1a41f66abf8796cc11b509c3",
+    "newReportSha256": "c6d17ed948a5cfb4fb1972cc8f356baf6f9ece3503fd097874803f8ad3c4520f"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--106878960_174887073-26-toilet--42--83b0dd75082b",
+    "recordId": "1273def428c144e2723b",
+    "replacementRecordId": "qwen-08",
+    "oldReportSha256": "adf604ddbc24a0c666e6f09b31e80e7461675e4c7742155f3a593f3dd470058e",
+    "newReportSha256": "bc4491b146dcd4f8982396702ec745d8d9558763a87724355793e5a0215a7235"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--107734287_176000160-2-potted_plant--42--20d36cae8cb0",
+    "recordId": "9b86548fb68ceab447cb",
+    "replacementRecordId": "qwen-09",
+    "oldReportSha256": "5b792ed682b2ac2e6daedd6dbf16af2f49d6d458885c213c0b7953657415236e",
+    "newReportSha256": "a609344bdcc329d173e75f08f6fbb5f7d4cf29f7ae5ab913e952a8fce156e725"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--107734338_176000244-12-tv--42--5bff83d2849d",
+    "recordId": "e3585d035bf97f0b3632",
+    "replacementRecordId": "qwen-10",
+    "oldReportSha256": "7ae093b8ec74dfbf3d16204243f6115c93cf516e6b3739d1445515ed4387f6ca",
+    "newReportSha256": "23f1cd19e6ee9bea72f9512e45da4f0ec44527a249e59517da4029dc5bfda400"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--108736779_177263484-15-couch--42--764468d6ca32",
+    "recordId": "2225ce3e6ededb6b672e",
+    "replacementRecordId": "qwen-11",
+    "oldReportSha256": "edb770662b41ec0d6a58620169fe950f87f83ac8b4dca38abf5908db1a9a9e1b",
+    "newReportSha256": "4e9347c0aef3f34971417f487dc4cedb2116df5562bfe47bdb44c59d37ad58f3"
+  },
+  {
+    "model": "qwen",
+    "taskId": "humanclaw--humanclaw--fullval--108736884_177263634-11-toilet--42--45ef14fcc371",
+    "recordId": "38ccfa39c311ef1d523a",
+    "replacementRecordId": "qwen-12",
+    "oldReportSha256": "d461f7d18ebf41125b43b1b10c0745d22f8c9c752e9106c1861a611fec8cc6c3",
+    "newReportSha256": "455650ca0710e548df3394eaeb46ec3b0e72ff13d4121be7890b0bc78e118b83"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--102816036-2-couch--42--657a2443a8bd",
+    "recordId": "c0ab93bbcdd69a7887bf",
+    "replacementRecordId": "qwen35-397b-01",
+    "oldReportSha256": "555ac2854187e72079de91d0b4f565c23e61f8d1016bb6b029e827615fbb922f",
+    "newReportSha256": "04aeeaca64b922acbe3442e2de2c915fdbe82e06e97147aacde530d8157708c1"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--102816756-20-couch--42--43365d945e10",
+    "recordId": "70efbc59a2816dd9ec8b",
+    "replacementRecordId": "qwen35-397b-02",
+    "oldReportSha256": "1f79ac51f23ed15641214493c21d2661f2ebe204bbd9be205315adceacbc37fb",
+    "newReportSha256": "db8778e14f0d7244b222698e8217146f6265af297f6768c6eb5e5d027ab151b1"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--103997586_171030669-20-couch--42--4d79f1e67c3f",
+    "recordId": "43da51e589b5dcfc8c02",
+    "replacementRecordId": "qwen35-397b-03",
+    "oldReportSha256": "cd80743632f7d7d1445b667e11b1d340ae26cca864e9ca5538d10a735f66290f",
+    "newReportSha256": "6ed0fc9bfd03278151c855378594774b274647e0446fe5237945bf8a04ad5103"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--104862384_172226319-19-couch--42--5355e60f1f7f",
+    "recordId": "86ee49c25a2a7a6ebe01",
+    "replacementRecordId": "qwen35-397b-04",
+    "oldReportSha256": "ea012db7fe8617410087005166387e85da0374e2a61151e0efc24b1341d92da8",
+    "newReportSha256": "d82f831941163d6221b147fd82700eb4cb1a8e0c03a315b33688de380835c415"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
+    "recordId": "bef806032b8506e12bc2",
+    "replacementRecordId": "qwen35-397b-00",
+    "oldReportSha256": "82bd223f8cc14dc9614cd2dd0ed04c70b770b77e35256211afa886a0a7347ace",
+    "newReportSha256": "4c2ba54d1f91ebbb2a99f83c61f90e0da0ad3e19563e87ff4dc8bd7121eb5c94"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--104862501_172226556-17-potted_plant--42--0bbe551ad27b",
+    "recordId": "d682c7742e03057c4e31",
+    "replacementRecordId": "qwen35-397b-05",
+    "oldReportSha256": "8107cc3996af3c88c8b1fd2ad58ce3da963b28945d55d122aa5f7b890c416ef3",
+    "newReportSha256": "5bf227cb3e3ce73aa768fe4f15ada93bf998ab9bc7fad1546401d53de2c46a91"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--105515184_173104128-13-chair--42--33c178bb7d0f",
+    "recordId": "08f90039e232b7062dc8",
+    "replacementRecordId": "qwen35-397b-06",
+    "oldReportSha256": "f9b8c634c5b18511b17059f5e52ad9e3b94645e4e726cd7ac0fb1b7a3c015786",
+    "newReportSha256": "97fc106958ec1bf55308cb02182c93e6ee07873193c9adcacad475c47c30dd04"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--105515211_173104185-14-toilet--42--9a3d816c6e98",
+    "recordId": "3255825abcfd04dea250",
+    "replacementRecordId": "qwen35-397b-07",
+    "oldReportSha256": "d0c2bca34a3d6d7b85a8dc8fc1f4d71b004842c8873eeeac2d511a641bf1d3cb",
+    "newReportSha256": "ef70e7060280fa31972544605d2dd605779660bdec42c2fcfde2b7209408907c"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--106878960_174887073-26-toilet--42--83b0dd75082b",
+    "recordId": "3bb7d777f55eb28a3d38",
+    "replacementRecordId": "qwen35-397b-08",
+    "oldReportSha256": "48a7c9e51148f0edfcba699c534698b6f0f5ed964196c78ddbec3e96cb2e98ee",
+    "newReportSha256": "902241f3ae03e20adbe5c7ec2b354f1b1ac5fca12581f26e824648914c653707"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--107734287_176000160-2-potted_plant--42--20d36cae8cb0",
+    "recordId": "38934f55c9b19bd80cf9",
+    "replacementRecordId": "qwen35-397b-09",
+    "oldReportSha256": "8248d7aac2b010205de8615827044adf9db983efdd66113967e61e59f9528030",
+    "newReportSha256": "b92f618b824a399a74bc290617a8b531c044d81ca7acbda8d15459fab3e3a154"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--107734338_176000244-12-tv--42--5bff83d2849d",
+    "recordId": "e8219d617e4b5a4713e3",
+    "replacementRecordId": "qwen35-397b-10",
+    "oldReportSha256": "05b172b04f68959ce20ba883292ae242530c831e75ca3b5cd0125fb4456accbf",
+    "newReportSha256": "fb65780eeab52f38560e1246ee2cb519c0984242c627ee5f1ccefb52e2682f2f"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--108736779_177263484-15-couch--42--764468d6ca32",
+    "recordId": "11bcbc5c2fef6da5e4a6",
+    "replacementRecordId": "qwen35-397b-11",
+    "oldReportSha256": "3d0776befb1e600bb131a9c98d9c784379843e57e45aa236ce530c4b29412020",
+    "newReportSha256": "ede2d5d8e2d01db9f77af708d84b3556c4d6e1a12471d52477809f4db8493794"
+  },
+  {
+    "model": "qwen35-397b",
+    "taskId": "humanclaw--humanclaw--fullval--108736884_177263634-11-toilet--42--45ef14fcc371",
+    "recordId": "ab6da4ef06f4b7323f04",
+    "replacementRecordId": "qwen35-397b-12",
+    "oldReportSha256": "a90e71f9c26fcfae9607c13ff63c659d78b25b487fa21a89d8c160053d864f66",
+    "newReportSha256": "f25f4d9764162268b4bb780e5cc353e506880d582b42a54934fb1e1d017bc7c4"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--102816036-2-couch--42--657a2443a8bd",
+    "recordId": "a9688f7f8e96cf80d544",
+    "replacementRecordId": "qwen35-27b-01",
+    "oldReportSha256": "cd135a09d30d6220093ef535763e816ee3a0631ab6dd52e594e0c9ff981770fc",
+    "newReportSha256": "675f95566664cee66e28f48fefc0f16c20615058560ac719dcc8e32ca7f26de5"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--102816756-20-couch--42--43365d945e10",
+    "recordId": "b712a1588c786ad43503",
+    "replacementRecordId": "qwen35-27b-02",
+    "oldReportSha256": "e9ac334f2e01601e9c0a230af585323c20c1c807398227e796009bcc67d32c70",
+    "newReportSha256": "2ab211f6a2ce8164430f7fc6169811559964818d88c9515b9d2fc7dd4fceefde"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--103997586_171030669-20-couch--42--4d79f1e67c3f",
+    "recordId": "aceb724a75d3bfa2b844",
+    "replacementRecordId": "qwen35-27b-03",
+    "oldReportSha256": "8c816aa1fd2c04ad9162200f662f6e8747430e377dc56b2e7aacf2d9df03c44c",
+    "newReportSha256": "d84874a31d76b6eedca5a4fbd6304ef2b2c2b20e3d1a523fe4e0abdae6f31022"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--104862384_172226319-19-couch--42--5355e60f1f7f",
+    "recordId": "14d1a3f16af5a5bb4368",
+    "replacementRecordId": "qwen35-27b-04",
+    "oldReportSha256": "15b229aea9165ffe9ca2bf0fcb8c730de52f2a3a4dce9a7a65fa0353c8e3cf54",
+    "newReportSha256": "5c1dc1d4665ed4ad279306bf3999f96f491f24681a25d0f8d8ea85cfca61dc8a"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--104862417_172226382-10-chair--42--2c3df6f55890",
+    "recordId": "6a0505ce02890f7e79e2",
+    "replacementRecordId": "qwen35-27b-00",
+    "oldReportSha256": "2033f19e3de506d812d4a477dcd29cea5f1cf8a166d3a290fffb8da1081fa573",
+    "newReportSha256": "928840f8b392f4637b6786094c2e706e609a6780fcee1d26763692122ff3a4d8"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--104862501_172226556-17-potted_plant--42--0bbe551ad27b",
+    "recordId": "b1738271735679700405",
+    "replacementRecordId": "qwen35-27b-05",
+    "oldReportSha256": "e17cdb21b171211a5726945b1c9cdfccf0c29ea6ce0345f4d4810bf19b089149",
+    "newReportSha256": "1d8d03a9e8b4b60c860a4220d442cebeb27bf82680475e97c22e70606bc562a8"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--105515184_173104128-13-chair--42--33c178bb7d0f",
+    "recordId": "a8c342f3ff9b09061830",
+    "replacementRecordId": "qwen35-27b-06",
+    "oldReportSha256": "5851ac912669ee82b73b33a04ffac25ec715640fac4dcf7b8ca3323a0dfff1cb",
+    "newReportSha256": "e4a22f4124afd70c929debe8e7179cb1e5dddf2e63a69e6042c9eeced4419da0"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--105515211_173104185-14-toilet--42--9a3d816c6e98",
+    "recordId": "be63261c530e11d8d43f",
+    "replacementRecordId": "qwen35-27b-07",
+    "oldReportSha256": "3a547b2563f4074a4167d7754f8aafe83f022edd036fa800aace87fffeee3147",
+    "newReportSha256": "9cfbeefd610d1d958e2030f5ef5a4c3a7733967e9cee33d34f94ac547cb26a8a"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--106878960_174887073-26-toilet--42--83b0dd75082b",
+    "recordId": "4158c8110174f75cd921",
+    "replacementRecordId": "qwen35-27b-08",
+    "oldReportSha256": "d14ffe50e3398c32d92041d1ce52bd104e8747633ec379448998f5676d1bd77c",
+    "newReportSha256": "5232b54f6db34b873a8152c2b38c8cbaa395378be2acfa75d13ebeaf4b0ee5ad"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--107734287_176000160-2-potted_plant--42--20d36cae8cb0",
+    "recordId": "bd4b372913a15b84bfba",
+    "replacementRecordId": "qwen35-27b-09",
+    "oldReportSha256": "9c4a4db4bc4f691e657b027674794a0e57e4087b0acf060273d3ca13acecf1ad",
+    "newReportSha256": "ddb8a79b64d03cc710b552b748b7ddc31c587894cca5e4fc71426bb43502ba1b"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--107734338_176000244-12-tv--42--5bff83d2849d",
+    "recordId": "26e302c1434051177d38",
+    "replacementRecordId": "qwen35-27b-10",
+    "oldReportSha256": "bc9fb55bfd6733d04e5cc7a704c2fe4eb57cb7d1e65049ba467c6866dbc2198e",
+    "newReportSha256": "b2100a2ca03411cd119bc649db124032e2a8b36943f6133c4609fae086017c5a"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--108736779_177263484-15-couch--42--764468d6ca32",
+    "recordId": "a3bdf4cde291c892683f",
+    "replacementRecordId": "qwen35-27b-11",
+    "oldReportSha256": "83cbfa9bfa1440c59ad298f1666263ed266b783e4c341c855d488fa1332849d4",
+    "newReportSha256": "b70deefd3d5c3bd12f73901e15e3e89c794cb879d59f2dc0df7d14dbeaf476c4"
+  },
+  {
+    "model": "qwen35-27b",
+    "taskId": "humanclaw--humanclaw--fullval--108736884_177263634-11-toilet--42--45ef14fcc371",
+    "recordId": "27778701223cd434b850",
+    "replacementRecordId": "qwen35-27b-12",
+    "oldReportSha256": "18e6adcb633640d31f1975f9d0fb8ebc76b92d2ee1a0167c7855307bb9f8f312",
+    "newReportSha256": "1eac14a053a071d22be44e4bc5d4172ba953e59445bc0ffc8951bd5ff3f77399"
+  }
+]

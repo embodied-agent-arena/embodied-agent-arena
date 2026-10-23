@@ -1,26 +1,26 @@
 {
   "manuscript_date": "2026-10-23",
-  "manuscript_version": "Updated author manuscript; arXiv replacement submitted, awaiting announcement",
+  "manuscript_version": "Updated author manuscript with refreshed Qwen HumanCLAW results",
   "model_count": 10,
   "main_metric_values": 80,
-  "paper_pages": 63,
-  "paper_sha256": "b6397b88dc8570d538d13400e9de548242d4ca88bf34ede75f6d64404c56ff24",
+  "paper_pages": 73,
+  "paper_sha256": "e0cbb02a3575cb4579964fdeaf5e15e0becd14b7c8768555ce5b685b40ded8c8",
   "table_source": "Table 2",
   "case_views": 181,
-  "recordings": 346,
+  "recordings": 362,
   "figure_sha256": {
     "geometry.webp": "ce448e9ee407be362bddd6ceae5df7bf68442061e38785fa281c2f098d8a5794",
     "spatial.webp": "446d6b107eb5eb31eafbf0d00b7df806b96197fd3bb819eff42cbc0918999888",
     "affordance.webp": "ea09252a6ca53e66e7b34130759daceac983812fed42ec92ca2a8e6e29ecb204",
-    "planning.webp": "0b82660972043b6ec025d8d65b1de83f6d3abf0c9f617f9667b8264551082eb6",
+    "planning.webp": "fdfed1cf6f4cf196ab41e3a942a7e923ef92f853201c695fde4e5fdf41d969b8",
     "manipulation.webp": "65069eabaabc1ed0fc04a364fe308a350fef08eda75879a0ab71ab397ef35277",
-    "nine-model-profiles.svg": "4dd81b750627f8028ecdf40a32dbfa85f186d4af1864925543b1e94bec77f236"
+    "nine-model-profiles.svg": "3e41d098b764e4ed2e2336f0e5373171980d164f8b368e11e7aabfb27b5ba51c"
   },
-  "source_sha256": "8c1e621e6f816147f509eb35dfe127dfd8c19ae19bd06c0e30381d2b18fd4fbd",
+  "source_sha256": "10d6fdd8233689f64c35643357f600250002d8adbc0be04921431d1badf9b275",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
-  "playable_previews": 371,
+  "playable_previews": 387,
   "recording_definition": "Scene previews: original recordings, saved observations, verified action replays and saved-state renders; excludes animated execution-log plots.",
   "video_supplement": {
     "archive": "ten-model-video-supplement-20261021.zip",
@@ -305,7 +305,7 @@
     "all_nonfinal_max_extra_bottom_space_pt": 77.5,
     "audit": "docs/MANUSCRIPT_LAYOUT_AUDIT.md"
   },
-  "revision_history_note": "Earlier *_revision records describe their dated release. narrative_layout_revision and top-level hashes identify the current manuscript.",
+  "revision_history_note": "Top-level hashes and humanclaw_qwen_refresh describe the current author manuscript. Earlier revision entries and arxiv_submission preserve their historical scope; the submitted arXiv archive is unchanged.",
   "arxiv_submission": {
     "article_id": "2610.00854",
     "type": "replacement",
@@ -317,5 +317,35 @@
     "pages": 63,
     "source_sha256": "8c1e621e6f816147f509eb35dfe127dfd8c19ae19bd06c0e30381d2b18fd4fbd",
     "arxiv_preview_sha256": "b96be9e8435b01be78c1bbfa5ef9bce2911e32741af3cc3f820ad649331a9025"
+  },
+  "humanclaw_qwen_refresh": {
+    "date": "2026-10-23",
+    "records": 39,
+    "observation_replays": 38,
+    "provider_interruptions": 2,
+    "before_first_frame_budget_stops": 1,
+    "planning_successes": {
+      "qwen": 58,
+      "qwen35-397b": 30,
+      "qwen35-27b": 30
+    },
+    "planning_tasks_per_model": 157,
+    "humanclaw_successes": {
+      "qwen": 2,
+      "qwen35-397b": 2,
+      "qwen35-27b": 0
+    },
+    "humanclaw_tasks_per_model": 13,
+    "overview_actual_previews": 107,
+    "overview_separate_demos": 3,
+    "paper_pages": 73,
+    "abstract_words": 207,
+    "paper_sha256": "e0cbb02a3575cb4579964fdeaf5e15e0becd14b7c8768555ce5b685b40ded8c8",
+    "source_sha256": "10d6fdd8233689f64c35643357f600250002d8adbc0be04921431d1badf9b275",
+    "scope": "Latest adopted episodes replace earlier HumanCLAW records, without adding repeated runs; results, figures, resource analysis, manuscript and public case records synchronized.",
+    "audit": "data/report/planning-comparison-audit.json",
+    "complete_index": "humanclaw-refresh.html",
+    "remaining_gaps": "data/humanclaw-refresh/remaining-gaps.csv",
+    "arxiv_updated": false
   }
 }

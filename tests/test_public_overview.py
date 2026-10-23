@@ -85,7 +85,7 @@ class OverviewTests(unittest.TestCase):
             elif cell['outcome'] == 'runtime_failure':
                 self.assertEqual(cell['status'], 'Runtime error')
         self.assertEqual(count, self.manifest['rerunCount'])
-        self.assertEqual(count, 4)
+        self.assertEqual(count, 1)
 
     def test_old_mixed_task_montage_is_no_longer_displayed(self):
         self.assertNotIn("reference-arena", self.html)

@@ -66,7 +66,13 @@ class CaseMediaTests(unittest.TestCase):
     def test_context_is_not_promoted_to_a_model_recording(self):
         overview=read('data/report/overview-provenance.json')
         contexts=[c for c in overview['tiles'] if c.get('sceneContext')]
-        self.assertEqual(len(contexts),3)
+        # The three Qwen chair gaps have matching replacement recordings now.
+        self.assertEqual(len(contexts),0)
+        refresh=read('data/report/humanclaw-qwen-refresh.json')
+        missing=[r for r in refresh['records'] if not r['video']]
+        self.assertEqual([r['replacementRecordId'] for r in missing],['qwen-07'])
+        self.assertIsNone(missing[0]['mediaReportSha256'])
+        self.assertIsNone(missing[0]['poster'])
         for c in contexts:
             self.assertIsNone(c['sourceVideo']);self.assertIsNone(c['sourceAnimation'])
             self.assertIsNone(c['poster']);self.assertIsNone(c['mediaReportSha256'])

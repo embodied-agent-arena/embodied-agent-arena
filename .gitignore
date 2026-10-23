@@ -47,3 +47,5 @@ runtimes/**/.venv/
 runtimes/tracespatial/scorer-env/
 *.log
 !public/data/argon-logs-audit.json
+
+!public/data/humanclaw-refresh/

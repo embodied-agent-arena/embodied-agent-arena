@@ -80,7 +80,7 @@ def build():
             if media:
                 assert r["sourceReportSha256"] == r["mediaReportSha256"]
                 assert (PUB / media).is_file() and (PUB / r["poster"]).is_file()
-            status = "Rerun required" if review else OUTCOMES.get(r["outcome"], "Not completed")
+            status = "Rerun required" if review else "Not completed" if r.get("auditStatus") == "task_failure_after_agent_stop" else OUTCOMES.get(r["outcome"], "Not completed")
             cid = f"arena-{row+1}-{col+1}"
             cell = {
                 "id": cid, "row": row + 1, "column": col + 1, "groupId": gid,

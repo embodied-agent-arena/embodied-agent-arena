@@ -1,0 +1,86 @@
+{
+  "old": {
+    "union": 142,
+    "all_fail": 15,
+    "all_succeed": 8,
+    "success_histogram": {
+      "0": 15,
+      "1": 19,
+      "2": 20,
+      "3": 5,
+      "4": 15,
+      "5": 17,
+      "6": 21,
+      "7": 14,
+      "8": 9,
+      "9": 14,
+      "10": 8
+    },
+    "only_one_or_two": 39,
+    "all_fail_by_source": {
+      "ALFRED": 2,
+      "ALFWorld": 2,
+      "HumanCLAW": 9,
+      "ScienceWorld": 2
+    },
+    "all_fail_ids": [
+      "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190907_182211_592010--0--9a48dd006725",
+      "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190908_133349_808774--0--e98f21e85cc5",
+      "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190911_131350_027076--0--7f32c6af63f8",
+      "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190912_221016_460197--0--ebbaebb435a5",
+      "humanclaw--humanclaw--fullval--102816036-2-couch--42--657a2443a8bd",
+      "humanclaw--humanclaw--fullval--102816756-20-couch--42--43365d945e10",
+      "humanclaw--humanclaw--fullval--103997586_171030669-20-couch--42--4d79f1e67c3f",
+      "humanclaw--humanclaw--fullval--104862384_172226319-19-couch--42--5355e60f1f7f",
+      "humanclaw--humanclaw--fullval--105515211_173104185-14-toilet--42--9a3d816c6e98",
+      "humanclaw--humanclaw--fullval--106878960_174887073-26-toilet--42--83b0dd75082b",
+      "humanclaw--humanclaw--fullval--107734338_176000244-12-tv--42--5bff83d2849d",
+      "humanclaw--humanclaw--fullval--108736779_177263484-15-couch--42--764468d6ca32",
+      "humanclaw--humanclaw--fullval--108736884_177263634-11-toilet--42--45ef14fcc371",
+      "scienceworld_text--scienceworld_text--full_v1--mendelian-genetics-unknown-plant-v264-easy--42--35068f9bd2b0",
+      "scienceworld_text--scienceworld_text--full_v1--test-conductivity-of-unknown-substances-v126-eas--42--39fd42eee602"
+    ]
+  },
+  "new": {
+    "union": 142,
+    "all_fail": 15,
+    "all_succeed": 8,
+    "success_histogram": {
+      "0": 15,
+      "1": 19,
+      "2": 20,
+      "3": 5,
+      "4": 15,
+      "5": 17,
+      "6": 20,
+      "7": 13,
+      "8": 10,
+      "9": 15,
+      "10": 8
+    },
+    "only_one_or_two": 39,
+    "all_fail_by_source": {
+      "ALFRED": 2,
+      "ALFWorld": 2,
+      "HumanCLAW": 9,
+      "ScienceWorld": 2
+    },
+    "all_fail_ids": [
+      "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190907_182211_592010--0--9a48dd006725",
+      "alfred_official_visual--alfred_official_visual--official_eval_v1--trial_T20190908_133349_808774--0--e98f21e85cc5",
+      "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190911_131350_027076--0--7f32c6af63f8",
+      "alfworld_visual--alfworld_visual--official_eval_v1--trial_T20190912_221016_460197--0--ebbaebb435a5",
+      "humanclaw--humanclaw--fullval--102816036-2-couch--42--657a2443a8bd",
+      "humanclaw--humanclaw--fullval--102816756-20-couch--42--43365d945e10",
+      "humanclaw--humanclaw--fullval--103997586_171030669-20-couch--42--4d79f1e67c3f",
+      "humanclaw--humanclaw--fullval--104862384_172226319-19-couch--42--5355e60f1f7f",
+      "humanclaw--humanclaw--fullval--105515211_173104185-14-toilet--42--9a3d816c6e98",
+      "humanclaw--humanclaw--fullval--106878960_174887073-26-toilet--42--83b0dd75082b",
+      "humanclaw--humanclaw--fullval--107734338_176000244-12-tv--42--5bff83d2849d",
+      "humanclaw--humanclaw--fullval--108736779_177263484-15-couch--42--764468d6ca32",
+      "humanclaw--humanclaw--fullval--108736884_177263634-11-toilet--42--45ef14fcc371",
+      "scienceworld_text--scienceworld_text--full_v1--mendelian-genetics-unknown-plant-v264-easy--42--35068f9bd2b0",
+      "scienceworld_text--scienceworld_text--full_v1--test-conductivity-of-unknown-substances-v126-eas--42--39fd42eee602"
+    ]
+  }
+}

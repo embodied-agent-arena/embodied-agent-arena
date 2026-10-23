@@ -31,7 +31,13 @@ def api_interruption(detail):
         return None
     last = steps[-1]
     error = str(last.get('error') or '')
-    if not API_ERROR.search(error) or last.get('budgetStop'):
+    # Some providers return an error envelope that the runner reports as an
+    # empty-choice parsing error. The replacement import verifies that envelope
+    # and publishes only its error code, never its request identifier or body.
+    verified_provider_error = (detail.get('auditStatus') == 'provider_interruption'
+                               and detail.get('providerErrorCode')
+                               and (last.get('feedback') or {}).get('providerErrorCode') == detail['providerErrorCode'])
+    if (not API_ERROR.search(error) and not verified_provider_error) or last.get('budgetStop'):
         return None
     if last.get('code') or last.get('calls'):
         return None
@@ -40,6 +46,8 @@ def api_interruption(detail):
         return None
     acted = any(s.get('code') or s.get('calls') or
                 (s.get('feedback') or {}).get('stage') == 'execution' for s in steps[:-1])
+    if verified_provider_error:
+        error = 'Model request failed: provider error ' + detail['providerErrorCode'] + '.'
     return {'status': 'rerun_required', 'reason': 'api_failure',
             'phase': 'after_actions' if acted else 'before_actions',
             'error': error, 'failedRound': last.get('round')}

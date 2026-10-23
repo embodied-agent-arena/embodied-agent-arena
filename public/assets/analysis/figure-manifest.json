@@ -1,5 +1,5 @@
 {
-  "manuscriptDate": "2026-10-22",
+  "manuscriptDate": "2026-10-23",
   "modelsInMainComparison": 10,
   "scopes": {
     "figure3-tradeoffs": "Ten-model profiles with a fixed 0\u2013100 OpenReview warm colour scale; Gemini 3.8 and Gemini 4 identified explicitly.",
@@ -163,23 +163,23 @@
     },
     {
       "path": "figure3-tradeoffs.drawio",
-      "sha256": "d054be43c52c5dae8610aca0f2e4eb60023f617a75e29287a080cdbcd5bdbe36",
-      "bytes": 95837
+      "sha256": "8f33101817213576104c7ec74e29dc29da6ab3a927fed28da0415688698c53ae",
+      "bytes": 95872
     },
     {
       "path": "figure3-tradeoffs.pdf",
-      "sha256": "917526c4fbf8f2f7b625c304917420e775ba272643fceff04c0f70c628164155",
-      "bytes": 70937
+      "sha256": "1e887fd5b76dc08b061dafc462b839bbd48ec29a61fda31000f4a44f54705246",
+      "bytes": 70936
     },
     {
       "path": "figure3-tradeoffs.png",
-      "sha256": "d882a4f02a9d87f2843cbc7e117c19f5109e46a041cea78cdac1e23b9c92be6f",
-      "bytes": 202008
+      "sha256": "84bb7efe34bce06ea7bddcb1c4330ede9cece334fe0be7bb9d5f52461f62c213",
+      "bytes": 201622
     },
     {
       "path": "figure3-tradeoffs.svg",
-      "sha256": "4dd81b750627f8028ecdf40a32dbfa85f186d4af1864925543b1e94bec77f236",
-      "bytes": 152705
+      "sha256": "3e41d098b764e4ed2e2336f0e5373171980d164f8b368e11e7aabfb27b5ba51c",
+      "bytes": 152708
     },
     {
       "path": "figure4-geometry.drawio",
@@ -243,23 +243,23 @@
     },
     {
       "path": "figure7-planning.drawio",
-      "sha256": "fef14cde22482807e82228e41b8e6f67a0b7e7692ccdb47985f3025fe4910295",
-      "bytes": 63521
+      "sha256": "3f0a3cc47ffbfc2ca2364578deebd19062c2c10fcb58006fa8567c870070b15b",
+      "bytes": 63456
     },
     {
       "path": "figure7-planning.pdf",
-      "sha256": "fa7f5264bc638e27aa713325ad58789824dc60dd507831babdf8f39f4f1485f4",
-      "bytes": 52889
+      "sha256": "75205e4eff6f79cfdbb0011e3222f4eae39836c6501f5b4c60160ef6a18d17a4",
+      "bytes": 52900
     },
     {
       "path": "figure7-planning.png",
-      "sha256": "4ad5fe52d032429d1710a496af552fb121c39037badb561a35f9ac72bd14cae0",
-      "bytes": 128625
+      "sha256": "a7f7b3887713c1fb712a762e1d963bf0adb8d2d44c02ca5c252574e6eca15f8a",
+      "bytes": 127263
     },
     {
       "path": "figure7-planning.svg",
-      "sha256": "b093c0bf92780c2e0d1eb7bbf3fb8536462f3103b74433ef560676f3aa67ada0",
-      "bytes": 126374
+      "sha256": "6589ade6489095300f61c94f8139e0c4bf6d58f7690388b422a35313e52274f2",
+      "bytes": 126504
     },
     {
       "path": "figure8-manipulation.drawio",
@@ -328,43 +328,43 @@
     },
     {
       "path": "model-task-comparison.drawio",
-      "sha256": "1643a7dc988f26057c9cc35c0f4bf9ecb931c7c6c882e0a83d87a6cbb240bd71",
-      "bytes": 58941
+      "sha256": "dbe85912b5b9719d1888bac62ebcbe42a195bfbd26dd94b67e03d00babacbdf7",
+      "bytes": 59243
     },
     {
       "path": "model-task-comparison.pdf",
-      "sha256": "69df8eb2c9f025a19c164c12b876e245d479d2c2d615c643755625444b93fde7",
+      "sha256": "91b54dfb7b23cdc464c7372b260727bcfd5dc03b45799675d186d6fd9c2df71f",
       "bytes": 58051
     },
     {
       "path": "model-task-comparison.png",
-      "sha256": "02b93a9699528fe29ac3dce1f9044dca6d21f0e2efe254854f267079902bdb56",
-      "bytes": 136174
+      "sha256": "82339b5a4c89c49b7cf78e1a18bb0d5e7be7d1cb5993afa8622529fa890285e6",
+      "bytes": 135919
     },
     {
       "path": "model-task-comparison.svg",
-      "sha256": "3905b43b738d948e746d81daaed8b5250984d3078d3b60c32bd053a6c3bb3b13",
-      "bytes": 159298
+      "sha256": "64b49ddf932b49ca47095d7770db2ecd61ed55eabb9f135653aa074e3bf4edc6",
+      "bytes": 159293
     },
     {
       "path": "planning-execution-profile.drawio",
-      "sha256": "013c6638a2a7bec6c190a84025adc012d1ba4e34d0c58f53ec781d9d9ef7f97c",
-      "bytes": 78610
+      "sha256": "15ea35a4038bd547cf96a57c28636f30a2c9874260bf8ed264e6e50b2852632d",
+      "bytes": 78896
     },
     {
       "path": "planning-execution-profile.pdf",
-      "sha256": "76ddc426de02d6c9450fc1462ef9e4619a0d6b8b951ba3ff566e5643a24a00fa",
-      "bytes": 70318
+      "sha256": "a04b3c179cf09ea5bef6ab059f5436438b6e9aae084af76f30480f5962d63331",
+      "bytes": 70319
     },
     {
       "path": "planning-execution-profile.png",
-      "sha256": "a670500851a96f9535e19bbc59289ec36668c658b9507bcf33a8584da6b1d457",
-      "bytes": 175673
+      "sha256": "b1e10bf00be3487159ad7ba173cec556e07e436e2b796c3224613789cfaa2762",
+      "bytes": 174575
     },
     {
       "path": "planning-execution-profile.svg",
-      "sha256": "d3f34e2dd32fc8ee473de2e8d20f3eddcdb455cdb96c03cb0a24b999a7850cf8",
-      "bytes": 196441
+      "sha256": "7c775e163dafac0e7a779485776f7661d3135a8543c3b2ed1de86a35edd2a954",
+      "bytes": 196550
     },
     {
       "path": "supplement-figure6-affordance.drawio",

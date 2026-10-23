@@ -57,9 +57,9 @@ Manipulation suites such as [LIBERO](https://arxiv.org/abs/2306.03310), [RoboTwi
 | GPT&#8209;6&nbsp;Astra | **17.2**&nbsp;±&nbsp;6.7 | 106.9&nbsp;±&nbsp;36.0 | 69.4&nbsp;±&nbsp;1.0 | 0.214&nbsp;±&nbsp;0.016 | 0.286&nbsp;±&nbsp;0.010 | 0.379 | **80.3** | 41.8 |
 | GPT&#8209;6&nbsp;Sol | 27.0&nbsp;±&nbsp;1.5 | 151.9&nbsp;±&nbsp;6.2 | 60.7&nbsp;±&nbsp;2.5 | 0.273&nbsp;±&nbsp;0.016 | 0.264&nbsp;±&nbsp;0.010 | 0.325 | 44.6 | 19.8 |
 | Claude&nbsp;Fable&nbsp;5.1 | 24.2&nbsp;±&nbsp;8.3 | 116.6&nbsp;±&nbsp;42.6 | 62.0&nbsp;±&nbsp;4.6 | 0.185&nbsp;±&nbsp;0.011 | 0.284&nbsp;±&nbsp;0.013 | 0.328 | 63.7 | 24.7 |
-| Qwen&nbsp;3.8&nbsp;Max | 20.5&nbsp;±&nbsp;3.5 | 138.1&nbsp;±&nbsp;10.2 | 68.9&nbsp;±&nbsp;1.1 | 0.206&nbsp;±&nbsp;0.033 | 0.272&nbsp;±&nbsp;0.017 | 0.307 | 35.7 | 9.3 |
+| Qwen&nbsp;3.8&nbsp;Max | 20.5&nbsp;±&nbsp;3.5 | 138.1&nbsp;±&nbsp;10.2 | 68.9&nbsp;±&nbsp;1.1 | 0.206&nbsp;±&nbsp;0.033 | 0.272&nbsp;±&nbsp;0.017 | 0.307 | 36.9 | 9.3 |
 | Gemini&nbsp;3.8&nbsp;Flash | 23.7&nbsp;±&nbsp;5.6 | 138.0&nbsp;±&nbsp;41.7 | 65.4&nbsp;±&nbsp;1.3 | **0.161**&nbsp;±&nbsp;0.028 | 0.251&nbsp;±&nbsp;0.081 | 0.291 | 48.4 | 18.7 |
-| Qwen&nbsp;3.5&nbsp;397B&#8209;A17B | 38.4&nbsp;±&nbsp;1.1 | 249.8&nbsp;±&nbsp;10.2 | 50.6&nbsp;±&nbsp;1.8 | 0.251&nbsp;±&nbsp;0.027 | 0.116&nbsp;±&nbsp;0.014 | 0.092 | 17.8 | 9.9 |
+| Qwen&nbsp;3.5&nbsp;397B&#8209;A17B | 38.4&nbsp;±&nbsp;1.1 | 249.8&nbsp;±&nbsp;10.2 | 50.6&nbsp;±&nbsp;1.8 | 0.251&nbsp;±&nbsp;0.027 | 0.116&nbsp;±&nbsp;0.014 | 0.092 | 19.1 | 9.9 |
 | Qwen&nbsp;3.5&nbsp;27B | 38.4&nbsp;±&nbsp;3.6 | 213.7&nbsp;±&nbsp;12.6 | 48.0&nbsp;±&nbsp;0.9 | 0.288&nbsp;±&nbsp;0.023 | 0.013&nbsp;±&nbsp;0.006 | 0.051 | 19.1 | 11.0 |
 | Claude&nbsp;Opus&nbsp;5.5 | 23.4&nbsp;±&nbsp;3.7 | 135.8&nbsp;±&nbsp;12.7 | 67.5&nbsp;±&nbsp;5.1 | 0.184&nbsp;±&nbsp;0.040 | 0.311&nbsp;±&nbsp;0.020 | 0.397 | 48.4 | **47.8** |
 | DeepSeek&nbsp;4.1&nbsp;Flash&#8209;1017 | 30.2&nbsp;±&nbsp;3.9 | 182.0&nbsp;±&nbsp;29.0 | 51.6&nbsp;±&nbsp;1.5 | 0.309&nbsp;±&nbsp;0.035 | 0.217&nbsp;±&nbsp;0.011 | 0.249 | 31.2 | 20.9 |
@@ -85,7 +85,8 @@ All pages and documentation are in English. Translated task instructions link to
 
 ## 📰 News
 
-- **2026.10.23** — Submitted the **63-page, ten-model manuscript** as a replacement of [arXiv:2610.00854](https://arxiv.org/abs/2610.00854); awaiting announcement. The [current manuscript](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf), figures, source archive and project page are synchronized.
+- **2026.10.23** — Refreshed all **39 Qwen HumanCLAW records** and added **38 observation replays**. Planning results, figures and the current author manuscript are synchronized. [Update and remaining gaps](docs/HUMANCLAW_QWEN_REFRESH.md) · [All 39 runs](https://embodied-agent-arena.github.io/embodied-agent-arena/humanclaw-refresh.html).
+- **2026.10.23** — Submitted the earlier **63-page manuscript** as a replacement of [arXiv:2610.00854](https://arxiv.org/abs/2610.00854). The newer author manuscript linked here has not been resubmitted to arXiv.
 
 - **2026.10.22** — Updated **all ten models in the spatial diagnostics** and released **100-episode CALVIN recovery analysis**, with matching figures, data and revised manuscript.
 - **2026.10.22** — Recovered **30 original case videos** by exact task, model and report matching; refreshed the compact Case Atlas with ten-model comparisons and labeled scene context for unrecorded executions.

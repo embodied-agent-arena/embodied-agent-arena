@@ -50,19 +50,19 @@ def build(figures):
     scopes['execution-progress'] = 'Exact Archaeology Dating task: native progress for Opus 5.5, Gemini 4 Argon, and DeepSeek-1017.'
     scopes['model-task-comparison'] = 'Table 2 Planning and Manipulation means; source-specific observation schedules and budgets.'
     scopes['cases-affordance'] = 'Selected qualitative polygon examples; ten-model comparisons are in the online Case Atlas.'
-    manifest = {'manuscriptDate': '2026-10-22', 'modelsInMainComparison': 10,
+    manifest = {'manuscriptDate': '2026-10-23', 'modelsInMainComparison': 10,
                 'scopes': scopes, 'files': [{'path': n, 'sha256': hashlib.sha256(b).hexdigest(), 'bytes': len(b)} for n,b in sorted(contents.items())]}
     manifest['naming'] = {'full': ['Gemini 3.8 Flash', 'Gemini 4 Argon'], 'compact': ['Gemini 3.8', 'Gemini 4']}
     contents['figure-manifest.json'] = (json.dumps(manifest, indent=2)+'\n').encode()
     contents['README.md'] = b'''# Editable manuscript and analysis figures
 
-Updated for the 22 October 2026 author manuscript.
+Updated for the 23 October 2026 author manuscript.
 
 - Figures 3-8: ten-model comparisons. Figure 5 includes all models in its task-level heatmaps. Figure 8 examines goal completion and execution recovery in all 100 adopted CALVIN episodes.
 - Figures 1-2: the task overview and benchmark construction. All eight main-text canvases omit descriptive titles and explanatory prose; captions carry definitions and measurement details. Axes, units, model identities and data labels remain in the native drawing.
 - Figures 6-8 use rounded vertical bars; supplement-figure6/7 retain the fine-grained diagnostics in the appendix.
 - Model identity colours follow the supplied logo families, with shades and line styles distinguishing models. Numerical heatmaps retain common scales. See model-logos/palette.json.
-- model-task-comparison: the README comparison, using the unchanged Table 2 means.
+- model-task-comparison: the README comparison, using the updated Table 2 means.
 - cases-affordance: selected qualitative polygon examples. The online Case Atlas compares all ten models on each image.
 - execution-progress: exact-task Archaeology Dating progress; planning-execution-profile: ten-model Planning resources. Data and definitions for the new Spatial and CALVIN diagnostics are in public/data/spatial-recovery/.
 
@@ -75,7 +75,7 @@ figure-manifest.json records exact file hashes and experiment scopes. These are 
     # Fixed timestamps/order make repeated packaging byte-for-byte reproducible.
     with zipfile.ZipFile(out/'editable-figures.zip', 'w', zipfile.ZIP_DEFLATED) as z:
         for name, data in sorted(contents.items()):
-            info = zipfile.ZipInfo(name, date_time=(2026,10,22,0,0,0))
+            info = zipfile.ZipInfo(name, date_time=(2026,10,23,0,0,0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o644 << 16
             z.writestr(info, data)

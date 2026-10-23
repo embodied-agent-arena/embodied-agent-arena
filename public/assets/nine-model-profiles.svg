@@ -108,9 +108,9 @@
 <ns0:use data-text="n" ns1:href="#font_2_81" transform="matrix(20.93317,0,0,-20.93317,125.65803,170.89862)" fill="#30343b" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-dasharray="6,4" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#686868" d="M248 251.10706 313.0255 206.12807 281.39097 139.04126 209.98793 132.68088 220.69516 193.87187 248 251.10706" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#a6533a" d="M248 260.63954 323.56248 209.55173 284.43949 134.84537 193.70922 110.27515 213.93791 196.06745 248 260.63954" />
-<ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#6336e7" d="M248 259.84864 325.8199 210.28522 282.10636 138.05661 217.5733 143.12125 235.175 189.1671 248 259.84864" />
+<ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#6336e7" d="M248 259.84864 325.8199 210.28522 282.10636 138.05661 216.55055 141.71353 235.175 189.1671 248 259.84864" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#57a977" d="M248 256.66004 329.30516 211.41765 277.6977 144.12464 206.74924 128.22318 222.2121 193.379 248 256.66004" />
-<ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-dasharray="6,4" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#8770cf" d="M248 229.61162 308.1395 204.54051 266.8416 159.06674 232.82927 164.11928 234.34758 189.43595 248 229.61162" />
+<ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-dasharray="6,4" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#8770cf" d="M248 229.61162 308.1395 204.54051 266.8416 159.06674 231.72129 162.59427 234.34758 189.43595 248 229.61162" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="2" stroke-linecap="butt" stroke-dasharray="2,4" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#b3a0dd" d="M248 233.32065 302.87104 202.82869 251.2211 180.56655 231.72129 162.59427 232.83065 189.92882 248 233.32065" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" stroke-width="3" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#202020" d="M248 270.07997 325.17506 210.0757 285.87818 132.86518 179.56122 90.80209 190.35646 203.72953 248 270.07997" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" d="M243.7 270.07997C243.7 267.70515 245.62519 265.77998 248 265.77998 250.37482 265.77998 252.3 267.70515 252.3 270.07997 252.3 272.4548 250.37482 274.37998 248 274.37998 245.62519 274.37998 243.7 272.4548 243.7 270.07997Z" fill="#202020" />
@@ -285,11 +285,11 @@
 <ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1068.9979,170.90795)" />
 <ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1081.7672,170.90795)" />
 <ns0:use data-text="0" ns1:href="#font_2_19" transform="matrix(20.93317,0,0,-20.93317,1086.9796,170.90795)" />
-<ns0:path transform="matrix(1,0,0,-1,0,405)" d="M1132 225H1232V257H1132Z" fill="#dab176" />
+<ns0:path transform="matrix(1,0,0,-1,0,405)" d="M1132 225H1232V257H1132Z" fill="#d9ae72" />
 <ns0:use data-text="3" ns1:href="#font_2_22" transform="matrix(20.93317,0,0,-20.93317,1160.2286,170.90795)" />
-<ns0:use data-text="5" ns1:href="#font_2_24" transform="matrix(20.93317,0,0,-20.93317,1172.9979,170.90795)" />
+<ns0:use data-text="6" ns1:href="#font_2_25" transform="matrix(20.93317,0,0,-20.93317,1172.9979,170.90795)" />
 <ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7672,170.90795)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1190.9796,170.90795)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1190.9796,170.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" d="M1236 225H1336V257H1236Z" fill="#ede6bd" />
 <ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1270.617,170.90795)" />
 <ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1283.3862,170.90795)" />
@@ -350,11 +350,11 @@
 <ns0:use data-text="2" ns1:href="#font_2_21" transform="matrix(20.93317,0,0,-20.93317,1070.6743,240.90795)" />
 <ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1083.4436,240.90795)" />
 <ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1088.656,240.90795)" />
-<ns0:path transform="matrix(1,0,0,-1,0,405)" d="M1132 155H1232V187H1132Z" fill="#e7d8a6" />
-<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1161.905,240.90795)" />
-<ns0:use data-text="7" ns1:href="#font_2_26" transform="matrix(20.93317,0,0,-20.93317,1171.325,240.90795)" />
-<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1184.0942,240.90795)" />
-<ns0:use data-text="8" ns1:href="#font_2_27" transform="matrix(20.93317,0,0,-20.93317,1189.3067,240.90795)" />
+<ns0:path transform="matrix(1,0,0,-1,0,405)" d="M1132 155H1232V187H1132Z" fill="#e6d6a2" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1163.5813,240.90795)" />
+<ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1173.0012,240.90795)" />
+<ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1185.7705,240.90795)" />
+<ns0:use data-text="1" ns1:href="#font_2_20" transform="matrix(20.93317,0,0,-20.93317,1190.9829,240.90795)" />
 <ns0:path transform="matrix(1,0,0,-1,0,405)" d="M1236 155H1336V187H1236Z" fill="#ede5bb" />
 <ns0:use data-text="9" ns1:href="#font_2_28" transform="matrix(20.93317,0,0,-20.93317,1270.617,240.90795)" />
 <ns0:use data-text="." ns1:href="#font_2_17" transform="matrix(20.93317,0,0,-20.93317,1283.3862,240.90795)" />

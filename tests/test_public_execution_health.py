@@ -32,6 +32,15 @@ class ExecutionHealthTests(unittest.TestCase):
         ]:
             self.assertIsNone(health.api_interruption(detail))
 
+    def test_verified_provider_error_can_surface_as_empty_model_choices(self):
+        detail = {'auditStatus': 'provider_interruption', 'providerErrorCode': 'data_inspection_failed',
+                  'steps': [{'feedback': {'stage': 'execution'}},
+                            {'error': 'ModelResponseError: Expected exactly one model choice',
+                             'feedback': {'stage': 'model_completion', 'providerErrorCode': 'data_inspection_failed'}}]}
+        self.assertEqual(health.api_interruption(detail)['phase'], 'after_actions')
+        detail.pop('providerErrorCode')
+        self.assertIsNone(health.api_interruption(detail))
+
     def test_audit_covers_every_public_record_and_preserves_source_outcomes(self):
         public = ROOT/'public'
         data = json.loads((public/'data/case-comparisons.json').read_text())
@@ -48,8 +57,8 @@ class ExecutionHealthTests(unittest.TestCase):
                 self.assertEqual(audited['taskId'], detail['taskId'])
         self.assertEqual(set(found), set(report['runs']))
         self.assertEqual(report['checkedRecords'], len(data['runs']))
-        self.assertEqual(report['rerunCount'], 39)
-        self.assertEqual(report['byPhase'], {'before_actions': 25, 'after_actions': 14})
+        self.assertEqual(report['rerunCount'], 21)
+        self.assertEqual(report['byPhase'], {'before_actions': 9, 'after_actions': 12})
 
 
 if __name__ == '__main__':

@@ -42,8 +42,8 @@ class VideoSupplementTests(unittest.TestCase):
                     self.assertEqual(provenance['physics_steps'],0)
                     self.assertEqual(provenance['vlm_calls'],0)
         overview=read('data/report/overview-provenance.json')
-        self.assertEqual(sum(bool(t['sourceVideo'] or t['sourceAnimation']) for t in overview['tiles'] if t['column']<=7),65)
-        self.assertEqual(overview['recordingCount'],104)
+        self.assertEqual(sum(bool(t['sourceVideo'] or t['sourceAnimation']) for t in overview['tiles'] if t['column']<=7),68)
+        self.assertEqual(overview['recordingCount'],107)
         self.assertEqual(overview['demoCount'],3)
 
     def test_missing_video_never_borrows_another_run(self):
@@ -51,6 +51,13 @@ class VideoSupplementTests(unittest.TestCase):
         audit=read('data/video-supplement-audit.json')
         for gap in audit['gaps']:
             run=runs[gap['runId']]
+            if gap.get('resolvedBy'):
+                replacement=gap['resolvedBy']
+                self.assertEqual(run['sourceReportSha256'],replacement['reportSha256'])
+                self.assertEqual(run['video'],replacement['video'])
+                self.assertEqual(run['mediaProvenance'],replacement['provenance'])
+                self.assertNotEqual(run['sourceReportSha256'],gap['reportSha256'])
+                continue
             self.assertIsNone(run['video'])
             self.assertIsNone(run['animation'])
             self.assertEqual(run['sourceReportSha256'],gap['reportSha256'])

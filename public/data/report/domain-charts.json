@@ -4100,8 +4100,8 @@
       },
       {
         "model": "qwen",
-        "count": 56,
-        "value": 35.6687898089172
+        "count": 58,
+        "value": 36.94267515923567
       },
       {
         "model": "gemini",
@@ -4110,8 +4110,8 @@
       },
       {
         "model": "qwen35-397b",
-        "count": 28,
-        "value": 17.8343949044586
+        "count": 30,
+        "value": 19.10828025477707
       },
       {
         "model": "qwen35-27b",
@@ -4141,10 +4141,10 @@
       5,
       15,
       17,
-      21,
-      14,
-      9,
-      14,
+      20,
+      13,
+      10,
+      15,
       8
     ]
   },
@@ -4346,6 +4346,13 @@
     "work/discoverability-20261005/repository/public/data/execution/complete-index.json": "2ef9b0deee791f44f0c261cbb4108483331dc1be7bd43f633eadf07d67022ad2",
     "work/discoverability-20261005/repository/public/data/execution/W3-discoveryworld-opus55-01.json": "4e02407e2cb0683ef4ee62254c261212656dbaee78903e8d3392ebbb9988675e",
     "work/discoverability-20261005/repository/public/data/case-records/record-argon-016986939ab1f398.json": "efcba29a0d7373ebb378835039313fd450758496f69ae36ef0d9bab3a1e361ee",
-    "work/discoverability-20261005/repository/public/data/execution/W3-discoveryworld-deepseek-01.json": "0f130d699e2450d9facc46a1c564615f0b95c7f4b99e68647c867c59b0deea24"
+    "work/discoverability-20261005/repository/public/data/execution/W3-discoveryworld-deepseek-01.json": "0f130d699e2450d9facc46a1c564615f0b95c7f4b99e68647c867c59b0deea24",
+    "humanclawQwenRefresh": {
+      "date": "2026-10-23",
+      "replaced_records": 39,
+      "source": "humanclaw-qwen-results-20261023.zip",
+      "selection": "Latest per-case worker result; not best outcome. Native success flags; all assigned cases retained.",
+      "provider_interruptions": 2
+    }
   }
 }

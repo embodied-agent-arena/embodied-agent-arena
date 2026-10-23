@@ -5,7 +5,7 @@
   const fmt = (v, n=1) => Number(v).toFixed(n).replace(/\.0$/, '');
   const brand = m => window.ArenaModelStyle.get(m);
   let data, pending;
-  const load = () => pending ||= fetch('data/report/domain-charts.json?v=native-20261022').then(r => {if(!r.ok) throw Error('Chart data unavailable');return r.json();}).then(d => (data=d)).catch(error => {pending=null;throw error;});
+  const load = () => pending ||= fetch('data/report/domain-charts.json?v=humanclaw-20261023').then(r => {if(!r.ok) throw Error('Chart data unavailable');return r.json();}).then(d => (data=d)).catch(error => {pending=null;throw error;});
   const heat = v => data.heatRamp[Math.round(Math.max(0,Math.min(100,v))/100*(data.heatRamp.length-1))];
   const metricText = (z, unit='%') => `${fmt(z.value,unit.includes('cm')?3:unit.includes('episodes')?0:2)}${unit}${z.sd == null ? '' : ` ± ${fmt(z.sd,unit.includes('cm')?3:unit.includes('episodes')?0:2)}${unit} run SD`}`;
   const logo = m => `<img src="${brand(m).logo}" alt="" width="23" height="23">`;

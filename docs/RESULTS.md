@@ -1,8 +1,8 @@
 # Results and reproduction
 
-The **22 October 2026 author manuscript** and the public results compare **ten models**, including **Gemini&nbsp;4&nbsp;Argon (`gemini-4-argon`)**. The published arXiv version has its own version history; the current author manuscript is linked below.
+The **23 October 2026 author manuscript** and the public results compare **ten models**, including **Gemini&nbsp;4&nbsp;Argon (`gemini-4-argon`)**. The published arXiv version has its own version history; the current author manuscript is linked below.
 
-The revised narrative follows three findings: **local accuracy can miss a required goal condition**, **complementary models still share failures**, and **unfinished tasks dominate recorded token use**. Source-level diagnostics and matched execution traces connect these claims to specific task states.
+The revised narrative follows three findings: **early subgoals can succeed while the full task remains unfinished**, **complementary models still share failures**, and **unfinished tasks dominate recorded token use**. Source-level diagnostics and matched execution traces connect these claims to specific task states.
 
 ## Results and evidence
 
@@ -13,7 +13,7 @@ The revised narrative follows three findings: **local accuracy can miss a requir
 | Repeated-run details | Run means and valid sample counts for the repeated metrics | [CSV](../public/data/complementary-results-mean-sd.csv) |
 | Planning outcomes | 10 models × the same 157 tasks; 1,570 recorded outcomes | [CSV](../public/data/report/planning-outcomes.csv) · [JSON](../public/data/report/planning-outcomes.json) · [Analysis](https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html) |
 | Case atlas | 181 comparisons: 72 perception/affordance cases and 109 execution tasks; ten-model results in each | [Browse](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html) · [Static cases](../public/data/case-studies.json) · [Execution comparisons](../public/data/case-comparisons.json) |
-| Overview task map | 11 fixed tasks × 10 models; 104 evaluation previews + 3 labeled demos | [Task descriptions](RECORDED_TASKS.md) · [Identity and media manifest](../public/data/report/overview-provenance.json) |
+| Overview task map | 11 fixed tasks × 10 models; 107 evaluation previews + 3 labeled demos | [Task descriptions](RECORDED_TASKS.md) · [Identity and media manifest](../public/data/report/overview-provenance.json) |
 | Execution analysis | Ten-model logs: 1,570 Planning episodes; 46 selected tasks with 460 records, including 189 detailed action/feedback traces | [Planning episode CSV](../public/data/report/planning-episodes.csv) · [Selected episode CSV](../public/data/execution/complete-episodes.csv) · [Definitions and rebuild instructions](EXECUTION_ANALYSIS.md) |
 | Spatial and CALVIN diagnostics | 10,560 Spatial case-runs; all 100 adopted CALVIN episodes | [Figures, data and definitions](SPATIAL_RECOVERY.md) |
 | Manuscript and figures | Latest author PDF/source; native draw.io figures with vector and raster exports | [PDF](https://embodied-agent-arena.github.io/embodied-agent-arena/paper.pdf) · [LaTeX source](https://embodied-agent-arena.github.io/embodied-agent-arena/author-source.zip) · [Figure ZIP](https://embodied-agent-arena.github.io/embodied-agent-arena/assets/analysis/editable-figures.zip) · [Figure manifest](../public/assets/analysis/figure-manifest.json) |
@@ -26,7 +26,9 @@ The revised narrative follows three findings: **local accuracy can miss a requir
 
 ## Video supplement
 
-The [latest homepage supplement](../public/data/homepage-supplement-audit.json) adds **13 original videos, 3 separately labeled same-task demos and one 24-round observation sequence**. The overview now covers all 110 results with **104 evaluation previews, 3 demos and 3 explicit API failures before action**. Demos do not alter the original scores or timelines.
+The [latest homepage supplement](../public/data/homepage-supplement-audit.json) adds **13 original videos, 3 separately labeled same-task demos and one 24-round observation sequence**. The overview now covers all 110 results with **107 evaluation previews and 3 demos**. Demos do not alter the original scores or timelines.
+
+The Qwen HumanCLAW refresh adds 38 saved-observation replays and replaces all 39 adopted results. Two provider-interrupted records still require reruns, and one valid budget stop has no saved observation. [Results, provenance and exact case IDs](HUMANCLAW_QWEN_REFRESH.md).
 
 The wider execution library still has records without original footage. [Media coverage](MEDIA_COVERAGE.md) describes the exact scope and links the task-level request list.
 
