@@ -19,6 +19,20 @@ for filename,key in [('episodes.csv','index.json'),('complete-episodes.csv','com
             v=r['stats'];rows.append(dict(case_group=s['id'],benchmark=s['benchmark'],model=r['model'],task_id=r['taskId'],record_id=r['recordId'],report_sha256=r['reportSha256'],outcome=r['outcome'],protocol=r['protocol'],elapsed_seconds=v['elapsedSeconds'],model_calls=v['modelCalls'],rounds=v['rounds'],total_tokens=v['tokens'],completed_subgoals=v.get('completedSubgoals'),required_subgoals=v.get('requiredSubgoals'),environment_steps=v.get('environmentSteps'),native_steps=v.get('nativeSteps'),tool_calls=v.get('toolCalls'),stop_limits=';'.join(r['stopLimits']),evidence_url=r['detailUrl']))
     with (D/filename).open('w',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
+
+# Media availability is independent of the final evaluation outcome. A model's
+# observation replay is evidence from that run; a separate demo is not.
+missing=[]
+for story in indices['complete-index.json']['stories']:
+    for r in story['runs']:
+        has_original = bool(r.get('video') or r.get('animation')) and r.get('mediaKind')!='Animated execution log'
+        if has_original: continue
+        issue=r.get('executionReview') or {}
+        state='separate_demo_only' if r.get('demoMedia') else 'pre_action_api_error' if issue.get('reason')=='api_failure' and issue.get('phase')=='before_actions' else 'no_original_media'
+        missing.append(dict(storyId=story['id'],model=r['model'],modelKey=r['modelKey'],benchmark=r['benchmark'],taskId=r['taskId'],recordId=r['recordId'],reportSha256=r['reportSha256'],status=state,record=r['detailUrl']))
+with (D/'missing-original-media.csv').open('w',newline='') as f:
+    writer=csv.DictWriter(f,fieldnames=list(missing[0]),lineterminator='\n');writer.writeheader();writer.writerows(missing)
+
 # Crawlable companion: the same ten choices and evidence links as the explorer.
 p=U/'execution-guide.html';old=p.read_text();head=old[:old.index('<body>')]
 h=html.escape;index=indices['complete-index.json'];sections=[]
@@ -26,7 +40,7 @@ fmt=lambda n:'—' if n is None else f'{n:,.1f}' if isinstance(n,float) else f'{
 for s in index['stories']:
     rows=[]
     for r in s['runs']:
-        v=r['stats'];outcome=f"{v['completedSubgoals']}/{v['requiredSubgoals']} goals" if v.get('completedSubgoals') is not None else 'Completed' if r['success'] else 'Not completed'
+        v=r['stats'];outcome='API error' if r.get('executionReview',{}).get('reason')=='api_failure' or r.get('auditStatus')=='provider_interruption' else f"{v['completedSubgoals']}/{v['requiredSubgoals']} goals" if v.get('completedSubgoals') is not None else 'Completed' if r['success'] else 'Not completed'
         rows.append(f'<tr><th scope="row">{h(r["model"])}</th><td>{outcome}</td><td>{fmt(v["modelCalls"])}</td><td>{fmt(v["elapsedSeconds"])}</td><td>{fmt(v["tokens"])}</td><td><a href="{h(r["detailUrl"])}">Trace JSON</a></td></tr>')
     sections.append(f'<section id="{s["id"]}"><p class="eyebrow">{h(s["benchmark"])} · {h(s["domain"])}</p><h2>{h(s["title"])}</h2><p><strong>Task:</strong> {h(s["instruction"])}</p><p>{h(s["takeaway"])}</p><p>{h(s["answer"])}</p><div class="guide-table"><table><thead><tr><th>Model</th><th>Outcome</th><th>Model calls</th><th>Time (s)</th><th>Tokens</th><th>Evidence</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div><p><a href="index.html?analysis={s["id"]}#execution-analysis">Watch and inspect this comparison →</a></p></section>')
 head=head.replace('compare nine VLM agents','compare ten VLM agents')

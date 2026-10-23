@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "rowOrder": [
     "astra",
     "sol",
@@ -1669,7 +1669,7 @@
       "reportSha256": "0c251c63b5fe5008e465504a9bee977b9a043117cc30d67384c58891ca179837",
       "detailUrl": "data/case-records/record-47eb4d296519bf5ea5bc.json",
       "outcome": "runtime_failure",
-      "status": "Rerun required",
+      "status": "API error",
       "sourceVideo": "assets/homepage-supplement-20261022/47eb4d296519bf5ea5bc/clip.mp4",
       "sourceAnimation": null,
       "poster": "assets/homepage-supplement-20261022/47eb4d296519bf5ea5bc/poster.jpg",
@@ -1677,8 +1677,12 @@
       "previewVideo": "assets/homepage-supplement-20261022/47eb4d296519bf5ea5bc/clip.mp4",
       "mediaKind": "Video excerpt",
       "executionReview": {
-        "status": "rerun_required",
+        "status": "counted_failure",
         "reason": "api_failure",
+        "displayStatus": "API error",
+        "final": true,
+        "countedAsFailure": true,
+        "rerunRequired": false,
         "phase": "after_actions",
         "error": "Model API HTTP 400",
         "failedRound": 9
@@ -3216,7 +3220,10 @@
   "recordCount": 110,
   "recordingCount": 107,
   "demoCount": 3,
-  "rerunCount": 1,
+  "apiErrorCount": 1,
+  "rerunCount": 0,
+  "pendingRerunCount": 0,
+  "errorPolicy": "Terminal API interruptions are final errors and count as unsuccessful attempts in the existing evaluation population. No reruns are pending. Original outcomes, native success flags, report identities, recordings and aggregate scores are preserved. API errors remain distinct from generated-code or environment runtime errors and budget stops.",
   "source": "data/case-comparisons.json",
   "matching": [
     "taskId",

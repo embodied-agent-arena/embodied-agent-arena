@@ -1,102 +1,229 @@
 #!/usr/bin/env python3
-"""Publish the checked measurements and a crawlable technical report."""
+"""Refresh the three technical-report tables from already adopted, audited data.
+
+This renderer does not import analysis data or rewrite the report's narrative,
+project homepage, or claim ledger. --analysis must describe the current canonical
+10-model evaluation; stale or partial analyses are rejected before any write.
+The existing report is authoritative for prose. A checked-in template is used
+only when public/technical-report.html does not yet exist.
+"""
 from pathlib import Path
-import argparse, json, html, shutil, re
+import argparse
+from collections import Counter
+import html
+import json
+import math
+import re
 
-ap=argparse.ArgumentParser(description=__doc__)
-ap.add_argument('--analysis',type=Path,required=True,help='Output of analyze_execution_report.py')
-ap.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1])
-args=ap.parse_args();A=args.analysis.resolve();R=args.repo.resolve();U=R/'public'
-d=json.loads((A/'report-metrics.json').read_text())
-# Keep the report's comparison values in step with the public results source.
-study=json.loads((U/'data/study.json').read_text())
-by_name={m['name']:m for m in study['models']}
-for profile in d['profiles']:
-    model=by_name[profile['name']]
-    profile['scores']=model['scores']
-    profile['means']=[float(v.split(' ± ')[0]) for v in model['scores']]
-    profile['runs']=model['metric_runs']
-    profile['polygonMinusBox']=profile['means'][5]-profile['means'][4]
-for model in study['models']:
-    if model['name'] not in {p['name'] for p in d['profiles']}:
-        vals=[float(v.split(' ± ')[0]) for v in model['scores']]
-        d['profiles'].append(dict(model='gemini4argon',name=model['name'],scores=model['scores'],means=vals,runs=model['metric_runs'],polygonMinusBox=vals[5]-vals[4]))
-ex=json.loads((U/'data/execution/complete-index.json').read_text())
-episode=json.loads((A/'planning-episodes.json').read_text())
-source_counts={}
-for task in d['planning']['tasks']:
-    source_counts[task['benchmark']]=source_counts.get(task['benchmark'],0)+1
-    story=next((s for s in ex['stories'] if s['runs'][0]['taskId']==task['taskId']),None)
-    task['executionId']=story['id'] if story else None
-    raw=task['taskId'].split('--')[3] if '--' in task['taskId'] else task['taskId']
-    task['label']=story['instruction'] if story else (raw.replace('_',' ').replace('-',' ') if task['benchmark'] in ['ScienceWorld','DiscoveryWorld','HumanCLAW'] else f"{task['benchmark']} task {source_counts[task['benchmark']]}")
-d['execution']={k:ex[k] for k in ['runCount','roundCount','modelCount','toolCallCount']}
-d['execution']['taskCount']=len(ex['stories'])
-out=U/'data/report';out.mkdir(exist_ok=True)
-(out/'metrics.json').write_text(json.dumps(d,separators=(',',':'))+'\n')
-shutil.copy2(A/'planning-episodes.csv',out/'planning-episodes.csv')
-shutil.copy2(A/'planning-episodes.json',out/'planning-episodes.json')
-h=html.escape
-models=d['planning']['models']
-minimum=min(m['unsuccessfulTokenShare'] for m in models)*100
-maximum=max(m['unsuccessfulTokenShare'] for m in models)*100
-coverage=json.loads((U/'data/report/planning-outcomes.json').read_text())
-short={'astra':'Astra','sol':'Sol','fable':'Fable 5.1','gemini':'Gemini 3.8','qwen':'Qwen Max','qwen35-397b':'Qwen 397B','qwen35-27b':'Qwen 27B','opus55':'Opus 5.5','deepseek':'DeepSeek-1017','gemini4argon':'Gemini 4 Argon'}
-d['shortNames']=short
-(out/'metrics.json').write_text(json.dumps(d,separators=(',',':'))+'\n')
-intro='''<section id="technical-report" class="report-section" aria-labelledby="report-title"><div class="wrap">
-<div class="report-heading"><div><p class="eyebrow">Anatomy of Task Completion</p><h2 id="report-title">Where Do Embodied Agents Get Stuck?</h2></div><a class="report-full-link" href="technical-report.html">Read the Full Analysis ↗</a></div>
-<p class="report-deck">Ten models on the same 157 planning tasks. Compare outcomes first, then inspect the recorded decisions.</p>
-<div class="report-facts"><div><strong>15 / 157</strong><span>tasks completed by none of the ten models</span></div><div><strong>142 / 157</strong><span>tasks completed by at least one model</span></div><div><strong>8 / 157</strong><span>tasks completed by every model</span></div></div>
-<div class="report-tabs" role="tablist" aria-label="Analysis perspective">
-<button type="button" role="tab" aria-selected="true" aria-controls="report-panel" id="report-tab-coverage" data-report="coverage">Shared Failures</button>
-<button type="button" role="tab" aria-selected="false" aria-controls="report-panel" id="report-tab-resources" data-report="resources" tabindex="-1">Time &amp; Tokens</button>
-<button type="button" role="tab" aria-selected="false" aria-controls="report-panel" id="report-tab-recovery" data-report="recovery" tabindex="-1">Error Recovery</button>
-<button type="button" role="tab" aria-selected="false" aria-controls="report-panel" id="report-tab-representation" data-report="representation" tabindex="-1">Representation &amp; Feedback</button></div>
-<div id="report-panel" class="report-panel" role="tabpanel" aria-labelledby="report-tab-coverage"><h3>Different Strengths, Shared Obstacles.</h3><p>Eight tasks are completed by every model. At least one model completes 142 tasks; the remaining 15 defeat all ten in the recorded evaluation.</p><p><a href="technical-report.html#coverage">Read the task-level comparison ↗</a></p></div>
-<div class="report-evidence-links"><a href="data/report/planning-episodes.csv" download>Ten-Model Log Metrics ↓</a><a href="#execution-analysis">Inspect Videos &amp; Actions ↓</a><a href="technical-report.html#methods">Definitions &amp; Source Records ↗</a></div>
-</div></section>'''
-index=U/'index.html';s=index.read_text()
-if '<!-- BEGIN TECHNICAL REPORT -->' in s:s=re.sub(r'<!-- BEGIN TECHNICAL REPORT -->.*?<!-- END TECHNICAL REPORT -->','<!-- BEGIN TECHNICAL REPORT -->'+intro+'<!-- END TECHNICAL REPORT -->',s,flags=re.S)
-else:s=s.replace('<section id="execution-analysis"','<!-- BEGIN TECHNICAL REPORT -->'+intro+'<!-- END TECHNICAL REPORT -->\n<section id="execution-analysis"',1)
-if 'technical-report.css' not in s:s=s.replace('<link rel="stylesheet" href="domain-charts.css?v=native-charts-20261022"><script src="model-style.js?v=direct-labels-20261021" defer></script><script src="domain-charts.js?v=native-charts-20261022" defer></script><script src="figure-motion.js?v=native-charts-20261022" defer></script></head>','<link rel="stylesheet" href="technical-report.css?v=20261020"><script src="technical-report.js?v=20261020" defer></script>\n<link rel="stylesheet" href="domain-charts.css?v=native-charts-20261022"><script src="model-style.js?v=direct-labels-20261021" defer></script><script src="domain-charts.js?v=native-charts-20261022" defer></script><script src="figure-motion.js?v=native-charts-20261022" defer></script></head>')
-s=s.replace('<a href="#execution-analysis">Analysis</a>','<a href="#technical-report">Analysis</a>')
-s=s.replace('7 Tasks · 33 Episodes · 9 Models',f"{len(ex['stories'])} Tasks · {ex['runCount']} Episodes · 9 Models")
-index.write_text(s)
 
-source_rows=[]
-for m in coverage['sourceResults']:
-    m={**m,'name':next(p['name'] for p in d['profiles'] if p['model']==m['model'])}
-    cells=''.join(f'<td>{x["completed"]}/{x["n"]}</td>' for x in m['sourceResults'])
-    source_rows.append(f'<tr><th scope="row">{h(m["name"])}</th>{cells}<td><strong>{m["completed"]}/157</strong></td></tr>')
-resources=[]
-for m in models:
-    resources.append(f'<tr><th scope="row">{h(m["name"])}</th><td>{m["completed"]}/157</td><td>{m["time"]["median"]:.1f}</td><td>{m["time"]["q25"]:.1f}–{m["time"]["q75"]:.1f}</td><td>{m["unsuccessfulTokenShare"]*100:.1f}%</td><td>{m["tokens"]["n"]}/157</td><td>{m["recoveredAfterError"]}/{m["episodesWithExecutionErrors"]}</td></tr>')
-sources=list(models[0]['sourceResults'])
-table1='<div class="report-table-scroll"><table><caption>Completed Planning tasks, by source · ten models</caption><thead><tr><th>Model</th>'+''.join('<th>'+h(x['benchmark'])+'</th>' for x in sources)+'<th>All</th></tr></thead><tbody>'+''.join(source_rows)+'</tbody></table></div>'
-table2='<div class="report-table-scroll"><table><caption>Planning episode time, token allocation and recovery · ten-model log cohort</caption><thead><tr><th>Model</th><th>Completed</th><th>Median time (s)</th><th>Time IQR (s)</th><th>Tokens in failed episodes</th><th>Usage records</th><th>Recovered / error episodes</th></tr></thead><tbody>'+''.join(resources)+'</tbody></table></div>'
-profile_rows=[]
-for p in d['profiles']:
-    v=p['means'];profile_rows.append(f'<tr><th scope="row">{h(p["name"])}</th><td>{v[4]:.3f}</td><td>{v[5]:.3f}</td><td>{v[5]-v[4]:+.3f}</td><td>{v[6]:.1f}</td><td>{v[7]:.1f}</td></tr>')
-table3='<div class="report-table-scroll"><table><caption>Region representation and downstream task completion</caption><thead><tr><th>Model</th><th>Box–mask IoU</th><th>Polygon IoU</th><th>Difference</th><th>Planning (%)</th><th>Manipulation (%)</th></tr></thead><tbody>'+''.join(profile_rows)+'</tbody></table></div>'
-body=f'''<header class="report-cover"><a href="index.html#technical-report">← Embodied Agent Arena</a><p class="eyebrow">Technical Analysis · 22 October 2026</p><h1>From Local Competence to Complete Tasks</h1><p>Ten models on common tasks: outcomes, decisions, resource use and verified progress.</p><nav aria-label="Report chapters"><a href="#coverage">01 Shared Failures</a><a href="#resources">02 Time &amp; Tokens</a><a href="#recovery">03 Recovery</a><a href="#progress">04 Physical Progress</a><a href="#representation">05 Representation</a><a href="#methods">Evidence</a></nav></header>
-<main class="report-article">
-<section id="coverage"><p class="eyebrow">01 / Common Tasks</p><h2>Model Diversity Does Not Remove the Shared Failure Set.</h2><p>Astra completes 126 of the 157 Planning tasks; Gemini 4 Argon completes 110. Across all ten models, at least one succeeds on 142 tasks: 16 more than Astra alone. Fifteen tasks remain incomplete for every model, while eight are completed by all ten. Model diversity expands coverage but leaves a shared failure set.</p><p><strong>The next evaluation target is the shared failure set, alongside the tasks on which models complement one another.</strong> The 15 common failures comprise two ALFRED tasks, two ALFWorld tasks, nine HumanCLAW tasks and two ScienceWorld tasks. These are observed outcomes on the shared task assignments; the union is an after-the-fact coverage count, not a tested routing policy.</p>{table1}<p><a href="index.html#technical-report">Explore individual tasks and model pairs →</a></p></section>
-<section id="resources"><p class="eyebrow">02 / Resources</p><h2>Unfinished Tasks Consume Most Tokens.</h2><p>Median Planning episode duration ranges from 57.1 seconds for DeepSeek-1017 to 280.7 seconds for Sol. Completion rates differ at the same time, so a short run can reflect either efficient success or early failure. The source filter on the project page shows these quantities together.</p><p>Between {minimum:.1f}% and {maximum:.1f}% of each model’s recorded tokens are spent on unsuccessful episodes. Even Astra, which completes 80.3% of the assignments, spends 55.5% of its recorded tokens on the 31 that it does not complete. A failed Astra task uses <strong>5.1× as many tokens</strong> as a successful task on average (591,162 vs. 116,435). The cost of unresolved tasks is therefore much larger than their share of the task count.</p>{table2}<p>In the same HumanCLAW chair-navigation task, Gemini 4 Argon completes in 17 rounds and 437.3 seconds; Astra takes 18 rounds and 470.7 seconds; DeepSeek-1017 takes 65 rounds but 405.7 seconds. Model decisions, environment actions and wall time therefore need separate counters.</p><p><a href="index.html?analysis=time#execution-analysis">Compare the navigation videos and decisions →</a></p></section>
-<section id="recovery"><p class="eyebrow">03 / Recovery</p><h2>Recovery Must Change the Task State.</h2><p>Gemini 4 Argon completes 16 of 28 Planning episodes containing an execution error; Opus 5.5 completes 48 of 105. These counts separate how often a model encounters errors from whether it can recover and finish. Errors include malformed code and rejected API use.</p><p>The same Archaeology Dating task makes the distinction visible. Gemini 4 Argon encounters an error in round two, resumes measurable progress in round three and completes in round eight.  Opus 5.5’s first two rounds fail before an environment action. It then collects tools, excavates the sites, reads artifact ages and places the flag at the oldest site, reaching the native score of 1.0 in round seven. DeepSeek-1017 reaches 0.5 by round five, then its last three rounds end in code errors with no further environment steps.</p><figure class="report-figure"><div class="domain-charts" data-domain-chart="progress" aria-label="Interactive progress charts"></div><figcaption>On the same task, Opus 5.5 and Gemini 4 Argon recover and reach native score 1.0; DeepSeek-1017 stalls at 0.5. Points mark recorded decision rounds.</figcaption></figure><p><strong>Recovery is useful when it changes the task state.</strong> A revised response by itself is not evidence that the goal is any closer.</p><p><a href="index.html?analysis=recovery#execution-analysis">Compare recovery and returned feedback →</a></p><h3>Executable Code Can Still Leave the Goal Unmet.</h3><p>Across all 100 adopted CALVIN episodes, <strong>65</strong> contain execution errors. <strong>62</strong> later execute code without an error, but only <strong>3</strong> subsequently complete all five goals. Recovery must restore task progress, beyond clearing a code or tool error.</p><figure class="report-figure"><div class="domain-charts" data-domain-chart="manipulation" aria-label="Interactive manipulation charts"></div><figcaption>All ten tasks × ten models. Six records without a verified prefix receive no goal credit. Counts retain each model’s recorded settings. <a href="data/spatial-recovery/calvin-models.csv">Per-model counts</a> · <a href="https://github.com/embodied-agent-arena/embodied-agent-arena/blob/main/docs/SPATIAL_RECOVERY.md">Definitions and provenance</a></figcaption></figure></section>
-<section id="progress"><p class="eyebrow">04 / Physical Progress</p><h2>A Valid Action Is Not a Completed Subgoal.</h2><p>On CALVIN sequence 0526, Opus 5.5 completes five subgoals using 338 action submissions, 18 model calls and 229.4 seconds. Gemini 3.8 uses 501 action submissions and 464 state observations, yet finishes with zero of five subgoals after 36 calls and 796.5 seconds. Its final stop is the token budget. Gemini 4 Argon completes all five goals with 475 action submissions, 408 state observations, 18 model calls and 351.9 seconds. The current-subgoal queries show Opus 5.5 advancing through retrieval, storage, stacking and the light switch; Gemini 3.8’s retained queries remain on the first lifting goal.</p><p>ALFRED makes the final conditions explicit: Gemini 4 Argon satisfies all three conditions for cleaning a soap bar and placing it in the bathtub in six rounds; DeepSeek-1017 ends at one of three after eight rounds. On RoboCasa’s left-drawer task, Gemini 4 Argon completes in 13 rounds despite an error in round ten, while Sol reaches its 24-round ceiling without the required final state.</p><p><strong>Count verified changes in the task state, then relate them to actions, observations and elapsed time.</strong> This separates purposeful progress from activity that leaves the goal unsatisfied.</p><p><a href="index.html?analysis=sequence#execution-analysis">CALVIN sequence →</a> · <a href="index.html?analysis=goal#execution-analysis">ALFRED goal conditions →</a> · <a href="index.html?analysis=drawer#execution-analysis">RoboCasa drawer →</a></p><h3>Which budget actually stopped the episode?</h3><p>In the selected BEHAVIOR-1K toolbox task, none of the ten models completes the native goal. Gemini 4 Argon uses 603,393 recorded tokens before the next round is blocked by the 640,000-token limit, after 37.5 minutes of a 180-minute ceiling. On charger insertion, it also reaches a token guard: after 23 native steps the final goal distance is still 15.9 cm. More wall time alone would leave these stopping limits in place.</p><p><a href="index.html?analysis=horizon#execution-analysis">Inspect the resource ceilings and stopping reasons →</a></p></section>
-<section id="representation"><p class="eyebrow">05 / Region Grounding</p><h2>Precise Outlines Still Need the Right Target.</h2><p>Astra leads rotation estimation and Planning; Gemini 3.8 Flash has the lowest numerical spatial error; Gemini 4 Argon leads Spatial Pass@1 and both region-overlap metrics; Opus 5.5 has the highest reported Manipulation success. These rank changes make a single proxy inadequate for selecting an embodied generalist.</p><figure class="report-figure"><a href="index.html?case=W5-w5_ragnet-02#latest-cases"><img src="assets/latest-cases/cases-affordance.webp?v=polygons-20261020" alt="Same-task polygon comparisons: precise cutting outlines, undercoverage of a pulling region, and different object selections" loading="lazy" width="1420" height="1110"></a><figcaption><strong>Shape and object selection are separate errors.</strong> The same image, task and crop are shared within each row. Green marks the reference mask; colored contours are actual model outputs. <a href="index.html?case=W5-w5_ragnet-02#latest-cases">Compare all ten models →</a></figcaption></figure>{table3}<p>Direct polygons increase mean region overlap for nine of ten models on the same 70 Affordance cases. Qwen 397B is the exception (0.116 box–mask IoU versus 0.092 polygon IoU). The representation can fit a region more closely, but that improvement is not itself a test of grasping or task execution.</p><p><strong>An embodied generalist must use evidence to finish every required condition, before its decision and interaction budgets run out.</strong> The full benchmark measures that end-to-end outcome; the execution traces show where it is lost.</p><p><a href="paper.pdf">Read the Affordance Analysis →</a></p></section>
-<section id="methods"><p class="eyebrow">Evidence and Definitions</p><h2>From Recorded Outputs to Reproducible Counts.</h2><p>All comparisons use ten models: 157 adopted Gemini 4 Argon Planning reports join the original 1,413 episodes. Earlier retries are excluded. Gemini 4 Argon’s time, usage and error counts come from those same adopted reports; 109 gallery executions are matched to the new logs by report hash. All report SHA-256 hashes were checked against the supplied log manifest. Native task identity was checked separately for the HumanCLAW wrappers whose model-specific canonical names differ. Completion counts reproduce the adopted main-table Planning results.</p><p>Time is reported episode wall time, or the campaign duration where supplied, falling back to the last recorded loop time. It includes reported setup and environment interaction, so it is not model inference latency. IQR is the 25th–75th percentile. Token totals use recorded input plus output usage. Missing usage is excluded: coverage is shown for every model. Failure token share is the sum in unsuccessful episodes divided by the sum in all episodes with recorded usage. Recovery means native final success after an earlier recorded execution error; budget guards and timed-out rounds are excluded from that error count.</p><p>The video explorer contains {len(ex['stories'])} same-task groups, {ex['runCount']} episodes and {ex['roundCount']:,} recorded rounds. Its Manipulation examples retain their recorded configurations; the main table aggregates the adopted evaluation assignments. The protocol audit distinguishes observation schedules and execution ceilings. Per-episode settings, stop limits and source hashes accompany each trace. Native tool events are matched to round completion timestamps; any events without a close timestamp match remain separately available in the trace. Video excerpts and saved-observation sequences retain their own playback clock.</p><p><a href="author-source.zip" download>Author manuscript source (ZIP) ↓</a> · <a href="assets/analysis/editable-figures.zip" download>Editable figures (draw.io, SVG, PDF, PNG) ↓</a> · <a href="data/report/planning-episodes.csv" download>Planning episode metrics (CSV) ↓</a> · <a href="data/report/metrics.json">Analysis data (JSON) ↗</a> · <a href="data/execution/complete-episodes.csv" download>Video episode metrics (CSV) ↓</a> · <a href="data/argon-logs-audit.json">Gemini 4 Argon log-matching audit ↗</a> · <a href="execution-guide.html">All execution comparisons ↗</a></p></section></main>'''
-page='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>From Local Competence to Complete Tasks — Embodied Agent Arena</title><meta name="description" content="A detailed ten-model analysis of shared planning failures, time and token use, recovery, action progress and observation design, with task videos and source records."><link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.html"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="technical-report.css?v=20261020"><link rel="stylesheet" href="typography.css?v=20261022"><script src="typography.js?v=20261022" defer></script><link rel="stylesheet" href="domain-charts.css?v=native-charts-20261022"><script src="model-style.js?v=direct-labels-20261021" defer></script><script src="domain-charts.js?v=native-charts-20261022" defer></script><script src="figure-motion.js?v=native-charts-20261022" defer></script></head><body class="report-page">'+body+'</body></html>'
-(U/'technical-report.html').write_text(page)
-ledger=[
- ('Shared failures','15/157; 8/157 common successes; union 142/157', '1,570 Planning report outcomes; exact task_id match','planning-outcomes.json','Execution appendix','Shared Failures'),
- ('Complementarity','142 − 126 = 16 tasks beyond Astra','Same-task union; descriptive, not a tested selector','planning-outcomes.json','Execution appendix','Shared Failures'),
- ('Failed-episode token share',f'{minimum:.1f}–{maximum:.1f}%; Astra 55.5%','Sum observed input/output tokens; denominator only records with usage','planning.models','Execution appendix','Time & Tokens'),
- ('Recovery','Opus 5.5: 48/105; Gemini 4 Argon: 16/28 error episodes eventually complete','Native success after earlier execution error, exclude budget guards/timeouts','planning.models','Execution appendix','Error Recovery'),
- ('CALVIN progress','Opus 5/5,338 action calls; Gemini 4 Argon 5/5,475 action calls; Gemini 3.8 0/5,501 action calls','Same sequence0526, per-record settings, native verifier and gateway traces','data/execution','Execution appendix','Execution explorer'),
- ('Representation','Polygon IoU greater for9/10 models','70 identical task inputs; one polygon run vs repeated boxes','profiles','Existing Affordance appendix + report','Representation & Feedback')]
-lines=['# Claim ledger','', '| Claim | Value | Scope / calculation | Data field | Manuscript | Website |','|---|---|---|---|---|---|']
-lines+=['| '+' | '.join(x)+' |' for x in ledger]
-(R/'docs/EXECUTION_CLAIMS.md').write_text('\n'.join(lines)+'\n')
-print(json.dumps({'tasks':len(ex['stories']),'episodes':ex['runCount'],'planningReports':len(episode),'reportBytes':len(page),'claimCount':len(ledger)}))
+MODEL_COUNT = 10
+TASK_COUNT = 157
+TABLE_CAPTIONS = {
+    'sources': 'Completed Planning tasks, by source',
+    'resources': 'Planning episode time, token allocation and recovery',
+    'profiles': 'Region representation and downstream task completion',
+}
+TABLE_PATTERN = re.compile(
+    r'(<div class="report-table-scroll">\s*<table\b[^>]*>\s*'
+    r'<caption>(?P<caption>.*?)</caption>.*?<tbody>)(?P<body>.*?)'
+    r'(</tbody>\s*</table>\s*</div>)', re.S,
+)
+
+
+class AuditError(ValueError):
+    """An input differs from the current, reviewed evaluation."""
+
+
+def require(condition, message):
+    if not condition:
+        raise AuditError(message)
+
+
+def read_json(path):
+    return json.loads(path.read_text())
+
+
+def keyed(rows, fields, label):
+    result = {tuple(row[field] for field in fields): row for row in rows}
+    require(len(result) == len(rows), f'Duplicate {label} identities')
+    return result
+
+
+def checked_inputs(repo, analysis):
+    """Validate all inputs before rendering or touching a destination file."""
+    public = repo / 'public'
+    current = read_json(public / 'data/report/metrics.json')
+    episodes = read_json(public / 'data/report/planning-episodes.json')
+    coverage = read_json(public / 'data/report/planning-outcomes.json')
+    study = read_json(public / 'data/study.json')
+    supplied = read_json(analysis / 'report-metrics.json')
+    supplied_episodes = read_json(analysis / 'planning-episodes.json')
+
+    models = current['models']
+    require(len(models) == len(set(models)) == MODEL_COUNT,
+            'Canonical metrics must contain all ten models')
+    require(supplied.get('models') == models,
+            'Analysis model population differs from current canonical data')
+    current_rows = keyed(episodes, ('model', 'taskId'), 'canonical episode')
+    supplied_rows = keyed(supplied_episodes, ('model', 'taskId'), 'analysis episode')
+    require(len(current_rows) == MODEL_COUNT * TASK_COUNT,
+            'Canonical Planning data must contain 1,570 assignments')
+    require(Counter(r['model'] for r in episodes) == {m: TASK_COUNT for m in models},
+            'Canonical Planning data must contain 157 assignments per model')
+    require(current_rows.keys() == supplied_rows.keys(),
+            'Analysis episode population differs from current canonical data')
+    for key, current_row in current_rows.items():
+        require(current_row == supplied_rows[key],
+                f'Stale analysis episode {key}: use the adopted report, identity, '
+                'outcome, usage and duration, including current replacement hashes')
+    # Do not silently replace old profile values with study.json. That previously
+    # concealed stale analyses while restoring old Planning aggregates and prose.
+    require(supplied.get('profiles') == current['profiles'],
+            'Analysis comparison profiles differ from current canonical data')
+    require(supplied.get('planning') == current['planning'],
+            'Analysis Planning aggregates differ from current canonical data')
+
+    plan = current['planning']
+    require(plan['nTasks'] == TASK_COUNT and plan['nEpisodes'] == len(episodes),
+            'Canonical Planning denominators are inconsistent')
+    by_model = keyed(plan['models'], ('model',), 'Planning model')
+    profiles = keyed(current['profiles'], ('model',), 'comparison profile')
+    require(set(by_model) == set(profiles) == {(m,) for m in models},
+            'Canonical aggregates and profiles must include all ten models')
+    by_name = keyed(study['models'], ('name',), 'study model')
+    require(len(by_name) == MODEL_COUNT, 'Study data must include all ten models')
+    for profile in current['profiles']:
+        require((profile['name'],) in by_name, 'Unknown model in comparison profiles')
+        displayed = by_name[profile['name'],]
+        require(profile['scores'] == displayed['scores'] and
+                profile['runs'] == displayed['metric_runs'],
+                f'Canonical profile disagrees with study.json: {profile["name"]}')
+        means = [float(value.split(' ± ')[0]) for value in profile['scores']]
+        require(profile['means'] == means,
+                f'Canonical means disagree with displayed scores: {profile["name"]}')
+
+    tasks = keyed(coverage['tasks'], ('taskId',), 'outcome task')
+    source_rows = keyed(coverage['sourceResults'], ('model',), 'source summary')
+    require(len(tasks) == TASK_COUNT and set(source_rows) == set(by_model),
+            'Outcome matrix must include 157 tasks and ten source summaries')
+    task_ids = {key[0] for key in tasks}
+    for model in models:
+        rows = [r for r in episodes if r['model'] == model]
+        require({r['taskId'] for r in rows} == task_ids,
+                f'Outcome matrix and episode task identities differ for {model}')
+        aggregate = by_model[model,]
+        completed = sum(r['outcome'] == 'success' for r in rows)
+        require(aggregate['n'] == TASK_COUNT and aggregate['completed'] == completed,
+                f'Canonical completion count does not reproduce episodes: {model}')
+        require(float(profiles[model,]['scores'][6]) == round(100 * completed / TASK_COUNT, 1),
+                f'Main-table Planning score does not reproduce episodes: {model}')
+        known = [r for r in rows if r['tokens'] is not None]
+        failed_tokens = sum(r['tokens'] for r in known if r['outcome'] != 'success')
+        total_tokens = sum(r['tokens'] for r in known)
+        require(aggregate['tokens']['n'] == len(known) and math.isclose(
+            aggregate['unsuccessfulTokenShare'], failed_tokens / total_tokens,
+            rel_tol=1e-12), f'Canonical token coverage or failure share is inconsistent: {model}')
+        require(source_rows[model,]['completed'] == completed,
+                f'Outcome source total is inconsistent: {model}')
+        for source in source_rows[model,]['sourceResults']:
+            subset = [r for r in rows if r['benchmark'] == source['benchmark']]
+            require(source['n'] == len(subset) and source['completed'] == sum(
+                r['outcome'] == 'success' for r in subset),
+                f'Outcome source summary is inconsistent: {model}/{source["benchmark"]}')
+        for row in rows:
+            task = tasks[row['taskId'],]
+            require((model in task['successModels']) == (row['outcome'] == 'success'),
+                    f'Outcome matrix disagrees with episode success: {model}/{row["taskId"]}')
+            require(task['recordIds'][model] == row['recordId'],
+                    f'Outcome matrix record identity is stale: {model}/{row["taskId"]}')
+    return current, coverage
+
+
+def table_rows(metrics, coverage):
+    """Only measured rows are generated; approved captions and prose stay put."""
+    escape = html.escape
+    profiles = {p['model']: p for p in metrics['profiles']}
+    source_results = {r['model']: r for r in coverage['sourceResults']}
+    sources, resources, comparison = [], [], []
+    for model in metrics['models']:
+        summary = source_results[model]
+        cells = ''.join(f'<td>{s["completed"]}/{s["n"]}</td>' for s in summary['sourceResults'])
+        sources.append(f'<tr><th scope="row">{escape(profiles[model]["name"])}</th>'
+                       f'{cells}<td><strong>{summary["completed"]}/{TASK_COUNT}</strong></td></tr>')
+    for model in metrics['planning']['models']:
+        resources.append(
+            f'<tr><th scope="row">{escape(model["name"])}</th>'
+            f'<td>{model["completed"]}/{TASK_COUNT}</td>'
+            f'<td>{model["time"]["median"]:.1f}</td>'
+            f'<td>{model["time"]["q25"]:.1f}–{model["time"]["q75"]:.1f}</td>'
+            f'<td>{model["unsuccessfulTokenShare"] * 100:.1f}%</td>'
+            f'<td>{model["tokens"]["n"]}/{TASK_COUNT}</td>'
+            f'<td>{model["recoveredAfterError"]}/{model["episodesWithExecutionErrors"]}</td></tr>')
+    for profile in metrics['profiles']:
+        value = profile['means']
+        comparison.append(
+            f'<tr><th scope="row">{escape(profile["name"])}</th>'
+            f'<td>{value[4]:.3f}</td><td>{value[5]:.3f}</td>'
+            f'<td>{value[5]-value[4]:+.3f}</td><td>{value[6]:.1f}</td>'
+            f'<td>{value[7]:.1f}</td></tr>')
+    return {'sources': ''.join(sources), 'resources': ''.join(resources),
+            'profiles': ''.join(comparison)}
+
+
+def refresh_tables(page, rows, coverage):
+    found = Counter()
+
+    def replace(match):
+        caption = html.unescape(re.sub('<[^>]+>', '', match['caption']))
+        keys = [key for key, prefix in TABLE_CAPTIONS.items() if caption.startswith(prefix)]
+        require(len(keys) == 1, f'Unexpected report table: {caption}')
+        key = keys[0]
+        found[key] += 1
+        if key == 'sources':
+            # A changed source order must never put valid counts under wrong headers.
+            header = re.search(r'<thead>(.*?)</thead>', match.group(1), re.S)
+            require(header is not None, 'Source table is missing its column headings')
+            headings = [html.unescape(re.sub('<[^>]+>', '', text)).strip()
+                        for text in re.findall(r'<th[^>]*>(.*?)</th>', header[1], re.S)]
+            expected = ['Model'] + [s['benchmark'] for s in coverage['sourceResults'][0]['sourceResults']] + ['All']
+            require(headings == expected, 'Source table headings differ from canonical source order')
+            require(all([s['benchmark'] for s in model['sourceResults']] == expected[1:-1]
+                        for model in coverage['sourceResults']),
+                    'Source-summary order differs across models')
+        return match.group(1) + rows[key] + match.group(4)
+
+    result = TABLE_PATTERN.sub(replace, page)
+    require(found == {key: 1 for key in TABLE_CAPTIONS},
+            'Report must have exactly one source, resource and profile table')
+    return result
+
+
+def build(repo, analysis):
+    metrics, coverage = checked_inputs(repo, analysis)
+    target = repo / 'public/technical-report.html'
+    template = repo / 'scripts/templates/technical-report.html'
+    original = target.read_text() if target.exists() else template.read_text()
+    rendered = refresh_tables(original, table_rows(metrics, coverage), coverage)
+    # All validation and rendering are complete before the sole permitted write.
+    if not target.exists() or rendered != original:
+        target.write_text(rendered)
+    return {'models': MODEL_COUNT, 'planningReports': MODEL_COUNT * TASK_COUNT,
+            'tablesRefreshed': 3, 'reportBytes': len(rendered.encode()),
+            'narrativePreserved': True, 'canonicalDataModified': False}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--analysis', type=Path, required=True,
+                        help='Audited analysis matching the currently adopted canonical records')
+    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[1])
+    args = parser.parse_args()
+    try:
+        result = build(args.repo.resolve(), args.analysis.resolve())
+    except (AuditError, FileNotFoundError, KeyError, TypeError, json.JSONDecodeError) as error:
+        parser.exit(2, f'Report not changed: {error}\n')
+    print(json.dumps(result))
+
+
+if __name__ == '__main__':
+    main()

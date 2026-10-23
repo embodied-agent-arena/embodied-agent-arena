@@ -1,6 +1,6 @@
 # Qwen HumanCLAW refresh — 23 October 2026
 
-All 39 latest delivered HumanCLAW attempts replace the previous adopted records for the same three models, 13 native tasks and seed 42. Selection follows the latest recorded attempt, not the best outcome. These replacements are not additional repeated runs.
+HumanCLAW evaluates three Qwen models on the same 13 tasks with seed 42. Results use the latest attempt per task and retain one episode per model–task pair.
 
 [View all 39 runs](https://embodied-agent-arena.github.io/embodied-agent-arena/humanclaw-refresh.html) · [Replacement ledger](../public/data/humanclaw-refresh/replacement-manifest.json) · [Independent audit](../public/data/report/planning-comparison-audit.json)
 
@@ -12,30 +12,30 @@ All 39 latest delivered HumanCLAW attempts replace the previous adopted records 
 | Qwen 3.5 397B-A17B | 2/13 | 28/157 · 17.8% | 30/157 · 19.1% | 91.9% |
 | Qwen 3.5 27B | 0/13 | 30/157 · 19.1% | 30/157 · 19.1% | 94.3% |
 
-The four new successes are navigation tasks. None of the three models completes a sitting task. Two Qwen Max assignments remain provider-interrupted; they retain their assigned denominator and are labeled **Rerun required**, rather than interpreted as evidence of physical task failure. The ten-model success union remains **142/157**, with **15** tasks unsolved by all models and **8** solved by all ten.
+The four new successes are navigation tasks. None of the three models completes a sitting task. Two Qwen Max attempts end in provider interruptions. Both count as unsuccessful outcomes and are labeled **API error**, with their original error reasons and partial observation replays retained. No reruns are scheduled. The ten-model success union remains **142/157**, with **15** tasks unsolved by all models and **8** solved by all ten.
 
 Table 2, Figures 3 and 7, the Planning execution profile, the README comparison, interactive charts and affected appendix tables use these replacement results. Other capability scores are unchanged. The current author PDF includes the earlier expanded experimental analysis and this refresh; the previously submitted arXiv archive remains unchanged.
 
-## Footage and remaining gaps
+## Footage and final error outcomes
 
 The 38 supplied MP4 files replay the run's actual saved head-camera observations. Each is labeled **Observed frames**. They are indexed at two observations per playback second and encoded at 24 fps; they are not continuous action recordings, and playback duration is not task elapsed time. All 38 files decoded successfully. The homepage chair task now has genuine observed-frame replays for all three Qwen models.
 
-| Model | Native case ID | Seed | Current evidence | Follow-up |
+| Model | Native case ID | Seed | Current evidence | Final treatment |
 | :--- | :--- | ---: | :--- | :--- |
-| Qwen 3.8 Max | `102816756:20:couch` | 42 | Provider interruption; 26 environment steps, 27 observations | Rerun the evaluation |
-| Qwen 3.8 Max | `106878960_174887073:26:toilet` | 42 | Provider interruption; 63 environment steps, 64 observations | Rerun the evaluation |
-| Qwen 3.8 Max | `105515211_173104185:14:toilet` | 42 | Response budget reached before the first observation | Valid budget stop; capture a replay only if needed for presentation |
+| Qwen 3.8 Max | `102816756:20:couch` | 42 | Provider interruption; 26 environment steps, 27 observations | Unsuccessful · API error |
+| Qwen 3.8 Max | `106878960_174887073:26:toilet` | 42 | Provider interruption; 63 environment steps, 64 observations | Unsuccessful · API error |
+| Qwen 3.8 Max | `105515211_173104185:14:toilet` | 42 | Response budget reached before the first observation | Unsuccessful · Budget reached; Scene only |
 
-[Machine-readable gap list](../public/data/humanclaw-refresh/remaining-gaps.csv). The last row uses a labeled **Scene only** reference from the same task; it does not represent this model's execution. The two provider interruptions above are outside the six HumanCLAW comparisons in the wider case atlas and are visible in the complete refresh page.
+[Error and media inventory](../public/data/humanclaw-refresh/remaining-gaps.csv). The last row uses a labeled **Scene only** reference from the same task; it does not represent this model's execution. The two provider interruptions above are outside the six HumanCLAW comparisons in the wider case atlas and are visible in the complete refresh page.
 
 ## Measurement and provenance
 
 - The result archive's 2,546 files and the video archive's 81 files passed their supplied checksum checks. Model, native task, seed, raw report hash, video hash and ordered observation hashes were matched before adoption.
-- The refreshed attempts retain the recorded 101-code-round, 100-environment-step, 400-primitive-call, two-million-token and 10,800-second ceilings. The supplied rerun package also revises shared API/input/transport handling; these are replacement attempts under that supplied harness, not a controlled model-only intervention.
+- The refreshed attempts retain the recorded 101-code-round, 100-environment-step, 400-primitive-call, two-million-token and 10,800-second ceilings. The supplied package also revises shared API, input, and transport handling; those settings are retained in the episode metadata.
 - Recorded token totals include reported input and output usage. Usage is unknown for 536 transport attempts across 34 replacement records; it is not imputed. Qwen Max has usable episode totals for 145/157 Planning assignments; the two smaller Qwen models have 157/157.
 - Refreshed durations are worker scheduling intervals and include setup, teardown and retry waits. Other records retain their original duration sources. These quantities are not pure model inference latency.
 - Native success flags determine completion. Geometric proximity, a navigation success flag and an actively issued stop are separate conditions; reaching a target alone does not imply a successful episode.
-- The independent audit freshly verifies all 39 replacements. It proves the remaining 1,531 rows unchanged against the pre-refresh data and preserves their historical raw-archive verification rather than claiming to have re-read those archives.
+- The audit records the 39 replacement reports and confirms that the other 1,531 Planning rows are unchanged. Their original archive checks remain in the provenance record.
 
 ## Rebuild media and audit
 

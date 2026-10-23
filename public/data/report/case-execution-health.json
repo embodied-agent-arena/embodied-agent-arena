@@ -1,15 +1,29 @@
 {
   "checkedRecords": 1090,
   "checkedTasks": 109,
-  "rerunCount": 21,
+  "checkedAdditionalRecords": 21,
+  "totalCheckedRecords": 1111,
+  "errorCount": 21,
+  "additionalErrorCount": 2,
+  "totalErrorCount": 23,
+  "rerunCount": 0,
+  "pendingRerunCount": 0,
   "byPhase": {
     "before_actions": 9,
     "after_actions": 12
   },
+  "allByPhase": {
+    "before_actions": 9,
+    "after_actions": 14
+  },
   "runs": {
     "record-1fa8de29e738f3cc50cb": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "ModelRequestError: Model API transport failure: TimeoutError",
       "failedRound": 1,
@@ -18,11 +32,16 @@
       "modelKey": "qwen",
       "recordId": "1fa8de29e738f3cc50cb",
       "reportSha256": "0fd023c6ba4783a32d11d7333e34246f33e6101b6f0b854f70c0cbd64397a81e",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-a37f8857fc516a2a2966": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "ModelRequestError: Model API transport failure: TimeoutError",
       "failedRound": 1,
@@ -31,11 +50,16 @@
       "modelKey": "qwen",
       "recordId": "a37f8857fc516a2a2966",
       "reportSha256": "93bc25b5b144231a4bebad6f6b161562a72f531227736505edbbb59d3c04da9c",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-858dd8a80f9fdb1e94a8": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "ModelRequestError: Model API transport failure: TimeoutError",
       "failedRound": 1,
@@ -44,11 +68,16 @@
       "modelKey": "qwen",
       "recordId": "858dd8a80f9fdb1e94a8",
       "reportSha256": "ce0a1826caba07408f10f64f8861596c5c5a0a5d9bb801b05b8529ac45846319",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-a7a6c6d5de7f398fe8ce": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "ModelRequestError: Model API transport failure: TimeoutError",
       "failedRound": 1,
@@ -57,11 +86,16 @@
       "modelKey": "qwen",
       "recordId": "a7a6c6d5de7f398fe8ce",
       "reportSha256": "55a74256a8f017b689ed962b2fb92262c7bf109f5e517010a0bbac05399fffa0",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-f69f8b64d18a14e0c102": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API transport failure: TimeoutError",
       "failedRound": 8,
@@ -70,11 +104,16 @@
       "modelKey": "gemini",
       "recordId": "f69f8b64d18a14e0c102",
       "reportSha256": "939deab82a26c1dab125a4362df54b73e2f104c11201e85b945d177381c3dca8",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-ffedd4e7646498cdacb7": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API transport failure: TimeoutError",
       "failedRound": 14,
@@ -83,11 +122,16 @@
       "modelKey": "gemini",
       "recordId": "ffedd4e7646498cdacb7",
       "reportSha256": "ce0406bd861e1a049fa29f170422b680e0fb6b3f791913d6574fabd7f7fc48e9",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-3c6ce64fff43fcddacc2": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API transport failure: URLError",
       "failedRound": 9,
@@ -96,11 +140,16 @@
       "modelKey": "qwen35-397b",
       "recordId": "3c6ce64fff43fcddacc2",
       "reportSha256": "9e36ec96c50213fa0d6884fc5eb1d38dfe19676c8fca8f0b76d5d81b5ce32094",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-eaf61284c96847d9db58": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "Model API transport failure: URLError",
       "failedRound": 1,
@@ -109,11 +158,16 @@
       "modelKey": "qwen35-27b",
       "recordId": "eaf61284c96847d9db58",
       "reportSha256": "9936805712f5489e25951e0fab97b589285533119680e8df260ae7cbb122446f",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-fbb19034199ae253de92": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API HTTP 429",
       "failedRound": 8,
@@ -122,11 +176,16 @@
       "modelKey": "qwen35-397b",
       "recordId": "fbb19034199ae253de92",
       "reportSha256": "b6ea4a52c9d940b8642bdb5d110119320f93cea187c43163d8525adcfff63a66",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-1b8d301f29a7f32368e3": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API HTTP 429",
       "failedRound": 2,
@@ -135,11 +194,16 @@
       "modelKey": "qwen35-397b",
       "recordId": "1b8d301f29a7f32368e3",
       "reportSha256": "4c029550114ef9d3a17d570dd9dc92af417c64ea02da1ea66c52cd5d43ce8410",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-c883d69e00ef8e39bcc2": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API transport failure: TimeoutError",
       "failedRound": 3,
@@ -148,11 +212,16 @@
       "modelKey": "gemini",
       "recordId": "c883d69e00ef8e39bcc2",
       "reportSha256": "bab9b35ccef0f34bcb077002e930d5da8c138a7dd2efd4282ba82234a73c77b9",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-65d8889adcf5d9cdc1c5": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API transport failure: TimeoutError",
       "failedRound": 16,
@@ -161,11 +230,16 @@
       "modelKey": "qwen",
       "recordId": "65d8889adcf5d9cdc1c5",
       "reportSha256": "dc1de3cfa1155a9fe2c5ad8d408620a90aa8c5da8cf70a385c6eecc85222a256",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-a921659bbae37ab52121": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API transport failure: RemoteDisconnected",
       "failedRound": 2,
@@ -174,11 +248,16 @@
       "modelKey": "astra",
       "recordId": "a921659bbae37ab52121",
       "reportSha256": "befd05c8c390fbabf6fa19d2ebe15ec09e1e57f6e5615e3a807cfabfc8cee4bd",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-74af55df922d36dabeba": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API HTTP 429",
       "failedRound": 7,
@@ -187,11 +266,16 @@
       "modelKey": "qwen35-397b",
       "recordId": "74af55df922d36dabeba",
       "reportSha256": "952cba150ce82789ff4f3860921b7f6ed88d16907ed81d0c48b7e5b26636ac0a",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-4f2f37f1ea86a6924a1b": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "Model API transport failure: TimeoutError",
       "failedRound": 1,
@@ -200,11 +284,16 @@
       "modelKey": "qwen",
       "recordId": "4f2f37f1ea86a6924a1b",
       "reportSha256": "2e02a8c6a050cea526848ff3779e5e1c57f0c366266ef5e58ad171499c83e23c",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-eb59812d045e40eb4fba": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API HTTP 400",
       "failedRound": 24,
@@ -213,11 +302,16 @@
       "modelKey": "qwen",
       "recordId": "eb59812d045e40eb4fba",
       "reportSha256": "538de3e87782f97aa23d6340a768c38496df4386be262edf941b946d10b54e5f",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-79ac3202d2ab28e6948c": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API HTTP 400",
       "failedRound": 5,
@@ -226,11 +320,16 @@
       "modelKey": "qwen",
       "recordId": "79ac3202d2ab28e6948c",
       "reportSha256": "351606b8f68506574c9e7aa26fa1aa8d238d73fe05371bb11cbb13df5a8f1af4",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-47eb4d296519bf5ea5bc": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "after_actions",
       "error": "Model API HTTP 400",
       "failedRound": 9,
@@ -239,11 +338,16 @@
       "modelKey": "qwen",
       "recordId": "47eb4d296519bf5ea5bc",
       "reportSha256": "0c251c63b5fe5008e465504a9bee977b9a043117cc30d67384c58891ca179837",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-6991f7daf887fe59eab3": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "Model API HTTP 500",
       "failedRound": 1,
@@ -252,11 +356,16 @@
       "modelKey": "gemini",
       "recordId": "6991f7daf887fe59eab3",
       "reportSha256": "8df214b49d67d5dec9c776072ef672014f75c56eab76ba601adbe52218fe6e4f",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     },
     "record-c64525f6d97751378362": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "ModelRequestError: Model API transport failure: TimeoutError",
       "failedRound": 1,
@@ -265,11 +374,16 @@
       "modelKey": "qwen",
       "recordId": "c64525f6d97751378362",
       "reportSha256": "86570d5b28302b2686006cf066567134f328e5f8d144561711c5e9176f7e3ba6",
-      "recordedOutcome": "timeout"
+      "recordedOutcome": "timeout",
+      "scope": "case_atlas"
     },
     "record-5aa67803eddf29854f57": {
-      "status": "rerun_required",
+      "status": "counted_failure",
       "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
       "phase": "before_actions",
       "error": "Model API transport failure: URLError",
       "failedRound": 1,
@@ -278,8 +392,50 @@
       "modelKey": "qwen35-397b",
       "recordId": "5aa67803eddf29854f57",
       "reportSha256": "c229ea003be551b55a8f4e9f4643ff65893cc7e303ea8deb5110cbe125b5ff09",
-      "recordedOutcome": "runtime_failure"
+      "recordedOutcome": "runtime_failure",
+      "scope": "case_atlas"
     }
   },
-  "policy": "API-interrupted attempts require reruns. Original outcomes and aggregate scores are preserved until replacement runs are supplied."
+  "additionalRuns": {
+    "humanclaw-refresh-qwen-02": {
+      "status": "counted_failure",
+      "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
+      "phase": "after_actions",
+      "error": "Model request failed: provider error data_inspection_failed.",
+      "failedRound": 28,
+      "caseId": "humanclaw-refresh-qwen-02",
+      "taskId": "humanclaw--humanclaw--fullval--102816756-20-couch--42--43365d945e10",
+      "modelKey": "qwen",
+      "recordId": "1bfcefcdec8968d5c699",
+      "reportSha256": "0c4488b40230c285ba104414b4d6bcf2b19b2aec867a69b7d5cb49f2176b69e3",
+      "recordedOutcome": "agent_failure",
+      "scope": "humanclaw_refresh"
+    },
+    "humanclaw-refresh-qwen-08": {
+      "status": "counted_failure",
+      "reason": "api_failure",
+      "displayStatus": "API error",
+      "final": true,
+      "countedAsFailure": true,
+      "rerunRequired": false,
+      "phase": "after_actions",
+      "error": "Model request failed: provider error data_inspection_failed.",
+      "failedRound": 65,
+      "caseId": "humanclaw-refresh-qwen-08",
+      "taskId": "humanclaw--humanclaw--fullval--106878960_174887073-26-toilet--42--83b0dd75082b",
+      "modelKey": "qwen",
+      "recordId": "1273def428c144e2723b",
+      "reportSha256": "bc4491b146dcd4f8982396702ec745d8d9558763a87724355793e5a0215a7235",
+      "recordedOutcome": "agent_failure",
+      "scope": "humanclaw_refresh"
+    }
+  },
+  "policy": "Terminal API interruptions are final errors and count as unsuccessful attempts in the existing evaluation population. No reruns are pending. Original outcomes, native success flags, report identities, recordings and aggregate scores are preserved. API errors remain distinct from generated-code or environment runtime errors and budget stops.",
+  "policyDate": "2026-10-23",
+  "inventory": "data/report/case-api-errors.csv",
+  "compatibilityCsv": "case-reruns.csv is a legacy download URL for the same final error inventory, not a rerun queue."
 }

@@ -16,6 +16,7 @@ import re
 import shutil
 import subprocess
 from pathlib import Path
+from audit_case_execution_health import api_interruption, POLICY
 
 ROOT = Path(__file__).resolve().parents[1]
 PUB = ROOT / 'public'
@@ -66,7 +67,7 @@ def clean(value):
 
 def status(r):
     if r.get('auditStatus') == 'provider_interruption':
-        return 'Rerun required'
+        return 'API error'
     if r.get('auditStatus') == 'task_failure_after_agent_stop':
         return 'Not completed'
     return {'success': 'Completed', 'budget_exhausted': 'Budget reached',
@@ -196,7 +197,7 @@ def make_record(row, result_pack, video_pack, validation, ffmpeg):
     interaction = native['success']['is_interact_episode']
     target = row['target'].replace('_', ' ')
     instruction = f'Find the {target}, approach until the body touches it, and ' + (f'sit on the {target}.' if interaction else 'stop.')
-    note = ('The provider interrupted this attempt after actions had been executed; a replacement evaluation is still required.' if interrupted else
+    note = ('The provider interrupted this attempt after actions had been executed; the attempt is counted as unsuccessful.' if interrupted else
             'The agent stopped, but the native success check was not satisfied.' if row['audit_status'] == 'task_failure_after_agent_stop' else '')
     provenance = dict(date=DATE, sourceRecordId=source_id, recordId=record_id,
                       modelKey=row['model_id'], apiModel=row['api_model'], taskId=row['case_id'],
@@ -243,6 +244,7 @@ def make_record(row, result_pack, video_pack, validation, ffmpeg):
                                    kind='success' if steps[i]['success'] else 'error' if steps[i]['error'] else 'action', detail='') for i in moments])
     if interrupted:
         detail['providerErrorCode'] = provider_codes[0]
+        detail['executionReview'] = api_interruption(detail)
     write(PUB / detail['detailUrl'], detail)
     return detail, provenance
 
@@ -394,10 +396,11 @@ def build(result_pack, video_pack, ffmpeg):
     write(path, audit)
     exported = [summary(updates[(r['case_id'], r['model_id'])]) for r in cases]
     audit = dict(date=DATE, recordCount=39, videoCount=38, seed=42,
+                 apiErrorCount=2, pendingRerunCount=0, errorPolicy=POLICY,
                  sourcePackages=[result_pack.name, video_pack.name],
                  matching=['model', 'canonical task ID', 'native scene/episode/target', 'seed', 'report SHA-256', 'video SHA-256', 'ordered observation-frame hashes'],
                  updatedAtlasRecords=changed_runs, records=exported,
-                 policy='Latest delivered attempts replace earlier records; they are not selected by score. Provider interruptions remain Rerun required. Observation replays are not continuous action recordings.')
+                 policy='Latest delivered attempts replace earlier records; they are not selected by score. Provider interruptions are final API errors counted as unsuccessful; no reruns are pending. Observation replays are not continuous action recordings.')
     write(PUB / 'data/report/humanclaw-qwen-refresh.json', audit)
     build_index(exported)
     print(f'Imported {len(updates)} records, 38 observation replays, {len(changed_runs)} atlas rows; no aggregate scores changed.')
@@ -421,7 +424,7 @@ def build_index(records):
                 media = f'<img src="{h(context["poster"])}" alt="Same-task scene from {h(context["model"])}; no frames for this run"><span class="kind">Scene only</span>'
             cells.append(f'<td><div class="media">{media}</div><strong>{status(r)}</strong><br><a href="{h(r["detailUrl"])}">Execution trace ↗</a></td>')
         body.append(f'<tr><th scope="row">{h(first["instruction"])}<small>{h(first["nativeIdentity"]["task"])}</small></th>{"".join(cells)}</tr>')
-    page = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HumanCLAW Qwen Runs · Embodied Agent Arena</title><style>body{font:16px/1.5 system-ui,sans-serif;color:#203541;margin:32px auto;padding:0 20px;max-width:1250px}h1{font-size:clamp(26px,4vw,40px);margin-bottom:12px}a{color:#426e5b}p{max-width:90ch}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;min-width:760px}th,td{padding:14px;vertical-align:top;border-bottom:1px solid #dce3e0}th{text-align:left;width:25%}thead th{white-space:nowrap}small{display:block;font-size:12px;color:#637279;overflow-wrap:anywhere;margin-top:8px}video,img{width:100%;aspect-ratio:1;object-fit:contain;background:#14262b;display:block;border-radius:8px}.media{position:relative}.kind{position:absolute;top:8px;left:8px;background:#fffdf3;padding:2px 6px;border-radius:4px;font-size:12px;pointer-events:none}td strong{display:inline-block;margin-top:8px}</style></head><body><a href="index.html#cases">← Project page</a><h1>HumanCLAW: Refreshed Qwen Runs</h1><p>Three models on the same 13 tasks, seed 42. The latest delivered attempts replace the earlier records. Two provider-interrupted attempts still require reruns; one budget-limited attempt has no saved frames.</p><p><strong>Observed frames</strong> replays saved head-camera observations at two images per second. They are not continuous action footage, and playback duration is separate from task elapsed time. <strong>Scene only</strong> is a same-task reference image from another model, not a recording of the missing run.</p><p><a href="data/report/humanclaw-qwen-refresh.json">Results and provenance ↗</a></p><div class="scroll"><table><thead><tr><th>Task · Native case ID</th>' + ''.join(f'<th>{h(n)}</th>' for n in MODELS.values()) + '</tr></thead><tbody>' + ''.join(body) + '</tbody></table></div></body></html>'
+    page = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HumanCLAW Qwen Runs · Embodied Agent Arena</title><style>body{font:16px/1.5 system-ui,sans-serif;color:#203541;margin:32px auto;padding:0 20px;max-width:1250px}h1{font-size:clamp(26px,4vw,40px);margin-bottom:12px}a{color:#426e5b}p{max-width:90ch}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;min-width:760px}th,td{padding:14px;vertical-align:top;border-bottom:1px solid #dce3e0}th{text-align:left;width:25%}thead th{white-space:nowrap}small{display:block;font-size:12px;color:#637279;overflow-wrap:anywhere;margin-top:8px}video,img{width:100%;aspect-ratio:1;object-fit:contain;background:#14262b;display:block;border-radius:8px}.media{position:relative}.kind{position:absolute;top:8px;left:8px;background:#fffdf3;padding:2px 6px;border-radius:4px;font-size:12px;pointer-events:none}td strong{display:inline-block;margin-top:8px}</style></head><body><a href="index.html#cases">← Project page</a><h1>HumanCLAW: Refreshed Qwen Runs</h1><p>Three models on the same 13 tasks, seed 42. The latest delivered attempts replace the earlier records. Two provider-interrupted attempts count as unsuccessful; one budget-limited attempt has no saved frames.</p><p><strong>Observed frames</strong> replays saved head-camera observations at two images per second. They are not continuous action footage, and playback duration is separate from task elapsed time. <strong>Scene only</strong> is a same-task reference image from another model, not a recording of the missing run.</p><p><a href="data/report/humanclaw-qwen-refresh.json">Results and provenance ↗</a></p><div class="scroll"><table><thead><tr><th>Task · Native case ID</th>' + ''.join(f'<th>{h(n)}</th>' for n in MODELS.values()) + '</tr></thead><tbody>' + ''.join(body) + '</tbody></table></div></body></html>'
     (PUB / 'humanclaw-refresh.html').write_text(page)
 
 

@@ -5,7 +5,7 @@
   "arxiv": "2610.00854",
   "date_published": "2026-10-01",
   "manuscript_date": "2026-10-23",
-  "manuscript_version": "Updated author manuscript with refreshed Qwen HumanCLAW results",
+  "manuscript_version": "Updated author manuscript with Qwen HumanCLAW results and final error scoring",
   "paper_pages": 73,
   "abstract": "A robot generalist must interpret a scene, act on it, and satisfy every condition of a task. How far do frontier vision-language models (VLMs) meet these demands? We introduce Embodied Agent Arena, evaluating ten VLM agents across Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. Its 1,000 cases combine 32 established sources with GeoProbe, our 168-case benchmark for camera, motion, depth, and scale estimation. A minimal harness leaves task decisions to the model through source-native interfaces. Closed-weight models lead all five domains, whereas open-weight VLMs show useful spatial reasoning but substantially lower planning and manipulation success. Beneath these averages, similar geometric errors conceal different scale and shape distortions, and valid region estimates need not identify usable action points. During execution, agents can achieve early subgoals yet lose object control, bind an action to the wrong receiving region, or stop before the required physical state holds. Additional computation does not uniformly resolve these failures: code repair can restore execution without completing the task, while self-review can reverse correct judgments. Failure costs also differ: the strongest planners concentrate failed-token expenditure in prolonged body-control tasks, whereas other models fail broadly across procedures. Matched traces show how successful recovery uses feedback to restore a missing prerequisite and advance the remaining task.",
   "authors": [
@@ -359,7 +359,7 @@
     "page": 7,
     "model_table": "Table A5",
     "model_page": 25,
-    "protocol": "All ten agents use the same assigned task inventory, source-native interfaces, RGB observations and native success criteria. Manipulation retains each evaluation batch’s recorded observation schedule and execution ceilings; the protocol audit documents the differences.",
+    "protocol": "All ten agents use the same assigned task inventory, source-native interfaces, source-provided observations and native success criteria. Manipulation retains each evaluation batch’s recorded observation schedule and execution ceilings; the protocol audit documents the differences. Episodes terminated by API or execution errors count as unsuccessful attempts; stopping reasons are retained.",
     "repetitions": "Non-tracing Geometry, Spatial Reasoning, and box/point Affordance: five runs, except Fable (three). Polygon grounding, tracing, Planning, and Manipulation: one run per assignment.",
     "aggregation": "Mean of per-run metrics ± sample SD (ddof=1). Continuous metrics use valid predictions within each run; binary rates retain all assigned cases."
   },
@@ -368,6 +368,7 @@
     "replaced_records": 39,
     "source": "humanclaw-qwen-results-20261023.zip",
     "selection": "Latest per-case worker result; not best outcome. Native success flags; all assigned cases retained.",
-    "provider_interruptions": 2
+    "provider_interruptions": 2,
+    "interruption_policy": "Final unsuccessful outcomes; no reruns scheduled."
   }
 }

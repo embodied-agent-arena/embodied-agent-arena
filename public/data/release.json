@@ -1,10 +1,10 @@
 {
   "manuscript_date": "2026-10-23",
-  "manuscript_version": "Updated author manuscript with refreshed Qwen HumanCLAW results",
+  "manuscript_version": "Updated author manuscript with Qwen HumanCLAW results and final error scoring",
   "model_count": 10,
   "main_metric_values": 80,
   "paper_pages": 73,
-  "paper_sha256": "e0cbb02a3575cb4579964fdeaf5e15e0becd14b7c8768555ce5b685b40ded8c8",
+  "paper_sha256": "5aeb0b0da28e4403dd53717df54ab9a90ad8cf6e47ea44bd500c1f6ea864db99",
   "table_source": "Table 2",
   "case_views": 181,
   "recordings": 362,
@@ -16,7 +16,7 @@
     "manipulation.webp": "65069eabaabc1ed0fc04a364fe308a350fef08eda75879a0ab71ab397ef35277",
     "nine-model-profiles.svg": "3e41d098b764e4ed2e2336f0e5373171980d164f8b368e11e7aabfb27b5ba51c"
   },
-  "source_sha256": "10d6fdd8233689f64c35643357f600250002d8adbc0be04921431d1badf9b275",
+  "source_sha256": "bdfddfe312aaf6762520a0c7650eb8fc0a954ba659bb55fb6150734bf7fcb331",
   "static_cases": 72,
   "execution_cases": 109,
   "new_argon_recordings": 79,
@@ -305,7 +305,7 @@
     "all_nonfinal_max_extra_bottom_space_pt": 77.5,
     "audit": "docs/MANUSCRIPT_LAYOUT_AUDIT.md"
   },
-  "revision_history_note": "Top-level hashes and humanclaw_qwen_refresh describe the current author manuscript. Earlier revision entries and arxiv_submission preserve their historical scope; the submitted arXiv archive is unchanged.",
+  "revision_history_note": "Top-level hashes, humanclaw_qwen_refresh, and final_error_policy describe the current author manuscript. Earlier entries and arxiv_submission preserve their historical scope; the submitted arXiv archive is unchanged.",
   "arxiv_submission": {
     "article_id": "2610.00854",
     "type": "replacement",
@@ -340,12 +340,26 @@
     "overview_separate_demos": 3,
     "paper_pages": 73,
     "abstract_words": 207,
-    "paper_sha256": "e0cbb02a3575cb4579964fdeaf5e15e0becd14b7c8768555ce5b685b40ded8c8",
-    "source_sha256": "10d6fdd8233689f64c35643357f600250002d8adbc0be04921431d1badf9b275",
+    "paper_sha256": "5aeb0b0da28e4403dd53717df54ab9a90ad8cf6e47ea44bd500c1f6ea864db99",
+    "source_sha256": "bdfddfe312aaf6762520a0c7650eb8fc0a954ba659bb55fb6150734bf7fcb331",
     "scope": "Latest adopted episodes replace earlier HumanCLAW records, without adding repeated runs; results, figures, resource analysis, manuscript and public case records synchronized.",
     "audit": "data/report/planning-comparison-audit.json",
     "complete_index": "humanclaw-refresh.html",
     "remaining_gaps": "data/humanclaw-refresh/remaining-gaps.csv",
+    "arxiv_updated": false,
+    "pending_reruns": 0,
+    "provider_interruptions_final": true
+  },
+  "final_error_policy": {
+    "date": "2026-10-23",
+    "api_errors": 23,
+    "pending_reruns": 0,
+    "scoring": "Episodes terminated by API or execution errors count as unsuccessful within the original assignment denominator. Raw causes are retained.",
+    "metric_changes": false,
+    "error_inventory": "data/report/case-api-errors.csv",
+    "paper_sha256": "5aeb0b0da28e4403dd53717df54ab9a90ad8cf6e47ea44bd500c1f6ea864db99",
+    "source_sha256": "bdfddfe312aaf6762520a0c7650eb8fc0a954ba659bb55fb6150734bf7fcb331",
+    "paper_pages": 73,
     "arxiv_updated": false
   }
 }

@@ -70,7 +70,7 @@ class OverviewTests(unittest.TestCase):
                 else:
                     self.assertIsNone(cell["poster"])
                     self.assertIn("API-interrupted attempt", button["aria-label"])
-                    self.assertEqual(cell["status"], "Rerun required")
+                    self.assertEqual(cell["status"], "API error")
                     self.assertIn("log-only", button["class"])
 
     def test_api_interruptions_are_not_presented_as_runtime_failures(self):
@@ -80,11 +80,11 @@ class OverviewTests(unittest.TestCase):
             issue = health['runs'].get('record-' + cell['recordId'])
             if issue:
                 count += 1
-                self.assertEqual(cell['status'], 'Rerun required')
+                self.assertEqual(cell['status'], 'API error')
                 self.assertEqual(cell['executionReview']['reason'], 'api_failure')
             elif cell['outcome'] == 'runtime_failure':
                 self.assertEqual(cell['status'], 'Runtime error')
-        self.assertEqual(count, self.manifest['rerunCount'])
+        self.assertEqual(count, self.manifest['apiErrorCount'])
         self.assertEqual(count, 1)
 
     def test_old_mixed_task_montage_is_no_longer_displayed(self):

@@ -81,6 +81,7 @@ def build():
     page = re.sub(r'Ten models · Five capabilities · [^<]+', f'Ten models · Five capabilities · {len(cases)} cases', page)
     page = page.replace('Browse tasks across five capabilities. Each comparison groups recordings of the same task.',
                         'Compare ten models on the same input or task, including Gemini 4 Argon. Open a case for predictions, available recordings and individual results.')
+    page = re.sub(r"case-studies\.js\?v=[^\"]+", "case-studies.js?v=final-errors-20261023", page)
     path.write_text(page)
     print(f'Built {len(static)} static cases + {len(dynamic["groups"])} execution tasks = {len(cases)} exact-case cards.')
 

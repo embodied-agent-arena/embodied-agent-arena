@@ -73,6 +73,9 @@ class HumanClawRefreshTests(unittest.TestCase):
             if issue:
                 interrupted.append(r['replacementRecordId'])
                 self.assertEqual(issue['phase'], 'after_actions')
+                self.assertEqual(issue['status'], 'counted_failure')
+                self.assertTrue(issue['countedAsFailure'])
+                self.assertFalse(issue['rerunRequired'])
                 self.assertEqual(r['auditStatus'], 'provider_interruption')
                 self.assertTrue(r['video'])
                 self.assertFalse(r['success'])

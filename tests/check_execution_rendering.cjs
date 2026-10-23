@@ -18,7 +18,7 @@ for (const story of index.stories) {
   for (const run of story.runs) {
     if(run.mediaKind==='Animated execution log') assert.equal(context.hasSceneAnimation(run),false);
     const issue=health.runs['record-'+run.recordId];
-    if(issue) assert.equal(context.outcome({...run,executionReview:issue}),'Rerun required');
+    if(issue) assert.equal(context.outcome({...run,executionReview:issue}),'API error');
     const input = JSON.parse(fs.readFileSync(path.join(pub, run.detailUrl)));
     const detail = context.normalizeTrace(input, run);
     assert.equal(detail.steps.length, input.steps.length);

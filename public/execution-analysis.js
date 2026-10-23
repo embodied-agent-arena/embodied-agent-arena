@@ -11,10 +11,10 @@
   const stopNames = {max_total_tokens:'Token limit',max_agent_iterations:'Round limit',primitive_calls:'Action-call limit',max_env_steps:'Step limit',max_code_turns:'Code-round limit',max_primitive_calls:'Tool-call limit',max_rounds:'Round limit'};
   const cache = new Map(), panes = {};
   let data,story,generation=0,pendingStory,pendingModels;
-  const needsRerun=r=>r.executionReview?.status==='rerun_required';
+  const hasApiError=r=>r.executionReview?.reason==='api_failure' || r.auditStatus==='provider_interruption';
   const hasSceneAnimation=r=>!!(r.animation && r.mediaKind!=='Animated execution log');
-  const outcome=r=>needsRerun(r)?'Rerun required':r.auditStatus==='task_failure_after_agent_stop'?'Not completed':r.success?'Completed':({budget_exhausted:'Budget reached',timeout:'Timed out',runtime_failure:'Runtime error',agent_failure:'Agent error'}[r.outcome]||'Not completed');
-  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=humanclaw-qwen-20261023').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
+  const outcome=r=>hasApiError(r)?'API error':r.auditStatus==='task_failure_after_agent_stop'?'Not completed':r.success?'Completed':({budget_exhausted:'Budget reached',timeout:'Timed out',runtime_failure:'Runtime error',agent_failure:'Agent error'}[r.outcome]||'Not completed');
+  async function get(url){if(!cache.has(url))cache.set(url,fetch(url+'?v=final-errors-20261023').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(e=>{cache.delete(url);throw e;}));return cache.get(url);}
   const limitsOf = r => ({...r.budgets,
     max_rounds: r.loopBudgets?.max_turns ?? r.budgets.max_rounds ?? r.budgets.max_code_turns ?? r.budgets.max_agent_iterations,
     timeout_seconds: r.loopBudgets?.timeout_seconds ?? r.budgets.trial_timeout_seconds ?? r.budgets.timeout_seconds
@@ -71,13 +71,13 @@
     let second=s.actionSubmissions!=null?[num(s.actionSubmissions),'Action submissions']:[num(s.rounds),'Decision rounds'];
     if(story.id==='precision'){result=num(s.nativeSteps);resultLabel='Native steps';second=[`${num(s.finalGoalDistanceCm)} cm`,'Final goal distance'];}
     if(['time','horizon'].includes(story.id)){result=num(s.rounds);resultLabel='Decision rounds';second=[tokens(s.tokens),'Tokens used'];}
-    if(needsRerun(r)){result='Pending';resultLabel='API-interrupted attempt';}
+    if(hasApiError(r)){result='Failure';resultLabel='API error';}
     return metric(result,resultLabel,r.success?'is-success':'is-incomplete')+metric(...second)+metric(time(s.elapsedSeconds),'Episode time');
   }
   function episodeLimits(r){
     const b=limitsOf(r);
     const limits=[b.max_rounds?`${num(b.max_rounds)} rounds`:null,b.max_total_tokens?`${tokens(b.max_total_tokens)} tokens`:null,b.timeout_seconds?`${num(b.timeout_seconds/60)} min`:null].filter(Boolean);
-    const ending=needsRerun(r)?'API request failed · Rerun required':r.success?'Goal satisfied':r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x.replaceAll('_',' ')).join(', '):'Task incomplete';
+    const ending=hasApiError(r)?'API request failed · API error':r.success?'Goal satisfied':r.stopLimits.length?r.stopLimits.map(x=>stopNames[x]||x.replaceAll('_',' ')).join(', '):'Task incomplete';
     return `<div class="exec-limit-strip"><span>Ceilings: ${esc(limits.join(' · '))}</span><strong>Ended: ${esc(ending)}</strong></div>`;
   }
   function actionSummary(step){

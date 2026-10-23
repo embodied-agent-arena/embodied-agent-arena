@@ -28,7 +28,7 @@ The revised narrative follows three findings: **early subgoals can succeed while
 
 The [latest homepage supplement](../public/data/homepage-supplement-audit.json) adds **13 original videos, 3 separately labeled same-task demos and one 24-round observation sequence**. The overview now covers all 110 results with **107 evaluation previews and 3 demos**. Demos do not alter the original scores or timelines.
 
-The Qwen HumanCLAW refresh adds 38 saved-observation replays and replaces all 39 adopted results. Two provider-interrupted records still require reruns, and one valid budget stop has no saved observation. [Results, provenance and exact case IDs](HUMANCLAW_QWEN_REFRESH.md).
+The Qwen HumanCLAW refresh adds 38 saved-observation replays and replaces all 39 adopted results. Two provider-interrupted records are finalized as unsuccessful API-error outcomes; one budget stop has no saved observation. [Results, provenance and exact case IDs](HUMANCLAW_QWEN_REFRESH.md).
 
 The wider execution library still has records without original footage. [Media coverage](MEDIA_COVERAGE.md) describes the exact scope and links the task-level request list.
 

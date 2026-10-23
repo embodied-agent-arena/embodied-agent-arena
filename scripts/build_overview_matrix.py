@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Render the overview from audited exact-task executions, never list positions."""
+import argparse
 import hashlib
 import html
 import json
 import re
 from pathlib import Path
-from audit_case_execution_health import api_interruption
+from audit_case_execution_health import api_interruption, POLICY
 
 ROOT = Path(__file__).resolve().parents[1]
 PUB = ROOT / "public"
@@ -37,7 +38,7 @@ OUTCOMES = {
 }
 
 
-def build():
+def build(*, skip_index=False, skip_docs=False, overview_output=None):
     data = json.loads((PUB / "data/case-comparisons.json").read_text())
     groups = {g["id"]: g for g in data["groups"]}
     cells, rows, columns = [], [], []
@@ -80,7 +81,7 @@ def build():
             if media:
                 assert r["sourceReportSha256"] == r["mediaReportSha256"]
                 assert (PUB / media).is_file() and (PUB / r["poster"]).is_file()
-            status = "Rerun required" if review else "Not completed" if r.get("auditStatus") == "task_failure_after_agent_stop" else OUTCOMES.get(r["outcome"], "Not completed")
+            status = "API error" if review else "Not completed" if r.get("auditStatus") == "task_failure_after_agent_stop" else OUTCOMES.get(r["outcome"], "Not completed")
             cid = f"arena-{row+1}-{col+1}"
             cell = {
                 "id": cid, "row": row + 1, "column": col + 1, "groupId": gid,
@@ -102,7 +103,7 @@ def build():
                      f'data-case="{h(gid)}" data-model="{row}" data-scene="{cid}" '
                      f'data-record="{h(r["recordId"])}" aria-describedby="scene-tooltip" '
                      f'aria-label="{h(r["model"])} · {h(benchmark)} · {h(title)}: {status}. '
-                     f'{"API-interrupted attempt; inspect rerun details" if review else "View same-task demo; inspect original evaluation separately" if demo else "Play recording and inspect execution" if media else "Shared task scene; inspect execution record"}"')
+                     f'{"API-interrupted attempt; counted as unsuccessful; inspect error details" if review else "View same-task demo; inspect original evaluation separately" if demo else "Play recording and inspect execution" if media else "Shared task scene; inspect execution record"}"')
             if preview_video:
                 visual = (f'<video muted loop playsinline preload="none" '
                           f'poster="{h(poster)}" data-preview-src="{h(preview_video)}" '
@@ -146,8 +147,8 @@ def build():
         f'<thead><tr>{"".join(heads)}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>\n'
         '<figcaption><details><summary>Recording Coverage</summary>Each column uses one fixed task. '
         'Scene only shows the shared task context when a model has no execution footage. '
-        'API-interrupted attempts are marked Rerun required; runtime errors and budget stops retain their outcomes. '
-        'Demos do not change scores. <a href="data/report/case-reruns.csv" download>Download rerun list ↓</a></details></figcaption>\n'
+        'API-interrupted attempts are marked API error and counted as unsuccessful; runtime errors and budget stops retain their outcomes. '
+        'Demos do not change scores. <a href="data/report/case-api-errors.csv" download>Download error inventory ↓</a></details></figcaption>\n'
         '</figure>\n<!-- END EXACT_TASK_OVERVIEW -->'
     )
     index = PUB / "index.html"
@@ -159,18 +160,23 @@ def build():
         text, n = re.subn(r'<figure class="execution-showcase".*?</figure>',
                          lambda _: block, text, count=1, flags=re.S)
         assert n == 1
-    index.write_text(text)
-    manifest = {"updated": "2026-10-22", "rowOrder": MODELS, "columns": columns,
+    if not skip_index:
+        index.write_text(text)
+    if overview_output:
+        overview_output.parent.mkdir(parents=True, exist_ok=True)
+        overview_output.write_text(block)
+    manifest = {"updated": "2026-10-23", "rowOrder": MODELS, "columns": columns,
                 "tiles": cells, "taskCount": len(columns), "recordCount": len(cells),
                 "recordingCount": sum(bool(c["mediaSha256"]) for c in cells),
                 "demoCount": sum(bool(c.get("demoMedia")) for c in cells),
-                "rerunCount": sum(bool(c.get("executionReview")) for c in cells),
+                "apiErrorCount": sum(bool(c.get("executionReview")) for c in cells),
+                "rerunCount": 0, "pendingRerunCount": 0, "errorPolicy": POLICY,
                 "source": "data/case-comparisons.json",
                 "matching": ["taskId", "modelKey", "identitySha256", "reportSha256"]}
     (PUB / "data/report/overview-provenance.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     doc = ["# Tasks in the overview", "",
-           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} attempt records and {manifest['recordingCount']} matching evaluation previews**, plus **{manifest['demoCount']} independently recorded same-task demos** (excluded from scores). **{manifest['rerunCount']} API-interrupted attempts require reruns**; these are labeled separately from runtime errors and budget stops. [Rerun list](../public/data/report/case-reruns.csv).", "",
+           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} attempt records and {manifest['recordingCount']} matching evaluation previews**, plus **{manifest['demoCount']} independently recorded same-task demos** (excluded from scores). **{manifest['apiErrorCount']} API-interrupted attempts count as unsuccessful**; these are labeled separately from runtime errors and budget stops. [Error inventory](../public/data/report/case-api-errors.csv).", "",
            "## Fixed tasks", "", "| Benchmark | Task | Compare |", "| :--- | :--- | :--- |"]
     for c in columns:
         gid = c['groupId']
@@ -184,7 +190,8 @@ def build():
         doc.append(f"{i+1}. **{model_name}** — {n} scene previews; {len(columns)} task results.")
     doc += ["", "The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.", ""]
     doc += ["The toolbox task uses the same configuration, seed and scene revision for all ten models. Eight previews use the robot head camera; DeepSeek-1017 and Gemini 4 Argon use a separate external recording camera, labeled in the page. [Camera and task audit](../public/data/toolbox-camera-audit.json).", ""]
-    (ROOT / "docs/RECORDED_TASKS.md").write_text("\n".join(doc))
+    if not skip_docs:
+        (ROOT / "docs/RECORDED_TASKS.md").write_text("\n".join(doc))
     app = PUB / "app.js"
     js = app.read_text()
     js, n = re.subn(r"const sceneTasks = \[.*?\];", lambda _: "const sceneTasks = " +
@@ -196,4 +203,9 @@ def build():
 
 
 if __name__ == "__main__":
-    build()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--skip-index", action="store_true")
+    parser.add_argument("--skip-docs", action="store_true")
+    parser.add_argument("--overview-output", type=Path)
+    args = parser.parse_args()
+    build(skip_index=args.skip_index, skip_docs=args.skip_docs, overview_output=args.overview_output)

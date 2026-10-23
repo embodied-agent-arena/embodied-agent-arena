@@ -1,6 +1,6 @@
 # Tasks in the overview
 
-The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 107 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **1 API-interrupted attempts require reruns**; these are labeled separately from runtime errors and budget stops. [Rerun list](../public/data/report/case-reruns.csv).
+The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 107 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **1 terminal API interruption is labeled API error and counted as an unsuccessful attempt**, separately from runtime errors and budget stops. The full atlas and HumanCLAW refresh index contain **23 final API errors**; no reruns are scheduled. [Error inventory](../public/data/report/case-api-errors.csv).
 
 ## Fixed tasks
 

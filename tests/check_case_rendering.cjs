@@ -28,7 +28,7 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,execu
      assert(!tile.includes(r.animation));
      assert(tile.includes(c.sceneContext.kind==='scene'?'Scene only':'Text-based task'));
     }
-    if(r.executionReview) assert(tile.includes('Rerun required'));
+    if(r.executionReview) assert(tile.includes('API error'));
     if(r.outcome==='runtime_failure' && !r.executionReview) assert.equal(context.checks.displayOutcome(r),'Runtime error');
    }
   }else {staticCount++;assert.equal((html.match(/class="gallery-model /g)||[]).length,10,c.id);}
@@ -42,7 +42,7 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,execu
  const ds=context.checks.executionRecords(calvin).find(r=>r.modelKey==='deepseek');
  const dsTile=context.checks.runTile(calvin,ds,8);
  assert(dsTile.includes('Scene only'));assert(dsTile.includes('Budget reached'));
- assert(dsTile.includes(calvin.sceneContext.image));assert(!dsTile.includes('Rerun required'));
+ assert(dsTile.includes(calvin.sceneContext.image));assert(!dsTile.includes('API error'));
  for(const c of original.filter(c=>!c.predictions.length))assert.equal(context.checks.lookup(c.id).taskId,c.sample);
  assert.throws(()=>context.checks.executionRecords({runIds:[],taskId:'wrong'}));
  console.log(`Rendered ${executions} execution tasks + ${staticCount} fixed-input tasks: exactly ten model cells each. All old links resolve to their exact task.`);

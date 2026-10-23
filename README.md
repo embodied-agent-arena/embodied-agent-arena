@@ -74,7 +74,7 @@ Manipulation suites such as [LIBERO](https://arxiv.org/abs/2306.03310), [RoboTwi
 
 ## 🎬 Explore the Evidence
 
-- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model records; 346 evaluation scene previews and 3 separately labeled demos. Missing footage uses shared task scenes; API-interrupted attempts are marked for reruns. [Media coverage ↗](docs/CASE_MEDIA.md)
+- **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model records; 362 evaluation scene previews and 3 separately labeled demos. Missing footage uses shared task scenes; API interruptions count as unsuccessful attempts and are labeled API error. [Media coverage ↗](docs/CASE_MEDIA.md)
 - **[Same Task. Ten Models.](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases)** — 11 fixed tasks × 10 models. Visible clips play automatically; click for the matching result.
 - **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. All ten models are selectable on each of 46 tasks, including Gemini&nbsp;4&nbsp;Argon’s recorded actions and feedback.
 - **[Results & Reproduction](docs/RESULTS.md)** — Main and source-level CSVs, task outcomes, analysis scripts, and editable manuscript figures.
@@ -85,7 +85,7 @@ All pages and documentation are in English. Translated task instructions link to
 
 ## 📰 News
 
-- **2026.10.23** — Refreshed all **39 Qwen HumanCLAW records** and added **38 observation replays**. Planning results, figures and the current author manuscript are synchronized. [Update and remaining gaps](docs/HUMANCLAW_QWEN_REFRESH.md) · [All 39 runs](https://embodied-agent-arena.github.io/embodied-agent-arena/humanclaw-refresh.html).
+- **2026.10.23** — Refreshed all **39 Qwen HumanCLAW records** and added **38 observation replays**. Planning results, figures and the current author manuscript are synchronized. [Results, footage and error outcomes](docs/HUMANCLAW_QWEN_REFRESH.md) · [All 39 runs](https://embodied-agent-arena.github.io/embodied-agent-arena/humanclaw-refresh.html).
 - **2026.10.23** — Submitted the earlier **63-page manuscript** as a replacement of [arXiv:2610.00854](https://arxiv.org/abs/2610.00854). The newer author manuscript linked here has not been resubmitted to arXiv.
 
 - **2026.10.22** — Updated **all ten models in the spatial diagnostics** and released **100-episode CALVIN recovery analysis**, with matching figures, data and revised manuscript.

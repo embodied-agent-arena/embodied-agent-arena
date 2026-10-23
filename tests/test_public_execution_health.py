@@ -1,4 +1,5 @@
 """API failures, budget exhaustion, and generated-code failures are distinct."""
+import csv
 import importlib.util
 import json
 import unittest
@@ -57,8 +58,37 @@ class ExecutionHealthTests(unittest.TestCase):
                 self.assertEqual(audited['taskId'], detail['taskId'])
         self.assertEqual(set(found), set(report['runs']))
         self.assertEqual(report['checkedRecords'], len(data['runs']))
-        self.assertEqual(report['rerunCount'], 21)
+        self.assertEqual(report['errorCount'], 21)
+        self.assertEqual(report['totalErrorCount'], 23)
+        self.assertEqual(report['additionalErrorCount'], 2)
+        self.assertEqual(report['rerunCount'], 0)
+        self.assertEqual(report['pendingRerunCount'], 0)
+        for issue in [*report['runs'].values(), *report['additionalRuns'].values()]:
+            self.assertEqual(issue['status'], 'counted_failure')
+            self.assertTrue(issue['countedAsFailure'])
+            self.assertTrue(issue['final'])
+            self.assertFalse(issue['rerunRequired'])
         self.assertEqual(report['byPhase'], {'before_actions': 9, 'after_actions': 12})
+
+
+    def test_error_inventory_has_no_pending_reruns(self):
+        public=ROOT/'public'
+        rows=list(csv.DictReader((public/'data/report/case-api-errors.csv').read_text().splitlines()))
+        self.assertEqual(len(rows),23)
+        self.assertEqual(len({(r['model_key'],r['task_id']) for r in rows}),23)
+        for row in rows:
+            self.assertEqual(row['status'],'API error')
+            self.assertEqual(row['counted_as_failure'],'True')
+            self.assertEqual(row['rerun_required'],'False')
+            detail=json.loads((public/row['detail_url']).read_text())
+            self.assertFalse(detail['success'])
+            self.assertEqual(row['recorded_outcome'],detail['outcome'])
+        self.assertEqual((public/'data/report/case-api-errors.csv').read_bytes(),
+                         (public/'data/report/case-reruns.csv').read_bytes())
+        for filename in ['case-studies.js','execution-analysis.js','humanclaw-refresh.html']:
+            text=(public/filename).read_text()
+            self.assertNotIn('Rerun required',text)
+            self.assertNotIn('replacement evaluation needed',text)
 
 
 if __name__ == '__main__':

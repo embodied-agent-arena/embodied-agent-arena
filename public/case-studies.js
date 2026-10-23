@@ -20,9 +20,9 @@
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
     fetch('data/case-studies.json?v=english-20261022').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json?v=humanclaw-qwen-20261023').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-comparisons.json?v=humanclaw-qwen-20261023').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();}),
-    fetch('data/report/case-execution-health.json?v=scene-review-20261022').then(r => {if (!r.ok) throw new Error('Execution audit could not be loaded.'); return r.json();})
+    fetch('data/case-gallery.json?v=final-errors-20261023').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-comparisons.json?v=final-errors-20261023').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();}),
+    fetch('data/report/case-execution-health.json?v=final-errors-20261023').then(r => {if (!r.ok) throw new Error('Execution audit could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media, health]) => {
     for(const [id,issue] of Object.entries(health.runs)) {
       const run=media.runs[id];
@@ -115,8 +115,8 @@
   const isScenePreview = r => !!(r && r.mediaKind!=='Animated execution log' && (r.video||r.animation));
   const previewOf = r => isScenePreview(r) ? r : isScenePreview(r.demoMedia) ? {...r,...r.demoMedia} : r;
   const hasPreview = r => isScenePreview(r) || isScenePreview(r.demoMedia);
-  const needsRerun = r => r.executionReview?.status==='rerun_required';
-  const displayOutcome = r => needsRerun(r) ? 'Rerun required' : r.auditStatus==='task_failure_after_agent_stop' ? 'Not completed' : outcomeText(r);
+  const hasApiError = r => r.executionReview?.reason==='api_failure' || r.auditStatus==='provider_interruption';
+  const displayOutcome = r => hasApiError(r) ? 'API error' : r.auditStatus==='task_failure_after_agent_stop' ? 'Not completed' : outcomeText(r);
   const mediaLabel = r => /Saved observation/.test(r.mediaKind||'') ? 'Observed frames' : r.mediaKind||'Recording';
   function sceneMedia(c,r) {
     const scene=c.sceneContext;
@@ -135,7 +135,7 @@
   function runTile(c,r,i) {
     const hasMedia=hasPreview(r);
     const logPreview=sceneMedia(c,r);
-    return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'} ${needsRerun(r)?'rerun-required':''}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(displayOutcome(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${hasMedia?cameraBadge(r):''}${r.demoMedia?'<span class="gallery-demo-label">Demo · Not scored</span>':''}${hasMedia?`<span class="gallery-run-kind">${esc(mediaLabel(previewOf(r)))}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${needsRerun(r)?'pending':r.success?'success':''}"${needsRerun(r)?' title="API-interrupted attempt; replacement evaluation needed"':''}>${esc(displayOutcome(r))}</span></span></button>`;
+    return `<button class="gallery-run ${hasMedia?'':'gallery-run-log'} ${hasApiError(r)?'rerun-required':''}" data-case="${esc(c.id)}" data-model="${i}" aria-label="Inspect ${esc(r.model)} on ${esc(c.taskLabel)}: ${esc(displayOutcome(r))}"><span class="gallery-run-header">${esc(short(r.model))}<span aria-hidden="true">↗</span></span><span class="gallery-run-media">${hasMedia?runMedia(r):logPreview}${hasMedia?cameraBadge(r):''}${r.demoMedia?'<span class="gallery-demo-label">Demo · Not scored</span>':''}${hasMedia?`<span class="gallery-run-kind">${esc(mediaLabel(previewOf(r)))}</span>`:''}</span><span class="gallery-run-footer"><span class="gallery-run-outcome ${hasApiError(r)?'pending':r.success?'success':''}"${hasApiError(r)?' title="API-interrupted attempt; counted as unsuccessful"':''}>${esc(displayOutcome(r))}</span></span></button>`;
   }
   function runBudget(r) {
     const values=Object.entries(r.budgets||{}).filter(([k,v])=>budgetNames[k]&&v!=null);
@@ -195,14 +195,14 @@
       selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${p.demoMedia?"Original evaluation · ":""}${esc(displayOutcome(p))}</span></div>${hasPreview(p)?`<div class="gallery-detail-film">${p.demoMedia?'<span class="gallery-demo-badge">Same-task demo · Not scored</span>':''}${runMedia(p,true)}${cameraBadge(p)}</div>${p.observationPreview?`<p class="gallery-camera-note"><a href="${esc(p.observationPreview.image)}" target="_blank" rel="noopener">View the robot’s recorded observation · Round ${num(p.observationPreview.round,0)} ↗</a></p>`:''}${previewOf(p).mediaNote?`<details class="study-media-note"><summary>${esc(previewOf(p).mediaKind)}</summary><p>${esc(previewOf(p).mediaNote)}</p></details>`:""}`:`<div class="gallery-detail-film gallery-context-film">${sceneMedia(c,p)}</div><p class="study-media-note">${c.sceneContext?.kind==='action_log'?'This text-based task is represented by its recorded results and decisions.':`Task scene from ${esc(c.sceneContext?.model)}. This model's result and log are shown below; no execution recording was supplied.`}</p>`}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
       const rounds=selection.querySelector('.gallery-rounds');
       try {
-        const response=await fetch(p.detailUrl+'?v=humanclaw-qwen-20261023');if(!response.ok)throw Error();const d=await response.json();
+        const response=await fetch(p.detailUrl+'?v=final-errors-20261023');if(!response.ok)throw Error();const d=await response.json();
         if(!rounds.isConnected)return;
-        // API interruptions need replacement runs, including interruptions after
+        // API interruptions count as final failed attempts, including those after
         // useful actions. A budget stop or generated-code error is not an API failure.
-        if(needsRerun(p)) {
+        if(hasApiError(p)) {
           const before=p.executionReview.phase==='before_actions';
-          selection.querySelector('.study-outcome').textContent='Rerun required';
-          const notice=`<div class="gallery-api-failure"><h4>API-interrupted attempt</h4><p>${before?'The initial API request failed before any action was generated.':'An API request failed after execution began.'} A replacement evaluation is needed.</p><p><code>${esc(c.taskId)}</code></p><div class="gallery-api-facts"><a href="data/report/case-reruns.csv" download>Download rerun list ↓</a><a href="${esc(p.detailUrl)}" target="_blank" rel="noopener">Original record ↗</a></div><details><summary>Recorded error</summary><pre>${esc(p.executionReview.error)}</pre></details></div>`;
+          selection.querySelector('.study-outcome').textContent='API error';
+          const notice=`<div class="gallery-api-failure"><h4>API-interrupted attempt</h4><p>${before?'The initial API request failed before any action was generated.':'An API request failed after execution began.'} This attempt is counted as unsuccessful.</p><p><code>${esc(c.taskId)}</code></p><div class="gallery-api-facts"><a href="data/report/case-api-errors.csv" download>Download error inventory ↓</a><a href="${esc(p.detailUrl)}" target="_blank" rel="noopener">Original record ↗</a></div><details><summary>Recorded error</summary><pre>${esc(p.executionReview.error)}</pre></details></div>`;
           if(before) {
             selection.querySelectorAll('.study-meta').forEach(e=>e.remove());
             rounds.removeAttribute('role');rounds.innerHTML=notice;return;
