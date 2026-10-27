@@ -42,6 +42,8 @@ The homepage's `google-site-verification` meta tag verifies this URL-prefix
 property in Google Search Console. Preserve the tag across rebuilds and future
 deployments, including after verification succeeds. Submit `sitemap.xml` through
 that property and use URL Inspection for page-specific indexing requests.
+The adjacent `msvalidate.01` tag verifies the same site in Bing Webmaster Tools;
+preserve it so Bing URL Inspection and sitemap submission remain available.
 
 IndexNow ownership files live at the host root in the separate organization
 site repository. Keep its public key file available after submitting URLs;
