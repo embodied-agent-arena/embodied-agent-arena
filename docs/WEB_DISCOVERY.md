@@ -38,6 +38,15 @@ robots.txt identical. These files require no new account or secret.
 
 ## Validation
 
+The homepage's `google-site-verification` meta tag verifies this URL-prefix
+property in Google Search Console. Preserve the tag across rebuilds and future
+deployments, including after verification succeeds. Submit `sitemap.xml` through
+that property and use URL Inspection for page-specific indexing requests.
+
+IndexNow ownership files live at the host root in the separate organization
+site repository. Keep its public key file available after submitting URLs;
+an accepted submission is a crawl notification, not proof of indexing.
+
 Run the Pages workflow's public Python tests and Node rendering checks, including
 `tests/check_legacy_redirect.mjs`. `test_public_discovery.py` checks static links and
 anchors, canonical URLs, sitemap entries, citations, author metadata, research
