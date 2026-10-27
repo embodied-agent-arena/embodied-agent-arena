@@ -27,7 +27,7 @@
         "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
         "name": "GeoProbe: Camera, Motion, Depth and Scale Evaluation",
         "description": "Methods, inventory, scoring, limitations and citation for the GeoProbe geometric estimation benchmark within Embodied Agent Arena.",
-        "dateModified": "2026-10-27",
+        "dateModified": "2026-10-28",
         "inLanguage": "en",
         "mainEntity": {"@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#dataset"},
         "citation": "https://arxiv.org/abs/2610.00854v3"
@@ -39,7 +39,12 @@
         "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
         "description": "168 geometric-estimation queries over 130 unique RGB images across ten protocols, predominantly rendered in Blender, with four real-photo displacement cases. GeoProbe is part of the 1,000-case Embodied Agent Arena collection.",
         "datePublished": "2026-10-01",
-        "isPartOf": {"@type": "Dataset", "name": "Embodied Agent Arena", "url": "https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena"},
+        "isPartOf": {
+          "@type": "Dataset",
+          "name": "Embodied Agent Arena",
+          "description": "A 1,000-case evaluation collection spanning five embodied capabilities, combining 32 established sources with the original GeoProbe geometric-estimation benchmark.",
+          "url": "https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena"
+        },
         "citation": "https://arxiv.org/abs/2610.00854v3",
         "measurementTechnique": "Fixed-input geometric estimation using task-specific numerical errors and success criteria.",
         "variableMeasured": ["Camera intrinsics", "Relative camera pose", "Object displacement", "Sparse depth", "Object dimensions", "Reference-based scale"],
@@ -63,7 +68,7 @@
     <p class="research-lead">How well can a vision-language agent estimate camera parameters, distinguish object motion from camera motion, and recover depth and scale from images?</p>
     <p>GeoProbe isolates these requirements through controlled scene variations and task-specific scoring. It contributes 168 queries to the Arena’s 1,000-case evaluation, alongside 32 established sources.</p>
     <div class="research-stats" aria-label="GeoProbe inventory"><div><strong>168</strong><span>evaluation queries</span></div><div><strong>130</strong><span>unique RGB images</span></div><div><strong>10</strong><span>diagnostic protocols</span></div></div>
-    <p class="research-meta">Page updated 27 October 2026 · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
+    <p class="research-meta">Page updated 28 October 2026 · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
     <div class="research-links"><a href="#inventory">Task inventory</a><a href="#metrics">Scoring</a><a href="#reproduce">Data &amp; reproduction</a><a href="#citation">Cite GeoProbe</a></div>
   </header>
 
@@ -141,7 +146,7 @@ arena list --data-root ../data</code></pre>
     <p>GeoProbe is introduced in the Embodied Agent Arena paper. Cite that paper for the benchmark, and identify paper v3 when referring to the inventory and protocols described on this page.</p>
     <p class="citation-text">Haojian Huang, Pukun Zhao, Zexi Li, Yehang Zhang, Yangkai Wei, Wenqian Li, Han Yang, Kaiwen Zhou, Ying-Cong Chen, and Yinchuan Li. <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena.</cite> arXiv:2610.00854, 2026. Version 3, 23 October 2026.</p>
     <div class="research-links"><a href="https://arxiv.org/abs/2610.00854v3">Paper v3</a><a href="https://doi.org/10.48550/arXiv.2610.00854">Paper DOI</a><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="geoprobe.html#inventory">Link to the inventory</a></div>
-    <p class="research-meta">Research content follows the 23 October 2026 paper. This page’s 27 October update adds a research reference entry point; it does not report a new experimental run.</p>
+    <p class="research-meta">Research content follows the 23 October 2026 paper. Page updates provide research references and dataset metadata; they do not report a new experimental run.</p>
   </section>
 </article>
 </main>

@@ -47,6 +47,29 @@ class Page(HTMLParser):
 
 
 class DiscoveryTests(unittest.TestCase):
+    def test_nested_datasets_include_google_required_metadata(self):
+        def datasets(value):
+            if isinstance(value, dict):
+                types = value.get('@type', [])
+                if 'Dataset' in ([types] if isinstance(types, str) else types):
+                    yield value
+                for child in value.values():
+                    yield from datasets(child)
+            elif isinstance(value, list):
+                for child in value:
+                    yield from datasets(child)
+
+        found = []
+        for path in PUBLIC.glob('*.html'):
+            for dataset in datasets(Page(path).schemas):
+                found.append(dataset)
+                with self.subTest(page=path.name, dataset=dataset.get('name')):
+                    self.assertTrue(dataset.get('name', '').strip())
+                    description = dataset.get('description', '').strip()
+                    self.assertGreaterEqual(len(description), 50)
+                    self.assertLessEqual(len(description), 5000)
+        self.assertTrue(found, 'Expected published dataset metadata')
+
     def test_new_pages_are_crawlable_and_links_resolve(self):
         for name in ('geoprobe.html', 'findings.html'):
             page = Page(PUBLIC / name)
