@@ -122,6 +122,8 @@ class DiscoveryTests(unittest.TestCase):
         urls = sitemap.findall('s:url', ns)
         locations = [u.findtext('s:loc', namespaces=ns) for u in urls]
         self.assertEqual(len(locations), len(set(locations)))
+        text_sitemap = (PUBLIC / 'sitemap.txt').read_text(encoding='utf-8')
+        self.assertEqual(text_sitemap.splitlines(), locations)
         for url in urls:
             location = url.findtext('s:loc', namespaces=ns)
             self.assertTrue(location.startswith(BASE))

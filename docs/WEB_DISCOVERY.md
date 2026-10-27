@@ -20,6 +20,10 @@ The paper cited by the current research pages is arXiv:2610.00854v3, published
 - Update `public/sitemap.xml` when a page's substantive content changes. Preserve
   the previous date on unchanged pages. Do not replace experimental dates with a
   website deployment date.
+- Keep `public/sitemap.txt` identical to the XML's ordered canonical URL list,
+  one absolute URL per line in UTF-8. Tests enforce this correspondence. It is a
+  supported alternative submission format for diagnosing sitemap ingestion;
+  it does not replace the XML's modification dates or change canonical URLs.
 
 ## Canonical and legacy hosting
 
@@ -42,6 +46,12 @@ The homepage's `google-site-verification` meta tag verifies this URL-prefix
 property in Google Search Console. Preserve the tag across rebuilds and future
 deployments, including after verification succeeds. Submit `sitemap.xml` through
 that property and use URL Inspection for page-specific indexing requests.
+The verified root URL-prefix property (`https://embodied-agent-arena.github.io/`)
+also exposes Google's robots.txt report; project-path properties cannot show it.
+If XML ingestion fails despite a successful live fetch, `sitemap.txt` provides a
+bounded alternative-format submission. Only a successful Sitemaps report with
+discovered URLs proves ingestion; submission acknowledgements and live URL
+Inspection alone do not. Avoid repeated submissions or filename changes.
 The adjacent `msvalidate.01` tag verifies the same site in Bing Webmaster Tools;
 preserve it so Bing URL Inspection and sitemap submission remain available.
 
