@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Research Findings &amp; Evidence — Embodied Agent Arena</title>
+  <meta name="description" content="Evidence from Embodied Agent Arena on shared planning failures, execution-error recovery, and token use. Each finding includes its sample, limits, data, and paper citation.">
+  <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Research Findings &amp; Evidence — Embodied Agent Arena">
+  <meta property="og:description" content="Three findings with explicit denominators, evaluation settings, original data, and references to the research paper.">
+  <meta property="og:url" content="https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html">
+  <meta property="og:image" content="https://embodied-agent-arena.github.io/embodied-agent-arena/assets/overview.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo-transparent.png">
+  <link rel="stylesheet" href="styles.css?v=refined-20261022">
+  <link rel="stylesheet" href="research-pages.css?v=20261027">
+  <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
+  <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html",
+    "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html",
+    "name": "Research Findings & Evidence — Embodied Agent Arena",
+    "description": "Evidence from Embodied Agent Arena on shared planning failures, execution-error recovery, and token use, with samples, limitations, data, and paper references.",
+    "inLanguage": "en",
+    "dateModified": "2026-10-27",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Embodied Agent Arena",
+      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/"
+    },
+    "about": {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.48550/arXiv.2610.00854",
+      "name": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
+      "url": "https://arxiv.org/abs/2610.00854v3",
+      "identifier": "arXiv:2610.00854v3"
+    }
+  }
+  </script>
+</head>
+<body class="research-document">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="./"><img src="assets/logo-transparent.png" alt="" width="42" height="42"><span class="brand-name">Embodied Agent <span>Arena</span></span></a>
+    <nav aria-label="Main navigation"><a href="./">Overview</a><a href="geoprobe.html">GeoProbe</a><a href="findings.html" aria-current="page">Findings</a><a href="./#citation">Cite the Paper</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap research-page">
+  <article>
+    <header class="research-header">
+      <p class="eyebrow">Research Findings &amp; Evidence</p>
+      <h1>From Local Competence to Complete Tasks</h1>
+      <p class="research-lead">Embodied Agent Arena examines where frontier vision-language agents succeed, where they share failures, and whether additional execution produces verified task progress. These three findings connect each conclusion to its evaluation population and source records.</p>
+      <p class="research-meta">Page updated <time datetime="2026-10-27">27 October 2026</time> · Paper: <a href="https://arxiv.org/abs/2610.00854v3">arXiv v3, 23 October 2026</a> · Ten evaluated VLM agents</p>
+      <div class="research-links"><a href="#planning-complementarity">Shared planning failures</a><a href="#execution-recovery">Execution recovery</a><a href="#failure-token-cost">Token use</a><a href="#citation">Citation &amp; version</a></div>
+    </header>
+
+    <section id="planning-complementarity" class="evidence-card" aria-labelledby="planning-title">
+      <p class="eyebrow">01 / Planning · Same 157 Tasks</p>
+      <h2 id="planning-title">Model Diversity Expands Coverage, but Shared Failures Remain</h2>
+      <p><strong>Across the same 157 Planning tasks, at least one of ten evaluated models completes 142 tasks; 15 tasks are unsuccessful for all ten.</strong> GPT-6 Astra alone completes 126. The union therefore adds 16 completed tasks, while only eight tasks are completed by every model.</p>
+      <div class="table-scroll" role="region" aria-label="Planning success overlap" tabindex="0">
+        <table>
+          <caption>Recorded task outcomes across ten models</caption>
+          <thead><tr><th scope="col">Measure</th><th scope="col">Tasks</th><th scope="col">Counting rule</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">At least one model succeeds</th><td>142 / 157</td><td>Count each task once across the union of successes.</td></tr>
+            <tr><th scope="row">All ten models fail</th><td>15 / 157</td><td>No recorded successful assignment for that task.</td></tr>
+            <tr><th scope="row">All ten models succeed</th><td>8 / 157</td><td>Every model completes its assignment.</td></tr>
+            <tr><th scope="row">Astra alone succeeds</th><td>126 / 157</td><td>One retained assignment per task for Astra.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Population and protocol.</strong> The analysis includes 1,570 retained model–task assignments from ALFRED, ALFWorld, DiscoveryWorld, HumanCLAW, ScienceWorld, and VirtualHome. Tasks retain their source-native success criteria and budgets. The 15 common failures comprise two ALFRED tasks, two ALFWorld tasks, nine HumanCLAW tasks, and two ScienceWorld tasks.</p>
+      <p class="scope-note"><strong>Scope.</strong> This is retrospective success coverage over recorded runs. It does not measure a deployed ensemble, a model-routing policy, or an equal-compute improvement. A shared failure in this sample is not evidence that the task is impossible for these models under other settings.</p>
+      <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Appendix J.1 and Figure A15, report complementary successes alongside a shared failure set on 157 Planning tasks.</p>
+      <div class="research-links"><a href="#planning-complementarity" aria-label="Permanent link to the planning complementarity finding">Link to this finding</a><a href="#citation">Cite the paper</a><a href="paper.pdf#page=66">Paper · Appendix J.1</a><a href="paper.pdf#page=68">Figure A15</a><a href="data/report/planning-outcomes.csv" download>Task outcomes · CSV</a><a href="data/report/planning-outcomes.json">Task identities · JSON</a><a href="technical-report.html#coverage">Read the analysis</a></div>
+    </section>
+
+    <section id="execution-recovery" class="evidence-card" aria-labelledby="recovery-title">
+      <p class="eyebrow">02 / CALVIN · 100 Retained Episodes</p>
+      <h2 id="recovery-title">Resuming Execution Does Not Establish Task Completion</h2>
+      <p><strong>Among 100 CALVIN episodes, 65 encounter an execution error. Of those 65 episodes, 62 later execute code without an error, but only three subsequently complete the full task.</strong> Across the entire 100-episode population, 60 reach the first subgoal and nine complete all five consecutive subgoals.</p>
+      <div class="table-scroll" role="region" aria-label="CALVIN execution recovery and task completion" tabindex="0">
+        <table>
+          <caption>Execution recovery and verified goals have different denominators</caption>
+          <thead><tr><th scope="col">Measure</th><th scope="col">Episodes</th><th scope="col">Definition</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Encounter an execution error</th><td>65 / 100</td><td>At least one failed code-execution round.</td></tr>
+            <tr><th scope="row">Resume error-free execution</th><td>62 / 65 error episodes</td><td>A later round records <code>execution_ok=true</code>.</td></tr>
+            <tr><th scope="row">Complete after an error</th><td>3 / 65 error episodes</td><td>A later round passes the native task-success verifier.</td></tr>
+            <tr><th scope="row">Complete all five subgoals</th><td>9 / 100</td><td>Full-sequence success in the complete retained population.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Population and protocol.</strong> Ten sequence IDs are evaluated once for each of ten models. Execution errors exclude API transport failures, timeouts, and budget guards. Six episodes lack a verified completed-goal prefix and receive no goal credit; they remain in the 100-episode denominator. Recorded model-specific observation schedules and budgets are retained.</p>
+      <p class="scope-note"><strong>Main evaluation and supplementary examples.</strong> These counts use the adopted CALVIN evaluation episodes. The separate RGB-expanded sequence-0526 comparisons illustrate recorded behavior under their own settings and must not be substituted into these aggregates. This observational analysis does not establish that error repair causes failure, or that more computation could never help.</p>
+      <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Figure 8 and Appendix D.5.1, distinguish renewed executability from verified task completion in 100 CALVIN episodes.</p>
+      <div class="research-links"><a href="#execution-recovery" aria-label="Permanent link to the execution recovery finding">Link to this finding</a><a href="#citation">Cite the paper</a><a href="paper.pdf#page=12">Paper · Figure 8</a><a href="paper.pdf#page=47">Appendix D.5.1</a><a href="data/spatial-recovery/calvin-models.csv" download>Model counts · CSV</a><a href="data/spatial-recovery/calvin-episodes.json">Episode events &amp; hashes</a><a href="data/spatial-recovery/calvin-summary.json">Summary · JSON</a><a href="model-guide.html#protocol">Recorded settings</a></div>
+    </section>
+
+    <section id="failure-token-cost" class="evidence-card" aria-labelledby="tokens-title">
+      <p class="eyebrow">03 / Resource Use · Astra Planning Episodes</p>
+      <h2 id="tokens-title">A Small Failure Set Can Account for Most Token Use</h2>
+      <p><strong>In Astra’s 157 recorded Planning episodes, the 31 unsuccessful episodes account for 55.5% of recorded tokens.</strong> An unsuccessful episode uses approximately 5.1 times as many tokens on average as a successful episode: 591,162 versus 116,435 tokens.</p>
+      <div class="table-scroll" role="region" aria-label="Astra Planning token use by outcome" tabindex="0">
+        <table>
+          <caption>Input plus output tokens in Astra’s retained Planning runs</caption>
+          <thead><tr><th scope="col">Outcome</th><th scope="col">Episodes</th><th scope="col">Total tokens</th><th scope="col">Mean tokens per episode</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Successful</th><td>126</td><td>14,670,756</td><td>116,435</td></tr>
+            <tr><th scope="row">Unsuccessful</th><td>31</td><td>18,326,033</td><td>591,162</td></tr>
+            <tr><th scope="row">All assignments</th><td>157</td><td>32,996,789</td><td>210,171</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Population and accounting.</strong> Usage is recorded for all 157 Astra assignments. Tokens are summed within each episode before grouping by terminal outcome; means are rounded to the nearest token. The 55.5% share uses total tokens as its denominator, and the 5.1× ratio compares the two per-episode means.</p>
+      <p class="scope-note"><strong>Scope.</strong> Task composition and budgets matter. HumanCLAW contributes 81.7% of Astra’s failed-episode tokens; removing that source lowers the failed-token share to 19.4%. These observations do not demonstrate that using more tokens causes failure, and token counts are not a dollar-cost comparison across providers.</p>
+      <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Figure A15 and Appendix J.6, report that unsuccessful episodes consume 55.5% of Astra’s recorded Planning tokens, with a substantial contribution from HumanCLAW.</p>
+      <div class="research-links"><a href="#failure-token-cost" aria-label="Permanent link to the failure token cost finding">Link to this finding</a><a href="#citation">Cite the paper</a><a href="paper.pdf#page=68">Paper · Figure A15</a><a href="paper.pdf#page=70">Table A43 &amp; source analysis</a><a href="data/report/planning-episodes.csv" download>Episode usage · CSV</a><a href="data/report/metrics.json">Aggregated metrics · JSON</a><a href="technical-report.html#resources">Read the resource analysis</a></div>
+    </section>
+
+    <section id="citation" aria-labelledby="citation-title">
+      <p class="eyebrow">Citation &amp; Version</p>
+      <h2 id="citation-title">Cite the Paper and Preserve the Evidence Scope</h2>
+      <p>Huang, Haojian; Zhao, Pukun; Li, Zexi; Zhang, Yehang; Wei, Yangkai; Li, Wenqian; Yang, Han; Zhou, Kaiwen; Chen, Ying-Cong; and Li, Yinchuan. <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena.</cite> 2026. <a href="https://doi.org/10.48550/arXiv.2610.00854">doi:10.48550/arXiv.2610.00854</a>.</p>
+      <p>These findings accompany <a href="https://arxiv.org/abs/2610.00854v3">arXiv version 3, released 23 October 2026</a>. This page’s 27 October update improves access to existing evidence; it does not announce a new evaluation run. Use the paper citation for the research, and include the finding’s stable section link when pointing readers to its data and definitions.</p>
+      <p>The linked tables and records are available in the <a href="https://github.com/embodied-agent-arena/embodied-agent-arena/tree/ecf56432333bd1e685fda3b6640855d0a53eb6f0/public/data">fixed source snapshot used for this page</a>. The <a href="https://github.com/embodied-agent-arena/embodied-agent-arena/blob/ecf56432333bd1e685fda3b6640855d0a53eb6f0/docs/SPATIAL_RECOVERY.md">CALVIN provenance notes</a> describe missing-prefix handling and how report hashes identify retained episodes.</p>
+      <div class="research-links"><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="https://arxiv.org/abs/2610.00854v3">Versioned paper</a><a href="technical-report.html">Full technical analysis</a><a href="geoprobe.html">Explore GeoProbe</a></div>
+    </section>
+  </article>
+</main>
+<footer class="wrap"><span>Embodied Agent Arena · 2026</span><div><a href="./">Project overview</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a></div></footer>
+</body>
+</html>

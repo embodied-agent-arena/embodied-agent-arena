@@ -1,0 +1,60 @@
+{
+  "id": "huang2026frontier",
+  "type": "article-journal",
+  "title": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
+  "author": [
+    {
+      "given": "Haojian",
+      "family": "Huang"
+    },
+    {
+      "given": "Pukun",
+      "family": "Zhao"
+    },
+    {
+      "given": "Zexi",
+      "family": "Li"
+    },
+    {
+      "given": "Yehang",
+      "family": "Zhang"
+    },
+    {
+      "given": "Yangkai",
+      "family": "Wei"
+    },
+    {
+      "given": "Wenqian",
+      "family": "Li"
+    },
+    {
+      "given": "Han",
+      "family": "Yang"
+    },
+    {
+      "given": "Kaiwen",
+      "family": "Zhou"
+    },
+    {
+      "given": "Ying-Cong",
+      "family": "Chen"
+    },
+    {
+      "given": "Yinchuan",
+      "family": "Li"
+    }
+  ],
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        1
+      ]
+    ]
+  },
+  "container-title": "arXiv",
+  "DOI": "10.48550/arXiv.2610.00854",
+  "URL": "https://arxiv.org/abs/2610.00854v3",
+  "version": "3"
+}
