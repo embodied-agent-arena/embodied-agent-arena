@@ -85,8 +85,10 @@ All pages and documentation are in English. Translated task instructions link to
 
 ## 📰 News
 
+- **2026.10.27** — Added the [GeoProbe methods and dataset guide](https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html) and [citable findings with source records](https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html). Website and citation metadata now identify the published arXiv v3; experimental results are unchanged.
+
 - **2026.10.23** — Refreshed all **39 Qwen HumanCLAW records** and added **38 observation replays**. Planning results, figures and the current author manuscript are synchronized. [Results, footage and error outcomes](docs/HUMANCLAW_QWEN_REFRESH.md) · [All 39 runs](https://embodied-agent-arena.github.io/embodied-agent-arena/humanclaw-refresh.html).
-- **2026.10.23** — Submitted the current **73-page manuscript** as a replacement of [arXiv:2610.00854](https://arxiv.org/abs/2610.00854), including the Qwen HumanCLAW refresh and expanded analyses. Announcement is pending.
+- **2026.10.23** — Published the **73-page arXiv v3 manuscript** ([23 October 2026](https://arxiv.org/abs/2610.00854v3)), including the Qwen HumanCLAW refresh and expanded analyses.
 
 - **2026.10.22** — Updated **all ten models in the spatial diagnostics** and released **100-episode CALVIN recovery analysis**, with matching figures, data and revised manuscript.
 - **2026.10.22** — Recovered **30 original case videos** by exact task, model and report matching; refreshed the compact Case Atlas with ten-model comparisons and labeled scene context for unrecorded executions.
@@ -115,7 +117,7 @@ All pages and documentation are in English. Translated task instructions link to
 
 ## 🧩 Benchmark
 
-**GeoProbe** evaluates camera motion, object displacement, depth, and scale. Controlled Blender scenes isolate these geometric factors; real images extend the evaluation to natural scenes.
+**[GeoProbe](https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html)** evaluates camera motion, object displacement, depth, and scale. Controlled Blender scenes isolate these geometric factors; real images extend the evaluation to natural scenes.
 
 | Capability | Cases | What the agent must do |
 | :--- | ---: | :--- |
@@ -183,7 +185,7 @@ arena score --data-root ../data --benchmark w5_umd \
 
 ## 📖 Citation
 
-If this work is useful for your research, please cite:
+If this work is useful for your research, please cite the paper. The linked results refer to [arXiv v3 (23 October 2026)](https://arxiv.org/abs/2610.00854v3). Download [BibTeX](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.bib) or [CSL-JSON](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.csl.json); use the [findings page](https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html) for population definitions and supporting data.
 
 <!-- BEGIN CITATION -->
 ```bibtex
@@ -191,7 +193,12 @@ If this work is useful for your research, please cite:
   title={Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
   author={Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
   journal={arXiv preprint arXiv:2610.00854},
-  year={2026}
+  year={2026},
+  doi={10.48550/arXiv.2610.00854},
+  url={https://arxiv.org/abs/2610.00854v3},
+  eprint={2610.00854v3},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
 }
 ```
 <!-- END CITATION -->

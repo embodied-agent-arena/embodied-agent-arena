@@ -54,8 +54,20 @@ with (PUBLIC / 'data/model-comparison.csv').open('w', newline='') as f:
 
 author_html = ''.join(f'<span>{esc(a["name"])}<sup>{a["affiliations"]}</sup></span>' for a in study['authors'])
 replace_block(PUBLIC / 'index.html', 'AUTHORS', author_html)
-# Preserve the original Google Scholar export as the citation source.
+# Keep the checked-in BibTeX as the citation source for every export.
 bibtex = (PUBLIC / 'data/citation.bib').read_text().strip()
+(PUBLIC / 'citation.bib').write_text(bibtex+'\n')
+paper_url = f'https://arxiv.org/abs/{study["arxiv"]}v{study["arxiv_version"]}'
+doi = '10.48550/arXiv.' + study['arxiv']
+csl = {
+    'id': 'huang2026frontier', 'type': 'article-journal', 'title': study['title'],
+    'author': [{'given': a['name'].rsplit(' ', 1)[0], 'family': a['name'].rsplit(' ', 1)[1]}
+               for a in study['authors']],
+    'issued': {'date-parts': [[int(part) for part in study['date_published'].split('-')]]},
+    'container-title': 'arXiv', 'DOI': doi, 'URL': paper_url,
+    'version': str(study['arxiv_version']),
+}
+(PUBLIC / 'citation.csl.json').write_text(json.dumps(csl, ensure_ascii=False, indent=2)+'\n')
 replace_block(PUBLIC / 'index.html', 'CITATION', '<pre id="bibtex">'+esc(bibtex)+'</pre>')
 replace_block(ROOT / 'README.md', 'CITATION', '```bibtex\n'+bibtex+'\n```')
 
@@ -63,9 +75,12 @@ metadata = [f'<meta name="citation_title" content="{esc(study["title"], quote=Tr
 metadata += [f'<meta name="citation_author" content="{a["name"]}">' for a in study['authors']]
 metadata += [f'<meta name="citation_publication_date" content="{study["date_published"].replace("-", "/")}">',
              f'<meta name="citation_pdf_url" content="{study["url"]}paper.pdf">',
-             '<meta name="citation_doi" content="10.48550/arXiv.2610.00854">']
+             f'<meta name="citation_doi" content="{doi}">',
+             f'<meta name="citation_arxiv_id" content="{study["arxiv"]}v{study["arxiv_version"]}">',
+             '<link rel="alternate" type="application/x-bibtex" href="citation.bib" title="BibTeX citation">',
+             '<link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="CSL-JSON citation">']
 schema = {'@context':'https://schema.org', '@type':'ScholarlyArticle', '@id':study['url']+'#paper',
-          'name':study['title'], 'headline':study['title'], 'url':study['url'], 'sameAs':'https://arxiv.org/abs/2610.00854',
+          'name':study['title'], 'headline':study['title'], 'url':study['url'], 'sameAs':paper_url,
           'identifier':'arXiv:2610.00854', 'datePublished':study['date_published'], 'dateModified':study['manuscript_date'],
           'version':study['manuscript_version']+' ('+study['manuscript_date']+')', 'description':study['description'],
           'abstract':study['abstract'], 'author':[{'@type':'Person','name':a['name']} for a in study['authors']],
@@ -82,7 +97,7 @@ cff = ['cff-version: 1.2.0', 'message: "Please cite the paper in preferred-citat
 for a in study['authors']:
     first, last = a['name'].rsplit(' ', 1)
     cff += ['    - family-names: '+json.dumps(last), '      given-names: '+json.dumps(first)]
-cff += ['  doi: 10.48550/arXiv.2610.00854', '  url: "https://arxiv.org/abs/2610.00854"',
+cff += ['  doi: '+doi, '  url: '+json.dumps(paper_url),
         '  year: 2026', '  status: preprint', '  date-released: "2026-10-01"']
 (ROOT / 'CITATION.cff').write_text('\n'.join(cff)+'\n')
 print(f"Rendered {len(study['models'])} models × 8 metrics, authors, citation, metadata, and CSV.")

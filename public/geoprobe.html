@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GeoProbe: Camera, Motion, Depth &amp; Scale Evaluation — Embodied Agent Arena</title>
+  <meta name="description" content="GeoProbe evaluates VLM geometric estimation with 168 queries over 130 RGB images. Explore ten protocols, camera and object motion, depth and scale metrics, data, limitations, and the source paper.">
+  <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GeoProbe — A Geometric Estimation Benchmark for VLM Agents">
+  <meta property="og:description" content="168 queries, 130 RGB images, ten diagnostic protocols. Camera calibration, relative pose, displacement, depth, and scale, with methods and source evidence.">
+  <meta property="og:url" content="https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html">
+  <meta property="og:image" content="https://embodied-agent-arena.github.io/embodied-agent-arena/assets/construction.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo-transparent.png">
+  <link rel="stylesheet" href="styles.css?v=refined-20261022">
+  <link rel="stylesheet" href="research-pages.css?v=20261027">
+  <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
+  <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
+        "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
+        "name": "GeoProbe: Camera, Motion, Depth and Scale Evaluation",
+        "description": "Methods, inventory, scoring, limitations and citation for the GeoProbe geometric estimation benchmark within Embodied Agent Arena.",
+        "dateModified": "2026-10-27",
+        "inLanguage": "en",
+        "mainEntity": {"@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#dataset"},
+        "citation": "https://arxiv.org/abs/2610.00854v3"
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#dataset",
+        "name": "GeoProbe",
+        "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
+        "description": "168 geometric-estimation queries over 130 unique RGB images across ten protocols, predominantly rendered in Blender, with four real-photo displacement cases. GeoProbe is part of the 1,000-case Embodied Agent Arena collection.",
+        "datePublished": "2026-10-01",
+        "isPartOf": {"@type": "Dataset", "name": "Embodied Agent Arena", "url": "https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena"},
+        "citation": "https://arxiv.org/abs/2610.00854v3",
+        "measurementTechnique": "Fixed-input geometric estimation using task-specific numerical errors and success criteria.",
+        "variableMeasured": ["Camera intrinsics", "Relative camera pose", "Object displacement", "Sparse depth", "Object dimensions", "Reference-based scale"],
+        "keywords": ["vision-language models", "geometric estimation", "camera calibration", "relative pose", "object motion", "depth estimation", "embodied AI"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="research-document">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+  <a class="brand" href="./"><img src="assets/logo-transparent.png" alt="" width="42" height="42"><span class="brand-name">Embodied Agent <span>Arena</span></span></a>
+  <nav aria-label="Research navigation"><a href="./">Overview</a><a href="geoprobe.html" aria-current="page">GeoProbe</a><a href="findings.html">Findings</a><a class="nav-paper" href="./#citation">Citation</a></nav>
+</div></header>
+<main id="main" class="wrap research-page">
+<article>
+  <header class="research-header">
+    <p class="eyebrow">Geometry · An original benchmark within Embodied Agent Arena</p>
+    <h1>GeoProbe</h1>
+    <p class="research-lead">How well can a vision-language agent estimate camera parameters, distinguish object motion from camera motion, and recover depth and scale from images?</p>
+    <p>GeoProbe isolates these requirements through controlled scene variations and task-specific scoring. It contributes 168 queries to the Arena’s 1,000-case evaluation, alongside 32 established sources.</p>
+    <div class="research-stats" aria-label="GeoProbe inventory"><div><strong>168</strong><span>evaluation queries</span></div><div><strong>130</strong><span>unique RGB images</span></div><div><strong>10</strong><span>diagnostic protocols</span></div></div>
+    <p class="research-meta">Page updated 27 October 2026 · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
+    <div class="research-links"><a href="#inventory">Task inventory</a><a href="#metrics">Scoring</a><a href="#reproduce">Data &amp; reproduction</a><a href="#citation">Cite GeoProbe</a></div>
+  </header>
+
+  <section id="design" aria-labelledby="design-title">
+    <h2 id="design-title">What does GeoProbe measure?</h2>
+    <p>GeoProbe uses fixed image inputs to examine camera calibration, relative camera pose, object displacement, sparse depth, object dimensions, and reference-based scale. Most images are rendered in Blender; four displacement cases use real tabletop photographs. Multiple queries share images or scenes, so the query count is not a count of independent environments.</p>
+    <p>The rendered displacement conditions share 12 object interventions while changing the camera condition: fixed, small view change, and large view change. Each condition contains ten moving interventions and two stationary controls. This design separates object-motion estimates under different camera changes.</p>
+    <div class="research-links"><a href="https://arxiv.org/html/2610.00854v3#A1">Construction and source inventory · Appendix A</a><a href="https://arxiv.org/html/2610.00854v3#A4.SS1">Geometry diagnostics · Appendix D.1</a><a href="assets/construction.webp">View the Arena construction figure</a></div>
+  </section>
+
+  <section id="inventory" aria-labelledby="inventory-title">
+    <h2 id="inventory-title">Ten protocols, 168 queries</h2>
+    <p>The allocation below reproduces the GeoProbe inventory in <a href="https://arxiv.org/html/2610.00854v3#A1.T2">Table A2 of paper v3</a>. Shared images and scenes connect the protocols; the total is 168 queries over 130 unique RGB images.</p>
+    <div class="table-scroll" role="region" aria-label="GeoProbe task inventory" tabindex="0">
+      <table>
+        <caption>GeoProbe task allocation · Paper v3, Table A2</caption>
+        <thead><tr><th scope="col">Diagnostic protocol</th><th scope="col" class="count">Queries</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Object displacement · fixed camera</th><td class="count">12</td></tr>
+          <tr><th scope="row">Object displacement · small view change</th><td class="count">12</td></tr>
+          <tr><th scope="row">Object displacement · large view change</th><td class="count">12</td></tr>
+          <tr><th scope="row">Real tabletop displacement</th><td class="count">4</td></tr>
+          <tr><th scope="row">Full camera intrinsics</th><td class="count">24</td></tr>
+          <tr><th scope="row">Focal length · centered principal point</th><td class="count">12</td></tr>
+          <tr><th scope="row">Relative camera pose</th><td class="count">24</td></tr>
+          <tr><th scope="row">Sparse depth</th><td class="count">12</td></tr>
+          <tr><th scope="row">Object dimensions</th><td class="count">12</td></tr>
+          <tr><th scope="row">Reference-based scale</th><td class="count">44</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row">Total</th><td class="count">168</td></tr></tfoot>
+      </table>
+    </div>
+    <p class="scope-note"><strong>Relationship to the Arena:</strong> GeoProbe is the newly constructed geometric benchmark. It is one source group within Geometry, which contains 370 cases in total. The Arena’s 32 established sources retain their original attribution; their cases are not counted as newly created GeoProbe data.</p>
+  </section>
+
+  <section id="metrics" aria-labelledby="metrics-title">
+    <h2 id="metrics-title">How are predictions scored?</h2>
+    <p>Each diagnostic retains its units and success criterion. A small continuous error and a successful prediction are reported separately where the protocol defines both. The following definitions come from <a href="https://arxiv.org/html/2610.00854v3#A2.SS3">Appendix B.3</a>.</p>
+    <div class="research-grid">
+      <div class="evidence-card"><h3>Camera calibration</h3><p>Focal MAPE averages absolute relative errors in <code>f_x</code> and <code>f_y</code>. Principal-point error is measured in pixels and relative to the image diagonal.</p><p>Joint calibration requires both focal components within 10% relative error and principal-point error no larger than 2% of the image diagonal.</p></div>
+      <div class="evidence-card"><h3>Camera pose</h3><p>Rotation error is reported in degrees and translation error in centimeters. Joint success requires both errors within the 2° and 2 cm tolerances.</p><p>These metrics distinguish a close estimate of one component from a valid estimate of the complete relative pose.</p></div>
+      <div class="evidence-card"><h3>Object displacement</h3><p>Diagnostics evaluate movement status, direction and absolute distance error. The native joint criterion requires direction agreement and distance error at most 1 cm.</p><p>Stationary controls are evaluated without dividing by a zero displacement target.</p></div>
+      <div class="evidence-card"><h3>Depth and scale</h3><p>Depth uses AbsRel, RMSE in meters, threshold accuracy and ordinal accuracy. Focal length and dimensions use absolute and relative errors; numerical scale and qualitative scale judgments retain their separate metrics.</p><p>Oracle depth alignment uses reference depth to isolate scale bias. It is a diagnostic analysis, not an independently deployable correction.</p></div>
+    </div>
+    <p class="scope-note"><strong>Repetitions and denominators:</strong> GeoProbe is part of non-tracing Geometry: five repetitions per case for nine models and three for Fable. Continuous metrics average valid predictions within each run and then report the equal-weight mean and sample SD across runs. Success-rate denominators retain failed assignments; depth threshold and ordering measures count invalid predictions as incorrect. Consult <a href="https://arxiv.org/html/2610.00854v3#A2.SS4">Appendix B.4</a> before comparing aggregates.</p>
+  </section>
+
+  <section id="scope" aria-labelledby="scope-title">
+    <h2 id="scope-title">What can these results establish?</h2>
+    <ul>
+      <li><strong>Controlled geometric diagnosis.</strong> Matched rendered interventions help examine changes in prediction when the camera condition changes. These are fixed-input estimation tasks; they do not measure physical robot deployment success.</li>
+      <li><strong>Limited real-photo coverage.</strong> The four tabletop image pairs form a separate subset. Their displacement labels are supplied annotations, without independent camera or metric calibration. Their scenes and motions differ from the Blender comparison.</li>
+      <li><strong>Metric-specific conclusions.</strong> A model may preserve depth ordering while missing absolute scale. Continuous-error comparisons must be read with valid-prediction coverage and success criteria.</li>
+      <li><strong>Source-specific results.</strong> The homepage’s main rotation and translation columns combine Map-free and GeoProbe pose cases. Use the GeoProbe metrics in the <a href="data/complementary-results-mean-sd.csv">complementary results</a> and Appendix D.1 for claims specifically about GeoProbe.</li>
+    </ul>
+    <div class="research-links"><a href="https://arxiv.org/html/2610.00854v3#A4.SS1">Evidence and limitations · Appendix D.1</a><a href="https://arxiv.org/html/2610.00854v3#A2.SS4">Main-table metric scope</a><a href="findings.html">Other research findings</a></div>
+  </section>
+
+  <section id="reproduce" aria-labelledby="reproduce-title">
+    <h2 id="reproduce-title">Inspect the data and reproduce a diagnostic</h2>
+    <p>GeoProbe is distributed within the full Embodied Agent Arena dataset. Use the pinned dataset revision below with the repository’s installation and evaluation instructions. Query IDs, inputs and scoring remain associated with their source protocols.</p>
+    <div class="research-links"><a href="https://huggingface.co/datasets/uuu-Quant/Embodied-Agent-Arena/tree/5f729375eb35163a024625dd8ea72ac57a427a24">Pinned dataset release</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena#quick-start">Harness quick start</a><a href="model-guide.html#models">Evaluated model identifiers</a></div>
+    <pre><code>python scripts/fetch_data.py \
+  --repo-id uuu-Quant/Embodied-Agent-Arena \
+  --revision 5f729375eb35163a024625dd8ea72ac57a427a24 \
+  --output ../data
+arena validate --data-root ../data --hashes
+arena list --data-root ../data</code></pre>
+    <p>After installing the harness and configuring the model credentials, a depth diagnostic can be selected with <code>--benchmark w1_vlm_depth</code>. Use the task index and <a href="model-guide.html#protocol">evaluation protocol</a> to preserve the relevant inputs, repetition counts and budgets.</p>
+    <div class="research-links"><a href="data/complementary-results-mean-sd.csv" download>GeoProbe &amp; complementary metrics CSV</a><a href="https://arxiv.org/html/2610.00854v3#A4.SS1">Geometry results and case breakdowns</a><a href="case-atlas.html">Browse recorded cases</a></div>
+  </section>
+
+  <section id="citation" aria-labelledby="citation-title">
+    <h2 id="citation-title">Cite GeoProbe and its methods</h2>
+    <p>GeoProbe is introduced in the Embodied Agent Arena paper. Cite that paper for the benchmark, and identify paper v3 when referring to the inventory and protocols described on this page.</p>
+    <p class="citation-text">Haojian Huang, Pukun Zhao, Zexi Li, Yehang Zhang, Yangkai Wei, Wenqian Li, Han Yang, Kaiwen Zhou, Ying-Cong Chen, and Yinchuan Li. <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena.</cite> arXiv:2610.00854, 2026. Version 3, 23 October 2026.</p>
+    <div class="research-links"><a href="https://arxiv.org/abs/2610.00854v3">Paper v3</a><a href="https://doi.org/10.48550/arXiv.2610.00854">Paper DOI</a><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="geoprobe.html#inventory">Link to the inventory</a></div>
+    <p class="research-meta">Research content follows the 23 October 2026 paper. This page’s 27 October update adds a research reference entry point; it does not report a new experimental run.</p>
+  </section>
+</article>
+</main>
+<footer class="wrap"><span>Embodied Agent Arena · 2026</span><div><a href="./">Project overview</a><a href="findings.html">Research findings</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a></div></footer>
+</body>
+</html>
