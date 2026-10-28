@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Embodied AI Evaluation: Spatial Reasoning, Planning &amp; Reliability — Embodied Agent Arena</title>
+  <meta name="description" content="Research evidence for VLM spatial reasoning, geometric estimation, long-horizon robot tasks, error recovery, test-time compute, model complementarity, and benchmark composition.">
+  <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Embodied AI Evaluation: Spatial Reasoning, Planning &amp; Reliability">
+  <meta property="og:description" content="Eight research questions linked to measured results, source records, limitations, and the Embodied Agent Arena paper.">
+  <meta property="og:url" content="https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html">
+  <meta property="og:image" content="https://embodied-agent-arena.github.io/embodied-agent-arena/assets/overview.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo-transparent.png">
+  <link rel="stylesheet" href="styles.css?v=refined-20261022">
+  <link rel="stylesheet" href="research-pages.css?v=20261029">
+  <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
+  <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html",
+    "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html",
+    "name": "Embodied AI Evaluation: Spatial Reasoning, Planning & Reliability",
+    "description": "Eight research questions linked to measured results, source records, limitations, and the Embodied Agent Arena paper.",
+    "inLanguage": "en",
+    "dateModified": "2026-10-29",
+    "citation": "https://arxiv.org/abs/2610.00854v3",
+    "isPartOf": {"@type": "WebSite", "name": "Embodied Agent Arena", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/"},
+    "about": {"@type": "ScholarlyArticle", "@id": "https://doi.org/10.48550/arXiv.2610.00854", "name": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena", "url": "https://arxiv.org/abs/2610.00854v3"},
+    "hasPart": [
+      {"@type": "CreativeWork", "name": "What should an embodied AI benchmark measure?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#embodied-evaluation", "citation": "https://arxiv.org/abs/2610.00854v3"},
+      {"@type": "CreativeWork", "name": "How can VLM geometric estimation be evaluated?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#geometric-estimation", "citation": "https://arxiv.org/abs/2610.00854v3"},
+      {"@type": "CreativeWork", "name": "Does spatial reasoning transfer across reference frames and grounding tasks?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#spatial-grounding", "citation": "https://arxiv.org/abs/2610.00854v3"},
+      {"@type": "CreativeWork", "name": "Why measure complete long-horizon robot tasks?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#long-horizon-tasks", "citation": "https://arxiv.org/abs/2610.00854v3"},
+      {"@type": "CreativeWork", "name": "Does fixing an agent's execution error recover the task?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#error-recovery", "citation": "https://arxiv.org/abs/2610.00854v3"},
+      {"@type": "CreativeWork", "name": "Does more test-time compute make embodied agents more reliable?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#test-time-compute", "citation": "https://arxiv.org/abs/2610.00854v3"},
+      {"@type": "CreativeWork", "name": "How much complementary planning coverage do different models provide?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#planning-complementarity", "citation": "https://arxiv.org/abs/2610.00854v3"},
+      {"@type": "CreativeWork", "name": "Can benchmark composition change a model ranking?", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#benchmark-composition", "citation": "https://arxiv.org/abs/2610.00854v3"}
+    ]
+  }
+  </script>
+</head>
+<body class="research-document">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="nav-wrap">
+  <a class="brand" href="./"><img src="assets/logo-transparent.png" alt="" width="42" height="42"><span class="brand-name">Embodied Agent <span>Arena</span></span></a>
+  <nav aria-label="Research navigation"><a href="./">Overview</a><a href="research-topics.html" aria-current="page">Topics</a><a href="geoprobe.html">GeoProbe</a><a href="findings.html">Findings</a><a href="#citation">Citation</a></nav>
+</div></header>
+<main id="main" class="wrap research-page">
+<article>
+  <header class="research-header">
+    <p class="eyebrow">Research questions &amp; evidence</p>
+    <h1>Spatial Reasoning, Planning &amp; Reliability in Embodied AI</h1>
+    <p class="research-lead">Which measurements distinguish a capable vision-language model from an agent that completes a robot task? This guide connects eight research questions to evidence from Embodied Agent Arena.</p>
+    <p>Use these results in work on embodied evaluation, geometric understanding, grounded action, agent recovery, and inference efficiency. Each section identifies the measured population and its limits. This is a guide to one empirical study, rather than a survey of all methods in these fields.</p>
+    <p class="research-meta">Guide updated <time datetime="2026-10-29">29 October 2026</time> · Evidence: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated models · No new experimental runs</p>
+    <nav class="research-links" aria-label="Research topics"><a href="#embodied-evaluation">Benchmark design</a><a href="#geometric-estimation">VLM geometry</a><a href="#spatial-grounding">Spatial reasoning &amp; grounding</a><a href="#long-horizon-tasks">Long-horizon tasks</a><a href="#error-recovery">Error recovery</a><a href="#test-time-compute">Test-time compute</a><a href="#planning-complementarity">Model complementarity</a><a href="#benchmark-composition">Ranking sensitivity</a></nav>
+  </header>
+
+  <section id="embodied-evaluation" aria-labelledby="evaluation-title">
+    <h2 id="evaluation-title">What should an embodied AI benchmark measure?</h2>
+    <p><strong>Measure local capability and verified task completion separately.</strong> Embodied Agent Arena evaluates ten VLM agents on 1,000 cases spanning Geometry, Spatial Reasoning, Affordance, Task Planning, and Manipulation. It combines 32 established sources with GeoProbe, an original geometric-estimation benchmark. A shared minimal harness leaves task interpretation and action selection to the model while preserving source-native interfaces and success criteria.</p>
+    <p>One concrete distinction appears in 3D tracing: Gemini 4 Argon has a mean path RMSE of 0.310 m, yet only 24 of 56 paths meet all required constraints. A low trajectory error therefore does not establish valid endpoints, ordering, and complete path compliance.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Sections 3 and 4.3, for this evaluation design and observed gap. The study evaluates the recorded agents and settings; it does not certify deployment readiness or measure every component of a robot system. Recorded budgets and observation schedules differ across some batches.</p>
+    <div class="research-links"><a href="model-guide.html#protocol">Task sets, repetitions &amp; budgets</a><a href="paper.pdf#page=31">3D tracing · Table A8</a><a href="paper.pdf#page=10">Paper · geometric diagnostics</a><a href="#embodied-evaluation">Link to this topic</a></div>
+  </section>
+
+  <section id="geometric-estimation" aria-labelledby="geometry-title">
+    <h2 id="geometry-title">How can VLM geometric estimation be evaluated?</h2>
+    <p><strong>Separate camera motion, object motion, depth, and scale, then check their joint requirements.</strong> GeoProbe contains 168 queries over 130 unique RGB images and ten diagnostic protocols. Its rendered object-displacement conditions reuse 12 interventions while varying the camera: fixed, small view change, or large view change. Each condition has ten moving interventions and two stationary controls.</p>
+    <p>The benchmark supports research on camera calibration, relative camera pose, motion disentanglement, depth estimation, and metric scale. For example, relative-pose joint success requires both rotation error within 2° and translation error within 2 cm. Calibration jointly checks focal components and principal-point location. These criteria prevent an accurate single component from being treated as a complete geometric solution.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Appendices A, B.3, and D.1, for GeoProbe's construction and scoring. Queries share images and scenes. Four real tabletop displacement cases have supplied annotations without independent metric calibration; this small subset cannot establish general real-world geometric robustness.</p>
+    <div class="research-links"><a href="geoprobe.html#inventory">GeoProbe inventory</a><a href="geoprobe.html#metrics">Units, tolerances &amp; denominators</a><a href="https://arxiv.org/html/2610.00854v3#A4.SS1">Paper · geometry results</a><a href="#geometric-estimation">Link to this topic</a></div>
+  </section>
+
+  <section id="spatial-grounding" aria-labelledby="spatial-title">
+    <h2 id="spatial-title">Does spatial reasoning transfer across reference frames and grounding tasks?</h2>
+    <p><strong>Success on one spatial relation is insufficient evidence of general spatial competence.</strong> Across five runs, Qwen 3.5 27B averages 95.0% on 12 BOP left/right cases but 5.7% on seven actor-relative cases. Gemini 4 Argon averages 93.8% on 13 shift cases, 86.7% on six facing cases, and 30.0% on four hard-video cases. These contrasts motivate reporting which spatial frame and source a claim concerns.</p>
+    <p>Visual grounding also requires choosing the right success criterion. On the same five UMD containment cases, Astra achieves 100% point-in-mask success but 44% strict native box success; DeepSeek-1017 reaches 96% and 84%, respectively, averaged over five runs. Locating a valid point and recovering the functional region's extent are different measurements.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Section 4.3 and Appendix D.3. The spatial groups differ in source and task construction, so these are descriptive contrasts, not isolated causal tests of reference frames. Grounding scores do not establish successful physical interaction.</p>
+    <div class="research-links"><a href="data/spatial-recovery/spatial-summary.json">Spatial groups, run means &amp; counts</a><a href="paper.pdf#page=44">UMD containment · Table A24</a><a href="paper.pdf#page=9">Spatial results · Figure 5</a><a href="#spatial-grounding">Link to this topic</a></div>
+  </section>
+
+  <section id="long-horizon-tasks" aria-labelledby="horizon-title">
+    <h2 id="horizon-title">Why measure complete long-horizon robot tasks?</h2>
+    <p><strong>Early subgoal success can substantially overstate full-sequence completion.</strong> In 100 retained CALVIN episodes—ten sequences for each of ten models—the numbers reaching at least one through five consecutive goals are 60, 40, 25, 18, and 9. The first-goal rate is 60%; completion of all five goals is 9%. Six episodes have no verified prefix and receive no goal credit while remaining in the denominator.</p>
+    <p>Precision contact poses a separate requirement. In the paper's five-task ManiSkill diagnostic, Opus 5.5 completes picking, placement, and stacking, but neither peg nor charger insertion. Successful transport therefore does not establish success on an insertion task's final pose conditions.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Section 4.3 and Appendices C.3 and D.5.1. CALVIN prefix counts are nested observations, not independent step probabilities. The evidence does not isolate memory loss, force sensing, or reasoning as the cause of failure; the precision-contact diagnostic is a small, separate task set.</p>
+    <div class="research-links"><a href="findings.html#long-horizon-completion">Sequence-completion finding &amp; scope</a><a href="data/spatial-recovery/calvin-summary.json">CALVIN counts by model</a><a href="paper.pdf#page=47">Paper · CALVIN analysis</a><a href="#long-horizon-tasks">Link to this topic</a></div>
+  </section>
+
+  <section id="error-recovery" aria-labelledby="recovery-title">
+    <h2 id="recovery-title">Does fixing an agent's execution error recover the task?</h2>
+    <p><strong>Restored executability and recovered task completion need separate checks.</strong> Among the 100 CALVIN episodes, 65 contain an execution error. Of those 65, 62 later run code without an error, while only three subsequently pass the native full-task verifier. Error-free code is therefore an intermediate event rather than sufficient evidence that recovery succeeded.</p>
+    <p>For agent reliability research, retain the sequence of error, later execution, environment feedback, and terminal outcome. The public episode records include events and hashes that connect aggregate counts to retained runs. Transport errors, timeouts, and budget guards are excluded from the execution-error definition.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Figure 8 and Appendix D.5.1. The denominator for resumed execution is 65 error episodes, not all 100 episodes. These observations neither establish that repair causes failure nor show that a different repair policy could not help. Supplementary RGB-expanded demonstrations have separate settings and must not replace this population.</p>
+    <div class="research-links"><a href="findings.html#execution-recovery">Definitions &amp; citable recovery finding</a><a href="data/spatial-recovery/calvin-episodes.json">Episode events &amp; provenance</a><a href="paper.pdf#page=12">Paper · Figure 8</a><a href="#error-recovery">Link to this topic</a></div>
+  </section>
+
+  <section id="test-time-compute" aria-labelledby="compute-title">
+    <h2 id="compute-title">Does more test-time compute make embodied agents more reliable?</h2>
+    <p><strong>Evaluate additional inference against verified progress, and report its resources separately.</strong> The paper's fixed-input review study uses 46 cases: 19 Geometry, 18 Spatial Reasoning, and nine Affordance cases. Self-review and crop review allow two additional responses; tool-assisted review allows six. Review can reverse correct spatial judgments, and better intermediate scores need not cross the task's success threshold. Tool-assisted changes combine additional measurements with a larger response budget.</p>
+    <p>Execution cost provides a different observation. In Astra's 157 Planning episodes, 31 unsuccessful episodes consume 55.5% of recorded input-plus-output tokens. Their mean token use is approximately 5.1 times that of successful episodes. HumanCLAW accounts for 81.7% of failed-episode tokens; excluding it lowers the failed-token share to 19.4%.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Section 4.4 and Appendix J.6. These are distinct populations, not a controlled scaling law. Token use is not provider-normalized dollar cost, and the observational cost comparison does not show that more tokens cause failure.</p>
+    <div class="research-links"><a href="findings.html#failure-token-cost">Token accounting &amp; source sensitivity</a><a href="data/report/planning-episodes.csv">Planning episode usage</a><a href="paper.pdf#page=13">Paper · feedback and computation</a><a href="paper.pdf#page=52">Fixed-input review · Table A34</a><a href="#test-time-compute">Link to this topic</a></div>
+  </section>
+
+  <section id="planning-complementarity" aria-labelledby="planning-title">
+    <h2 id="planning-title">How much complementary planning coverage do different models provide?</h2>
+    <p><strong>Models solve partly different tasks, but their union leaves a shared failure set.</strong> Across the same 157 Planning tasks, Astra succeeds on 126, Astra plus Gemini 4 Argon covers 137, and the union across all ten models covers 142. The pair adds 11 of the 16 tasks gained beyond Astra alone. Fifteen tasks remain unsuccessful for every model, while eight are completed by all ten.</p>
+    <p>These task identities let researchers inspect complementary capability before designing model selection or routing. The retained population contains 1,570 model–task assignments across six Planning sources. Counting each task once avoids presenting multiple successful attempts on one task as broader coverage.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Section 4.2 and Appendix J.1. This is retrospective coverage with knowledge of outcomes. It is not the measured success rate of an ensemble, a deployed router, or an equal-compute strategy. A common failure in the retained runs does not establish impossibility under other settings.</p>
+    <div class="research-links"><a href="findings.html#planning-complementarity">Coverage finding &amp; counting rules</a><a href="data/report/planning-outcomes.json">Task identities and outcomes</a><a href="paper.pdf#page=66">Paper · Appendix J.1</a><a href="#planning-complementarity">Link to this topic</a></div>
+  </section>
+
+  <section id="benchmark-composition" aria-labelledby="composition-title">
+    <h2 id="composition-title">Can benchmark composition change a model ranking?</h2>
+    <p><strong>The weighting of sources can change the leader without changing any model outcome.</strong> Under the 182-assignment Manipulation aggregate, Opus 5.5 scores 47.8% and Gemini 4 Argon 44.0%. Giving equal weight to each of the 13 sources changes the rates to 44.5% and 47.4%, respectively. The ranking reverses because the source-level capability profiles differ.</p>
+    <p>A separate Planning sensitivity analysis removes the same 73 ScienceWorld and 21 VirtualHome tasks for every model. On the remaining 63 tasks, Astra succeeds on 42, Argon on 38, and Fable on 21; all ten models' rates decline. This checks the contribution of the sampled sources while retaining their original outcomes.</p>
+    <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Section 4.2. Report both the aggregation rule and the task mixture when comparing agents. Reweighting is not a new experiment or a causal comparison of model architectures, observation schedules, or budgets; source exclusion does not isolate the effect of text modality.</p>
+    <div class="research-links"><a href="findings.html#benchmark-composition">Ranking sensitivity finding</a><a href="data/spatial-recovery/manipulation-sources.json">Source counts and successes</a><a href="data/report/planning-outcomes.json">Planning task-source records</a><a href="paper.pdf#page=7">Paper · main comparison</a><a href="#benchmark-composition">Link to this topic</a></div>
+  </section>
+
+  <section id="citation" aria-labelledby="citation-title">
+    <h2 id="citation-title">Cite the study and identify the relevant evidence</h2>
+    <p class="citation-text">Haojian Huang, Pukun Zhao, Zexi Li, Yehang Zhang, Yangkai Wei, Wenqian Li, Han Yang, Kaiwen Zhou, Ying-Cong Chen, and Yinchuan Li. <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena.</cite> arXiv:2610.00854, 2026. Version 3, 23 October 2026.</p>
+    <p>Use the paper citation for the research, and a topic or finding's permanent link for its explanation and data. Preserve the named model, sample, scoring rule, and version when quoting a result. This guide's publication date does not change the date of the underlying experiments or manuscript.</p>
+    <div class="research-links"><a href="https://arxiv.org/abs/2610.00854v3">Paper v3</a><a href="https://doi.org/10.48550/arXiv.2610.00854">Paper DOI</a><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="findings.html">Finding-specific references</a></div>
+  </section>
+</article>
+</main>
+<footer class="wrap"><span>Embodied Agent Arena · 2026</span><div><a href="./">Project overview</a><a href="geoprobe.html">GeoProbe methods</a><a href="findings.html">Research findings</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a></div></footer>
+</body>
+</html>

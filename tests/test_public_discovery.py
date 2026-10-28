@@ -71,15 +71,17 @@ class DiscoveryTests(unittest.TestCase):
         self.assertTrue(found, 'Expected published dataset metadata')
 
     def test_new_pages_are_crawlable_and_links_resolve(self):
-        for name in ('geoprobe.html', 'findings.html'):
+        for name in ('geoprobe.html', 'findings.html', 'research-topics.html', 'model-guide.html'):
             page = Page(PUBLIC / name)
             self.assertEqual(page.canonical, [BASE + name])
             self.assertEqual(len(page.ids), len(set(page.ids)))
             self.assertTrue(page.meta['description'][0])
             self.assertNotIn('noindex', ' '.join(page.meta.get('robots', [])))
-            self.assertTrue(page.schemas)
+            if name != 'model-guide.html':
+                self.assertTrue(page.schemas)
             self.assertIn('citation.bib', page.links)
-            self.assertIn('citation.csl.json', page.links)
+            if name != 'model-guide.html':
+                self.assertIn('citation.csl.json', page.links)
             for link in page.links:
                 url = urlsplit(link)
                 if url.scheme or url.netloc:
@@ -132,6 +134,7 @@ class DiscoveryTests(unittest.TestCase):
             self.assertRegex(url.findtext('s:lastmod', namespaces=ns), r'^2026-\d{2}-\d{2}$')
         self.assertIn(BASE + 'geoprobe.html', locations)
         self.assertIn(BASE + 'findings.html', locations)
+        self.assertIn(BASE + 'research-topics.html', locations)
 
     def test_root_robots_allows_search_and_advertises_sitemap(self):
         project_robots = (PUBLIC / 'robots.txt').read_text()
@@ -157,8 +160,37 @@ class DiscoveryTests(unittest.TestCase):
     def test_homepage_exposes_research_before_case_browser(self):
         source = (PUBLIC / 'index.html').read_text()
         self.assertLess(source.index('id="research-summary"'), source.index('id="cases"'))
-        for link in ('geoprobe.html', 'findings.html', 'citation.bib', 'citation.csl.json'):
+        for link in ('geoprobe.html', 'findings.html', 'research-topics.html', 'citation.bib', 'citation.csl.json'):
             self.assertIn(link, Page(PUBLIC / 'index.html').links)
+
+    def test_topic_and_finding_schema_sections_exist_in_visible_html(self):
+        for name, count in (('research-topics.html', 8), ('findings.html', 5)):
+            page = Page(PUBLIC / name)
+            schema = next(s for s in page.schemas if s['@type'] == 'WebPage')
+            self.assertEqual(len(schema['hasPart']), count)
+            visible = ' '.join(page.text)
+            for part in schema['hasPart']:
+                self.assertIn(urlsplit(part['url']).fragment, page.ids)
+                self.assertIn(part['name'], visible)
+                self.assertEqual(part['citation'], 'https://arxiv.org/abs/2610.00854v3')
+            self.assertIn('research-topics.html', Page(PUBLIC / 'geoprobe.html').links)
+
+    def test_new_findings_recompute_from_retained_records(self):
+        text = re.sub(r'\s+', ' ', ''.join(Page(PUBLIC / 'findings.html').text))
+        calvin = json.loads((PUBLIC / 'data/spatial-recovery/calvin-summary.json').read_text())
+        n = sum(m['n'] for m in calvin['models'])
+        for i in range(5):
+            reached = sum(m['reached'][i] for m in calvin['models'])
+            self.assertIn(f'{reached} / {n}', text)
+        self.assertEqual(sum(m['n'] - m['prefix_observed'] for m in calvin['models']), 6)
+        sources = json.loads((PUBLIC / 'data/spatial-recovery/manipulation-sources.json').read_text())['sources']
+        n = sum(s['n'] for s in sources)
+        for model in ('opus55', 'gemini4argon'):
+            successes = sum(s['successes'][model] for s in sources)
+            macro = sum(s['successes'][model] / s['n'] for s in sources) / len(sources)
+            self.assertIn(f'{successes} / {n}', text)
+            self.assertIn(f'{100 * successes / n:.1f}%', text)
+            self.assertIn(f'{100 * macro:.1f}%', text)
 
 
 if __name__ == '__main__':

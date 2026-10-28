@@ -6,3 +6,4 @@ https://embodied-agent-arena.github.io/embodied-agent-arena/technical-report.htm
 https://embodied-agent-arena.github.io/embodied-agent-arena/humanclaw-refresh.html
 https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html
 https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html
+https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html
