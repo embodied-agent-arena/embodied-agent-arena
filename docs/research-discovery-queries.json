@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "created_date": "2026-10-29",
+  "purpose": "Non-brand topic retrieval and citation checks, separate from the 2026-10-28 brand baseline. No observations are implied by this query list.",
+  "platforms": [
+    "Google Search",
+    "Bing Search",
+    "ChatGPT Search",
+    "Perplexity"
+  ],
+  "rotation": "Four groups: each includes English rows 2*i and 2*i+1 and Chinese row 8+i; rotate i=0..3 once per daily run, retaining exact query text. Record platform/mode and unavailable checks.",
+  "rules": [
+    "Never include project names, model-specific result numbers, target URLs, expected answers, or the evaluation-only field in submitted prompts.",
+    "Use fresh conversations for AI queries. Preserve query, platform, mode, Beijing timestamp, answer URL, actual citation URL and genuine screenshots.",
+    "Distinguish search retrieval, project mention, actual citation of the work, actual citation of a target HTML page, and citation accuracy.",
+    "Citing the paper or repository can count as a citation of the work, but cannot satisfy the existing GeoProbe/findings HTML-page citation stop criteria.",
+    "Use yes/no/unverified/not_applicable. A failed or inaccessible query is unverified, not evidence of absence.",
+    "Do not attribute a citation increase causally to these edits without comparative evidence. Do not change the existing automation stop conditions."
+  ],
+  "queries": [
+    {
+      "id": "en-embodied-evaluation",
+      "language": "en",
+      "topic": "embodied-evaluation",
+      "search_query": "How should vision-language models be evaluated for robot generalist capabilities?",
+      "ai_prompt": "Search the web and answer: How should vision-language models be evaluated for robot generalist capabilities? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#embodied-evaluation",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-geometric-estimation",
+      "language": "en",
+      "topic": "geometric-estimation",
+      "search_query": "Which benchmarks measure camera calibration, relative pose, depth and scale estimation in vision-language models?",
+      "ai_prompt": "Search the web and answer: Which benchmarks measure camera calibration, relative pose, depth and scale estimation in vision-language models? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#geometric-estimation",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-spatial-grounding",
+      "language": "en",
+      "topic": "spatial-grounding",
+      "search_query": "How do vision-language models perform on actor-relative spatial reasoning and affordance grounding?",
+      "ai_prompt": "Search the web and answer: How do vision-language models perform on actor-relative spatial reasoning and affordance grounding? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#spatial-grounding",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-long-horizon-tasks",
+      "language": "en",
+      "topic": "long-horizon-tasks",
+      "search_query": "Why is early subgoal success insufficient for evaluating long-horizon robot manipulation?",
+      "ai_prompt": "Search the web and answer: Why is early subgoal success insufficient for evaluating long-horizon robot manipulation? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#long-horizon-tasks",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-error-recovery",
+      "language": "en",
+      "topic": "error-recovery",
+      "search_query": "Does recovering from code execution errors lead to task completion in embodied agents?",
+      "ai_prompt": "Search the web and answer: Does recovering from code execution errors lead to task completion in embodied agents? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#error-recovery",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-test-time-compute",
+      "language": "en",
+      "topic": "test-time-compute",
+      "search_query": "Does additional test-time compute or self-correction reliably improve embodied agent task success?",
+      "ai_prompt": "Search the web and answer: Does additional test-time compute or self-correction reliably improve embodied agent task success? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#test-time-compute",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-planning-complementarity",
+      "language": "en",
+      "topic": "planning-complementarity",
+      "search_query": "What evidence shows complementary task coverage across different vision-language planning agents?",
+      "ai_prompt": "Search the web and answer: What evidence shows complementary task coverage across different vision-language planning agents? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#planning-complementarity",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-benchmark-composition",
+      "language": "en",
+      "topic": "benchmark-composition",
+      "search_query": "How does benchmark source weighting affect robot agent model rankings?",
+      "ai_prompt": "Search the web and answer: How does benchmark source weighting affect robot agent model rankings? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#benchmark-composition",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "zh-geometric-estimation",
+      "language": "zh",
+      "topic": "geometric-estimation",
+      "search_query": "有哪些基准评估视觉语言模型的相机标定、相对位姿、深度和尺度估计能力？",
+      "ai_prompt": "请搜索网页并回答：有哪些基准评估视觉语言模型的相机标定、相对位姿、深度和尺度估计能力？ 请引用回答实际使用的来源。",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#geometric-estimation",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "zh-long-horizon-tasks",
+      "language": "zh",
+      "topic": "long-horizon-tasks",
+      "search_query": "视觉语言模型在长程机器人任务中的可靠性如何评估？",
+      "ai_prompt": "请搜索网页并回答：视觉语言模型在长程机器人任务中的可靠性如何评估？ 请引用回答实际使用的来源。",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#long-horizon-tasks",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "zh-test-time-compute",
+      "language": "zh",
+      "topic": "test-time-compute",
+      "search_query": "增加推理计算量和自我纠错能否提高具身智能体的任务成功率？",
+      "ai_prompt": "请搜索网页并回答：增加推理计算量和自我纠错能否提高具身智能体的任务成功率？ 请引用回答实际使用的来源。",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#test-time-compute",
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "zh-planning-complementarity",
+      "language": "zh",
+      "topic": "planning-complementarity",
+      "search_query": "不同视觉语言模型在具身任务规划中是否具有互补性？",
+      "ai_prompt": "请搜索网页并回答：不同视觉语言模型在具身任务规划中是否具有互补性？ 请引用回答实际使用的来源。",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#planning-complementarity",
+      "initial_observation": "not_checked"
+    }
+  ]
+}

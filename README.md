@@ -77,6 +77,7 @@ Manipulation suites such as [LIBERO](https://arxiv.org/abs/2306.03310), [RoboTwi
 - **[Case Atlas](https://embodied-agent-arena.github.io/embodied-agent-arena/case-atlas.html)** — 181 cases across all five capabilities, each with ten-model records; 362 evaluation scene previews and 3 separately labeled demos. Missing footage uses shared task scenes; API interruptions count as unsuccessful attempts and are labeled API error. [Media coverage ↗](docs/CASE_MEDIA.md)
 - **[Same Task. Ten Models.](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases)** — 11 fixed tasks × 10 models. Visible clips play automatically; click for the matching result.
 - **[Inside the Execution](https://embodied-agent-arena.github.io/embodied-agent-arena/#execution-analysis)** — Follow actions, feedback and goal progress. All ten models are selectable on each of 46 tasks, including Gemini&nbsp;4&nbsp;Argon’s recorded actions and feedback.
+- **[Research questions & evidence](https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html)** — A guide to VLM geometry and spatial grounding, long-horizon tasks, agent recovery, test-time compute, complementary planning coverage and benchmark weighting. Each topic identifies evidence, limitations and a paper citation.
 - **[Results & Reproduction](docs/RESULTS.md)** — Main and source-level CSVs, task outcomes, analysis scripts, and editable manuscript figures.
 
 All pages and documentation are in English. Translated task instructions link to their original evaluation prompts. [Language and source records](docs/LANGUAGE.md).
@@ -84,6 +85,8 @@ All pages and documentation are in English. Translated task instructions link to
 <a id="news"></a>
 
 ## 📰 News
+
+- **2026.10.29** — Added a [research topic guide](https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html), finding sections on [long-horizon completion](https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#long-horizon-completion) and [source weighting](https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#benchmark-composition), and explicit metric-reading guidance. These explain existing v3 results; no new experiments.
 
 - **2026.10.27** — Added the [GeoProbe methods and dataset guide](https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html) and [citable findings with source records](https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html). Website and citation metadata now identify the published arXiv v3; experimental results are unchanged.
 

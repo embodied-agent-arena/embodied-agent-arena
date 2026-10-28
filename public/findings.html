@@ -3,43 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Research Findings &amp; Evidence — Embodied Agent Arena</title>
-  <meta name="description" content="Evidence from Embodied Agent Arena on shared planning failures, execution-error recovery, and token use. Each finding includes its sample, limits, data, and paper citation.">
+  <title>Robot Planning, Long-Horizon Tasks &amp; Agent Reliability: Research Findings — Embodied Agent Arena</title>
+  <meta name="description" content="Evidence on VLM planning complementarity, long-horizon robot failures, execution recovery, token cost and benchmark weighting, with populations, data and paper citations.">
   <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Research Findings &amp; Evidence — Embodied Agent Arena">
-  <meta property="og:description" content="Three findings with explicit denominators, evaluation settings, original data, and references to the research paper.">
+  <meta property="og:title" content="Robot Planning &amp; Agent Reliability: Research Findings — Embodied Agent Arena">
+  <meta property="og:description" content="Five findings on planning, long-horizon completion, recovery, token use and benchmark composition, with original data and citation links.">
   <meta property="og:url" content="https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html">
   <meta property="og:image" content="https://embodied-agent-arena.github.io/embodied-agent-arena/assets/overview.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/logo-transparent.png">
   <link rel="stylesheet" href="styles.css?v=refined-20261022">
-  <link rel="stylesheet" href="research-pages.css?v=20261027">
+  <link rel="stylesheet" href="research-pages.css?v=20261029">
   <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
   <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html",
-    "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html",
-    "name": "Research Findings & Evidence — Embodied Agent Arena",
-    "description": "Evidence from Embodied Agent Arena on shared planning failures, execution-error recovery, and token use, with samples, limitations, data, and paper references.",
-    "inLanguage": "en",
-    "dateModified": "2026-10-27",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Embodied Agent Arena",
-      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/"
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html",
+  "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html",
+  "name": "Robot Planning, Long-Horizon Tasks & Agent Reliability: Research Findings \u2014 Embodied Agent Arena",
+  "description": "Five findings on planning complementarity, execution recovery, token use, long-horizon completion and benchmark composition, with samples, limitations and source data.",
+  "inLanguage": "en",
+  "dateModified": "2026-10-29",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Embodied Agent Arena",
+    "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/"
+  },
+  "about": {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.48550/arXiv.2610.00854",
+    "name": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
+    "url": "https://arxiv.org/abs/2610.00854v3",
+    "identifier": "arXiv:2610.00854v3"
+  },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "Model Diversity Expands Coverage, but Shared Failures Remain",
+      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#planning-complementarity",
+      "citation": "https://arxiv.org/abs/2610.00854v3"
     },
-    "about": {
-      "@type": "ScholarlyArticle",
-      "@id": "https://doi.org/10.48550/arXiv.2610.00854",
-      "name": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
-      "url": "https://arxiv.org/abs/2610.00854v3",
-      "identifier": "arXiv:2610.00854v3"
+    {
+      "@type": "CreativeWork",
+      "name": "Resuming Execution Does Not Establish Task Completion",
+      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+      "citation": "https://arxiv.org/abs/2610.00854v3"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "A Small Failure Set Can Account for Most Token Use",
+      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#failure-token-cost",
+      "citation": "https://arxiv.org/abs/2610.00854v3"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Early Subgoal Success Overstates Complete-Sequence Reliability",
+      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#long-horizon-completion",
+      "citation": "https://arxiv.org/abs/2610.00854v3"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Changing Source Weights Can Reverse the Manipulation Leader",
+      "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#benchmark-composition",
+      "citation": "https://arxiv.org/abs/2610.00854v3"
     }
-  }
+  ]
+}
   </script>
 </head>
 <body class="research-document">
@@ -47,17 +79,18 @@
 <header class="site-header">
   <div class="nav-wrap">
     <a class="brand" href="./"><img src="assets/logo-transparent.png" alt="" width="42" height="42"><span class="brand-name">Embodied Agent <span>Arena</span></span></a>
-    <nav aria-label="Main navigation"><a href="./">Overview</a><a href="geoprobe.html">GeoProbe</a><a href="findings.html" aria-current="page">Findings</a><a href="./#citation">Cite the Paper</a></nav>
+    <nav aria-label="Main navigation"><a href="./">Overview</a><a href="research-topics.html">Research topics</a><a href="geoprobe.html">GeoProbe</a><a href="findings.html" aria-current="page">Findings</a><a href="./#citation">Cite the Paper</a></nav>
   </div>
 </header>
 <main id="main" class="wrap research-page">
   <article>
     <header class="research-header">
       <p class="eyebrow">Research Findings &amp; Evidence</p>
-      <h1>From Local Competence to Complete Tasks</h1>
-      <p class="research-lead">Embodied Agent Arena examines where frontier vision-language agents succeed, where they share failures, and whether additional execution produces verified task progress. These three findings connect each conclusion to its evaluation population and source records.</p>
-      <p class="research-meta">Page updated <time datetime="2026-10-27">27 October 2026</time> · Paper: <a href="https://arxiv.org/abs/2610.00854v3">arXiv v3, 23 October 2026</a> · Ten evaluated VLM agents</p>
-      <div class="research-links"><a href="#planning-complementarity">Shared planning failures</a><a href="#execution-recovery">Execution recovery</a><a href="#failure-token-cost">Token use</a><a href="#citation">Citation &amp; version</a></div>
+      <h1>Robot Planning, Long-Horizon Tasks &amp; Agent Reliability</h1>
+      <p class="research-lead">When does a capable vision-language agent still fail to finish a robot task? Five findings from Embodied Agent Arena connect model diversity, execution recovery, token use, sequence depth and benchmark composition to measured outcomes.</p>
+      <p class="research-meta">Page updated <time datetime="2026-10-29">29 October 2026</time> · Paper: <a href="https://arxiv.org/abs/2610.00854v3">arXiv v3, 23 October 2026</a> · Ten evaluated VLM agents</p>
+      <div class="research-links"><a href="#planning-complementarity">Shared planning failures</a><a href="#execution-recovery">Execution recovery</a><a href="#failure-token-cost">Token use</a><a href="#long-horizon-completion">Long-horizon tasks</a><a href="#benchmark-composition">Benchmark weighting</a><a href="#citation">Citation &amp; version</a></div>
+      <p class="scope-note">Investigating a broader research question? The <a href="research-topics.html">research topic guide</a> connects these results to embodied AI evaluation, spatial reasoning, self-correction and test-time computation, and explains when each result is relevant to a literature review.</p>
     </header>
 
     <section id="planning-complementarity" class="evidence-card" aria-labelledby="planning-title">
@@ -125,11 +158,41 @@
       <div class="research-links"><a href="#failure-token-cost" aria-label="Permanent link to the failure token cost finding">Link to this finding</a><a href="#citation">Cite the paper</a><a href="paper.pdf#page=68">Paper · Figure A15</a><a href="paper.pdf#page=70">Table A43 &amp; source analysis</a><a href="data/report/planning-episodes.csv" download>Episode usage · CSV</a><a href="data/report/metrics.json">Aggregated metrics · JSON</a><a href="technical-report.html#resources">Read the resource analysis</a></div>
     </section>
 
+    <section id="long-horizon-completion" class="evidence-card" aria-labelledby="horizon-title">
+      <p class="eyebrow">04 / Long-Horizon Manipulation · 100 CALVIN Episodes</p>
+      <h2 id="horizon-title">Early Subgoal Success Overstates Complete-Sequence Reliability</h2>
+      <p><strong>In the same 100 retained CALVIN episodes, 60 reach the first verified subgoal, but only nine complete all five consecutive subgoals.</strong> The counts reaching at least one, two, three, four and five goals are 60, 40, 25, 18 and 9, respectively. This is a direct example of the gap between early progress and long-horizon task completion.</p>
+      <div class="table-scroll" role="region" aria-label="CALVIN verified goal prefixes" tabindex="0"><table>
+        <caption>Nested completed prefixes; every percentage uses all 100 episodes</caption>
+        <thead><tr><th scope="col">At least this many consecutive goals</th><th scope="col">Episodes</th><th scope="col">Share of all episodes</th></tr></thead>
+        <tbody><tr><th scope="row">1</th><td>60 / 100</td><td>60%</td></tr><tr><th scope="row">2</th><td>40 / 100</td><td>40%</td></tr><tr><th scope="row">3</th><td>25 / 100</td><td>25%</td></tr><tr><th scope="row">4</th><td>18 / 100</td><td>18%</td></tr><tr><th scope="row">5 · Complete sequence</th><td>9 / 100</td><td>9%</td></tr></tbody>
+      </table></div>
+      <p><strong>Population and protocol.</strong> Ten sequence IDs × ten models, one retained run per assignment. Six episodes have no verified goal prefix; they receive no goal credit and remain in the denominator. Model-specific observation schedules and budgets are retained, as in the <a href="model-guide.html#protocol">protocol audit</a>.</p>
+      <p class="scope-note"><strong>Scope.</strong> These are nested counts, not independent per-step success probabilities. They do not identify memory, planning or control as the unique cause of failure. Separate RGB-expanded demonstrations are not added to the evaluation population.</p>
+      <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Section 4.3 and Appendix D.5.1, report that 60 of 100 retained CALVIN episodes reach the first subgoal, while nine finish the full five-goal sequence.</p>
+      <div class="research-links"><a href="#long-horizon-completion">Link to this finding</a><a href="#citation">Cite the paper</a><a href="data/spatial-recovery/calvin-summary.json">Goal-prefix counts by model · JSON</a><a href="data/spatial-recovery/calvin-episodes.json">Retained episode events</a><a href="paper.pdf#page=47">Appendix D.5.1</a><a href="research-topics.html#long-horizon-tasks">Long-horizon task evaluation</a></div>
+    </section>
+
+    <section id="benchmark-composition" class="evidence-card" aria-labelledby="composition-title">
+      <p class="eyebrow">05 / Benchmark Design · 13 Manipulation Sources</p>
+      <h2 id="composition-title">Changing Source Weights Can Reverse the Manipulation Leader</h2>
+      <p><strong>With the same recorded outcomes, weighting each of 182 binary Manipulation assignments equally gives Opus 5.5 a 47.8% success rate and Argon 44.0%. Giving each of the 13 source benchmarks equal weight instead gives Opus 44.5% and Argon 47.4%.</strong> The leading model changes because the aggregation weights change.</p>
+      <div class="table-scroll" role="region" aria-label="Manipulation source weighting sensitivity" tabindex="0"><table>
+        <caption>Same records, two aggregation rules; rounded to one decimal place</caption>
+        <thead><tr><th scope="col">Model</th><th scope="col">Completed binary assignments</th><th scope="col">Assignment-weighted success</th><th scope="col">Equal-source mean success</th></tr></thead>
+        <tbody><tr><th scope="row">Claude Opus 5.5</th><td>87 / 182</td><td>47.8%</td><td>44.5%</td></tr><tr><th scope="row">Gemini 4 Argon</th><td>80 / 182</td><td>44.0%</td><td>47.4%</td></tr></tbody>
+      </table></div>
+      <p><strong>Population and calculation.</strong> Assignment weighting divides total successes by 182. Equal-source weighting computes each source's success rate and takes the mean across 13 sources. The 183-case Manipulation inventory also contains one continuous-reward task, which is outside this binary-success comparison.</p>
+      <p class="scope-note"><strong>Scope.</strong> This sensitivity analysis holds outcomes and recorded protocols fixed. It does not introduce a new evaluation, establish equal compute across models, or show that one weighting is correct for every deployment. A model-selection claim should name the task mixture and aggregation rule.</p>
+      <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Section 4.2, show that the Manipulation leader changes under equal-source weighting of the same adopted results.</p>
+      <div class="research-links"><a href="#benchmark-composition">Link to this finding</a><a href="#citation">Cite the paper</a><a href="data/spatial-recovery/manipulation-sources.json">Per-source counts · JSON</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena/blob/ecf56432333bd1e685fda3b6640855d0a53eb6f0/scripts/analyze_experiment_findings.py">Recompute the weighting comparison</a><a href="https://arxiv.org/abs/2610.00854v3">Paper v3 · Section 4.2</a><a href="research-topics.html#benchmark-composition">Benchmark composition and model selection</a></div>
+    </section>
+
     <section id="citation" aria-labelledby="citation-title">
       <p class="eyebrow">Citation &amp; Version</p>
       <h2 id="citation-title">Cite the Paper and Preserve the Evidence Scope</h2>
       <p>Huang, Haojian; Zhao, Pukun; Li, Zexi; Zhang, Yehang; Wei, Yangkai; Li, Wenqian; Yang, Han; Zhou, Kaiwen; Chen, Ying-Cong; and Li, Yinchuan. <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena.</cite> 2026. <a href="https://doi.org/10.48550/arXiv.2610.00854">doi:10.48550/arXiv.2610.00854</a>.</p>
-      <p>These findings accompany <a href="https://arxiv.org/abs/2610.00854v3">arXiv version 3, released 23 October 2026</a>. This page’s 27 October update improves access to existing evidence; it does not announce a new evaluation run. Use the paper citation for the research, and include the finding’s stable section link when pointing readers to its data and definitions.</p>
+      <p>These findings accompany <a href="https://arxiv.org/abs/2610.00854v3">arXiv version 3, released 23 October 2026</a>. This page’s 29 October update improves access to existing evidence; it does not announce a new evaluation run. Use the paper citation for the research, and include the finding’s stable section link when pointing readers to its data and definitions.</p>
       <p>The linked tables and records are available in the <a href="https://github.com/embodied-agent-arena/embodied-agent-arena/tree/ecf56432333bd1e685fda3b6640855d0a53eb6f0/public/data">fixed source snapshot used for this page</a>. The <a href="https://github.com/embodied-agent-arena/embodied-agent-arena/blob/ecf56432333bd1e685fda3b6640855d0a53eb6f0/docs/SPATIAL_RECOVERY.md">CALVIN provenance notes</a> describe missing-prefix handling and how report hashes identify retained episodes.</p>
       <div class="research-links"><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="https://arxiv.org/abs/2610.00854v3">Versioned paper</a><a href="technical-report.html">Full technical analysis</a><a href="geoprobe.html">Explore GeoProbe</a></div>
     </section>

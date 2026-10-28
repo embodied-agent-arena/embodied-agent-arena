@@ -48,6 +48,7 @@
 .research-page pre code{font-size:inherit}
 .research-page .citation-text{font-size:17px;line-height:1.75}
 .research-document footer{border-top:1px solid var(--line)}
+.research-document footer div{flex-wrap:wrap;gap:12px 24px}
 @media(max-width:760px){
   .research-document .nav-wrap{gap:14px;padding-block:12px}
   .research-document .site-header nav{display:flex;width:100%;font-size:14px;gap:9px 20px}

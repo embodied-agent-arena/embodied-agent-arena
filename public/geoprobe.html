@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>GeoProbe: Camera, Motion, Depth &amp; Scale Evaluation — Embodied Agent Arena</title>
-  <meta name="description" content="GeoProbe evaluates VLM geometric estimation with 168 queries over 130 RGB images. Explore ten protocols, camera and object motion, depth and scale metrics, data, limitations, and the source paper.">
+  <meta name="description" content="How to evaluate VLM camera calibration, relative pose, object motion, depth and scale: GeoProbe's 168 queries, ten protocols, scoring rules, data and paper citation.">
   <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="GeoProbe — A Geometric Estimation Benchmark for VLM Agents">
@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/logo-transparent.png">
   <link rel="stylesheet" href="styles.css?v=refined-20261022">
-  <link rel="stylesheet" href="research-pages.css?v=20261027">
+  <link rel="stylesheet" href="research-pages.css?v=20261029">
   <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
   <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
   <script type="application/ld+json">
@@ -27,7 +27,7 @@
         "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
         "name": "GeoProbe: Camera, Motion, Depth and Scale Evaluation",
         "description": "Methods, inventory, scoring, limitations and citation for the GeoProbe geometric estimation benchmark within Embodied Agent Arena.",
-        "dateModified": "2026-10-28",
+        "dateModified": "2026-10-29",
         "inLanguage": "en",
         "mainEntity": {"@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#dataset"},
         "citation": "https://arxiv.org/abs/2610.00854v3"
@@ -58,19 +58,32 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="nav-wrap">
   <a class="brand" href="./"><img src="assets/logo-transparent.png" alt="" width="42" height="42"><span class="brand-name">Embodied Agent <span>Arena</span></span></a>
-  <nav aria-label="Research navigation"><a href="./">Overview</a><a href="geoprobe.html" aria-current="page">GeoProbe</a><a href="findings.html">Findings</a><a class="nav-paper" href="./#citation">Citation</a></nav>
+  <nav aria-label="Research navigation"><a href="./">Overview</a><a href="research-topics.html">Research topics</a><a href="geoprobe.html" aria-current="page">GeoProbe</a><a href="findings.html">Findings</a><a class="nav-paper" href="./#citation">Citation</a></nav>
 </div></header>
 <main id="main" class="wrap research-page">
 <article>
   <header class="research-header">
     <p class="eyebrow">Geometry · An original benchmark within Embodied Agent Arena</p>
-    <h1>GeoProbe</h1>
+    <h1>GeoProbe: Geometric Estimation for Vision-Language Models</h1>
     <p class="research-lead">How well can a vision-language agent estimate camera parameters, distinguish object motion from camera motion, and recover depth and scale from images?</p>
     <p>GeoProbe isolates these requirements through controlled scene variations and task-specific scoring. It contributes 168 queries to the Arena’s 1,000-case evaluation, alongside 32 established sources.</p>
     <div class="research-stats" aria-label="GeoProbe inventory"><div><strong>168</strong><span>evaluation queries</span></div><div><strong>130</strong><span>unique RGB images</span></div><div><strong>10</strong><span>diagnostic protocols</span></div></div>
-    <p class="research-meta">Page updated 28 October 2026 · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
-    <div class="research-links"><a href="#inventory">Task inventory</a><a href="#metrics">Scoring</a><a href="#reproduce">Data &amp; reproduction</a><a href="#citation">Cite GeoProbe</a></div>
+    <p class="research-meta">Page updated <time datetime="2026-10-29">29 October 2026</time> · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
+    <div class="research-links"><a href="#research-questions">Research questions</a><a href="#inventory">Task inventory</a><a href="#metrics">Scoring</a><a href="#reproduce">Data &amp; reproduction</a><a href="#citation">Cite GeoProbe</a></div>
   </header>
+
+  <section id="research-questions" aria-labelledby="questions-title">
+    <h2 id="questions-title">Which VLM geometry questions can GeoProbe answer?</h2>
+    <p>For research on geometric understanding in multimodal models, GeoProbe provides fixed image tasks with numerical targets. These protocols address different requirements; a result on one should not stand in for all forms of spatial reasoning.</p>
+    <div class="research-grid">
+      <div class="evidence-card"><h3>Can a VLM estimate camera calibration and relative pose?</h3><p>The inventory includes 24 full-intrinsics queries, 12 focal-length queries with a centered principal point, and 24 relative-pose queries. Calibration uses focal and principal-point errors; relative pose reports rotation, translation and applicable joint success criteria. <a href="#metrics">Scoring definitions</a> keep angular and metric errors separate.</p></div>
+      <div class="evidence-card"><h3>Can it separate camera motion from object motion?</h3><p>Three rendered displacement conditions repeat 12 object interventions under fixed, small-change and large-change camera views. Each contains ten moving and two stationary controls. This supports comparisons across camera conditions; the four real-photo cases form a separate subset. <a href="#design">Matched conditions and real-photo limits</a>.</p></div>
+      <div class="evidence-card"><h3>Does depth ordering establish metric depth or scale?</h3><p>No single score establishes all three. Twelve sparse-depth queries and 44 reference-based scale queries evaluate distinct numerical targets. Depth error, relative error and scale error must retain their units and denominators. <a href="#metrics">Depth and scale metrics</a> describe what each score measures.</p></div>
+      <div class="evidence-card"><h3>Is GeoProbe a robot navigation or manipulation success benchmark?</h3><p>GeoProbe tests fixed-input geometric estimation. Arena evaluates path constraints, spatial reasoning and interactive task completion in other source groups. Use <a href="research-topics.html#spatial-grounding">spatial and grounding evidence</a> or <a href="findings.html#long-horizon-completion">long-horizon completion results</a> when those are the research question.</p></div>
+    </div>
+    <p class="scope-note"><strong>Attribution for a literature review.</strong> Huang et al. (2026) introduce GeoProbe within Embodied Agent Arena to evaluate camera, object-motion, depth and scale estimation with 168 queries over 130 RGB images. Cite <a href="https://arxiv.org/abs/2610.00854v3">paper v3</a> and link the <a href="#inventory">protocol inventory</a> when describing the dataset. This is an evaluation resource, not evidence that every tested model solves these tasks.</p>
+    <div class="research-links"><a href="research-topics.html#geometric-estimation">Geometry in an embodied AI literature review</a><a href="#citation">Citation downloads</a><a href="model-guide.html#metric-reading">How to read means, SDs and domain scores</a></div>
+  </section>
 
   <section id="design" aria-labelledby="design-title">
     <h2 id="design-title">What does GeoProbe measure?</h2>
