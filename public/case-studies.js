@@ -187,6 +187,11 @@
     content.querySelector('[data-back-comparison]').hidden=false;
     selection.hidden=false;
     dialog.querySelectorAll('[data-detail-model]').forEach(b => b.setAttribute('aria-pressed',String(Number(b.dataset.detailModel) === index)));
+    const switcher=content.querySelector('.gallery-model-switcher');
+    const active=switcher.querySelector('[aria-pressed="true"]');
+    if(active && switcher.scrollWidth>switcher.clientWidth){
+      switcher.scrollLeft+=active.getBoundingClientRect().left-switcher.getBoundingClientRect().left-(switcher.clientWidth-active.offsetWidth)/2;
+    }
     if (staticCase) {
       const s = summary(c,p);
       const polygon=c.representation==='polygon';

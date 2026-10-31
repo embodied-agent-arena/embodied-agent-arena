@@ -4,7 +4,7 @@ const source = fs.readFileSync('public/figure-motion.js', 'utf8');
 class Element {
   constructor(selector, children = []) {
     this.selector = selector; this.children = children; this.nodeType = 1;
-    this.isConnected = true; this.parentElement = null; this.calls = [];
+    this.isConnected = true; this.parentElement = null; this.calls = []; this.dataset = {};
     this.style = {width: '71.6%'}; this.textContent = '71.6 ± 0.7';
   }
   matches(selector) { return selector.split(', ').includes(this.selector); }
@@ -73,15 +73,19 @@ doc.dispatchEvent(focus); assert(next.children[0].calls[0].cancelled);
 const vertical = new Element('.dc-plot', [new Element('.dc-bar'), new Element('.dc-whisker')]);
 const heatmap = new Element('.dc-heat-scroll', [new Element('.dc-heat-cell')]);
 const scatter = new Element('.dc-plot', [new Element('.dc-point')]);
-mutate([{addedNodes: [vertical, heatmap, scatter]}]);
-for (const plot of [vertical, heatmap, scatter]) {
+const mobile = new Element('.dc-mobile-bars', [new Element('.dc-bar'), new Element('.dc-mobile-whisker')]);
+mobile.children[0].dataset.orientation = 'horizontal';
+mutate([{addedNodes: [vertical, heatmap, scatter, mobile]}]);
+for (const plot of [vertical, heatmap, scatter, mobile]) {
   visit(plot, 1); assert.equal(total(plot), 0, 'axes and labels remain stationary');
   assert.equal(total(plot.children[0]), 1);
   visit(plot, 0); visit(plot, 1); assert.equal(total(plot.children[0]), 2);
 }
 assert.equal(vertical.children[0].calls[1].keyframes[0].transform, 'scaleY(0)');
+assert.equal(mobile.children[0].calls[1].keyframes[0].transform, 'scaleX(0)');
+assert.equal(mobile.children[1].calls[1].options.id, 'arena-uncertainty-reveal');
 assert.equal(heatmap.children[0].calls[1].keyframes[0].clipPath, 'inset(100% 0 0 0)');
 reduced.matches = true; reduced.dispatchEvent(new Event('change'));
-for (const plot of [vertical, heatmap, scatter]) assert(plot.children[0].calls[1].cancelled);
+for (const plot of [vertical, heatmap, scatter, mobile]) assert(plot.children[0].calls[1].cancelled);
 vm.runInNewContext(source, {window: {}, Element}); // No animation API: original page remains usable.
 console.log('Figure motion: viewport replay, stable scores/layout, dynamic tabs, reduced motion, focus, print and cleanup passed.');

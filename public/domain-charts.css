@@ -49,3 +49,36 @@
 .dc-tooltip[hidden]{display:none}
 .dc-section h4{font-variant-ligatures:none}
 @media print{.dc-tooltip{display:none}}
+
+/* Responsive bars preserve the desktop values, colours, zero and SD intervals. */
+.dc-mobile-bars{display:none}
+@media(max-width:900px){
+ .dc-bar-chart>.dc-scroll{display:none}
+ .dc-mobile-bars{display:block}
+ .dc-mobile-axis{font-size:14px;line-height:1.5;color:#53665e;margin:0 0 12px}
+ .dc-mobile-scale{display:flex;justify-content:space-between;font-size:12px;color:#6c7872;padding-bottom:5px}
+ .dc-mobile-row{display:block;width:100%;text-align:left;padding:11px 4px 13px;border-bottom:1px solid #e5e9e3;border-radius:4px;cursor:pointer}
+ .dc-mobile-row:hover,.dc-mobile-row.dc-selected{background:#f2f5ef}
+ .dc-mobile-row:focus-visible{outline:2px solid #756b9c;outline-offset:1px}
+ .dc-mobile-label{display:flex;gap:8px;align-items:center;font-size:14px;line-height:1.4}
+ .dc-mobile-label img{width:19px;height:19px;flex:none}
+ .dc-mobile-label strong{margin-left:auto;font-size:14px;font-weight:650;white-space:nowrap}
+ .dc-mobile-track{position:relative;display:block;height:14px;margin-top:9px;background:#f2f4f0;border-radius:2px}
+ .dc-mobile-fill{position:absolute;top:1px;height:12px;border-radius:2px}
+ .dc-mobile-zero{position:absolute;top:-3px;height:20px;border-left:1px solid #c1cbc3}
+ .dc-mobile-zero-value{position:absolute;top:0;width:2px;height:14px}
+ .dc-mobile-whisker{position:absolute;top:6px;height:2px;background:#31483b;box-shadow:0 0 0 1px #ffffffa8}
+ .dc-mobile-whisker::before,.dc-mobile-whisker::after{content:'';position:absolute;top:-3px;height:8px;border-left:1px solid #31483b}
+ .dc-mobile-whisker::before{left:0}.dc-mobile-whisker::after{right:0}
+ .dc-mobile-comparison{background:#fff;box-shadow:0 0 0 1px #31483b}
+ .dc-mobile-dot{position:absolute;top:3px;width:8px;height:8px;border:1px solid #31483b;background:#fff;border-radius:50%;transform:translateX(-50%)}
+ .dc-readout{min-height:0}
+ .dc-definition b{white-space:normal}
+ .dc-heat-cell{min-height:44px}
+ .dc-heatmap th:first-child{width:120px;font-size:14px}
+ .dc-heatmap tbody th img{width:18px;height:18px;margin-right:5px}
+ .dc-heat-scroll::before{content:'Swipe to compare all columns →';display:block;position:sticky;left:0;width:max-content;max-width:100%;margin-bottom:10px;font-size:12px;color:#64776b}
+ .dc-controls button{min-height:44px;font-size:14px}
+ .dc-tooltip{display:none}
+}
+@media print{.dc-mobile-bars{display:none}.dc-bar-chart>.dc-scroll{display:block}}
