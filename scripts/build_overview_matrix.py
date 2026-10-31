@@ -189,7 +189,7 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
     (PUB / "data/report/overview-provenance.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     doc = ["# Tasks in the overview", "",
-           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} attempt records and {manifest['recordingCount']} matching evaluation previews**, plus **{manifest['demoCount']} independently recorded same-task demos** (excluded from scores). **{manifest['apiErrorCount']} API-interrupted attempts count as unsuccessful**; these are labeled separately from runtime errors and budget stops. [Error inventory](../public/data/report/case-api-errors.csv).", "",
+           f"The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **{len(MODELS)} models on the same {len(columns)} fixed tasks**. Each column uses one native task identity across every model row. There are **{len(cells)} scored attempt records** with **{manifest['recordingCount']} archived evaluation recordings**. The wall presents {manifest['recordingCount']-manifest['updatedRecordingCount']} original recordings, {manifest['updatedRecordingCount']} updated toolbox recordings, and {manifest['demoCount']} independently recorded same-task demos. Updated recordings and demos are excluded from the reported scores. **{manifest['apiErrorCount']} API-interrupted attempts count as unsuccessful**; these are labeled separately from runtime errors and budget stops. [Error inventory](../public/data/report/case-api-errors.csv).", "",
            "## Fixed tasks", "", "| Benchmark | Task | Compare |", "| :--- | :--- | :--- |"]
     for c in columns:
         gid = c['groupId']
@@ -203,6 +203,7 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
         doc.append(f"{i+1}. **{model_name}** — {n} scene previews; {len(columns)} task results.")
     doc += ["", "The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.", ""]
     doc += ["Toolbox previews now show ten head-camera recordings from the 24 October release. These separate runs retain their own outcomes and timestamps; the paper’s scored episodes and logs remain unchanged. [Recording provenance](../public/data/toolbox-recording-refresh.json).", ""]
+    doc += ["The other two BEHAVIOR tasks (putting shoes on a rack and canning meat) retain their outcomes, execution logs, and original recording downloads. Their noisy old footage is excluded from automatic previews; the toolbox recordings are never used as footage for these different tasks.", ""]
     if not skip_docs:
         (ROOT / "docs/RECORDED_TASKS.md").write_text("\n".join(doc))
     app = PUB / "app.js"

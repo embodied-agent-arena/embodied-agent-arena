@@ -1,6 +1,6 @@
 # Tasks in the overview
 
-The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 107 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **1 API-interrupted attempts count as unsuccessful**; these are labeled separately from runtime errors and budget stops. [Error inventory](../public/data/report/case-api-errors.csv).
+The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 scored attempt records** with **107 archived evaluation recordings**. The wall presents 97 original recordings, 10 updated toolbox recordings, and 3 independently recorded same-task demos. Updated recordings and demos are excluded from the reported scores. **1 API-interrupted attempts count as unsuccessful**; these are labeled separately from runtime errors and budget stops. [Error inventory](../public/data/report/case-api-errors.csv).
 
 ## Fixed tasks
 
