@@ -18541,7 +18541,8 @@
     "video": "assets/case-studies/W4-capx_behavior1k-01.mp4",
     "title": "can meat",
     "shortTask": "can meat",
-    "taskId": "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_can_meat.yaml--0--4dbe460b28c8"
+    "taskId": "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_can_meat.yaml--0--4dbe460b28c8",
+    "previewPolicy": "records-only"
   },
   {
     "id": "W4-capx_behavior1k-02",
@@ -18633,7 +18634,8 @@
     "video": "assets/case-studies/W4-capx_behavior1k-03.mp4",
     "title": "env configs r1pro b1k putting shoes on rack.yaml",
     "shortTask": "putting shoes on rack",
-    "taskId": "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_putting_shoes_on_rack.yaml--0--7c76679a3a9c"
+    "taskId": "capx--capx_current_interface_live--test--env_configs-r1pro-b1k_putting_shoes_on_rack.yaml--0--7c76679a3a9c",
+    "previewPolicy": "records-only"
   },
   {
     "id": "W4-capx_libero_pro-01",

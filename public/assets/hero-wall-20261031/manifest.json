@@ -1,0 +1,66 @@
+[
+  {
+    "name": "toolbox",
+    "groupId": "showcase-capx_behavior1k",
+    "modelKey": "fable",
+    "sourceVideo": "assets/toolbox-recordings-20261024/fable/clip.mp4",
+    "video": "assets/hero-wall-20261031/toolbox.mp4",
+    "poster": "assets/hero-wall-20261031/toolbox.jpg"
+  },
+  {
+    "name": "calvin",
+    "groupId": "showcase-calvin",
+    "modelKey": "sol",
+    "sourceVideo": "assets/video-supplement-20261021/calvin/sol/clip.mp4",
+    "video": "assets/hero-wall-20261031/calvin.mp4",
+    "poster": "assets/hero-wall-20261031/calvin.jpg"
+  },
+  {
+    "name": "humanclaw",
+    "groupId": "showcase-humanclaw",
+    "modelKey": "astra",
+    "sourceVideo": "assets/video-supplement-20261021/humanclaw/astra/clip.mp4",
+    "video": "assets/hero-wall-20261031/humanclaw.mp4",
+    "poster": "assets/hero-wall-20261031/humanclaw.jpg"
+  },
+  {
+    "name": "alfworld",
+    "groupId": "showcase-alfworld_visual",
+    "modelKey": "astra",
+    "sourceVideo": "assets/video-supplement-20261021/alfworld_visual/astra/clip.mp4",
+    "video": "assets/hero-wall-20261031/alfworld.mp4",
+    "poster": "assets/hero-wall-20261031/alfworld.jpg"
+  },
+  {
+    "name": "rlbench",
+    "groupId": "task-video-1fd3d0c0ff",
+    "modelKey": "sol",
+    "sourceVideo": "assets/video-supplement-20261021/rlbench/sol/clip.mp4",
+    "video": "assets/hero-wall-20261031/rlbench.mp4",
+    "poster": "assets/hero-wall-20261031/rlbench.jpg"
+  },
+  {
+    "name": "robocasa",
+    "groupId": "showcase-robocasa",
+    "modelKey": "astra",
+    "sourceVideo": "assets/homepage-supplement-20261022/c35bf226d544ddc5c964/clip.mp4",
+    "video": "assets/hero-wall-20261031/robocasa.mp4",
+    "poster": "assets/hero-wall-20261031/robocasa.jpg"
+  },
+  {
+    "name": "discovery",
+    "groupId": "showcase-discoveryworld",
+    "modelKey": "astra",
+    "sourceVideo": "assets/video-supplement-20261021/discoveryworld/astra/clip.mp4",
+    "video": "assets/hero-wall-20261031/discovery.mp4",
+    "poster": "assets/hero-wall-20261031/discovery.jpg"
+  },
+  {
+    "name": "cliport",
+    "groupId": "task-video-cefac4d024",
+    "modelKey": "gemini4argon",
+    "sourceVideo": "assets/argon-cases/W4-cliport-gemini4argon-01/clip.mp4",
+    "video": "assets/hero-wall-20261031/cliport.mp4",
+    "poster": "assets/hero-wall-20261031/cliport.jpg"
+  }
+]

@@ -24,6 +24,7 @@ public/data/*
 !public/data/release.json
 !public/data/argon-case-audit.json
 !public/data/video-supplement-audit.json
+!public/data/toolbox-recording-refresh.json
 !public/data/case-gallery.json
 !public/data/source-instructions.json
 !public/data/case-media.json

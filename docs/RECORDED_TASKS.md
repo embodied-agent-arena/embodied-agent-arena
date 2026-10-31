@@ -1,11 +1,12 @@
 # Tasks in the overview
 
-The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 107 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **1 terminal API interruption is labeled API error and counted as an unsuccessful attempt**, separately from runtime errors and budget stops. The full atlas and HumanCLAW refresh index contain **23 final API errors**; no reruns are scheduled. [Error inventory](../public/data/report/case-api-errors.csv).
+The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent-arena/#cases) compares **10 models on the same 11 fixed tasks**. Each column uses one native task identity across every model row. There are **110 attempt records and 107 matching evaluation previews**, plus **3 independently recorded same-task demos** (excluded from scores). **1 API-interrupted attempts count as unsuccessful**; these are labeled separately from runtime errors and budget stops. [Error inventory](../public/data/report/case-api-errors.csv).
 
 ## Fixed tasks
 
 | Benchmark | Task | Compare |
 | :--- | :--- | :--- |
+| BEHAVIOR-1K | Outfit a basic toolbox with the required tools. | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=showcase-capx_behavior1k#latest-cases) |
 | ALFRED | Clean the soap bar and place it in the bathtub. | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=showcase-alfred_official_visual#latest-cases) |
 | ALFWorld | Put a cleaned bar of soap on a counter. | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=showcase-alfworld_visual#latest-cases) |
 | DiscoveryWorld | Excavate three sites, date the artifacts, and place the red flag at the oldest site. | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=showcase-discoveryworld#latest-cases) |
@@ -16,7 +17,6 @@ The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent
 | CLIPort | packing boxes pairs unseen colors | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=task-video-cefac4d024#latest-cases) |
 | RoboCasa | Open the left drawer. | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=showcase-robocasa#latest-cases) |
 | RoboCasa365 | Remove the broccoli and steak from the cutting board to prepare it for cleaning. | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=showcase-robocasa365#latest-cases) |
-| BEHAVIOR-1K | Outfit a basic toolbox with the required tools. | [Ten models](https://embodied-agent-arena.github.io/embodied-agent-arena/?case=showcase-capx_behavior1k#latest-cases) |
 
 ## Model rows
 
@@ -33,4 +33,5 @@ The [interactive overview](https://embodied-agent-arena.github.io/embodied-agent
 
 The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.
 
-The toolbox task uses the same configuration, seed and scene revision for all ten models. Eight previews use the robot head camera; DeepSeek-1017 and Gemini 4 Argon use a separate external recording camera, labeled in the page. [Camera and task audit](../public/data/toolbox-camera-audit.json).
+Toolbox previews now show ten head-camera recordings from the 24 October release. These separate runs retain their own outcomes and timestamps; the paper’s scored episodes and logs remain unchanged. [Recording provenance](../public/data/toolbox-recording-refresh.json).
+The other two BEHAVIOR tasks (putting shoes on a rack and canning meat) retain their outcomes, execution logs, and original recording downloads. Their noisy old footage is excluded from automatic previews; the toolbox recordings are never used as footage for these different tasks.

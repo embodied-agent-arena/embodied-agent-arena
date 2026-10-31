@@ -1,0 +1,87 @@
+/* A continuous reading path: watch, compare, understand, then inspect. */
+.hero-stage{background:#f5f7f4}
+.hero-stage .hero{padding:50px 24px 74px}
+.hero-scene{inset:-45px -40px}
+.hero-wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:14px;width:100%;height:100%;transform:rotate(-5deg) scale(1.10);filter:blur(2.4px)}
+.hero-wall video{width:100%;height:100%;min-height:0;object-fit:cover;border-radius:12px;opacity:.88;filter:saturate(.72);transform:none}
+.hero-scene::after{background:radial-gradient(ellipse at 50% 47%,rgba(250,252,249,.99) 0%,rgba(250,252,249,.95) 26%,rgba(250,252,249,.72) 52%,rgba(250,252,249,.26) 100%)}
+.hero-stage::after{height:70px}
+.hero-stage .hero h1{font-size:clamp(36px,4.5vw,62px);line-height:1.13;letter-spacing:-.04em;max-width:1100px;margin-top:18px}
+.hero-stage .hero-wordmark{font-size:28px}
+.hero-stage .hero-identity{margin-bottom:14px}
+.hero-stage .subtitle{font-size:20px;margin-top:20px;line-height:1.5;white-space:normal;text-wrap:balance}
+.hero-stage .research-subtitle{font-size:17px;letter-spacing:.025em;margin:17px 0 24px;color:#496454}
+.hero-stage .people{margin-top:0}
+.hero-stage .authors{font-size:16px;gap:7px 18px;max-width:960px;margin-inline:auto}
+.hero-stage .affiliations{font-size:13px;gap:5px 18px;margin-top:12px}
+.hero-stage .actions{margin-top:28px;gap:10px}
+.hero-stage .actions .button{font-size:15px;min-height:46px;padding:11px 20px}
+.hero-stage .ambient-toggle{width:auto;height:34px;padding:7px 12px;font-size:12px;border-radius:20px;background:rgba(255,255,255,.88);right:24px;bottom:18px}
+.reading-nav{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding:19px 24px;border-bottom:1px solid var(--line);font-size:14px;font-weight:600;color:var(--muted)}
+.reading-nav a{display:flex;align-items:center;gap:9px}
+.reading-nav span{color:var(--accent);font-size:12px}
+.reading-nav a:hover{color:var(--ink)}
+.section,.research-lead{padding-block:64px}
+.cases-section{padding-top:38px;padding-bottom:44px}
+.cases-section .section-heading{align-items:end;margin-bottom:20px;gap:20px}
+.cases-section .section-heading h2{font-size:clamp(27px,3.1vw,38px)}
+.case-intro{font-size:16px;color:var(--muted);margin-top:8px}
+.task-overview{border-radius:14px;margin-bottom:0}
+.overview-toolbar{padding:14px 18px;gap:12px}
+.overview-toolbar p{font-size:13px}
+.overview-scroll{max-height:570px;overflow:auto;scrollbar-width:thin;overscroll-behavior:contain;scroll-padding-top:68px}
+.overview-table{width:2340px;min-width:2340px;font-size:14px;border-spacing:5px}
+.overview-table thead th{width:195px;position:sticky;top:0;z-index:4;background:#fff;padding:12px 0;box-shadow:0 2px 0 #e3e5e2}
+.overview-table thead th:first-child{z-index:5}
+.overview-table th:first-child{width:170px;padding-left:16px}
+.overview-table thead strong{font-size:14px}
+.overview-table thead span{font-size:12px}
+.overview-table td,.overview-cell{height:134px}
+.overview-cell{border-radius:7px}
+.overview-media-status{font-size:12px}
+.overview-kind{font-size:10px}
+.task-overview>figcaption{padding:12px 18px;font-size:12px}
+.research-lead{border-top:1px solid var(--line)}
+.research-lead-heading{gap:13px;margin-bottom:26px}
+.research-lead-heading>p:last-child{font-size:18px;line-height:1.65;max-width:77ch}
+.insight-grid{gap:16px}
+.insight-card{padding:24px;background:#f8faf7;border-radius:12px}
+.insight-card h3{font-size:22px;line-height:1.3;min-height:2.6em}
+.insight-card p{font-size:15px;line-height:1.7}
+.insight-pair{margin-block:23px;gap:24px}
+.insight-pair strong{font-size:32px}
+.insight-pair span{font-size:13px}
+.insight-label,.insight-link{font-size:13px}
+.results-section{border-top:1px solid var(--line)}
+.comparison-intro{max-width:86ch;font-size:17px}
+.findings-section{background:#f6f8f5;border-block:1px solid #e4e9e2}
+.domain-panel figure{background:#fff;border-radius:14px;overflow:hidden}
+.completion-section{padding-bottom:56px}
+.completion-card{padding:24px;border-radius:14px}
+.completion-section .section-deck{font-size:17px;margin-bottom:25px}
+.completion-card h3{font-size:24px}
+.completion-reading p{font-size:15px;line-height:1.7}
+.completion-evidence{margin-top:20px}
+.completion-media figcaption{font-size:12px}
+.recording-caption{font-size:14px;color:var(--muted);margin:12px 0}
+.recording-facts{display:flex;gap:28px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+.recording-facts strong{display:block;color:var(--ink);font-size:22px;margin-bottom:5px}
+.recording-original{padding-top:18px;margin-top:16px;border-top:1px solid var(--line)}
+.recording-original p{font-size:15px;line-height:1.7;margin-top:12px}
+.arena-section{border-top:1px solid var(--line)}
+.research-summary{padding-block:32px 60px;border-top:1px solid var(--line)}
+.research-summary>p{max-width:88ch;font-size:16px}
+.research-summary-grid{margin-top:24px}
+.research-summary-grid article{border:0;background:#f6f8f5;padding:24px;border-radius:10px}
+.research-summary-grid h3{font-size:20px}
+.research-summary-grid p{font-size:15px}
+.latest-case-section{border-top:1px solid var(--line)}
+.evaluation-section{background:#f8faf7;padding:36px;border-radius:14px;margin-bottom:48px}
+.evaluation-grid p{font-size:15px;line-height:1.75}
+.gallery-run-kind:empty{display:none}
+.atlas-record-card{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:24px;background:#f2f5ef;color:#536955;font-size:14px}
+.atlas-record-card strong{font-size:23px;color:var(--ink);font-weight:550}
+@media(min-width:1500px){.hero-stage .hero{padding-top:66px;padding-bottom:88px}.hero-stage .hero h1{font-size:66px}.hero-scene{inset:-80px -50px}}
+@media(max-width:1000px){.hero-stage .hero h1{font-size:clamp(35px,5.6vw,55px)}.hero-stage .hero{padding-top:40px}.hero-wall{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr))}.hero-scene::after{background:radial-gradient(ellipse at 50% 45%,rgba(250,252,249,.99),rgba(250,252,249,.91) 45%,rgba(250,252,249,.4) 100%)}.insight-card{padding:20px}.insight-card h3{font-size:20px}.insight-pair{gap:14px}.insight-pair strong{font-size:28px}}
+@media(max-width:760px){.hero-stage .hero{padding:35px 16px 65px}.hero-stage .hero h1{font-size:clamp(32px,7.2vw,47px);max-width:620px;line-height:1.16}.hero-stage .hero h1 em{white-space:normal}.hero-stage .hero-wordmark{font-size:25px}.hero-stage .subtitle{font-size:16px;margin-top:18px}.hero-stage .research-subtitle{font-size:14px;margin:16px 0 20px}.hero-stage .authors{font-size:13px;gap:7px 12px}.hero-stage .affiliations{font-size:11px;gap:5px 12px}.hero-stage .actions{gap:8px;margin-top:24px}.hero-stage .actions .button{padding:10px 14px;font-size:13px}.hero-stage .actions svg,.hero-stage .actions img{width:18px;height:18px}.hero-wall{gap:10px}.hero-scene{inset:-25px -50px}.hero-wall video{opacity:.9}.reading-nav{gap:12px 22px;padding:15px 20px;font-size:12px}.reading-nav a:last-child{display:none}.section,.research-lead{padding-block:42px}.cases-section{padding-top:30px}.cases-section .section-heading{align-items:start;flex-wrap:wrap;gap:10px}.case-intro{font-size:14px;max-width:36ch}.overview-scroll{max-height:480px;overscroll-behavior-y:auto}.overview-table{width:2120px;min-width:2120px}.overview-table th:first-child{width:128px;padding-left:10px;font-size:12px}.overview-table td,.overview-cell{height:126px}.overview-toolbar p{font-size:12px}.overview-toolbar{padding:12px}.overview-nav .overview-motion{font-size:11px}.research-lead-heading>p:last-child{font-size:16px}.insight-grid{grid-template-columns:1fr;gap:12px}.insight-card h3{min-height:0;font-size:22px}.insight-card{padding:22px}.insight-pair{margin:16px 0;gap:32px}.insight-pair strong{font-size:30px}.insight-card p{margin-bottom:14px}.comparison-intro{font-size:16px}.evaluation-section{padding:24px;margin-bottom:32px}.completion-card{padding:20px}.completion-card h3{font-size:22px}.recording-facts{gap:18px}.recording-facts strong{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.hero-wall{transform:none;filter:blur(3px)}.hero-wall video{filter:saturate(.7)}}

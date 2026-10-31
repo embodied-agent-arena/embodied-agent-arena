@@ -19,10 +19,10 @@
   let selectedModel = 0;
   let loadPromise;
   const load = () => loadPromise ||= Promise.all([
-    fetch('data/case-studies.json?v=english-20261022').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
-    fetch('data/case-gallery.json?v=final-errors-20261023').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
-    fetch('data/case-comparisons.json?v=final-errors-20261023').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();}),
-    fetch('data/report/case-execution-health.json?v=final-errors-20261023').then(r => {if (!r.ok) throw new Error('Execution audit could not be loaded.'); return r.json();})
+    fetch('data/case-studies.json?v=toolbox-20261031').then(r => {if (!r.ok) throw new Error('Case data could not be loaded.'); return r.json();}),
+    fetch('data/case-gallery.json?v=toolbox-20261031').then(r => {if (!r.ok) throw new Error('Comparison metadata could not be loaded.'); return r.json();}),
+    fetch('data/case-comparisons.json?v=toolbox-20261031').then(r => {if (!r.ok) throw new Error('Model recordings could not be loaded.'); return r.json();}),
+    fetch('data/report/case-execution-health.json?v=toolbox-20261031').then(r => {if (!r.ok) throw new Error('Execution audit could not be loaded.'); return r.json();})
   ]).then(([cases, meta, media, health]) => {
     for(const [id,issue] of Object.entries(health.runs)) {
       const run=media.runs[id];
@@ -112,13 +112,14 @@
     return rows;
   }
   const outcomeText = r => r.executionStarted===false ? 'Failed before execution' : r.demoOnly ? 'Demo · Not evaluated' : r.outcome === 'conflicting_records' ? 'Unresolved outcome' : r.outcome === 'scored' ? 'Continuous reward' : r.success ? 'Completed' : ({budget_exhausted:'Budget reached',timeout:'Timed out',runtime_failure:'Runtime error',task_failure:'Not completed',agent_failure:'Agent error',max_iterations:'Round limit reached'}[r.outcome] || 'Not completed');
-  const isScenePreview = r => !!(r && r.mediaKind!=='Animated execution log' && (r.video||r.animation));
-  const previewOf = r => isScenePreview(r) ? r : isScenePreview(r.demoMedia) ? {...r,...r.demoMedia} : r;
-  const hasPreview = r => isScenePreview(r) || isScenePreview(r.demoMedia);
+  const isScenePreview = r => !!(r && r.previewPolicy!=='records-only' && r.mediaKind!=='Animated execution log' && (r.video||r.animation));
+  const previewOf = r => r.updatedRecording ? {...r,...r.updatedRecording} : isScenePreview(r) ? r : isScenePreview(r.demoMedia) ? {...r,...r.demoMedia} : r;
+  const hasPreview = r => isScenePreview(r.updatedRecording) || isScenePreview(r) || isScenePreview(r.demoMedia);
   const hasApiError = r => r.executionReview?.reason==='api_failure' || r.auditStatus==='provider_interruption';
-  const displayOutcome = r => hasApiError(r) ? 'API error' : r.auditStatus==='task_failure_after_agent_stop' ? 'Not completed' : outcomeText(r);
+  const displayOutcome = r => r.updatedRecording ? outcomeText({...r,...r.updatedRecording}) : hasApiError(r) ? 'API error' : r.auditStatus==='task_failure_after_agent_stop' ? 'Not completed' : outcomeText(r);
   const mediaLabel = r => /Saved observation/.test(r.mediaKind||'') ? 'Observed frames' : r.mediaKind||'Recording';
   function sceneMedia(c,r) {
+    if(c.previewPolicy==='records-only') return `<span class="gallery-result-preview"><span class="gallery-scene-only">Execution record</span><span class="gallery-result-facts">${r?.modelRounds!=null?`<span><strong>${num(r.modelRounds,0)}</strong>rounds</span>`:''}${r?.elapsedSeconds!=null?`<span><strong>${num(r.elapsedSeconds/60,1)}</strong>minutes</span>`:''}</span></span>`;
     const scene=c.sceneContext;
     if(scene?.kind==='action_log') return `<span class="gallery-result-preview"><span class="gallery-scene-only">Text-based task</span><span class="gallery-result-facts">${r?.modelRounds!=null?`<span><strong>${num(r.modelRounds,0)}</strong>rounds</span>`:''}${r?.elapsedSeconds!=null?`<span><strong>${num(r.elapsedSeconds/60,1)}</strong>minutes</span>`:''}</span></span>`;
     if(!scene || scene.taskId!==c.taskId || !scene.image) return '<span class="gallery-no-recording">Execution record ↗</span>';
@@ -131,7 +132,7 @@
     if (r.animation) return `<img src="${esc(detail ? r.animation : r.poster)}" ${detail ? '' : `data-animation="${esc(r.animation)}" data-poster="${esc(r.poster)}"`} alt="${esc(r.model)}: ${esc(r.mediaKind)}" loading="lazy">`;
     return '<span class="gallery-no-recording">No matching recording</span>';
   }
-  const cameraBadge = r => r.cameraView==='external' ? '<span class="gallery-camera-label">External camera</span>' : '';
+  const cameraBadge = r => !r.updatedRecording && r.cameraView==='external' ? '<span class="gallery-camera-label">External camera</span>' : '';
   function runTile(c,r,i) {
     const hasMedia=hasPreview(r);
     const logPreview=sceneMedia(c,r);
@@ -192,10 +193,16 @@
       selection.innerHTML = `<h3>${esc(p.model)}</h3><div class="gallery-detail-comparison"><div>${isOverlay(c) ? overlay(c,p,index,true) : inputMedia(c,true)}</div><div><p class="gallery-detail-metric ${s.state}"><strong>${esc(s.value)}</strong>${esc(s.label)}</p>${polygon ? '<p>Green: reference region. Colored contour: predicted polygon.</p>' : ''}<details ${polygon?'':'open'}><summary>${polygon?'Polygon coordinates':'Recorded Answer'}</summary><pre>${esc(JSON.stringify(p.answer,null,2))}</pre>${c.reference != null ? `<h4>Reference</h4><pre>${esc(JSON.stringify(c.reference,null,2))}</pre>` : ''}</details></div></div>${!polygon && Object.keys(p.metrics || {}).length ? `<h3>Case Metrics</h3><div class="study-table-wrap"><table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>${Object.entries(p.metrics).map(([key,value]) => `<tr><td>${esc(key)}</td><td>${esc(compact(value))}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     } else {
       selection.querySelectorAll('video').forEach(v=>v.pause());
-      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${p.demoMedia?"Original evaluation · ":""}${esc(displayOutcome(p))}</span></div>${hasPreview(p)?`<div class="gallery-detail-film">${p.demoMedia?'<span class="gallery-demo-badge">Same-task demo · Not scored</span>':''}${runMedia(p,true)}${cameraBadge(p)}</div>${p.observationPreview?`<p class="gallery-camera-note"><a href="${esc(p.observationPreview.image)}" target="_blank" rel="noopener">View the robot’s recorded observation · Round ${num(p.observationPreview.round,0)} ↗</a></p>`:''}${previewOf(p).mediaNote?`<details class="study-media-note"><summary>${esc(previewOf(p).mediaKind)}</summary><p>${esc(previewOf(p).mediaNote)}</p></details>`:""}`:`<div class="gallery-detail-film gallery-context-film">${sceneMedia(c,p)}</div><p class="study-media-note">${c.sceneContext?.kind==='action_log'?'This text-based task is represented by its recorded results and decisions.':`Task scene from ${esc(c.sceneContext?.model)}. This model's result and log are shown below; no execution recording was supplied.`}</p>`}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
+      if (p.updatedRecording) {
+        const u=p.updatedRecording;
+        selection.innerHTML=`<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${esc(displayOutcome(p))}</span></div><div class="gallery-detail-film">${runMedia(p,true)}</div><p class="recording-caption">Updated recording · 24 October · Robot head camera</p><div class="recording-facts"><span><strong>${num(u.playbackSeconds,1)} s</strong> playback</span><span><strong>${num(u.elapsedSeconds/60,1)} min</strong> episode time</span><span><strong>${num(u.frameCount,0)}</strong> recorded frames</span></div><p class="study-media-note">${esc(u.mediaNote)} <a href="${esc(u.provenance)}">Recording details ↗</a></p><details class="recording-original"><summary>Original evaluation record</summary><p>${esc(outcomeText({...p,updatedRecording:null}))} · ${num(p.modelRounds,0)} rounds · ${num(p.elapsedSeconds/60,1)} min${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p><p>The paper’s scores and execution analysis use this earlier episode.</p><a href="${esc(p.detailUrl)}" download>Download original execution record ↓</a></details>`;
+        return;
+      }
+
+      selection.innerHTML = `<div class="gallery-detail-run-heading"><h3>${esc(p.model)}</h3><span class="study-outcome">${p.demoMedia?"Original evaluation · ":""}${esc(displayOutcome(p))}</span></div>${hasPreview(p)?`<div class="gallery-detail-film">${p.demoMedia?'<span class="gallery-demo-badge">Same-task demo · Not scored</span>':''}${runMedia(p,true)}${cameraBadge(p)}</div>${p.observationPreview?`<p class="gallery-camera-note"><a href="${esc(p.observationPreview.image)}" target="_blank" rel="noopener">View the robot’s recorded observation · Round ${num(p.observationPreview.round,0)} ↗</a></p>`:''}${previewOf(p).mediaNote?`<details class="study-media-note"><summary>${esc(previewOf(p).mediaKind)}</summary><p>${esc(previewOf(p).mediaNote)}</p></details>`:""}`:`<div class="gallery-detail-film gallery-context-film">${sceneMedia(c,p)}</div><p class="study-media-note">${c.previewPolicy==='records-only'?`Results and decisions are available below.${p.video?` <a href="${esc(p.video)}" download>Download original recording ↓</a>`:''} The archived footage has rendering noise.`:c.sceneContext?.kind==='action_log'?'This text-based task is represented by its recorded results and decisions.':`Task scene from ${esc(c.sceneContext?.model)}. This model's result and log are shown below; no execution recording was supplied.`}</p>`}<p class="study-meta">${num(p.modelRounds,0)} decision rounds · ${num(p.elapsedSeconds,1)} s elapsed${p.tokens==null?'':` · ${num(p.tokens,0)} tokens`}</p>${p.note?`<p>${esc(p.note)}</p>`:''}<div class="gallery-rounds" role="status">Loading recorded rounds…</div><details><summary>Task Identity &amp; Settings</summary><p><code>${esc(c.taskId)}</code></p><p>${esc(p.protocol)}</p>${runBudget(p)}<p>Report SHA-256: <code>${esc(p.sourceReportSha256)}</code></p><a href="${esc(p.detailUrl)}" download>Download execution record ↓</a></details>`;
       const rounds=selection.querySelector('.gallery-rounds');
       try {
-        const response=await fetch(p.detailUrl+'?v=final-errors-20261023');if(!response.ok)throw Error();const d=await response.json();
+        const response=await fetch(p.detailUrl+'?v=toolbox-20261031');if(!response.ok)throw Error();const d=await response.json();
         if(!rounds.isConnected)return;
         // API interruptions count as final failed attempts, including those after
         // useful actions. A budget stop or generated-code error is not an API failure.
@@ -302,7 +309,7 @@
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   let observer;
   // Cover every supplied benchmark/subset; retain paper cases and contrasting tasks.
-  const showcaseIds = ["showcase-calvin", "W1-w1_vlm_motion_real-01", "W2-w2_mindcube-01", "W5-w5_umd-03", "showcase-alfworld_visual", "W4-calvin-03", "showcase-robocasa", "W1-w1_tracespatial_3d-01", "W2-w2_3dsrbench-01", "W5-w5_ragnet-02", "showcase-discoveryworld", "showcase-capx_libero_pro", "W1-w1_influx-01", "W2-w2_bop_ask-01", "W5-w5_reasonaff-03", "showcase-alfred_official_visual", "W1-w1_mapfree-01", "W2-w2_mmsi_bench-01", "W5-w5_umd-01", "showcase-capx_behavior1k", "W1-w1_multispa-01", "W2-w2_robospatial-01", "showcase-humanclaw", "showcase-capx_robosuite", "W1-w1_multispa-02", "W2-w2_vsi_bench-01", "showcase-scienceworld_text", "showcase-cliport", "W1-w1_tracespatial_2d-01", "W2-w2_vsi_bench-02", "showcase-virtualhome_symbolic", "showcase-maniskill", "W1-w1_vlm_depth-01", "showcase-rlbench", "W1-w1_vlm_focal-01", "W1-w1_vlm_intrinsics-01", "W1-w1_vlm_motion_camera-01", "showcase-robocasa365", "W1-w1_vlm_motion_camera_large-01", "showcase-robotwin2", "W1-w1_vlm_motion_fixed-01", "showcase-robowits", "W1-w1_vlm_pose-01", "showcase-vimabench", "W1-w1_vlm_reference-01", "showcase-vlabench", "W1-w1_vlm_reference-03", "W1-w1_vlm_size-01", "W4-calvin-01", "W4-capx_behavior1k-02"];
+  const showcaseIds = ["showcase-capx_behavior1k", "showcase-calvin", "W1-w1_vlm_motion_real-01", "W2-w2_mindcube-01", "W5-w5_umd-03", "showcase-alfworld_visual", "W4-calvin-03", "showcase-robocasa", "W1-w1_tracespatial_3d-01", "W2-w2_3dsrbench-01", "W5-w5_ragnet-02", "showcase-discoveryworld", "showcase-capx_libero_pro", "W1-w1_influx-01", "W2-w2_bop_ask-01", "W5-w5_reasonaff-03", "showcase-alfred_official_visual", "W1-w1_mapfree-01", "W2-w2_mmsi_bench-01", "W5-w5_umd-01", "W1-w1_multispa-01", "W2-w2_robospatial-01", "showcase-humanclaw", "showcase-capx_robosuite", "W1-w1_multispa-02", "W2-w2_vsi_bench-01", "showcase-scienceworld_text", "showcase-cliport", "W1-w1_tracespatial_2d-01", "W2-w2_vsi_bench-02", "showcase-virtualhome_symbolic", "showcase-maniskill", "W1-w1_vlm_depth-01", "showcase-rlbench", "W1-w1_vlm_focal-01", "W1-w1_vlm_intrinsics-01", "W1-w1_vlm_motion_camera-01", "showcase-robocasa365", "W1-w1_vlm_motion_camera_large-01", "showcase-robotwin2", "W1-w1_vlm_motion_fixed-01", "showcase-robowits", "W1-w1_vlm_pose-01", "showcase-vimabench", "W1-w1_vlm_reference-01", "showcase-vlabench", "W1-w1_vlm_reference-03", "W1-w1_vlm_size-01", "W4-calvin-01", "W4-capx_behavior1k-02"];
   const showcase = new Set(showcaseIds);
   const aliases=c=>showcaseIds.filter(id=>id===c.id||records?.get(id)?.id===c.id); const priority=c=>Math.min(200,...aliases(c).map(id=>showcaseIds.indexOf(id)));
   function hydrate(index) {

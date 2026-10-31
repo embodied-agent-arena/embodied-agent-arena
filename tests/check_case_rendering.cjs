@@ -23,7 +23,11 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,execu
    assert(!html.includes('>Action log<'),`${c.id}: a log animation is not execution footage`);
    for(const [i,r] of context.checks.executionRecords(c).entries()){
     const tile=context.checks.runTile(c,r,i);
-    if(r.mediaKind==='Animated execution log'){
+    if(r.previewPolicy==='records-only'){
+     assert(!context.checks.hasPreview(r));
+     assert(!tile.includes('<video'));
+     assert(tile.includes('Execution record'));
+    }else if(r.mediaKind==='Animated execution log'){
      assert(!context.checks.hasPreview(r));
      assert(!tile.includes(r.animation));
      assert(tile.includes(c.sceneContext.kind==='scene'?'Scene only':'Text-based task'));
@@ -36,8 +40,17 @@ vm.runInContext(source+'globalThis.checks={load,caseSlide,taskInstructions,execu
  const original=JSON.parse(fs.readFileSync(pub+'/data/case-studies.json'));
  const toolbox=cs.find(c=>c.id==='showcase-capx_behavior1k');
  const toolboxHTML=context.checks.caseSlide(toolbox,0,cs.length);
- assert.equal((toolboxHTML.match(/class="gallery-camera-label"/g)||[]).length,2);
- assert(toolboxHTML.includes('Same task and seed.'));
+ assert.equal((toolboxHTML.match(/class="gallery-camera-label"/g)||[]).length,0);
+ assert(toolboxHTML.includes('Updated recordings · 24 October · Robot head camera'));
+ for(const r of context.checks.executionRecords(toolbox)){
+  const updated=r.updatedRecording;
+  assert.equal(updated.taskId,r.taskId);
+  assert.equal(updated.modelKey,r.modelKey);
+  assert.equal(updated.countInEvaluation,false);
+  assert(toolboxHTML.includes(updated.video));
+  assert(!toolboxHTML.includes(r.video));
+ }
+ assert(context.checks.executionRecords(toolbox).every(r=>r.taskId===toolbox.taskId));
  const calvin=context.checks.lookup('task-video-720f338150');
  const ds=context.checks.executionRecords(calvin).find(r=>r.modelKey==='deepseek');
  const dsTile=context.checks.runTile(calvin,ds,8);

@@ -16,6 +16,7 @@ SHORT_NAMES = ["GPT-6 Astra", "GPT-6 Sol", "Fable 5.1", "Gemini 3.8 Flash",
                "Qwen Max", "Qwen 397B", "Qwen 27B", "Opus 5.5", "DeepSeek-1017", "Gemini 4 Argon"]
 # Fixed native tasks; the choice is explicit and independent of model order.
 COLUMNS = [
+    ("showcase-capx_behavior1k", "BEHAVIOR-1K", "Pack the toolbox"),
     ("showcase-alfred_official_visual", "ALFRED", "Clean the soap"),
     ("showcase-alfworld_visual", "ALFWorld", "Clean & place soap"),
     ("showcase-discoveryworld", "DiscoveryWorld", "Date the artifact"),
@@ -26,7 +27,6 @@ COLUMNS = [
     ("task-video-cefac4d024", "CLIPort", "Pack matching objects"),
     ("showcase-robocasa", "RoboCasa", "Open the left drawer"),
     ("showcase-robocasa365", "RoboCasa365", "Clear the cutting board"),
-    ("showcase-capx_behavior1k", "BEHAVIOR-1K", "Pack the toolbox"),
 ]
 OUTCOMES = {
     "success": "Completed",
@@ -71,7 +71,14 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
             preview_video = video or (demo["video"] if demo else None)
             preview = media or preview_video
             poster = r["poster"] if media else demo["poster"] if demo else None
-            kind = "Same-task demo" if demo else r["mediaKind"]
+            updated = r.get("updatedRecording")
+            if updated:
+                assert updated["taskId"] == r["taskId"] and updated["modelKey"] == model
+                assert updated["countInEvaluation"] is False
+                preview_video = updated["video"]
+                preview = preview_video
+                poster = updated["poster"]
+            kind = "Updated recording" if updated else "Same-task demo" if demo else r["mediaKind"]
             review = api_interruption(detail)
             if not preview:
                 assert g.get('sceneContext', {}).get('image'), f"Missing task scene for {r['id']}"
@@ -82,6 +89,8 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
                 assert r["sourceReportSha256"] == r["mediaReportSha256"]
                 assert (PUB / media).is_file() and (PUB / r["poster"]).is_file()
             status = "API error" if review else "Not completed" if r.get("auditStatus") == "task_failure_after_agent_stop" else OUTCOMES.get(r["outcome"], "Not completed")
+            preview_status = OUTCOMES.get(updated['outcome'], 'Not completed') if updated else status
+            preview_note = 'Updated 24 October recording; original evaluation available separately' if updated else 'API-interrupted attempt; counted as unsuccessful; inspect error details' if review else 'View same-task demo; inspect original evaluation separately' if demo else 'Play recording and inspect execution' if media else 'Shared task scene; inspect execution record'
             cid = f"arena-{row+1}-{col+1}"
             cell = {
                 "id": cid, "row": row + 1, "column": col + 1, "groupId": gid,
@@ -89,7 +98,7 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
                 "display_instruction": g["question"], "taskId": r["taskId"],
                 "identitySha256": r["identitySha256"], "recordId": r["recordId"],
                 "reportSha256": r["sourceReportSha256"], "detailUrl": r["detailUrl"],
-                "outcome": r["outcome"], "status": status, "sourceVideo": video,
+                "outcome": r["outcome"], "status": status, "previewStatus": preview_status, "updatedRecording": updated, "sourceVideo": video,
                 "sourceAnimation": animation, "poster": poster, "demoMedia": demo, "previewVideo": preview_video,
                 "mediaKind": r["mediaKind"],
                 "executionReview": review,
@@ -102,8 +111,8 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
             attrs = (f'class="overview-cell {"has-media" if preview else "log-only"}" '
                      f'data-case="{h(gid)}" data-model="{row}" data-scene="{cid}" '
                      f'data-record="{h(r["recordId"])}" aria-describedby="scene-tooltip" '
-                     f'aria-label="{h(r["model"])} · {h(benchmark)} · {h(title)}: {status}. '
-                     f'{"API-interrupted attempt; counted as unsuccessful; inspect error details" if review else "View same-task demo; inspect original evaluation separately" if demo else "Play recording and inspect execution" if media else "Shared task scene; inspect execution record"}"')
+                     f'aria-label="{h(r["model"])} · {h(benchmark)} · {h(title)}: {preview_status}. '
+                     f'{preview_note}"')
             if preview_video:
                 visual = (f'<video muted loop playsinline preload="none" '
                           f'poster="{h(poster)}" data-preview-src="{h(preview_video)}" '
@@ -120,10 +129,12 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
                           '<span class="overview-context-label">Scene only</span>'
                           f'<span class="overview-media-status">{status} ↗</span>')
             if preview:
-                badge = "Demo · Not scored" if demo else status
+                badge = OUTCOMES.get(updated["outcome"], "Not completed") if updated else "Demo · Not scored" if demo else status
+                if updated:
+                    visual += '<span class="overview-kind">24 Oct recording</span>'
                 if demo or kind == "Saved observations":
                     visual += f'<span class="overview-kind">{"Same-task demo" if demo else "Observed frames"}</span>'
-                if r.get("cameraView") == "external":
+                if not updated and r.get("cameraView") == "external":
                     visual += '<span class="overview-kind">External camera</span>'
                 visual += f'<span class="overview-media-status">{badge} ↗</span>'
             rendered.append(f'<td><button type="button" {attrs}>{visual}</button></td>')
@@ -148,7 +159,8 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
         '<figcaption><details><summary>Recording Coverage</summary>Each column uses one fixed task. '
         'Scene only shows the shared task context when a model has no execution footage. '
         'API-interrupted attempts are marked API error and counted as unsuccessful; runtime errors and budget stops retain their outcomes. '
-        'Demos do not change scores. <a href="data/report/case-api-errors.csv" download>Download error inventory ↓</a></details></figcaption>\n'
+        'Toolbox clips show updated 24 October recordings, with their own outcomes; original scored records remain available in the details. '
+        'Demos and updated recordings do not change scores. <a href="data/report/case-api-errors.csv" download>Download error inventory ↓</a></details></figcaption>\n'
         '</figure>\n<!-- END EXACT_TASK_OVERVIEW -->'
     )
     index = PUB / "index.html"
@@ -165,10 +177,11 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
     if overview_output:
         overview_output.parent.mkdir(parents=True, exist_ok=True)
         overview_output.write_text(block)
-    manifest = {"updated": "2026-10-23", "rowOrder": MODELS, "columns": columns,
+    manifest = {"updated": "2026-10-31", "rowOrder": MODELS, "columns": columns,
                 "tiles": cells, "taskCount": len(columns), "recordCount": len(cells),
                 "recordingCount": sum(bool(c["mediaSha256"]) for c in cells),
                 "demoCount": sum(bool(c.get("demoMedia")) for c in cells),
+                "updatedRecordingCount": sum(bool(c.get("updatedRecording")) for c in cells),
                 "apiErrorCount": sum(bool(c.get("executionReview")) for c in cells),
                 "rerunCount": 0, "pendingRerunCount": 0, "errorPolicy": POLICY,
                 "source": "data/case-comparisons.json",
@@ -189,7 +202,7 @@ def build(*, skip_index=False, skip_docs=False, overview_output=None):
         model_name = h(data['models'][i]).replace('-', '&#8209;').replace(' ', '&nbsp;')
         doc.append(f"{i+1}. **{model_name}** — {n} scene previews; {len(columns)} task results.")
     doc += ["", "The [task and media manifest](../public/data/report/overview-provenance.json) records each task ID, native identity hash, model, report digest and matching media digest. The [case index](../public/data/case-comparisons.json) supplies all ten-model comparisons.", ""]
-    doc += ["The toolbox task uses the same configuration, seed and scene revision for all ten models. Eight previews use the robot head camera; DeepSeek-1017 and Gemini 4 Argon use a separate external recording camera, labeled in the page. [Camera and task audit](../public/data/toolbox-camera-audit.json).", ""]
+    doc += ["Toolbox previews now show ten head-camera recordings from the 24 October release. These separate runs retain their own outcomes and timestamps; the paper’s scored episodes and logs remain unchanged. [Recording provenance](../public/data/toolbox-recording-refresh.json).", ""]
     if not skip_docs:
         (ROOT / "docs/RECORDED_TASKS.md").write_text("\n".join(doc))
     app = PUB / "app.js"

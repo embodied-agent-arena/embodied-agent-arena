@@ -54,9 +54,14 @@ class PublicResourceTests(unittest.TestCase):
                     self.assertIn(card['record'], group['runIds'])
                     run = comp['runs'][card['record']]
                     self.assertEqual(run['identitySha256'], group['identitySha256'])
-                    self.assertEqual(card['image'], run['poster'])
-                    if run.get('video'):
-                        self.assertEqual(card['video'], run['video'])
+                    display = run.get('updatedRecording', run)
+                    self.assertEqual(display['taskId'], run['taskId'])
+                    self.assertEqual(display['modelKey'], run['modelKey'])
+                    if 'updatedRecording' in run:
+                        self.assertFalse(display['countInEvaluation'])
+                    self.assertEqual(card['image'], display['poster'])
+                    if display.get('video'):
+                        self.assertEqual(card['video'], display['video'])
                         self.assertTrue(card['muted'])
                     self.assertEqual(run['sourceReportSha256'], run['mediaReportSha256'])
 

@@ -157,9 +157,11 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn('62', text)
         self.assertIn('55.5%', text)
 
-    def test_homepage_exposes_research_before_case_browser(self):
+    def test_homepage_leads_with_cases_then_results_and_retains_research(self):
         source = (PUBLIC / 'index.html').read_text()
-        self.assertLess(source.index('id="research-summary"'), source.index('id="cases"'))
+        order = ['cases', 'takeaways', 'results', 'findings', 'completion', 'execution-analysis', 'technical-report', 'arena', 'research-summary', 'latest-cases', 'evaluation-details', 'citation']
+        positions = [source.index('id="' + section + '"') for section in order]
+        self.assertEqual(positions, sorted(positions))
         for link in ('geoprobe.html', 'findings.html', 'research-topics.html', 'citation.bib', 'citation.csl.json'):
             self.assertIn(link, Page(PUBLIC / 'index.html').links)
 
