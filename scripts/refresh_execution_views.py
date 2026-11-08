@@ -35,6 +35,12 @@ with (D/'missing-original-media.csv').open('w',newline='') as f:
 
 # Crawlable companion: the same ten choices and evidence links as the explorer.
 p=U/'execution-guide.html';old=p.read_text();head=old[:old.index('<body>')]
+# Retain the authored, non-nested introduction while regenerating task tables.
+intro_match = re.search(r'<section id="reading-execution">.*?</section>', old, re.S)
+updated_match = re.search(r'<p>Guide updated <time\b.*?</p>', old, re.S)
+intro = ''
+if intro_match:
+    intro = (updated_match.group(0) + '\n' if updated_match else '') + intro_match.group(0) + '\n'
 h=html.escape;index=indices['complete-index.json'];sections=[]
 fmt=lambda n:'—' if n is None else f'{n:,.1f}' if isinstance(n,float) else f'{n:,}'
 for s in index['stories']:
@@ -49,5 +55,5 @@ for s in index['stories']:
         scope = '<p><strong>Scope:</strong> This supplementary comparison uses RGB-expanded executions. These case records are not the adopted 100-episode CALVIN population used for the aggregate recovery counts. Consult the <a href="findings.html#execution-recovery">main-evaluation finding and settings</a> before comparing results.</p>'
     sections.append(f'<section id="{s["id"]}"><p class="eyebrow">{h(s["benchmark"])} · {h(s["domain"])}{scope_label}</p><h2>{h(s["title"])}</h2>{scope}<p><strong>Task:</strong> {h(s["instruction"])}</p><p>{h(s["takeaway"])}</p><p>{h(s["answer"])}</p><div class="guide-table"><table><thead><tr><th>Model</th><th>Outcome</th><th>Model calls</th><th>Time (s)</th><th>Tokens</th><th>Evidence</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div><p><a href="index.html?analysis={s["id"]}#execution-analysis">Watch and inspect this comparison →</a></p></section>')
 head=head.replace('compare nine VLM agents','compare ten VLM agents')
-p.write_text(head+f'<body><main class="wrap"><a href="index.html#execution-analysis">← Interactive Execution Explorer</a><h1>Inside the Execution</h1><p>{len(index["stories"])} tasks · {index["runCount"]} recorded episodes · 10 models. Each comparison uses the same task; settings and budgets remain attached to its execution record.</p>'+''.join(sections)+'<section><h2>Evidence and Timing</h2><p>Source hashes tie the recorded actions and feedback to each result. Video playback and episode wall time use separate clocks. Native calls, model responses and environment steps are distinct counters.</p><p><a href="data/execution/complete-episodes.csv">Download episode metrics</a> · <a href="data/argon-logs-audit.json">Gemini 4 Argon log verification</a></p></section></main></body></html>')
+p.write_text(head+f'<body><main class="wrap"><a href="index.html#execution-analysis">← Interactive Execution Explorer</a><h1>Inside the Execution</h1><p>{len(index["stories"])} tasks · {index["runCount"]} recorded episodes · 10 models. Each comparison uses the same task; settings and budgets remain attached to its execution record.</p>'+intro+''.join(sections)+'<section><h2>Evidence and Timing</h2><p>Source hashes tie the recorded actions and feedback to each result. Video playback and episode wall time use separate clocks. Native calls, model responses and environment steps are distinct counters.</p><p><a href="data/execution/complete-episodes.csv">Download episode metrics</a> · <a href="data/argon-logs-audit.json">Gemini 4 Argon log verification</a></p></section></main></body></html>')
 print(f'Refreshed {len(index["stories"])} exact-task groups and {index["runCount"]} episode records.')

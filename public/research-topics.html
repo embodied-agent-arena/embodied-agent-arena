@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Embodied AI Evaluation: Spatial Reasoning, Planning &amp; Reliability — Embodied Agent Arena</title>
-  <meta name="description" content="Research evidence for VLM spatial reasoning, geometric estimation, long-horizon robot tasks, error recovery, test-time compute, model complementarity, and benchmark composition.">
+  <title>Embodied AI Evaluation &amp; Research — Embodied Agent Arena</title>
+  <meta name="description" content="Evidence for embodied AI evaluation, robot agent harnesses, recursive self-improvement and robot in-context learning: geometry, task completion, recovery and resource accounting.">
   <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Embodied AI Evaluation: Spatial Reasoning, Planning &amp; Reliability">
-  <meta property="og:description" content="Eight research questions linked to measured results, source records, limitations, and the Embodied Agent Arena paper.">
+  <meta property="og:description" content="Eight measured research questions and their relevance to robot harnesses, recursive self-improvement, in-context learning and agentic robotics, with source records and limits.">
   <meta property="og:url" content="https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html">
   <meta property="og:image" content="https://embodied-agent-arena.github.io/embodied-agent-arena/assets/overview.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,9 +24,9 @@
     "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html",
     "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html",
     "name": "Embodied AI Evaluation: Spatial Reasoning, Planning & Reliability",
-    "description": "Eight research questions linked to measured results, source records, limitations, and the Embodied Agent Arena paper.",
+    "description": "Eight measured research questions and their relevance to robot harnesses, recursive self-improvement, in-context learning and agentic robotics, with source records and limits.",
     "inLanguage": "en",
-    "dateModified": "2026-10-29",
+    "dateModified": "2026-11-08",
     "citation": "https://arxiv.org/abs/2610.00854v3",
     "isPartOf": {"@type": "WebSite", "name": "Embodied Agent Arena", "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/"},
     "about": {"@type": "ScholarlyArticle", "@id": "https://doi.org/10.48550/arXiv.2610.00854", "name": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena", "url": "https://arxiv.org/abs/2610.00854v3"},
@@ -54,10 +54,10 @@
   <header class="research-header">
     <p class="eyebrow">Research questions &amp; evidence</p>
     <h1>Spatial Reasoning, Planning &amp; Reliability in Embodied AI</h1>
-    <p class="research-lead">Which measurements distinguish a capable vision-language model from an agent that completes a robot task? This guide connects eight research questions to evidence from Embodied Agent Arena.</p>
+    <p class="research-lead">Which measurements distinguish a capable vision-language model from an agent that completes a robot task? This guide connects eight research questions to evidence from Embodied Agent Arena, then explains its relevance to robot harnesses, recursive self-improvement, in-context learning and agentic robotics.</p>
     <p>Use these results in work on embodied evaluation, geometric understanding, grounded action, agent recovery, and inference efficiency. Each section identifies the measured population and its limits. This is a guide to one empirical study, rather than a survey of all methods in these fields.</p>
-    <p class="research-meta">Guide updated <time datetime="2026-10-29">29 October 2026</time> · Evidence: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated models · No new experimental runs</p>
-    <nav class="research-links" aria-label="Research topics"><a href="#embodied-evaluation">Benchmark design</a><a href="#geometric-estimation">VLM geometry</a><a href="#spatial-grounding">Spatial reasoning &amp; grounding</a><a href="#long-horizon-tasks">Long-horizon tasks</a><a href="#error-recovery">Error recovery</a><a href="#test-time-compute">Test-time compute</a><a href="#planning-complementarity">Model complementarity</a><a href="#benchmark-composition">Ranking sensitivity</a></nav>
+    <p class="research-meta">Guide updated <time datetime="2026-11-08">8 November 2026</time> · Evidence: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated models · No new experimental runs</p>
+    <nav class="research-links" aria-label="Research topics"><a href="#embodied-evaluation">Benchmark design</a><a href="#geometric-estimation">VLM geometry</a><a href="#spatial-grounding">Spatial reasoning &amp; grounding</a><a href="#long-horizon-tasks">Long-horizon tasks</a><a href="#error-recovery">Error recovery</a><a href="#test-time-compute">Test-time compute</a><a href="#planning-complementarity">Model complementarity</a><a href="#benchmark-composition">Ranking sensitivity</a><a href="#related-research">Related research directions</a></nav>
   </header>
 
   <section id="embodied-evaluation" aria-labelledby="evaluation-title">
@@ -122,6 +122,40 @@
     <p>A separate Planning sensitivity analysis removes the same 73 ScienceWorld and 21 VirtualHome tasks for every model. On the remaining 63 tasks, Astra succeeds on 42, Argon on 38, and Fable on 21; all ten models' rates decline. This checks the contribution of the sampled sources while retaining their original outcomes.</p>
     <p><strong>Scope and attribution.</strong> Cite Huang et al. (2026), Section 4.2. Report both the aggregation rule and the task mixture when comparing agents. Reweighting is not a new experiment or a causal comparison of model architectures, observation schedules, or budgets; source exclusion does not isolate the effect of text modality.</p>
     <div class="research-links"><a href="findings.html#benchmark-composition">Ranking sensitivity finding</a><a href="data/spatial-recovery/manipulation-sources.json">Source counts and successes</a><a href="data/report/planning-outcomes.json">Planning task-source records</a><a href="paper.pdf#page=7">Paper · main comparison</a><a href="#benchmark-composition">Link to this topic</a></div>
+  </section>
+
+  <section id="related-research" aria-labelledby="related-title">
+    <h2 id="related-title">How does this evidence inform robot harnesses, RSI, in-context learning and agentic robotics?</h2>
+    <p>Arena contributes a shared evaluation harness and empirical diagnostics. The connections below distinguish those measured results from questions a new method would need to test. They do not introduce new experiments or algorithms.</p>
+    <nav class="research-links" aria-label="Related research directions"><a href="#robot-harness">Robot harnesses</a><a href="#robot-rsi">Recursive self-improvement</a><a href="#robot-in-context-learning">Robot in-context learning</a><a href="#agentic-robotics">Agentic robotics</a></nav>
+
+    <section id="robot-harness" aria-labelledby="harness-title">
+      <h3 id="harness-title">What should a robot-agent evaluation harness preserve?</h3>
+      <p><strong>Disclose the interfaces, observations, persistent state, budgets and native task checks that surround a model.</strong> Arena’s harness leaves decisions to the agent while retaining source-native operations and helpers. Variables and environment state persist between code rounds; images produced during a round enter the next model request. The baseline adds no specialist perception or control modules beyond those interfaces. <a href="https://arxiv.org/html/2610.00854v3#S3">Paper §3</a> and <a href="https://arxiv.org/html/2610.00854v3#A2.SS1">Appendix B.1</a>.</p>
+      <p>For harness research, the useful comparison is verified completion alongside execution errors, feedback and the resource that ends an attempt. Native helpers and recorded batch settings remain part of the evaluated system; the study does not establish equal budgets across every batch or certify a hardware deployment stack. <a href="https://arxiv.org/abs/2605.00663">Affordance Agent Harness</a> is a separate related method on verification-gated skill orchestration.</p>
+      <div class="research-links"><a href="model-guide.html#harness-scope">Harness scope &amp; protocol</a><a href="findings.html#execution-recovery">Code repair versus completion</a><a href="execution-guide.html#reading-execution">Read execution evidence</a><a href="#robot-harness">Link to this research connection</a></div>
+    </section>
+
+    <section id="robot-rsi" aria-labelledby="rsi-title">
+      <h3 id="rsi-title">What should recursive self-improvement for robots establish beyond a successful retry?</h3>
+      <p><strong>A corrected response, executable code and a completed task are different outcomes.</strong> Arena records 100 CALVIN episodes: 65 contain execution errors, 62 of those 65 later execute code without an error, and only three subsequently complete all five goals. Its separate 46-case fixed-input review experiment records corrections alongside regressions. These findings identify checks for a proposed self-improvement mechanism; they are not an evaluation of recursive self-improvement (RSI). <a href="paper.pdf#page=13">Paper §4.4</a>.</p>
+      <p>Robot RSI concerns changes to the process that produces future improvements, as distinguished in <a href="https://arxiv.org/abs/2610.29677">Toward Recursive Self-Improvement in Physical AI</a>. Arena’s within-episode feedback does not establish persistent cross-task gains, weight updates or improved improvement procedures. A new RSI evaluation would additionally need retained system versions, independent held-out evaluation and comparable resource accounting; these are study-design requirements, not reported Arena results.</p>
+      <div class="research-links"><a href="findings.html#execution-recovery">Episode definitions &amp; outcomes</a><a href="findings.html#failure-token-cost">Token denominators &amp; limits</a><a href="#test-time-compute">Paired review evidence</a><a href="#robot-rsi">Link to this research connection</a></div>
+    </section>
+
+    <section id="robot-in-context-learning" aria-labelledby="icl-title">
+      <h3 id="icl-title">How can robot in-context learning separate interpretation from execution?</h3>
+      <p><strong>Evaluate the contextual requirement and the resulting task outcome separately.</strong> Robot in-context learning uses demonstrations or interaction to direct a model with deployment-time neural parameters held fixed; the <a href="https://arxiv.org/abs/2609.36012">robot ICL survey</a> discusses this mechanism. Arena contributes complementary diagnostic evidence: GeoProbe separates camera calibration, pose, displacement, depth and scale, while the interactive records assess source-native task completion. <a href="https://arxiv.org/html/2610.00854v3#A1.T2">Paper Table A2</a> and <a href="https://arxiv.org/html/2610.00854v3#A2.SS1">Appendix B.1</a>.</p>
+      <p>These measurements can help locate errors in a proposed context-conditioned system. Arena does not isolate demonstration count, demonstration selection or retained-memory transfer, and it does not establish an ICL improvement. Its CALVIN result—nine full five-goal completions among 100 retained episodes—concerns complete-task reliability under the recorded settings, not the causal effect of teaching or context.</p>
+      <div class="research-links"><a href="geoprobe.html#query-counts">Geometry task families &amp; counts</a><a href="geoprobe.html#metrics">Geometric scoring criteria</a><a href="findings.html#long-horizon-completion">Complete-sequence evidence</a><a href="#robot-in-context-learning">Link to this research connection</a></div>
+    </section>
+
+    <section id="agentic-robotics" aria-labelledby="agentic-title">
+      <h3 id="agentic-title">How should agentic robotics compare tool use, feedback and complete-task success?</h3>
+      <p><strong>Measure whether model-directed actions reach the required terminal state, as well as whether each operation executes.</strong> Arena compares ten VLM agents across five embodied domains, with source-native action interfaces and recorded outcomes. Among the same 157 Planning task identities, Astra succeeds on 126, Astra plus Argon retrospectively covers 137, and all ten models cover 142. These counts reveal complementary task coverage; they do not establish a deployed router or an equal-compute ensemble. <a href="paper.pdf#page=7">Paper §4.2</a>.</p>
+      <p>This evidence is relevant to the model, environment and harness components discussed in <a href="https://arxiv.org/abs/2610.20442">Towards Agentic Robots</a>. The execution records connect decisions, observed state changes, stopping reasons and native task checks. A successful simulation or source-native task remains bounded by its interface and evaluation setting; it is not a certification of real-robot reliability.</p>
+      <div class="research-links"><a href="findings.html#planning-complementarity">Coverage counts &amp; routing limits</a><a href="findings.html#long-horizon-completion">Verified long-horizon completion</a><a href="execution-guide.html#recovery">Matched recovery traces</a><a href="#agentic-robotics">Link to this research connection</a></div>
+    </section>
   </section>
 
   <section id="citation" aria-labelledby="citation-title">

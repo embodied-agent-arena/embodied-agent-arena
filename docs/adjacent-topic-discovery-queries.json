@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "created_date": "2026-11-08",
+  "query_group": "adjacent-topics-2026-11-08",
+  "purpose": "A separate non-brand query group for robot harnesses, robot recursive self-improvement (RSI), robot in-context learning and agentic robotics. Content publication and this query list imply no retrieval or citation observations.",
+  "terminology": {
+    "robot_rsi": "recursive self-improvement; confirmed by the user on 2026-11-08"
+  },
+  "relationship_to_existing_suite": {
+    "path": "docs/research-discovery-queries.json",
+    "existing_query_count": 12,
+    "policy": "Retain the original twelve queries, their text, rotation and baseline. Do not pool their results with this additional group."
+  },
+  "platforms": [
+    "Google Search",
+    "Bing Search",
+    "ChatGPT Search",
+    "Perplexity"
+  ],
+  "rotation": {
+    "timezone": "Asia/Shanghai",
+    "start_date": "2026-11-09",
+    "queries_per_daily_run": 1,
+    "cycle_length_days": 8,
+    "selection": "Use index = (Beijing calendar date - start_date).days modulo 8 in the queries array, starting with index 0 on 2026-11-09. Run that same row across accessible platforms in the established modes.",
+    "before_start_date": "Do not run scheduled checks for this group before start_date. Any separately requested baseline must retain its own timestamp and mode.",
+    "daily_deduplication": "At most one scheduled query row per Beijing calendar date. If the automation fires again that day, reuse that date’s saved record rather than submit the same prompts again.",
+    "unavailable_platforms": "Record unavailable checks as unverified. Do not substitute another query, backfill missed dates or retry to obtain a favorable result."
+  },
+  "rules": [
+    "Send only search_query to ordinary search and only ai_prompt to AI search. Never send either evaluation-only field, target URLs, expected conclusions or local planning notes.",
+    "Use a new conversation with explicit web-search mode for AI checks. Keep the exact original query text and mode fixed for later comparisons.",
+    "Save platform, mode, complete query, Beijing timestamp, result or answer URL, actual source URLs and genuine platform screenshots.",
+    "Distinguish target-page retrieval, project mention, actual citation of this research, actual citation of a target HTML page, and citation accuracy. A mention is not a citation.",
+    "An arXiv or official repository citation may count as research citation but not as an independent GeoProbe or findings HTML citation. Preserve meaningful source anchors.",
+    "Use yes/no/unverified/not_applicable. Inaccessible platforms or missing evidence are unverified, not evidence of zero citations or non-indexing.",
+    "Check v3, ten models, counts, units, denominators and applicable populations. Do not classify Arena as an RSI or ICL algorithm based on related-research wording.",
+    "Report only evidence-backed progress. Publishing a page or receiving an indexing-submission acknowledgement does not establish retrieval or AI citation.",
+    "Keep automation id google and its daily frequency. This group adds no new stopping requirement and does not relax the existing Google/Bing/independent-page citation conditions."
+  ],
+  "observation_fields": {
+    "query_group": "adjacent-topics-2026-11-08",
+    "query_id": "Exact id from this file",
+    "platform": "Actual product used; generic search is not an AI-product observation",
+    "mode": "Actual search or AI mode",
+    "query": "Complete submitted search_query or ai_prompt",
+    "checked_at_beijing": "ISO-8601 timestamp with +08:00 offset",
+    "target_page_url": "Canonical page being evaluated; use separate observations for GeoProbe and findings",
+    "target_page_retrievable": "yes/no/unverified/not_applicable",
+    "project_mentioned": "yes/no/unverified/not_applicable",
+    "answer_cites_research": "yes/no/unverified/not_applicable",
+    "answer_cites_target_html": "yes/no/unverified/not_applicable",
+    "citation_accuracy": "accurate/partially_accurate/inaccurate/unverified/not_applicable",
+    "result_or_answer_url": "Actual available result or answer link, or null with a reason",
+    "actual_source_urls": "Only source links truly supplied in that result/answer; never infer them from target URLs",
+    "screenshots": "Workspace paths to genuine platform captures showing the query and result/citation",
+    "comparison": "Previous matching platform/mode/query record, or new baseline",
+    "limitations": "Access, missing evidence or scope limitations"
+  },
+  "queries": [
+    {
+      "id": "en-robot-harness-1",
+      "language": "en",
+      "topic": "robot-harness",
+      "search_query": "How should robot agent harnesses preserve native interfaces, execution state and task verification when comparing vision-language models?",
+      "ai_prompt": "Search the web and answer: How should robot agent harnesses preserve native interfaces, execution state and task verification when comparing vision-language models? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#robot-harness",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#failure-token-cost",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#horizon"
+      ],
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-robot-rsi-1",
+      "language": "en",
+      "topic": "robot-rsi",
+      "search_query": "How should recursive self-improvement for robots be evaluated beyond successful code repair and repeated retries?",
+      "ai_prompt": "Search the web and answer: How should recursive self-improvement for robots be evaluated beyond successful code repair and repeated retries? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#robot-rsi",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#failure-token-cost",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#test-time-compute",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#metrics"
+      ],
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-robot-icl-1",
+      "language": "en",
+      "topic": "robot-in-context-learning",
+      "search_query": "How should in-context learning for robots evaluate geometric interpretation, demonstrated requirements and complete task execution separately?",
+      "ai_prompt": "Search the web and answer: How should in-context learning for robots evaluate geometric interpretation, demonstrated requirements and complete task execution separately? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#robot-in-context-learning",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#research-questions",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#query-counts",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#scope",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#long-horizon-completion",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol"
+      ],
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-agentic-robotics-1",
+      "language": "en",
+      "topic": "agentic-robotics",
+      "search_query": "How should agentic robotics evaluate tool use, error recovery and complete long-horizon task success?",
+      "ai_prompt": "Search the web and answer: How should agentic robotics evaluate tool use, error recovery and complete long-horizon task success? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#agentic-robotics",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#planning-complementarity",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#long-horizon-completion",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#goal",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#embodied-evaluation"
+      ],
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-robot-harness-2",
+      "language": "en",
+      "topic": "robot-harness",
+      "search_query": "What evidence separates robot harness code repair from actual task recovery under tool-call and token budgets?",
+      "ai_prompt": "Search the web and answer: What evidence separates robot harness code repair from actual task recovery under tool-call and token budgets? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#robot-harness",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#failure-token-cost",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#horizon"
+      ],
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-robot-rsi-2",
+      "language": "en",
+      "topic": "robot-rsi",
+      "search_query": "What benchmarks and controls distinguish persistent robot self-improvement from extra inference, feedback and execution recovery?",
+      "ai_prompt": "Search the web and answer: What benchmarks and controls distinguish persistent robot self-improvement from extra inference, feedback and execution recovery? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#robot-rsi",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#failure-token-cost",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#test-time-compute",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#metrics"
+      ],
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-robot-icl-2",
+      "language": "en",
+      "topic": "robot-in-context-learning",
+      "search_query": "What robot benchmarks can diagnose why a frozen vision-language agent follows part of an instruction but fails a long-horizon task?",
+      "ai_prompt": "Search the web and answer: What robot benchmarks can diagnose why a frozen vision-language agent follows part of an instruction but fails a long-horizon task? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#robot-in-context-learning",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#research-questions",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#query-counts",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#scope",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#long-horizon-completion",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/model-guide.html#protocol"
+      ],
+      "initial_observation": "not_checked"
+    },
+    {
+      "id": "en-agentic-robotics-2",
+      "language": "en",
+      "topic": "agentic-robotics",
+      "search_query": "Do different vision-language agents solve complementary robot planning tasks, and does that establish a practical routing gain?",
+      "ai_prompt": "Search the web and answer: Do different vision-language agents solve complementary robot planning tasks, and does that establish a practical routing gain? Cite the sources you actually use.",
+      "relevant_page_for_evaluation_only": "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#agentic-robotics",
+      "related_evidence_for_evaluation_only": [
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#planning-complementarity",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#long-horizon-completion",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html#execution-recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#recovery",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/execution-guide.html#goal",
+        "https://embodied-agent-arena.github.io/embodied-agent-arena/research-topics.html#embodied-evaluation"
+      ],
+      "initial_observation": "not_checked"
+    }
+  ]
+}
