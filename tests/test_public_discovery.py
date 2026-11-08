@@ -1,6 +1,8 @@
 """Research pages must be usable without JavaScript and cite one published version."""
+import csv
 import json
 import re
+import statistics
 import unittest
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -17,6 +19,7 @@ class Page(HTMLParser):
         super().__init__()
         self.ids, self.links, self.meta, self.schemas = [], [], {}, []
         self.canonical, self.script, self.text = [], None, []
+        self.tables, self.table, self.row, self.cell = {}, None, None, None
         self.feed(path.read_text())
 
     def handle_starttag(self, tag, attrs):
@@ -32,18 +35,34 @@ class Page(HTMLParser):
             self.canonical.append(attrs['href'])
         if tag == 'script':
             self.script = {'type': attrs.get('type'), 'text': ''}
+        if tag == 'table' and attrs.get('id'):
+            self.table = self.tables.setdefault(attrs['id'], [])
+        if self.table is not None and tag == 'tr':
+            self.row = []
+        if self.row is not None and tag in ('th', 'td'):
+            self.cell = []
 
     def handle_data(self, data):
         if self.script is not None:
             self.script['text'] += data
         else:
             self.text.append(data)
+        if self.cell is not None:
+            self.cell.append(data)
 
     def handle_endtag(self, tag):
         if tag == 'script' and self.script is not None:
             if self.script['type'] == 'application/ld+json':
                 self.schemas.append(json.loads(self.script['text']))
             self.script = None
+        if tag in ('th', 'td') and self.cell is not None:
+            self.row.append(' '.join(''.join(self.cell).split()))
+            self.cell = None
+        if tag == 'tr' and self.row is not None:
+            self.table.append(self.row)
+            self.row = None
+        if tag == 'table':
+            self.table = None
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -193,6 +212,68 @@ class DiscoveryTests(unittest.TestCase):
             self.assertIn(f'{successes} / {n}', text)
             self.assertIn(f'{100 * successes / n:.1f}%', text)
             self.assertIn(f'{100 * macro:.1f}%', text)
+
+    def test_geoprobe_query_families_reconcile_without_double_counting(self):
+        page = Page(PUBLIC / 'geoprobe.html')
+        protocols = page.tables['protocol-inventory']
+        # Table A2: each row is one protocol; the final row is the total.
+        counts = [int(row[1]) for row in protocols[1:-1]]
+        self.assertEqual(counts, [12, 12, 12, 4, 24, 12, 24, 12, 12, 44])
+        self.assertEqual(sum(counts), int(protocols[-1][1]))
+        families = page.tables['query-families']
+        family_counts = [int(row[-1]) for row in families[1:-1]]
+        self.assertEqual(family_counts, [sum(counts[:4]), sum(counts[4:6]), *counts[6:]])
+        self.assertEqual(sum(family_counts), int(families[-1][1]))
+        self.assertEqual(sum(counts), 168)
+
+    def test_geoprobe_metric_examples_match_run_means_and_sample_sd(self):
+        page = Page(PUBLIC / 'geoprobe.html')
+        examples = ' '.join(' '.join(row) for row in page.tables['metric-examples'])
+        with (PUBLIC / 'data/complementary-results-mean-sd.csv').open(newline='') as f:
+            metrics = list(csv.DictReader(f))
+        for name in ('GP rotation', 'GP translation'):
+            record = next(r for r in metrics if r['model'] == 'astra' and r['metric'] == name)
+            runs = json.loads(record['run_means'])
+            self.assertEqual(len(runs), int(record['runs']))
+            self.assertEqual(int(record['cases']), 24)
+            self.assertAlmostEqual(statistics.mean(runs), float(record['mean']))
+            self.assertAlmostEqual(statistics.stdev(runs), float(record['sd']))
+            for field in ('mean', 'sd'):
+                self.assertIn(f'{float(record[field]):.3f}', examples)
+
+    def test_planning_coverage_and_token_shares_match_retained_assignments(self):
+        text = re.sub(r'\s+', ' ', ''.join(Page(PUBLIC / 'findings.html').text))
+        outcomes = json.loads((PUBLIC / 'data/report/planning-outcomes.json').read_text())
+        tasks = outcomes['tasks']
+        for models in ({'astra'}, {'astra', 'gemini4argon'}, set(outcomes['models'])):
+            covered = sum(bool(models.intersection(t['successModels'])) for t in tasks)
+            self.assertIn(f'{covered} / {len(tasks)}', text)
+        with (PUBLIC / 'data/report/planning-episodes.csv').open(newline='') as f:
+            episodes = [r for r in csv.DictReader(f) if r['model'] == 'astra']
+        self.assertEqual(len({r['taskId'] for r in episodes}), len(tasks))
+        for subset in (episodes, [r for r in episodes if r['benchmark'] != 'HumanCLAW']):
+            total = sum(int(float(r['tokens'])) for r in subset)
+            failed = sum(int(float(r['tokens'])) for r in subset if r['outcome'] != 'success')
+            self.assertIn(f'{failed:,}', text)
+            self.assertIn(f'{total:,}', text)
+            self.assertIn(f'{failed / total:.1%}', text)
+        for success in (True, False):
+            group = [r for r in episodes if (r['outcome'] == 'success') == success]
+            mean = statistics.mean(float(r['tokens']) for r in group)
+            self.assertIn(f'{mean:,.0f}', text)
+
+    def test_updated_page_dates_match_sitemap_without_changing_paper_version(self):
+        ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        urls = ET.parse(PUBLIC / 'sitemap.xml').findall('s:url', ns)
+        dates = {u.findtext('s:loc', namespaces=ns): u.findtext('s:lastmod', namespaces=ns) for u in urls}
+        study = json.loads((PUBLIC / 'data/study.json').read_text())
+        for name in ('geoprobe.html', 'findings.html'):
+            page = Page(PUBLIC / name)
+            nodes = [node for schema in page.schemas for node in schema.get('@graph', [schema])]
+            webpage = next(node for node in nodes if node['@type'] == 'WebPage')
+            self.assertEqual(webpage['dateModified'], dates[BASE + name])
+            self.assertIn(f'datetime="{webpage["dateModified"]}"', (PUBLIC / name).read_text())
+            self.assertIn(f'https://arxiv.org/abs/{study["arxiv"]}v{study["arxiv_version"]}', page.links)
 
 
 if __name__ == '__main__':
