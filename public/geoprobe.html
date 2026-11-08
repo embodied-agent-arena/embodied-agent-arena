@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/logo-transparent.png">
   <link rel="stylesheet" href="styles.css?v=refined-20261022">
-  <link rel="stylesheet" href="research-pages.css?v=20261108">
+  <link rel="stylesheet" href="research-pages.css?v=experience-20261108-2">
   <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
   <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
   <script type="application/ld+json">
@@ -53,6 +53,7 @@
     ]
   }
   </script>
+  <script src="research-pages.js?v=20261108" defer></script>
 </head>
 <body class="research-document">
 <a class="skip" href="#main">Skip to content</a>
@@ -69,8 +70,17 @@
     <p>GeoProbe isolates these requirements through controlled scene variations and task-specific scoring. It contributes 168 queries to the Arena’s 1,000-case evaluation, alongside 32 established sources. <strong>This is the methods and dataset documentation for GeoProbe, introduced in the Embodied Agent Arena paper.</strong></p>
     <div class="research-stats" aria-label="GeoProbe inventory"><div><strong>168</strong><span>evaluation queries</span></div><div><strong>130</strong><span>unique RGB images</span></div><div><strong>10</strong><span>diagnostic protocols</span></div></div>
     <p class="research-meta">Page updated <time datetime="2026-11-08">8 November 2026</time> · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
-    <div class="research-links"><a href="#research-questions">Research questions</a><a href="#query-counts">Counts and scope</a><a href="#inventory">Task inventory</a><a href="#metrics">Scoring</a><a href="#reproduce">Data &amp; reproduction</a><a href="#citation">Cite GeoProbe</a></div>
+    <nav class="page-contents" aria-label="On this page"><p class="contents-label">On this page</p><div><a href="#query-map"><span aria-hidden="true">01</span>Visual overview</a><a href="#research-questions"><span aria-hidden="true">02</span>Research questions</a><a href="#inventory"><span aria-hidden="true">03</span>Protocols & counts</a><a href="#metrics"><span aria-hidden="true">04</span>Scoring & units</a><a href="#scope"><span aria-hidden="true">05</span>Scope & limitations</a><a href="#reproduce"><span aria-hidden="true">06</span>Data & reproduction</a><a href="#citation"><span aria-hidden="true">07</span>Cite this work</a></div></nav>
   </header>
+  <section id="query-map" class="research-overview" aria-labelledby="query-map-title">
+    <div class="overview-heading"><p class="eyebrow">The benchmark at a glance</p><h2 id="query-map-title">One inventory. Six geometric requirements.</h2><p>Each query is counted once below. The six families contain ten protocols in total.</p></div>
+    <figure class="query-figure" aria-labelledby="query-map-title" aria-describedby="query-map-caption">
+      <div class="query-strip" aria-hidden="true"><span class="query-segment query-displacement" style="--queries:40">40</span><span class="query-segment query-calibration" style="--queries:36">36</span><span class="query-segment query-pose" style="--queries:24">24</span><span class="query-segment query-depth" style="--queries:12">12</span><span class="query-segment query-dimensions" style="--queries:12">12</span><span class="query-segment query-scale" style="--queries:44">44</span></div>
+      <ol class="query-legend"><li data-query-family="displacement" data-count="40"><span class="query-number query-displacement">40</span><div><a href="#displacement-scoring">Object displacement</a><p>36 rendered + 4 real-photo queries</p></div></li><li data-query-family="calibration" data-count="36"><span class="query-number query-calibration">36</span><div><a href="#calibration-scoring">Camera calibration</a><p>24 intrinsics + 12 focal-length queries</p></div></li><li data-query-family="pose" data-count="24"><span class="query-number query-pose">24</span><div><a href="#pose-scoring">Relative camera pose</a><p>Rotation and translation, scored jointly</p></div></li><li data-query-family="depth" data-count="12"><span class="query-number query-depth">12</span><div><a href="#depth-scale-scoring">Sparse depth</a><p>Metric depth and ordinal relationships</p></div></li><li data-query-family="dimensions" data-count="12"><span class="query-number query-dimensions">12</span><div><a href="#depth-scale-scoring">Object dimensions</a><p>Numerical dimensions, with units</p></div></li><li data-query-family="scale" data-count="44"><span class="query-number query-scale">44</span><div><a href="#depth-scale-scoring">Reference-based scale</a><p>Scale estimated using a reference</p></div></li></ol>
+      <figcaption id="query-map-caption"><strong>168 queries in total.</strong> Queries reuse some of the 130 unique RGB images; ten protocols are evaluation conditions, not ten models or ten task families. <a href="#inventory">Inspect the full protocol inventory →</a></figcaption>
+    </figure>
+  </section>
+
 
   <section id="research-questions" aria-labelledby="questions-title">
     <h2 id="questions-title">Which VLM geometry questions can GeoProbe answer?</h2>
@@ -114,7 +124,7 @@
           <tfoot><tr><th scope="row" colspan="2">Total, counting each query once</th><td class="count">168</td></tr></tfoot>
         </table>
       </div>
-      <div class="research-links"><a href="geoprobe.html#query-counts">Link to query counts</a><a href="https://arxiv.org/html/2610.00854v3#A1.T2">Source: paper v3, Table A2</a></div>
+      <div class="research-links"><a href="geoprobe.html#query-counts">Link to query counts</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#query-counts" hidden aria-label="Copy permanent link to query counts">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span><a href="https://arxiv.org/html/2610.00854v3#A1.T2">Source: paper v3, Table A2</a></div>
     </div>
     <div class="table-scroll" role="region" aria-label="GeoProbe task inventory" tabindex="0">
       <table id="protocol-inventory">
@@ -135,17 +145,17 @@
         <tfoot><tr><th scope="row">Total</th><td class="count">168</td></tr></tfoot>
       </table>
     </div>
-    <p id="source-boundaries" class="scope-note"><strong>Relationship to the Arena:</strong> GeoProbe’s 168 queries are included within the 370 Geometry cases, which are included within the 1,000 Arena cases. InFlux-Real, Map-free and MultiSPA-derived are separate Geometry source groups, not GeoProbe protocols. The Arena’s 32 established sources retain their original attribution. For a dataset comparison, use 168 for GeoProbe rather than 370 or 1,000. <a href="geoprobe.html#source-boundaries">Link to source boundaries</a> · <a href="https://arxiv.org/html/2610.00854v3#A1">Source inventory</a>.</p>
+    <p id="source-boundaries" class="scope-note"><strong>Relationship to the Arena:</strong> GeoProbe’s 168 queries are included within the 370 Geometry cases, which are included within the 1,000 Arena cases. InFlux-Real, Map-free and MultiSPA-derived are separate Geometry source groups, not GeoProbe protocols. The Arena’s 32 established sources retain their original attribution. For a dataset comparison, use 168 for GeoProbe rather than 370 or 1,000. <a href="geoprobe.html#source-boundaries">Link to source boundaries</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#source-boundaries" hidden aria-label="Copy permanent link to source boundaries">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span> · <a href="https://arxiv.org/html/2610.00854v3#A1">Source inventory</a>.</p>
   </section>
 
   <section id="metrics" aria-labelledby="metrics-title">
     <h2 id="metrics-title">How are predictions scored?</h2>
     <p>Each diagnostic retains its units and success criterion. A small continuous error and a successful prediction are reported separately where the protocol defines both. The following definitions come from <a href="https://arxiv.org/html/2610.00854v3#A2.SS3">Appendix B.3</a>.</p>
     <div class="research-grid">
-      <div id="calibration-scoring" class="evidence-card"><h3>Camera calibration</h3><p>Focal MAPE averages absolute relative errors in <code>f_x</code> and <code>f_y</code>. Principal-point error is measured in pixels and relative to the image diagonal.</p><p>Joint calibration requires <strong>each focal component’s relative error ≤ 10% AND principal-point error ≤ 2% of the image diagonal</strong>. Passing a mean focal-error threshold alone does not satisfy this joint criterion. <a href="geoprobe.html#calibration-scoring">Link to calibration scoring</a>.</p></div>
-      <div id="pose-scoring" class="evidence-card"><h3>Relative camera pose</h3><p>Rotation error is reported in degrees and translation error in centimeters. Joint success requires <strong>rotation error ≤ 2° AND translation error ≤ 2 cm</strong>.</p><p>These metrics apply to the 24 GeoProbe relative-pose queries. Passing either component alone is insufficient. <a href="geoprobe.html#pose-scoring">Link to pose scoring</a>.</p></div>
-      <div id="displacement-scoring" class="evidence-card"><h3>Object displacement</h3><p>Diagnostics evaluate movement status, direction and absolute distance error. The GeoProbe joint criterion requires <strong>direction agreement AND absolute distance error ≤ 1 cm</strong>.</p><p>Stationary controls are evaluated without dividing by a zero displacement target. The paper’s 20% relative-motion tolerance belongs to MultiSPA-derived, a different source group. <a href="geoprobe.html#displacement-scoring">Link to displacement scoring</a>.</p></div>
-      <div id="depth-scale-scoring" class="evidence-card"><h3>Depth and scale</h3><p>Depth uses dimensionless AbsRel, RMSE in meters, threshold accuracy and ordinal accuracy. AbsRel is a ratio; MAPE is 100 × AbsRel and is expressed as a percentage. Focal length and dimensions use absolute and relative errors; numerical scale and qualitative scale judgments retain their separate metrics.</p><p>Oracle depth alignment uses ground-truth reference depth to isolate scale bias. An aligned score does not establish the model’s unassisted metric-depth accuracy or a deployable correction. <a href="geoprobe.html#depth-scale-scoring">Link to depth and scale scoring</a>.</p></div>
+      <div id="calibration-scoring" class="evidence-card"><h3>Camera calibration</h3><p>Focal MAPE averages absolute relative errors in <code>f_x</code> and <code>f_y</code>. Principal-point error is measured in pixels and relative to the image diagonal.</p><p>Joint calibration requires <strong>each focal component’s relative error ≤ 10% AND principal-point error ≤ 2% of the image diagonal</strong>. Passing a mean focal-error threshold alone does not satisfy this joint criterion. <a href="geoprobe.html#calibration-scoring">Link to calibration scoring</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#calibration-scoring" hidden aria-label="Copy permanent link to calibration scoring">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span>.</p></div>
+      <div id="pose-scoring" class="evidence-card"><h3>Relative camera pose</h3><p>Rotation error is reported in degrees and translation error in centimeters. Joint success requires <strong>rotation error ≤ 2° AND translation error ≤ 2 cm</strong>.</p><p>These metrics apply to the 24 GeoProbe relative-pose queries. Passing either component alone is insufficient. <a href="geoprobe.html#pose-scoring">Link to pose scoring</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#pose-scoring" hidden aria-label="Copy permanent link to pose scoring">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span>.</p></div>
+      <div id="displacement-scoring" class="evidence-card"><h3>Object displacement</h3><p>Diagnostics evaluate movement status, direction and absolute distance error. The GeoProbe joint criterion requires <strong>direction agreement AND absolute distance error ≤ 1 cm</strong>.</p><p>Stationary controls are evaluated without dividing by a zero displacement target. The paper’s 20% relative-motion tolerance belongs to MultiSPA-derived, a different source group. <a href="geoprobe.html#displacement-scoring">Link to displacement scoring</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#displacement-scoring" hidden aria-label="Copy permanent link to displacement scoring">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span>.</p></div>
+      <div id="depth-scale-scoring" class="evidence-card"><h3>Depth and scale</h3><p>Depth uses dimensionless AbsRel, RMSE in meters, threshold accuracy and ordinal accuracy. AbsRel is a ratio; MAPE is 100 × AbsRel and is expressed as a percentage. Focal length and dimensions use absolute and relative errors; numerical scale and qualitative scale judgments retain their separate metrics.</p><p>Oracle depth alignment uses ground-truth reference depth to isolate scale bias. An aligned score does not establish the model’s unassisted metric-depth accuracy or a deployable correction. <a href="geoprobe.html#depth-scale-scoring">Link to depth and scale scoring</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#depth-scale-scoring" hidden aria-label="Copy permanent link to depth scale scoring">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span>.</p></div>
     </div>
     <div id="metric-reading" class="evidence-card">
       <h3>Does the number after ± measure geometric error?</h3>
@@ -161,7 +171,7 @@
         </table>
       </div>
       <p>For example, <strong>1.174 ± 0.382 degrees</strong> means mean rotation error 1.174 degrees with run SD 0.382 degrees. These continuous means average valid predictions; they are not joint-success rates and do not establish that every case passed the 2° / 2 cm thresholds. The CSV also provides per-run means and valid-prediction counts.</p>
-      <div class="research-links"><a href="geoprobe.html#metric-reading">Link to metric interpretation</a><a href="data/complementary-results-mean-sd.csv">Source: complementary metrics CSV</a><a href="https://arxiv.org/html/2610.00854v3#A2.SS4">Aggregation and metric scope</a></div>
+      <div class="research-links"><a href="geoprobe.html#metric-reading">Link to metric interpretation</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#metric-reading" hidden aria-label="Copy permanent link to metric reading">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span><a href="data/complementary-results-mean-sd.csv">Source: complementary metrics CSV</a><a href="https://arxiv.org/html/2610.00854v3#A2.SS4">Aggregation and metric scope</a></div>
     </div>
     <p class="scope-note"><strong>Repetitions and denominators:</strong> GeoProbe is part of non-tracing Geometry: five repetitions per case for nine models and three for Fable. Continuous metrics average valid predictions within each run and then report the equal-weight mean and sample SD across runs. Success-rate denominators retain failed assignments; depth threshold and ordering measures count invalid predictions as incorrect. Consult <a href="https://arxiv.org/html/2610.00854v3#A2.SS4">Appendix B.4</a> before comparing aggregates.</p>
   </section>
@@ -195,9 +205,25 @@ arena list --data-root ../data</code></pre>
     <h2 id="citation-title">Cite GeoProbe and its methods</h2>
     <p>GeoProbe is introduced in the Embodied Agent Arena paper, not in a separate publication titled after this page. Cite the paper for the benchmark. For an answer or literature review using these definitions, also link the specific evidence on this page: <a href="geoprobe.html#query-counts">query counts</a>, <a href="geoprobe.html#metrics">scoring criteria</a>, <a href="geoprobe.html#metric-reading">mean and SD interpretation</a>, or <a href="geoprobe.html#scope">scope and limitations</a>.</p>
     <p class="citation-text">Haojian Huang, Pukun Zhao, Zexi Li, Yehang Zhang, Yangkai Wei, Wenqian Li, Han Yang, Kaiwen Zhou, Ying-Cong Chen, and Yinchuan Li. <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena.</cite> arXiv:2610.00854, 2026. Version 3, 23 October 2026.</p>
-    <div class="research-links"><a href="https://arxiv.org/abs/2610.00854v3">Paper v3</a><a href="https://doi.org/10.48550/arXiv.2610.00854">Paper DOI</a><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="geoprobe.html#inventory">Link to the inventory</a></div>
+    <div class="research-links"><a href="https://arxiv.org/abs/2610.00854v3">Paper v3</a><a href="https://doi.org/10.48550/arXiv.2610.00854">Paper DOI</a><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="geoprobe.html#inventory">Link to the inventory</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#inventory" hidden aria-label="Copy permanent link to inventory">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span></div>
     <p class="research-meta">Research content follows the 23 October 2026 paper. The 8 November page update clarifies counts, units, denominators and source boundaries; it does not report a new experimental run.</p>
-  </section>
+
+    <details class="citation-details" open>
+      <summary>Paper citation · BibTeX</summary>
+      <div class="citation-actions"><button class="button primary" type="button" data-copy-citation="research-bibtex" hidden>Copy BibTeX</button><a class="button secondary" href="citation.bib" download>Download .bib</a><span class="copy-status" role="status" aria-live="polite"></span></div>
+      <pre id="research-bibtex" class="citation-code" tabindex="0"><code>@article{huang2026frontier,
+  title={Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
+  author={Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
+  journal={arXiv preprint arXiv:2610.00854},
+  year={2026},
+  doi={10.48550/arXiv.2610.00854},
+  url={https://arxiv.org/abs/2610.00854v3},
+  eprint={2610.00854v3},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
+}</code></pre>
+    </details>
+</section>
 </article>
 </main>
 <footer class="wrap"><span>Embodied Agent Arena · 2026</span><div><a href="./">Project overview</a><a href="findings.html">Research findings</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a></div></footer>

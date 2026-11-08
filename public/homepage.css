@@ -1,4 +1,21 @@
 /* A continuous reading path: watch, compare, understand, then inspect. */
+.research-entry{padding-block:38px 42px;border-bottom:1px solid var(--line)}
+.research-entry-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:23px}
+.research-entry-heading .eyebrow{font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.research-entry h2{font-size:clamp(25px,3vw,34px);line-height:1.25;letter-spacing:-.035em}
+.research-entry-cite{flex-shrink:0;font-size:14px;text-decoration:underline;text-underline-offset:5px;padding-block:10px}
+.research-entry-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.research-entry-grid>a{display:flex;flex-direction:column;min-width:0;border-top:2px solid #d4cfdf;padding-top:18px;transition:border-color .15s ease}
+.research-entry-grid>a:nth-child(2){border-color:#c5d3c2}
+.research-entry-grid>a:nth-child(3){border-color:#c4d5db}
+.research-entry-grid>a:hover{border-color:var(--ink)}
+.research-entry-grid>a:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:2px}
+.research-entry-label{font-size:12px;color:var(--muted);letter-spacing:.035em}
+.research-entry h3{font-size:21px;line-height:1.35;margin:10px 0}
+.research-entry p{font-size:14px;line-height:1.7;color:var(--muted);max-width:42ch}
+.research-entry-action{font-size:14px;font-weight:650;margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;gap:12px}
+@media(max-width:760px){.research-entry{padding-block:28px}.research-entry-heading{align-items:start;gap:12px}.research-entry-heading h2{max-width:19ch}.research-entry-cite{font-size:12px}.research-entry-grid{grid-template-columns:1fr;gap:21px}.research-entry-grid>a{padding-top:14px}.research-entry h3{font-size:20px;margin-block:7px}.research-entry p{max-width:60ch}.research-entry-action{padding-top:10px}}
+@media(prefers-reduced-motion:reduce){.research-entry-grid>a{transition:none}}
 .hero-stage{background:#f5f7f4}
 .hero-stage .hero{padding:50px 24px 74px}
 .hero-scene{inset:-45px -40px}

@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/logo-transparent.png">
   <link rel="stylesheet" href="styles.css?v=refined-20261022">
-  <link rel="stylesheet" href="research-pages.css?v=20261108">
+  <link rel="stylesheet" href="research-pages.css?v=experience-20261108-2">
   <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
   <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
   <script type="application/ld+json">
@@ -78,6 +78,7 @@
   ]
 }
   </script>
+  <script src="research-pages.js?v=20261108" defer></script>
 </head>
 <body class="research-document">
 <a class="skip" href="#main">Skip to content</a>
@@ -94,10 +95,39 @@
       <h1>Robot Planning, Long-Horizon Tasks &amp; Agent Reliability</h1>
       <p class="research-lead">When does a capable vision-language agent still fail to finish a robot task? Five findings from Embodied Agent Arena connect model diversity, execution recovery, token use, sequence depth and benchmark composition to measured outcomes.</p>
       <p class="research-meta">Page updated <time datetime="2026-11-08">8 November 2026</time> · Paper: <a href="https://arxiv.org/abs/2610.00854v3">arXiv v3, 23 October 2026</a> · Ten evaluated VLM agents</p>
-      <div class="research-links"><a href="#planning-complementarity">Shared planning failures</a><a href="#execution-recovery">Execution recovery</a><a href="#failure-token-cost">Token use</a><a href="#long-horizon-completion">Long-horizon tasks</a><a href="#benchmark-composition">Benchmark weighting</a><a href="#citation">Citation &amp; version</a></div>
+      <nav class="page-contents" aria-label="On this page"><p class="contents-label">On this page</p><div><a href="#evidence-overview"><span aria-hidden="true">01</span>Visual overview</a><a href="#planning-complementarity"><span aria-hidden="true">02</span>Planning coverage</a><a href="#execution-recovery"><span aria-hidden="true">03</span>Execution recovery</a><a href="#failure-token-cost"><span aria-hidden="true">04</span>Token use</a><a href="#long-horizon-completion"><span aria-hidden="true">05</span>Long-horizon tasks</a><a href="#benchmark-composition"><span aria-hidden="true">06</span>Benchmark weighting</a><a href="#citation"><span aria-hidden="true">07</span>Cite this work</a></div></nav>
       <p id="evidence-populations"><strong>Read each result with its own population.</strong> Planning coverage counts 157 distinct tasks across ten models; CALVIN recovery and sequence completion use the same 100 model–sequence episodes; Manipulation weighting uses 182 binary assignments per model. These populations are not interchangeable. This page documents the ten-model <a href="https://arxiv.org/abs/2610.00854v3">paper v3</a> evaluation, not an additional experiment.</p>
       <p class="scope-note">Investigating a broader research question? The <a href="research-topics.html">research topic guide</a> connects these results to embodied AI evaluation, spatial reasoning, self-correction and test-time computation, and explains when each result is relevant to a literature review.</p>
     </header>
+    <section id="evidence-overview" class="research-overview" aria-labelledby="evidence-overview-title">
+      <div class="overview-heading"><p class="eyebrow">Two results to read first</p><h2 id="evidence-overview-title">Keep progress and completion separate.</h2><p>The counts below describe two different retained populations. Each chart keeps its own denominator.</p></div>
+      <div class="evidence-pair">
+        <figure class="result-figure recovery-figure" aria-labelledby="recovery-overview-title" aria-describedby="recovery-overview-caption">
+          <p class="figure-kicker">CALVIN · Execution recovery</p>
+          <h3 id="recovery-overview-title">Running again is only an intermediate event.</h3>
+          <p class="sample-label">100 retained episodes = 10 sequence IDs × 10 models</p>
+          <p class="population-count"><strong data-measure="error-population" data-value="65" data-total="100">65 <small>/ 100</small></strong><span>episodes encounter an execution error</span></p>
+          <div class="measure-list">
+            <div class="measure-row" data-measure="resumed-execution" data-value="62" data-total="65"><div class="measure-label"><span>Resume error-free execution</span><strong>62 <small>/ 65</small></strong></div><div class="measure-track" aria-hidden="true"><span style="width:95.38461538%"></span></div></div>
+            <div class="measure-row" data-measure="completed-after-error" data-value="3" data-total="65"><div class="measure-label"><span>Complete all five goals after an error</span><strong>3 <small>/ 65</small></strong></div><div class="measure-track" aria-hidden="true"><span style="width:4.61538462%"></span></div></div>
+          </div>
+          <figcaption id="recovery-overview-caption">Both bars use the same <strong>65 error-containing episodes</strong>. These observations distinguish executability from completion; they do not estimate a causal repair effect. <a href="#execution-recovery">Definitions, records and scope →</a></figcaption>
+        </figure>
+        <figure class="result-figure coverage-figure" aria-labelledby="coverage-overview-title" aria-describedby="coverage-overview-caption">
+          <p class="figure-kicker">Planning · Complementary coverage</p>
+          <h3 id="coverage-overview-title">Different models cover more of the same tasks.</h3>
+          <p class="sample-label">157 task identities · One retained assignment per model and task</p>
+          <div class="measure-list">
+            <div class="measure-row" data-measure="astra-coverage" data-value="126" data-total="157"><div class="measure-label"><span>Astra</span><strong>126 <small>/ 157</small></strong></div><div class="measure-track" aria-hidden="true"><span style="width:80.25477707%"></span></div></div>
+            <div class="measure-row" data-measure="pair-coverage" data-value="137" data-total="157"><div class="measure-label"><span>Astra or Gemini 4 Argon</span><strong>137 <small>/ 157</small></strong></div><div class="measure-track" aria-hidden="true"><span style="width:87.26114650%"></span></div></div>
+            <div class="measure-row" data-measure="all-model-coverage" data-value="142" data-total="157"><div class="measure-label"><span>At least one of all ten models</span><strong>142 <small>/ 157</small></strong></div><div class="measure-track" aria-hidden="true"><span style="width:90.44585987%"></span></div></div>
+          </div>
+          <p class="uncovered-note"><strong>15 tasks</strong> remain unsuccessful for all ten.</p>
+          <figcaption id="coverage-overview-caption">These are <strong>retrospective success unions</strong>, counting each task once. They are not a deployed router or an equal-compute ensemble result. <a href="#planning-complementarity">Counting rules and source data →</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
 
     <section id="planning-complementarity" class="evidence-card" aria-labelledby="planning-title">
       <p class="eyebrow">01 / Planning · Same 157 Tasks</p>
@@ -120,7 +150,7 @@
       <p><strong>Population and protocol.</strong> The analysis includes 157 task identities × ten models = 1,570 retained model–task assignments, with one retained assignment per model and task, from ALFRED, ALFWorld, DiscoveryWorld, HumanCLAW, ScienceWorld, and VirtualHome. Tasks retain their source-native success criteria and budgets. Each union counts a successful task once, regardless of how many models succeed. Only eight tasks are completed by all ten models; 39 are completed by exactly one or two models. The 15 common failures comprise two ALFRED tasks, two ALFWorld tasks, nine HumanCLAW tasks, and two ScienceWorld tasks.</p>
       <p class="scope-note"><strong>Scope.</strong> This is retrospective success coverage over recorded runs. It does not measure a deployed ensemble, a model-routing policy, or an equal-compute improvement. A shared failure in this sample is not evidence that the task is impossible for these models under other settings.</p>
       <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Appendix J.1 and Figure A15, report complementary successes alongside a shared failure set on 157 Planning tasks.</p>
-      <div class="research-links"><a href="#planning-complementarity" aria-label="Permanent link to the planning complementarity finding">Link to this finding</a><a href="#citation">Cite the paper</a><a href="paper.pdf#page=66">Paper · Appendix J.1</a><a href="paper.pdf#page=68">Figure A15</a><a href="data/report/planning-outcomes.csv" download>Task outcomes · CSV</a><a href="data/report/planning-outcomes.json">Task identities · JSON</a><a href="technical-report.html#coverage">Read the analysis</a></div>
+      <div class="research-links"><a href="#planning-complementarity" aria-label="Permanent link to the planning complementarity finding">Link to this finding</a><span class="copy-action"><button type="button" data-copy-link="#planning-complementarity" hidden aria-label="Copy permanent link to planning complementarity">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span><a href="#citation">Cite the paper</a><a href="paper.pdf#page=66">Paper · Appendix J.1</a><a href="paper.pdf#page=68">Figure A15</a><a href="data/report/planning-outcomes.csv" download>Task outcomes · CSV</a><a href="data/report/planning-outcomes.json">Task identities · JSON</a><a href="technical-report.html#coverage">Read the analysis</a></div>
     </section>
 
     <section id="execution-recovery" class="evidence-card" aria-labelledby="recovery-title">
@@ -143,7 +173,7 @@
       <p><strong>Population and protocol.</strong> Ten sequence IDs × ten models = 100 retained episodes, one per model–sequence assignment. The 62 episodes with resumed execution must not be described as 62 completed tasks. Execution errors exclude API transport failures, timeouts, and budget guards. Six episodes lack a verified completed-goal prefix and receive no goal credit; they remain in the 100-episode denominator. Recorded model-specific observation schedules and budgets are retained.</p>
       <p class="scope-note"><strong>Main evaluation and supplementary examples.</strong> These counts use the adopted CALVIN evaluation episodes. The separate RGB-expanded sequence-0526 comparisons illustrate recorded behavior under their own settings and must not be substituted into these aggregates. This observational analysis does not establish that error repair causes failure, or that more computation could never help.</p>
       <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Figure 8 and Appendix D.5.1, distinguish renewed executability from verified task completion in 100 CALVIN episodes.</p>
-      <div class="research-links"><a href="#execution-recovery" aria-label="Permanent link to the execution recovery finding">Link to this finding</a><a href="#citation">Cite the paper</a><a href="paper.pdf#page=12">Paper · Figure 8</a><a href="paper.pdf#page=47">Appendix D.5.1</a><a href="data/spatial-recovery/calvin-models.csv" download>Model counts · CSV</a><a href="data/spatial-recovery/calvin-episodes.json">Episode events &amp; hashes</a><a href="data/spatial-recovery/calvin-summary.json">Summary · JSON</a><a href="model-guide.html#protocol">Recorded settings</a></div>
+      <div class="research-links"><a href="#execution-recovery" aria-label="Permanent link to the execution recovery finding">Link to this finding</a><span class="copy-action"><button type="button" data-copy-link="#execution-recovery" hidden aria-label="Copy permanent link to execution recovery">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span><a href="#citation">Cite the paper</a><a href="paper.pdf#page=12">Paper · Figure 8</a><a href="paper.pdf#page=47">Appendix D.5.1</a><a href="data/spatial-recovery/calvin-models.csv" download>Model counts · CSV</a><a href="data/spatial-recovery/calvin-episodes.json">Episode events &amp; hashes</a><a href="data/spatial-recovery/calvin-summary.json">Summary · JSON</a><a href="model-guide.html#protocol">Recorded settings</a></div>
     </section>
 
     <section id="failure-token-cost" class="evidence-card" aria-labelledby="tokens-title">
@@ -166,7 +196,7 @@
       <p class="scope-note"><strong>Scope.</strong> Task composition and budgets matter. HumanCLAW contributes 81.7% of Astra’s failed-episode tokens, not 81.7% of all its tokens. Excluding all HumanCLAW episodes changes both numerator and denominator: 3,347,238 tokens in unsuccessful remaining episodes / 17,219,012 tokens in all remaining episodes = 19.4%. These observations do not demonstrate that using more tokens causes failure, and token counts are not a dollar-cost comparison across providers.</p>
       <p><strong>Relation to test-time computation.</strong> The paper’s separate <a href="research-topics.html#test-time-compute">fixed-input review study</a> evaluates Astra and Qwen 3.5 27B on the same 46 cases: 19 Geometry, 18 Spatial Reasoning and nine Affordance cases. Its review budgets and outcomes are a different experiment from these 157 Astra Planning episodes and the 100 CALVIN episodes. The token association here does not estimate the causal benefit of additional review or inference. See <a href="paper.pdf#page=52">Appendix E.2, Table A34</a>.</p>
       <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Figure A15 and Appendix J.6, report that unsuccessful episodes consume 55.5% of Astra’s recorded Planning tokens, with a substantial contribution from HumanCLAW.</p>
-      <div class="research-links"><a href="#failure-token-cost" aria-label="Permanent link to the failure token cost finding">Link to this finding</a><a href="#citation">Cite the paper</a><a href="paper.pdf#page=68">Paper · Figure A15</a><a href="paper.pdf#page=70">Table A43 &amp; source analysis</a><a href="data/report/planning-episodes.csv" download>Episode usage · CSV</a><a href="data/report/metrics.json">Aggregated metrics · JSON</a><a href="technical-report.html#resources">Read the resource analysis</a></div>
+      <div class="research-links"><a href="#failure-token-cost" aria-label="Permanent link to the failure token cost finding">Link to this finding</a><span class="copy-action"><button type="button" data-copy-link="#failure-token-cost" hidden aria-label="Copy permanent link to failure token cost">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span><a href="#citation">Cite the paper</a><a href="paper.pdf#page=68">Paper · Figure A15</a><a href="paper.pdf#page=70">Table A43 &amp; source analysis</a><a href="data/report/planning-episodes.csv" download>Episode usage · CSV</a><a href="data/report/metrics.json">Aggregated metrics · JSON</a><a href="technical-report.html#resources">Read the resource analysis</a></div>
     </section>
 
     <section id="long-horizon-completion" class="evidence-card" aria-labelledby="horizon-title">
@@ -182,7 +212,7 @@
       <p><strong>Population and protocol.</strong> Ten sequence IDs × ten models, one retained run per assignment. Six episodes have no verified goal prefix; they receive no goal credit and remain in the denominator. Model-specific observation schedules and budgets are retained, as in the <a href="model-guide.html#protocol">protocol audit</a>.</p>
       <p class="scope-note"><strong>Scope.</strong> These are nested counts, not independent per-step success probabilities: an episode counted at five goals is also counted at one, two, three and four. The five rows must not be added to obtain an episode total, and 9% is complete-sequence success across all 100 episodes, not the probability of completing the fifth goal after reaching the fourth. They do not identify memory, planning or control as the unique cause of failure. Separate RGB-expanded demonstrations are not added to the evaluation population.</p>
       <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Section 4.3 and Appendix D.5.1, report that 60 of 100 retained CALVIN episodes reach the first subgoal, while nine finish the full five-goal sequence.</p>
-      <div class="research-links"><a href="#long-horizon-completion">Link to this finding</a><a href="#citation">Cite the paper</a><a href="data/spatial-recovery/calvin-summary.json">Goal-prefix counts by model · JSON</a><a href="data/spatial-recovery/calvin-episodes.json">Retained episode events</a><a href="paper.pdf#page=47">Appendix D.5.1</a><a href="research-topics.html#long-horizon-tasks">Long-horizon task evaluation</a></div>
+      <div class="research-links"><a href="#long-horizon-completion">Link to this finding</a><span class="copy-action"><button type="button" data-copy-link="#long-horizon-completion" hidden aria-label="Copy permanent link to long horizon completion">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span><a href="#citation">Cite the paper</a><a href="data/spatial-recovery/calvin-summary.json">Goal-prefix counts by model · JSON</a><a href="data/spatial-recovery/calvin-episodes.json">Retained episode events</a><a href="paper.pdf#page=47">Appendix D.5.1</a><a href="research-topics.html#long-horizon-tasks">Long-horizon task evaluation</a></div>
     </section>
 
     <section id="benchmark-composition" class="evidence-card" aria-labelledby="composition-title">
@@ -198,7 +228,7 @@
       <p><strong>Population and calculation.</strong> For each model, assignment weighting divides total successful binary assignments by 182. Equal-source weighting computes that model’s success rate within each source, then takes the unweighted mean of the 13 source rates; it does not divide the total successes by 13. The 183-case Manipulation inventory also contains one continuous-reward task, which is outside this binary-success comparison.</p>
       <p class="scope-note"><strong>Scope.</strong> This sensitivity analysis holds outcomes and recorded protocols fixed. It does not introduce a new evaluation, establish equal compute across models, or show that one weighting is correct for every deployment. A model-selection claim should name the task mixture and aggregation rule.</p>
       <p><strong>Suggested attribution.</strong> Huang et al. (2026), <cite>Embodied Agent Arena</cite>, Section 4.2, show that the Manipulation leader changes under equal-source weighting of the same adopted results.</p>
-      <div class="research-links"><a href="#benchmark-composition">Link to this finding</a><a href="#citation">Cite the paper</a><a href="data/spatial-recovery/manipulation-sources.json">Per-source counts · JSON</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena/blob/ecf56432333bd1e685fda3b6640855d0a53eb6f0/scripts/analyze_experiment_findings.py">Recompute the weighting comparison</a><a href="https://arxiv.org/abs/2610.00854v3">Paper v3 · Section 4.2</a><a href="research-topics.html#benchmark-composition">Benchmark composition and model selection</a></div>
+      <div class="research-links"><a href="#benchmark-composition">Link to this finding</a><span class="copy-action"><button type="button" data-copy-link="#benchmark-composition" hidden aria-label="Copy permanent link to benchmark composition">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span><a href="#citation">Cite the paper</a><a href="data/spatial-recovery/manipulation-sources.json">Per-source counts · JSON</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena/blob/ecf56432333bd1e685fda3b6640855d0a53eb6f0/scripts/analyze_experiment_findings.py">Recompute the weighting comparison</a><a href="https://arxiv.org/abs/2610.00854v3">Paper v3 · Section 4.2</a><a href="research-topics.html#benchmark-composition">Benchmark composition and model selection</a></div>
     </section>
 
     <section id="citation" aria-labelledby="citation-title">
@@ -208,7 +238,23 @@
       <p>These findings accompany <a href="https://arxiv.org/abs/2610.00854v3">arXiv version 3, released 23 October 2026</a>. This page’s 8 November 2026 update clarifies counts, denominators and inference limits in existing evidence; it does not announce a new evaluation run. Use the paper citation for the research, and include the finding’s stable section link when pointing readers to its data and definitions.</p>
       <p>The linked tables and records are available in the <a href="https://github.com/embodied-agent-arena/embodied-agent-arena/tree/ecf56432333bd1e685fda3b6640855d0a53eb6f0/public/data">fixed source snapshot used for this page</a>. The <a href="https://github.com/embodied-agent-arena/embodied-agent-arena/blob/ecf56432333bd1e685fda3b6640855d0a53eb6f0/docs/SPATIAL_RECOVERY.md">CALVIN provenance notes</a> describe missing-prefix handling and how report hashes identify retained episodes.</p>
       <div class="research-links"><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="https://arxiv.org/abs/2610.00854v3">Versioned paper</a><a href="technical-report.html">Full technical analysis</a><a href="geoprobe.html">Explore GeoProbe</a></div>
-    </section>
+
+    <details class="citation-details" open>
+      <summary>Paper citation · BibTeX</summary>
+      <div class="citation-actions"><button class="button primary" type="button" data-copy-citation="research-bibtex" hidden>Copy BibTeX</button><a class="button secondary" href="citation.bib" download>Download .bib</a><span class="copy-status" role="status" aria-live="polite"></span></div>
+      <pre id="research-bibtex" class="citation-code" tabindex="0"><code>@article{huang2026frontier,
+  title={Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
+  author={Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
+  journal={arXiv preprint arXiv:2610.00854},
+  year={2026},
+  doi={10.48550/arXiv.2610.00854},
+  url={https://arxiv.org/abs/2610.00854v3},
+  eprint={2610.00854v3},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
+}</code></pre>
+    </details>
+</section>
   </article>
 </main>
 <footer class="wrap"><span>Embodied Agent Arena · 2026</span><div><a href="./">Project overview</a><a href="https://github.com/embodied-agent-arena/embodied-agent-arena">GitHub ↗</a></div></footer>
