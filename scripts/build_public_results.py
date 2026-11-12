@@ -57,6 +57,16 @@ replace_block(PUBLIC / 'index.html', 'AUTHORS', author_html)
 # Keep the checked-in BibTeX as the citation source for every export.
 bibtex = (PUBLIC / 'data/citation.bib').read_text().strip()
 (PUBLIC / 'citation.bib').write_text(bibtex+'\n')
+(PUBLIC / 'citation.txt').write_text(bibtex+'\n')
+for name in ('geoprobe.html', 'findings.html', 'research-topics.html', 'citation.html'):
+    path = PUBLIC / name
+    text, count = re.subn(
+        r'(<pre\b[^>]*\bid="research-bibtex"[^>]*><code>).*?(</code></pre>)',
+        lambda match: match[1] + esc(bibtex+'\n') + match[2],
+        path.read_text(), flags=re.S)
+    if count != 1:
+        raise ValueError(f'{path}: expected one visible BibTeX block, found {count}')
+    path.write_text(text)
 paper_url = f'https://arxiv.org/abs/{study["arxiv"]}v{study["arxiv_version"]}'
 doi = '10.48550/arXiv.' + study['arxiv']
 csl = {
@@ -78,6 +88,7 @@ metadata += [f'<meta name="citation_publication_date" content="{study["date_publ
              f'<meta name="citation_doi" content="{doi}">',
              f'<meta name="citation_arxiv_id" content="{study["arxiv"]}v{study["arxiv_version"]}">',
              '<link rel="alternate" type="application/x-bibtex" href="citation.bib" title="BibTeX citation">',
+             '<link rel="alternate" type="text/plain" href="citation.txt" title="BibTeX citation as plain text">',
              '<link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="CSL-JSON citation">']
 schema = {'@context':'https://schema.org', '@type':'ScholarlyArticle', '@id':study['url']+'#paper',
           'name':study['title'], 'headline':study['title'], 'url':study['url'], 'sameAs':paper_url,

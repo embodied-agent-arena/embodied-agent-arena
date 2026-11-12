@@ -188,12 +188,12 @@ arena score --data-root ../data --benchmark w5_umd \
 
 ## 📖 Citation
 
-If this work is useful for your research, please cite the paper. The linked results refer to [arXiv v3 (23 October 2026)](https://arxiv.org/abs/2610.00854v3). Download [BibTeX](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.bib) or [CSL-JSON](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.csl.json); use the [findings page](https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html) for population definitions and supporting data.
+If this work is useful for your research, please cite the paper. The linked results refer to [arXiv v3 (23 October 2026)](https://arxiv.org/abs/2610.00854v3). Open the [paper citation and BibTeX](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.html#bibtex), read the [plain-text citation](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.txt), or download [BibTeX](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.bib) or [CSL-JSON](https://embodied-agent-arena.github.io/embodied-agent-arena/citation.csl.json); use the [findings page](https://embodied-agent-arena.github.io/embodied-agent-arena/findings.html) for population definitions and supporting data.
 
 <!-- BEGIN CITATION -->
 ```bibtex
 @article{huang2026frontier,
-  title={Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
+  title={{Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena}},
   author={Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
   journal={arXiv preprint arXiv:2610.00854},
   year={2026},
@@ -201,7 +201,8 @@ If this work is useful for your research, please cite the paper. The linked resu
   url={https://arxiv.org/abs/2610.00854v3},
   eprint={2610.00854v3},
   archivePrefix={arXiv},
-  primaryClass={cs.RO}
+  primaryClass={cs.RO},
+  note={Version 3, 23 October 2026}
 }
 ```
 <!-- END CITATION -->

@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="styles.css?v=refined-20261022">
   <link rel="stylesheet" href="research-pages.css?v=experience-20261108-2">
   <link rel="alternate" type="application/x-bibtex" href="citation.bib" title="Paper citation in BibTeX">
+  <link rel="alternate" type="text/plain" href="citation.txt" title="Paper BibTeX as plain text">
   <link rel="alternate" type="application/vnd.citationstyles.csl+json" href="citation.csl.json" title="Paper citation in CSL-JSON">
   <script type="application/ld+json">
   {
@@ -26,7 +27,7 @@
   "name": "Robot Planning, Long-Horizon Tasks & Agent Reliability: Research Findings — Embodied Agent Arena",
   "description": "Five findings on planning complementarity, execution recovery, token use, long-horizon completion and benchmark composition, with samples, limitations and source data.",
   "inLanguage": "en",
-  "dateModified": "2026-11-08",
+  "dateModified": "2026-11-12",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Embodied Agent Arena",
@@ -85,7 +86,7 @@
 <header class="site-header">
   <div class="nav-wrap">
     <a class="brand" href="./"><img src="assets/logo-transparent.png" alt="" width="42" height="42"><span class="brand-name">Embodied Agent <span>Arena</span></span></a>
-    <nav aria-label="Main navigation"><a href="./">Overview</a><a href="research-topics.html">Research topics</a><a href="geoprobe.html">GeoProbe</a><a href="findings.html" aria-current="page">Findings</a><a href="./#citation">Cite the Paper</a></nav>
+    <nav aria-label="Main navigation"><a href="./">Overview</a><a href="research-topics.html">Research topics</a><a href="geoprobe.html">GeoProbe</a><a href="findings.html" aria-current="page">Findings</a><a href="citation.html">Cite the Paper</a></nav>
   </div>
 </header>
 <main id="main" class="wrap research-page">
@@ -94,7 +95,7 @@
       <p class="eyebrow">Research Findings &amp; Evidence</p>
       <h1>Robot Planning, Long-Horizon Tasks &amp; Agent Reliability</h1>
       <p class="research-lead">When does a capable vision-language agent still fail to finish a robot task? Five findings from Embodied Agent Arena connect model diversity, execution recovery, token use, sequence depth and benchmark composition to measured outcomes.</p>
-      <p class="research-meta">Page updated <time datetime="2026-11-08">8 November 2026</time> · Paper: <a href="https://arxiv.org/abs/2610.00854v3">arXiv v3, 23 October 2026</a> · Ten evaluated VLM agents</p>
+      <p class="research-meta">Page updated <time datetime="2026-11-12">12 November 2026</time> · Paper: <a href="https://arxiv.org/abs/2610.00854v3">arXiv v3, 23 October 2026</a> · Ten evaluated VLM agents</p>
       <nav class="page-contents" aria-label="On this page"><p class="contents-label">On this page</p><div><a href="#evidence-overview"><span aria-hidden="true">01</span>Visual overview</a><a href="#planning-complementarity"><span aria-hidden="true">02</span>Planning coverage</a><a href="#execution-recovery"><span aria-hidden="true">03</span>Execution recovery</a><a href="#failure-token-cost"><span aria-hidden="true">04</span>Token use</a><a href="#long-horizon-completion"><span aria-hidden="true">05</span>Long-horizon tasks</a><a href="#benchmark-composition"><span aria-hidden="true">06</span>Benchmark weighting</a><a href="#citation"><span aria-hidden="true">07</span>Cite this work</a></div></nav>
       <p id="evidence-populations"><strong>Read each result with its own population.</strong> Planning coverage counts 157 distinct tasks across ten models; CALVIN recovery and sequence completion use the same 100 model–sequence episodes; Manipulation weighting uses 182 binary assignments per model. These populations are not interchangeable. This page documents the ten-model <a href="https://arxiv.org/abs/2610.00854v3">paper v3</a> evaluation, not an additional experiment.</p>
       <p class="scope-note">Investigating a broader research question? The <a href="research-topics.html">research topic guide</a> connects these results to embodied AI evaluation, spatial reasoning, self-correction and test-time computation, and explains when each result is relevant to a literature review.</p>
@@ -241,9 +242,9 @@
 
     <details class="citation-details" open>
       <summary>Paper citation · BibTeX</summary>
-      <div class="citation-actions"><button class="button primary" type="button" data-copy-citation="research-bibtex" hidden>Copy BibTeX</button><a class="button secondary" href="citation.bib" download>Download .bib</a><span class="copy-status" role="status" aria-live="polite"></span></div>
+      <div class="citation-actions"><a class="button secondary" href="citation.html#bibtex">Paper citation &amp; BibTeX</a><a class="button secondary" href="citation.txt">Read plain text</a><button class="button primary" type="button" data-copy-citation="research-bibtex" hidden>Copy BibTeX</button><a class="button secondary" href="citation.bib" download>Download .bib</a><span class="copy-status" role="status" aria-live="polite"></span></div>
       <pre id="research-bibtex" class="citation-code" tabindex="0"><code>@article{huang2026frontier,
-  title={Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena},
+  title={{Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena}},
   author={Huang, Haojian and Zhao, Pukun and Li, Zexi and Zhang, Yehang and Wei, Yangkai and Li, Wenqian and Yang, Han and Zhou, Kaiwen and Chen, Ying-Cong and Li, Yinchuan},
   journal={arXiv preprint arXiv:2610.00854},
   year={2026},
@@ -251,8 +252,10 @@
   url={https://arxiv.org/abs/2610.00854v3},
   eprint={2610.00854v3},
   archivePrefix={arXiv},
-  primaryClass={cs.RO}
-}</code></pre>
+  primaryClass={cs.RO},
+  note={Version 3, 23 October 2026}
+}
+</code></pre>
     </details>
 </section>
   </article>

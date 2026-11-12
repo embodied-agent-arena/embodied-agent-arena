@@ -2,8 +2,8 @@
 
 ## Source of truth
 - Status: Active
-- Last refreshed: 2026-11-08
-- Primary surfaces: homepage, GeoProbe, research findings, research topics.
+- Last refreshed: 2026-11-12
+- Primary surfaces: homepage, GeoProbe, research findings, research topics, paper citation.
 - Evidence reviewed: public/styles.css, homepage.css, research-pages.css, index.html, geoprobe.html, findings.html, research-topics.html; tests/test_public_discovery.py; published screenshots in outputs/discovery-followup-2026-11-08.
 - Observed: the homepage has rich experimental media; research pages rely on long prose and tables. Inference: research readers need faster visual orientation and evidence-to-citation paths.
 
@@ -28,6 +28,7 @@
 - Homepage: existing presentation plus a compact research entry path before deep results, without reordering top-level sections.
 - Research pages: identity and version, clear question, visual evidence summary, visible page contents, complete methods/findings, citation.
 - Topic page: distinguish eight measured topics from four adjacent research connections; surface both near the top.
+- Citation page: full paper identity, visible BibTeX, direct plain-text and bibliography downloads, then links to the evidence pages. GeoProbe and findings refer to the same paper.
 
 ## Design principles
 - Evidence before decoration: diagrams explain real counts and do not add an inference.
@@ -47,6 +48,7 @@
 - Add concise overview metrics, evidence diagrams, page contents and citation actions via research-pages.css and a small defensive research-pages.js.
 - Home entry components remain scoped to homepage.css. Do not add homepage app.js to independent pages.
 - Static links and citation text work without JavaScript; copying is an enhancement.
+- Generate all visible BibTeX blocks and both raw exports from public/data/citation.bib; keep the LaTeX key and version stable across entry points.
 
 ## Accessibility
 - Target WCAG 2.2 AA where applicable: readable contrast, visible focus, semantic headings, meaningful link names.
