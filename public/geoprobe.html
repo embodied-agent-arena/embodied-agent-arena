@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>GeoProbe: VLM Geometry Benchmark — Embodied Agent Arena</title>
-  <meta name="description" content="How to evaluate VLM camera calibration, relative pose, object motion, depth and scale: GeoProbe's 168 queries, ten protocols, scoring rules, data and paper citation.">
+  <meta name="description" content="VLM camera calibration, relative pose, depth and scale: 168 GeoProbe queries within 370 Geometry and 1,000 total Arena cases. Fixed-image diagnostics, including four real-photo queries.">
   <link rel="canonical" href="https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="GeoProbe — A Geometric Estimation Benchmark for VLM Agents">
-  <meta property="og:description" content="168 queries, 130 RGB images, ten diagnostic protocols. Camera calibration, relative pose, displacement, depth, and scale, with methods and source evidence.">
+  <meta property="og:description" content="Camera calibration, relative pose, depth and scale: 168 GeoProbe queries within 370 Geometry and 1,000 total Arena cases. Four real-photo queries are image diagnostics.">
   <meta property="og:url" content="https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html">
   <meta property="og:image" content="https://embodied-agent-arena.github.io/embodied-agent-arena/assets/construction.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -27,8 +27,8 @@
         "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
         "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
         "name": "GeoProbe: Camera, Motion, Depth and Scale Evaluation",
-        "description": "Methods, inventory, scoring, limitations and citation for the GeoProbe geometric estimation benchmark within Embodied Agent Arena.",
-        "dateModified": "2026-11-12",
+        "description": "GeoProbe evaluates VLM camera calibration, relative pose, displacement, depth and scale with 168 image-based queries within the 370 Geometry cases of the five-domain, 1,000-case Embodied Agent Arena. Its 130 unique RGB images and ten protocols are different inventory units. Four real-photo displacement queries are fixed-image diagnostics, not physical robot trials.",
+        "dateModified": "2026-11-14",
         "inLanguage": "en",
         "mainEntity": {"@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#dataset"},
         "citation": "https://arxiv.org/abs/2610.00854v3"
@@ -38,7 +38,7 @@
         "@id": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html#dataset",
         "name": "GeoProbe",
         "url": "https://embodied-agent-arena.github.io/embodied-agent-arena/geoprobe.html",
-        "description": "168 geometric-estimation queries over 130 unique RGB images across ten protocols: 40 displacement, 36 calibration, 24 relative-pose, 12 sparse-depth, 12 object-dimensions and 44 reference-based scale queries. The 40 displacement queries include 36 rendered and four real-photo cases. GeoProbe is part of the 370-case Geometry domain in the 1,000-case Embodied Agent Arena collection.",
+        "description": "168 geometric-estimation queries over 130 unique RGB images across ten protocols: 40 displacement, 36 calibration, 24 relative-pose, 12 sparse-depth, 12 object-dimensions and 44 reference-based scale queries. The 40 displacement queries include 36 rendered and four real-photo cases. GeoProbe is part of the 370-case Geometry domain in the five-domain, 1,000-case Embodied Agent Arena collection. The four real-photo cases are image-based displacement diagnostics, not physical robot trials.",
         "datePublished": "2026-10-01",
         "isPartOf": {
           "@type": "Dataset",
@@ -68,9 +68,10 @@
     <p class="eyebrow">Geometry · An original benchmark within Embodied Agent Arena</p>
     <h1>GeoProbe: Geometric Estimation for Vision-Language Models</h1>
     <p class="research-lead">How well can a vision-language agent estimate camera parameters, distinguish object motion from camera motion, and recover depth and scale from images?</p>
-    <p>GeoProbe isolates these requirements through controlled scene variations and task-specific scoring. It contributes 168 queries to the Arena’s 1,000-case evaluation, alongside 32 established sources. <strong>This is the methods and dataset documentation for GeoProbe, introduced in the Embodied Agent Arena paper.</strong></p>
+    <p id="dataset-scope"><strong>168 GeoProbe queries are included within 370 Geometry cases, within 1,000 Arena cases.</strong> The 1,000 total cases span five domains: Geometry, Spatial Reasoning, Affordance, Task Planning and Manipulation. GeoProbe’s 130 unique RGB images and ten diagnostic protocols describe inputs and evaluation conditions, not additional cases. <a href="https://arxiv.org/html/2610.00854v3#A1">Source: paper v3, Appendix A</a> · <a href="geoprobe.html#dataset-scope">Link to dataset scope</a>.</p>
+    <p id="real-photo-scope" class="scope-note"><strong>Real photographs are image diagnostics.</strong> GeoProbe’s four real-photo displacement queries use fixed tabletop image pairs; they are not closed-loop physical robot experiments. This page documents GeoProbe as introduced in the Arena paper. <a href="https://arxiv.org/html/2610.00854v3#A4.SS1">Evidence: Appendix D.1</a> · <a href="geoprobe.html#real-photo-scope">Link to evaluation setting</a>.</p>
     <div class="research-stats" aria-label="GeoProbe inventory"><div><strong>168</strong><span>evaluation queries</span></div><div><strong>130</strong><span>unique RGB images</span></div><div><strong>10</strong><span>diagnostic protocols</span></div></div>
-    <p class="research-meta">Page updated <time datetime="2026-11-12">12 November 2026</time> · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
+    <p class="research-meta">Page updated <time datetime="2026-11-14">14 November 2026</time> · Research reference: <a href="https://arxiv.org/abs/2610.00854v3">paper v3, 23 October 2026</a> · Ten evaluated VLM agents in the full Arena study.</p>
     <nav class="page-contents" aria-label="On this page"><p class="contents-label">On this page</p><div><a href="#query-map"><span aria-hidden="true">01</span>Visual overview</a><a href="#research-questions"><span aria-hidden="true">02</span>Research questions</a><a href="#inventory"><span aria-hidden="true">03</span>Protocols & counts</a><a href="#metrics"><span aria-hidden="true">04</span>Scoring & units</a><a href="#scope"><span aria-hidden="true">05</span>Scope & limitations</a><a href="#reproduce"><span aria-hidden="true">06</span>Data & reproduction</a><a href="#citation"><span aria-hidden="true">07</span>Cite this work</a></div></nav>
   </header>
   <section id="query-map" class="research-overview" aria-labelledby="query-map-title">
@@ -207,7 +208,7 @@ arena list --data-root ../data</code></pre>
     <p>GeoProbe is introduced in the Embodied Agent Arena paper, not in a separate publication titled after this page. Cite the paper for the benchmark. For an answer or literature review using these definitions, also link the specific evidence on this page: <a href="geoprobe.html#query-counts">query counts</a>, <a href="geoprobe.html#metrics">scoring criteria</a>, <a href="geoprobe.html#metric-reading">mean and SD interpretation</a>, or <a href="geoprobe.html#scope">scope and limitations</a>.</p>
     <p class="citation-text">Haojian Huang, Pukun Zhao, Zexi Li, Yehang Zhang, Yangkai Wei, Wenqian Li, Han Yang, Kaiwen Zhou, Ying-Cong Chen, and Yinchuan Li. <cite>Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena.</cite> arXiv:2610.00854, 2026. Version 3, 23 October 2026.</p>
     <div class="research-links"><a href="https://arxiv.org/abs/2610.00854v3">Paper v3</a><a href="https://doi.org/10.48550/arXiv.2610.00854">Paper DOI</a><a href="citation.bib" download>Download BibTeX</a><a href="citation.csl.json" download>Download CSL-JSON</a><a href="geoprobe.html#inventory">Link to the inventory</a><span class="copy-action"><button type="button" data-copy-link="geoprobe.html#inventory" hidden aria-label="Copy permanent link to inventory">Copy link</button><input class="copy-fallback" readonly hidden aria-label="Permanent link to copy"><span class="copy-status" role="status" aria-live="polite"></span></span></div>
-    <p class="research-meta">Research content follows the 23 October 2026 paper. The 8 November page update clarifies counts, units, denominators and source boundaries; it does not report a new experimental run.</p>
+    <p class="research-meta">Research content follows the 23 October 2026 paper. The 14 November page update clarifies dataset scope and the distinction between real-photo diagnostics and physical robot evaluation; it does not report a new experimental run.</p>
 
     <details class="citation-details" open>
       <summary>Paper citation · BibTeX</summary>
